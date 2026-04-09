@@ -3,10 +3,10 @@
   "brand_id": "DEPILE",
   "period": "2026-03",
   "period_label": "Marzo 2026",
-  "fx_rate": 3.78,
+  "fx_rate": 3.5,
   "metricool_id": "5917082",
   "portada": {
-    "tag": "LUDiK Analytics · Reporte Mensual v2.2",
+    "tag": "LUDiK Analytics · Reporte Mensual",
     "footer": "Confidencial · Preparado por el equipo LUDiK para DEPILE",
     "kpis": [
       {
@@ -22,7 +22,7 @@
         "label": "Inversión"
       },
       {
-        "value": "—",
+        "value": "700",
         "label": "Objetivos Cumplidos"
       },
       {
@@ -35,8 +35,8 @@
     "tagline": "Data-driven decisions for modern brands",
     "team": "Equipo LUDiK",
     "location": "Barcelona · Lima",
-    "contact": "hola@ludik.io · ludik.io",
-    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para DEPILE"
+    "contact": "josemiguel@ludik.pe",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para PERUFARMA"
   },
   "objectives": [],
   "summary_kpis": {
@@ -104,7 +104,9 @@
     "total_usd": 3422.81,
     "total_soles": 12938.22,
     "meta_pct": 68.8,
-    "tiktok_pct": 31.2
+    "tiktok_pct": 31.2,
+    "meta_usd": 2353.52,
+    "tiktok_usd": 1069.29
   },
   "efficiency": {
     "meta_cpm_usd": 0.51,
@@ -119,7 +121,7 @@
     "positive_pct": 60,
     "neutral_pct": 34,
     "negative_pct": 6,
-    "net_score": 54,
+    "net_score": "54",
     "brand_responses": 0,
     "categories": [
       {
@@ -150,7 +152,10 @@
         "name": "Intencion compra TK",
         "pct": 6
       }
-    ]
+    ],
+    "positive": 60,
+    "neutral": 34,
+    "negative": 6
   },
   "bhs": {
     "total": 81,
@@ -239,7 +244,8 @@
           "delta": "Mejor ER del mes"
         }
       ],
-      "action": "El contenido educativo sobre depilacion en formato entretenido y ASMR es la formula ganadora. <strong>DEPILE debe ser la respuesta a una pregunta que la audiencia ya tiene</strong>, no un comercial disfrazado."
+      "action": "El contenido educativo sobre depilacion en formato entretenido y ASMR es la formula ganadora. <strong>DEPILE debe ser la respuesta a una pregunta que la audiencia ya tiene</strong>, no un comercial disfrazado.",
+      "text": "Marzo fue el mes que TikTok de DEPILE despego. \"Bandas o Crema\" alcanzo 214,809 vistas, \"Les dimos las bandas\" llego a 153,543, y \"Esperar a que crezca\" sumo 104,300. Los tres comparten algo: contenido que educa sobre depilacion con formato entretenido, sin sentirse como publicidad.\n\nEl hallazgo del mes: \"Soft vs Sticky ASMR\" tuvo 50,282 vistas con el mejor engagement rate de todos los videos (2.39%). ASMR + depilacion genera curiosidad y retencion. Los 9 videos del mes promediaron 99% FYP rate: TikTok esta amplificando masivamente el contenido de DEPILE a no-seguidores."
     },
     "act2": {
       "number": "Acto 2 · El Crecimiento",
@@ -272,7 +278,8 @@
           "label": "Inversion Total",
           "delta": "USD 3,423"
         }
-      ]
+      ],
+      "text": "TikTok paso de 1,299 a 3,638 seguidores en un mes: +2,339 nuevos seguidores, un crecimiento del 180%. Es el crecimiento mas explosivo en la historia de DEPILE en cualquier plataforma.\n\nLas impresiones totales llegaron a 7 millones: 4.6M de Meta Ads, 1.7M de TK Ads y 675K de TK organico. 675K vistas organicas sin costo representan el equivalente a S/ 1,379 en pauta (al CPM de TK Ads).\n\nInversion total: S/ 12,938 (USD 3,423). El CPM de Meta alcanzo su minimo historico en $0.51. Cada sol invertido genero 544 impresiones."
     },
     "act3": {
       "number": "Acto 3 · Las Senales de Alerta",
@@ -322,7 +329,8 @@
           "label": "BHS",
           "delta": "Benchmark: 70-75"
         }
-      ]
+      ],
+      "text": "Gillette Venus Espana tiene 24,852 seguidores pero un ER de 0.04% (9.5 likes por post). DEPILE con 7,868 seguidores genera un ER de 0.12%, 3x el engagement rate de Venus a pesar de tener 3x menos seguidores.\n\nEl CPM de Meta cayo de $2.77 (oct) a $0.51 (mar), una reduccion del 82% en 6 meses. TK CPM subio de $0.25 (feb) a $0.61 (mar) pero sigue siendo competitivo. El CPM blended es $0.54: por cada dolar se obtienen 1,852 impresiones.\n\nBHS: 81/100. Fortalezas: crecimiento (90) y eficiencia (90). Principal debilidad: engagement organico IG/FB (70). Sentimiento penalizado a 78 por las quejas de producto."
     },
     "act5": {
       "number": "Acto 5 · Plan de Accion",
@@ -375,54 +383,52 @@
           "label": "Quejas sin responder",
           "delta": "Protocolo activo"
         }
-      ]
+      ],
+      "text": "Corrección: URGENTE: Crear protocolo de respuesta para quejas de producto (irritacion/manchas). Responder en <2h con mensaje empatico + canal de atencion directo. Escalar a equipo de producto para evaluar lote/formulacion.\n\nApuesta: Duplicar contenido ASMR en TikTok. 'Soft vs Sticky' tuvo el mejor ER (2.39%) con 50K vistas. Producir 3-4 videos ASMR en abril mostrando texturas, aplicacion y resultado.\n\nApuesta: Responder consultas de compra en TikTok. 7 de 25 comentarios TK preguntan donde comprar. Cada comentario sin respuesta es una venta perdida. Responder en <4h con link o indicaciones.\n\nApuesta: Escalar formato educativo: 'Esperar a que crezca' (104K) y 'Mitos depilacion' (62K) demuestran que resolver dudas reales sobre depilacion genera alcance masivo. Producir 2-3 videos de mitos/verdades en abril.\n\nCorrección: Evaluar rol de Facebook: 526 personas de alcance organico mensual no justifica tiempo de creacion. Opciones: (a) solo crosspost automatico, (b) pausar contenido organico y usar solo como canal pagado.\n\nSistema: Configurar alertas de sentimiento negativo. Cualquier comentario que mencione irritacion, alergia o reaccion debe llegar al equipo en <1h."
     }
   },
   "content": {
     "top_tiktok": [
       {
         "title": "Bandas o Crema",
+        "platform": "TikTok",
         "date": "2026-03-18",
         "views": 214809,
         "likes": 1040,
-        "comments": 3,
         "shares": 39,
-        "reach": 112108,
+        "comments": 3,
+        "saves": 0,
+        "inv_label": "",
         "engagement": 0.97,
-        "fyp_pct": 98.5,
-        "avg_watch": 1.84,
         "url": "https://www.tiktok.com/@depile.peru/video/7618629501794143505",
-        "iv": 10.0,
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5445849-7618629501794143505.jpg"
       },
       {
         "title": "Les dimos las bandas",
+        "platform": "TikTok",
         "date": "2026-03-21",
         "views": 153543,
         "likes": 1210,
-        "comments": 1,
         "shares": 34,
-        "reach": 93202,
+        "comments": 1,
+        "saves": 0,
+        "inv_label": "",
         "engagement": 1.34,
-        "fyp_pct": 99.2,
-        "avg_watch": 2.88,
         "url": "https://www.tiktok.com/@depile.peru/video/7619471486440475921",
-        "iv": 13.7,
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5445849-7619471486440475921.jpg"
       },
       {
         "title": "Esperar a que crezca",
+        "platform": "TikTok",
         "date": "2026-03-12",
         "views": 104300,
         "likes": 479,
-        "comments": 12,
         "shares": 37,
-        "reach": 70926,
+        "comments": 12,
+        "saves": 0,
+        "inv_label": "",
         "engagement": 0.74,
-        "fyp_pct": 99.5,
-        "avg_watch": 2.4,
         "url": "https://www.tiktok.com/@depile.peru/video/7616506465041288464",
-        "iv": 8.1,
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5445849-7616506465041288464.jpg"
       }
     ],
@@ -457,22 +463,40 @@
         "title": "Post FB #3",
         "platform": "Facebook",
         "date": "2026-03-15",
-        "reach": 165,
-        "reactions": 2
+        "views": 165,
+        "likes": 2,
+        "shares": 0,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "",
+        "engagement": 0,
+        "url": ""
       },
       {
         "title": "Post FB #2",
         "platform": "Facebook",
         "date": "2026-03-10",
-        "reach": 172,
-        "reactions": 5
+        "views": 172,
+        "likes": 5,
+        "shares": 0,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "",
+        "engagement": 0,
+        "url": ""
       },
       {
         "title": "Post FB #1",
         "platform": "Facebook",
         "date": "2026-03-08",
-        "reach": 189,
-        "reactions": 5
+        "views": 189,
+        "likes": 5,
+        "shares": 0,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "",
+        "engagement": 0,
+        "url": ""
       }
     ],
     "total_pieces": {
@@ -496,7 +520,7 @@
   },
   "recommendations": [
     {
-      "priority": "Urgente",
+      "priority": "Alta",
       "channel": "CX/Producto",
       "title": "Protocolo de respuesta a quejas de producto",
       "description": "3 comentarios reportan irritacion/hinchazon/manchas. Crear protocolo: responder en <2h con mensaje empatico + canal directo de atencion. Escalar a producto para evaluar lote o formulacion. No responder puede escalar en redes."
@@ -885,5 +909,39 @@
       2030280,
       1740651
     ]
-  }
+  },
+  "competitors": [
+    {
+      "name": "Gillette Venus Espana",
+      "followers": "24852",
+      "likes_avg": "9.5",
+      "comments_avg": "",
+      "posts": "2",
+      "er": "0.04%"
+    },
+    {
+      "name": "Gillette Venus Latam",
+      "followers": "17124",
+      "likes_avg": "",
+      "comments_avg": "",
+      "posts": "",
+      "er": "%"
+    },
+    {
+      "name": "Veet Peru",
+      "followers": "5600",
+      "likes_avg": "3.67",
+      "comments_avg": "",
+      "posts": "3",
+      "er": "%"
+    },
+    {
+      "name": "DEPILE Peru",
+      "followers": "7868",
+      "likes_avg": "9.2",
+      "comments_avg": "1.5",
+      "posts": "15",
+      "er": "0.12%"
+    }
+  ]
 }
