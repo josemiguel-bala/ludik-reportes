@@ -3,7 +3,7 @@
   "brand_id": "DEPILE",
   "period": "2026-03",
   "period_label": "Marzo 2026",
-  "fx_rate": 3.5,
+  "fx_rate": 3.78,
   "metricool_id": "5917082",
   "portada": {
     "tag": "LUDiK Analytics · Reporte Mensual",
@@ -22,7 +22,7 @@
         "label": "Inversión"
       },
       {
-        "value": "700",
+        "value": "—",
         "label": "Objetivos Cumplidos"
       },
       {
@@ -35,8 +35,8 @@
     "tagline": "Data-driven decisions for modern brands",
     "team": "Equipo LUDiK",
     "location": "Barcelona · Lima",
-    "contact": "josemiguel@ludik.pe",
-    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para PERUFARMA"
+    "contact": "hola@ludik.io · ludik.io",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para DEPILE"
   },
   "objectives": [],
   "summary_kpis": {
