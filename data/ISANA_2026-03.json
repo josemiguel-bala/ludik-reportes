@@ -1,0 +1,647 @@
+{
+  "brand": "ISANA Perú",
+  "period": "2026-03",
+  "fx_rate": 3.78,
+  "metricool_id": "5445861",
+  "portada": {
+    "tag": "LUDiK Analytics · Reporte Mensual v2.2",
+    "footer": "Confidencial · Preparado por el equipo LUDiK para ISANA Perú",
+    "kpis": [
+      {
+        "value": "3.57M",
+        "label": "Alcance Total"
+      },
+      {
+        "value": "+1,789",
+        "label": "Nuevos Seguidores"
+      },
+      {
+        "value": "S/ 9,736",
+        "label": "Inversión"
+      },
+      {
+        "value": "5/6",
+        "label": "Objetivos Cumplidos"
+      },
+      {
+        "value": "89",
+        "label": "Brand Health Score"
+      }
+    ]
+  },
+  "cierre": {
+    "tagline": "Data-driven decisions for modern brands",
+    "team": "Equipo LUDiK",
+    "location": "Barcelona · Lima",
+    "contact": "hola@ludik.io · ludik.io",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para ISANA Perú"
+  },
+  "objectives": [
+    {
+      "objective": "Alcanzar 30,000 personas en Meta",
+      "channel": "Meta",
+      "target": "30,000",
+      "result": "32,545",
+      "status": "met"
+    },
+    {
+      "objective": "Generar 2,500 interacciones en Meta",
+      "channel": "Meta",
+      "target": "2,500",
+      "result": "3,361",
+      "status": "met"
+    },
+    {
+      "objective": "Superar 1.5M reproducciones en TikTok",
+      "channel": "TikTok",
+      "target": "1,500,000",
+      "result": "2,746,395",
+      "status": "met"
+    },
+    {
+      "objective": "Alcanzar ER >3% en IG Reels",
+      "channel": "Instagram",
+      "target": "> 3%",
+      "result": "2.4%",
+      "status": "missed"
+    },
+    {
+      "objective": "Publicar 16 videos en TikTok",
+      "channel": "TikTok",
+      "target": "16",
+      "result": "21",
+      "status": "met"
+    },
+    {
+      "objective": "CPM TikTok < S/ 0.35",
+      "channel": "TikTok Ads",
+      "target": "< S/ 0.35",
+      "result": "S/ 0.27",
+      "status": "met"
+    }
+  ],
+  "community": {
+    "facebook": {
+      "start": 22804,
+      "end": 23200
+    },
+    "instagram": {
+      "start": 4982,
+      "end": 5690
+    },
+    "tiktok": {
+      "start": 1164,
+      "end": 1849
+    }
+  },
+  "investment": {
+    "meta_ads_usd": 1868.47,
+    "meta_ads_soles": 7062.82,
+    "tiktok_ads_usd": 707.17,
+    "tiktok_ads_soles": 2673.1,
+    "total_usd": 2575.64,
+    "total_soles": 9735.92,
+    "meta_pct": 72.5,
+    "tiktok_pct": 27.5
+  },
+  "sentiment": {
+    "total": 113,
+    "positive_pct": 69,
+    "neutral_pct": 8,
+    "negative_pct": 4,
+    "net_score": 65,
+    "categories": []
+  },
+  "insights": {
+    "community": "TikTok creció 58.8% con $0 en followers. La campaña pagada generó solo 71 seg. por $43. El crecimiento real viene del contenido viral, no de la pauta. Total: +1,789 nuevos seguidores cross-platform.",
+    "reach": "S/ 9,736 generaron 3.57M cuentas únicas alcanzadas. TikTok entregó el mismo volumen de impresiones que Meta con un tercio del presupuesto. CPM TK: S/ 1.02 vs Meta: S/ 2.49.",
+    "engagement": "El sorteo concentra el 54% de las interacciones de Meta. Sin sorteo, el ER baja a 4.8% — aún 2x el benchmark. El sorteo es amplificador, no muleta. Sistematizarlo mensualmente.",
+    "sentiment": "6 personas preguntaron \"¿dónde lo compro?\" sin respuesta en TikTok. Cada consulta sin contestar es una venta perdida. Protocolo de respuesta en <2h es urgente.",
+    "investment": "Campaña Followers TK quemó S/ 163 para 71 seguidores. El contenido ganó 614 gratis. Pausar Followers y redirigir 100% a Reproducciones (CPM S/ 1.02).",
+    "competition": "ISANA #1 en ER Instagram (1.22%). K'allma tiene 53K seg. pero ER de 0.04% — 30x menos engagement por seguidor. Deopies 0.24% con 23K seg. La brecha es de volumen, no de calidad."
+  },
+  "story": {
+    "act1": {
+      "number": "Acto 1 · El Descubrimiento",
+      "title": "Dos videos dominaron todo el mes",
+      "paragraphs": [
+        "En marzo, dos TikToks rompieron todo. \"Zapatillas y Limpieza\" alcanzó 441K vistas y \"Talco expertos\" llegó a 407K. Dos videos de humor cotidiano donde el producto aparece como plot twist, no como protagonista.",
+        "Lo más interesante: \"Talco expertos\" fue el video cross-platform del mes. Desde TikTok se amplificó en Meta Ads, multiplicando su alcance en todos los canales."
+      ]
+    },
+    "act2": {
+      "number": "Acto 2 · El Impacto",
+      "title": "No cuántos vieron, sino cuántos actuaron",
+      "paragraphs": [
+        "Marzo cerró con 3.57 millones de cuentas únicas alcanzadas y una frecuencia de 2.22 impresiones por persona.",
+        "La comunidad creció +1,789 seguidores — el mayor crecimiento mensual del año. TikTok lidera con +685 (+58.8%) porque su algoritmo distribuye a NO-seguidores.",
+        "Inversión total: S/ 9,736 (USD 2,575.64). TikTok CPM S/ 1.02 (USD 0.27); Meta CPM S/ 2.49 (USD 0.66). TikTok entregó impresiones 2.4x más baratas que Meta, con el 27.5% del presupuesto."
+      ]
+    },
+    "act3": {
+      "number": "Acto 3 · Lo que no funciona",
+      "title": "Tres verdades incómodas que debemos enfrentar",
+      "paragraphs": []
+    },
+    "act4": {
+      "number": "Acto 4 · Dónde estamos",
+      "title": "Competencia, salud de marca e inversión",
+      "paragraphs": [
+        "ISANA es la marca más pequeña en seguidores de IG pero la que tiene la audiencia más viva. K'allma tiene 53K seguidores con ER de 0.03%. ISANA tiene 5.7K con 1.22% ER — 40x más engagement por seguidor."
+      ]
+    },
+    "act5": {
+      "number": "Acto 5 · Qué hacemos diferente",
+      "title": "Abril: 3 apuestas, 1 corrección, 2 sistemas",
+      "items": [
+        {
+          "type": "bet",
+          "text": "Cross-platform como protocolo. Todo video que supere 100K vistas orgánicas en TikTok se amplifica en Meta Ads esa misma semana. Presupuesto reservado: S/ 500/mes."
+        },
+        {
+          "type": "bet",
+          "text": "1 video \"Resultado de Cliente\" por semana en TikTok. ER de 5.1% vs 2.9% promedio. De 3 en marzo a 4 en abril."
+        },
+        {
+          "type": "bet",
+          "text": "Cerrar la brecha de Instagram. 20% del presupuesto Meta Ads a crecimiento IG específico."
+        },
+        {
+          "type": "fix",
+          "text": "Pausar campaña Followers TikTok (CPE S/ 2.30). Redirigir a Reproducciones: +165K video plays adicionales."
+        },
+        {
+          "type": "system",
+          "text": "Sorteo mensual FB como gasto fijo (S/ 750). Tercer jueves, 10am."
+        },
+        {
+          "type": "system",
+          "text": "Respuesta en <2h a consultas en comentarios. 18% son preguntas de compra esperando respuesta."
+        }
+      ],
+      "highlight": "Abril: 3 apuestas, 1 corrección, 2 sistemas"
+    }
+  },
+  "technical_texts": {
+    "resumen": "Marzo fue el mejor mes del año para ISANA. TikTok alcanzó 2.75M reproducciones (2.53M orgánicas + 533K ads) con 21 videos. Inversión total: S/ 9,736 (USD 2,575.64). Se cumplieron 5 de 6 objetivos. 57 piezas totales. 1.4M interacciones totales y +1,789 nuevos seguidores.",
+    "audiencia": "FB = compradora (25-44). TK = futuro consumidor (13-24). IG = puente entre ambos. Audiencia masculina 38-46%: oportunidad si hay línea para hombres.",
+    "contenido_insight": "Dos videos dominaron TODO el mes. \"Zapatillas y Limpieza\" fue #1 en TikTok orgánico (441K vistas, 1,673 likes, 235 shares) y \"Talco expertos\" fue #2 (407K vistas, cross-platform hit amplificado en Meta Ads). El Top 5 TK acumuló +1.68M vistas.",
+    "contenido_fail": "Facebook orgánico sin concurso = muerto. Los 5 posts sin mecánica participativa alcanzaron menos de 400 personas cada uno. TikTok \"Pies descalzos verano\" (539 vistas) fue producto directo: el algoritmo amplifica entretenimiento, no anuncios.",
+    "contenido_horario": "Meta/Instagram: Martes a jueves, 10am (índice 97-100). El sorteo del jueves 20 mar a las 10am confirma el patrón. TikTok: Miércoles 10am (índice 100) o viernes 6pm (índice 94). Los videos del 12-13 mar generaron el 60% de vistas del mes.",
+    "riesgo_fb": "El sorteo generó 96% de las interacciones y el 99% del alcance orgánico de Facebook este mes. Sin sorteo, el alcance orgánico por post cae a menos de 250 personas. Presupuestar como gasto fijo S/ 750/mes.",
+    "indice_valor": "Fórmula: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) / Alcance × 1000\n\nTK #1 \"Zapatillas\": (0×3 + 235×2 + 2×1.5 + 1,673×1) / 441,411 × 1000 = 4.86\nTK #2 \"Talco expertos\": (0×3 + 73×2 + 28×1.5 + 949×1) / 407,021 × 1000 = 2.79",
+    "temas_recurrentes": "",
+    "bhs_explicacion": ""
+  },
+  "bhs": {
+    "total": 89,
+    "benchmark": "70-75",
+    "dimensions": {
+      "crecimiento": 87,
+      "alcance": 90,
+      "engagement": 88,
+      "sentimiento": 85,
+      "eficiencia": 92,
+      "metas": 100,
+      "posicion_comp": 85
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "TikTok Ads",
+      "title": "Pausar campaña Followers (CPE $0.61 insostenible)",
+      "description": "71 seguidores con $43 USD. Orgánico es 5x más eficiente. Redirigir a Reproducciones (CPM $0.26). +165K vistas con mismo presupuesto."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Cross-platform",
+      "title": "1 video de calidad → todos los canales",
+      "description": "\"Zapatillas\" (441K) y \"Talco expertos\" (407K) dominaron TK. Protocolo: todo video >100K orgánicas en TK → amplificar en Meta esa semana."
+    },
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "1 video ",
+      "description": "ER más alto: 5.1% vs 2.9% promedio. Solo 3 en marzo → escalar a 4/mes. Formato más credible para conversión."
+    },
+    {
+      "priority": "Media",
+      "channel": "Facebook",
+      "title": "Sorteo mensual como sistema de engagement",
+      "description": "96% de interacciones FB vino del sorteo + 119K alcance pagado. Con S/ 200, mantener +300 seg/mes. Agendar tercer jueves 10am."
+    },
+    {
+      "priority": "Media",
+      "channel": "Community",
+      "title": "Protocolo de respuesta en 2h",
+      "description": "18% de comentarios son consultas. Sin respuesta → neutral/negativo. Con respuesta <2h → conversión a positivo."
+    },
+    {
+      "priority": "Baja",
+      "channel": "Instagram",
+      "title": "Aumentar Carruseles a 2/mes",
+      "description": "Carrusel tuvo ER 5.0% con 1 pieza. 2/mes puede subir ER promedio IG 15-20%."
+    }
+  ],
+  "content": {
+    "top_tiktok": [
+      {
+        "title": "Zapatillas y Limpieza",
+        "platform": "TikTok",
+        "date": "2026-03-19",
+        "views": 441411,
+        "likes": 1673,
+        "shares": 235,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "S/ 166",
+        "engagement": 0.695,
+        "url": "https://www.tiktok.com/@isana.pe/video/7619102013183331600",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5445861-7619102013183331600.jpg"
+      },
+      {
+        "title": "Talco expertos",
+        "platform": "TikTok",
+        "date": "2026-03-12",
+        "views": 407021,
+        "likes": 949,
+        "shares": 73,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "S/ 557",
+        "engagement": 0.313,
+        "url": "https://www.tiktok.com/@isana.pe/video/7616488248034037009",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5445861-7616488248034037009.jpg"
+      },
+      {
+        "title": "Sudor bacteria",
+        "platform": "TikTok",
+        "date": "2026-03-25",
+        "views": 316997,
+        "likes": 835,
+        "shares": 41,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "",
+        "engagement": 0.385,
+        "url": "https://www.tiktok.com/@isana.pe/video/7621252393115700481",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5445861-7621252393115700481.jpg"
+      }
+    ],
+    "worst_overall": [
+      {
+        "title": "Tu rutina es demandante",
+        "platform": "Facebook",
+        "date": "2026-03-23",
+        "views": 241,
+        "likes": 12,
+        "shares": 0,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "",
+        "engagement": 0,
+        "url": ""
+      },
+      {
+        "title": "Que su única preocupación sea jugar",
+        "platform": "Facebook",
+        "date": "2026-03-13",
+        "views": 161,
+        "likes": 19,
+        "shares": 0,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "",
+        "engagement": 0,
+        "url": ""
+      },
+      {
+        "title": "Pies descalzos verano",
+        "platform": "TikTok",
+        "date": "2026-03-27",
+        "views": 539,
+        "likes": 4,
+        "shares": 0,
+        "comments": 0,
+        "saves": 0,
+        "inv_label": "",
+        "engagement": 0,
+        "url": ""
+      }
+    ]
+  },
+  "brand_id": "ISANA",
+  "charts": {
+    "reach_mix_labels": [
+      "Meta (org + ads)",
+      "TikTok (org + ads)"
+    ],
+    "reach_mix_data": [
+      5448273,
+      4089850
+    ],
+    "months6": [
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
+    ],
+    "cpm_meta": [
+      0.84,
+      1.48,
+      1.19,
+      1.17,
+      0.85,
+      0.66
+    ],
+    "cpm_tk": [
+      null,
+      null,
+      0.34,
+      0.27,
+      0.28,
+      0.27
+    ],
+    "bhs_radar": [
+      87,
+      90,
+      88,
+      85,
+      92,
+      100,
+      85
+    ],
+    "bhs_benchmark": [
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70
+    ],
+    "bhs_history": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      89
+    ],
+    "community_total": [
+      28088,
+      28007,
+      28061,
+      28369,
+      28903,
+      30739
+    ],
+    "fb_followers_labels": [
+      "1 mar",
+      "5 mar",
+      "8 mar",
+      "12 mar",
+      "15 mar",
+      "20 mar",
+      "25 mar",
+      "31 mar"
+    ],
+    "fb_followers": [
+      22804,
+      22810,
+      22838,
+      22850,
+      22860,
+      22950,
+      23080,
+      23200
+    ],
+    "ig_followers": [
+      4982,
+      5000,
+      5020,
+      5060,
+      5120,
+      5320,
+      5510,
+      5690
+    ],
+    "tk_followers": [
+      1164,
+      1200,
+      1260,
+      1350,
+      1450,
+      1580,
+      1720,
+      1849
+    ],
+    "er_fb": [
+      6.6,
+      8.5,
+      5.8,
+      11.3,
+      7.5,
+      8.9
+    ],
+    "er_ig": [
+      null,
+      null,
+      4.2,
+      3.5,
+      3.4,
+      5.7
+    ],
+    "er_tk": [
+      0.18,
+      0.21,
+      0.28,
+      1.02,
+      0.47,
+      0.37
+    ],
+    "tk_top_videos_labels": [
+      "19 mar\nZapatillas",
+      "12 mar\nTalco",
+      "25 mar\nSudor",
+      "7 mar\n8M",
+      "13 mar\nTalco m."
+    ],
+    "tk_top_videos_data": [
+      441411,
+      407021,
+      316997,
+      263713,
+      254641
+    ],
+    "sent_categories_data": [
+      28,
+      22,
+      19,
+      14,
+      5,
+      4,
+      4,
+      4
+    ],
+    "meta_days": [
+      73,
+      97,
+      93,
+      100,
+      51,
+      38,
+      82
+    ],
+    "tk_hours": [
+      43,
+      100,
+      88,
+      64,
+      76,
+      94,
+      57,
+      19
+    ],
+    "budget_labels": [
+      "Meta Interacciones",
+      "Meta Sorteo",
+      "TK Reproducciones",
+      "TK Followers"
+    ],
+    "budget_data": [
+      1464,
+      391,
+      609,
+      43
+    ],
+    "comp_followers_labels": [
+      "K'allma",
+      "Deopies",
+      "ISANA"
+    ],
+    "comp_followers_data": [
+      53983,
+      23305,
+      5690
+    ],
+    "comp_er_labels": [
+      "ISANA",
+      "Deopies",
+      "K'allma"
+    ],
+    "comp_er_data": [
+      1.22,
+      0.24,
+      0.04
+    ],
+    "reach_organic": [
+      2000,
+      1025000,
+      542000,
+      2217000,
+      2898000,
+      2574000
+    ],
+    "reach_paid": [
+      1091460,
+      291389,
+      1390319,
+      2517727,
+      4049900,
+      5404427
+    ],
+    "formatos_labels": [
+      "Detrás cám.",
+      "Educativo",
+      "Tendencia",
+      "Result. cliente",
+      "Reels IG",
+      "Carrusel IG"
+    ],
+    "formatos_data": [
+      3.8,
+      2.9,
+      4.2,
+      5.1,
+      4.8,
+      5.0
+    ]
+  },
+  "summary_kpis": {
+    "objectives": "5/6",
+    "reach": "3.57M",
+    "tk_views": "2.75M",
+    "new_followers": "+1,789",
+    "investment": "S/ 9,736"
+  },
+  "reach": {
+    "total_impressions": 7934277,
+    "estimated_unique_reach": 3568745,
+    "frequency": 2.22,
+    "meta_ads_impressions": 5404427,
+    "meta_ads_reach": 1578184,
+    "tiktok_ads_impressions": 1560000,
+    "tiktok_organic_views": 2529850,
+    "ig_organic_views": 19454,
+    "fb_organic_impressions": 24392
+  },
+  "engagement": {
+    "tiktok_organic": {
+      "likes": 6280,
+      "comments": 112,
+      "shares": 1561,
+      "total": 7953
+    },
+    "meta_ads_clicks": 7608,
+    "meta_ads_link_clicks": 1754,
+    "meta_ads_post_engagements": 1388640,
+    "total_meaningful_interactions": 11427,
+    "total_interactions": 1399311
+  },
+  "efficiency": {
+    "meta_cpm_usd": 0.66,
+    "meta_cpm_soles": 2.49,
+    "tiktok_cpm_usd": 0.27,
+    "tiktok_cpm_soles": 1.02,
+    "blended_cpm_usd": 0.37,
+    "blended_cpm_soles": 1.4
+  },
+  "competitors_ig": [
+    {
+      "name": "ISANA Perú",
+      "followers": "5690",
+      "likes_avg": "27.7",
+      "comments_avg": "1.5",
+      "posts": "30",
+      "er": "1.22%"
+    },
+    {
+      "name": "Deopies (Recamier)",
+      "followers": "23305",
+      "likes_avg": "52.7",
+      "comments_avg": "4.3",
+      "posts": "11",
+      "er": "0.24%"
+    },
+    {
+      "name": "K'allma",
+      "followers": "53983",
+      "likes_avg": "17.6",
+      "comments_avg": "1.5",
+      "posts": "27",
+      "er": "0.04%"
+    },
+    {
+      "name": "LEA Perú",
+      "followers": "",
+      "likes_avg": "15.7",
+      "comments_avg": "1.5",
+      "posts": "25",
+      "er": "%"
+    }
+  ]
+}

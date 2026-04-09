@@ -1,0 +1,608 @@
+{
+  "brand": "BUK",
+  "period": "2026-03",
+  "fx_rate": 3.78,
+  "metricool_id": "5409454",
+  "portada": {
+    "tag": "LUDiK Analytics · Reporte Mensual v2.2",
+    "footer": "Confidencial · Preparado por el equipo LUDiK para BUK",
+    "kpis": [
+      {
+        "value": "~900K",
+        "label": "Alcance Estimado"
+      },
+      {
+        "value": "+223",
+        "label": "Nuevos Seguidores"
+      },
+      {
+        "value": "S/ 6,375",
+        "label": "Inversión"
+      },
+      {
+        "value": "4/5",
+        "label": "Objetivos Cumplidos"
+      },
+      {
+        "value": "81",
+        "label": "Brand Health Score"
+      }
+    ]
+  },
+  "cierre": {
+    "tagline": "Data-driven decisions for modern brands",
+    "team": "Equipo LUDiK",
+    "location": "Barcelona · Lima",
+    "contact": "hola@ludik.io · ludik.io",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para BUK"
+  },
+  "objectives": [
+    {
+      "objective": "Alcanzar 400K vistas orgánicas TikTok",
+      "channel": "TikTok",
+      "target": "400,000",
+      "result": "560,651",
+      "status": "met"
+    },
+    {
+      "objective": "Superar 1M impresiones pagadas (Meta+TK)",
+      "channel": "Multi",
+      "target": "1,000,000",
+      "result": "2,106,054",
+      "status": "met"
+    },
+    {
+      "objective": "Crecer IG followers 15%",
+      "channel": "Instagram",
+      "target": "+15%",
+      "result": "+22.8%",
+      "status": "met"
+    },
+    {
+      "objective": "Publicar 10+ videos TK + 10+ reels IG",
+      "channel": "Multi",
+      "target": "20+",
+      "result": "22",
+      "status": "met"
+    },
+    {
+      "objective": "Alcance orgánico promedio IG Reels >300",
+      "channel": "Instagram",
+      "target": ">300",
+      "result": "186",
+      "status": "missed"
+    }
+  ],
+  "community": {
+    "facebook": {
+      "start": 5062,
+      "end": 5058
+    },
+    "instagram": {
+      "start": 753,
+      "end": 925
+    },
+    "tiktok": {
+      "start": 1565,
+      "end": 1620
+    }
+  },
+  "investment": {
+    "meta_ads_usd": 1086.57,
+    "meta_ads_soles": 4107.23,
+    "tiktok_ads_usd": 600,
+    "tiktok_ads_soles": 2268.0,
+    "total_usd": 1686.57,
+    "total_soles": 6375.23,
+    "meta_pct": 64.4,
+    "tiktok_pct": 35.6
+  },
+  "sentiment": {
+    "total": 59,
+    "positive_pct": 51,
+    "neutral_pct": 49,
+    "negative_pct": 0,
+    "net_score": 51,
+    "categories": []
+  },
+  "insights": {
+    "community": "IG creció 22.8% (753→925) sin campaña de seguidores. FB plano (5,062→5,058, -4). TK creció +55 en los últimos 3 días de marzo (1,565→1,620). Total: +223 seguidores cross-platform.",
+    "reach": "S/ 6,375 generaron 2.67M impresiones y ~900K cuentas alcanzadas. Meta entregó el 55% de impresiones pagadas, TK el 24%, y TK orgánico añadió 561K gratis.",
+    "engagement": "3 TikToks superaron 100K vistas. 'Regreso a la rutina' concentró 20% de vistas y 38% de likes. Nostalgia + humor = fórmula probada.",
+    "sentiment": "59 comentarios: 51% positivos, 0% negativos. Nostalgia domina (35%). Sabores de BUK mencionados sin preguntar. La marca responde en IG pero no en TK.",
+    "investment": "Inversión 7.5x vs oct-25. CPM Meta estable ($0.74) pero CPM TK triplicó ($0.93 vs $0.27 ene). Evaluar si creativos TK necesitan renovación.",
+    "competition": "ER IG parejo: Halls 0.29%, BUK 0.28%, Ambrosoli 0.26%. Ambrosoli tiene 21.6K seg (23x más que BUK) pero genera solo 57 likes/post. BUK con 925 seg genera 2.6. La brecha es de volumen, no de engagement rate."
+  },
+  "story": {
+    "act1": {
+      "number": "Acto 1 · El Descubrimiento",
+      "title": "Tres TikToks rompieron la barrera de las 100K vistas",
+      "paragraphs": [
+        "En marzo, tres TikToks de BUK superaron las 100K vistas orgánicas. \"Regreso a la rutina\" (111K), \"Sabor favorito\" (109K) y \"Podcast estudio\" (106K). Los tres comparten una fórmula: humor situacional cotidiano donde BUK aparece como solución natural, nunca como protagonista.",
+        "El video estrella fue \"Regreso a la rutina\": la nostalgia de la lonchera escolar detonó una avalancha de comentarios personales. 1,818 likes, 44 comentarios y 95 shares. Un solo video generó el 38% de todos los likes del mes."
+      ]
+    },
+    "act2": {
+      "number": "Acto 2 · El Impacto",
+      "title": "2.67M impresiones con cero detractores",
+      "paragraphs": [
+        "Marzo generó 2.67 millones de impresiones totales: 1.46M de Meta Ads, 643K de TikTok Ads y 561K de TikTok orgánico. Alcance estimado: ~900K cuentas únicas.",
+        "Instagram creció de 753 a 925 seguidores (+22.8%), el mayor crecimiento mensual registrado. Sin campaña de followers: el crecimiento viene del contenido.",
+        "Inversión total: S/ 6,375 (USD 1,687). Cada sol invertido generó 419 impresiones. Meta CPM S/ 2.80; TikTok CPM S/ 3.52."
+      ]
+    },
+    "act3": {
+      "number": "Acto 3 · Lo que no funciona",
+      "title": "El desierto de Meta orgánico",
+      "paragraphs": []
+    },
+    "act4": {
+      "number": "Acto 4 · Dónde estamos",
+      "title": "Inversión 7.5x en 6 meses, eficiencia sostenida",
+      "paragraphs": [
+        "La inversión mensual pasó de $225 (oct-25) a $1,687 (mar-26), un crecimiento de 7.5x en 6 meses. El CPM de Meta se mantiene estable ($0.74 en marzo vs $0.74 en diciembre).",
+        "Alerta: el CPM de TikTok Ads triplicó en un mes ($0.93 en marzo vs $0.27 en enero). Puede ser estacionalidad, saturación de audiencia o creativos que necesitan renovarse. Monitorear de cerca en abril.",
+        "BHS: 81/100. Fortalezas: sentimiento (88) y eficiencia (85). Debilidades: engagement orgánico IG/FB (72)."
+      ]
+    },
+    "act5": {
+      "number": "Acto 5 · Qué hacemos diferente",
+      "title": "Abril: 3 apuestas y 2 alertas",
+      "items": [
+        {
+          "type": "bet",
+          "text": "Duplicar formato nostalgia en TikTok. El video de lonchera generó el 45% de todos los comentarios. Producir 2 videos mensuales con temática nostálgica peruana."
+        },
+        {
+          "type": "bet",
+          "text": "Protocolo de respuesta en TikTok. La marca responde activamente en IG (10 respuestas) pero no en TK. Hay engagement sin capitalizar."
+        },
+        {
+          "type": "bet",
+          "text": "Cross-platform: todo TK que supere 50K vistas → boost en Meta esa misma semana. Aprovechar el momentum."
+        },
+        {
+          "type": "fix",
+          "text": "Investigar el triplicado de CPM en TikTok Ads ($0.27 → $0.93). Renovar creativos y evaluar si la audiencia target se saturó."
+        },
+        {
+          "type": "system",
+          "text": "Configurar monitoreo de competidores IG en Metricool para tener BHS completo en abril."
+        }
+      ],
+      "highlight": "Abril: 3 apuestas y 2 alertas"
+    }
+  },
+  "technical_texts": {
+    "resumen": "Marzo fue el mes de mayor actividad y alcance para BUK. TikTok orgánico alcanzó 561K vistas con 11 videos. Inversión total: S/ 6,375 (USD 1,687). Se cumplieron 4 de 5 objetivos: el alcance orgánico de IG Reels (promedio 186 vs meta 300) fue el único no alcanzado.",
+    "audiencia": "La audiencia de BUK es predominantemente peruana y joven (escolares/universitarios). TK entrega 99%+ via FYP a no-seguidores. IG crece orgánicamente por crosspost de TK. FB no genera audiencia nueva.",
+    "contenido_insight": "3 videos dominaron el mes con 100K+ vistas cada uno. 'Regreso a la rutina' fue el hit: nostalgia escolar detonó 44 comentarios personales y 95 shares. Formato ganador: humor situacional + BUK como solución.",
+    "contenido_fail": "Meta orgánico sumó 155 personas de alcance en todo el mes. IG orgánico promedio 186 por reel. TikTok orgánico es 300x más efectivo que Meta orgánico para esta marca. Sin pauta, Meta no existe.",
+    "contenido_horario": "TikTok: Pico de audiencia miércoles y martes 10am (índice 100). Segundo pico 6pm. Meta/Facebook: Martes 12pm es el mejor momento (índice 100). Domingo 10am es segundo mejor. Viernes y sábado son los días más bajos en ambas plataformas.",
+    "riesgo_fb": "Facebook orgánico no es viable para BUK. 3 posts sumaron 155 personas. Sin sorteos ni mecánicas participativas, el alcance por post no supera las 65 personas. Evaluar si mantener presencia orgánica en FB.",
+    "indice_valor": "Fórmula: (Saves×3 + Shares×2 + Comments×1.5 + Likes×1) / Reach × 1000\n\nTK #1 'Regreso rutina': (0×3 + 95×2 + 44×1.5 + 1818×1) / 68,000 × 1000 = 30.5\nTK #2 'Sabor favorito': (0×3 + 16×2 + 18×1.5 + 850×1) / 71,726 × 1000 = 12.7\nTK #3 'Podcast estudio': (0×3 + 13×2 + 2×1.5 + 357×1) / 67,059 × 1000 = 5.76",
+    "temas_recurrentes": "",
+    "bhs_explicacion": ""
+  },
+  "bhs": {
+    "total": 81,
+    "benchmark": "70-75",
+    "dimensions": {
+      "crecimiento": 88,
+      "alcance": 78,
+      "engagement": 72,
+      "sentimiento": 88,
+      "eficiencia": 85,
+      "metas": 80,
+      "posicion_comp": 82
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Duplicar formato nostalgia",
+      "description": "El video de lonchera generó 45% de todos los comentarios. Producir 2 videos mensuales con temática nostálgica peruana (golosinas de infancia, recreo, merienda)."
+    },
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Activar respuesta en TK",
+      "description": "10 respuestas en IG, 0 en TK. Hay engagement condicionado ('saludame y compro Buk'). Protocolo: responder todo comentario con intención de compra o engagement en <4h."
+    },
+    {
+      "priority": "Alta",
+      "channel": "TikTok Ads",
+      "title": "Investigar triplicado de CPM TK",
+      "description": "CPM pasó de $0.27 (ene) a $0.93 (mar). Renovar creativos, ampliar audiencia target, evaluar fatiga. Objetivo abril: <$0.60."
+    },
+    {
+      "priority": "Media",
+      "channel": "Cross-platform",
+      "title": "Cross-amplification protocol",
+      "description": "Todo TK que supere 50K vistas orgánicas → boost en Meta Ads esa semana. Aprovechar el momentum del contenido viral."
+    },
+    {
+      "priority": "Media",
+      "channel": "Instagram",
+      "title": "Evaluar estrategia IG",
+      "description": "Alcance orgánico promedio 186 personas por reel. Con 925 seguidores, el orgánico no es viable. Opciones: (a) boost mínimo en cada reel S/ 30, (b) solo crosspost sin expectativa orgánica."
+    },
+    {
+      "priority": "Baja",
+      "channel": "Multi",
+      "title": "Configurar monitoreo competencia",
+      "description": "Configurar 3-4 marcas competidoras adicionales en Metricool para abril."
+    }
+  ],
+  "content": {
+    "top_tiktok": [
+      {
+        "title": "Regreso a la rutina (lonchera)",
+        "date": "2026-03-22",
+        "views": 110586,
+        "likes": 1818,
+        "comments": 44,
+        "shares": 95,
+        "reach": 68000,
+        "engagement": 2.88,
+        "fyp_pct": 99.2,
+        "url": "https://www.tiktok.com/@buk.peru/video/7619808180742180097",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5409454-7619808180742180097.jpg",
+        "iv": 30.5
+      },
+      {
+        "title": "Sabor favorito (drama)",
+        "date": "2026-03-21",
+        "views": 109324,
+        "likes": 850,
+        "comments": 18,
+        "shares": 16,
+        "reach": 71726,
+        "engagement": 1.23,
+        "fyp_pct": 99.4,
+        "url": "https://www.tiktok.com/@buk.peru/video/7619482884163783953",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5409454-7619482884163783953.jpg",
+        "iv": 12.7
+      },
+      {
+        "title": "Podcast estudio (garganta)",
+        "date": "2026-03-12",
+        "views": 106117,
+        "likes": 357,
+        "comments": 2,
+        "shares": 13,
+        "reach": 67059,
+        "engagement": 0.55,
+        "fyp_pct": 99.6,
+        "url": "https://www.tiktok.com/@buk.peru/video/7616151183807319312",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5409454-7616151183807319312.jpg",
+        "iv": 5.76
+      }
+    ],
+    "worst_overall": [
+      {
+        "title": "Viernes 13",
+        "platform": "Facebook",
+        "date": "2026-03-13",
+        "reach": 29,
+        "reactions": 0
+      },
+      {
+        "title": "Semana Santa",
+        "platform": "Instagram",
+        "date": "2026-03-30",
+        "reach": 34,
+        "likes": 1
+      },
+      {
+        "title": "8M",
+        "platform": "Facebook",
+        "date": "2026-03-08",
+        "reach": 61,
+        "reactions": 1
+      }
+    ]
+  },
+  "brand_id": "BUK",
+  "charts": {
+    "reach_mix_labels": [
+      "Meta (org + ads)",
+      "TikTok (org + ads)"
+    ],
+    "reach_mix_data": [
+      1466060,
+      1203575
+    ],
+    "months6": [
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
+    ],
+    "cpm_meta": [
+      0.9,
+      1.35,
+      0.74,
+      0.57,
+      0.78,
+      0.74
+    ],
+    "cpm_tk": [
+      null,
+      null,
+      null,
+      0.26,
+      0.27,
+      0.93
+    ],
+    "bhs_radar": [
+      88,
+      78,
+      72,
+      88,
+      85,
+      80,
+      82
+    ],
+    "bhs_benchmark": [
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70
+    ],
+    "bhs_history": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      81
+    ],
+    "community_total": [
+      5735,
+      5731,
+      5734,
+      5754,
+      5811,
+      7603
+    ],
+    "fb_followers_labels": [
+      "1 mar",
+      "5 mar",
+      "8 mar",
+      "12 mar",
+      "15 mar",
+      "20 mar",
+      "25 mar",
+      "31 mar"
+    ],
+    "fb_followers": [
+      5062,
+      5063,
+      5060,
+      5060,
+      5060,
+      5061,
+      5061,
+      5058
+    ],
+    "ig_followers": [
+      753,
+      782,
+      780,
+      805,
+      842,
+      890,
+      913,
+      925
+    ],
+    "tk_followers": [
+      1565,
+      1565,
+      1565,
+      1565,
+      1565,
+      1565,
+      1565,
+      1620
+    ],
+    "er_fb": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "er_ig": [
+      0.69,
+      0.46,
+      0.96,
+      1.5,
+      0.75,
+      0.37
+    ],
+    "er_tk": [
+      null,
+      null,
+      null,
+      0.93,
+      0.86,
+      1.37
+    ],
+    "tk_top_videos_labels": [
+      "22 mar\nRegreso",
+      "21 mar\nSabor",
+      "12 mar\nPodcast",
+      "17 mar\nChismes",
+      "15 mar\nNostalgia"
+    ],
+    "tk_top_videos_data": [
+      110586,
+      109324,
+      106117,
+      86269,
+      46152
+    ],
+    "sent_categories_data": [
+      35,
+      25,
+      12,
+      8,
+      8,
+      7,
+      5
+    ],
+    "meta_days": [
+      49,
+      97,
+      100,
+      80,
+      82,
+      57,
+      43
+    ],
+    "tk_hours": [
+      9,
+      42,
+      62,
+      81,
+      100,
+      67,
+      93,
+      65
+    ],
+    "budget_labels": [
+      "Meta Feb-Mar",
+      "Meta Marzo",
+      "TK Interacción"
+    ],
+    "budget_data": [
+      965,
+      3142,
+      2268
+    ],
+    "comp_followers_labels": [
+      "Ambrosoli",
+      "Halls",
+      "BUK"
+    ],
+    "comp_followers_data": [
+      21622,
+      4462,
+      925
+    ],
+    "comp_er_labels": [
+      "Halls",
+      "BUK",
+      "Ambrosoli"
+    ],
+    "comp_er_data": [
+      0.29,
+      0.28,
+      0.26
+    ],
+    "reach_organic": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      563581
+    ],
+    "reach_paid": [
+      250546,
+      183293,
+      988569,
+      2038053,
+      2116293,
+      2106054
+    ],
+    "formatos_labels": [
+      "Nostalgia",
+      "Humor",
+      "Info",
+      "Producto",
+      "Tendencia",
+      "Reel IG"
+    ],
+    "formatos_data": [
+      2.01,
+      2.06,
+      0.8,
+      0.71,
+      7.55,
+      2.07
+    ]
+  },
+  "summary_kpis": {
+    "objectives": "4/5",
+    "reach": "~900K",
+    "tk_views": "561K",
+    "new_followers": "+223",
+    "investment": "S/ 6,375"
+  },
+  "reach": {
+    "total_impressions": 2669635,
+    "estimated_unique_reach": 900000,
+    "frequency": 2.97,
+    "meta_ads_impressions": 1463130,
+    "meta_ads_reach": 800000,
+    "tiktok_ads_impressions": 642924,
+    "tiktok_organic_views": 560651,
+    "ig_organic_views": 2712,
+    "fb_organic_impressions": 218
+  },
+  "engagement": {
+    "tiktok_organic": {
+      "likes": 4794,
+      "comments": 104,
+      "shares": 192,
+      "total": 5090
+    },
+    "meta_ads_clicks": 7608,
+    "meta_ads_link_clicks": 825,
+    "meta_ads_post_engagements": 886805,
+    "total_meaningful_interactions": 12746
+  },
+  "efficiency": {
+    "meta_cpm_usd": 0.74,
+    "meta_cpm_soles": 2.8,
+    "tiktok_cpm_usd": 0.93,
+    "tiktok_cpm_soles": 3.52,
+    "blended_cpm_usd": 0.8,
+    "blended_cpm_soles": 3.03
+  },
+  "competitors_ig": [
+    {
+      "name": "Halls Perú",
+      "followers": "4462",
+      "likes_avg": "12.6",
+      "comments_avg": "0.4",
+      "posts": "5",
+      "er": "0.29%"
+    },
+    {
+      "name": "BUK Perú",
+      "followers": "925",
+      "likes_avg": "2.6",
+      "comments_avg": "",
+      "posts": "14",
+      "er": "0.28%"
+    },
+    {
+      "name": "Ambrosoli Perú",
+      "followers": "21622",
+      "likes_avg": "56.8",
+      "comments_avg": "0.7",
+      "posts": "7",
+      "er": "0.26%"
+    }
+  ]
+}

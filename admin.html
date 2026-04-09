@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUDiK Report Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f23;--bg2:#1a1a2e;--card:#16213e;--border:#1e3a5f;
+  --purple:#4B00FF;--fucsia:#F84CDE;--teal:#20ECC8;
+  --white:#FFFFFF;--gray:#8899aa;--text:#c8d6e5;
+  --success:#22C55E;--warning:#F59E0B;--danger:#EF4444;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+/* LAYOUT */
+.app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{background:var(--bg2);border-right:1px solid var(--border);padding:20px 0;position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar-logo{padding:0 20px 20px;font-size:16px;font-weight:800;color:var(--white)}
+.sidebar-logo span{color:var(--fucsia)}
+.sidebar-section{padding:8px 20px;font-size:9px;font-weight:700;letter-spacing:.12em;color:var(--gray);text-transform:uppercase;margin-top:16px}
+.sidebar-item{display:flex;align-items:center;gap:10px;padding:8px 20px;font-size:13px;font-weight:500;color:var(--gray);cursor:pointer;transition:all .15s;border:none;background:none;width:100%;text-align:left}
+.sidebar-item:hover{color:var(--white);background:rgba(255,255,255,.03)}
+.sidebar-item.active{color:var(--white);background:rgba(75,0,255,.15);border-right:2px solid var(--purple)}
+.sidebar-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* MAIN */
+.main{padding:32px 40px;max-width:960px}
+.main-title{font-size:24px;font-weight:800;color:var(--white);margin-bottom:4px}
+.main-subtitle{font-size:13px;color:var(--gray);margin-bottom:28px}
+
+/* FORM ELEMENTS */
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.form-input,.form-textarea,.form-select{
+  width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);
+  border-radius:8px;color:var(--white);font-family:'Inter',sans-serif;font-size:13px;
+  transition:border-color .15s;
+}
+.form-input:focus,.form-textarea:focus,.form-select:focus{outline:none;border-color:var(--purple)}
+.form-textarea{min-height:80px;resize:vertical;line-height:1.5}
+.form-hint{font-size:10px;color:var(--gray);margin-top:4px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.form-row-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px}
+
+/* FILE UPLOAD */
+.upload-zone{
+  border:2px dashed var(--border);border-radius:10px;padding:24px;text-align:center;
+  cursor:pointer;transition:all .15s;
+}
+.upload-zone:hover{border-color:var(--purple);background:rgba(75,0,255,.05)}
+.upload-zone-text{font-size:12px;color:var(--gray)}
+.upload-zone input{display:none}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
+.card-badge{font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.08em}
+.badge-auto{background:rgba(32,236,200,.1);color:var(--teal);border:1px solid rgba(32,236,200,.2)}
+.badge-manual{background:rgba(248,76,222,.1);color:var(--fucsia);border:1px solid rgba(248,76,222,.2)}
+.badge-calc{background:rgba(75,0,255,.1);color:#9B6BFF;border:1px solid rgba(75,0,255,.2)}
+
+/* BUTTONS */
+.btn{
+  padding:10px 20px;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;
+  font-weight:700;cursor:pointer;transition:all .15s;border:none;
+}
+.btn-primary{background:var(--purple);color:var(--white)}
+.btn-primary:hover{background:#5a1aff}
+.btn-secondary{background:transparent;color:var(--gray);border:1px solid var(--border)}
+.btn-secondary:hover{color:var(--white);border-color:var(--gray)}
+.btn-success{background:var(--teal);color:#000}
+.btn-success:hover{background:#2affd4}
+.btn-danger{background:var(--danger);color:var(--white)}
+.btn-row{display:flex;gap:10px;margin-top:24px}
+
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse}
+.data-table th{font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--gray);text-transform:uppercase;padding:8px 12px;text-align:left;border-bottom:1px solid var(--border)}
+.data-table td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px}
+.data-table td input{background:transparent;border:none;color:var(--white);font-size:13px;width:100%;font-family:'Inter',sans-serif}
+.data-table td input:focus{outline:none;border-bottom:1px solid var(--purple)}
+
+/* POST CARD EDITOR */
+.post-editor{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px;background:var(--bg);border-radius:10px;margin-bottom:12px}
+.post-thumb-upload{width:120px;height:160px;border-radius:8px;overflow:hidden;background:var(--bg2);border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:10px;color:var(--gray);text-align:center;background-size:cover;background-position:center}
+.post-fields{display:flex;flex-direction:column;gap:8px}
+
+/* STATUS BAR */
+.status-bar{position:fixed;bottom:0;left:240px;right:0;background:var(--bg2);border-top:1px solid var(--border);padding:10px 40px;display:flex;align-items:center;justify-content:space-between;z-index:50}
+.status-text{font-size:11px;color:var(--gray)}
+.status-saved{color:var(--success)}
+
+/* SECTION VISIBILITY */
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* PULL BUTTON */
+.pull-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:6px;background:rgba(32,236,200,.08);border:1px solid rgba(32,236,200,.2);color:var(--teal);font-size:10px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
+.pull-btn:hover{background:rgba(32,236,200,.15)}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">LUD<span>i</span>K Admin</div>
+
+    <div class="sidebar-section">Marca</div>
+    <div style="padding:0 20px 12px">
+      <select class="form-select" id="brand_selector" onchange="selectBrand(this.value)" style="font-size:12px;padding:8px">
+        <option value="">— Seleccionar marca —</option>
+      </select>
+    </div>
+
+    <div class="sidebar-section">Configuracion</div>
+    <button class="sidebar-item active" onclick="showTab('brand',this)">
+      <span class="sidebar-dot" style="background:var(--white)"></span> Marca y Periodo
+    </button>
+    <button class="sidebar-item" onclick="showTab('objectives',this)">
+      <span class="sidebar-dot" style="background:var(--warning)"></span> Objetivos
+    </button>
+
+    <div class="sidebar-section">Datos Automaticos</div>
+    <button class="sidebar-item" onclick="showTab('community',this)">
+      <span class="sidebar-dot" style="background:var(--teal)"></span> Comunidad
+    </button>
+    <button class="sidebar-item" onclick="showTab('content',this)">
+      <span class="sidebar-dot" style="background:var(--fucsia)"></span> Contenido
+    </button>
+    <button class="sidebar-item" onclick="showTab('investment',this)">
+      <span class="sidebar-dot" style="background:var(--success)"></span> Inversion
+    </button>
+    <button class="sidebar-item" onclick="showTab('competition',this)">
+      <span class="sidebar-dot" style="background:var(--danger)"></span> Competencia
+    </button>
+
+    <div class="sidebar-section">Datos Manuales</div>
+    <button class="sidebar-item" onclick="showTab('sentiment',this)">
+      <span class="sidebar-dot" style="background:var(--teal)"></span> Sentimiento
+    </button>
+    <!-- Thumbnails integrado en Contenido -->
+
+    <div class="sidebar-section">Narrativa</div>
+    <button class="sidebar-item" onclick="showTab('story',this)">
+      <span class="sidebar-dot" style="background:var(--purple)"></span> Historia (5 Actos)
+    </button>
+    <button class="sidebar-item" onclick="showTab('insights',this)">
+      <span class="sidebar-dot" style="background:var(--fucsia)"></span> Insights por Seccion
+    </button>
+    <button class="sidebar-item" onclick="showTab('recommendations',this)">
+      <span class="sidebar-dot" style="background:var(--teal)"></span> Recomendaciones
+    </button>
+
+    <div class="sidebar-section">Salida</div>
+    <button class="sidebar-item" onclick="showTab('export',this)">
+      <span class="sidebar-dot" style="background:var(--success)"></span> Generar Reporte
+    </button>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" style="padding-bottom:80px">
+
+    <!-- TAB: BRAND -->
+    <div class="tab-content active" id="tab-brand">
+      <div class="main-title">Marca y Periodo</div>
+      <div class="main-subtitle">Configuracion basica del reporte</div>
+
+      <div class="card">
+        <div class="card-title">Informacion General</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Marca / Cliente</label>
+            <input class="form-input" id="brand_name" value="ISANA Peru">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Periodo</label>
+            <input class="form-input" type="month" id="brand_period" value="2026-03" onchange="reloadBrandData()">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Metricool Brand ID</label>
+            <input class="form-input" id="brand_metricool_id" value="5445861">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tipo de cambio USD → Soles</label>
+            <input class="form-input" type="number" step="0.01" id="brand_fx_rate" value="3.78">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Portada <span class="card-badge badge-manual">Configurable</span></div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Tagline superior</label><input class="form-input" id="portada_tag" value="LUDiK Analytics · Reporte Mensual v2.2"></div>
+          <div class="form-group"><label class="form-label">Texto de confidencialidad</label><input class="form-input" id="portada_footer" value="Confidencial · Preparado por el equipo LUDiK para ISANA Peru"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Logo / imagen de marca del cliente (opcional)</label>
+          <div class="upload-zone" onclick="this.querySelector('input').click()" id="portada-logo-zone">
+            <input type="file" accept="image/*" id="portada-logo" onchange="previewUpload(this,'portada-logo-preview')">
+            <div class="upload-zone-text" id="portada-logo-preview">Click para subir logo del cliente (aparece en la portada)</div>
+          </div>
+        </div>
+        <div class="form-group"><label class="form-label">KPIs Hero de portada (se calculan automaticamente, pero puedes editarlos)</label></div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 1 valor</label><input class="form-input" id="portada_kpi1_val" value="3.57M" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 2 valor</label><input class="form-input" id="portada_kpi2_val" value="+1,789" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 3 valor</label><input class="form-input" id="portada_kpi3_val" value="S/ 9,736" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 4 valor</label><input class="form-input" id="portada_kpi4_val" value="5/6" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 5 valor</label><input class="form-input" id="portada_kpi5_val" value="89/100" style="text-align:center"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 1 label</label><input class="form-input" id="portada_kpi1_label" value="Alcance Total" style="text-align:center;font-size:10px"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 2 label</label><input class="form-input" id="portada_kpi2_label" value="Nuevos Seguidores" style="text-align:center;font-size:10px"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 3 label</label><input class="form-input" id="portada_kpi3_label" value="Inversion" style="text-align:center;font-size:10px"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 4 label</label><input class="form-input" id="portada_kpi4_label" value="Objetivos Cumplidos" style="text-align:center;font-size:10px"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">KPI 5 label</label><input class="form-input" id="portada_kpi5_label" value="Brand Health Score" style="text-align:center;font-size:10px"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Cierre <span class="card-badge badge-manual">Configurable</span></div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Tagline</label><input class="form-input" id="cierre_tagline" value="IA · Gamificacion · Datos"></div>
+          <div class="form-group"><label class="form-label">Preparado por</label><input class="form-input" id="cierre_team" value="Equipo LUDiK — Digital Strategy"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Ubicacion</label><input class="form-input" id="cierre_location" value="Barcelona, España"></div>
+          <div class="form-group"><label class="form-label">Contacto</label><input class="form-input" id="cierre_contact" value="ludik.io · hola@ludik.io"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Texto de confidencialidad</label><input class="form-input" id="cierre_conf" value="Documento confidencial · Marzo 2026 · v2.2"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Analisis del Periodo <span class="card-badge badge-manual">Texto Tecnico</span></div>
+        <div class="form-group"><label class="form-label">Texto resumen ejecutivo (modo tecnico)</label>
+        <textarea class="form-textarea" id="tech_resumen" rows="3">Marzo fue el mejor mes del año para ISANA. TikTok alcanzo 2.75M vistas totales con 21 videos. Inversion total: S/ 9,736 (USD 2,575.64). Se cumplieron 5 de 6 objetivos — el ER de IG Reels (2.4% vs meta 3%) fue el unico no alcanzado. 1,284 señales de intencion de compra registradas.</textarea></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Fuentes de Datos <span class="card-badge badge-auto">Automatico</span></div>
+        <div class="form-group">
+          <label class="form-label">Ruta carpeta raw/ del mes</label>
+          <input class="form-input" id="brand_raw_path" value="/reportes-mensuales/ISANA/2026:03/raw/">
+        </div>
+        <div class="form-hint">Aqui se buscan: analytics.json, tiktok_videos.json, ig_reels.json, ig_posts.json, fb_posts.json</div>
+      </div>
+    </div>
+
+    <!-- TAB: OBJECTIVES -->
+    <div class="tab-content" id="tab-objectives">
+      <div class="main-title">Objetivos del Mes</div>
+      <div class="main-subtitle">Define las metas y registra los resultados <span class="card-badge badge-manual">Manual</span></div>
+
+      <div class="card">
+        <table class="data-table" id="objectives-table">
+          <thead>
+            <tr><th>Objetivo</th><th>Canal</th><th>Meta</th><th>Resultado</th><th>Estado</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input value="Alcanzar 30,000 personas en Meta"></td>
+              <td><input value="Meta"></td>
+              <td><input value="30,000"></td>
+              <td><input value="32,545"></td>
+              <td><select class="form-select" style="padding:4px 8px;font-size:11px"><option value="met" selected>Superado</option><option value="close">Cerca</option><option value="missed">No alcanzado</option></select></td>
+              <td><button class="btn btn-danger" style="padding:4px 8px;font-size:10px" onclick="this.closest('tr').remove()">X</button></td>
+            </tr>
+            <tr>
+              <td><input value="Generar 2,500 interacciones en Meta"></td>
+              <td><input value="Meta"></td>
+              <td><input value="2,500"></td>
+              <td><input value="3,361"></td>
+              <td><select class="form-select" style="padding:4px 8px;font-size:11px"><option value="met" selected>Superado</option><option value="close">Cerca</option><option value="missed">No alcanzado</option></select></td>
+              <td><button class="btn btn-danger" style="padding:4px 8px;font-size:10px" onclick="this.closest('tr').remove()">X</button></td>
+            </tr>
+            <tr>
+              <td><input value="1.5M reproducciones en TikTok"></td>
+              <td><input value="TikTok"></td>
+              <td><input value="1,500,000"></td>
+              <td><input value="2,746,395"></td>
+              <td><select class="form-select" style="padding:4px 8px;font-size:11px"><option value="met" selected>Superado</option><option value="close">Cerca</option><option value="missed">No alcanzado</option></select></td>
+              <td><button class="btn btn-danger" style="padding:4px 8px;font-size:10px" onclick="this.closest('tr').remove()">X</button></td>
+            </tr>
+            <tr>
+              <td><input value="ER >3% en IG Reels"></td>
+              <td><input value="Instagram"></td>
+              <td><input value=">3%"></td>
+              <td><input value="2.4%"></td>
+              <td><select class="form-select" style="padding:4px 8px;font-size:11px"><option value="met">Superado</option><option value="close">Cerca</option><option value="missed" selected>No alcanzado</option></select></td>
+              <td><button class="btn btn-danger" style="padding:4px 8px;font-size:10px" onclick="this.closest('tr').remove()">X</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-secondary" style="margin-top:12px" onclick="addObjectiveRow()">+ Agregar objetivo</button>
+      </div>
+    </div>
+
+    <!-- TAB: COMMUNITY -->
+    <div class="tab-content" id="tab-community">
+      <div class="main-title">Comunidad</div>
+      <div class="main-subtitle">Seguidores por plataforma <span class="card-badge badge-auto">Auto desde Metricool</span></div>
+
+      <div class="card">
+        <div class="card-title">Facebook</div>
+        <div class="form-row-4">
+          <div class="form-group"><label class="form-label">Inicio</label><input class="form-input" id="fb_start" value="22804"></div>
+          <div class="form-group"><label class="form-label">Fin</label><input class="form-input" id="fb_end" value="23200"></div>
+          <div class="form-group"><label class="form-label">Delta</label><input class="form-input" id="fb_delta" value="+396" readonly></div>
+          <div class="form-group"><label class="form-label">% Crecimiento</label><input class="form-input" id="fb_pct" value="1.7%" readonly></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Instagram</div>
+        <div class="form-row-4">
+          <div class="form-group"><label class="form-label">Inicio</label><input class="form-input" id="ig_start" value="4982"></div>
+          <div class="form-group"><label class="form-label">Fin</label><input class="form-input" id="ig_end" value="5690"></div>
+          <div class="form-group"><label class="form-label">Delta</label><input class="form-input" id="ig_delta" value="+708" readonly></div>
+          <div class="form-group"><label class="form-label">% Crecimiento</label><input class="form-input" id="ig_pct" value="14.2%" readonly></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">TikTok</div>
+        <div class="form-row-4">
+          <div class="form-group"><label class="form-label">Inicio</label><input class="form-input" id="tk_start" value="1164"></div>
+          <div class="form-group"><label class="form-label">Fin</label><input class="form-input" id="tk_end" value="1849"></div>
+          <div class="form-group"><label class="form-label">Delta</label><input class="form-input" id="tk_delta" value="+685" readonly></div>
+          <div class="form-group"><label class="form-label">% Crecimiento</label><input class="form-input" id="tk_pct" value="58.8%" readonly></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Textos Tecnicos — Comunidad y Audiencia <span class="card-badge badge-manual">Texto Tecnico</span></div>
+        <div class="form-group"><label class="form-label">Insight de Audiencia (demografia)</label>
+        <textarea class="form-textarea" id="tech_audiencia" rows="2">FB = compradora (25-44). TK = futuro consumidor (13-24). IG = puente entre ambos. Audiencia masculina 38-46%: oportunidad si hay linea para hombres.</textarea></div>
+      </div>
+    </div>
+
+    <!-- TAB: CONTENT -->
+    <div class="tab-content" id="tab-content">
+      <div class="main-title">Contenido</div>
+      <div class="main-subtitle">Top y peor contenido del mes — thumbnail + metricas editables</div>
+
+      <div class="card">
+        <div class="card-title">Top Posts <span class="card-badge badge-manual">Editable</span> <button class="btn btn-secondary" style="padding:4px 10px;font-size:10px;margin-left:auto" onclick="addPostEditor('top-posts-list','top')">+ Agregar</button></div>
+        <div id="top-posts-list">
+          <div class="post-editor" data-type="top">
+            <div class="post-thumb-upload" data-thumb="top-0">Click para subir thumbnail</div>
+            <div class="post-fields">
+              <div class="form-row"><input class="form-input post-title" value="Zapatillas y Limpieza" placeholder="Titulo"><select class="form-select post-platform"><option>TikTok</option><option>Instagram</option><option>Facebook</option></select></div>
+              <div class="form-row"><input class="form-input post-date" type="date" value="2026-03-19"><input class="form-input post-views" value="441411" placeholder="Vistas"></div>
+              <div class="form-row"><input class="form-input post-likes" value="1673" placeholder="Likes"><input class="form-input post-shares" value="235" placeholder="Shares"></div>
+              <div class="form-row"><input class="form-input post-inv" value="~S/ 166" placeholder="Inversion"><input class="form-input post-er" value="0.65" placeholder="ER%"></div>
+              <input class="form-input post-url" value="https://www.tiktok.com/@isana.pe/video/7619102013183331600" placeholder="URL del post">
+            </div>
+          </div>
+          <div class="post-editor" data-type="top">
+            <div class="post-thumb-upload" data-thumb="top-1">Click para subir thumbnail</div>
+            <div class="post-fields">
+              <div class="form-row"><input class="form-input post-title" value="Talco expertos" placeholder="Titulo"><select class="form-select post-platform"><option>TikTok</option><option>Instagram</option><option>Facebook</option></select></div>
+              <div class="form-row"><input class="form-input post-date" type="date" value="2026-03-12"><input class="form-input post-views" value="407021" placeholder="Vistas"></div>
+              <div class="form-row"><input class="form-input post-likes" value="949" placeholder="Likes"><input class="form-input post-shares" value="73" placeholder="Shares"></div>
+              <div class="form-row"><input class="form-input post-inv" value="S/ 557" placeholder="Inversion"><input class="form-input post-er" value="0.31" placeholder="ER%"></div>
+              <input class="form-input post-url" value="https://www.tiktok.com/@isana.pe/video/7616488248034037009" placeholder="URL del post">
+            </div>
+          </div>
+          <div class="post-editor" data-type="top">
+            <div class="post-thumb-upload" data-thumb="top-2">Click para subir thumbnail</div>
+            <div class="post-fields">
+              <div class="form-row"><input class="form-input post-title" value="Sudor bacteria" placeholder="Titulo"><select class="form-select post-platform"><option>TikTok</option><option>Instagram</option><option>Facebook</option></select></div>
+              <div class="form-row"><input class="form-input post-date" type="date" value="2026-03-25"><input class="form-input post-views" value="316997" placeholder="Vistas"></div>
+              <div class="form-row"><input class="form-input post-likes" value="835" placeholder="Likes"><input class="form-input post-shares" value="41" placeholder="Shares"></div>
+              <div class="form-row"><input class="form-input post-inv" placeholder="Inversion"><input class="form-input post-er" value="0.36" placeholder="ER%"></div>
+              <input class="form-input post-url" value="https://www.tiktok.com/@isana.pe/video/7621252393115700481" placeholder="URL del post">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Worst Posts <span class="card-badge badge-manual">Editable</span> <button class="btn btn-secondary" style="padding:4px 10px;font-size:10px;margin-left:auto" onclick="addPostEditor('worst-posts-list','worst')">+ Agregar</button></div>
+        <div id="worst-posts-list">
+          <div class="post-editor" data-type="worst">
+            <div class="post-thumb-upload" data-thumb="worst-0">Click para subir thumbnail</div>
+            <div class="post-fields">
+              <div class="form-row"><input class="form-input post-title" value="Tu rutina es demandante" placeholder="Titulo"><select class="form-select post-platform"><option>Facebook</option><option>TikTok</option><option>Instagram</option></select></div>
+              <div class="form-row"><input class="form-input post-date" type="date" value="2026-03-23"><input class="form-input post-views" value="241" placeholder="Alcance/Vistas"></div>
+              <div class="form-row"><input class="form-input post-likes" value="12" placeholder="Reacciones/Likes"><input class="form-input post-shares" value="0" placeholder="Shares"></div>
+              <input class="form-input post-url" placeholder="URL del post">
+            </div>
+          </div>
+          <div class="post-editor" data-type="worst">
+            <div class="post-thumb-upload" data-thumb="worst-1">Click para subir thumbnail</div>
+            <div class="post-fields">
+              <div class="form-row"><input class="form-input post-title" value="PONLE NOMBRE Y GANA (Sorteo)" placeholder="Titulo"><select class="form-select post-platform"><option>Facebook</option><option>TikTok</option><option>Instagram</option></select></div>
+              <div class="form-row"><input class="form-input post-date" type="date" value="2026-03-20"><input class="form-input post-views" value="23515" placeholder="Alcance/Vistas"></div>
+              <div class="form-row"><input class="form-input post-likes" value="589" placeholder="Reacciones/Likes"><input class="form-input post-shares" value="55" placeholder="Shares"></div>
+              <input class="form-input post-url" placeholder="URL del post">
+            </div>
+          </div>
+          <div class="post-editor" data-type="worst">
+            <div class="post-thumb-upload" data-thumb="worst-2">Click para subir thumbnail</div>
+            <div class="post-fields">
+              <div class="form-row"><input class="form-input post-title" value="Pies descalzos verano" placeholder="Titulo"><select class="form-select post-platform"><option>TikTok</option><option>Instagram</option><option>Facebook</option></select></div>
+              <div class="form-row"><input class="form-input post-date" type="date" value="2026-03-27"><input class="form-input post-views" value="539" placeholder="Alcance/Vistas"></div>
+              <div class="form-row"><input class="form-input post-likes" value="4" placeholder="Reacciones/Likes"><input class="form-input post-shares" value="0" placeholder="Shares"></div>
+              <input class="form-input post-url" value="https://www.tiktok.com/@isana.pe/video/7621994102736948496" placeholder="URL del post">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Textos Tecnicos — Contenido <span class="card-badge badge-manual">Texto Tecnico</span></div>
+        <div class="form-group"><label class="form-label">Insight principal del contenido</label>
+        <textarea class="form-textarea" id="tech_contenido_insight" rows="2">Un solo video domino TODO el mes en TODAS las plataformas. "Zapatillas y Limpieza" fue #1 en TikTok (441K) y "Talco expertos" fue el hit cross-platform (407K TK + 264K Meta Ads).</textarea></div>
+        <div class="form-group"><label class="form-label">¿Por que fallaron los peores contenidos?</label>
+        <textarea class="form-textarea" id="tech_contenido_fail" rows="3">Facebook organico sin concurso = muerto. Los 5 posts sin mecanica participativa alcanzaron menos de 400 personas cada uno. Sin incentivo de participacion no hay alcance. TikTok "Pies descalzos verano" (539 vistas) fue producto directo: el algoritmo amplifica entretenimiento, no anuncios.</textarea></div>
+        <div class="form-group"><label class="form-label">Ventana optima de publicacion</label>
+        <textarea class="form-textarea" id="tech_contenido_horario" rows="2">Meta/Instagram: Martes a jueves, 10am. TikTok: Miercoles 10am o Viernes 6pm. Los videos del 12-13 mar generaron el 60% de vistas del mes.</textarea></div>
+        <div class="form-group"><label class="form-label">Alerta: Riesgo Facebook Organico</label>
+        <textarea class="form-textarea" id="tech_riesgo_fb" rows="3">El sorteo genero 96% de las interacciones y el 99% del alcance organico de Facebook este mes. Sin sorteo, el alcance organico por post cae a menos de 250 personas. Si un mes no se ejecuta el sorteo, todas las metricas de Facebook se desploman. Presupuestar como gasto fijo S/ 750/mes.</textarea></div>
+      </div>
+    </div>
+
+    <!-- TAB: INVESTMENT -->
+    <div class="tab-content" id="tab-investment">
+      <div class="main-title">Inversion</div>
+      <div class="main-subtitle">Datos de Meta Ads y TikTok Ads <span class="card-badge badge-manual">CSV Upload</span></div>
+
+      <div class="card">
+        <div class="card-title">Meta Ads — CSV del mes</div>
+        <div class="upload-zone" onclick="this.querySelector('input').click()">
+          <input type="file" accept=".csv" id="meta-ads-csv">
+          <div class="upload-zone-text">Arrastra o haz click para subir el CSV de Meta Ads Manager<br>(nivel anuncio)</div>
+        </div>
+        <div class="form-row" style="margin-top:12px">
+          <div class="form-group"><label class="form-label">Total USD</label><input class="form-input" id="meta_total_usd" value="1868.47"></div>
+          <div class="form-group"><label class="form-label">Total Soles</label><input class="form-input" id="meta_total_soles" value="7062.82" readonly></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">TikTok Ads — CSV del mes</div>
+        <div class="upload-zone" onclick="this.querySelector('input').click()">
+          <input type="file" accept=".csv" id="tk-ads-csv">
+          <div class="upload-zone-text">Arrastra o haz click para subir el CSV de TikTok Ads<br>(nivel anuncio)</div>
+        </div>
+        <div class="form-row" style="margin-top:12px">
+          <div class="form-group"><label class="form-label">Total USD</label><input class="form-input" id="tk_total_usd" value="707.17"></div>
+          <div class="form-group"><label class="form-label">Total Soles</label><input class="form-input" id="tk_total_soles" value="2673.10" readonly></div>
+        </div>
+      </div>
+    </div>
+
+      <div class="card">
+        <div class="card-title">Textos Tecnicos — Inversion y Engagement <span class="card-badge badge-manual">Texto Tecnico</span></div>
+        <div class="form-group"><label class="form-label">Formula Indice de Valor (explicacion)</label>
+        <textarea class="form-textarea" id="tech_indice_valor" rows="3">Formula: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) / Alcance × 1000
+
+TikTok #1 "Zapatillas": (0×3 + 235×2 + 2×1.5 + 1,673×1) / 441,411 × 1000 = 4.86
+TikTok #2 "Talco expertos": (0×3 + 73×2 + 28×1.5 + 949×1) / 407,021 × 1000 = 2.79</textarea></div>
+      </div>
+    </div>
+
+    <!-- TAB: COMPETITION -->
+    <div class="tab-content" id="tab-competition">
+      <div class="main-title">Competencia IG</div>
+      <div class="main-subtitle">Datos de competidores en Instagram <span class="card-badge badge-auto">Auto desde Metricool</span></div>
+
+      <div class="card">
+        <table class="data-table" id="comp-table">
+          <thead><tr><th>Marca</th><th>Seguidores IG</th><th>Likes prom.</th><th>Comments prom.</th><th>Posts</th><th>ER %</th></tr></thead>
+          <tbody>
+            <tr><td><input value="ISANA Peru" style="color:var(--teal);font-weight:700"></td><td><input value="5,690"></td><td><input value="27.7"></td><td><input value="1.5"></td><td><input value="30"></td><td><input value="1.22%" style="color:var(--teal)"></td></tr>
+            <tr><td><input value="Deopies (Recamier)"></td><td><input value="23,305"></td><td><input value="51.4"></td><td><input value="4.0"></td><td><input value="11"></td><td><input value="0.24%"></td></tr>
+            <tr><td><input value="LEA Peru"></td><td><input value="~15,000"></td><td><input value="15.6"></td><td><input value="1.4"></td><td><input value="25"></td><td><input value="0.11%"></td></tr>
+            <tr><td><input value="K'allma"></td><td><input value="53,983"></td><td><input value="17.3"></td><td><input value="1.1"></td><td><input value="27"></td><td><input value="0.03%"></td></tr>
+          </tbody>
+        </table>
+        <button class="btn btn-secondary" style="margin-top:12px" onclick="addCompRow()">+ Agregar competidor</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Brand Health Score <span class="card-badge badge-calc">Calculado</span></div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">BHS Total</label><input class="form-input" id="bhs_total" value="89"></div>
+          <div class="form-group"><label class="form-label">Benchmark industria</label><input class="form-input" id="bhs_benchmark" value="70-75"></div>
+        </div>
+        <div class="form-group"><label class="form-label">7 Dimensiones (score x peso)</label></div>
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:12px">
+          <div class="form-group"><label class="form-label" style="font-size:8px">Crecimiento 10%</label><input class="form-input" id="bhs_crec" value="87" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">Alcance 10%</label><input class="form-input" id="bhs_alc" value="90" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">Engagement 20%</label><input class="form-input" id="bhs_eng" value="88" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">Sentimiento* 15%</label><input class="form-input" id="bhs_sent" value="85" style="text-align:center;border-color:var(--warning)"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">Eficiencia 10%</label><input class="form-input" id="bhs_eff" value="92" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">Metas 10%</label><input class="form-input" id="bhs_met" value="100" style="text-align:center"></div>
+          <div class="form-group"><label class="form-label" style="font-size:8px">Pos. Comp.* 25%</label><input class="form-input" id="bhs_comp" value="85" style="text-align:center;border-color:var(--warning)"></div>
+        </div>
+        <div class="form-hint">* Dimensiones con datos proyectados (40% del peso). Borde amarillo = estimado.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Textos Tecnicos — BHS y Competencia <span class="card-badge badge-manual">Texto Tecnico</span></div>
+        <div class="form-group"><label class="form-label">Explicacion del calculo BHS</label>
+        <textarea class="form-textarea" id="tech_bhs" rows="5">El BHS es un indice compuesto de 7 dimensiones con peso especifico:
+Posicion Competitiva (25%) — Compara seguidores, alcance y ER vs competidores. ISANA: 85pts.
+Engagement (20%) — ER promedio ponderado vs benchmarks. ISANA: 88pts.
+Sentimiento (15%) — Net Sentiment Score. ISANA: 85pts (dato proyectado).
+Crecimiento (10%) — % crecimiento mensual vs benchmark 2%. ISANA: 87pts.
+Alcance (10%) — Personas unicas alcanzadas vs objetivo. ISANA: 90pts.
+Eficiencia (10%) — CPM y costo por seguidor vs benchmarks. ISANA: 92pts.
+Metas (10%) — % objetivos cumplidos. ISANA: 100pts (5/6 = ajustar).
+
+Calculo: 87×0.10 + 90×0.10 + 88×0.20 + 85×0.15 + 92×0.10 + 100×0.10 + 85×0.25 = 88.5 → 89</textarea></div>
+      </div>
+    </div>
+
+    <!-- TAB: SENTIMENT -->
+    <div class="tab-content" id="tab-sentiment">
+      <div class="main-title">Sentimiento</div>
+      <div class="main-subtitle">Analisis cualitativo de comentarios <span class="card-badge badge-manual">Manual / Extension Chrome</span></div>
+
+      <div class="card">
+        <div class="card-title">Upload de Comentarios</div>
+        <div class="upload-zone" onclick="this.querySelector('input').click()">
+          <input type="file" accept=".csv" multiple id="comments-csv">
+          <div class="upload-zone-text">Arrastra los CSV de comentarios exportados (IG + TikTok)<br>Se analizaran automaticamente</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Resultados del Analisis</div>
+        <div class="form-row-4">
+          <div class="form-group"><label class="form-label">Total comentarios</label><input class="form-input" id="sent_total" value="113"></div>
+          <div class="form-group"><label class="form-label">% Positivo</label><input class="form-input" id="sent_pos" value="69"></div>
+          <div class="form-group"><label class="form-label">% Neutral</label><input class="form-input" id="sent_neu" value="8"></div>
+          <div class="form-group"><label class="form-label">% Negativo</label><input class="form-input" id="sent_neg" value="4"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Net Score</label><input class="form-input" id="sent_net" value="+65"></div>
+      </div>
+    </div>
+
+      <div class="card">
+        <div class="card-title">Textos Tecnicos — Sentimiento <span class="card-badge badge-manual">Texto Tecnico</span></div>
+        <div class="form-group"><label class="form-label">Temas recurrentes en comentarios</label>
+        <textarea class="form-textarea" id="tech_temas" rows="3">Positivos (69%): Elogio al producto (28%), Elogio al contenido (22%), Risa/conexion (14%), Intencion compra (5%), Ternura/emocional (4%).
+Participacion sorteo (19%): Interacciones del concurso "PONLE NOMBRE".
+Neutral (8%): Consultas sobre disponibilidad y precios (4%).
+Negativos (4%): Negativo/esceptico. Ningun negativo sobre calidad.</textarea></div>
+      </div>
+    </div>
+
+    <!-- TAB: THUMBNAILS -->
+    <!-- Tab Thumbnails eliminado: integrado en tab Contenido -->
+
+    <!-- TAB: STORY -->
+    <div class="tab-content" id="tab-story">
+      <div class="main-title">Historia (5 Actos)</div>
+      <div class="main-subtitle">Narrativa del reporte — modo storytelling <span class="card-badge badge-manual">Escrito por estratega / IA</span></div>
+
+      <div class="card">
+        <div class="card-title">Acto 1 — El Descubrimiento</div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act1_title" value="Dos videos cambiaron las reglas del juego"></div>
+        <div class="form-group"><label class="form-label">Narrativa (parrafos)</label><textarea class="form-textarea" id="act1_text" rows="4">En marzo, dos TikToks rompieron todo. "Zapatillas y Limpieza" alcanzo 441K vistas y "Talco expertos" llego a 407K. Dos videos de humor cotidiano donde el producto aparece como plot twist, no como protagonista.</textarea></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acto 2 — El Impacto</div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act2_title" value="No cuantos vieron, sino cuantos actuaron"></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act2_text" rows="4">Marzo cerro con 3.57 millones de cuentas unicas alcanzadas y una frecuencia de 2.22 impresiones por persona. Pero el numero que realmente cuenta es otro: 1,284 señales de intencion de compra.</textarea></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acto 3 — Lo que no funciona</div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act3_title" value="Tres verdades incomodas que debemos enfrentar"></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act3_text" rows="4">Facebook organico sin sorteo = muerto. Instagram es el punto ciego. Contenido de producto directo no funciona en TikTok.</textarea></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acto 4 — Donde estamos</div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act4_title" value="Competencia, salud de marca e inversion"></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act4_text" rows="4">ISANA es la marca mas pequeña en seguidores de IG pero la que tiene la audiencia mas viva. K'allma tiene 53K seguidores con ER de 0.03%. ISANA tiene 5.7K con 1.22% ER — 40x mas engagement por seguidor.</textarea></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Acto 5 — Que hacemos diferente</div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act5_title" value="Abril: 3 apuestas, 1 correccion, 2 sistemas"></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act5_text" rows="4">Si marzo demostro que un video puede dominar todos los canales, abril es el mes para sistematizar ese descubrimiento.</textarea></div>
+      </div>
+    </div>
+
+    <!-- TAB: INSIGHTS -->
+    <div class="tab-content" id="tab-insights">
+      <div class="main-title">Insights por Seccion</div>
+      <div class="main-subtitle">Maximo 280 caracteres cada uno. Dato revelador + implicacion de negocio. <span class="card-badge badge-manual">Escrito por estratega / IA</span></div>
+
+      <div class="card">
+        <div class="card-title">Comunidad <span id="insight_com_count" style="font-size:10px;color:var(--gray)">0/280</span></div>
+        <textarea class="form-textarea" id="insight_community" maxlength="280" oninput="countChars(this,'insight_com_count')">TikTok crecio 58.8% con $0 en followers. La campaña pagada de seguidores genero solo 71 por $43. El crecimiento real viene del contenido viral, no de la pauta de followers.</textarea>
+      </div>
+      <div class="card">
+        <div class="card-title">Alcance <span id="insight_alc_count" style="font-size:10px;color:var(--gray)">0/280</span></div>
+        <textarea class="form-textarea" id="insight_reach" maxlength="280" oninput="countChars(this,'insight_alc_count')">S/ 9,736 generaron 3.57M cuentas unicas alcanzadas. TikTok entrego el mismo volumen de impresiones que Meta con un tercio del presupuesto. CPM TK: S/ 1.02 vs Meta: S/ 2.49.</textarea>
+      </div>
+      <div class="card">
+        <div class="card-title">Engagement <span id="insight_eng_count" style="font-size:10px;color:var(--gray)">0/280</span></div>
+        <textarea class="form-textarea" id="insight_engagement" maxlength="280" oninput="countChars(this,'insight_eng_count')">El sorteo concentra el 54% de las interacciones de Meta. Sin sorteo, el ER baja a 4.8% — aun 2x el benchmark. El sorteo es amplificador, no muleta. Sistematizarlo mensualmente.</textarea>
+      </div>
+      <div class="card">
+        <div class="card-title">Sentimiento <span id="insight_sent_count" style="font-size:10px;color:var(--gray)">0/280</span></div>
+        <textarea class="form-textarea" id="insight_sentiment" maxlength="280" oninput="countChars(this,'insight_sent_count')">6 personas preguntaron "¿donde lo compro?" sin respuesta en TikTok. Cada consulta sin contestar es una venta perdida. Protocolo de respuesta en <2h es urgente.</textarea>
+      </div>
+      <div class="card">
+        <div class="card-title">Inversion <span id="insight_inv_count" style="font-size:10px;color:var(--gray)">0/280</span></div>
+        <textarea class="form-textarea" id="insight_investment" maxlength="280" oninput="countChars(this,'insight_inv_count')">Campaña Followers TK quemo S/ 163 para 71 seguidores. El contenido gano 614 gratis. Pausar Followers y redirigir 100% a Reproducciones (CPM S/ 1.02).</textarea>
+      </div>
+      <div class="card">
+        <div class="card-title">Competencia <span id="insight_comp_count" style="font-size:10px;color:var(--gray)">0/280</span></div>
+        <textarea class="form-textarea" id="insight_competition" maxlength="280" oninput="countChars(this,'insight_comp_count')">K'allma tiene 53K seg. pero ER de 0.03% (audiencia muerta). ISANA con 5.7K tiene 1.22% ER: 40x mas engagement por seguidor. Crecer en calidad > cantidad.</textarea>
+      </div>
+    </div>
+
+    <!-- TAB: RECOMMENDATIONS -->
+    <div class="tab-content" id="tab-recommendations">
+      <div class="main-title">Recomendaciones</div>
+      <div class="main-subtitle">Plan de accion priorizado <span class="card-badge badge-manual">Manual</span></div>
+
+      <div id="recs-container">
+        <div class="card">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Prioridad</label>
+              <select class="form-select"><option>Alta</option><option>Media</option><option>Baja</option></select>
+            </div>
+            <div class="form-group"><label class="form-label">Canal</label><input class="form-input" value="TikTok Ads"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Titulo</label><input class="form-input" value="Pausar campaña Followers (CPE $0.61 insostenible)"></div>
+          <div class="form-group"><label class="form-label">Descripcion</label><textarea class="form-textarea">71 seguidores con $43 USD. Organico es 5x mas eficiente. Redirigir a Reproducciones.</textarea></div>
+        </div>
+        <div class="card">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Prioridad</label>
+              <select class="form-select"><option>Alta</option><option>Media</option><option>Baja</option></select>
+            </div>
+            <div class="form-group"><label class="form-label">Canal</label><input class="form-input" value="Cross-platform"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Titulo</label><input class="form-input" value="1 video de calidad → todos los canales"></div>
+          <div class="form-group"><label class="form-label">Descripcion</label><textarea class="form-textarea">Todo video >100K en TK → amplificar en Meta esa semana.</textarea></div>
+        </div>
+      </div>
+      <button class="btn btn-secondary" style="margin-top:12px" onclick="addRecCard()">+ Agregar recomendacion</button>
+    </div>
+
+    <!-- TAB: EXPORT -->
+    <div class="tab-content" id="tab-export">
+      <div class="main-title">Generar Reporte</div>
+      <div class="main-subtitle">Exporta el reporte completo con todos los datos configurados</div>
+
+      <div class="card">
+        <div class="card-title">Resumen de Datos</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.8" id="export-summary">
+          Completa las secciones del admin para generar el reporte.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Acciones</div>
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="exportJSON()">Exportar JSON</button>
+          <button class="btn btn-success" onclick="generateReport()">Generar Reporte HTML</button>
+          <button class="btn btn-secondary" onclick="previewReport()">Vista Previa</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">JSON Generado</div>
+        <textarea class="form-textarea" id="json-output" rows="12" style="font-family:monospace;font-size:11px" readonly></textarea>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <div class="status-text">LUDiK Report Admin v1.1 · <span id="status-msg">Listo</span></div>
+  <div style="display:flex;gap:8px">
+    <button class="btn btn-secondary" style="padding:6px 14px;font-size:11px" onclick="saveLocal()">Guardar borrador</button>
+    <button class="btn btn-primary" style="padding:6px 14px;font-size:11px" onclick="exportJSON()">Exportar JSON</button>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// BRANDS
+// ============================================================
+let BRANDS = [];
+
+async function loadBrands() {
+  try {
+    const res = await fetch('brands.json');
+    BRANDS = (await res.json()).brands;
+    const sel = document.getElementById('brand_selector');
+    BRANDS.forEach(b => {
+      const opt = document.createElement('option');
+      opt.value = b.id;
+      opt.textContent = b.name;
+      sel.appendChild(opt);
+    });
+  } catch(e) { console.error('Error loading brands:', e); }
+}
+
+async function selectBrand(brandId) {
+  const brand = BRANDS.find(b => b.id === brandId);
+  if (!brand) return;
+
+  // SIEMPRE limpiar todos los campos primero
+  clearAllFields();
+
+  document.getElementById('brand_name').value = brand.name;
+  document.getElementById('brand_metricool_id').value = brand.metricool_id;
+  document.getElementById('brand_fx_rate').value = brand.fx_rate;
+
+  const period = document.getElementById('brand_period').value;
+
+  // 1. Try loading from server JSON file first
+  const jsonUrl = 'data/' + brandId + '_' + period + '.json';
+  try {
+    const res = await fetch(jsonUrl);
+    if (res.ok) {
+      const data = await res.json();
+      loadFromData(data);
+      document.getElementById('status-msg').textContent = '✓ ' + brand.name + ' cargada desde ' + jsonUrl;
+      document.getElementById('status-msg').style.color = 'var(--teal)';
+      return;
+    }
+  } catch(e) { console.warn('No server JSON for', jsonUrl); }
+
+  // 2. Fallback: try localStorage
+  const key = 'ludik_report_' + brandId + '_' + period;
+  const saved = localStorage.getItem(key);
+  if (saved) {
+    loadFromData(JSON.parse(saved));
+    document.getElementById('status-msg').textContent = brand.name + ' cargada desde borrador local';
+    document.getElementById('status-msg').style.color = 'var(--warning)';
+    return;
+  }
+
+  // 3. No data found
+  document.getElementById('status-msg').textContent = brand.name + ' — sin reporte para ' + period + '. Generar con Claude primero.';
+  document.getElementById('status-msg').style.color = 'var(--gray)';
+}
+
+function clearAllFields() {
+  // Reset all text inputs and textareas (except brand selector and period)
+  document.querySelectorAll('.form-input, .form-textarea').forEach(el => {
+    if (el.id === 'brand_selector' || el.id === 'brand_period') return;
+    if (el.tagName === 'SELECT') return;
+    el.value = '';
+  });
+  // Reset objectives table to empty
+  const objTbody = document.querySelector('#objectives-table tbody');
+  if (objTbody) objTbody.innerHTML = '';
+  // Reset competitors table to empty
+  const compTbody = document.querySelector('#comp-table tbody');
+  if (compTbody) compTbody.innerHTML = '';
+  // Reset recommendations
+  const recsContainer = document.getElementById('recs-container');
+  if (recsContainer) recsContainer.innerHTML = '';
+  // Reset char counters
+  document.querySelectorAll('[maxlength="280"]').forEach(el => {
+    const countId = el.getAttribute('oninput')?.match(/'([^']+)'/)?.[1];
+    if (countId) { const c = document.getElementById(countId); if (c) c.textContent = '0/280'; }
+  });
+}
+
+function reloadBrandData() {
+  const brandId = document.getElementById('brand_selector').value;
+  if (brandId) selectBrand(brandId);
+}
+
+function buildPostEditor(p, type, idx) {
+  const platOpts = ['TikTok','Instagram','Facebook'].map(pl => '<option'+(((p.platform||'TikTok')===pl||(type==='top'&&pl==='TikTok'))?' selected':'')+'>'+pl+'</option>').join('');
+  const thumbStyle = p.coverImageUrl ? ' style="background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center;color:transparent"' : '';
+  return '<div class="post-editor" data-type="'+type+'">' +
+    '<div class="post-thumb-upload" data-thumb="'+type+'-'+idx+'"'+thumbStyle+'>'+(p.coverImageUrl?'':'Click para subir thumbnail')+'</div>' +
+    '<div class="post-fields">' +
+      '<div class="form-row"><input class="form-input post-title" value="'+(p.title||p.text||'')+'" placeholder="Titulo"><select class="form-select post-platform">'+platOpts+'</select></div>' +
+      '<div class="form-row"><input class="form-input post-date" type="date" value="'+(p.date||'')+'"><input class="form-input post-views" value="'+(p.views||p.reach||'')+'" placeholder="Vistas/Alcance"></div>' +
+      '<div class="form-row"><input class="form-input post-likes" value="'+(p.likes||p.reactions||'')+'" placeholder="Likes"><input class="form-input post-shares" value="'+(p.shares||'')+'" placeholder="Shares"></div>' +
+      '<div class="form-row"><input class="form-input post-comments" value="'+(p.comments||'')+'" placeholder="Comentarios"><input class="form-input post-saves" value="'+(p.saves||'')+'" placeholder="Guardados"></div>' +
+      '<div class="form-row"><input class="form-input post-inv" value="'+(p.inv_label||'')+'" placeholder="Inversión (ej: S/ 500)"><input class="form-input post-er" value="'+(p.engagement||p.er||'')+'" placeholder="ER%"></div>' +
+      '<input class="form-input post-url" value="'+(p.url||p.link||'')+'" placeholder="URL del post">' +
+    '</div></div>';
+}
+
+function bindThumbUploads(container) {
+  container.querySelectorAll('.post-thumb-upload').forEach(el => {
+    el.addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'file'; input.accept = 'image/*';
+      input.onchange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (ev) => { el.style.backgroundImage = 'url('+ev.target.result+')'; el.style.backgroundSize = 'cover'; el.textContent = ''; };
+          reader.readAsDataURL(file);
+        }
+      };
+      input.click();
+    });
+  });
+}
+
+// ============================================================
+// TAB NAVIGATION
+// ============================================================
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.sidebar-item').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ============================================================
+// CHARACTER COUNTER
+// ============================================================
+function countChars(el, countId) {
+  const count = el.value.length;
+  const counter = document.getElementById(countId);
+  counter.textContent = count + '/280';
+  counter.style.color = count > 280 ? 'var(--danger)' : count > 240 ? 'var(--warning)' : 'var(--gray)';
+}
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadBrands();
+  // Initialize char counters
+  document.querySelectorAll('[maxlength="280"]').forEach(el => {
+    const countId = el.getAttribute('oninput')?.match(/'([^']+)'/)?.[1];
+    if (countId) countChars(el, countId);
+  });
+  loadLocal();
+});
+
+// ============================================================
+// TABLE HELPERS
+// ============================================================
+function addObjectiveRow() {
+  const tbody = document.querySelector('#objectives-table tbody');
+  const tr = document.createElement('tr');
+  tr.innerHTML = '<td><input placeholder="Objetivo"></td><td><input placeholder="Canal"></td><td><input placeholder="Meta"></td><td><input placeholder="Resultado"></td><td><select class="form-select" style="padding:4px 8px;font-size:11px"><option value="met">Superado</option><option value="close">Cerca</option><option value="missed">No alcanzado</option></select></td><td><button class="btn btn-danger" style="padding:4px 8px;font-size:10px" onclick="this.closest(\'tr\').remove()">X</button></td>';
+  tbody.appendChild(tr);
+}
+
+function addCompRow() {
+  const tbody = document.querySelector('#comp-table tbody');
+  const tr = document.createElement('tr');
+  tr.innerHTML = '<td><input placeholder="Marca"></td><td><input placeholder="Seguidores"></td><td><input placeholder="Likes prom."></td><td><input placeholder="Comments"></td><td><input placeholder="Posts"></td><td><input placeholder="ER%"></td>';
+  tbody.appendChild(tr);
+}
+
+function addRecCard() {
+  const container = document.getElementById('recs-container');
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = '<div class="form-row"><div class="form-group"><label class="form-label">Prioridad</label><select class="form-select"><option>Alta</option><option>Media</option><option>Baja</option></select></div><div class="form-group"><label class="form-label">Canal</label><input class="form-input" placeholder="Canal"></div></div><div class="form-group"><label class="form-label">Titulo</label><input class="form-input" placeholder="Titulo de la recomendacion"></div><div class="form-group"><label class="form-label">Descripcion</label><textarea class="form-textarea" placeholder="Detalle"></textarea></div>';
+  container.appendChild(card);
+}
+
+// ============================================================
+// COLLECT DATA (unchanged)
+// ============================================================
+function collectData() {
+  const data = {
+    brand: document.getElementById('brand_name').value,
+    period: document.getElementById('brand_period').value,
+    fx_rate: parseFloat(document.getElementById('brand_fx_rate').value),
+    metricool_id: document.getElementById('brand_metricool_id').value,
+    portada: {
+      tag: document.getElementById('portada_tag')?.value || '',
+      footer: document.getElementById('portada_footer')?.value || '',
+      kpis: [
+        { value: document.getElementById('portada_kpi1_val')?.value, label: document.getElementById('portada_kpi1_label')?.value },
+        { value: document.getElementById('portada_kpi2_val')?.value, label: document.getElementById('portada_kpi2_label')?.value },
+        { value: document.getElementById('portada_kpi3_val')?.value, label: document.getElementById('portada_kpi3_label')?.value },
+        { value: document.getElementById('portada_kpi4_val')?.value, label: document.getElementById('portada_kpi4_label')?.value },
+        { value: document.getElementById('portada_kpi5_val')?.value, label: document.getElementById('portada_kpi5_label')?.value }
+      ]
+    },
+    cierre: {
+      tagline: document.getElementById('cierre_tagline')?.value || '',
+      team: document.getElementById('cierre_team')?.value || '',
+      location: document.getElementById('cierre_location')?.value || '',
+      contact: document.getElementById('cierre_contact')?.value || '',
+      confidential: document.getElementById('cierre_conf')?.value || ''
+    },
+    objectives: [],
+    community: {
+      facebook: { start: parseInt(document.getElementById('fb_start').value), end: parseInt(document.getElementById('fb_end').value) },
+      instagram: { start: parseInt(document.getElementById('ig_start').value), end: parseInt(document.getElementById('ig_end').value) },
+      tiktok: { start: parseInt(document.getElementById('tk_start').value), end: parseInt(document.getElementById('tk_end').value) }
+    },
+    investment: {
+      meta_usd: parseFloat(document.getElementById('meta_total_usd').value),
+      tiktok_usd: parseFloat(document.getElementById('tk_total_usd').value)
+    },
+    sentiment: {
+      total: parseInt(document.getElementById('sent_total').value),
+      positive: parseInt(document.getElementById('sent_pos').value),
+      neutral: parseInt(document.getElementById('sent_neu').value),
+      negative: parseInt(document.getElementById('sent_neg').value),
+      net_score: document.getElementById('sent_net').value
+    },
+    insights: {
+      community: document.getElementById('insight_community').value,
+      reach: document.getElementById('insight_reach').value,
+      engagement: document.getElementById('insight_engagement').value,
+      sentiment: document.getElementById('insight_sentiment').value,
+      investment: document.getElementById('insight_investment').value,
+      competition: document.getElementById('insight_competition').value
+    },
+    story: {
+      act1: { title: document.getElementById('act1_title').value, text: document.getElementById('act1_text').value },
+      act2: { title: document.getElementById('act2_title').value, text: document.getElementById('act2_text').value },
+      act3: { title: document.getElementById('act3_title').value, text: document.getElementById('act3_text').value },
+      act4: { title: document.getElementById('act4_title').value, text: document.getElementById('act4_text').value },
+      act5: { title: document.getElementById('act5_title').value, text: document.getElementById('act5_text').value }
+    },
+    technical_texts: {
+      resumen: document.getElementById('tech_resumen')?.value || '',
+      audiencia: document.getElementById('tech_audiencia')?.value || '',
+      contenido_insight: document.getElementById('tech_contenido_insight')?.value || '',
+      contenido_fail: document.getElementById('tech_contenido_fail')?.value || '',
+      contenido_horario: document.getElementById('tech_contenido_horario')?.value || '',
+      riesgo_fb: document.getElementById('tech_riesgo_fb')?.value || '',
+      indice_valor: document.getElementById('tech_indice_valor')?.value || '',
+      temas_recurrentes: document.getElementById('tech_temas')?.value || '',
+      bhs_explicacion: document.getElementById('tech_bhs')?.value || ''
+    },
+    bhs: {
+      total: parseInt(document.getElementById('bhs_total')?.value) || 89,
+      benchmark: document.getElementById('bhs_benchmark')?.value || '70-75',
+      dimensions: {
+        crecimiento: parseInt(document.getElementById('bhs_crec')?.value) || 87,
+        alcance: parseInt(document.getElementById('bhs_alc')?.value) || 90,
+        engagement: parseInt(document.getElementById('bhs_eng')?.value) || 88,
+        sentimiento: parseInt(document.getElementById('bhs_sent')?.value) || 85,
+        eficiencia: parseInt(document.getElementById('bhs_eff')?.value) || 92,
+        metas: parseInt(document.getElementById('bhs_met')?.value) || 100,
+        posicion_comp: parseInt(document.getElementById('bhs_comp')?.value) || 85
+      }
+    },
+    competitors: [],
+    recommendations: [],
+    content: {
+      top_tiktok: collectPosts('top-posts-list'),
+      worst_overall: collectPosts('worst-posts-list')
+    }
+  };
+
+  // Objectives
+  document.querySelectorAll('#objectives-table tbody tr').forEach(tr => {
+    const inputs = tr.querySelectorAll('input');
+    const select = tr.querySelector('select');
+    if (inputs[0]?.value) {
+      data.objectives.push({
+        objective: inputs[0].value,
+        channel: inputs[1].value,
+        target: inputs[2].value,
+        result: inputs[3].value,
+        status: select.value
+      });
+    }
+  });
+
+  // Competitors
+  document.querySelectorAll('#comp-table tbody tr').forEach(tr => {
+    const inputs = tr.querySelectorAll('input');
+    if (inputs[0]?.value) {
+      data.competitors.push({
+        name: inputs[0].value,
+        followers: inputs[1].value,
+        likes_avg: inputs[2].value,
+        comments_avg: inputs[3].value,
+        posts: inputs[4].value,
+        er: inputs[5].value
+      });
+    }
+  });
+
+  // Recommendations
+  document.querySelectorAll('#recs-container .card').forEach(card => {
+    const select = card.querySelector('select');
+    const inputs = card.querySelectorAll('.form-input');
+    const textarea = card.querySelector('textarea');
+    data.recommendations.push({
+      priority: select.value,
+      channel: inputs[0].value,
+      title: inputs[1].value,
+      description: textarea.value
+    });
+  });
+
+  return data;
+}
+
+// ============================================================
+// EXPORT JSON (updated: brand-specific filename)
+// ============================================================
+function exportJSON() {
+  const data = collectData();
+  const json = JSON.stringify(data, null, 2);
+  document.getElementById('json-output').value = json;
+
+  const brandId = document.getElementById('brand_selector').value || data.brand.replace(/\s+/g, '_');
+  const period = data.period;
+
+  // Download
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = brandId + '_' + period + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+
+  document.getElementById('status-msg').textContent = 'JSON exportado: ' + brandId + '_' + period + '.json';
+  document.getElementById('status-msg').style.color = 'var(--success)';
+}
+
+// ============================================================
+// SAVE TO LOCALSTORAGE (updated: brand-specific key)
+// ============================================================
+async function saveLocal() {
+  const adminData = collectData();
+  const brandId = document.getElementById('brand_selector').value || adminData.brand.replace(/\s+/g, '_');
+  const period = adminData.period;
+  adminData.brand_id = brandId;
+
+  // 1. Cargar JSON existente del servidor (para no perder campos que el admin no edita)
+  let existing = {};
+  try {
+    const res = await fetch('data/' + brandId + '_' + period + '.json');
+    if (res.ok) existing = await res.json();
+  } catch(e) {}
+
+  // 2. Merge: admin overwrites existing (deep merge, admin wins)
+  function merge(target, source) {
+    const result = JSON.parse(JSON.stringify(target));
+    for (const key of Object.keys(source)) {
+      if (source[key] !== null && source[key] !== undefined && source[key] !== '' && source[key] !== 0) {
+        if (typeof source[key] === 'object' && !Array.isArray(source[key]) && typeof result[key] === 'object' && !Array.isArray(result[key])) {
+          result[key] = merge(result[key], source[key]);
+        } else {
+          result[key] = source[key];
+        }
+      }
+    }
+    return result;
+  }
+  const data = merge(existing, adminData);
+  data.brand_id = brandId;
+
+  // 3. Guardar en servidor
+  try {
+    const res = await fetch('/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    if (result.ok) {
+      document.getElementById('status-msg').textContent = '✓ Guardado: data/' + result.file + ' (merge con existente)';
+      document.getElementById('status-msg').style.color = 'var(--success)';
+    } else {
+      throw new Error(result.error);
+    }
+  } catch (e) {
+    // Fallback: localStorage
+    localStorage.setItem('ludik_report_' + brandId + '_' + period, JSON.stringify(data));
+    localStorage.setItem('ludik_report_data', JSON.stringify(data));
+    document.getElementById('status-msg').textContent = 'Guardado en navegador (servidor no disponible)';
+    document.getElementById('status-msg').style.color = 'var(--warning)';
+  }
+  setTimeout(() => {
+    document.getElementById('status-msg').textContent = 'Listo';
+    document.getElementById('status-msg').style.color = '';
+  }, 3000);
+}
+
+// ============================================================
+// LOAD FROM DATA (reusable — called by loadLocal and selectBrand)
+// ============================================================
+function loadFromData(data) {
+  if (!data) return;
+  if (data.brand) document.getElementById('brand_name').value = data.brand;
+  if (data.period) document.getElementById('brand_period').value = data.period;
+  if (data.fx_rate) document.getElementById('brand_fx_rate').value = data.fx_rate;
+  if (data.metricool_id) document.getElementById('brand_metricool_id').value = data.metricool_id;
+  // Portada
+  if (data.portada) {
+    if (data.portada.tag) document.getElementById('portada_tag').value = data.portada.tag;
+    if (data.portada.footer) document.getElementById('portada_footer').value = data.portada.footer;
+    if (data.portada.kpis) {
+      data.portada.kpis.forEach((k, i) => {
+        const v = document.getElementById('portada_kpi'+(i+1)+'_val');
+        const l = document.getElementById('portada_kpi'+(i+1)+'_label');
+        if (v && k.value) v.value = k.value;
+        if (l && k.label) l.value = k.label;
+      });
+    }
+  }
+  // Objectives (rebuild rows from JSON array)
+  if (data.objectives && data.objectives.length) {
+    const tbody = document.querySelector('#objectives-table tbody');
+    if (tbody) {
+      tbody.innerHTML = '';
+      data.objectives.forEach(obj => {
+        const tr = document.createElement('tr');
+        const statusOpts = '<option value="met"'+(obj.status==='met'?' selected':'')+'>Superado</option><option value="close"'+(obj.status==='close'?' selected':'')+'>Cerca</option><option value="missed"'+(obj.status==='missed'?' selected':'')+'>No alcanzado</option>';
+        tr.innerHTML = '<td><input value="'+(obj.objective||'')+'"></td><td><input value="'+(obj.channel||'')+'"></td><td><input value="'+(obj.target||'')+'"></td><td><input value="'+(obj.result||'')+'"></td><td><select class="form-select" style="padding:4px 8px;font-size:11px">'+statusOpts+'</select></td><td><button class="btn btn-danger" style="padding:4px 8px;font-size:10px" onclick="this.closest(\'tr\').remove()">X</button></td>';
+        tbody.appendChild(tr);
+      });
+    }
+  }
+  // Competitors (rebuild rows from JSON array)
+  if (data.competitors_ig && data.competitors_ig.length) {
+    const tbody = document.querySelector('#comp-table tbody');
+    if (tbody) {
+      tbody.innerHTML = '';
+      data.competitors_ig.forEach(c => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td><input value="'+(c.name||'')+'"></td><td><input value="'+(c.followers||'')+'"></td><td><input value="'+(c.likes_avg||'')+'"></td><td><input value="'+(c.comments_avg||'')+'"></td><td><input value="'+(c.posts||'')+'"></td><td><input value="'+(c.er||'')+'%"></td>';
+        tbody.appendChild(tr);
+      });
+    }
+  }
+  // Recommendations (rebuild cards from JSON array)
+  if (data.recommendations && data.recommendations.length) {
+    const container = document.getElementById('recs-container');
+    if (container) {
+      container.innerHTML = '';
+      data.recommendations.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        const prioOpts = '<option'+(r.priority==='Alta'?' selected':'')+'>Alta</option><option'+(r.priority==='Media'?' selected':'')+'>Media</option><option'+(r.priority==='Baja'?' selected':'')+'>Baja</option>';
+        card.innerHTML = '<div class="form-row"><div class="form-group"><label class="form-label">Prioridad</label><select class="form-select">'+prioOpts+'</select></div><div class="form-group"><label class="form-label">Canal</label><input class="form-input" value="'+(r.channel||'')+'"></div></div><div class="form-group"><label class="form-label">Titulo</label><input class="form-input" value="'+(r.title||'')+'"></div><div class="form-group"><label class="form-label">Descripcion</label><textarea class="form-textarea">'+(r.description||'')+'</textarea></div>';
+        container.appendChild(card);
+      });
+    }
+  }
+  // Content — Top Posts (rebuild from JSON)
+  if (data.content && data.content.top_tiktok && data.content.top_tiktok.length) {
+    const container = document.getElementById('top-posts-list');
+    if (container) {
+      container.innerHTML = '';
+      data.content.top_tiktok.forEach((p, i) => {
+        container.innerHTML += buildPostEditor(p, 'top', i);
+      });
+      bindThumbUploads(container);
+    }
+  }
+  // Content — Worst Posts (rebuild from JSON)
+  const worstPosts = (data.content && (data.content.worst_overall || data.content.worst_tiktok)) || [];
+  if (worstPosts.length) {
+    const container = document.getElementById('worst-posts-list');
+    if (container) {
+      container.innerHTML = '';
+      worstPosts.forEach((p, i) => {
+        container.innerHTML += buildPostEditor(p, 'worst', i);
+      });
+      bindThumbUploads(container);
+    }
+  }
+  // Cierre
+  if (data.cierre) {
+    if (data.cierre.tagline) document.getElementById('cierre_tagline').value = data.cierre.tagline;
+    if (data.cierre.team) document.getElementById('cierre_team').value = data.cierre.team;
+    if (data.cierre.location) document.getElementById('cierre_location').value = data.cierre.location;
+    if (data.cierre.contact) document.getElementById('cierre_contact').value = data.cierre.contact;
+    if (data.cierre.confidential) document.getElementById('cierre_conf').value = data.cierre.confidential;
+  }
+  // Community
+  if (data.community) {
+    if (data.community.facebook) {
+      document.getElementById('fb_start').value = data.community.facebook.start || '';
+      document.getElementById('fb_end').value = data.community.facebook.end || '';
+    }
+    if (data.community.instagram) {
+      document.getElementById('ig_start').value = data.community.instagram.start || '';
+      document.getElementById('ig_end').value = data.community.instagram.end || '';
+    }
+    if (data.community.tiktok) {
+      document.getElementById('tk_start').value = data.community.tiktok.start || '';
+      document.getElementById('tk_end').value = data.community.tiktok.end || '';
+    }
+  }
+  // Investment (handle both old admin format and new JSON format)
+  if (data.investment) {
+    const metaUsd = data.investment.meta_usd || data.investment.meta_ads_usd || 0;
+    const tkUsd = data.investment.tiktok_usd || data.investment.tiktok_ads_usd || 0;
+    if (metaUsd) document.getElementById('meta_total_usd').value = metaUsd;
+    if (tkUsd) document.getElementById('tk_total_usd').value = tkUsd;
+    // Recalculate soles
+    const fx = parseFloat(document.getElementById('brand_fx_rate').value) || 3.78;
+    document.getElementById('meta_total_soles').value = (metaUsd * fx).toFixed(2);
+    document.getElementById('tk_total_soles').value = (tkUsd * fx).toFixed(2);
+  }
+  // Sentiment (handle both old admin format and new JSON format)
+  if (data.sentiment) {
+    if (data.sentiment.total) document.getElementById('sent_total').value = data.sentiment.total;
+    const pos = data.sentiment.positive || data.sentiment.positive_pct || 0;
+    const neu = data.sentiment.neutral || data.sentiment.neutral_pct || 0;
+    const neg = data.sentiment.negative || data.sentiment.negative_pct || 0;
+    if (pos) document.getElementById('sent_pos').value = pos;
+    if (neu) document.getElementById('sent_neu').value = neu;
+    document.getElementById('sent_neg').value = neg;
+    if (data.sentiment.net_score) document.getElementById('sent_net').value = data.sentiment.net_score;
+  }
+  // Insights
+  if (data.insights) {
+    Object.keys(data.insights).forEach(k => {
+      const el = document.getElementById('insight_' + k);
+      if (el && data.insights[k]) el.value = data.insights[k];
+    });
+  }
+  // Story (handle both old format {title,text} and new format {title,paragraphs,highlight,...})
+  if (data.story) {
+    for (let i = 1; i <= 5; i++) {
+      const act = data.story['act'+i];
+      if (act) {
+        const t = document.getElementById('act'+i+'_title');
+        const x = document.getElementById('act'+i+'_text');
+        if (t && act.title) t.value = act.title;
+        if (x) {
+          if (act.text) x.value = act.text;
+          else if (act.paragraphs) x.value = act.paragraphs.map(p => p.replace(/<[^>]+>/g, '')).join('\n\n');
+          else if (act.risks) x.value = act.risks.map(r => r.title + ': ' + r.text.replace(/<[^>]+>/g, '')).join('\n\n');
+          else if (act.items) x.value = act.items.map(it => (it.type==='bet'?'Apuesta':it.type==='fix'?'Corrección':'Sistema') + ': ' + it.text).join('\n\n');
+        }
+      }
+    }
+  }
+  // BHS
+  if (data.bhs) {
+    if (data.bhs.total) document.getElementById('bhs_total').value = data.bhs.total;
+    if (data.bhs.benchmark) document.getElementById('bhs_benchmark').value = data.bhs.benchmark;
+    if (data.bhs.dimensions) {
+      const map = {crecimiento:'bhs_crec',alcance:'bhs_alc',engagement:'bhs_eng',sentimiento:'bhs_sent',eficiencia:'bhs_eff',metas:'bhs_met',posicion_comp:'bhs_comp'};
+      Object.keys(map).forEach(k => {
+        const el = document.getElementById(map[k]);
+        if (el && data.bhs.dimensions[k]) el.value = data.bhs.dimensions[k];
+      });
+    }
+  }
+  // Technical texts
+  if (data.technical_texts) {
+    Object.keys(data.technical_texts).forEach(k => {
+      const el = document.getElementById('tech_' + k);
+      if (el && data.technical_texts[k]) el.value = data.technical_texts[k];
+    });
+  }
+}
+
+// ============================================================
+// LOAD FROM LOCALSTORAGE
+// ============================================================
+function loadLocal() {
+  const saved = localStorage.getItem('ludik_report_data');
+  if (!saved) return;
+  try {
+    const data = JSON.parse(saved);
+    loadFromData(data);
+    console.log('Draft loaded from localStorage');
+  } catch(e) { console.error('Error loading draft:', e); }
+}
+
+// ============================================================
+// GENERATE REPORT (updated: brand-specific save + JSON download + query param)
+// ============================================================
+async function generateReport() {
+  const data = collectData();
+  const brandId = document.getElementById('brand_selector').value || 'UNKNOWN';
+  const period = data.period;
+  data.brand_id = brandId;
+
+  // Guardar en servidor
+  try {
+    const res = await fetch('/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    if (result.ok) {
+      document.getElementById('status-msg').textContent = '✓ Guardado: data/' + result.file + ' → Abriendo reporte...';
+      document.getElementById('status-msg').style.color = 'var(--success)';
+    }
+  } catch (e) {
+    localStorage.setItem('ludik_report_data', JSON.stringify(data));
+  }
+
+  // Abrir reporte
+  window.open('reporte.html?data=data/' + brandId + '_' + period + '.json', '_blank');
+}
+
+// ============================================================
+// PREVIEW REPORT (updated: query param)
+// ============================================================
+function previewReport() {
+  const data = collectData();
+  localStorage.setItem('ludik_report_data', JSON.stringify(data));
+  const brandId = document.getElementById('brand_selector').value || 'PREVIEW';
+  window.open('reporte.html?data=data/' + brandId + '_' + data.period + '.json', '_blank');
+}
+
+// ============================================================
+// UPLOAD HELPERS (unchanged)
+// ============================================================
+function previewUpload(input, previewId) {
+  const file = input.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const el = document.getElementById(previewId);
+      if (el.tagName === 'DIV') {
+        el.style.backgroundImage = 'url(' + e.target.result + ')';
+        el.style.backgroundSize = 'contain';
+        el.style.backgroundRepeat = 'no-repeat';
+        el.style.backgroundPosition = 'center';
+        el.textContent = '';
+      }
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+// Thumbnail upload handlers (delegated, stores base64)
+function initThumbUploads(container) {
+  (container || document).querySelectorAll('.post-thumb-upload').forEach(el => {
+    if (el.dataset.bound) return;
+    el.dataset.bound = '1';
+    el.addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (ev) => {
+            el.style.backgroundImage = 'url(' + ev.target.result + ')';
+            el.style.backgroundSize = 'cover';
+            el.textContent = '';
+            el.dataset.base64 = ev.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      };
+      input.click();
+    });
+  });
+}
+initThumbUploads();
+
+// Add post editor dynamically
+function addPostEditor(containerId, type) {
+  const container = document.getElementById(containerId);
+  const idx = container.querySelectorAll('.post-editor').length;
+  const div = document.createElement('div');
+  div.className = 'post-editor';
+  div.dataset.type = type;
+  div.innerHTML =
+    '<div class="post-thumb-upload" data-thumb="' + type + '-' + idx + '">Click para subir thumbnail</div>' +
+    '<div class="post-fields">' +
+      '<div class="form-row"><input class="form-input post-title" placeholder="Titulo"><select class="form-select post-platform"><option>TikTok</option><option>Instagram</option><option>Facebook</option></select></div>' +
+      '<div class="form-row"><input class="form-input post-date" type="date"><input class="form-input post-views" placeholder="Vistas"></div>' +
+      '<div class="form-row"><input class="form-input post-likes" placeholder="Likes"><input class="form-input post-shares" placeholder="Shares"></div>' +
+      '<div class="form-row"><input class="form-input post-comments" placeholder="Comentarios"><input class="form-input post-saves" placeholder="Guardados"></div>' +
+      '<div class="form-row"><input class="form-input post-inv" placeholder="Inversión (ej: S/ 500)"><input class="form-input post-er" placeholder="ER%"></div>' +
+      '<input class="form-input post-url" placeholder="URL del post">' +
+      '<button class="btn btn-danger" style="padding:3px 8px;font-size:9px;margin-top:4px;align-self:flex-end" onclick="this.closest(\'.post-editor\').remove()">Eliminar</button>' +
+    '</div>';
+  container.appendChild(div);
+  initThumbUploads(div);
+}
+
+// Collect posts from editor
+function collectPosts(containerId) {
+  const posts = [];
+  document.querySelectorAll('#' + containerId + ' .post-editor').forEach(editor => {
+    const title = editor.querySelector('.post-title')?.value || '';
+    if (!title) return;
+    const thumb = editor.querySelector('.post-thumb-upload');
+    // Preserve coverImageUrl if it was loaded from JSON (stored in background-image)
+    const bgImg = thumb?.style.backgroundImage || '';
+    const coverUrl = bgImg.match(/url\("?([^"]+)"?\)/)?.[1] || '';
+    const post = {
+      title: title,
+      platform: editor.querySelector('.post-platform')?.value || 'TikTok',
+      date: editor.querySelector('.post-date')?.value || '',
+      views: parseInt((editor.querySelector('.post-views')?.value || '0').replace(/,/g, '')) || 0,
+      likes: parseInt((editor.querySelector('.post-likes')?.value || '0').replace(/,/g, '')) || 0,
+      shares: parseInt((editor.querySelector('.post-shares')?.value || '0').replace(/,/g, '')) || 0,
+      comments: parseInt((editor.querySelector('.post-comments')?.value || '0').replace(/,/g, '')) || 0,
+      saves: parseInt((editor.querySelector('.post-saves')?.value || '0').replace(/,/g, '')) || 0,
+      inv_label: editor.querySelector('.post-inv')?.value || '',
+      engagement: parseFloat(editor.querySelector('.post-er')?.value || '0') || 0,
+      url: editor.querySelector('.post-url')?.value || ''
+    };
+    if (coverUrl && !coverUrl.startsWith('data:')) post.coverImageUrl = coverUrl;
+    posts.push(post);
+  });
+  return posts;
+}
+</script>
+</body>
+</html>
