@@ -568,28 +568,34 @@ Negativos (4%): Negativo/esceptico. Ningun negativo sobre calidad.</textarea></d
 
       <div class="card">
         <div class="card-title">Acto 1 — El Descubrimiento</div>
-        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act1_title" value="Dos videos cambiaron las reglas del juego"></div>
-        <div class="form-group"><label class="form-label">Narrativa (parrafos)</label><textarea class="form-textarea" id="act1_text" rows="4">En marzo, dos TikToks rompieron todo. "Zapatillas y Limpieza" alcanzo 441K vistas y "Talco expertos" llego a 407K. Dos videos de humor cotidiano donde el producto aparece como plot twist, no como protagonista.</textarea></div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act1_title"></div>
+        <div class="form-group"><label class="form-label">Narrativa (parrafos separados por doble enter)</label><textarea class="form-textarea" id="act1_text" rows="4"></textarea></div>
+        <div class="form-group"><label class="form-label">Highlight (texto destacado en negrita)</label><textarea class="form-textarea" id="act1_highlight" rows="2"></textarea></div>
+        <div class="form-group"><label class="form-label">Sub-highlight (texto secundario debajo)</label><input class="form-input" id="act1_highlight_sub"></div>
+        <div class="form-group"><label class="form-label">Regla validada / Accion (caja de accion al final)</label><textarea class="form-textarea" id="act1_action" rows="2"></textarea></div>
       </div>
       <div class="card">
         <div class="card-title">Acto 2 — El Impacto</div>
-        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act2_title" value="No cuantos vieron, sino cuantos actuaron"></div>
-        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act2_text" rows="4">Marzo cerro con 3.57 millones de cuentas unicas alcanzadas y una frecuencia de 2.22 impresiones por persona. Pero el numero que realmente cuenta es otro: 1,284 señales de intencion de compra.</textarea></div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act2_title"></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act2_text" rows="4"></textarea></div>
+        <div class="form-group"><label class="form-label">Highlight</label><textarea class="form-textarea" id="act2_highlight" rows="2"></textarea></div>
+        <div class="form-group"><label class="form-label">Sub-highlight</label><input class="form-input" id="act2_highlight_sub"></div>
       </div>
       <div class="card">
         <div class="card-title">Acto 3 — Lo que no funciona</div>
-        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act3_title" value="Tres verdades incomodas que debemos enfrentar"></div>
-        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act3_text" rows="4">Facebook organico sin sorteo = muerto. Instagram es el punto ciego. Contenido de producto directo no funciona en TikTok.</textarea></div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act3_title"></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act3_text" rows="4"></textarea></div>
       </div>
       <div class="card">
         <div class="card-title">Acto 4 — Donde estamos</div>
-        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act4_title" value="Competencia, salud de marca e inversion"></div>
-        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act4_text" rows="4">ISANA es la marca mas pequeña en seguidores de IG pero la que tiene la audiencia mas viva. K'allma tiene 53K seguidores con ER de 0.03%. ISANA tiene 5.7K con 1.22% ER — 40x mas engagement por seguidor.</textarea></div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act4_title"></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act4_text" rows="4"></textarea></div>
       </div>
       <div class="card">
         <div class="card-title">Acto 5 — Que hacemos diferente</div>
-        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act5_title" value="Abril: 3 apuestas, 1 correccion, 2 sistemas"></div>
-        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act5_text" rows="4">Si marzo demostro que un video puede dominar todos los canales, abril es el mes para sistematizar ese descubrimiento.</textarea></div>
+        <div class="form-group"><label class="form-label">Titulo del Acto</label><input class="form-input" id="act5_title"></div>
+        <div class="form-group"><label class="form-label">Highlight</label><textarea class="form-textarea" id="act5_highlight" rows="2"></textarea></div>
+        <div class="form-group"><label class="form-label">Narrativa</label><textarea class="form-textarea" id="act5_text" rows="4"></textarea></div>
       </div>
     </div>
 
@@ -782,6 +788,48 @@ function reloadBrandData() {
   if (brandId) selectBrand(brandId);
 }
 
+function collectStory() {
+  const actNames = ['El Descubrimiento','El Impacto','Lo que no funciona','Dónde estamos','Qué hacemos diferente'];
+  const story = {};
+  for (let i = 1; i <= 5; i++) {
+    const title = document.getElementById('act'+i+'_title')?.value || '';
+    const text = document.getElementById('act'+i+'_text')?.value || '';
+    const highlight = document.getElementById('act'+i+'_highlight')?.value || '';
+    const highlightSub = document.getElementById('act'+i+'_highlight_sub')?.value || '';
+    const action = document.getElementById('act'+i+'_action')?.value || '';
+    const act = { number: 'Acto '+i+' · '+actNames[i-1], title: title };
+    // Parse text into paragraphs (split by double newline)
+    if (text.trim()) {
+      const paragraphs = text.split(/\n\n+/).filter(p => p.trim());
+      // Act 3: check if risks format (lines with ":")
+      if (i === 3 && paragraphs.some(p => p.includes(':'))) {
+        act.paragraphs = [];
+        act.risks = paragraphs.map(p => {
+          const parts = p.split(':');
+          return { title: parts[0].trim(), text: parts.slice(1).join(':').trim() };
+        });
+      // Act 5: check if items format (starts with Apuesta/Corrección/Sistema)
+      } else if (i === 5 && paragraphs.some(p => /^(apuesta|correcc|sistema)/i.test(p))) {
+        act.items = paragraphs.map(p => {
+          if (/^apuesta/i.test(p)) return { type:'bet', text: p.replace(/^apuesta:\s*/i,'') };
+          if (/^correcc/i.test(p)) return { type:'fix', text: p.replace(/^corrección:\s*/i,'') };
+          if (/^sistema/i.test(p)) return { type:'system', text: p.replace(/^sistema:\s*/i,'') };
+          return { type:'bet', text: p };
+        });
+      } else {
+        act.paragraphs = paragraphs;
+      }
+    } else {
+      act.paragraphs = [];
+    }
+    if (highlight) act.highlight = highlight;
+    if (highlightSub) act.highlight_sub = highlightSub;
+    if (action) act.action = action;
+    story['act'+i] = act;
+  }
+  return story;
+}
+
 function buildPostEditor(p, type, idx) {
   const platOpts = ['TikTok','Instagram','Facebook'].map(pl => '<option'+(((p.platform||'TikTok')===pl||(type==='top'&&pl==='TikTok'))?' selected':'')+'>'+pl+'</option>').join('');
   const thumbStyle = p.coverImageUrl ? ' style="background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center;color:transparent"' : '';
@@ -925,13 +973,7 @@ function collectData() {
       investment: document.getElementById('insight_investment').value,
       competition: document.getElementById('insight_competition').value
     },
-    story: {
-      act1: { title: document.getElementById('act1_title').value, text: document.getElementById('act1_text').value },
-      act2: { title: document.getElementById('act2_title').value, text: document.getElementById('act2_text').value },
-      act3: { title: document.getElementById('act3_title').value, text: document.getElementById('act3_text').value },
-      act4: { title: document.getElementById('act4_title').value, text: document.getElementById('act4_text').value },
-      act5: { title: document.getElementById('act5_title').value, text: document.getElementById('act5_text').value }
-    },
+    story: collectStory(),
     technical_texts: {
       resumen: document.getElementById('tech_resumen')?.value || '',
       audiencia: document.getElementById('tech_audiencia')?.value || '',
@@ -1230,20 +1272,26 @@ function loadFromData(data) {
       if (el && data.insights[k]) el.value = data.insights[k];
     });
   }
-  // Story (handle both old format {title,text} and new format {title,paragraphs,highlight,...})
+  // Story (load all fields: title, text/paragraphs, highlight, highlight_sub, action)
   if (data.story) {
     for (let i = 1; i <= 5; i++) {
       const act = data.story['act'+i];
       if (act) {
         const t = document.getElementById('act'+i+'_title');
         const x = document.getElementById('act'+i+'_text');
+        const h = document.getElementById('act'+i+'_highlight');
+        const hs = document.getElementById('act'+i+'_highlight_sub');
+        const ac = document.getElementById('act'+i+'_action');
         if (t && act.title) t.value = act.title;
         if (x) {
           if (act.text) x.value = act.text;
-          else if (act.paragraphs) x.value = act.paragraphs.map(p => p.replace(/<[^>]+>/g, '')).join('\n\n');
+          else if (act.paragraphs && act.paragraphs.length) x.value = act.paragraphs.map(p => p.replace(/<[^>]+>/g, '')).join('\n\n');
           else if (act.risks) x.value = act.risks.map(r => r.title + ': ' + r.text.replace(/<[^>]+>/g, '')).join('\n\n');
           else if (act.items) x.value = act.items.map(it => (it.type==='bet'?'Apuesta':it.type==='fix'?'Corrección':'Sistema') + ': ' + it.text).join('\n\n');
         }
+        if (h && act.highlight) h.value = act.highlight.replace(/<[^>]+>/g, '');
+        if (hs && act.highlight_sub) hs.value = act.highlight_sub.replace(/<[^>]+>/g, '');
+        if (ac && act.action) ac.value = act.action.replace(/<[^>]+>/g, '');
       }
     }
   }
