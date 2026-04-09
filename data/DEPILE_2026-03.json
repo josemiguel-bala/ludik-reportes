@@ -214,13 +214,13 @@
   },
   "story": {
     "act1": {
-      "number": "Acto 1 · La Explosion",
+      "number": "Acto 1 · El Descubrimiento",
       "title": "Tres TikToks superaron 100K vistas y ASMR se confirma como formato ganador",
       "paragraphs": [
-        "Marzo fue el mes que TikTok de DEPILE despego. <em>\"Bandas o Crema\"</em> alcanzo 214,809 vistas, <em>\"Les dimos las bandas\"</em> llego a 153,543, y <em>\"Esperar a que crezca\"</em> sumo 104,300. Los tres comparten algo: contenido que educa sobre depilacion con formato entretenido, sin sentirse como publicidad.",
-        "El hallazgo del mes: <em>\"Soft vs Sticky ASMR\"</em> tuvo 50,282 vistas con el mejor engagement rate de todos los videos (2.39%). ASMR + depilacion genera curiosidad y retencion. Los 9 videos del mes promediaron 99% FYP rate: TikTok esta amplificando masivamente el contenido de DEPILE a no-seguidores."
+        "Marzo fue el mes que TikTok de DEPILE despego. \"Bandas o Crema\" alcanzo 214,809 vistas, \"Les dimos las bandas\" llego a 153,543, y \"Esperar a que crezca\" sumo 104,300. Los tres comparten algo: contenido que educa sobre depilacion con formato entretenido, sin sentirse como publicidad.",
+        "El hallazgo del mes: \"Soft vs Sticky ASMR\" tuvo 50,282 vistas con el mejor engagement rate de todos los videos (2.39%). ASMR + depilacion genera curiosidad y retencion. Los 9 videos del mes promediaron 99% FYP rate: TikTok esta amplificando masivamente el contenido de DEPILE a no-seguidores."
       ],
-      "highlight": "Los 3 videos +100K concentraron el 70% de las vistas organicas del mes (472K de 675K). FYP Rate promedio: 98.9%. El algoritmo esta a favor de DEPILE.",
+      "highlight": "Los 3 videos +100K concentraron el 70% de las vistas totales del mes (472K de 675K). FYP Rate promedio: 98.9%. El algoritmo esta a favor de DEPILE.",
       "highlight_sub": "Formula probada: educacion sobre depilacion + formato entretenido + ASMR. El producto se muestra en uso, nunca como protagonista.",
       "evidence": [
         {
@@ -244,16 +244,16 @@
           "delta": "Mejor ER del mes"
         }
       ],
-      "action": "El contenido educativo sobre depilacion en formato entretenido y ASMR es la formula ganadora. <strong>DEPILE debe ser la respuesta a una pregunta que la audiencia ya tiene</strong>, no un comercial disfrazado.",
+      "action": "El contenido educativo sobre depilacion en formato entretenido y ASMR es la formula ganadora. DEPILE debe ser la respuesta a una pregunta que la audiencia ya tiene, no un comercial disfrazado.",
       "text": "Marzo fue el mes que TikTok de DEPILE despego. \"Bandas o Crema\" alcanzo 214,809 vistas, \"Les dimos las bandas\" llego a 153,543, y \"Esperar a que crezca\" sumo 104,300. Los tres comparten algo: contenido que educa sobre depilacion con formato entretenido, sin sentirse como publicidad.\n\nEl hallazgo del mes: \"Soft vs Sticky ASMR\" tuvo 50,282 vistas con el mejor engagement rate de todos los videos (2.39%). ASMR + depilacion genera curiosidad y retencion. Los 9 videos del mes promediaron 99% FYP rate: TikTok esta amplificando masivamente el contenido de DEPILE a no-seguidores."
     },
     "act2": {
-      "number": "Acto 2 · El Crecimiento",
+      "number": "Acto 2 · El Impacto",
       "title": "TikTok crecio 180% en seguidores y la marca alcanzo 7M de impresiones",
       "paragraphs": [
-        "TikTok paso de 1,299 a 3,638 seguidores en un mes: <strong>+2,339 nuevos seguidores, un crecimiento del 180%</strong>. Es el crecimiento mas explosivo en la historia de DEPILE en cualquier plataforma.",
-        "Las impresiones totales llegaron a <strong>7 millones</strong>: 4.6M de Meta Ads, 1.7M de TK Ads y 675K de TK organico. 675K vistas organicas sin costo representan el equivalente a S/ 1,379 en pauta (al CPM de TK Ads).",
-        "Inversion total: <strong>S/ 12,938 (USD 3,423)</strong>. El CPM de Meta alcanzo su minimo historico en $0.51. Cada sol invertido genero 544 impresiones."
+        "TikTok paso de 1,299 a 3,638 seguidores en un mes: +2,339 nuevos seguidores, un crecimiento del 180%. Es el crecimiento mas explosivo en la historia de DEPILE en cualquier plataforma.",
+        "Las impresiones totales llegaron a 7 millones: 4.6M de Meta Ads, 1.7M de TK Ads y 675K de TK organico. 675K vistas organicas sin costo representan el equivalente a S/ 1,379 en pauta (al CPM de TK Ads).",
+        "Inversion total: S/ 12,938 (USD 3,423). El CPM de Meta alcanzo su minimo historico en $0.51. Cada sol invertido genero 544 impresiones."
       ],
       "highlight": "TK paso de 298 seguidores en octubre a 3,638 en marzo: 12x en 6 meses. La pauta y el contenido organico trabajan juntos.",
       "highlight_sub": "675K vistas organicas TK = ahorro estimado de S/ 1,379 en pauta. El contenido bueno se paga solo.",
@@ -282,31 +282,23 @@
       "text": "TikTok paso de 1,299 a 3,638 seguidores en un mes: +2,339 nuevos seguidores, un crecimiento del 180%. Es el crecimiento mas explosivo en la historia de DEPILE en cualquier plataforma.\n\nLas impresiones totales llegaron a 7 millones: 4.6M de Meta Ads, 1.7M de TK Ads y 675K de TK organico. 675K vistas organicas sin costo representan el equivalente a S/ 1,379 en pauta (al CPM de TK Ads).\n\nInversion total: S/ 12,938 (USD 3,423). El CPM de Meta alcanzo su minimo historico en $0.51. Cada sol invertido genero 544 impresiones."
     },
     "act3": {
-      "number": "Acto 3 · Las Senales de Alerta",
+      "number": "Acto 3 · Lo que no funciona",
       "title": "Tres quejas de producto y el desierto organico de Meta",
       "paragraphs": [],
       "risks": [
         {
-          "title": "3 comentarios reportan irritacion o manchas por el producto",
-          "text": "De 50 comentarios analizados, <strong>3 personas (6%) reportan reacciones adversas</strong>: irritacion, hinchazon o manchas tras usar el producto. Aunque es un porcentaje bajo, en una marca de cuidado personal esto es una senal critica. <strong>Si no se atiende, puede escalar en redes.</strong> Requiere protocolo de respuesta inmediata + escalacion a producto/CX."
-        },
-        {
-          "title": "Facebook organico: 526 personas alcanzadas en todo el mes",
-          "text": "3 posts de FB sumaron <strong>526 personas de alcance y 12 reacciones</strong>. El post con mayor alcance llego a 189 personas. Con 14,231 seguidores, el alcance organico es del 1.2%. <strong>Facebook organico es un canal muerto para DEPILE.</strong>"
-        },
-        {
-          "title": "Instagram organico es marginal vs TikTok",
-          "text": "15 piezas en IG (9 reels + 6 posts) generaron <strong>5,503 vistas en reels y 1,819 de alcance en posts</strong>. En TikTok, un solo video ('Bandas o Crema') genero 39x mas vistas que todos los reels de IG juntos. <strong>IG funciona como vitrina, no como motor de alcance.</strong>"
+          "title": "Facebook organico",
+          "text": "526 personas alcanzadas en todo el mes: 3 posts de FB sumaron 526 personas de alcance y 12 reacciones. El post con mayor alcance llego a 189 personas. Con 14,231 seguidores, el alcance organico es del 1.2%. Facebook organico es un canal que esta presentando un impacto muy bajo para DEPILE."
         }
       ]
     },
     "act4": {
-      "number": "Acto 4 · Posicion Competitiva",
+      "number": "Acto 4 · Dónde estamos",
       "title": "DEPILE lidera engagement vs Venus y Veet, CPM en minimo historico",
       "paragraphs": [
-        "Gillette Venus Espana tiene 24,852 seguidores pero un ER de 0.04% (9.5 likes por post). DEPILE con 7,868 seguidores genera un ER de 0.12%, <strong>3x el engagement rate de Venus</strong> a pesar de tener 3x menos seguidores.",
-        "El CPM de Meta cayo de <strong>$2.77 (oct) a $0.51 (mar)</strong>, una reduccion del 82% en 6 meses. TK CPM subio de $0.25 (feb) a $0.61 (mar) pero sigue siendo competitivo. El CPM blended es $0.54: por cada dolar se obtienen 1,852 impresiones.",
-        "BHS: <strong>81/100</strong>. Fortalezas: crecimiento (90) y eficiencia (90). Principal debilidad: engagement organico IG/FB (70). Sentimiento penalizado a 78 por las quejas de producto."
+        "Gillette Venus Espana tiene 24,852 seguidores pero un ER de 0.04% (9.5 likes por post). DEPILE con 7,868 seguidores genera un ER de 0.12%, 3x el engagement rate de Venus a pesar de tener 3x menos seguidores.",
+        "El CPM de Meta cayo de $2.77 (oct) a $0.51 (mar), una reduccion del 82% en 6 meses. TK CPM subio de $0.25 (feb) a $0.61 (mar) pero sigue siendo competitivo. El CPM blended es $0.54: por cada dolar se obtienen 1,852 impresiones.",
+        "BHS: 81/100. Fortalezas: crecimiento (90) y eficiencia (90). Principal debilidad: engagement organico IG/FB (70). Sentimiento penalizado a 78 por las quejas de producto."
       ],
       "evidence": [
         {
@@ -333,17 +325,13 @@
       "text": "Gillette Venus Espana tiene 24,852 seguidores pero un ER de 0.04% (9.5 likes por post). DEPILE con 7,868 seguidores genera un ER de 0.12%, 3x el engagement rate de Venus a pesar de tener 3x menos seguidores.\n\nEl CPM de Meta cayo de $2.77 (oct) a $0.51 (mar), una reduccion del 82% en 6 meses. TK CPM subio de $0.25 (feb) a $0.61 (mar) pero sigue siendo competitivo. El CPM blended es $0.54: por cada dolar se obtienen 1,852 impresiones.\n\nBHS: 81/100. Fortalezas: crecimiento (90) y eficiencia (90). Principal debilidad: engagement organico IG/FB (70). Sentimiento penalizado a 78 por las quejas de producto."
     },
     "act5": {
-      "number": "Acto 5 · Plan de Accion",
+      "number": "Acto 5 · Qué hacemos diferente",
       "title": "Abril: capitalizar el momentum de TK y atender las alertas de producto",
       "highlight": "TikTok de DEPILE esta en su mejor momento. La prioridad es capitalizar el crecimiento y resolver las alertas de producto antes de que escalen.",
       "items": [
         {
-          "type": "fix",
-          "text": "URGENTE: Crear protocolo de respuesta para quejas de producto (irritacion/manchas). Responder en <2h con mensaje empatico + canal de atencion directo. Escalar a equipo de producto para evaluar lote/formulacion."
-        },
-        {
           "type": "bet",
-          "text": "Duplicar contenido ASMR en TikTok. 'Soft vs Sticky' tuvo el mejor ER (2.39%) con 50K vistas. Producir 3-4 videos ASMR en abril mostrando texturas, aplicacion y resultado."
+          "text": "Duplicar contenido ASMR en TikTok. 'Soft vs Sticky' tuvo el mejor ER (2.39%) con 50K vistas. Producir 3-4 videos ASMR en abril mostrando texturas, aplicación y resultado."
         },
         {
           "type": "bet",
@@ -359,7 +347,7 @@
         },
         {
           "type": "system",
-          "text": "Configurar alertas de sentimiento negativo. Cualquier comentario que mencione irritacion, alergia o reaccion debe llegar al equipo en <1h."
+          "text": "Configurar alertas de sentimiento negativo. Cualquier comentario que mencione irritación, alergia o reaccion debe llegar al equipo en <1h."
         }
       ],
       "evidence": [
