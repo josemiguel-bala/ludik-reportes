@@ -1,0 +1,30 @@
+{
+  "months": ["Oct 25","Nov 25","Dic 25","Ene 26","Feb 26","Mar 26"],
+  "facebook_er": [6.6, 8.5, 5.8, 11.3, 7.5, 8.9],
+  "instagram_er": [null, null, 4.2, 3.5, 3.4, 5.7],
+  "tiktok_er_metricool_formula": [0.18, 0.21, 0.28, 1.02, 0.47, 0.37],
+  "note": "ER calculado como interacciones/reach (formula Metricool). FB incluye pauta. IG no existia antes de dic 2025.",
+  "tiktok_detail": {
+    "oct25": {"videos":13,"interactions":386,"reach":213826,"er":0.18},
+    "nov25": {"videos":9,"interactions":1546,"reach":736586,"er":0.21},
+    "dic25": {"videos":10,"interactions":875,"reach":309538,"er":0.28},
+    "ene26": {"videos":8,"interactions":19969,"reach":1951354,"er":1.02},
+    "feb26": {"videos":16,"interactions":7729,"reach":1634507,"er":0.47},
+    "mar26": {"videos":21,"interactions":6876,"reach":1838155,"er":0.37}
+  },
+  "cpm_history": {
+    "meta_usd": [0.84, 1.48, 1.19, 1.17, 0.85, 0.66],
+    "tiktok_usd": [null, null, 0.34, 0.27, 0.28, 0.27]
+  },
+  "followers_end_of_month": {
+    "facebook": [22904, 22866, 22844, 22797, 22804, 23200],
+    "instagram": [null, null, null, null, 4956, 5690],
+    "tiktok": [298, 255, 331, 686, 1143, 1849],
+    "total": [null, null, null, null, 28903, 30739]
+  },
+  "investment_usd": {
+    "meta": [921.99, 431.41, 1055.13, 772.96, 1211.90, 1868.47],
+    "tiktok": [0, 0, 170.43, 500.00, 744.76, 707.17],
+    "total": [921.99, 431.41, 1225.56, 1272.96, 1956.66, 2575.64]
+  }
+}

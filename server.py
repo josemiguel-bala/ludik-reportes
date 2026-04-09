@@ -2,16 +2,34 @@
 """
 LUDiK Report Server
 Sirve la app + endpoint POST /save para guardar JSONs desde el admin.
+Al guardar, automáticamente sube a Vercel (deploy público).
 Uso: python3 server.py [puerto]
 """
 import http.server
 import json
 import os
 import sys
+import subprocess
+import threading
 
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(APP_DIR, 'data')
+
+def deploy_to_vercel(filename):
+    """Deploy to Vercel in background after saving."""
+    try:
+        # Git add + commit + push
+        subprocess.run(['git', 'add', f'data/{filename}'], cwd=APP_DIR, capture_output=True)
+        subprocess.run(['git', 'commit', '-m', f'Update {filename} from admin'], cwd=APP_DIR, capture_output=True)
+        # Deploy to Vercel
+        result = subprocess.run(['vercel', '--prod', '--yes'], cwd=APP_DIR, capture_output=True, text=True, timeout=60)
+        if result.returncode == 0:
+            print(f"  🚀 Deployado a Vercel: {filename}")
+        else:
+            print(f"  ⚠ Vercel deploy falló: {result.stderr[:200]}")
+    except Exception as e:
+        print(f"  ⚠ Deploy error: {e}")
 
 class ReportHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
@@ -32,8 +50,10 @@ class ReportHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_header('Content-Type', 'application/json')
                 self.send_header('Access-Control-Allow-Origin', '*')
                 self.end_headers()
-                self.wfile.write(json.dumps({"ok": True, "file": filename}).encode())
+                self.wfile.write(json.dumps({"ok": True, "file": filename, "deploying": True}).encode())
                 print(f"  ✓ Guardado: data/{filename}")
+                # Deploy en background (no bloquea la respuesta al admin)
+                threading.Thread(target=deploy_to_vercel, args=(filename,), daemon=True).start()
             except Exception as e:
                 self.send_response(500)
                 self.send_header('Content-Type', 'application/json')
@@ -54,4 +74,5 @@ print(f"LUDiK Report Server → http://localhost:{PORT}")
 print(f"  Admin:   http://localhost:{PORT}/admin.html")
 print(f"  Reporte: http://localhost:{PORT}/reporte.html")
 print(f"  Data:    {DATA_DIR}/")
+print(f"  Auto-deploy a Vercel: ACTIVADO")
 http.server.HTTPServer(('', PORT), ReportHandler).serve_forever()

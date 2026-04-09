@@ -1,0 +1,48 @@
+{
+  "brand": "ISANA",
+  "historical_ads": [
+    {
+      "month": "2025-10",
+      "meta_ads": { "spend_usd": 921.99, "impressions": 1091460, "reach": 704346, "interactions": 499167, "cpm_usd": 0.84 },
+      "tiktok_ads": null
+    },
+    {
+      "month": "2025-11",
+      "meta_ads": { "spend_usd": 431.41, "impressions": 291389, "reach": 194539, "interactions": 137259, "cpm_usd": 1.48 },
+      "tiktok_ads": null
+    },
+    {
+      "month": "2025-12",
+      "meta_ads": { "spend_usd": 1055.13, "impressions": 889263, "reach": 647044, "interactions": 157619, "cpm_usd": 1.19 },
+      "tiktok_ads": { "spend_usd": 170.43, "impressions": 501056, "video_views": 107969, "cpm_usd": 0.34 }
+    },
+    {
+      "month": "2026-01",
+      "meta_ads": { "spend_usd": 772.96, "impressions": 662447, "reach": 471741, "interactions": 293838, "cpm_usd": 1.17 },
+      "tiktok_ads": { "spend_usd": 500.00, "impressions": 1855280, "video_views": 526534, "cpm_usd": 0.27 }
+    },
+    {
+      "month": "2026-02",
+      "meta_ads": { "spend_usd": 1211.90, "impressions": 1422919, "reach": 943840, "interactions": 430900, "cpm_usd": 0.85 },
+      "tiktok_ads": { "spend_usd": 744.76, "impressions": 2626981, "video_views": 343871, "cpm_usd": 0.28 }
+    },
+    {
+      "month": "2026-03",
+      "meta_ads": { "spend_usd": 1868.47, "impressions": 2820144, "reach": 1578184, "interactions": 1388640, "cpm_usd": 0.66 },
+      "tiktok_ads": { "spend_usd": 707.17, "impressions": 2584283, "video_views": 533832, "cpm_usd": 0.27 }
+    }
+  ],
+  "monthly_totals": {
+    "2025-10": { "total_usd": 921.99, "total_soles": 3485.12 },
+    "2025-11": { "total_usd": 431.41, "total_soles": 1630.73 },
+    "2025-12": { "total_usd": 1225.56, "total_soles": 4632.62 },
+    "2026-01": { "total_usd": 1272.96, "total_soles": 4811.79 },
+    "2026-02": { "total_usd": 1956.66, "total_soles": 7396.17 },
+    "2026-03": { "total_usd": 2575.64, "total_soles": 9735.92 }
+  },
+  "cpm_history": {
+    "meta": [0.84, 1.48, 1.19, 1.17, 0.85, 0.66],
+    "tiktok": [null, null, 0.34, 0.27, 0.28, 0.27],
+    "months": ["Oct 25", "Nov 25", "Dic 25", "Ene 26", "Feb 26", "Mar 26"]
+  }
+}
