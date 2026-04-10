@@ -967,5 +967,15 @@
       "posts": "15",
       "er": "0.12%"
     }
-  ]
+  ],
+  "engagement_override": {
+    "impressions": "+7MM",
+    "frequency": "3",
+    "reach": "6 MM",
+    "interactions": "+22k",
+    "clicks": "+2000",
+    "new_followers": "+2,367",
+    "objectives": "4/4",
+    "tk_views": "675k"
+  }
 }
