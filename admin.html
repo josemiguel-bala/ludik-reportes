@@ -341,6 +341,64 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         <div class="form-group"><label class="form-label">Insight de Audiencia (demografia)</label>
         <textarea class="form-textarea" id="tech_audiencia" rows="2">FB = compradora (25-44). TK = futuro consumidor (13-24). IG = puente entre ambos. Audiencia masculina 38-46%: oportunidad si hay linea para hombres.</textarea></div>
       </div>
+
+      <div class="card">
+        <div class="card-title">Perfil de Audiencia — Datos por Plataforma <span class="card-badge badge-manual">Manual</span></div>
+        <div style="font-size:10px;color:var(--gray);margin-bottom:12px">Porcentajes de edad y genero. Sacar de: Meta Business Suite, IG Insights, TikTok Analytics.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+          <div>
+            <div style="font-size:11px;font-weight:700;color:#4267B2;margin-bottom:8px">Facebook</div>
+            <div style="font-size:9px;color:var(--gray);margin-bottom:4px">Edad (%)</div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;font-size:10px;color:var(--gray)">
+              <span>13-17</span><input class="form-input" id="fb_age_0" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>18-24</span><input class="form-input" id="fb_age_1" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>25-34</span><input class="form-input" id="fb_age_2" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>35-44</span><input class="form-input" id="fb_age_3" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>45-54</span><input class="form-input" id="fb_age_4" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>55+</span><input class="form-input" id="fb_age_5" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+            </div>
+            <div style="font-size:9px;color:var(--gray);margin:8px 0 4px">Genero (%)</div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;font-size:10px;color:var(--gray)">
+              <span>Mujer</span><input class="form-input" id="fb_female" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>Hombre</span><input class="form-input" id="fb_male" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;color:var(--fucsia);margin-bottom:8px">Instagram</div>
+            <div style="font-size:9px;color:var(--gray);margin-bottom:4px">Edad (%)</div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;font-size:10px;color:var(--gray)">
+              <span>13-17</span><input class="form-input" id="ig_age_0" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>18-24</span><input class="form-input" id="ig_age_1" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>25-34</span><input class="form-input" id="ig_age_2" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>35-44</span><input class="form-input" id="ig_age_3" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>45-54</span><input class="form-input" id="ig_age_4" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>55+</span><input class="form-input" id="ig_age_5" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+            </div>
+            <div style="font-size:9px;color:var(--gray);margin:8px 0 4px">Genero (%)</div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;font-size:10px;color:var(--gray)">
+              <span>Mujer</span><input class="form-input" id="ig_female" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>Hombre</span><input class="form-input" id="ig_male" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;color:var(--teal);margin-bottom:8px">TikTok</div>
+            <div style="font-size:9px;color:var(--gray);margin-bottom:4px">Edad (%)</div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;font-size:10px;color:var(--gray)">
+              <span>13-17</span><input class="form-input" id="tk_age_0" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>18-24</span><input class="form-input" id="tk_age_1" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>25-34</span><input class="form-input" id="tk_age_2" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>35-44</span><input class="form-input" id="tk_age_3" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>45-54</span><input class="form-input" id="tk_age_4" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>55+</span><input class="form-input" id="tk_age_5" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+            </div>
+            <div style="font-size:9px;color:var(--gray);margin:8px 0 4px">Genero (%)</div>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 6px;font-size:10px;color:var(--gray)">
+              <span>Mujer</span><input class="form-input" id="tk_female" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+              <span>Hombre</span><input class="form-input" id="tk_male" value="0" style="padding:3px 6px;font-size:10px;text-align:center">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- TAB: CONTENT -->
@@ -1003,6 +1061,13 @@ function collectData() {
     content: {
       top_tiktok: collectPosts('top-posts-list'),
       worst_overall: collectPosts('worst-posts-list')
+    },
+    charts: {
+      fb_age: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('fb_age_'+i)?.value) || 0),
+      ig_age: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('ig_age_'+i)?.value) || 0),
+      tk_age: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('tk_age_'+i)?.value) || 0),
+      gender_female: [parseFloat(document.getElementById('fb_female')?.value)||0, parseFloat(document.getElementById('ig_female')?.value)||0, parseFloat(document.getElementById('tk_female')?.value)||0],
+      gender_male: [parseFloat(document.getElementById('fb_male')?.value)||0, parseFloat(document.getElementById('ig_male')?.value)||0, parseFloat(document.getElementById('tk_male')?.value)||0]
     }
   };
 
@@ -1313,6 +1378,23 @@ function loadFromData(data) {
       const el = document.getElementById('tech_' + k);
       if (el && data.technical_texts[k]) el.value = data.technical_texts[k];
     });
+  }
+  // Audience demographics
+  if (data.charts) {
+    ['fb_age','ig_age','tk_age'].forEach(key => {
+      if (data.charts[key]) data.charts[key].forEach((v, i) => {
+        const el = document.getElementById(key.replace('_age','_age_') + i);
+        if (el) el.value = v;
+      });
+    });
+    if (data.charts.gender_female) {
+      const platforms = ['fb','ig','tk'];
+      data.charts.gender_female.forEach((v, i) => { const el = document.getElementById(platforms[i]+'_female'); if (el) el.value = v; });
+    }
+    if (data.charts.gender_male) {
+      const platforms = ['fb','ig','tk'];
+      data.charts.gender_male.forEach((v, i) => { const el = document.getElementById(platforms[i]+'_male'); if (el) el.value = v; });
+    }
   }
 }
 
