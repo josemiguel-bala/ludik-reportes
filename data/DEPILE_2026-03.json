@@ -900,12 +900,12 @@
   },
   "competitors": [
     {
-      "name": "Gillette Venus Espana",
+      "name": "Depilé Peru  ",
       "followers": "24852",
-      "likes_avg": "9.5",
-      "comments_avg": "",
-      "posts": "2",
-      "er": "0.04%"
+      "likes_avg": "9.2",
+      "comments_avg": "1.5",
+      "posts": "15",
+      "er": " 0.12%"
     },
     {
       "name": "Gillette Venus Latam",
@@ -921,15 +921,15 @@
       "likes_avg": "3.67",
       "comments_avg": "",
       "posts": "3",
-      "er": "%"
+      "er": "0,01%"
     },
     {
-      "name": "DEPILE Peru",
+      "name": "Gillette Venus Espana",
       "followers": "7868",
-      "likes_avg": "9.2",
-      "comments_avg": "1.5",
-      "posts": "15",
-      "er": "0.12%"
+      "likes_avg": "9.5 ",
+      "comments_avg": "",
+      "posts": "2",
+      "er": "0.04%"
     }
   ]
 }
