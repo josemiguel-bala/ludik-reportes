@@ -38,7 +38,36 @@
     "contact": "josemiguel@ludik.pe",
     "confidential": "Confidencial · Preparado por el equipo LUDiK para PERUFARMA"
   },
-  "objectives": [],
+  "objectives": [
+    {
+      "objective": "Impresiones Totales",
+      "channel": "TT+Meta",
+      "target": "7,909,000\t",
+      "result": "6,367,124",
+      "status": "met"
+    },
+    {
+      "objective": "Interacciones totales",
+      "channel": "TT+Meta",
+      "target": "13,324",
+      "result": "22,962\t",
+      "status": "met"
+    },
+    {
+      "objective": "Guardados totales (Intención de compra)",
+      "channel": "TT+Meta",
+      "target": "2,280",
+      "result": "4,470",
+      "status": "met"
+    },
+    {
+      "objective": "Compartidos totales (Recomendación de producto)",
+      "channel": "TT+Meta",
+      "target": "850",
+      "result": "1678",
+      "status": "met"
+    }
+  ],
   "summary_kpis": {
     "objectives": "—",
     "reach": "7M",
