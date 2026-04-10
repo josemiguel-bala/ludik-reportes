@@ -1916,11 +1916,18 @@ function populateAllSections() {
   if (b1) {
     let h = '<div class="analysis-block"><div class="analysis-label">◈ Análisis del Período</div><div class="analysis-text">'+(T.resumen||'Sin datos')+'</div></div>';
     h += '<div class="funnel">';
-    h += '<div class="funnel-step"><div class="funnel-icon">📡</div><div class="funnel-value">'+fmtK(D.reach.total_impressions)+'</div><div class="funnel-label">Impresiones</div><div class="funnel-conv">Freq: '+(D.reach.frequency||0).toFixed(1)+'x</div></div>';
-    h += '<div class="funnel-step"><div class="funnel-icon">👁️</div><div class="funnel-value">'+(D.summary_kpis.reach||'–')+'</div><div class="funnel-label">Alcance Único</div><div class="funnel-conv">Estimado</div></div>';
-    h += '<div class="funnel-step"><div class="funnel-icon">💬</div><div class="funnel-value">'+fmtK(D.engagement.total_meaningful_interactions||D.engagement.total_interactions||0)+'</div><div class="funnel-label">Interacciones</div><div class="funnel-conv">Org. + Ads</div></div>';
-    h += '<div class="funnel-step"><div class="funnel-icon">🛍️</div><div class="funnel-value">'+fmt(D.engagement.meta_ads_link_clicks||D.engagement.meta_ads_clicks||'–')+'</div><div class="funnel-label">Clicks/Señales</div><div class="funnel-conv">Meta Ads</div></div>';
-    h += '<div class="funnel-step"><div class="funnel-icon">❤️</div><div class="funnel-value">'+(D.summary_kpis.new_followers||'+'+D.community.total_new)+'</div><div class="funnel-label">Nuevos Seg.</div><div class="funnel-conv">Tracked</div></div>';
+    const ov = D.engagement_override || {};
+    const _imp = ov.impressions || fmtK(D.reach.total_impressions);
+    const _freq = ov.frequency || (D.reach.frequency||0).toFixed(1);
+    const _reach = ov.reach || D.summary_kpis.reach || '–';
+    const _inter = ov.interactions ? fmt(parseInt(ov.interactions)) : fmtK(D.engagement.total_meaningful_interactions||D.engagement.total_interactions||0);
+    const _clicks = ov.clicks ? fmt(parseInt(ov.clicks)) : fmt(D.engagement.meta_ads_link_clicks||D.engagement.meta_ads_clicks||'–');
+    const _followers = ov.new_followers || D.summary_kpis.new_followers || '+'+D.community.total_new;
+    h += '<div class="funnel-step"><div class="funnel-icon">📡</div><div class="funnel-value">'+_imp+'</div><div class="funnel-label">Impresiones</div><div class="funnel-conv">Freq: '+_freq+'x</div></div>';
+    h += '<div class="funnel-step"><div class="funnel-icon">👁️</div><div class="funnel-value">'+_reach+'</div><div class="funnel-label">Alcance Único</div><div class="funnel-conv">Estimado</div></div>';
+    h += '<div class="funnel-step"><div class="funnel-icon">💬</div><div class="funnel-value">'+_inter+'</div><div class="funnel-label">Interacciones</div><div class="funnel-conv">Org. + Ads</div></div>';
+    h += '<div class="funnel-step"><div class="funnel-icon">🛍️</div><div class="funnel-value">'+_clicks+'</div><div class="funnel-label">Clicks/Señales</div><div class="funnel-conv">Meta Ads</div></div>';
+    h += '<div class="funnel-step"><div class="funnel-icon">❤️</div><div class="funnel-value">'+_followers+'</div><div class="funnel-label">Nuevos Seg.</div><div class="funnel-conv">Tracked</div></div>';
     h += '</div>';
     h += '<div class="kpi-row">';
     [{k:'facebook',l:'Facebook',g:'var(--purple),var(--purple2)'},{k:'instagram',l:'Instagram',g:'var(--fucsia),#FF6B6B'},{k:'tiktok',l:'TikTok',g:'var(--fucsia),var(--teal)'}].forEach(ch => {
