@@ -1376,6 +1376,12 @@ function switchMode(mode, btn) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   // Re-measure header
   setTimeout(setHeaderHeight, 100);
+  // Resize all Chart.js instances after container becomes visible
+  if (mode === 'tech') {
+    setTimeout(() => {
+      Object.values(Chart.instances).forEach(c => c.resize());
+    }, 150);
+  }
 }
 // ══════════════════════════════════════════════
 //  POPULATE ALL SECTIONS FROM JSON (Phase 2)
@@ -1539,8 +1545,8 @@ function populateAllSections_OLD_UNUSED() {
     if (worstGallery && worstPosts.length) {
       worstGallery.innerHTML = worstPosts.map(p => `
         <div class="post-card">
-          <div class="post-thumb" style="background:linear-gradient(135deg,#1A1A2E,#2A2A40,#333350)">
-            <div class="post-thumb-inner" style="opacity:.08">📄</div>
+          <div class="post-thumb" style="${p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#1A1A2E,#2A2A40,#333350)'}">
+            <div class="post-thumb-inner" ${p.coverImageUrl ? 'style="display:none"' : 'style="opacity:.08"'}>📄</div>
             <span class="post-badge badge-low">Bajo Rendimiento</span>
             <span class="post-plat-badge">${p.platform || 'TikTok'}</span>
           </div>
@@ -1667,7 +1673,7 @@ function populateAllSections_OLD_UNUSED() {
     }
   }
 
-  // — SEC-COMPETENCIA —
+  // — SEC-COMPETENCIA (sorted by ER% desc, brand tagged as "Nosotros") —
   const comp = document.getElementById('sec-competencia');
   if (comp && D.competitors_ig) {
     const tbody = comp.querySelector('.comp-table tbody');
@@ -1675,9 +1681,17 @@ function populateAllSections_OLD_UNUSED() {
       if (D.competitors_ig.length === 0) {
         tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--gray);padding:20px">Sin data de competidores configurada para esta marca. Configurar en Metricool para próximo reporte.</td></tr>';
       } else {
-        tbody.innerHTML = D.competitors_ig.map((c, i) => {
-          const isUs = i === 0;
-          return `<tr${isUs ? ' class="our-brand"' : ''}><td>${isUs ? '<strong>'+c.name+'</strong>' : c.name}</td><td><span class="${isUs ? 'comp-badge-us' : 'comp-badge-comp'}">${isUs ? 'Nosotros' : 'Comp.'}</span></td><td>${isUs ? '<strong>'+fmt(c.followers)+'</strong>' : fmt(c.followers)}</td><td>${c.likes_avg||'–'}</td><td>${c.comments_avg||'–'}</td><td>${c.posts||'–'}</td><td${isUs ? ' style="color:var(--teal)"' : ''}>${isUs ? '<strong>'+c.er+'%</strong>' : c.er+'%'}</td><td>${isUs ? '<strong style="color:var(--teal)">#1 ER</strong>' : '#'+(i+1)+' ER'}</td></tr>`;
+        // Sort by ER% descending
+        const sorted = [...D.competitors_ig].sort((a, b) => (parseFloat(b.er)||0) - (parseFloat(a.er)||0));
+        const brandKey = D.brand.toLowerCase().split(' ')[0];
+        const maxFollowers = Math.max(...sorted.map(c => c.followers || 0));
+        tbody.innerHTML = sorted.map((c, i) => {
+          const isUs = c.name.toLowerCase().includes(brandKey);
+          const rank = i + 1;
+          const isTopSeg = c.followers === maxFollowers;
+          let posLabel = '#' + rank + ' ER';
+          if (isTopSeg && rank > 1) posLabel += ' · #1 Seg.';
+          return `<tr${isUs ? ' class="our-brand"' : ''}><td>${isUs ? '<strong>'+c.name+'</strong>' : c.name}</td><td><span class="${isUs ? 'comp-badge-us' : 'comp-badge-comp'}">${isUs ? 'Nosotros' : 'Comp.'}</span></td><td>${isUs || isTopSeg ? '<strong>'+fmt(c.followers)+'</strong>' : fmt(c.followers)}</td><td>${c.likes_avg||'–'}</td><td>${c.comments_avg||'–'}</td><td>${c.posts||'–'}</td><td${rank===1 ? ' style="color:var(--teal)"' : ''}>${rank===1 ? '<strong>'+c.er+'%</strong>' : c.er+'%'}</td><td>${rank===1 ? '<strong style="color:var(--teal)">'+posLabel+'</strong>' : posLabel}</td></tr>`;
         }).join('');
       }
     }
@@ -1983,7 +1997,8 @@ function populateAllSections() {
     if (worst.length) {
       h += '<div class="post-gallery-label pgl-low">⚠ Menor Rendimiento</div><div class="post-gallery">';
       worst.forEach(p => {
-        h += '<div class="post-card"><div class="post-thumb" style="background:linear-gradient(135deg,#1A1A2E,#2A2A40,#333350)"><div class="post-thumb-inner" style="opacity:.08">📄</div><span class="post-badge badge-low">Bajo</span><span class="post-plat-badge">'+(p.platform||'TikTok')+(p.inv_label?' · '+p.inv_label:'')+'</span></div>';
+        const wBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#1A1A2E,#2A2A40,#333350)';
+        h += '<div class="post-card"><div class="post-thumb" style="'+wBg+'">'+(p.coverImageUrl?'':'<div class="post-thumb-inner" style="opacity:.08">📄</div>')+'<span class="post-badge badge-low">Bajo</span><span class="post-plat-badge">'+(p.platform||'TikTok')+(p.inv_label?' · '+p.inv_label:'')+'</span></div>';
         h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
         h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--danger)">'+fmt(p.reach||p.views||0)+'</div><div class="post-metric-label">'+(p.reach?'Alcance':'Vistas')+'</div></div>';
         h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.reactions||p.likes||0)+'</div><div class="post-metric-label">'+(p.reactions!==undefined?'Reacciones':'Likes')+'</div></div>';
@@ -2040,15 +2055,18 @@ function populateAllSections() {
     b8.innerHTML = h;
   }
 
-  // ── SEC-COMPETENCIA ──
+  // ── SEC-COMPETENCIA (sorted by ER% desc, brand tagged as "Nosotros") ──
   const b9 = body('sec-competencia');
   if (b9) {
     let h = '<div class="insight-block"><div class="insight-title">'+(D.insights.competition||'')+'</div></div>';
     if (D.competitors_ig && D.competitors_ig.length > 0) {
+      const sorted = [...D.competitors_ig].sort((a, b) => (parseFloat(b.er)||0) - (parseFloat(a.er)||0));
+      const brandKey = D.brand.toLowerCase().split(' ')[0];
       h += '<table class="comp-table"><thead><tr><th>Marca</th><th></th><th>Seg. IG</th><th>Likes prom.</th><th>Comments</th><th>Posts</th><th>ER IG</th><th>Pos.</th></tr></thead><tbody>';
-      D.competitors_ig.forEach((c,i) => {
-        const us = i===0;
-        h += '<tr'+(us?' class="our-brand"':'')+'><td>'+(us?'<strong>'+c.name+'</strong>':c.name)+'</td><td><span class="'+(us?'comp-badge-us':'comp-badge-comp')+'">'+(us?'Nosotros':'Comp.')+'</span></td><td>'+fmt(c.followers)+'</td><td>'+(c.likes_avg||'–')+'</td><td>'+(c.comments_avg||'–')+'</td><td>'+(c.posts||'–')+'</td><td'+(us?' style="color:var(--teal)"':'')+'>'+c.er+'%</td><td>#'+(i+1)+'</td></tr>';
+      sorted.forEach((c,i) => {
+        const us = c.name.toLowerCase().includes(brandKey);
+        const rank = i + 1;
+        h += '<tr'+(us?' class="our-brand"':'')+'><td>'+(us?'<strong>'+c.name+'</strong>':c.name)+'</td><td><span class="'+(us?'comp-badge-us':'comp-badge-comp')+'">'+(us?'Nosotros':'Comp.')+'</span></td><td>'+fmt(c.followers)+'</td><td>'+(c.likes_avg||'–')+'</td><td>'+(c.comments_avg||'–')+'</td><td>'+(c.posts||'–')+'</td><td'+(rank===1?' style="color:var(--teal)"':'')+'>'+c.er+'%</td><td>'+(rank===1?'<strong style="color:var(--teal)">#'+rank+' ER</strong>':'#'+rank+' ER')+'</td></tr>';
       });
       h += '</tbody></table>';
     } else {

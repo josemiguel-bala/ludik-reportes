@@ -1403,10 +1403,23 @@ function initThumbUploads(container) {
         if (file) {
           const reader = new FileReader();
           reader.onload = (ev) => {
-            el.style.backgroundImage = 'url(' + ev.target.result + ')';
-            el.style.backgroundSize = 'cover';
-            el.textContent = '';
-            el.dataset.base64 = ev.target.result;
+            // Resize to max 300px to keep JSON small
+            const img = new Image();
+            img.onload = () => {
+              const canvas = document.createElement('canvas');
+              const MAX = 300;
+              let w = img.width, h = img.height;
+              if (w > h && w > MAX) { h = h * MAX / w; w = MAX; }
+              else if (h > MAX) { w = w * MAX / h; h = MAX; }
+              canvas.width = w; canvas.height = h;
+              canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+              const resized = canvas.toDataURL('image/jpeg', 0.7);
+              el.style.backgroundImage = 'url(' + resized + ')';
+              el.style.backgroundSize = 'cover';
+              el.textContent = '';
+              el.dataset.base64 = resized;
+            };
+            img.src = ev.target.result;
           };
           reader.readAsDataURL(file);
         }
@@ -1462,7 +1475,7 @@ function collectPosts(containerId) {
       engagement: parseFloat(editor.querySelector('.post-er')?.value || '0') || 0,
       url: editor.querySelector('.post-url')?.value || ''
     };
-    if (coverUrl && !coverUrl.startsWith('data:')) post.coverImageUrl = coverUrl;
+    if (coverUrl) post.coverImageUrl = coverUrl;
     posts.push(post);
   });
   return posts;
