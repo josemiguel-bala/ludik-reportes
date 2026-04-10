@@ -509,9 +509,9 @@
   "recommendations": [
     {
       "priority": "Alta",
-      "channel": "CX/Producto",
-      "title": "Protocolo de respuesta a quejas de producto",
-      "description": "3 comentarios reportan irritacion/hinchazon/manchas. Crear protocolo: responder en <2h con mensaje empatico + canal directo de atencion. Escalar a producto para evaluar lote o formulacion. No responder puede escalar en redes."
+      "channel": "",
+      "title": "",
+      "description": ""
     },
     {
       "priority": "Alta",
