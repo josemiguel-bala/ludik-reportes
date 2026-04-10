@@ -1214,6 +1214,9 @@ async function saveLocal() {
     });
     const result = await res.json();
     if (result.ok) {
+      // Tambien guardar en localStorage para el preview del reporte
+      localStorage.setItem('ludik_report_' + brandId + '_' + period, JSON.stringify(data));
+      localStorage.setItem('ludik_report_data', JSON.stringify(data));
       document.getElementById('status-msg').textContent = '✓ Guardado: data/' + result.file + ' (merge con existente)';
       document.getElementById('status-msg').style.color = 'var(--success)';
     } else {

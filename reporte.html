@@ -1151,10 +1151,14 @@ function loadReportData() {
   } catch (e) { console.error('Error loading report data:', e); }
 }
 
-// Fetch JSON from ?data= URL param (async)
+// Fetch JSON from ?data= or ?brand=&period= URL params (async)
 async function fetchReportData() {
   const params = new URLSearchParams(window.location.search);
-  const dataUrl = params.get('data');
+  let dataUrl = params.get('data');
+  // Auto-construct data URL from brand + period params
+  if (!dataUrl && params.get('brand') && params.get('period')) {
+    dataUrl = 'data/' + params.get('brand') + '_' + params.get('period') + '.json';
+  }
   if (dataUrl) {
     try {
       const res = await fetch(dataUrl);
