@@ -330,8 +330,12 @@
       "highlight": "TikTok de DEPILE esta en su mejor momento. La prioridad es capitalizar el crecimiento.",
       "items": [
         {
+          "type": "fix",
+          "text": "URGENTE: Crear protocolo de respuesta para quejas de producto (irritacion/manchas). Responder en <2h con mensaje empatico + canal de atencion directo. Escalar a equipo de producto para evaluar lote/formulacion."
+        },
+        {
           "type": "bet",
-          "text": "Duplicar contenido ASMR en TikTok. 'Soft vs Sticky' tuvo el mejor ER (2.39%) con 50K vistas. Producir 3-4 videos ASMR en abril mostrando texturas, aplicación y resultado."
+          "text": "Duplicar contenido ASMR en TikTok. 'Soft vs Sticky' tuvo el mejor ER (2.39%) con 50K vistas. Producir 3-4 videos ASMR en abril mostrando texturas, aplicacion y resultado."
         },
         {
           "type": "bet",
@@ -347,7 +351,7 @@
         },
         {
           "type": "system",
-          "text": "Configurar alertas de sentimiento negativo. Cualquier comentario que mencione irritación, alergia o reaccion debe llegar al equipo en <1h."
+          "text": "Configurar alertas de sentimiento negativo. Cualquier comentario que mencione irritacion, alergia o reaccion debe llegar al equipo en <1h."
         }
       ],
       "evidence": [
@@ -900,12 +904,12 @@
   },
   "competitors": [
     {
-      "name": "Depilé Peru  ",
+      "name": "Gillette Venus Espana",
       "followers": "24852",
-      "likes_avg": "9.2",
-      "comments_avg": "1.5",
-      "posts": "15",
-      "er": " 0.12%"
+      "likes_avg": "9.5",
+      "comments_avg": "",
+      "posts": "2",
+      "er": "0.04%"
     },
     {
       "name": "Gillette Venus Latam",
@@ -921,15 +925,15 @@
       "likes_avg": "3.67",
       "comments_avg": "",
       "posts": "3",
-      "er": "0,01%"
+      "er": "%"
     },
     {
-      "name": "Gillette Venus Espana",
+      "name": "DEPILE Peru",
       "followers": "7868",
-      "likes_avg": "9.5 ",
-      "comments_avg": "",
-      "posts": "2",
-      "er": "0.04%"
+      "likes_avg": "9.2",
+      "comments_avg": "1.5",
+      "posts": "15",
+      "er": "0.12%"
     }
   ]
 }
