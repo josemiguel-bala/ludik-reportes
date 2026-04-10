@@ -495,10 +495,22 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 
       <div class="card">
         <div class="card-title">Resumen Ejecutivo — Override Manual <span class="card-badge badge-manual">Manual</span></div>
-        <div class="main-subtitle" style="margin-bottom:12px;font-size:11px;color:var(--gray)">Estos valores aparecen en el funnel del Resumen Ejecutivo. Si se dejan en 0, se usan los valores automaticos.</div>
+        <div class="main-subtitle" style="margin-bottom:12px;font-size:11px;color:var(--gray)">Estos valores aparecen en el funnel y barra del Resumen Ejecutivo. Si se dejan vacios o en 0, se usan los valores automaticos.</div>
         <div class="form-row">
-          <div class="form-group"><label class="form-label">Interacciones Reales (Likes+Comments+Shares+Saves)</label><input class="form-input" id="override_interactions" value="0" type="number"></div>
-          <div class="form-group"><label class="form-label">Clicks / Señales (Meta Ads)</label><input class="form-input" id="override_clicks" value="0" type="number"></div>
+          <div class="form-group"><label class="form-label">Impresiones Totales</label><input class="form-input" id="override_impressions" value="" placeholder="ej: 7.04M"></div>
+          <div class="form-group"><label class="form-label">Frecuencia</label><input class="form-input" id="override_frequency" value="" placeholder="ej: 2.0"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Alcance Unico</label><input class="form-input" id="override_reach" value="" placeholder="ej: 7M"></div>
+          <div class="form-group"><label class="form-label">Interacciones Reales (Likes+Comments+Shares+Saves)</label><input class="form-input" id="override_interactions" value="" placeholder="ej: 22962"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Clicks / Señales</label><input class="form-input" id="override_clicks" value="" placeholder="ej: 2050"></div>
+          <div class="form-group"><label class="form-label">Nuevos Seguidores</label><input class="form-input" id="override_new_followers" value="" placeholder="ej: +2,367"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Objetivos Cumplidos</label><input class="form-input" id="override_objectives" value="" placeholder="ej: 3/5"></div>
+          <div class="form-group"><label class="form-label">TikTok Views</label><input class="form-input" id="override_tk_views" value="" placeholder="ej: 675K"></div>
         </div>
       </div>
 
@@ -1026,8 +1038,14 @@ function collectData() {
       tiktok_usd: parseFloat(document.getElementById('tk_total_usd').value)
     },
     engagement_override: {
-      interactions: parseInt(document.getElementById('override_interactions').value) || 0,
-      clicks: parseInt(document.getElementById('override_clicks').value) || 0
+      impressions: document.getElementById('override_impressions').value || '',
+      frequency: document.getElementById('override_frequency').value || '',
+      reach: document.getElementById('override_reach').value || '',
+      interactions: document.getElementById('override_interactions').value || '',
+      clicks: document.getElementById('override_clicks').value || '',
+      new_followers: document.getElementById('override_new_followers').value || '',
+      objectives: document.getElementById('override_objectives').value || '',
+      tk_views: document.getElementById('override_tk_views').value || ''
     },
     sentiment: {
       total: parseInt(document.getElementById('sent_total').value),
@@ -1332,10 +1350,17 @@ function loadFromData(data) {
     document.getElementById('meta_total_soles').value = (metaUsd * fx).toFixed(2);
     document.getElementById('tk_total_soles').value = (tkUsd * fx).toFixed(2);
   }
-  // Engagement override
+  // Engagement override (Resumen Ejecutivo)
   if (data.engagement_override) {
-    if (data.engagement_override.interactions) document.getElementById('override_interactions').value = data.engagement_override.interactions;
-    if (data.engagement_override.clicks) document.getElementById('override_clicks').value = data.engagement_override.clicks;
+    const eo = data.engagement_override;
+    if (eo.impressions) document.getElementById('override_impressions').value = eo.impressions;
+    if (eo.frequency) document.getElementById('override_frequency').value = eo.frequency;
+    if (eo.reach) document.getElementById('override_reach').value = eo.reach;
+    if (eo.interactions) document.getElementById('override_interactions').value = eo.interactions;
+    if (eo.clicks) document.getElementById('override_clicks').value = eo.clicks;
+    if (eo.new_followers) document.getElementById('override_new_followers').value = eo.new_followers;
+    if (eo.objectives) document.getElementById('override_objectives').value = eo.objectives;
+    if (eo.tk_views) document.getElementById('override_tk_views').value = eo.tk_views;
   }
   // Sentiment (handle both old admin format and new JSON format)
   if (data.sentiment) {

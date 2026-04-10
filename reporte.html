@@ -1230,11 +1230,12 @@ function populateReport() {
   // Summary pills
   const pills = document.querySelectorAll('.summary-pill .sp-val');
   if (pills.length >= 5) {
-    pills[0].textContent = D.summary_kpis.objectives;
+    const ov = D.engagement_override || {};
+    pills[0].textContent = ov.objectives || D.summary_kpis.objectives;
     pills[0].style.color = D.objectives.filter(o => o.status === 'missed').length > 0 ? 'var(--warning)' : 'var(--success)';
-    pills[1].textContent = D.summary_kpis.reach;
-    pills[2].textContent = D.summary_kpis.tk_views;
-    pills[3].textContent = D.summary_kpis.new_followers;
+    pills[1].textContent = ov.reach || D.summary_kpis.reach;
+    pills[2].textContent = ov.tk_views || D.summary_kpis.tk_views;
+    pills[3].textContent = ov.new_followers || D.summary_kpis.new_followers;
     pills[4].textContent = D.summary_kpis.investment;
   }
 
@@ -1398,17 +1399,26 @@ function populateAllSections_OLD_UNUSED() {
   }
   // Funnel
   if (resumen && D.reach) {
+    const ov = D.engagement_override || {};
     const steps = resumen.querySelectorAll('.funnel-step');
     if (steps.length >= 5) {
-      steps[0].querySelector('.funnel-value').textContent = fmt(D.reach.total_impressions > 1e6 ? (D.reach.total_impressions/1e6).toFixed(2)+'M' : fmt(D.reach.total_impressions));
-      steps[0].querySelector('.funnel-conv').textContent = 'Freq. promedio: ' + (D.reach.frequency || '–') + 'x';
-      steps[1].querySelector('.funnel-value').textContent = D.summary_kpis.reach || '–';
-      const overrideInter = D.engagement_override && D.engagement_override.interactions ? D.engagement_override.interactions : 0;
-      steps[2].querySelector('.funnel-value').textContent = overrideInter > 0 ? fmt(overrideInter) : (D.engagement ? fmt(D.engagement.total_meaningful_interactions || D.engagement.total_interactions || 0) : '–');
-      const overrideClicks = D.engagement_override && D.engagement_override.clicks ? D.engagement_override.clicks : 0;
-      steps[3].querySelector('.funnel-value').textContent = overrideClicks > 0 ? fmt(overrideClicks) : (D.engagement ? fmt(D.engagement.meta_ads_link_clicks || D.engagement.meta_ads_clicks || '–') : '–');
+      // Impresiones
+      if (ov.impressions) {
+        steps[0].querySelector('.funnel-value').textContent = ov.impressions;
+      } else {
+        steps[0].querySelector('.funnel-value').textContent = fmt(D.reach.total_impressions > 1e6 ? (D.reach.total_impressions/1e6).toFixed(2)+'M' : fmt(D.reach.total_impressions));
+      }
+      // Frecuencia
+      steps[0].querySelector('.funnel-conv').textContent = 'Freq: ' + (ov.frequency || D.reach.frequency || '–') + 'x';
+      // Alcance
+      steps[1].querySelector('.funnel-value').textContent = ov.reach || D.summary_kpis.reach || '–';
+      // Interacciones
+      steps[2].querySelector('.funnel-value').textContent = ov.interactions ? fmt(parseInt(ov.interactions)) : (D.engagement ? fmt(D.engagement.total_meaningful_interactions || D.engagement.total_interactions || 0) : '–');
+      // Clicks / Señales
+      steps[3].querySelector('.funnel-value').textContent = ov.clicks ? fmt(parseInt(ov.clicks)) : (D.engagement ? fmt(D.engagement.meta_ads_link_clicks || D.engagement.meta_ads_clicks || '–') : '–');
       steps[3].querySelector('.funnel-label').textContent = 'Clicks / Señales';
-      steps[4].querySelector('.funnel-value').textContent = D.summary_kpis.new_followers || '+' + (D.community.total_new || 0);
+      // Nuevos Seguidores
+      steps[4].querySelector('.funnel-value').textContent = ov.new_followers || D.summary_kpis.new_followers || '+' + (D.community.total_new || 0);
       steps[4].querySelector('.funnel-conv').textContent = D.community.tiktok.note ? 'Solo IG tracked' : 'FB+IG+TK';
     }
   }
