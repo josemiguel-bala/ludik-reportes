@@ -8,6 +8,6 @@
     { "id": "CONFUCIO", "name": "Instituto Confucio","metricool_id": "5445836", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
     { "id": "FLORIDA",  "name": "Florida",          "metricool_id": "5981122", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
     { "id": "A1",       "name": "A1",               "metricool_id": "5981134", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
-    { "id": "WELLA",    "name": "Wella Professionals","metricool_id": "5996226", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] }
+    { "id": "WELLA",    "name": "Wella Perú",         "metricool_id": "5996226", "currency": "PEN", "fx_rate": 3.78, "channels": ["instagram","tiktok"] }
   ]
 }
