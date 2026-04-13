@@ -5,30 +5,81 @@
   "fx_rate": 3.78,
   "metricool_id": "5996226",
   "portada": {
-    "tag": "LUDiK Analytics · Reporte Mensual v2.2",
+    "tag": "LUDiK Analytics · Reporte Mensual",
     "footer": "Confidencial · Preparado por el equipo LUDiK para Wella Perú",
     "kpis": [
-      { "value": "5.8K", "label": "Alcance Total" },
-      { "value": "+66", "label": "Nuevos Seguidores" },
-      { "value": "S/ 0", "label": "Inversión" },
-      { "value": "Baseline", "label": "Objetivos" },
-      { "value": "60", "label": "Brand Health Score" }
+      {
+        "value": "5.8K",
+        "label": "Alcance Total"
+      },
+      {
+        "value": "+66",
+        "label": "Nuevos Seguidores"
+      },
+      {
+        "value": "S/ 0",
+        "label": "Inversión"
+      },
+      {
+        "value": "Baseline",
+        "label": "Objetivos"
+      },
+      {
+        "value": "60",
+        "label": "Brand Health Score"
+      }
     ]
   },
   "cierre": {
     "tagline": "Data-driven decisions for modern brands",
     "team": "Equipo LUDiK",
     "location": "Barcelona · Lima",
-    "contact": "hola@ludik.io · ludik.io",
+    "contact": "josemiguel@ludik.pe",
     "confidential": "Este reporte es confidencial y fue preparado exclusivamente para Wella Perú"
   },
   "objectives": [
-    { "objective": "Volumen IG: 20+ piezas publicadas", "channel": "Instagram", "target": "20", "result": "21", "status": "met" },
-    { "objective": "Volumen TK: 8+ videos publicados", "channel": "TikTok", "target": "8", "result": "10", "status": "met" },
-    { "objective": "ER IG Reels > 3%", "channel": "Instagram", "target": "> 3%", "result": "5.0%", "status": "met" },
-    { "objective": "Alcanzar 3,000 vistas orgánicas TK", "channel": "TikTok", "target": "3,000", "result": "3,581", "status": "met" },
-    { "objective": "Crecer +50 seguidores en IG", "channel": "Instagram", "target": "50", "result": "+53", "status": "met" },
-    { "objective": "Generar >200 interacciones totales", "channel": "Cross-platform", "target": "200", "result": "262", "status": "met" }
+    {
+      "objective": "Volumen IG: 20+ piezas publicadas",
+      "channel": "Instagram",
+      "target": "20",
+      "result": "21",
+      "status": "met"
+    },
+    {
+      "objective": "Volumen TK: 8+ videos publicados",
+      "channel": "TikTok",
+      "target": "8",
+      "result": "10",
+      "status": "met"
+    },
+    {
+      "objective": "ER IG Reels > 3%",
+      "channel": "Instagram",
+      "target": "> 3%",
+      "result": "5.0%",
+      "status": "met"
+    },
+    {
+      "objective": "Alcanzar 3,000 vistas orgánicas TK",
+      "channel": "TikTok",
+      "target": "3,000",
+      "result": "3,581",
+      "status": "met"
+    },
+    {
+      "objective": "Crecer +50 seguidores en IG",
+      "channel": "Instagram",
+      "target": "50",
+      "result": "+53",
+      "status": "met"
+    },
+    {
+      "objective": "Generar >200 interacciones totales",
+      "channel": "Cross-platform",
+      "target": "200",
+      "result": "262",
+      "status": "met"
+    }
   ],
   "summary_kpis": {
     "objectives": "6/6",
@@ -38,9 +89,20 @@
     "investment": "S/ 0"
   },
   "community": {
-    "facebook": { "start": 0, "end": 0, "note": "Sin Facebook" },
-    "instagram": { "start": 1840, "end": 1893 },
-    "tiktok": { "start": 0, "end": 13, "note": "Cuenta nueva" }
+    "facebook": {
+      "start": null,
+      "end": null,
+      "note": "Sin Facebook"
+    },
+    "instagram": {
+      "start": 1840,
+      "end": 1893
+    },
+    "tiktok": {
+      "start": null,
+      "end": 13,
+      "note": "Cuenta nueva"
+    }
   },
   "reach": {
     "total_impressions": 8783,
@@ -63,7 +125,12 @@
     "ig_shares": 11,
     "ig_saves": 7,
     "tiktok_interactions": 84,
-    "tiktok_organic": { "likes": 63, "comments": 4, "shares": 17, "total": 84 },
+    "tiktok_organic": {
+      "likes": 63,
+      "comments": 4,
+      "shares": 17,
+      "total": 84
+    },
     "fb_organic_interactions": 0,
     "meta_ads_clicks": 0,
     "meta_ads_link_clicks": 0,
@@ -79,7 +146,9 @@
     "total_usd": 0,
     "total_soles": 0,
     "meta_pct": 0,
-    "tiktok_pct": 0
+    "tiktok_pct": 0,
+    "meta_usd": null,
+    "tiktok_usd": null
   },
   "efficiency": {
     "meta_cpm_usd": 0,
@@ -94,11 +163,21 @@
     "positive_pct": 100,
     "neutral_pct": 0,
     "negative_pct": 0,
-    "net_score": 100,
+    "net_score": "100",
     "categories": [
-      { "name": "Intención de compra", "count": 3, "pct": 60 },
-      { "name": "Elogio / Admiración", "count": 2, "pct": 40 }
-    ]
+      {
+        "name": "Intención de compra",
+        "count": 3,
+        "pct": 60
+      },
+      {
+        "name": "Elogio / Admiración",
+        "count": 2,
+        "pct": 40
+      }
+    ],
+    "positive": 100,
+    "neutral": null
   },
   "bhs": {
     "total": 60,
@@ -145,9 +224,18 @@
       "title": "Tres señales de alerta del primer mes",
       "paragraphs": [],
       "risks": [
-        { "title": "TK no convierte vistas en seguidores", "text": "3,581 vistas pero solo 13 seguidores (0.36%). El 88% del tráfico viene del For You — ven el video pero no se quedan. Sin CTA claros, las vistas no construyen comunidad." },
-        { "title": "Los carruseles de IG son invisibles", "text": "9 carruseles con reach promedio de 57 personas. El carrusel 'Amor cabello' alcanzó solo 27 personas. El algoritmo prioriza video sobre estáticos." },
-        { "title": "Muy pocos comentarios", "text": "Solo 13 comentarios en todo el mes (contando respuestas de marca). Sin CTAs que provoquen conversación, el contenido genera visualización pero no comunidad." }
+        {
+          "title": "TK no convierte vistas en seguidores",
+          "text": "3,581 vistas pero solo 13 seguidores (0.36%). El 88% del tráfico viene del For You — ven el video pero no se quedan. Sin CTA claros, las vistas no construyen comunidad."
+        },
+        {
+          "title": "Los carruseles de IG son invisibles",
+          "text": "9 carruseles con reach promedio de 57 personas. El carrusel 'Amor cabello' alcanzó solo 27 personas. El algoritmo prioriza video sobre estáticos."
+        },
+        {
+          "title": "Muy pocos comentarios",
+          "text": "Solo 13 comentarios en todo el mes (contando respuestas de marca). Sin CTAs que provoquen conversación, el contenido genera visualización pero no comunidad."
+        }
       ]
     },
     "act4": {
@@ -162,12 +250,30 @@
       "number": "Acto 5 · Qué hacemos diferente",
       "title": "Abril: 3 apuestas, 1 corrección, 2 sistemas",
       "items": [
-        { "type": "bet", "text": "100% Reels en Instagram. Cero carruseles o imágenes estáticas. Los Reels tienen 4.8x más alcance promedio que los estáticos." },
-        { "type": "bet", "text": "CTA verbal en cada video de TikTok. 'Síguenos para más tips de color' en cada cierre para resolver la conversión vista → follower." },
-        { "type": "bet", "text": "Cross-post sistemático: cada video se publica simultáneamente en TK e IG Reels. Ya lo hacen parcialmente — sistematizarlo al 100%." },
-        { "type": "fix", "text": "Agregar pregunta directa al final de cada caption. Los 5 comentarios que llegaron muestran intención de compra — hay que activar más conversación." },
-        { "type": "system", "text": "Configurar 3 competidores en Metricool para benchmark de abril (sugeridos: Revlon Perú, L'Oréal Perú, Garnier Perú)." },
-        { "type": "system", "text": "Protocolo de respuesta a comentarios en <2h. 60% de comentarios son intención de compra que necesita respuesta inmediata." }
+        {
+          "type": "bet",
+          "text": "100% Reels en Instagram. Cero carruseles o imágenes estáticas. Los Reels tienen 4.8x más alcance promedio que los estáticos."
+        },
+        {
+          "type": "bet",
+          "text": "CTA verbal en cada video de TikTok. 'Síguenos para más tips de color' en cada cierre para resolver la conversión vista → follower."
+        },
+        {
+          "type": "bet",
+          "text": "Cross-post sistemático: cada video se publica simultáneamente en TK e IG Reels. Ya lo hacen parcialmente — sistematizarlo al 100%."
+        },
+        {
+          "type": "fix",
+          "text": "Agregar pregunta directa al final de cada caption. Los 5 comentarios que llegaron muestran intención de compra — hay que activar más conversación."
+        },
+        {
+          "type": "system",
+          "text": "Configurar 3 competidores en Metricool para benchmark de abril (sugeridos: Revlon Perú, L'Oréal Perú, Garnier Perú)."
+        },
+        {
+          "type": "system",
+          "text": "Protocolo de respuesta a comentarios en <2h. 60% de comentarios son intención de compra que necesita respuesta inmediata."
+        }
       ],
       "highlight": "Abril: 3 apuestas, 1 corrección, 2 sistemas"
     }
@@ -234,7 +340,6 @@
         "saves": 0,
         "inv_label": "",
         "engagement": 6.25,
-        "iv": "84.82",
         "url": "https://www.tiktok.com/@wella_peru/video/7617977429520354561",
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7617977429520354561.jpg"
       },
@@ -249,7 +354,6 @@
         "saves": 0,
         "inv_label": "",
         "engagement": 1.13,
-        "iv": "11.30",
         "url": "https://www.tiktok.com/@wella_peru/video/7621630968813587713",
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7621630968813587713.jpg"
       },
@@ -264,7 +368,6 @@
         "saves": 0,
         "inv_label": "",
         "engagement": 2.12,
-        "iv": "23.08",
         "url": "https://www.tiktok.com/@wella_peru/video/7620501524308888849",
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7620501524308888849.jpg"
       },
@@ -279,7 +382,6 @@
         "saves": 0,
         "inv_label": "",
         "engagement": 1.56,
-        "iv": "18.23",
         "url": "https://www.tiktok.com/@wella_peru/video/7613422016661572865",
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7613422016661572865.jpg"
       },
@@ -294,7 +396,6 @@
         "saves": 0,
         "inv_label": "",
         "engagement": 1.59,
-        "iv": "19.11",
         "url": "https://www.tiktok.com/@wella_peru/video/7618625011699535120",
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7618625011699535120.jpg"
       }
@@ -421,45 +522,271 @@
     }
   },
   "charts": {
-    "months6": ["Oct 25", "Nov 25", "Dic 25", "Ene 26", "Feb 26", "Mar 26"],
-    "community_total": [null, null, null, null, null, 1906],
-    "fb_followers_labels": ["1 mar", "5 mar", "8 mar", "12 mar", "15 mar", "20 mar", "25 mar", "31 mar"],
-    "fb_followers": [0, 0, 0, 0, 0, 0, 0, 0],
-    "ig_followers": [1840, 1843, 1846, 1857, 1862, 1874, 1884, 1893],
-    "tk_followers": [0, 1, 2, 3, 5, 8, 10, 13],
-    "er_fb": [null, null, null, null, null, null],
-    "er_ig": [null, null, null, null, null, 5.0],
-    "er_tk": [null, null, null, null, null, 2.14],
-    "tk_top_videos_labels": ["16 mar\n2 problemas", "26 mar\nCanas Plex", "23 mar\nUnboxing", "4 mar\nRaíz marcada", "18 mar\nVacaciones"],
-    "tk_top_videos_data": [773, 579, 575, 429, 339],
-    "formatos_labels": ["IG Reels", "IG Carruseles", "IG Imágenes", "TK Videos"],
-    "formatos_data": [5.0, 7.7, 10.2, 2.1],
-    "meta_days": [62, 13, 44, 36, 23, 100, 15],
-    "tk_hours": [0, 40, 70, 30, 80, 50, 100, 20],
-    "sent_categories_data": [3, 2],
-    "sent_net_score_history": [null, null, null, null, null, 100],
-    "reach_mix_labels": ["Instagram (orgánico)", "TikTok (orgánico)"],
-    "reach_mix_data": [5101, 3581],
-    "reach_organic": [null, null, null, null, null, 8783],
-    "reach_paid": [null, null, null, null, null, 0],
-    "cpm_meta": [null, null, null, null, null, null],
-    "cpm_tk": [null, null, null, null, null, null],
+    "months6": [
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
+    ],
+    "community_total": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1906
+    ],
+    "fb_followers_labels": [
+      "1 mar",
+      "5 mar",
+      "8 mar",
+      "12 mar",
+      "15 mar",
+      "20 mar",
+      "25 mar",
+      "31 mar"
+    ],
+    "fb_followers": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ig_followers": [
+      1840,
+      1843,
+      1846,
+      1857,
+      1862,
+      1874,
+      1884,
+      1893
+    ],
+    "tk_followers": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      8,
+      10,
+      13
+    ],
+    "er_fb": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "er_ig": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      5
+    ],
+    "er_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      2.14
+    ],
+    "tk_top_videos_labels": [
+      "16 mar\n2 problemas",
+      "26 mar\nCanas Plex",
+      "23 mar\nUnboxing",
+      "4 mar\nRaíz marcada",
+      "18 mar\nVacaciones"
+    ],
+    "tk_top_videos_data": [
+      773,
+      579,
+      575,
+      429,
+      339
+    ],
+    "formatos_labels": [
+      "IG Reels",
+      "IG Carruseles",
+      "IG Imágenes",
+      "TK Videos"
+    ],
+    "formatos_data": [
+      5,
+      7.7,
+      10.2,
+      2.1
+    ],
+    "meta_days": [
+      62,
+      13,
+      44,
+      36,
+      23,
+      100,
+      15
+    ],
+    "tk_hours": [
+      0,
+      40,
+      70,
+      30,
+      80,
+      50,
+      100,
+      20
+    ],
+    "sent_categories_data": [
+      3,
+      2
+    ],
+    "sent_net_score_history": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      100
+    ],
+    "reach_mix_labels": [
+      "Instagram (orgánico)",
+      "TikTok (orgánico)"
+    ],
+    "reach_mix_data": [
+      5101,
+      3581
+    ],
+    "reach_organic": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      8783
+    ],
+    "reach_paid": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    "cpm_meta": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "cpm_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
     "budget_labels": [],
     "budget_data": [],
     "comp_followers_labels": [],
     "comp_followers_data": [],
     "comp_er_labels": [],
     "comp_er_data": [],
-    "fb_age": [],
-    "ig_age": [],
-    "tk_age": [],
-    "gender_female": [],
-    "gender_male": [],
-    "fb_reach_weekly": { "total": [], "ads": [] },
-    "ig_reach_weekly": { "total": [], "ads": [] },
-    "tk_reach_weekly": { "total": [], "ads": [] },
-    "bhs_radar": [55, 58, 70, 78, 65, 50, 45],
-    "bhs_benchmark": [70, 70, 70, 70, 70, 70, 70],
-    "bhs_history": [null, null, null, null, null, 60]
-  }
+    "fb_age": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ig_age": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tk_age": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "gender_female": [
+      0,
+      0,
+      0
+    ],
+    "gender_male": [
+      0,
+      0,
+      0
+    ],
+    "fb_reach_weekly": {
+      "total": [],
+      "ads": []
+    },
+    "ig_reach_weekly": {
+      "total": [],
+      "ads": []
+    },
+    "tk_reach_weekly": {
+      "total": [],
+      "ads": []
+    },
+    "bhs_radar": [
+      55,
+      58,
+      70,
+      78,
+      65,
+      50,
+      45
+    ],
+    "bhs_benchmark": [
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70
+    ],
+    "bhs_history": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      60
+    ]
+  },
+  "engagement_override": {
+    "impressions": "",
+    "frequency": "",
+    "reach": "",
+    "interactions": "",
+    "clicks": "",
+    "new_followers": "",
+    "objectives": "",
+    "tk_views": ""
+  },
+  "competitors": []
 }
