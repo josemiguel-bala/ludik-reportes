@@ -2389,13 +2389,8 @@ new Chart('chartSentCateg', doughnutOpts(
   [success,'rgba(34,197,94,.7)',teal,'rgba(32,236,200,.6)',warning,'rgba(245,158,11,.5)',danger,'rgba(248,76,222,.5)']));
 new Chart('chartSentEvol', lineOpts(months6, [{label:'Net Score',data:C.sent_net_score_history,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:false,tension:.4,pointBackgroundColor:teal,pointRadius:6},{label:'Benchmark (+50)',data:[50,50,50,50,50,50],borderColor:'rgba(255,255,255,.2)',borderDash:[4,4]}]));
 
-// AUDIENCIA
-const ageLabels=['13-17','18-24','25-34','35-44','45-54','55+'];
-new Chart('chartFBAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.fb_age,backgroundColor:purple2,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
-new Chart('chartIGAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.ig_age,backgroundColor:fucsia,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
-new Chart('chartTKAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.tk_age,backgroundColor:teal,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
-new Chart('chartGenero',{type:'bar',data:{labels:['Facebook','Instagram','TikTok'],datasets:[{label:'Mujer',data:C.gender_female,backgroundColor:fucsia,borderRadius:[6,6,6,6]},{label:'Hombre',data:C.gender_male,backgroundColor:purple2,borderRadius:[6,6,6,6]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{padding:14,usePointStyle:true}}},scales:{x:{stacked:true,grid:{color:gridColor}},y:{stacked:true,grid:{color:gridColor}}}}});
-new Chart('chartAgeComp', lineOpts(ageLabels, [{label:'Facebook',data:C.fb_age,borderColor:purple,tension:.3,pointBackgroundColor:purple},{label:'Instagram',data:C.ig_age,borderColor:fucsia,tension:.3,pointBackgroundColor:fucsia},{label:'TikTok',data:C.tk_age,borderColor:teal,tension:.3,pointBackgroundColor:teal}]));
+// AUDIENCIA — removed for Florida report
+// Charts skipped: chartFBAge, chartIGAge, chartTKAge, chartGenero, chartAgeComp
 
 // INVERSIÓN
 new Chart('chartCPM', lineOpts(months6, [{label:'Meta CPM (USD)',data:C.cpm_meta,borderColor:purple,backgroundColor:'rgba(75,0,255,.1)',fill:true,tension:.4,pointBackgroundColor:purple},{label:'TikTok CPM (USD)',data:C.cpm_tk,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:true,tension:.4,pointBackgroundColor:teal}]));
