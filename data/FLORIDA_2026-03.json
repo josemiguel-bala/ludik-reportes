@@ -339,27 +339,30 @@
     ],
     "worst_overall": [
       {
-        "title": "Lonchera influencer micro",
-        "platform": "TikTok",
-        "date": "2026-03-21",
-        "reach": 1202,
-        "views": 1483,
-        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/2500725-7619481136506342672.jpg"
-      },
-      {
         "title": "Running post-entreno",
         "platform": "TikTok",
         "date": "2026-03-17",
         "reach": 1154,
         "views": 1465,
+        "likes": 34,
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/2500725-7618369446469487888.jpg"
       },
       {
-        "title": "Mi lonchera ideal (influencer micro)",
+        "title": "Influencer: comer rico y saludable",
+        "platform": "TikTok",
+        "date": "2026-03-21",
+        "reach": 1202,
+        "views": 1483,
+        "likes": 20,
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/2500725-7619481136506342672.jpg"
+      },
+      {
+        "title": "Mi lonchera ideal",
         "platform": "TikTok",
         "date": "2026-03-23",
         "reach": 1403,
         "views": 1603,
+        "likes": 31,
         "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/2500725-7620566598570544401.jpg"
       }
     ],
