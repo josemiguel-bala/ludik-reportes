@@ -2118,9 +2118,7 @@ function populateAllSections() {
       h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">🤝 Influencers del Mes</div><div class="layer-line"></div></div>';
       h += '<div class="post-gallery">';
       D.influencers_ig.forEach((inf) => {
-        const infFallback = 'background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)';
-        const infBg = inf.coverImageUrl ? 'background-image:url('+inf.coverImageUrl+');background-size:cover;background-position:center;'+infFallback : infFallback;
-        h += '<'+(inf.url?'a href="'+inf.url+'" target="_blank"':'div')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+infBg+'"><div class="post-thumb-inner">👤</div><span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
+        h += '<'+(inf.url?'a href="'+inf.url+'" target="_blank"':'div')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)"><div class="post-thumb-inner">👤</div><span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
         h += '<div class="post-body"><div class="post-title">'+inf.name+'</div><div class="post-date">'+(inf.content_type||'')+' · '+(inf.date||'')+'</div><div class="post-metrics">';
         h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(inf.views)+'</div><div class="post-metric-label">Views</div></div>';
         h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.likes)+'</div><div class="post-metric-label">Likes</div></div>';
