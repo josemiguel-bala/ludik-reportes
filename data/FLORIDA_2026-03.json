@@ -1,0 +1,838 @@
+{
+  "brand": "FLORIDA",
+  "period": "2026-03",
+  "fx_rate": 3.78,
+  "metricool_id": "5981122",
+  "portada": {
+    "tag": "LUDiK Analytics · Reporte Mensual v2.2",
+    "footer": "Confidencial · Preparado por el equipo LUDiK para Florida Perú",
+    "kpis": [
+      {
+        "value": "7.87M",
+        "label": "Views TikTok"
+      },
+      {
+        "value": "+633",
+        "label": "Nuevos Seguidores"
+      },
+      {
+        "value": "1.25M",
+        "label": "Alcance Influencers"
+      },
+      {
+        "value": "78",
+        "label": "Brand Health Score"
+      },
+      {
+        "value": "13",
+        "label": "Collabs Influencers"
+      }
+    ]
+  },
+  "cierre": {
+    "tagline": "Data-driven decisions for modern brands",
+    "team": "Equipo LUDiK",
+    "location": "Barcelona · Lima",
+    "contact": "hola@ludik.io · ludik.io",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para Florida Perú"
+  },
+  "objectives": [
+    {
+      "objective": "Posicionar 'Los Indespensables de Semana Santa'",
+      "channel": "Multi",
+      "target": "Campaña activa",
+      "result": "7.87M views TK + 1.58M views IG",
+      "status": "met"
+    },
+    {
+      "objective": "Generar alcance masivo en TikTok orgánico",
+      "channel": "TikTok",
+      "target": ">1M views",
+      "result": "7.87M views",
+      "status": "met"
+    },
+    {
+      "objective": "Activar red de influencers Semana Santa",
+      "channel": "Instagram",
+      "target": "10+ collabs",
+      "result": "13 collabs, 1.25M views",
+      "status": "met"
+    },
+    {
+      "objective": "Crecer comunidad TikTok",
+      "channel": "TikTok",
+      "target": "Crecimiento neto",
+      "result": "+624 (+42.6%)",
+      "status": "met"
+    },
+    {
+      "objective": "Mantener comunidad Facebook",
+      "channel": "Facebook",
+      "target": "Mantener base",
+      "result": "-320 neto (266.68K)",
+      "status": "missed"
+    }
+  ],
+  "community": {
+    "facebook": {
+      "start": 267000,
+      "end": 266680
+    },
+    "instagram": {
+      "start": 1800,
+      "end": 2089
+    },
+    "tiktok": {
+      "start": 1465,
+      "end": 2089
+    }
+  },
+  "investment": {
+    "meta_ads_usd": 0,
+    "meta_ads_soles": 0,
+    "tiktok_ads_usd": 0,
+    "tiktok_ads_soles": 0,
+    "total_usd": 0,
+    "total_soles": 0,
+    "meta_pct": 0,
+    "tiktok_pct": 0,
+    "note": "Inversión gestionada por agencia de performance. Este reporte cubre exclusivamente data orgánica + influencers."
+  },
+  "sentiment": {
+    "total": 170,
+    "positive_pct": 75,
+    "neutral_pct": 23,
+    "negative_pct": 2,
+    "net_score": 73,
+    "categories": []
+  },
+  "insights": {
+    "community": "TK creció 42.6% (1,465→2,089), el canal con mayor tracción. IG sumó +289 seguidores impulsado por el sorteo. FB perdió 320 seguidores (266.68K→266.68K, -0.12%). Total cross-platform: +633 netos. TikTok es el motor de crecimiento.",
+    "reach": "TikTok orgánico generó 7.87M views con 12 videos. Promedio 656K views/video. 97% del tráfico vino del ForYou. IG sumó 1.27M visualizaciones (posts + reels + stories). FB Reels aportaron 618K views. Influencers añadieron 1.25M views adicionales.",
+    "engagement": "El Sorteo Kit Semana Santa en IG fue el contenido #1 del mes: 5,676 interacciones (40.82% ER). En TK, 4 videos superaron 600K views. El formato 'snack de ruta' y 'compañero de aventuras' resonó fuerte con la audiencia viajera de Semana Santa.",
+    "sentiment": "170 comentarios analizados: 75% positivos, 2% negativos. Temas dominantes: amor por la marca ('team florida desde mi adolescencia'), recetas compartidas (causa, triple playero), intención de compra ('ya compré mi latita'). El juego de palabras 'inDESPENSAble' generó conversación orgánica.",
+    "investment": "Data de inversión publicitaria gestionada por agencia de performance. Este reporte analiza exclusivamente el rendimiento orgánico y de influencers de la campaña Semana Santa.",
+    "competition": "Florida (2,089 seg) vs Campomar (17,832 seg): Florida tiene 8.5x menos seguidores pero su ER en posts (29.16%) es 324x mayor que Campomar (0.09%). Fanny (13,492 seg) no publicó en el periodo. Florida domina engagement por amplio margen."
+  },
+  "story": {
+    "act1": {
+      "number": "Acto 1 · El Motor de Alcance",
+      "title": "TikTok entregó 7.87 millones de vistas orgánicas",
+      "paragraphs": [
+        "12 videos de TikTok generaron 7.87M vistas orgánicas en marzo. El 97% del tráfico llegó desde el ForYou page, lo que significa que Florida alcanzó masivamente a no-seguidores. Promedio por video: 656K vistas.",
+        "El video estrella fue 'Compañero de aventuras' (atún en la playa): 2M vistas, 1,148 likes y 120 shares. Segundo: 'Magia en tu mantel' (picnic): 1.55M vistas. Ambos comparten la misma fórmula: escena aspiracional de Semana Santa donde Florida aparece como solución natural, nunca como protagonista forzado.",
+        "Dato clave: los videos que funcionaron son los de 9-15 segundos de duración. Los de +30s no superaron las 2K vistas. TikTok premia la brevedad."
+      ]
+    },
+    "act2": {
+      "number": "Acto 2 · El Sorteo que Encendió Instagram",
+      "title": "Un solo post generó más interacciones que los otros 20 combinados",
+      "paragraphs": [
+        "El Sorteo Kit Semana Santa fue el post #1 del mes en todas las plataformas: 5,676 interacciones, 2,858 comentarios, 1,980 likes y un ER de 40.82%. Con solo 2,089 seguidores, cada seguidor comentó 1.37 veces en promedio.",
+        "El segundo hit fue el CGI Fake OOH de Plaza de Armas: 771K vistas. El formato 'lata gigante aterrizando en Lima' generó curiosidad y shares, pero pocas interacciones directas (155). Alto alcance, bajo engagement: contenido de awareness puro.",
+        "Instagram creció +289 seguidores en el mes. El pico de crecimiento coincide con la semana del sorteo (17-23 mar). La mecánica participativa demostró ser el único camino para generar engagement masivo en IG."
+      ]
+    },
+    "act3": {
+      "number": "Acto 3 · Lo que No Funciona",
+      "title": "Retención TikTok y Facebook orgánico: dos alertas rojas",
+      "paragraphs": [
+        "ALERTA 1: Retención en TikTok. Los screenshots de retención muestran que el 75-85% de los espectadores abandonan en los primeros 3 segundos. La tasa de video completo (full video watched rate) promedia 2-3%. El hook de los videos no está capturando atención. Los videos que mejor retuvieron fueron los de plataforma de running (50% a los 3s) porque abren con acción humana, no con producto.",
+        "ALERTA 2: Facebook pierde seguidores (-320 en el mes). El alcance orgánico por post es 0.26% de la base (700 personas de 267K). Sin inversión pagada, FB no genera retorno. Los reels de FB que funcionaron (180K, 124K views) tenían pauta detrás.",
+        "ALERTA 3: Los IG Reels orgánicos promedian 1,134 de alcance con un ER de 7.29%. Respetable para la base, pero el volumen es 550x menor que TikTok. Sin pauta, IG Reels no escala."
+      ]
+    },
+    "act4": {
+      "number": "Acto 4 · Influencers: Rodrigo Fernandini fue el MVP",
+      "title": "2 influencers entregaron el 80% del alcance total de collabs",
+      "paragraphs": [
+        "13 colaboraciones de influencers generaron 1.25M vistas totales. Pero la distribución fue brutalmente desigual: Rodrigo Fernandini (Buenazo) aportó 694K vistas (55%) y Álvaro en la Cocina sumó 322K (26%). Juntos = 81% del alcance influencer.",
+        "Rodrigo fue el MVP absoluto: su triple playero de atún generó 24,442 likes, 9,731 shares y 276 comentarios. La receta como formato funciona porque es útil (la gente guarda), visual (comida siempre performa) y shareable (etiquetas de amigos).",
+        "Los influencers de lifestyle/viaje (Daniela Rita, Brenda Oq, Arnold Ramos, Papis por Primera Vez) generaron volumen menor (10-55K views cada uno) pero con mejor sentimiento y comentarios cualitativos sobre uso real del producto.",
+        "La cadena de influencers ('¿Cuáles son TUS indespensables?') funcionó como mecánica de continuidad narrativa. Cada influencer etiquetó al siguiente, manteniendo la conversación viva durante 3 semanas."
+      ]
+    },
+    "act5": {
+      "number": "Acto 5 · Qué Hacemos Diferente en Abril",
+      "title": "3 apuestas y 3 alertas para abril",
+      "items": [
+        {
+          "type": "bet",
+          "text": "Escalar formato recetas con influencers food. El modelo Rodrigo Fernandini probó que receta + producto = viralidad. Buscar 2-3 food creators adicionales con audiencia 100K+ en Lima."
+        },
+        {
+          "type": "bet",
+          "text": "Reactivar los 4 pilares de contenido. Abril debe volver a la distribución estratégica: 40% Garantía Visual, 30% Al Toque con Florida, 20% Bienestar Activo, 10% Calidad Generacional."
+        },
+        {
+          "type": "bet",
+          "text": "Mecánica participativa mensual en IG. El sorteo generó 40.82% ER. Implementar 1 sorteo o dinámica participativa por mes como pilar de engagement."
+        },
+        {
+          "type": "fix",
+          "text": "Hooks de TikTok urgente. 75-85% de abandono en 3s es inaceptable. Testear: pregunta directa al espectador, dato impactante ('sabías que...'), o conflicto visual inmediato en frame 1."
+        },
+        {
+          "type": "fix",
+          "text": "Estrategia Facebook: con -320 seguidores/mes y 0.26% alcance orgánico, evaluar si mantener producción orgánica en FB o redirigir esfuerzo a TK/IG."
+        },
+        {
+          "type": "system",
+          "text": "Protocolo de respuesta en TikTok. 49 comentarios en 12 videos es bajo. Responder TODOS los comentarios en <4h y generar hilos de conversación."
+        }
+      ],
+      "highlight": "3 apuestas y 3 alertas para abril"
+    }
+  },
+  "technical_texts": {
+    "resumen": "Marzo fue el mes de la campaña 'Los Indespensables de Semana Santa'. TikTok orgánico lideró con 7.87M vistas en 12 videos. El Sorteo Kit en IG generó 5,676 interacciones (40.82% ER). 13 influencers aportaron 1.25M vistas adicionales. Facebook perdió 320 seguidores. Se cumplieron 4 de 5 objetivos.",
+    "audiencia": "IG: 65% mujeres, 69.84% Lima, pico 18-34 años. TK: 55% mujeres, 97% tráfico ForYou, Perú + Argentina. FB: 266K followers, Lima 48.34%. La audiencia de TK es más joven y descubre la marca; la de FB es legacy.",
+    "contenido_insight": "Formato ganador TK: video corto (9-15s) con escena aspiracional de viaje/playa + producto como solución. Formato ganador IG: mecánica participativa (sorteo). Influencer MVP: receta paso a paso con producto visible. Todos los hits comparten un patrón: utilidad + aspiración.",
+    "contenido_fail": "IG Reels orgánicos: alcance promedio 1,134 (bajo). TK videos largos (+30s): <2K vistas. FB orgánico sin sorteo: alcance promedio 700 personas (0.26% de la base). Los contenidos que no funcionaron son los que priorizan producto sobre situación.",
+    "contenido_horario": "TikTok: Los videos publicados entre 10am-2pm Lima tuvieron mejor performance. El pico de interacción se concentró en la semana del 17-25 marzo (pre-Semana Santa). IG: Mayor actividad de stories los fines de semana.",
+    "riesgo_fb": "Facebook perdió 320 seguidores netos en marzo (164 adquiridos vs 155 perdidos + churn orgánico). El alcance orgánico por publicación es 0.26% de la base. Sin sorteos o mecánicas participativas y sin pauta, FB no genera retorno. Evaluar reducir frecuencia de publicación orgánica.",
+    "indice_valor": "Fórmula: (Saves×3 + Shares×2 + Comments×1.5 + Likes×1) / Reach × 1000\n\nIG Sorteo Kit: (231×3 + 607×2 + 2858×1.5 + 1980×1) / 13,904 × 1000 = 524.8\nTK Playa: (0×3 + 120×2 + 10×1.5 + 1148×1) / 848,212 × 1000 = 1.65\nTK Picnic: (0×3 + 129×2 + 3×1.5 + 1245×1) / 393,147 × 1000 = 3.84",
+    "temas_recurrentes": "Temas en comentarios: (1) Amor generacional por la marca ('desde mi adolescencia'), (2) Recetas compartidas espontáneamente (causa, triple, arroz), (3) Intención de compra directa ('ya compré', 'voy corriendo'), (4) Debate 'indespensable' vs 'indispensable' generó engagement orgánico.",
+    "bhs_explicacion": "BHS 78/100. Fortalezas: Alcance (90) por volumen TikTok excepcional; Sentimiento (85) con sentiment positivo dominante. Debilidades: Engagement (65) porque el ER en TK es bajo (0.23%) relativo al volumen de vistas; Eficiencia (70) sin data de inversión para evaluar."
+  },
+  "bhs": {
+    "total": 78,
+    "benchmark": "70-75",
+    "dimensions": {
+      "crecimiento": 82,
+      "alcance": 90,
+      "engagement": 65,
+      "sentimiento": 85,
+      "eficiencia": 70,
+      "metas": 75,
+      "posicion_comp": 78
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Mejorar hooks de los primeros 3 segundos",
+      "description": "75-85% de abandono en 3s. Probar: pregunta directa, dato impactante, conflicto visual inmediato. Los videos de running retuvieron mejor (50% a 3s) porque abren con acción humana."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Instagram",
+      "title": "Escalar modelo influencer food creators",
+      "description": "Rodrigo Fernandini generó 694K views y 9.7K shares con formato receta. Buscar 2-3 food creators más con audiencia 100K+ en Lima para abril."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Instagram",
+      "title": "Mecánica participativa mensual",
+      "description": "El sorteo generó 40.82% ER y 2,858 comentarios. Implementar 1 sorteo o dinámica por mes como pilar fijo de engagement en IG."
+    },
+    {
+      "priority": "Media",
+      "channel": "Multi",
+      "title": "Reactivar pilares de contenido en abril",
+      "description": "Marzo fue 100% Semana Santa. Abril debe retomar: 40% Garantía Visual, 30% Al Toque con Florida, 20% Bienestar Activo, 10% Calidad Generacional."
+    },
+    {
+      "priority": "Media",
+      "channel": "TikTok",
+      "title": "Protocolo de respuesta a comentarios",
+      "description": "49 comentarios en 12 videos (4.1/video). Responder todos en <4h. Generar hilos de conversación. Hay intención de compra sin capitalizar."
+    },
+    {
+      "priority": "Baja",
+      "channel": "Facebook",
+      "title": "Evaluar reducción de esfuerzo orgánico FB",
+      "description": "266K followers pero -320/mes y 0.26% alcance orgánico. Sin pauta, FB no genera retorno. Reducir a 2 posts/semana o redirigir esfuerzo a TK/IG."
+    }
+  ],
+  "content": {
+    "top_tiktok": [
+      {
+        "title": "Compañero de aventuras (playa)",
+        "date": "2026-03-18",
+        "views": 1999328,
+        "likes": 1148,
+        "comments": 10,
+        "shares": 120,
+        "reach": 848212,
+        "engagement": 0.15,
+        "fyp_pct": 98.5,
+        "url": "https://www.tiktok.com/@floridaperu/video/7618636476502265104",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/2500725-7618636476502265104.jpg",
+        "iv": 1.65
+      },
+      {
+        "title": "Magia en tu mantel (picnic)",
+        "date": "2026-03-20",
+        "views": 1552560,
+        "likes": 1353,
+        "comments": 6,
+        "shares": 91,
+        "reach": 631728,
+        "engagement": 0.23,
+        "fyp_pct": 94.5,
+        "url": "https://www.tiktok.com/@floridaperu/video/7619425596103200017",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/2500725-7619425596103200017.jpg",
+        "iv": 3.84
+      },
+      {
+        "title": "El primero en tu lista (maleta)",
+        "date": "2026-03-10",
+        "views": 1172748,
+        "likes": 1036,
+        "comments": 6,
+        "shares": 96,
+        "reach": 514655,
+        "engagement": 0.22,
+        "fyp_pct": 96.8,
+        "url": "https://www.tiktok.com/@floridaperu/video/7615751199387684113",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/2500725-7615751199387684113.jpeg",
+        "iv": 2.18
+      }
+    ],
+    "top_influencers": [
+      {
+        "name": "Rodrigo Fernandini (Buenazo)",
+        "username": "@rodrigofernandini",
+        "views": 694666,
+        "likes": 24442,
+        "shares": 9731,
+        "comments": 276,
+        "content": "Triple Playero de Atún",
+        "url": "https://www.instagram.com/reel/DV_dFgahU4P/"
+      },
+      {
+        "name": "Álvaro en la Cocina",
+        "username": "@alvaroenlacocina",
+        "views": 322685,
+        "likes": 11111,
+        "shares": 4008,
+        "comments": 72,
+        "content": "Saltado de vainitas con atún",
+        "url": "https://www.instagram.com/reel/DVjK7ZGjcGq/"
+      },
+      {
+        "name": "Daniela Rita",
+        "username": "@danielaritac",
+        "views": 54425,
+        "likes": 1102,
+        "shares": 13,
+        "comments": 31,
+        "content": "Indespensables Semana Santa",
+        "url": "https://www.instagram.com/reel/DWHVpTtDmtG/"
+      }
+    ],
+    "worst_overall": [
+      {
+        "title": "Lonchera influencer micro",
+        "platform": "TikTok",
+        "date": "2026-03-21",
+        "reach": 1202,
+        "views": 1483
+      },
+      {
+        "title": "Running post-entreno",
+        "platform": "TikTok",
+        "date": "2026-03-17",
+        "reach": 1154,
+        "views": 1465
+      },
+      {
+        "title": "Mi lonchera ideal (influencer micro)",
+        "platform": "TikTok",
+        "date": "2026-03-23",
+        "reach": 1403,
+        "views": 1603
+      }
+    ]
+  },
+  "brand_id": "FLORIDA",
+  "charts": {
+    "reach_mix_labels": [
+      "TikTok Orgánico",
+      "Instagram",
+      "Influencers IG",
+      "Facebook"
+    ],
+    "reach_mix_data": [
+      7870000,
+      1270000,
+      1251168,
+      626080
+    ],
+    "months6": [
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
+    ],
+    "cpm_meta": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "cpm_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "bhs_radar": [
+      82,
+      90,
+      65,
+      85,
+      70,
+      75,
+      78
+    ],
+    "bhs_benchmark": [
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70
+    ],
+    "bhs_history": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      78
+    ],
+    "community_total": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      271158
+    ],
+    "fb_followers_labels": [
+      "1 mar",
+      "5 mar",
+      "9 mar",
+      "13 mar",
+      "17 mar",
+      "21 mar",
+      "25 mar",
+      "31 mar"
+    ],
+    "fb_followers": [
+      267000,
+      266950,
+      266900,
+      266850,
+      266800,
+      266750,
+      266710,
+      266680
+    ],
+    "ig_followers": [
+      1800,
+      1810,
+      1820,
+      1860,
+      1920,
+      1960,
+      2020,
+      2089
+    ],
+    "tk_followers": [
+      1465,
+      1470,
+      1475,
+      1490,
+      1550,
+      1700,
+      1900,
+      2089
+    ],
+    "er_fb": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.48
+    ],
+    "er_ig": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      29.16
+    ],
+    "er_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.23
+    ],
+    "tk_top_videos_labels": [
+      "18 mar\nPlaya",
+      "20 mar\nPicnic",
+      "10 mar\nMaleta",
+      "25 mar\nRuta",
+      "24 mar\nUpgrade"
+    ],
+    "tk_top_videos_data": [
+      1999328,
+      1552560,
+      1172748,
+      957059,
+      607293
+    ],
+    "sent_categories_data": [
+      40,
+      25,
+      15,
+      10,
+      10
+    ],
+    "meta_days": [
+      30,
+      45,
+      60,
+      80,
+      100,
+      75,
+      50
+    ],
+    "tk_hours": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      70,
+      85,
+      55
+    ],
+    "budget_labels": [
+      "Orgánico",
+      "Influencers",
+      "Paid (agencia)"
+    ],
+    "budget_data": [
+      0,
+      0,
+      0
+    ],
+    "comp_followers_labels": [
+      "Campomar",
+      "Fanny",
+      "Florida"
+    ],
+    "comp_followers_data": [
+      17832,
+      13492,
+      2089
+    ],
+    "comp_er_labels": [
+      "Florida Posts",
+      "Florida Reels",
+      "Campomar"
+    ],
+    "comp_er_data": [
+      29.16,
+      7.29,
+      0.09
+    ],
+    "reach_organic": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      11017248
+    ],
+    "reach_paid": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ],
+    "formatos_labels": [
+      "Sorteo/Dinámica",
+      "CGI/Viral",
+      "Receta Influencer",
+      "Lifestyle/Viaje",
+      "Producto/Pack",
+      "Reel orgánico"
+    ],
+    "formatos_data": [
+      40.82,
+      9.11,
+      3.51,
+      2.57,
+      4.56,
+      7.29
+    ]
+  },
+  "summary_kpis": {
+    "objectives": "4/5",
+    "reach": "11M+",
+    "tk_views": "7.87M",
+    "new_followers": "+633",
+    "investment": "Orgánico"
+  },
+  "reach": {
+    "total_impressions": 11017248,
+    "estimated_unique_reach": 4500000,
+    "frequency": 2.45,
+    "meta_ads_impressions": 0,
+    "meta_ads_reach": 0,
+    "tiktok_ads_impressions": 0,
+    "tiktok_organic_views": 7870000,
+    "ig_organic_views": 1270000,
+    "fb_organic_impressions": 626080,
+    "influencer_views": 1251168
+  },
+  "engagement": {
+    "tiktok_organic": {
+      "likes": 7799,
+      "comments": 49,
+      "shares": 736,
+      "total": 8584
+    },
+    "ig_posts": {
+      "likes": 2888,
+      "comments": 3479,
+      "saves": 274,
+      "shares": 692,
+      "total": 7333
+    },
+    "ig_reels": {
+      "likes": 612,
+      "comments": 62,
+      "saves": 9,
+      "shares": 61,
+      "total": 744
+    },
+    "fb_total": {
+      "reactions": 983,
+      "comments": 378,
+      "shares": 88,
+      "clicks": 3466,
+      "total": 4915
+    },
+    "influencers": {
+      "total_views": 1251168,
+      "total_likes": 41413,
+      "total_shares": 14345,
+      "total_comments": 701
+    },
+    "total_meaningful_interactions": 22277
+  },
+  "efficiency": {
+    "meta_cpm_usd": null,
+    "meta_cpm_soles": null,
+    "tiktok_cpm_usd": null,
+    "tiktok_cpm_soles": null,
+    "blended_cpm_usd": null,
+    "blended_cpm_soles": null,
+    "note": "Sin data de inversión. Gestionada por agencia de performance."
+  },
+  "competitors_ig": [
+    {
+      "name": "Florida Perú",
+      "followers": "2,089",
+      "likes_avg": "240.67",
+      "comments_avg": "289.92",
+      "posts": "21",
+      "er": "29.16%"
+    },
+    {
+      "name": "Campomar Perú",
+      "followers": "17,832",
+      "likes_avg": "14.54",
+      "comments_avg": "1.69",
+      "posts": "13",
+      "er": "0.09%"
+    },
+    {
+      "name": "Fanny Perú",
+      "followers": "13,492",
+      "likes_avg": "-",
+      "comments_avg": "-",
+      "posts": "0",
+      "er": "-"
+    }
+  ],
+  "influencers_ig": [
+    {
+      "name": "Rodrigo Fernandini",
+      "username": "@rodrigofernandini",
+      "platform": "Buenazo",
+      "views": 694666,
+      "likes": 24442,
+      "shares": 9731,
+      "comments": 276,
+      "saves": 0,
+      "content_type": "Receta: Triple Playero",
+      "date": "2026-03-17"
+    },
+    {
+      "name": "Álvaro Llerena",
+      "username": "@alvaroenlacocina",
+      "platform": "Cocina",
+      "views": 322685,
+      "likes": 11111,
+      "shares": 4008,
+      "comments": 72,
+      "saves": 0,
+      "content_type": "Receta: Saltado de vainitas",
+      "date": "2026-03-06"
+    },
+    {
+      "name": "Daniela Rita",
+      "username": "@danielaritac",
+      "platform": "Viajes",
+      "views": 54425,
+      "likes": 1102,
+      "shares": 13,
+      "comments": 31,
+      "saves": 0,
+      "content_type": "Indespensables Semana Santa",
+      "date": "2026-03-20"
+    },
+    {
+      "name": "Julissa Diaz",
+      "username": "@la.limenita",
+      "platform": "Cocina/Lifestyle",
+      "views": 51858,
+      "likes": 1443,
+      "shares": 407,
+      "comments": 22,
+      "saves": 0,
+      "content_type": "Wrap Express con atún",
+      "date": "2026-03-28"
+    },
+    {
+      "name": "Maria Paz GV",
+      "username": "@mariapazgvb",
+      "platform": "Maternidad",
+      "views": 38569,
+      "likes": 348,
+      "shares": 12,
+      "comments": 18,
+      "saves": 0,
+      "content_type": "Mamá resuelve Semana Santa",
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Isa & Jean",
+      "username": "@isayjeann",
+      "platform": "Viajes/Cultura",
+      "views": 21399,
+      "likes": 755,
+      "shares": 39,
+      "comments": 31,
+      "saves": 0,
+      "content_type": "Camping con Florida",
+      "date": "2026-03-27"
+    },
+    {
+      "name": "Brenda Oq",
+      "username": "@brendaoq",
+      "platform": "Viajes",
+      "views": 16295,
+      "likes": 501,
+      "shares": 4,
+      "comments": 6,
+      "saves": 0,
+      "content_type": "Viaje de carretera",
+      "date": "2026-03-24"
+    },
+    {
+      "name": "Arnold Ramos",
+      "username": "@arnoldramosn",
+      "platform": "Viajes/Perro",
+      "views": 14918,
+      "likes": 1150,
+      "shares": 62,
+      "comments": 34,
+      "saves": 0,
+      "content_type": "Ruta a Huaraz con Koa",
+      "date": "2026-03-14"
+    },
+    {
+      "name": "Yaz y Hugo",
+      "username": "@papisporprimeravez",
+      "platform": "Familia",
+      "views": 10211,
+      "likes": 138,
+      "shares": 32,
+      "comments": 95,
+      "saves": 0,
+      "content_type": "Viaje con niños",
+      "date": "2026-03-12"
+    },
+    {
+      "name": "Latina.pe",
+      "username": "@latina.pe",
+      "platform": "Medio",
+      "views": 16053,
+      "likes": 216,
+      "shares": 15,
+      "comments": 5,
+      "saves": 0,
+      "content_type": "Triple de atún + Butifarra",
+      "date": "2026-03-28"
+    },
+    {
+      "name": "Jessica Roca",
+      "username": "@jessica_roca_saavedra",
+      "platform": "Lifestyle",
+      "views": 5110,
+      "likes": 125,
+      "shares": 22,
+      "comments": 38,
+      "saves": 0,
+      "content_type": "Modo viaje Semana Santa",
+      "date": "2026-03-31"
+    },
+    {
+      "name": "Andrea Ly",
+      "username": "@chinisly",
+      "platform": "Cocina",
+      "views": 4979,
+      "likes": 198,
+      "shares": 23,
+      "comments": 18,
+      "saves": 0,
+      "content_type": "Receta inDESPENSAbles",
+      "date": "2026-03-19"
+    }
+  ],
+  "tiktok_retention": {
+    "summary": "Retención promedio a los 3 segundos: 15-29%. La mayoría de videos pierde 71-85% de viewers en los primeros 1-3 segundos. Videos con apertura de acción humana (running, outdoor) retienen mejor (26-29% a 3s) vs videos de producto estático (15-19% a 3s).",
+    "videos": [
+      {"title": "Loncherita box", "retention_3s": 15, "drop_point": "0:01", "duration": "0:09"},
+      {"title": "Picnic grupo", "retention_3s": 26, "drop_point": "0:02", "duration": "0:21"},
+      {"title": "Chica montaña", "retention_3s": 20, "drop_point": "0:01", "duration": "0:27"},
+      {"title": "Running parque", "retention_3s": 50, "drop_point": "0:02", "duration": "1:47"},
+      {"title": "Running evento", "retention_3s": 26, "drop_point": "0:02", "duration": "1:07"},
+      {"title": "Maleta viaje", "retention_3s": 19, "drop_point": "0:02", "duration": "0:23"},
+      {"title": "Chica en auto", "retention_3s": 29, "drop_point": "0:02", "duration": "0:31"},
+      {"title": "Stand Florida evento", "retention_3s": 26, "drop_point": "0:02", "duration": "unknown"}
+    ]
+  }
+}
