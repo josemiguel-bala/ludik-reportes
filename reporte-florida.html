@@ -1887,7 +1887,17 @@ function populateAllSections() {
     for (let i=1;i<=5;i++) {
       const a = D.story['act'+i]; if (!a) continue;
       h += '<div class="act"><div class="act-number">'+(a.number||'Acto '+i)+'</div><div class="act-title">'+(a.title||'')+'</div>';
-      if (a.paragraphs) a.paragraphs.forEach(p => h += '<div class="story-text">'+p+'</div>');
+      if (a.paragraphs) a.paragraphs.forEach((p, pIdx) => {
+        h += '<div class="story-text">'+p+'</div>';
+        // Render inline media after the matching paragraph
+        if (a.inline_media) a.inline_media.filter(m => m.after_paragraph === pIdx).forEach(m => {
+          h += '<a href="'+(m.url||'#')+'" target="_blank" style="display:flex;gap:14px;align-items:center;margin:16px 0 20px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:680px;text-decoration:none;transition:border-color .2s"';
+          h += ' onmouseover="this.style.borderColor=\'var(--fucsia)\'" onmouseout="this.style.borderColor=\'var(--border)\'">';
+          h += '<img src="'+m.image+'" style="width:80px;height:80px;object-fit:cover;border-radius:8px;flex-shrink:0" onerror="this.style.display=\'none\'" />';
+          h += '<div><div style="font-size:12px;font-weight:700;color:var(--white)">'+m.label+'</div>';
+          h += '<div style="font-size:10px;color:var(--fucsia);margin-top:4px">Ver en Instagram ↗</div></div></a>';
+        });
+      });
       // Act 3: Retention mini-chart in story
       if (i===3 && D.tiktok_retention && D.tiktok_retention.videos) {
         h += '<div style="margin:24px 0;max-width:680px"><div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Retención a los 3 segundos por video</div>';
