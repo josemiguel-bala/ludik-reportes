@@ -2086,14 +2086,15 @@ function populateAllSections() {
       D.content.organic_highlights.forEach((p, idx) => {
         const orgFallback = 'background:linear-gradient(135deg,#003322,#006644,#20ECC8)';
         const orgBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center;'+orgFallback : orgFallback;
-        h += '<'+(p.url?'a href="'+p.url+'" target="_blank"':'div')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+orgBg+'"><div class="post-thumb-inner">🌱</div><span class="post-badge badge-top">#'+(idx+1)+' Orgánico</span><span class="post-plat-badge">'+(p.platform||'')+'</span></div>';
+        const orgTag = p.url ? 'a' : 'div';
+        h += '<'+orgTag+(p.url?' href="'+p.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+orgBg+'"><div class="post-thumb-inner">🌱</div><span class="post-badge badge-top">#'+(idx+1)+' Orgánico</span><span class="post-plat-badge">'+(p.platform||'')+'</span></div>';
         h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
         h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(p.views||0)+'</div><div class="post-metric-label">Views</div></div>';
         h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.interactions||p.likes||0)+'</div><div class="post-metric-label">Interacciones</div></div>';
         if (p.er) h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--fucsia)">'+p.er+'</div><div class="post-metric-label">ER</div></div>';
         h += '</div>';
         if (p.note) h += '<div class="post-date" style="color:var(--teal);margin-top:6px">💡 '+p.note+'</div>';
-        h += '</div></div>';
+        h += '</div></'+orgTag+'>';
       });
       h += '</div>';
     }
@@ -2104,12 +2105,13 @@ function populateAllSections() {
       D.content.amplified_top.forEach((p, idx) => {
         const ampFallback = 'background:linear-gradient(135deg,#1A0040,#6B00CC,#F84CDE)';
         const ampBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center;'+ampFallback : ampFallback;
-        h += '<'+(p.url?'a href="'+p.url+'" target="_blank"':'div')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+ampBg+'"><div class="post-thumb-inner">⚡</div><span class="post-badge badge-top">#'+(idx+1)+' Amplificado</span><span class="post-plat-badge">'+(p.platform||'')+'</span></div>';
+        const ampTag = p.url ? 'a' : 'div';
+        h += '<'+ampTag+(p.url?' href="'+p.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+ampBg+'"><div class="post-thumb-inner">⚡</div><span class="post-badge badge-top">#'+(idx+1)+' Amplificado</span><span class="post-plat-badge">'+(p.platform||'')+'</span></div>';
         h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
         h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--fucsia)">'+fmtK(p.views||0)+'</div><div class="post-metric-label">Views</div></div>';
         h += '</div>';
         if (p.note) h += '<div class="post-date" style="color:var(--gray);margin-top:6px">📌 '+p.note+'</div>';
-        h += '</div></div>';
+        h += '</div></'+ampTag+'>';
       });
       h += '</div>';
     }
@@ -2118,13 +2120,14 @@ function populateAllSections() {
       h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">🤝 Influencers del Mes</div><div class="layer-line"></div></div>';
       h += '<div class="post-gallery">';
       D.influencers_ig.forEach((inf) => {
-        h += '<'+(inf.url?'a href="'+inf.url+'" target="_blank"':'div')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)"><div class="post-thumb-inner">👤</div><span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
+        const infTag = inf.url ? 'a' : 'div';
+        h += '<'+infTag+(inf.url?' href="'+inf.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)"><div class="post-thumb-inner">👤</div><span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
         h += '<div class="post-body"><div class="post-title">'+inf.name+'</div><div class="post-date">'+(inf.content_type||'')+' · '+(inf.date||'')+'</div><div class="post-metrics">';
         h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(inf.views)+'</div><div class="post-metric-label">Views</div></div>';
         h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.likes)+'</div><div class="post-metric-label">Likes</div></div>';
         h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.shares||0)+'</div><div class="post-metric-label">Shares</div></div>';
         h += '<div class="post-metric"><div class="post-metric-val">'+fmt(inf.comments||0)+'</div><div class="post-metric-label">Comments</div></div>';
-        h += '</div></div></div>';
+        h += '</div></div></'+infTag+'>';
       });
       h += '</div>';
     }
