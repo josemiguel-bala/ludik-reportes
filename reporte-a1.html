@@ -824,10 +824,10 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   <!-- Compact summary + expand toggle -->
   <div class="summary-bar" onclick="toggleObj()">
     <div class="summary-pill"><div><div class="sp-val" style="color:var(--success)">5/5</div><div class="sp-label">Objetivos</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">~80K</div><div class="sp-label">Alcance</div></div></div>
+    <div class="summary-pill"><div><div class="sp-val">439K</div><div class="sp-label">Alcance</div></div></div>
     <div class="summary-pill"><div><div class="sp-val">3K</div><div class="sp-label">TK Views</div></div></div>
     <div class="summary-pill"><div><div class="sp-val">+174</div><div class="sp-label">Nuevos Seg.</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">~S/ 100</div><div class="sp-label">Inversión</div></div></div>
+    <div class="summary-pill"><div><div class="sp-val">S/ 868</div><div class="sp-label">Inversión</div></div></div>
     <div class="sp-toggle">Ver metas <span class="arrow" id="objArrow">▾</span></div>
   </div>
   <!-- Expandable objectives table -->
@@ -2484,7 +2484,7 @@ function downloadPPTX() {
   s2.background = { fill: BG };
   addText(s2, 'Resumen Ejecutivo', { x:0.5, y:0.3, fontSize:24, bold:true });
   addText(s2, (RD.technical_texts&&RD.technical_texts.resumen)||'Reporte mensual '+RD.brand+' — '+RD.period, { x:0.5, y:0.9, fontSize:11, color:'CCCCDD', w:12 });
-  const funnel = [['80K','Impresiones','Freq. 1.6x'],['50K','Alcance Único','62% del total'],['1,652','Interacciones','Meta + IG + TK'],['~370','Intención Compra','Clicks+Saves'],['+174','Nuevos Seg.','FB+IG+TK']];
+  const funnel = [['474K','Impresiones','Freq. 1.08x'],['439K','Alcance Único','Meta Ads'],['3,053','Clics Totales','Meta Ads'],['1,652','Interacciones','Org. + Influencers'],['+174','Nuevos Seg.','FB+IG+TK']];
   funnel.forEach((f,i) => {
     const x = 0.5 + i*2.5;
     s2.addShape(pptx.ShapeType.roundRect, { x, y:2.0, w:2.3, h:1.6, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2525,8 +2525,8 @@ function downloadPPTX() {
   let s4 = pptx.addSlide();
   s4.background = { fill: BG };
   addText(s4, 'Distribución de Alcance', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s4, '~S/ 100 de inversión. 50K alcance único estimado. 80K impresiones. Frecuencia: 1.6x', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const alcKpis = [['3,095','TK Vistas Totales'],['45K','Meta Ads Reach'],['50K','Alcance Total'],['1.6x','Frecuencia Prom.']];
+  addText(s4, 'S/ 868 (USD 229.70) en Meta Ads. 438,784 personas alcanzadas. 473,935 impresiones. CPM: S/ 1.83', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const alcKpis = [['3,095','TK Vistas Orgánicas'],['439K','Meta Ads Reach'],['474K','Impresiones Totales'],['1.08x','Frecuencia Prom.']];
   alcKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s4.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2575,8 +2575,8 @@ function downloadPPTX() {
   let s7 = pptx.addSlide();
   s7.background = { fill: BG };
   addText(s7, 'Eficiencia de Inversión', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s7, 'Inversión micro (~S/ 100) en boosts. El sorteo Punta Sal generó engagement orgánico superior a la pauta.', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const invKpis = [['~S/ 100','Inversión Total','~USD 26.50'],['S/ 0','TikTok Ads','Canal orgánico'],['100%','Meta Ads','Boosts IG + FB'],['S/ 0.57','Costo/Seguidor','174 nuevos seg.']];
+  addText(s7, 'S/ 868 (USD 229.70) 100% Meta Ads. CPM S/ 1.83. Provincia 57% del presupuesto con mejor rendimiento.', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const invKpis = [['S/ 868','Inversión Total','USD 229.70'],['S/ 1.83','CPM Meta Ads','USD 0.48'],['S/ 0','TikTok Ads','Sin inversión TK'],['S/ 4.99','Costo/Seguidor','174 nuevos seg.']];
   invKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s7.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });

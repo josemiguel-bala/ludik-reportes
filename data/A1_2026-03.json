@@ -25,8 +25,8 @@
         "label": "Brand Health Score"
       },
       {
-        "value": "~S/ 100",
-        "label": "Inversión Visible"
+        "value": "S/ 868",
+        "label": "Inversión Meta Ads"
       }
     ]
   },
@@ -89,15 +89,19 @@
     }
   },
   "investment": {
-    "meta_ads_usd": 26.5,
-    "meta_ads_soles": 100.0,
+    "meta_ads_usd": 229.70,
+    "meta_ads_soles": 868.27,
     "tiktok_ads_usd": 0,
     "tiktok_ads_soles": 0,
-    "total_usd": 26.5,
-    "total_soles": 100.0,
+    "total_usd": 229.70,
+    "total_soles": 868.27,
     "meta_pct": 100,
     "tiktok_pct": 0,
-    "note": "Inversión micro visible en Metricool. Pauta adicional gestionada por cliente."
+    "note": "100% Meta Ads. Sin inversión TikTok en marzo. Lima+Callao: USD 97.93 (43%). Provincia: USD 131.77 (57%).",
+    "lima_usd": 97.93,
+    "provincia_usd": 131.77,
+    "lima_reach": 213674,
+    "provincia_reach": 225110
   },
   "sentiment": {
     "total": 20,
@@ -109,10 +113,10 @@
   },
   "insights": {
     "community": "+174 seguidores netos. IG lideró con +71 (+0.7%). FB sumó +60 (+0.4%). TK nuevo canal con 743 seguidores y crecimiento acelerado. Para abril, la estrategia proyecta alcanzar 531K personas cross-channel con los 4 pilares de contenido activados.",
-    "reach": "IG generó el mayor alcance orgánico con posts de sorteo. FB alcanzó 43K impresiones con pauta mínima. TK en fase de construcción con 3K views en 12 videos. Abril proyecta: FB 200K, IG 133K, TK 197K alcance.",
+    "reach": "Meta Ads alcanzó 438,784 personas únicas con 473,935 impresiones. CPM de $0.48 USD (S/ 1.83). Provincia recibió 57% de la inversión (USD 131.77) vs Lima 43% (USD 97.93). TK en fase construcción con 3K views orgánicos.",
     "engagement": "Top post: Sorteo FB con 432 reacciones. IG Reels: ER promedio 0.39%. El sorteo Punta Sal fue el driver principal. Abril: diversificar con los 4 pilares (Tips 30%, Momentos 25%, Soy Mamá 25%, Recetas 20%) para engagement sostenible.",
     "sentiment": "Comentarios positivos enfocados en recetas y sorteo. La audiencia valida el tono 'Mamá A1' alineado con la persona 'Anita' de la estrategia. El 73.6% busca practicidad y el sentimiento real es alivio, no solo conveniencia.",
-    "investment": "Inversión micro (~S/100) en boosts. Para abril, se requiere inversión proporcional a las metas: FB necesita pauta para existir (alcance sin pauta <250 personas vs 7K+ con S/10). Meta total: 136K visualizaciones cross-channel.",
+    "investment": "Inversión total S/ 868 (USD 229.70) 100% Meta Ads. CPM excelente: S/ 1.83 (USD 0.48). 438K personas alcanzadas. 3,053 clics. Provincia absorbió 57% del presupuesto. Sin TikTok Ads en marzo. Costo por seguidor: USD 1.32.",
     "competition": "A1 lidera en seguidores IG (9,582) vs Compass (6,303) y Atún Real (6,114). ER de A1 (0.60%) supera a Atún Real (0.10%). Objetivo estratégico: consolidar como tercera marca en conservas (de 4.8% a 6.5% market share)."
   },
   "story": {
@@ -194,7 +198,7 @@
     "contenido_insight": "Formato ganador: mamá real + receta rápida + llamado a sorteo. El sándwich de atún A1 fue el reel con mejor ER (14.87%). Para abril se diversifica con 4 pilares: Tips A1 (30%), Momentos A1 (25%), Soy Mamá A1 (25%), Recetas A1 (20%).",
     "contenido_fail": "TK videos con bajo alcance (<350 views), reflejo de fase inicial. FB sin pauta: alcance <250 personas. Marzo fue 90% sorteo; faltó contenido de valor tipo 'Anita' (persona de marca). El 53.8% exige ver proceso real, no fotos de plato terminado.",
     "contenido_horario": "Mejores días: martes a jueves. Horario: 10am-2pm Lima.",
-    "riesgo_fb": "FB sin pauta alcanza <250 personas por post (1.6% de la base). Meta abril: 200,204 alcance. Requiere inversión sostenida. Con pauta de S/10, alcanza 7K-40K (diferencia de 30x).",
+    "riesgo_fb": "FB orgánico sin pauta alcanza <250 personas por post. Con pauta de Meta Ads, se alcanzaron 438,784 personas únicas en marzo (CPM S/ 1.83). Provincia respondió mejor: 225K alcance con 57% del presupuesto.",
     "indice_valor": "Fórmula: (Saves×3 + Shares×2 + Comments×1.5 + Likes×1) / Reach × 1000\nIG Top: Sorteo carrusel: (6×3 + 9×2 + 2×1.5 + 71×1) / 807 × 1000 = 117.5\nFB Top: Ticket viaje: (0×3 + 15×2 + 7×1.5 + 432×1) / 7,633 × 1000 = 62.4",
     "temas_recurrentes": "Sorteo Punta Sal, recetas rápidas, mamá resolutiva, practicidad del atún A1. Abril introduce: momentos reales, tips de vida, trends mamá, y recetas express con ingredientes de despensa.",
     "bhs_explicacion": "BHS 65/100. Fortalezas: Engagement (72) por ER competitivo y sentimiento positivo. Debilidades: Alcance (55) por volumen bajo en TK y dependencia de pauta en FB. La activación de los 4 pilares y la inversión en pauta proyectan mejora a 70-75 en abril."
@@ -401,22 +405,23 @@
   },
   "summary_kpis": {
     "objectives": "5/5",
-    "reach": "~80K",
+    "reach": "439K",
     "tk_views": "3K",
     "new_followers": "+174",
-    "investment": "~S/ 100"
+    "investment": "S/ 868"
   },
   "reach": {
-    "total_impressions": 80000,
-    "estimated_unique_reach": 50000,
-    "frequency": 1.6,
-    "meta_ads_impressions": 75000,
-    "meta_ads_reach": 45000,
+    "total_impressions": 473935,
+    "estimated_unique_reach": 438784,
+    "frequency": 1.08,
+    "meta_ads_impressions": 473935,
+    "meta_ads_reach": 438784,
     "tiktok_ads_impressions": 0,
     "tiktok_organic_views": 3095,
     "ig_organic_views": 8500,
     "fb_organic_impressions": 2000,
-    "influencer_views": 9678
+    "influencer_views": 9678,
+    "meta_ads_clicks": 3053
   },
   "engagement": {
     "tiktok_organic": {
@@ -455,12 +460,14 @@
     "total_meaningful_interactions": 1652
   },
   "efficiency": {
-    "meta_cpm_usd": null,
-    "meta_cpm_soles": null,
-    "tiktok_cpm_usd": null,
-    "tiktok_cpm_soles": null,
-    "blended_cpm_usd": null,
-    "blended_cpm_soles": null
+    "meta_cpm_usd": 0.48,
+    "meta_cpm_soles": 1.83,
+    "tiktok_cpm_usd": 0,
+    "tiktok_cpm_soles": 0,
+    "blended_cpm_usd": 0.48,
+    "blended_cpm_soles": 1.83,
+    "cost_per_click_usd": 0.075,
+    "cost_per_follower_usd": 1.32
   },
   "competitors_ig": [
     {
@@ -569,7 +576,7 @@
       null,
       null,
       null,
-      null
+      0.48
     ],
     "cpm_tk": [
       null,
@@ -577,7 +584,7 @@
       null,
       null,
       null,
-      null
+      0
     ],
     "bhs_radar": [
       60,
@@ -705,14 +712,18 @@
       30
     ],
     "budget_labels": [
-      "IG Reels Boost",
-      "FB Posts Boost",
-      "IG Posts Boost"
+      "Lima Region",
+      "Junín Region",
+      "Arequipa Region",
+      "Ucayali Region",
+      "Otros Provincia"
     ],
     "budget_data": [
-      80,
-      17,
-      3
+      92.78,
+      42.54,
+      35.82,
+      35.32,
+      23.24
     ],
     "comp_followers_labels": [
       "A1",
@@ -750,7 +761,7 @@
       null,
       null,
       null,
-      75000
+      438784
     ],
     "formatos_labels": [
       "Sorteo/Promo",
