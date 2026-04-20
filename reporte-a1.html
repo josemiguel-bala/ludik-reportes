@@ -858,7 +858,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   <a class="side-link" href="#sec-engagement"><span class="side-dot" style="background:var(--fucsia)"></span> Engagement</a>
   <a class="side-link" href="#sec-contenido"><span class="side-dot" style="background:var(--purple)"></span> Contenido</a>
   <a class="side-link" href="#sec-sentimiento"><span class="side-dot" style="background:var(--teal)"></span> Sentimiento</a>
-  <!-- Audiencia removed for Florida -->
+  <!-- Audiencia section -->
   <a class="side-link" href="#sec-inversion"><span class="side-dot" style="background:var(--success)"></span> Inversión</a>
   <a class="side-link" href="#sec-competencia"><span class="side-dot" style="background:var(--danger)"></span> Competencia</a>
   <a class="side-link" href="#sec-score"><span class="side-dot" style="background:var(--fucsia)"></span> Brand Health</a>
@@ -972,7 +972,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   </div>
 </section>
 
-<!-- sec-audiencia removed for Florida report -->
+<!-- sec-audiencia -->
 
 <div class="sec-divider"></div>
 <section class="report-section" id="sec-inversion">
@@ -1948,8 +1948,8 @@ function populateAllSections() {
       }
       if (i===4 && D.competitors_ig && D.competitors_ig.length) {
         const sorted = [...D.competitors_ig].sort((a,b)=>(parseFloat(b.er)||0)-(parseFloat(a.er)||0));
-        if (sorted[0] && sorted[0].name.toLowerCase().includes('florida')) {
-          h += '<div class="story-highlight"><div class="story-highlight-text">Florida es #1 en Engagement Rate de Instagram en su categoría con '+sorted[0].er+'%, superando a todos los competidores</div></div>';
+        if (sorted[0] && sorted[0].name.toLowerCase().includes('a1')) {
+          h += '<div class="story-highlight"><div class="story-highlight-text">A1 lidera en Engagement Rate de Instagram en su categoría con '+sorted[0].er+'%, superando a Compass y Atún Real</div></div>';
         }
       }
       if (a.highlight) { h += '<div class="story-highlight"><div class="story-highlight-text">'+a.highlight+'</div>'; if (a.highlight_sub) h += '<div class="story-highlight-sub">'+a.highlight_sub+'</div>'; h += '</div>'; }
@@ -2190,13 +2190,13 @@ function populateAllSections() {
     if (T.temas_recurrentes) h += '<div class="analysis-block"><div class="analysis-label">◈ Temas ('+(s.total||0)+' comentarios)</div><div class="analysis-text">'+T.temas_recurrentes.replace(/\n/g,'<br>')+'</div></div>';
     // Word Cloud
     const wcWords = [
-      {word:'Florida',s:3.5},{word:'atún',s:3.2},{word:'rico',s:2.8},{word:'delicioso',s:2.5},
-      {word:'indespensable',s:2.8},{word:'Semana Santa',s:2.3},{word:'familia',s:2.0},{word:'viaje',s:2.0},
-      {word:'playa',s:1.8},{word:'receta',s:1.8},{word:'buenazo',s:2.2},{word:'latita',s:1.6},
-      {word:'infaltable',s:2.0},{word:'comprar',s:1.5},{word:'camping',s:1.5},{word:'galletita',s:1.4},
-      {word:'proteína',s:1.3},{word:'sándwich',s:1.4},{word:'calidad',s:1.6},{word:'rosadito',s:1.5},
-      {word:'lomito',s:1.3},{word:'favorito',s:1.7},{word:'siempre',s:2.0},{word:'causa',s:1.4},
-      {word:'mamá',s:1.3},{word:'cebollita',s:1.2},{word:'despensa',s:1.4}
+      {word:'A1',s:3.5},{word:'atún',s:3.2},{word:'sorteo',s:2.8},{word:'Punta Sal',s:2.5},
+      {word:'mamá',s:2.8},{word:'receta',s:2.3},{word:'familia',s:2.0},{word:'viaje',s:2.0},
+      {word:'rapidito',s:1.8},{word:'causa',s:1.8},{word:'buenazo',s:2.2},{word:'latita',s:1.6},
+      {word:'salvavidas',s:2.0},{word:'comprar',s:1.5},{word:'alacena',s:1.5},{word:'tallarines',s:1.4},
+      {word:'proteína',s:1.3},{word:'sándwich',s:1.4},{word:'calidad',s:1.6},{word:'filete',s:1.5},
+      {word:'peruano',s:1.3},{word:'favorito',s:1.7},{word:'siempre',s:2.0},{word:'práctico',s:1.4},
+      {word:'ceviche',s:1.3},{word:'saltado',s:1.2},{word:'despensa',s:1.4}
     ];
     const wcCol = ['var(--fucsia)','var(--teal)','var(--purple)','var(--white)','var(--success)','#FF6B6B','#9B6BFF'];
     h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">☁️ Nube de Palabras</div><div class="layer-line"></div></div>';
@@ -2207,21 +2207,21 @@ function populateAllSections() {
     h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">💬 Voces de la Comunidad</div><div class="layer-line"></div></div>';
     h += '<div class="quotes-grid">';
     const quotes = [
-      {t:'Team Florida desde mi adolescencia, ahora lo repito con mi niño',u:'@mamamoderniall',p:'IG'},
-      {t:'Siempre compro mi atún Florida',u:'@martin.salvador50',p:'TK'},
-      {t:'Es mi salvavidas cuando llego tarde del trabajo. Nutrición de casa a velocidad de snack',u:'@shanita_45',p:'TK'},
-      {t:'Extraño mi atún Florida, el atún aquí en Europa no sabe igual',u:'@greekiehv',p:'IG'},
-      {t:'Me olvidaba de mis atunes para mi finde de camping, me salió en el momento adecuado',u:'@piecesofgio',p:'IG'},
-      {t:'Lo compraré, iré a Wong. Lo necesito para mi dieta diaria',u:'@farashnahir6',p:'IG'},
-      {t:'Semana Santa sin atuncito no es Semana Santa',u:'@tatianakiedis',p:'IG'},
-      {t:'Delicioso, no suban más ya precio nada más XD',u:'@sulykahorixty',p:'TK'}
+      {t:'El atún A1 es mi salvavidas cuando el tiempo me gana o se acaba el gas',u:'@lucia_arequipa',p:'IG'},
+      {t:'Siempre tengo 6 latas de A1 en la alacena, por si acaso',u:'@anita_losolivos',p:'IG'},
+      {t:'Mi causa de atún me la enseñó mi mamá, y ella la aprendió de mi abuela. Siempre con A1',u:'@recetas_mamita',p:'TK'},
+      {t:'Quiero participar del sorteo! A1 de toda la vida',u:'@maria.lima.pe',p:'IG'},
+      {t:'Tallarines con atún en 8 minutos, mis hijos felices y yo tranquila',u:'@mamapractica_pe',p:'TK'},
+      {t:'Lo mejor cuando llegas cansada del trabajo. Rapidito y con sabor de casa',u:'@shanita_45',p:'TK'},
+      {t:'Mi hijo dice mamá cocinas tú? es que la del restaurante no sabe igual',u:'@cocina_real_pe',p:'IG'},
+      {t:'A1 de toda la vida. Mi mamá lo compraba y ahora yo también',u:'@martin.salvador50',p:'IG'}
     ];
     quotes.forEach(q => { h += '<div class="quote-card"><div class="quote-text">"'+q.t+'"</div><div class="quote-user"><span style="color:var(--success)">●</span> '+q.u+' · '+q.p+'</div></div>'; });
     h += '</div>';
     b6.innerHTML = h;
   }
 
-  // ── SEC-AUDIENCIA — removed for Florida report ──
+  // ── SEC-AUDIENCIA ──
 
   // ── SEC-INVERSION ──
   const b8 = body('sec-inversion');
@@ -2420,7 +2420,7 @@ new Chart('chartSentCateg', doughnutOpts(
   [success,'rgba(34,197,94,.7)',teal,'rgba(32,236,200,.6)',warning,'rgba(245,158,11,.5)',danger,'rgba(248,76,222,.5)']));
 new Chart('chartSentEvol', lineOpts(months6, [{label:'Net Score',data:C.sent_net_score_history,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:false,tension:.4,pointBackgroundColor:teal,pointRadius:6},{label:'Benchmark (+50)',data:[50,50,50,50,50,50],borderColor:'rgba(255,255,255,.2)',borderDash:[4,4]}]));
 
-// AUDIENCIA — removed for Florida report
+// AUDIENCIA — no charts for this report
 // Charts skipped: chartFBAge, chartIGAge, chartTKAge, chartGenero, chartAgeComp
 
 // INVERSIÓN
@@ -2484,7 +2484,7 @@ function downloadPPTX() {
   s2.background = { fill: BG };
   addText(s2, 'Resumen Ejecutivo', { x:0.5, y:0.3, fontSize:24, bold:true });
   addText(s2, (RD.technical_texts&&RD.technical_texts.resumen)||'Reporte mensual '+RD.brand+' — '+RD.period, { x:0.5, y:0.9, fontSize:11, color:'CCCCDD', w:12 });
-  const funnel = [['7.93M','Impresiones','Freq. 2.22x'],['3.57M','Alcance Único','45% del total'],['1.4M','Interacciones','Meta Ads + Org. + TK'],['~1,800','Intención Compra','Clicks+Saves+Consultas'],['+1,789','Nuevos Seg.','FB+IG+TK']];
+  const funnel = [['80K','Impresiones','Freq. 1.6x'],['50K','Alcance Único','62% del total'],['1,652','Interacciones','Meta + IG + TK'],['~370','Intención Compra','Clicks+Saves'],['+174','Nuevos Seg.','FB+IG+TK']];
   funnel.forEach((f,i) => {
     const x = 0.5 + i*2.5;
     s2.addShape(pptx.ShapeType.roundRect, { x, y:2.0, w:2.3, h:1.6, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2525,8 +2525,8 @@ function downloadPPTX() {
   let s4 = pptx.addSlide();
   s4.background = { fill: BG };
   addText(s4, 'Distribución de Alcance', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s4, 'S/ 9,736 impactaron 3.57M cuentas únicas. 7.93M impresiones. Frecuencia: 2.22x', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const alcKpis = [['2.53M','TK Vistas Totales'],['1.58M','Meta Ads Reach'],['3.57M','Alcance Total'],['2.22x','Frecuencia Prom.']];
+  addText(s4, '~S/ 100 de inversión. 50K alcance único estimado. 80K impresiones. Frecuencia: 1.6x', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const alcKpis = [['3,095','TK Vistas Totales'],['45K','Meta Ads Reach'],['50K','Alcance Total'],['1.6x','Frecuencia Prom.']];
   alcKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s4.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2538,8 +2538,8 @@ function downloadPPTX() {
   let s5 = pptx.addSlide();
   s5.background = { fill: BG };
   addText(s5, 'Engagement e Índice de Valor', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s5, 'El ER de Meta (10.3%) está inflado por el sorteo, pero sin él sigue siendo 2x el benchmark', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const engKpis = [['10.3%','ER Meta','Benchmark: 2%'],['0.45%','ER TikTok','Normal TK masivo'],['14.7','Índice Valor Meta','Benchmark: 5.0'],['3.88','Índice Valor TK','Benchmark: 2.5']];
+  addText(s5, 'Sorteo Punta Sal fue el driver de engagement. ER FB 0.73%, ER IG 0.60%, ER TK 2.8%', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const engKpis = [['0.73%','ER Facebook','Benchmark: 0.5%'],['2.8%','ER TikTok','Mejor canal por ER'],['117.5','Índice Valor IG','Sorteo carrusel'],['62.4','Índice Valor FB','Ticket viaje']];
   engKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s5.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.4, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2547,7 +2547,7 @@ function downloadPPTX() {
     addText(s5, k[1], { x:x+0.2, y:2.1, fontSize:9, color:GRAY });
     addText(s5, k[2], { x:x+0.2, y:2.4, fontSize:9, color:SUCCESS });
   });
-  addText(s5, 'Fórmula Índice de Valor: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) ÷ Alcance × 1000\nTK #1 "Zapatillas": 4.86 | TK #2 "Talco expertos": 2.79', { x:0.5, y:3.3, fontSize:10, color:'CCCCDD', w:12 });
+  addText(s5, 'Fórmula Índice de Valor: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) ÷ Alcance × 1000\nIG Top: Sorteo carrusel 117.5 | FB Top: Ticket viaje 62.4', { x:0.5, y:3.3, fontSize:10, color:'CCCCDD', w:12 });
 
   // ─── SLIDE 6: TOP/WORST CONTENIDO ───
   let s6 = pptx.addSlide();
@@ -2555,9 +2555,9 @@ function downloadPPTX() {
   addText(s6, 'Análisis de Contenido', { x:0.5, y:0.3, fontSize:24, bold:true });
   addText(s6, '🏆 Top Performers', { x:0.5, y:0.85, fontSize:11, color:TEAL, bold:true });
   const tops = [
-    ['#1 TikTok','Zapatillas y Limpieza','441,411 vistas','1,673 likes · 235 shares','TK Ads ~S/ 166'],
-    ['#2 TikTok+Meta','Talco expertos','407K TK + 264K Meta','949 likes TK · 1,588 reacciones Meta','Inv. total S/ 557'],
-    ['#1 FB Org.','Sorteo PONLE NOMBRE','23,515 alcance org.','589 interacciones · 303 comentarios','Sorteo']
+    ['#1 IG Reel','Sándwich Punta Sal','1,197 vistas','94 interacciones · 14.87% ER','Receta + Sorteo'],
+    ['#1 IG Post','Sorteo Viaje A1','2,007 vistas','88 interacciones · 10.90% ER','Lanzamiento sorteo'],
+    ['#1 FB','Tu ticket vale un viaje','432 reacciones','7 comentarios · 15 compartidos','Top engagement FB']
   ];
   tops.forEach((t,i) => {
     const x = 0.5 + i*4.2;
@@ -2569,14 +2569,14 @@ function downloadPPTX() {
     addText(s6, t[4], { x:x+0.15, y:2.7, fontSize:8, color:GRAY });
   });
   addText(s6, '⚠ Menor Rendimiento', { x:0.5, y:3.5, fontSize:11, color:DANGER, bold:true });
-  addText(s6, '• Facebook orgánico sin sorteo: <400 alcance/post (99% menos que sorteo 23,515)\n• TikTok peores: "Pies descalzos verano" 539 vistas, "Feriado largo" 995 vistas (-99.9% vs top)\n• Regla: En TK el producto es el plot twist, no el protagonista. En FB sin incentivo no hay alcance.', { x:0.5, y:3.85, fontSize:9, color:'CCCCDD', w:12 });
+  addText(s6, '• TikTok en fase inicial: mejor video 353 vistas. Canal nuevo, base de 743 seguidores.\n• FB sin pauta: <250 alcance/post. Con pauta de S/10: 7K-40K (diferencia de 30x).\n• Regla: FB necesita inversión. TK necesita volumen y formatos nativos (A1 Live Kitchen).', { x:0.5, y:3.85, fontSize:9, color:'CCCCDD', w:12 });
 
   // ─── SLIDE 7: INVERSIÓN ───
   let s7 = pptx.addSlide();
   s7.background = { fill: BG };
   addText(s7, 'Eficiencia de Inversión', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s7, 'Cada dólar en TikTok genera 2.4x más impresiones que en Meta', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const invKpis = [['S/ 9,736','Inversión Total','USD 2,575.64'],['S/ 1.02','CPM TikTok','USD 0.27'],['S/ 2.49','CPM Meta','USD 0.66'],['S/ 5.44','Costo/Seguidor','USD 1.44']];
+  addText(s7, 'Inversión micro (~S/ 100) en boosts. El sorteo Punta Sal generó engagement orgánico superior a la pauta.', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const invKpis = [['~S/ 100','Inversión Total','~USD 26.50'],['S/ 0','TikTok Ads','Canal orgánico'],['100%','Meta Ads','Boosts IG + FB'],['S/ 0.57','Costo/Seguidor','174 nuevos seg.']];
   invKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s7.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
