@@ -1,0 +1,720 @@
+{
+  "brand": "A1",
+  "period": "2026-03",
+  "fx_rate": 3.78,
+  "metricool_id": "5981134",
+  "brand_id": "A1",
+  "portada": {
+    "tag": "LUDiK Analytics · Reporte Mensual v2.2",
+    "footer": "Confidencial · Preparado por el equipo LUDiK para A1 Perú",
+    "kpis": [
+      {
+        "value": "+174",
+        "label": "Nuevos Seguidores"
+      },
+      {
+        "value": "9,678",
+        "label": "Views Influencers"
+      },
+      {
+        "value": "4",
+        "label": "Collabs Influencers"
+      },
+      {
+        "value": "65",
+        "label": "Brand Health Score"
+      },
+      {
+        "value": "~S/ 100",
+        "label": "Inversión Visible"
+      }
+    ]
+  },
+  "cierre": {
+    "tagline": "Data-driven decisions for modern brands",
+    "team": "Equipo LUDiK",
+    "location": "Barcelona · Lima",
+    "contact": "hola@ludik.io · ludik.io",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para A1 Perú"
+  },
+  "objectives": [
+    {
+      "objective": "Lanzar campaña Sorteo Punta Sal",
+      "channel": "Multi",
+      "target": "Campaña activa",
+      "result": "5 posts IG + 12 TK + 5 FB",
+      "status": "met"
+    },
+    {
+      "objective": "Crecer comunidad Instagram",
+      "channel": "Instagram",
+      "target": "Crecimiento neto",
+      "result": "+71 (+0.7%)",
+      "status": "met"
+    },
+    {
+      "objective": "Activar TikTok como canal nuevo",
+      "channel": "TikTok",
+      "target": "12+ videos",
+      "result": "12 videos, 3K views",
+      "status": "met"
+    },
+    {
+      "objective": "Activar influencers mamá",
+      "channel": "Instagram",
+      "target": "3+ collabs",
+      "result": "4 collabs, 9.7K views",
+      "status": "met"
+    },
+    {
+      "objective": "Mantener comunidad Facebook",
+      "channel": "Facebook",
+      "target": "Mantener base",
+      "result": "+60 (+0.4%)",
+      "status": "met"
+    }
+  ],
+  "community": {
+    "facebook": {
+      "start": 15034,
+      "end": 15094
+    },
+    "instagram": {
+      "start": 9511,
+      "end": 9582
+    },
+    "tiktok": {
+      "start": 700,
+      "end": 743
+    }
+  },
+  "investment": {
+    "meta_ads_usd": 26.5,
+    "meta_ads_soles": 100.0,
+    "tiktok_ads_usd": 0,
+    "tiktok_ads_soles": 0,
+    "total_usd": 26.5,
+    "total_soles": 100.0,
+    "meta_pct": 100,
+    "tiktok_pct": 0,
+    "note": "Inversión micro visible en Metricool. Pauta adicional gestionada por cliente."
+  },
+  "sentiment": {
+    "total": 20,
+    "positive_pct": 80,
+    "neutral_pct": 18,
+    "negative_pct": 2,
+    "net_score": 78,
+    "categories": []
+  },
+  "insights": {
+    "community": "+174 seguidores netos. IG lideró con +71 (+0.7%). FB sumó +60 (+0.4%). TK nuevo canal con 743 seguidores y crecimiento acelerado desde enero.",
+    "reach": "IG generó el mayor alcance orgánico con posts de sorteo. FB alcanzó 43K impresiones en un solo post. TK en fase de construcción con 3K views en 12 videos.",
+    "engagement": "Top post: Sorteo FB con 432 reacciones. IG Reels: ER promedio 0.39%. El sorteo Punta Sal fue el driver principal de interacción en todos los canales.",
+    "sentiment": "Comentarios positivos enfocados en recetas y sorteo. Audiencia responde bien al tono 'Mamá A1'. Sin comentarios negativos relevantes.",
+    "investment": "Inversión micro (~S/100) distribuida en boosts de IG Reels y FB Posts. El sorteo Punta Sal generó engagement orgánico superior a la pauta.",
+    "competition": "A1 lidera en seguidores IG (9,582) vs Compass (6,303) y Atún Real (6,114). ER de A1 (0.60%) supera a Atún Real (0.10%)."
+  },
+  "story": {
+    "act1": {
+      "number": "Acto 1 · Instagram Lideró el Mes",
+      "title": "El Sorteo Punta Sal fue el motor de engagement",
+      "paragraphs": [
+        "5 posts y 10 reels en Instagram generaron el grueso de la interacción del mes. El sorteo 'Tu ticket vale un viaje' concentró la estrategia: compra S/15 en Plaza Vea y participa por un viaje todo incluido a Punta Sal.",
+        "Top reel: 'Sándwich Punta Sal' con 1,197 views y 14.87% ER. El formato que mejor funcionó fue mamá real + receta rápida + llamado al sorteo.",
+        "IG creció +71 seguidores (+0.7%). Crecimiento moderado pero consistente, acumulando +1,839 seguidores desde octubre 2025."
+      ]
+    },
+    "act2": {
+      "number": "Acto 2 · Facebook Respondió al Sorteo",
+      "title": "432 reacciones en un solo post: el poder del incentivo",
+      "paragraphs": [
+        "El post 'Tu ticket vale un viaje' en Facebook generó 432 reacciones, 7 comentarios y 15 compartidos. Es el contenido con mayor engagement del mes en todas las plataformas.",
+        "FB creció +60 seguidores, revirtiendo la tendencia plana de meses anteriores. La combinación sorteo + pauta (S/10) fue efectiva.",
+        "El post de Día de la Mujer, sin pauta, alcanzó solo 246 personas. La diferencia confirma que FB necesita inversión para generar alcance."
+      ]
+    },
+    "act3": {
+      "number": "Acto 3 · TikTok: Un Canal Nuevo con Potencial",
+      "title": "12 videos publicados, base de 743 seguidores construida",
+      "paragraphs": [
+        "TikTok es el canal más nuevo de A1. 12 videos publicados en marzo generaron 3,095 views totales. El crecimiento de seguidores ha sido exponencial: de ~100 en octubre a 743 en marzo.",
+        "El contenido que mejor funcionó fue el de street interview ('Test mamás en la calle') con 353 views y el salpicón de Pamela More (327 views).",
+        "El ER promedio en TK (2.8%) es superior al de IG, indicando que la audiencia pequeña está altamente comprometida. El reto es escalar el alcance."
+      ]
+    },
+    "act4": {
+      "number": "Acto 4 · Influencers Mamá: Modelo de Micro-Influencers",
+      "title": "4 colaboraciones generaron 9,678 vistas",
+      "paragraphs": [
+        "4 influencers participaron en marzo: Balance Studio (4,217 views), Nathalia Trías (2,910), Pamela More (1,744) y Majo de Mamademia (807).",
+        "Balance Studio fue el top performer por alcance, pero Majo (@mamademia_) generó el mayor engagement: 122 likes con solo 807 views (15.1% ER).",
+        "El perfil de micro-influencer mamá alineado con 'Anita' es el que mejor convierte. Escalar a 6-8 collabs/mes con este perfil es la oportunidad."
+      ]
+    },
+    "act5": {
+      "number": "Acto 5 · Lo que Viene en Abril",
+      "title": "Escalar pilares de contenido y activar TikTok",
+      "items": [
+        {
+          "type": "bet",
+          "text": "Activar los 4 pilares de contenido: Tips 30%, Momentos 25%, Soy Mamá 25%, Recetas 20%. Marzo fue 90% sorteo; abril debe diversificar."
+        },
+        {
+          "type": "bet",
+          "text": "Escalar influencers mamá a 6-8 collabs/mes. El perfil @mamademia_ demostró que micro-influencers mamá generan el mejor ER."
+        },
+        {
+          "type": "bet",
+          "text": "Producir contenido TikTok nativo: formatos cortos (15-30s), trends de mamás, cocina en tiempo real como propone la estrategia 'A1 Live Kitchen'."
+        },
+        {
+          "type": "fix",
+          "text": "Facebook sin pauta no existe. Destinar mínimo S/30/post en los contenidos orgánicos clave para garantizar alcance base."
+        },
+        {
+          "type": "fix",
+          "text": "Diversificar temática en IG. 5 de 5 posts fueron sobre el sorteo. Abril necesita contenido de valor (recetas, tips) que construya comunidad."
+        },
+        {
+          "type": "system",
+          "text": "Configurar competidores adicionales en Metricool (Florida, Campomar, Fanny) para tener benchmark más completo."
+        }
+      ],
+      "highlight": "Abril: activar pilares + escalar TK + más influencers"
+    }
+  },
+  "technical_texts": {
+    "resumen": "Campaña Sorteo Punta Sal dominó marzo. +174 seguidores netos. IG: 10 reels + 5 posts. TK: 12 videos (canal nuevo). 4 influencers mamá. FB reactivado con sorteo. 5/5 objetivos cumplidos.",
+    "audiencia": "IG: mayoritariamente mujeres, Lima + provincias. FB: base legacy 15K. TK: audiencia nueva en construcción, 743 seguidores.",
+    "contenido_insight": "Formato ganador: mamá real + receta rápida + llamado a sorteo. El sándwich de atún A1 fue el reel con mejor ER (14.87%). Los posts de sorteo dominaron el engagement.",
+    "contenido_fail": "TK videos con bajo alcance (<350 views). FB sin pauta: alcance <250 personas. IG posts sin mecánica participativa: engagement limitado.",
+    "contenido_horario": "Mejores días: martes a jueves. Horario: 10am-2pm Lima.",
+    "riesgo_fb": "FB sin pauta alcanza <250 personas por post (1.6% de la base). Con pauta de S/10, alcanza 7K-40K. La diferencia es de 30x.",
+    "indice_valor": "Fórmula: (Saves×3 + Shares×2 + Comments×1.5 + Likes×1) / Reach × 1000\nIG Top: Sorteo carrusel: (6×3 + 9×2 + 2×1.5 + 71×1) / 807 × 1000 = 117.5\nFB Top: Ticket viaje: (0×3 + 15×2 + 7×1.5 + 432×1) / 7,633 × 1000 = 62.4",
+    "temas_recurrentes": "Sorteo Punta Sal, recetas rápidas, mamá resolutiva, practicidad del atún A1.",
+    "bhs_explicacion": "BHS 65/100. Fortalezas: Engagement (72) por ER competitivo y sentimiento positivo. Debilidades: Alcance (55) por volumen bajo en TK y dependencia de pauta en FB."
+  },
+  "bhs": {
+    "total": 65,
+    "benchmark": "70-75",
+    "dimensions": {
+      "crecimiento": 60,
+      "alcance": 55,
+      "engagement": 72,
+      "sentimiento": 70,
+      "eficiencia": 65,
+      "metas": 60,
+      "posicion_comp": 70
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "Multi",
+      "title": "Activar los 4 pilares de contenido",
+      "description": "Marzo fue 90% sorteo. Abril debe diversificar: Tips 30%, Momentos 25%, Soy Mamá 25%, Recetas 20%."
+    },
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Producir contenido TK nativo",
+      "description": "Formatos 15-30s, trends mamá, 'A1 Live Kitchen'. TK tiene el mejor ER (2.8%) pero necesita volumen."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Instagram",
+      "title": "Escalar micro-influencers mamá",
+      "description": "@mamademia_ logró 15.1% ER. Buscar 4-6 perfiles similares para abril. Perfil: mamá real, audiencia 5-50K, Lima + provincias."
+    },
+    {
+      "priority": "Media",
+      "channel": "Facebook",
+      "title": "Inversión mínima por post orgánico",
+      "description": "S/30 mínimo por post clave. Sin pauta FB alcanza 250 personas vs 7K+ con S/10."
+    },
+    {
+      "priority": "Media",
+      "channel": "Instagram",
+      "title": "Contenido de valor no-sorteo",
+      "description": "Diversificar: recetas express, tips de mamá, contenido emocional. El sorteo genera picos pero no construye comunidad sostenible."
+    },
+    {
+      "priority": "Baja",
+      "channel": "Multi",
+      "title": "Ampliar benchmark competitivo",
+      "description": "Agregar Florida, Campomar y Fanny como competidores en Metricool para comparativa más robusta."
+    }
+  ],
+  "content": {
+    "top_tiktok": [
+      {
+        "title": "Cambia sudor por sol (gym→playa)",
+        "date": "2026-03-20",
+        "views": 353,
+        "likes": 11,
+        "comments": 3,
+        "shares": 2,
+        "reach": 353,
+        "engagement": 4.53,
+        "url": "https://www.tiktok.com/@a1_peru/video/7619360144501050625",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7619360144501050625.jpg"
+      },
+      {
+        "title": "Salpicón Pamela More",
+        "date": "2026-03-28",
+        "views": 327,
+        "likes": 12,
+        "comments": 0,
+        "shares": 2,
+        "reach": 327,
+        "engagement": 4.28,
+        "url": "https://www.tiktok.com/@a1_peru/video/7622073598915710209",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7622073598915710209.jpg"
+      },
+      {
+        "title": "Causa ganadora Punta Sal",
+        "date": "2026-03-30",
+        "views": 274,
+        "likes": 6,
+        "comments": 0,
+        "shares": 0,
+        "reach": 274,
+        "engagement": 2.19,
+        "url": "https://www.tiktok.com/@a1_peru/video/7623158708519996688",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7623158708519996688.jpg"
+      }
+    ],
+    "worst_overall": [
+      {
+        "title": "Receta de siempre",
+        "platform": "TikTok",
+        "date": "2026-03-26",
+        "reach": 206,
+        "views": 206,
+        "likes": 4,
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7621675758674562320.jpg"
+      },
+      {
+        "title": "Paraíso CGI",
+        "platform": "TikTok",
+        "date": "2026-03-23",
+        "reach": 217,
+        "views": 217,
+        "likes": 8,
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7620482638117195024.jpg"
+      },
+      {
+        "title": "Un clic al norte",
+        "platform": "TikTok",
+        "date": "2026-03-25",
+        "reach": 222,
+        "views": 222,
+        "likes": 4,
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7621277280186240272.jpg"
+      }
+    ],
+    "organic_highlights": [
+      {
+        "title": "Sorteo Viaje A1 (carrusel)",
+        "platform": "Instagram",
+        "date": "2026-03-07",
+        "views": 2007,
+        "interactions": 88,
+        "er": "10.90%",
+        "note": "Mejor post orgánico + pauta. Lanzamiento del sorteo.",
+        "coverImageUrl": "https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/646879901_1376152751209034_7566887106753509156_n.jpg",
+        "url": "https://www.instagram.com/p/DVlYmOKDQNr/"
+      },
+      {
+        "title": "Día de la Mujer",
+        "platform": "Instagram",
+        "date": "2026-03-08",
+        "views": 384,
+        "interactions": 33,
+        "er": "16.75%",
+        "note": "100% orgánico. Mejor ER del mes.",
+        "coverImageUrl": "https://scontent-lhr6-2.xx.fbcdn.net/v/t39.30808-6/648154432_1376576134500029_5364670950570464533_n.jpg",
+        "url": "https://www.instagram.com/p/DVn9hKFgd2l/"
+      },
+      {
+        "title": "Sándwich Punta Sal (reel)",
+        "platform": "Instagram Reel",
+        "date": "2026-03-27",
+        "views": 1197,
+        "interactions": 94,
+        "er": "14.87%",
+        "note": "Mejor reel por ER. Formato receta + sorteo.",
+        "url": "https://www.instagram.com/reel/DWZ8dSZj9IX/"
+      }
+    ]
+  },
+  "summary_kpis": {
+    "objectives": "5/5",
+    "reach": "~80K",
+    "tk_views": "3K",
+    "new_followers": "+174",
+    "investment": "~S/ 100"
+  },
+  "reach": {
+    "total_impressions": 80000,
+    "estimated_unique_reach": 50000,
+    "frequency": 1.6,
+    "meta_ads_impressions": 75000,
+    "meta_ads_reach": 45000,
+    "tiktok_ads_impressions": 0,
+    "tiktok_organic_views": 3095,
+    "ig_organic_views": 8500,
+    "fb_organic_impressions": 2000,
+    "influencer_views": 9678
+  },
+  "engagement": {
+    "tiktok_organic": {
+      "likes": 75,
+      "comments": 3,
+      "shares": 8,
+      "total": 86
+    },
+    "ig_posts": {
+      "likes": 230,
+      "comments": 4,
+      "saves": 18,
+      "shares": 36,
+      "total": 289
+    },
+    "ig_reels": {
+      "likes": 264,
+      "comments": 8,
+      "saves": 11,
+      "shares": 75,
+      "total": 378
+    },
+    "fb_total": {
+      "reactions": 516,
+      "comments": 12,
+      "shares": 20,
+      "clicks": 351,
+      "total": 899
+    },
+    "influencers": {
+      "total_views": 9678,
+      "total_likes": 269,
+      "total_shares": 7,
+      "total_comments": 31
+    },
+    "total_meaningful_interactions": 1652
+  },
+  "efficiency": {
+    "meta_cpm_usd": null,
+    "meta_cpm_soles": null,
+    "tiktok_cpm_usd": null,
+    "tiktok_cpm_soles": null,
+    "blended_cpm_usd": null,
+    "blended_cpm_soles": null
+  },
+  "competitors_ig": [
+    {
+      "name": "A1 Perú",
+      "followers": "9,582",
+      "likes_avg": "57.8",
+      "comments_avg": "0.8",
+      "posts": "15",
+      "er": "0.60%"
+    },
+    {
+      "name": "Compass",
+      "followers": "6,303",
+      "likes_avg": "51.6",
+      "comments_avg": "54.3",
+      "posts": "19",
+      "er": "-"
+    },
+    {
+      "name": "Atún Real Perú",
+      "followers": "6,114",
+      "likes_avg": "6.3",
+      "comments_avg": "0.1",
+      "posts": "8",
+      "er": "0.10%"
+    }
+  ],
+  "influencers_ig": [
+    {
+      "name": "Balance Studio",
+      "username": "@balancestudio.pe",
+      "platform": "Pilates/Yoga",
+      "views": 4217,
+      "likes": 35,
+      "shares": 2,
+      "comments": 0,
+      "saves": 0,
+      "content_type": "Semana Solidaria + Donación",
+      "date": "2026-03-09",
+      "url": "https://www.instagram.com/reel/DVrNg6LkUus/"
+    },
+    {
+      "name": "Nathalia Trías",
+      "username": "@nathaliatrias",
+      "platform": "Maternidad",
+      "views": 2910,
+      "likes": 70,
+      "shares": 1,
+      "comments": 6,
+      "saves": 0,
+      "content_type": "Mamá + Sorteo Punta Sal",
+      "date": "2026-03-26",
+      "url": "https://www.instagram.com/reel/DWXYE3djqN4/"
+    },
+    {
+      "name": "Pamela More",
+      "username": "@pamela._more",
+      "platform": "Cocina/Mom",
+      "views": 1744,
+      "likes": 42,
+      "shares": 3,
+      "comments": 7,
+      "saves": 0,
+      "content_type": "Salpicón de atún receta",
+      "date": "2026-03-27",
+      "url": "https://www.instagram.com/reel/DWZ9ucwjwdq/"
+    },
+    {
+      "name": "Majo (Mamademia)",
+      "username": "@mamademia_",
+      "platform": "Maternidad",
+      "views": 807,
+      "likes": 122,
+      "shares": 1,
+      "comments": 18,
+      "saves": 0,
+      "content_type": "Día a mil, atún práctico",
+      "date": "2026-03-28",
+      "url": "https://www.instagram.com/reel/DWb5IywD3on/"
+    }
+  ],
+  "charts": {
+    "reach_mix_labels": [
+      "Instagram",
+      "Facebook",
+      "TikTok",
+      "Influencers"
+    ],
+    "reach_mix_data": [
+      8500,
+      2000,
+      3095,
+      9678
+    ],
+    "months6": [
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
+    ],
+    "cpm_meta": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "cpm_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "bhs_radar": [
+      60,
+      55,
+      72,
+      70,
+      65,
+      60,
+      70
+    ],
+    "bhs_benchmark": [
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70
+    ],
+    "bhs_history": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      65
+    ],
+    "community_total": [
+      22843,
+      23984,
+      24413,
+      24673,
+      25166,
+      25419
+    ],
+    "fb_followers_labels": [
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
+    ],
+    "fb_followers": [
+      15000,
+      15000,
+      15000,
+      15000,
+      15034,
+      15094
+    ],
+    "ig_followers": [
+      7743,
+      8834,
+      9213,
+      9323,
+      9512,
+      9582
+    ],
+    "tk_followers": [
+      100,
+      150,
+      200,
+      350,
+      620,
+      743
+    ],
+    "er_fb": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.73
+    ],
+    "er_ig": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.6
+    ],
+    "er_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      2.8
+    ],
+    "tk_top_videos_labels": [
+      "20 mar\nGym→Playa",
+      "28 mar\nSalpicón",
+      "30 mar\nCausa"
+    ],
+    "tk_top_videos_data": [
+      353,
+      327,
+      274
+    ],
+    "sent_categories_data": [
+      40,
+      30,
+      20,
+      10
+    ],
+    "meta_days": [
+      50,
+      70,
+      80,
+      100,
+      60,
+      40,
+      30
+    ],
+    "tk_hours": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      70,
+      50,
+      30
+    ],
+    "budget_labels": [
+      "IG Reels Boost",
+      "FB Posts Boost",
+      "IG Posts Boost"
+    ],
+    "budget_data": [
+      80,
+      17,
+      3
+    ],
+    "comp_followers_labels": [
+      "A1",
+      "Compass",
+      "Atún Real"
+    ],
+    "comp_followers_data": [
+      9582,
+      6303,
+      6114
+    ],
+    "comp_er_labels": [
+      "A1 FB",
+      "A1 IG Posts",
+      "A1 IG Reels",
+      "Atún Real"
+    ],
+    "comp_er_data": [
+      0.73,
+      0.6,
+      0.39,
+      0.1
+    ],
+    "reach_organic": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      13595
+    ],
+    "reach_paid": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      75000
+    ],
+    "formatos_labels": [
+      "Sorteo/Promo",
+      "Receta Influencer",
+      "Lifestyle Mamá",
+      "Día Especial",
+      "Street Interview"
+    ],
+    "formatos_data": [
+      10.9,
+      14.87,
+      5.35,
+      16.75,
+      7.61
+    ]
+  }
+}
