@@ -39,39 +39,52 @@
   },
   "objectives": [
     {
-      "objective": "Lanzar campaña Sorteo Punta Sal",
-      "channel": "Multi",
-      "target": "Campaña activa",
-      "result": "5 posts IG + 12 TK + 5 FB",
-      "status": "met"
-    },
-    {
-      "objective": "Crecer comunidad Instagram",
-      "channel": "Instagram",
-      "target": "Crecimiento neto",
-      "result": "+71 (+0.7%)",
-      "status": "met"
-    },
-    {
-      "objective": "Activar TikTok como canal nuevo",
-      "channel": "TikTok",
-      "target": "12+ videos",
-      "result": "12 videos, 3K views",
-      "status": "met"
-    },
-    {
-      "objective": "Activar influencers mamá",
-      "channel": "Instagram",
-      "target": "3+ collabs",
-      "result": "4 collabs, 9.7K views",
-      "status": "met"
-    },
-    {
-      "objective": "Mantener comunidad Facebook",
+      "objective": "Alcance Facebook",
       "channel": "Facebook",
-      "target": "Mantener base",
-      "result": "+60 (+0.4%)",
-      "status": "met"
+      "target": "200,204",
+      "result": "261,405",
+      "status": "met",
+      "delta": "+31%"
+    },
+    {
+      "objective": "Interacciones Facebook",
+      "channel": "Facebook",
+      "target": "864",
+      "result": "1,538",
+      "status": "met",
+      "delta": "+78%"
+    },
+    {
+      "objective": "Alcance Instagram",
+      "channel": "Instagram",
+      "target": "133,468",
+      "result": "177,378",
+      "status": "met",
+      "delta": "+33%"
+    },
+    {
+      "objective": "Interacciones Instagram",
+      "channel": "Instagram",
+      "target": "576",
+      "result": "667",
+      "status": "met",
+      "delta": "+16%"
+    },
+    {
+      "objective": "Alcance TikTok",
+      "channel": "TikTok",
+      "target": "197,541",
+      "result": "3,095",
+      "status": "missed",
+      "delta": "1.6%"
+    },
+    {
+      "objective": "Interacciones TikTok",
+      "channel": "TikTok",
+      "target": "1,683",
+      "result": "89",
+      "status": "missed",
+      "delta": "5.3%"
     }
   ],
   "community": {
@@ -121,12 +134,12 @@
   },
   "story": {
     "act1": {
-      "number": "Acto 1 · Instagram Lideró el Mes",
-      "title": "El Sorteo Punta Sal fue el motor de engagement",
+      "number": "Acto 1 · Meta Ads Superó las Metas en FB e IG",
+      "title": "4 de 6 metas cumplidas. FB +31% y IG +33% sobre el target de alcance",
       "paragraphs": [
-        "5 posts y 10 reels en Instagram generaron el grueso de la interacción del mes. El sorteo 'Tu ticket vale un viaje' concentró la estrategia: compra S/15 en Plaza Vea y participa por un viaje todo incluido a Punta Sal.",
-        "Top reel: 'Sándwich Punta Sal' con 1,197 views y 14.87% ER. El formato que mejor funcionó fue mamá real + receta rápida + llamado al sorteo.",
-        "IG creció +71 seguidores (+0.7%). Crecimiento moderado pero consistente, acumulando +1,839 seguidores desde octubre 2025."
+        "La inversión de S/ 868 (USD 229.70) en Meta Ads generó 438,784 personas alcanzadas con un CPM de S/ 1.83. Facebook superó su meta de alcance (261K vs 200K, +31%) e interacciones (1,538 vs 864, +78%). Instagram también superó ambas metas: alcance 177K vs 133K (+33%) e interacciones 667 vs 576 (+16%).",
+        "El sorteo 'Tu ticket vale un viaje a Punta Sal' fue el driver principal. Top reel: 'Sándwich Punta Sal' con 1,197 views y 14.87% ER. Formato ganador: mamá real + receta rápida + llamado al sorteo.",
+        "Provincia recibió 57% del presupuesto (USD 131.77) vs Lima 43% (USD 97.93). Junín (USD 42.54), Arequipa (USD 35.82) y Ucayali (USD 35.32) fueron las regiones con mayor inversión fuera de Lima."
       ]
     },
     "act2": {
@@ -139,12 +152,12 @@
       ]
     },
     "act3": {
-      "number": "Acto 3 · TikTok: Canal Nuevo, Territorio por Conquistar",
-      "title": "12 videos publicados, 743 seguidores. Abril: meta 197K alcance",
+      "number": "Acto 3 · TikTok: Las 2 Metas No Cumplidas",
+      "title": "3,095 views vs meta de 197,541. Sin inversión en TK Ads, el gap era inevitable",
       "paragraphs": [
-        "TikTok es el canal más nuevo de A1. 12 videos publicados en marzo generaron 3,095 views totales. El crecimiento ha sido exponencial: de ~100 en octubre a 743 en marzo. Pero el gap con la meta de abril (197,541 alcance / 88,072 views) es enorme.",
-        "El contenido que mejor funcionó fue el de street interview ('Test mamás en la calle') con 353 views y el salpicón de Pamela More (327 views). La estrategia propone activar 'A1 Live Kitchen': cocina en tiempo real, sin filtros, que el 53.8% de los consumidores exigen para generar confianza.",
-        "El ER promedio en TK (2.8%) es superior al de IG, confirmando que la audiencia está comprometida. Para abril: formatos 15-30s, trends de mamás, diferenciación geográfica (recetas sin cocción para Oriente, legado mamá para Arequipa). Inversión en TK Ads será clave para escalar de 3K a 88K views."
+        "TikTok falló sus dos metas de marzo por un margen enorme: alcance 3,095 vs 197,541 (1.6%) e interacciones 89 vs 1,683 (5.3%). La razón es clara: 0% de inversión en TK Ads. Sin pauta, el canal depende 100% del alcance orgánico de una base de 743 seguidores.",
+        "A pesar del gap, hay señales positivas: el ER orgánico (2.8%) es superior al de IG y FB, indicando que la audiencia pequeña está altamente comprometida. El contenido que mejor funcionó fue street interview (353 views) y salpicón con Pamela More (327 views).",
+        "Para cerrar el gap en abril, se necesita: (1) Activar TK Ads con presupuesto dedicado, (2) Implementar 'A1 Live Kitchen' (cocina en tiempo real), (3) Formatos nativos 15-30s con trends de mamás. El 53.8% de los consumidores exige ver el proceso real para generar confianza."
       ]
     },
     "act4": {
@@ -193,7 +206,7 @@
     }
   },
   "technical_texts": {
-    "resumen": "Campaña Sorteo Punta Sal dominó marzo. +174 seguidores netos. IG: 10 reels + 5 posts. TK: 12 videos (canal nuevo). 4 influencers mamá. FB reactivado con sorteo. 5/5 objetivos cumplidos. Para abril se activan los 4 pilares de contenido de la estrategia 'Marca Refugio' con 22 piezas planificadas.",
+    "resumen": "4/6 metas cumplidas. FB superó alcance (+31%) e interacciones (+78%). IG superó alcance (+33%) e interacciones (+16%). TikTok no cumplió: 1.6% del target de alcance por falta de inversión en TK Ads. Inversión total S/ 868 (USD 229.70) 100% Meta Ads. CPM S/ 1.83. 438K personas alcanzadas. +174 seguidores netos.",
     "audiencia": "Según 318 entrevistas a profundidad: 62% mujeres, 47% entre 36-55 años, 57% Lima. Segmento principal: Cuidadoras del hogar (70% de las entrevistas). Perfil: mamá práctica, busca rapidez (73.6%) y salud/nutrición (83.6%). Compra A1 como 'seguro de alacena' contra imprevistos.",
     "contenido_insight": "Formato ganador: mamá real + receta rápida + llamado a sorteo. El sándwich de atún A1 fue el reel con mejor ER (14.87%). Para abril se diversifica con 4 pilares: Tips A1 (30%), Momentos A1 (25%), Soy Mamá A1 (25%), Recetas A1 (20%).",
     "contenido_fail": "TK videos con bajo alcance (<350 views), reflejo de fase inicial. FB sin pauta: alcance <250 personas. Marzo fue 90% sorteo; faltó contenido de valor tipo 'Anita' (persona de marca). El 53.8% exige ver proceso real, no fotos de plato terminado.",
@@ -201,7 +214,7 @@
     "riesgo_fb": "FB orgánico sin pauta alcanza <250 personas por post. Con pauta de Meta Ads, se alcanzaron 438,784 personas únicas en marzo (CPM S/ 1.83). Provincia respondió mejor: 225K alcance con 57% del presupuesto.",
     "indice_valor": "Fórmula: (Saves×3 + Shares×2 + Comments×1.5 + Likes×1) / Reach × 1000\nIG Top: Sorteo carrusel: (6×3 + 9×2 + 2×1.5 + 71×1) / 807 × 1000 = 117.5\nFB Top: Ticket viaje: (0×3 + 15×2 + 7×1.5 + 432×1) / 7,633 × 1000 = 62.4",
     "temas_recurrentes": "Sorteo Punta Sal, recetas rápidas, mamá resolutiva, practicidad del atún A1. Abril introduce: momentos reales, tips de vida, trends mamá, y recetas express con ingredientes de despensa.",
-    "bhs_explicacion": "BHS 65/100. Fortalezas: Engagement (72) por ER competitivo y sentimiento positivo. Debilidades: Alcance (55) por volumen bajo en TK y dependencia de pauta en FB. La activación de los 4 pilares y la inversión en pauta proyectan mejora a 70-75 en abril."
+    "bhs_explicacion": "BHS 65/100. Fortalezas: Engagement (72) por ER competitivo y sentimiento positivo. Alcance mejorado tras data real de Meta Ads (438K personas). Debilidades: TK falló ambas metas (alcance 1.6%, interacciones 5.3%) por falta de inversión. Metas 67/100 (4/6 cumplidas)."
   },
   "bhs": {
     "total": 65,
@@ -212,7 +225,7 @@
       "engagement": 72,
       "sentimiento": 70,
       "eficiencia": 65,
-      "metas": 60,
+      "metas": 67,
       "posicion_comp": 70
     }
   },
@@ -260,7 +273,7 @@
       "description": "Agregar Florida, Campomar y Fanny en Metricool. Objetivo: consolidar A1 como tercera marca en conservas de pescado (4.8% → 6.5% market share)."
     }
   ],
-  "april_projections": {
+  "march_metas": {
     "facebook": {
       "alcance_provincia": 89830,
       "interacciones_provincia": 264,
@@ -404,7 +417,7 @@
     ]
   },
   "summary_kpis": {
-    "objectives": "5/5",
+    "objectives": "4/6",
     "reach": "439K",
     "tk_views": "3K",
     "new_followers": "+174",
