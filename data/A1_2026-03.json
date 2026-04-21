@@ -38,54 +38,24 @@
     "confidential": "Este reporte es confidencial y fue preparado exclusivamente para A1 Perú"
   },
   "objectives": [
-    {
-      "objective": "Alcance FB Lima",
-      "channel": "Facebook",
-      "target": "110,374",
-      "result": "148,848",
-      "status": "met",
-      "delta": "+35%"
-    },
-    {
-      "objective": "Alcance FB Provincia",
-      "channel": "Facebook",
-      "target": "89,830",
-      "result": "112,529",
-      "status": "met",
-      "delta": "+25%"
-    },
-    {
-      "objective": "Alcance IG Lima",
-      "channel": "Instagram",
-      "target": "73,582",
-      "result": "64,821",
-      "status": "missed",
-      "delta": "88%"
-    },
-    {
-      "objective": "Alcance IG Provincia",
-      "channel": "Instagram",
-      "target": "59,886",
-      "result": "112,529",
-      "status": "met",
-      "delta": "+88%"
-    },
-    {
-      "objective": "Alcance TK Lima",
-      "channel": "TikTok",
-      "target": "112,722",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    },
-    {
-      "objective": "Alcance TK Provincia",
-      "channel": "TikTok",
-      "target": "84,819",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    }
+    {"objective": "Alcance FB Lima", "channel": "Facebook", "target": "110,374", "result": "148,848", "status": "met", "delta": "+35%"},
+    {"objective": "Interacciones FB Lima", "channel": "Facebook", "target": "600", "result": "22,890", "status": "met", "delta": "+3715%"},
+    {"objective": "Visualizaciones FB Lima", "channel": "Facebook", "target": "16,998", "result": "43,637", "status": "met", "delta": "+157%"},
+    {"objective": "Alcance FB Provincia", "channel": "Facebook", "target": "89,830", "result": "112,529", "status": "met", "delta": "+25%"},
+    {"objective": "Interacciones FB Provincia", "channel": "Facebook", "target": "264", "result": "25,189", "status": "met", "delta": "+9441%"},
+    {"objective": "Visualizaciones FB Provincia", "channel": "Facebook", "target": "11,783", "result": "40,846", "status": "met", "delta": "+247%"},
+    {"objective": "Alcance IG Lima", "channel": "Instagram", "target": "73,582", "result": "64,821", "status": "missed", "delta": "88%"},
+    {"objective": "Interacciones IG Lima", "channel": "Instagram", "target": "400", "result": "9,618", "status": "met", "delta": "+2304%"},
+    {"objective": "Visualizaciones IG Lima", "channel": "Instagram", "target": "11,332", "result": "14,652", "status": "met", "delta": "+29%"},
+    {"objective": "Alcance IG Provincia", "channel": "Instagram", "target": "59,886", "result": "112,529", "status": "met", "delta": "+88%"},
+    {"objective": "Interacciones IG Provincia", "channel": "Instagram", "target": "176", "result": "25,189", "status": "met", "delta": "+14212%"},
+    {"objective": "Visualizaciones IG Provincia", "channel": "Instagram", "target": "7,855", "result": "40,846", "status": "met", "delta": "+420%"},
+    {"objective": "Alcance TK Lima", "channel": "TikTok", "target": "112,722", "result": "—", "status": "missed", "delta": "0%"},
+    {"objective": "Interacciones TK Lima", "channel": "TikTok", "target": "1,030", "result": "—", "status": "missed", "delta": "0%"},
+    {"objective": "Visualizaciones TK Lima", "channel": "TikTok", "target": "50,368", "result": "—", "status": "missed", "delta": "0%"},
+    {"objective": "Alcance TK Provincia", "channel": "TikTok", "target": "84,819", "result": "—", "status": "missed", "delta": "0%"},
+    {"objective": "Interacciones TK Provincia", "channel": "TikTok", "target": "653", "result": "—", "status": "missed", "delta": "0%"},
+    {"objective": "Visualizaciones TK Provincia", "channel": "TikTok", "target": "37,704", "result": "—", "status": "missed", "delta": "0%"}
   ],
   "community": {
     "facebook": {
@@ -134,8 +104,8 @@
   },
   "story": {
     "act1": {
-      "number": "Acto 1 · 4/6 Metas de Alcance por Geografía",
-      "title": "FB cumplió en Lima y Provincia. IG Provincia reventó (+88%), pero IG Lima se quedó corto (88%)",
+      "number": "Acto 1 · 11/18 Metas Cumplidas por Geografía",
+      "title": "FB 6/6 perfecto. IG 5/6 (solo falló alcance Lima). TK 0/6 sin inversión",
       "paragraphs": [
         "Con S/ 868 (USD 229.70) en Meta Ads y un CPM de S/ 1.83, se alcanzaron 438,784 personas únicas. El desglose geográfico revela matices importantes: FB Lima superó su meta por 35% (148K vs 110K) y FB Provincia por 25% (112K vs 89K). Ambas geografías cumplieron en Facebook.",
         "Instagram muestra un contraste fuerte: IG Provincia superó su meta por 88% (112K vs 59K), lo que indica que las campañas combinadas FB+IG en provincias tuvieron alto impacto en IG. Sin embargo, IG Lima se quedó en 88% de su meta (64K vs 73K). Es el único objetivo de Meta que no se cumplió.",
@@ -206,7 +176,7 @@
     }
   },
   "technical_texts": {
-    "resumen": "4/6 metas de alcance por geografía cumplidas. FB Lima +35%, FB Provincia +25%, IG Provincia +88%. IG Lima no cumplió (88%). TikTok sin inversión: 0% en ambas geografías. Inversión S/ 868 (USD 229.70) 100% Meta Ads. CPM S/ 1.83. 438K personas alcanzadas. Provincia 57% del presupuesto.",
+    "resumen": "11/18 metas cumplidas. FB cumplió 6/6 (Lima y Provincia en alcance, interacciones y visualizaciones). IG cumplió 5/6 (solo falló alcance Lima, 88%). TikTok 0/6 por falta de inversión en TK Ads. Inversión S/ 868 (USD 229.70) 100% Meta Ads. CPM S/ 1.83. 438K personas alcanzadas.",
     "audiencia": "Según 318 entrevistas a profundidad: 62% mujeres, 47% entre 36-55 años, 57% Lima. Segmento principal: Cuidadoras del hogar (70% de las entrevistas). Perfil: mamá práctica, busca rapidez (73.6%) y salud/nutrición (83.6%). Compra A1 como 'seguro de alacena' contra imprevistos.",
     "contenido_insight": "Formato ganador: mamá real + receta rápida + llamado a sorteo. El sándwich de atún A1 fue el reel con mejor ER (14.87%). Para abril se diversifica con 4 pilares: Tips A1 (30%), Momentos A1 (25%), Soy Mamá A1 (25%), Recetas A1 (20%).",
     "contenido_fail": "TK videos con bajo alcance (<350 views), reflejo de fase inicial. FB sin pauta: alcance <250 personas. Marzo fue 90% sorteo; faltó contenido de valor tipo 'Anita' (persona de marca). El 53.8% exige ver proceso real, no fotos de plato terminado.",
@@ -417,7 +387,7 @@
     ]
   },
   "summary_kpis": {
-    "objectives": "4/6",
+    "objectives": "11/18",
     "reach": "439K",
     "tk_views": "3K",
     "new_followers": "+174",
