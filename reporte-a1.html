@@ -884,7 +884,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   <a class="side-link" href="#sec-engagement"><span class="side-dot" style="background:var(--fucsia)"></span> Engagement</a>
   <a class="side-link" href="#sec-contenido"><span class="side-dot" style="background:var(--purple)"></span> Contenido</a>
   <a class="side-link" href="#sec-sentimiento"><span class="side-dot" style="background:var(--teal)"></span> Sentimiento</a>
-  <!-- Audiencia section -->
+  <a class="side-link" href="#sec-audiencia"><span class="side-dot" style="background:var(--warning)"></span> Audiencia</a>
   <a class="side-link" href="#sec-inversion"><span class="side-dot" style="background:var(--success)"></span> Inversión</a>
   <a class="side-link" href="#sec-competencia"><span class="side-dot" style="background:var(--danger)"></span> Competencia</a>
   <a class="side-link" href="#sec-score"><span class="side-dot" style="background:var(--fucsia)"></span> Brand Health</a>
@@ -998,7 +998,20 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   </div>
 </section>
 
-<!-- sec-audiencia -->
+<div class="sec-divider"></div>
+<section class="report-section" id="sec-audiencia">
+  <div class="sec-header"><div class="sec-number" style="background:linear-gradient(135deg,var(--warning),#FF6B6B)">🎯</div><div class="sec-header-text"><div class="sec-title">Perfil de Audiencia</div><div class="sec-subtitle"></div></div></div>
+  <div class="sec-body"></div>
+  <div class="chart-row-3">
+    <div class="chart-container"><div class="chart-title">Facebook — Edad</div><div class="chart-wrapper"><canvas id="chartFBAge"></canvas></div></div>
+    <div class="chart-container"><div class="chart-title">Instagram — Edad</div><div class="chart-wrapper"><canvas id="chartIGAge"></canvas></div></div>
+    <div class="chart-container"><div class="chart-title">TikTok — Edad</div><div class="chart-wrapper"><canvas id="chartTKAge"></canvas></div></div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-container"><div class="chart-title">Género por Plataforma</div><div class="chart-wrapper"><canvas id="chartGenero"></canvas></div></div>
+    <div class="chart-container"><div class="chart-title">Comparativa de Edad Cross-channel</div><div class="chart-wrapper"><canvas id="chartAgeComp"></canvas></div></div>
+  </div>
+</section>
 
 <div class="sec-divider"></div>
 <section class="report-section" id="sec-inversion">
@@ -1992,8 +2005,8 @@ function populateAllSections() {
       }
       if (i===4 && D.competitors_ig && D.competitors_ig.length) {
         const sorted = [...D.competitors_ig].sort((a,b)=>(parseFloat(b.er)||0)-(parseFloat(a.er)||0));
-        if (sorted[0] && sorted[0].name.toLowerCase().includes('a1')) {
-          h += '<div class="story-highlight"><div class="story-highlight-text">A1 lidera en Engagement Rate de Instagram en su categoría con '+sorted[0].er+'%, superando a Compass y Atún Real</div></div>';
+        if (sorted[0] && sorted[0].name.toLowerCase().includes(D.brand.toLowerCase().split(' ')[0])) {
+          h += '<div class="story-highlight"><div class="story-highlight-text">'+D.brand+' lidera en Engagement Rate de Instagram en su categoría con '+sorted[0].er+'%, superando a todos los competidores</div></div>';
         }
       }
       if (a.highlight) { h += '<div class="story-highlight"><div class="story-highlight-text">'+a.highlight+'</div>'; if (a.highlight_sub) h += '<div class="story-highlight-sub">'+a.highlight_sub+'</div>'; h += '</div>'; }
@@ -2233,39 +2246,34 @@ function populateAllSections() {
     h += '</div></div>';
     if (T.temas_recurrentes) h += '<div class="analysis-block"><div class="analysis-label">◈ Temas ('+(s.total||0)+' comentarios)</div><div class="analysis-text">'+T.temas_recurrentes.replace(/\n/g,'<br>')+'</div></div>';
     // Word Cloud
-    const wcWords = [
-      {word:'A1',s:3.5},{word:'atún',s:3.2},{word:'sorteo',s:2.8},{word:'Punta Sal',s:2.5},
-      {word:'mamá',s:2.8},{word:'receta',s:2.3},{word:'familia',s:2.0},{word:'viaje',s:2.0},
-      {word:'rapidito',s:1.8},{word:'causa',s:1.8},{word:'buenazo',s:2.2},{word:'latita',s:1.6},
-      {word:'salvavidas',s:2.0},{word:'comprar',s:1.5},{word:'alacena',s:1.5},{word:'tallarines',s:1.4},
-      {word:'proteína',s:1.3},{word:'sándwich',s:1.4},{word:'calidad',s:1.6},{word:'filete',s:1.5},
-      {word:'peruano',s:1.3},{word:'favorito',s:1.7},{word:'siempre',s:2.0},{word:'práctico',s:1.4},
-      {word:'ceviche',s:1.3},{word:'saltado',s:1.2},{word:'despensa',s:1.4}
+    const wcWords = D.word_cloud || [
+      {word:D.brand||'Marca',s:3.5},{word:'calidad',s:3.2},{word:'favorito',s:2.8},{word:'buenazo',s:2.5},
+      {word:'siempre',s:2.0},{word:'recomendado',s:1.8},{word:'familia',s:2.2},{word:'confianza',s:1.6},
+      {word:'producto',s:2.0},{word:'comprar',s:1.5},{word:'sabor',s:1.5},{word:'excelente',s:1.4},
+      {word:'rico',s:1.3},{word:'práctico',s:1.4},{word:'delicioso',s:1.6},{word:'infaltable',s:1.5}
     ];
     const wcCol = ['var(--fucsia)','var(--teal)','var(--purple)','var(--white)','var(--success)','#FF6B6B','#9B6BFF'];
     h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">☁️ Nube de Palabras</div><div class="layer-line"></div></div>';
     h += '<div class="word-cloud">';
     wcWords.forEach((w,i) => { h += '<span class="wc-word" style="font-size:'+(w.s*14)+'px;color:'+wcCol[i%wcCol.length]+';opacity:'+(0.5+w.s/7)+'">'+w.word+'</span> '; });
     h += '</div>';
-    // Insight quotes
-    h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">💬 Voces de la Comunidad</div><div class="layer-line"></div></div>';
-    h += '<div class="quotes-grid">';
-    const quotes = [
-      {t:'El atún A1 es mi salvavidas cuando el tiempo me gana o se acaba el gas',u:'@lucia_arequipa',p:'IG'},
-      {t:'Siempre tengo 6 latas de A1 en la alacena, por si acaso',u:'@anita_losolivos',p:'IG'},
-      {t:'Mi causa de atún me la enseñó mi mamá, y ella la aprendió de mi abuela. Siempre con A1',u:'@recetas_mamita',p:'TK'},
-      {t:'Quiero participar del sorteo! A1 de toda la vida',u:'@maria.lima.pe',p:'IG'},
-      {t:'Tallarines con atún en 8 minutos, mis hijos felices y yo tranquila',u:'@mamapractica_pe',p:'TK'},
-      {t:'Lo mejor cuando llegas cansada del trabajo. Rapidito y con sabor de casa',u:'@shanita_45',p:'TK'},
-      {t:'Mi hijo dice mamá cocinas tú? es que la del restaurante no sabe igual',u:'@cocina_real_pe',p:'IG'},
-      {t:'A1 de toda la vida. Mi mamá lo compraba y ahora yo también',u:'@martin.salvador50',p:'IG'}
-    ];
-    quotes.forEach(q => { h += '<div class="quote-card"><div class="quote-text">"'+q.t+'"</div><div class="quote-user"><span style="color:var(--success)">●</span> '+q.u+' · '+q.p+'</div></div>'; });
-    h += '</div>';
+    // Insight quotes (only if data exists in JSON)
+    if (D.community_quotes && D.community_quotes.length > 0) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">💬 Voces de la Comunidad</div><div class="layer-line"></div></div>';
+      h += '<div class="quotes-grid">';
+      D.community_quotes.forEach(q => { h += '<div class="quote-card"><div class="quote-text">"'+q.t+'"</div><div class="quote-user"><span style="color:var(--success)">●</span> '+q.u+' · '+q.p+'</div></div>'; });
+      h += '</div>';
+    }
     b6.innerHTML = h;
   }
 
   // ── SEC-AUDIENCIA ──
+  const b7 = body('sec-audiencia');
+  if (b7) {
+    let h = '';
+    if (T.audiencia) h += '<div class="analysis-block"><div class="analysis-label">◈ Insight de Audiencia</div><div class="analysis-text">'+T.audiencia+'</div></div>';
+    b7.innerHTML = h;
+  }
 
   // ── SEC-INVERSION ──
   const b8 = body('sec-inversion');
@@ -2338,13 +2346,59 @@ function populateAllSections() {
   }
 }
 
-// Initialize: fetch data → populate → charts → images
+// ══════════════════════════════════════════════
+//  CONDITIONAL SECTION VISIBILITY
+//  Hides sections + nav links when data is missing
+// ══════════════════════════════════════════════
+function hideEmptySections() {
+  const D = REPORT_DATA;
+  const C = D.charts || {};
+  const T = D.technical_texts || {};
+
+  const checks = {
+    'sec-comunidad': () => D.community && (D.community.facebook?.end > 0 || D.community.instagram?.end > 0 || D.community.tiktok?.end > 0),
+    'sec-alcance': () => D.reach && D.reach.total_impressions > 0,
+    'sec-engagement': () => D.engagement && D.engagement.total_meaningful_interactions > 0,
+    'sec-contenido': () => D.content && (D.content.top_tiktok?.length > 0 || D.content.organic_highlights?.length > 0),
+    'sec-sentimiento': () => D.sentiment && D.sentiment.total > 0,
+    'sec-audiencia': () => T.audiencia && C.fb_age && C.fb_age.some(v => v > 0),
+    'sec-inversion': () => D.investment && D.investment.total_usd > 0,
+    'sec-competencia': () => D.competitors_ig && D.competitors_ig.length > 0,
+    'sec-score': () => D.bhs && D.bhs.total > 0,
+    'sec-plan': () => D.recommendations && D.recommendations.length > 0,
+  };
+
+  Object.entries(checks).forEach(([secId, check]) => {
+    let visible = true;
+    try { visible = check(); } catch(e) { visible = false; }
+
+    if (!visible) {
+      // Hide section
+      const sec = document.getElementById(secId);
+      if (sec) {
+        sec.style.display = 'none';
+        // Hide preceding divider
+        const prev = sec.previousElementSibling;
+        if (prev && prev.classList.contains('sec-divider')) prev.style.display = 'none';
+      }
+      // Hide nav link
+      const navLink = document.querySelector('.side-link[href="#'+secId+'"]');
+      if (navLink) navLink.style.display = 'none';
+    }
+  });
+
+  // Story mode: hide acts that reference hidden sections
+  // (already handled by JSON - if act doesn't exist, it won't render)
+}
+
+// Initialize: fetch data → populate → charts → images → hide empty
 document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('sideNav').style.display = 'none';
   await fetchReportData();
   populateReport();
   populateAllSections();
   initCharts();
+  hideEmptySections();
   loadImages();
 });
 
@@ -2464,7 +2518,12 @@ new Chart('chartSentCateg', doughnutOpts(
   [success,'rgba(34,197,94,.7)',teal,'rgba(32,236,200,.6)',warning,'rgba(245,158,11,.5)',danger,'rgba(248,76,222,.5)']));
 new Chart('chartSentEvol', lineOpts(months6, [{label:'Net Score',data:C.sent_net_score_history,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:false,tension:.4,pointBackgroundColor:teal,pointRadius:6},{label:'Benchmark (+50)',data:[50,50,50,50,50,50],borderColor:'rgba(255,255,255,.2)',borderDash:[4,4]}]));
 
-// AUDIENCIA — no charts for this report
+// AUDIENCIA charts
+const ageLabels = ['13-17','18-24','25-34','35-44','45-54','55-64','65+'];
+if (C.fb_age && C.fb_age.some(v=>v>0)) new Chart('chartFBAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.fb_age,backgroundColor:purple2,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
+if (C.ig_age && C.ig_age.some(v=>v>0)) new Chart('chartIGAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.ig_age,backgroundColor:fucsia,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
+if (C.tk_age && C.tk_age.some(v=>v>0)) new Chart('chartTKAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.tk_age,backgroundColor:teal,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
+if (C.gender_female && C.gender_female.some(v=>v>0)) new Chart('chartGenero',{type:'bar',data:{labels:['Facebook','Instagram','TikTok'],datasets:[{label:'Mujer',data:C.gender_female,backgroundColor:fucsia,borderRadius:[6,6,6,6]},{label:'Hombre',data:C.gender_male,backgroundColor:purple2,borderRadius:[6,6,6,6]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{padding:14,usePointStyle:true}}},scales:{x:{stacked:true,grid:{color:gridColor}},y:{stacked:true,grid:{color:gridColor}}}}});
 // Charts skipped: chartFBAge, chartIGAge, chartTKAge, chartGenero, chartAgeComp
 
 // INVERSIÓN
@@ -2528,7 +2587,7 @@ function downloadPPTX() {
   s2.background = { fill: BG };
   addText(s2, 'Resumen Ejecutivo', { x:0.5, y:0.3, fontSize:24, bold:true });
   addText(s2, (RD.technical_texts&&RD.technical_texts.resumen)||'Reporte mensual '+RD.brand+' — '+RD.period, { x:0.5, y:0.9, fontSize:11, color:'CCCCDD', w:12 });
-  const funnel = [['474K','Impresiones','Freq. 1.08x'],['439K','Alcance Único','Meta Ads'],['3,053','Clics Totales','Meta Ads'],['1,652','Interacciones','Org. + Influencers'],['+174','Nuevos Seg.','FB+IG+TK']];
+  const funnel = [[fmtK(RD.reach.total_impressions||0),'Impresiones','Freq. '+(RD.reach.frequency||'–')+'x'],[fmtK(RD.reach.estimated_unique_reach||0),'Alcance Único','Cross-channel'],[fmt(RD.engagement.total_meaningful_interactions||0),'Interacciones','Meta + Org. + TK'],[RD.summary_kpis.new_followers||'–','Nuevos Seg.','FB+IG+TK'],['S/ '+fmt(Math.round(RD.investment.total_soles||0)),'Inversión','USD '+fmt(Math.round(RD.investment.total_usd||0))]];
   funnel.forEach((f,i) => {
     const x = 0.5 + i*2.5;
     s2.addShape(pptx.ShapeType.roundRect, { x, y:2.0, w:2.3, h:1.6, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2569,8 +2628,8 @@ function downloadPPTX() {
   let s4 = pptx.addSlide();
   s4.background = { fill: BG };
   addText(s4, 'Distribución de Alcance', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s4, 'S/ 868 (USD 229.70) en Meta Ads. 438,784 personas alcanzadas. 473,935 impresiones. CPM: S/ 1.83', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const alcKpis = [['3,095','TK Vistas Orgánicas'],['439K','Meta Ads Reach'],['474K','Impresiones Totales'],['1.08x','Frecuencia Prom.']];
+  addText(s4, 'S/ '+fmt(Math.round(RD.investment.total_soles||0))+' inversión. '+fmtK(RD.reach.estimated_unique_reach||0)+' alcance único. '+fmtK(RD.reach.total_impressions||0)+' impresiones.', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const alcKpis = [[fmtK(RD.reach.tiktok_organic_views||0),'TK Vistas Orgánicas'],[fmtK(RD.reach.meta_ads_reach||0),'Meta Ads Reach'],[fmtK(RD.reach.total_impressions||0),'Impresiones Totales'],[(RD.reach.frequency||'–')+'x','Frecuencia Prom.']];
   alcKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s4.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2582,8 +2641,9 @@ function downloadPPTX() {
   let s5 = pptx.addSlide();
   s5.background = { fill: BG };
   addText(s5, 'Engagement e Índice de Valor', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s5, 'Sorteo Punta Sal fue el driver de engagement. ER FB 0.73%, ER IG 0.60%, ER TK 2.8%', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const engKpis = [['0.73%','ER Facebook','Benchmark: 0.5%'],['2.8%','ER TikTok','Mejor canal por ER'],['117.5','Índice Valor IG','Sorteo carrusel'],['62.4','Índice Valor FB','Ticket viaje']];
+  const erFb = RD.charts.er_fb?.[5] || '–'; const erIg = RD.charts.er_ig?.[5] || '–'; const erTk = RD.charts.er_tk?.[5] || '–';
+  addText(s5, 'ER FB '+(erFb)+'% · ER IG '+(erIg)+'% · ER TK '+(erTk)+'%', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const engKpis = [[(erFb)+'%','ER Facebook','Benchmark: 0.5%'],[(erTk)+'%','ER TikTok','Canal video'],[(erIg)+'%','ER Instagram','Posts + Reels'],[(RD.bhs.total||'–'),'BHS Score','/100']];
   engKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s5.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.4, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2591,18 +2651,18 @@ function downloadPPTX() {
     addText(s5, k[1], { x:x+0.2, y:2.1, fontSize:9, color:GRAY });
     addText(s5, k[2], { x:x+0.2, y:2.4, fontSize:9, color:SUCCESS });
   });
-  addText(s5, 'Fórmula Índice de Valor: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) ÷ Alcance × 1000\nIG Top: Sorteo carrusel 117.5 | FB Top: Ticket viaje 62.4', { x:0.5, y:3.3, fontSize:10, color:'CCCCDD', w:12 });
+  addText(s5, 'Fórmula Índice de Valor: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) ÷ Alcance × 1000', { x:0.5, y:3.3, fontSize:10, color:'CCCCDD', w:12 });
 
   // ─── SLIDE 6: TOP/WORST CONTENIDO ───
   let s6 = pptx.addSlide();
   s6.background = { fill: BG };
   addText(s6, 'Análisis de Contenido', { x:0.5, y:0.3, fontSize:24, bold:true });
   addText(s6, '🏆 Top Performers', { x:0.5, y:0.85, fontSize:11, color:TEAL, bold:true });
-  const tops = [
-    ['#1 IG Reel','Sándwich Punta Sal','1,197 vistas','94 interacciones · 14.87% ER','Receta + Sorteo'],
-    ['#1 IG Post','Sorteo Viaje A1','2,007 vistas','88 interacciones · 10.90% ER','Lanzamiento sorteo'],
-    ['#1 FB','Tu ticket vale un viaje','432 reacciones','7 comentarios · 15 compartidos','Top engagement FB']
-  ];
+  const tops = [];
+  if (RD.content.organic_highlights) RD.content.organic_highlights.slice(0,3).forEach((p,i) => {
+    tops.push(['#'+(i+1)+' '+p.platform, p.title, fmt(p.views||0)+' vistas', fmt(p.interactions||0)+' int. · '+(p.er||'–')+' ER', p.note||'']);
+  });
+  if (tops.length===0) tops.push(['—','Sin datos de contenido','','','']);
   tops.forEach((t,i) => {
     const x = 0.5 + i*4.2;
     s6.addShape(pptx.ShapeType.roundRect, { x, y:1.2, w:3.8, h:2.0, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2613,14 +2673,15 @@ function downloadPPTX() {
     addText(s6, t[4], { x:x+0.15, y:2.7, fontSize:8, color:GRAY });
   });
   addText(s6, '⚠ Menor Rendimiento', { x:0.5, y:3.5, fontSize:11, color:DANGER, bold:true });
-  addText(s6, '• TikTok en fase inicial: mejor video 353 vistas. Canal nuevo, base de 743 seguidores.\n• FB sin pauta: <250 alcance/post. Con pauta de S/10: 7K-40K (diferencia de 30x).\n• Regla: FB necesita inversión. TK necesita volumen y formatos nativos (A1 Live Kitchen).', { x:0.5, y:3.85, fontSize:9, color:'CCCCDD', w:12 });
+  addText(s6, (RD.technical_texts.contenido_fail||'Análisis de contenido de menor rendimiento.'), { x:0.5, y:3.85, fontSize:9, color:'CCCCDD', w:12 });
 
   // ─── SLIDE 7: INVERSIÓN ───
   let s7 = pptx.addSlide();
   s7.background = { fill: BG };
   addText(s7, 'Eficiencia de Inversión', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s7, 'S/ 868 (USD 229.70) 100% Meta Ads. CPM S/ 1.83. Provincia 57% del presupuesto con mejor rendimiento.', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const invKpis = [['S/ 868','Inversión Total','USD 229.70'],['S/ 1.83','CPM Meta Ads','USD 0.48'],['S/ 0','TikTok Ads','Sin inversión TK'],['S/ 4.99','Costo/Seguidor','174 nuevos seg.']];
+  const inv = RD.investment, eff = RD.efficiency;
+  addText(s7, 'S/ '+fmt(Math.round(inv.total_soles||0))+' inversión total. CPM Meta: S/ '+(eff.meta_cpm_soles||'–')+'. CPM TK: S/ '+(eff.tiktok_cpm_soles||'–'), { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const invKpis = [['S/ '+fmt(Math.round(inv.total_soles||0)),'Inversión Total','USD '+fmt(Math.round(inv.total_usd||0))],['S/ '+(eff.meta_cpm_soles||'–'),'CPM Meta','USD '+(eff.meta_cpm_usd||'–')],['S/ '+(eff.tiktok_cpm_soles||'–'),'CPM TikTok','USD '+(eff.tiktok_cpm_usd||'–')],['S/ '+(eff.blended_cpm_soles||'–'),'CPM Blended','USD '+(eff.blended_cpm_usd||'–')]];
   invKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s7.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });

@@ -26,6 +26,31 @@
 [data-theme="light"] .cierre{background:linear-gradient(135deg,#F5F5FA 0%,#EDE0FF 50%,#F5F5FA 100%)}
 [data-theme="light"] .story-text,[data-theme="light"] .risk-alert-text,[data-theme="light"] .action-box-text,[data-theme="light"] .story-risk-text{color:#444466}
 [data-theme="light"] .insight-text{color:#333355}
+[data-theme="light"] .post-card{background:#FFF;border-color:rgba(0,0,0,.08)}
+[data-theme="light"] .post-card:hover{border-color:rgba(75,0,255,.3)}
+[data-theme="light"] .post-title{color:#111128}
+[data-theme="light"] .post-date{color:#666}
+[data-theme="light"] .post-metric-label{color:#888}
+[data-theme="light"] .retention-card{background:#FFF;border-color:rgba(0,0,0,.08)}
+[data-theme="light"] .ret-title{color:#111128}
+[data-theme="light"] .ret-duration{color:#888}
+[data-theme="light"] .ret-bar-track{background:rgba(0,0,0,.06)}
+[data-theme="light"] .quote-card{background:#FFF;border-color:rgba(0,0,0,.08)}
+[data-theme="light"] .quote-text{color:#333}
+[data-theme="light"] .quote-user{color:#888}
+[data-theme="light"] .word-cloud .wc-word{filter:brightness(0.7) saturate(1.5)}
+[data-theme="light"] .pk-value{color:#111128 !important}
+[data-theme="light"] .summary-bar{background:rgba(0,0,0,.02)}
+[data-theme="light"] .sp-val{color:#111128}
+[data-theme="light"] .kpi-value{color:#111128}
+[data-theme="light"] .bhs-big,.bhs-score{color:#111128}
+[data-theme="light"] .analysis-text{color:#444}
+[data-theme="light"] .sent-bar-label{color:#444}
+[data-theme="light"] .sentiment-score-value{color:#111128}
+[data-theme="light"] .comp-table td{color:#333}
+[data-theme="light"] .comp-table th{color:#666}
+[data-theme="light"] .act-title{color:#111128}
+[data-theme="light"] .act-number{color:#673CEF}
 :root{
   --purple:#4B00FF;--purple2:#673CEF;--fucsia:#F84CDE;--teal:#20ECC8;
   --white:#FFFFFF;--gray:#8888AA;--gray2:#55557A;
@@ -556,9 +581,9 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 }
 .post-card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.12)}
 
-/* Thumbnail placeholder — gradient block */
+/* Thumbnail placeholder */
 .post-thumb{
-  height:160px;position:relative;overflow:hidden;
+  height:200px;position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
 .post-thumb-inner{
@@ -628,6 +653,19 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 .act-number{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--fucsia);text-transform:uppercase;margin-bottom:8px}
 .act-title{font-size:26px;font-weight:900;letter-spacing:-.03em;line-height:1.2;color:var(--white);margin-bottom:14px;max-width:720px}
 .story-text{font-size:15px;color:#D8D8E8;line-height:1.75;max-width:700px;margin-bottom:22px}
+.act-detail{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.act-detail.open{max-height:3000px}
+.act-toggle{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 16px;margin:8px 0 16px;border-radius:8px;
+  border:1px solid var(--border);background:var(--card);
+  font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;
+  color:var(--fucsia);cursor:pointer;transition:all .15s;
+  letter-spacing:.04em;
+}
+.act-toggle:hover{background:rgba(248,76,222,.08);border-color:rgba(248,76,222,.3)}
+.act-toggle .toggle-arrow{transition:transform .2s;display:inline-block}
+.act-toggle .toggle-arrow.open{transform:rotate(180deg)}
 .story-text strong{color:var(--white);font-weight:700}
 .story-text em{color:var(--fucsia);font-style:normal;font-weight:600}
 
@@ -730,6 +768,29 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 .annex-switch{text-align:center;padding:36px 0;border-top:1px solid var(--border);margin-top:16px}
 .annex-switch-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;border:1px solid rgba(75,0,255,.3);background:rgba(75,0,255,.08);color:var(--purple2);font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s}
 .annex-switch-btn:hover{background:rgba(75,0,255,.15);color:var(--white)}
+
+/* Retention Grid */
+.retention-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:16px 0}
+.retention-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.ret-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px}
+.ret-duration{font-size:10px;color:var(--gray);margin-bottom:10px}
+.ret-bar-track{height:8px;background:rgba(255,255,255,0.05);border-radius:4px;position:relative;overflow:hidden}
+.ret-bar-fill{height:100%;border-radius:4px}
+.ret-metrics{display:flex;gap:16px;margin-top:8px}
+.ret-metric{display:flex;flex-direction:column;gap:2px}
+.ret-metric-val{font-size:15px;font-weight:800}
+.ret-metric-label{font-size:9px;color:var(--gray);text-transform:uppercase;letter-spacing:.08em}
+
+/* Word Cloud */
+.word-cloud{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 16px;padding:32px 20px;min-height:140px}
+.wc-word{font-weight:700;display:inline-block;transition:transform .2s}
+.wc-word:hover{transform:scale(1.1)}
+
+/* Quote Cards */
+.quotes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:16px 0}
+.quote-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.quote-text{font-size:13px;color:var(--white);line-height:1.6;font-style:italic}
+.quote-user{font-size:10px;color:var(--gray);font-weight:600}
 </style>
 </head>
 <body>
@@ -769,17 +830,17 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
     <div class="header-bhs">
       <div>
         <div class="bhs-mini-label">Brand Health</div>
-        <div class="bhs-mini">89/100</div>
+        <div class="bhs-mini">65/100</div>
       </div>
     </div>
   </div>
   <!-- Compact summary + expand toggle -->
   <div class="summary-bar" onclick="toggleObj()">
-    <div class="summary-pill"><div><div class="sp-val" style="color:var(--warning)">5/6</div><div class="sp-label">Objetivos</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">3.57M</div><div class="sp-label">Alcance</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">2.75M</div><div class="sp-label">TK Views</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">+1,789</div><div class="sp-label">Nuevos Seg.</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">S/ 9,736</div><div class="sp-label">Inversión</div></div></div>
+    <div class="summary-pill"><div><div class="sp-val" style="color:var(--warning)">9/18</div><div class="sp-label">Objetivos</div></div></div>
+    <div class="summary-pill"><div><div class="sp-val">439K</div><div class="sp-label">Alcance</div></div></div>
+    <div class="summary-pill"><div><div class="sp-val">3K</div><div class="sp-label">TK Views</div></div></div>
+    <div class="summary-pill"><div><div class="sp-val">+174</div><div class="sp-label">Nuevos Seg.</div></div></div>
+    <div class="summary-pill"><div><div class="sp-val">S/ 868</div><div class="sp-label">Inversión</div></div></div>
     <div class="sp-toggle">Ver metas <span class="arrow" id="objArrow">▾</span></div>
   </div>
   <!-- Expandable objectives table -->
@@ -788,12 +849,24 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
       <table class="obj-tbl">
         <thead><tr><th>Objetivo</th><th>Canal</th><th>Meta</th><th>Resultado</th><th style="text-align:right">Estado</th></tr></thead>
         <tbody>
-          <tr><td>Alcanzar 30,000 personas en Meta</td><td class="obj-canal">Meta</td><td class="obj-meta-col">30,000</td><td class="obj-result-col">32,545</td><td class="obj-status status-met">✓ Superado +8%</td></tr>
-          <tr><td>Generar 2,500 interacciones en Meta</td><td class="obj-canal">Meta</td><td class="obj-meta-col">2,500</td><td class="obj-result-col">3,361</td><td class="obj-status status-met">✓ Superado +34%</td></tr>
-          <tr><td>Superar 1.5M reproducciones en TikTok</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">1,500,000</td><td class="obj-result-col">2,746,395</td><td class="obj-status status-met">✓ Superado +83%</td></tr>
-          <tr><td>Alcanzar ER &gt;3% en IG Reels</td><td class="obj-canal">Instagram</td><td class="obj-meta-col">&gt; 3%</td><td class="obj-result-col">2.4%</td><td class="obj-status status-missed" style="color:var(--danger)">✗ No alcanzado</td></tr>
-          <tr><td>Publicar 16 videos en TikTok</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">16</td><td class="obj-result-col">21</td><td class="obj-status status-met">✓ Superado +31%</td></tr>
-          <tr><td>CPM TikTok &lt; S/ 0.35</td><td class="obj-canal">TikTok Ads</td><td class="obj-meta-col">&lt; S/ 0.35</td><td class="obj-result-col">S/ 0.27</td><td class="obj-status status-met">✓ Superado -23%</td></tr>
+          <tr><td>Alcance FB Lima</td><td class="obj-canal">Facebook</td><td class="obj-meta-col">110,374</td><td class="obj-result-col">148,848</td><td class="obj-status status-met">✓ +35%</td></tr>
+          <tr><td>Interacciones FB Lima</td><td class="obj-canal">Facebook</td><td class="obj-meta-col">600</td><td class="obj-result-col">328</td><td class="obj-status status-missed" style="color:var(--danger)">✗ 55%</td></tr>
+          <tr><td>Views FB Lima</td><td class="obj-canal">Facebook</td><td class="obj-meta-col">16,998</td><td class="obj-result-col">43,637</td><td class="obj-status status-met">✓ +157%</td></tr>
+          <tr><td>Alcance FB Provincia</td><td class="obj-canal">Facebook</td><td class="obj-meta-col">89,830</td><td class="obj-result-col">112,529</td><td class="obj-status status-met">✓ +25%</td></tr>
+          <tr><td>Interacciones FB Prov.</td><td class="obj-canal">Facebook</td><td class="obj-meta-col">264</td><td class="obj-result-col">286</td><td class="obj-status status-met">✓ +8%</td></tr>
+          <tr><td>Views FB Provincia</td><td class="obj-canal">Facebook</td><td class="obj-meta-col">11,783</td><td class="obj-result-col">40,846</td><td class="obj-status status-met">✓ +247%</td></tr>
+          <tr><td>Alcance IG Lima</td><td class="obj-canal">Instagram</td><td class="obj-meta-col">73,582</td><td class="obj-result-col">64,821</td><td class="obj-status status-missed" style="color:var(--danger)">✗ 88%</td></tr>
+          <tr><td>Interacciones IG Lima</td><td class="obj-canal">Instagram</td><td class="obj-meta-col">400</td><td class="obj-result-col">183</td><td class="obj-status status-missed" style="color:var(--danger)">✗ 46%</td></tr>
+          <tr><td>Views IG Lima</td><td class="obj-canal">Instagram</td><td class="obj-meta-col">11,332</td><td class="obj-result-col">14,652</td><td class="obj-status status-met">✓ +29%</td></tr>
+          <tr><td>Alcance IG Provincia</td><td class="obj-canal">Instagram</td><td class="obj-meta-col">59,886</td><td class="obj-result-col">112,529</td><td class="obj-status status-met">✓ +88%</td></tr>
+          <tr><td>Interacciones IG Prov.</td><td class="obj-canal">Instagram</td><td class="obj-meta-col">176</td><td class="obj-result-col">286</td><td class="obj-status status-met">✓ +62%</td></tr>
+          <tr><td>Views IG Provincia</td><td class="obj-canal">Instagram</td><td class="obj-meta-col">7,855</td><td class="obj-result-col">40,846</td><td class="obj-status status-met">✓ +420%</td></tr>
+          <tr><td>Alcance TK Lima</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">112,722</td><td class="obj-result-col">—</td><td class="obj-status status-missed" style="color:var(--danger)">✗ Sin inversión</td></tr>
+          <tr><td>Interacciones TK Lima</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">1,030</td><td class="obj-result-col">—</td><td class="obj-status status-missed" style="color:var(--danger)">✗ Sin inversión</td></tr>
+          <tr><td>Views TK Lima</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">50,368</td><td class="obj-result-col">—</td><td class="obj-status status-missed" style="color:var(--danger)">✗ Sin inversión</td></tr>
+          <tr><td>Alcance TK Provincia</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">84,819</td><td class="obj-result-col">—</td><td class="obj-status status-missed" style="color:var(--danger)">✗ Sin inversión</td></tr>
+          <tr><td>Interacciones TK Prov.</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">653</td><td class="obj-result-col">—</td><td class="obj-status status-missed" style="color:var(--danger)">✗ Sin inversión</td></tr>
+          <tr><td>Views TK Provincia</td><td class="obj-canal">TikTok</td><td class="obj-meta-col">37,704</td><td class="obj-result-col">—</td><td class="obj-status status-missed" style="color:var(--danger)">✗ Sin inversión</td></tr>
         </tbody>
       </table>
     </div>
@@ -833,15 +906,15 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
     <div class="portada-client"></div>
     <div class="portada-period">Marzo 2026</div>
     <div class="portada-kpis">
-      <div class="portada-kpi"><div class="pk-value">3.57M</div><div class="pk-label">Alcance Total</div></div>
+      <div class="portada-kpi"><div class="pk-value">+174</div><div class="pk-label">Nuevos Seguidores</div></div>
       <div class="pk-divider"></div>
-      <div class="portada-kpi"><div class="pk-value">+1,789</div><div class="pk-label">Nuevos Seguidores</div></div>
+      <div class="portada-kpi"><div class="pk-value">9,678</div><div class="pk-label">Views Influencers</div></div>
       <div class="pk-divider"></div>
-      <div class="portada-kpi"><div class="pk-value">S/ 9,736</div><div class="pk-label">Inversión</div></div>
+      <div class="portada-kpi"><div class="pk-value">4</div><div class="pk-label">Collabs Influencers</div></div>
       <div class="pk-divider"></div>
-      <div class="portada-kpi"><div class="pk-value" style="color:var(--warning)">5/6</div><div class="pk-label">Objetivos Cumplidos</div></div>
+      <div class="portada-kpi"><div class="pk-value" style="color:var(--warning)">9/18</div><div class="pk-label">Objetivos Cumplidos</div></div>
       <div class="pk-divider"></div>
-      <div class="portada-kpi"><div class="pk-value">89<span style="font-size:18px;color:var(--gray)">/100</span></div><div class="pk-label">Brand Health Score</div></div>
+      <div class="portada-kpi"><div class="pk-value">65<span style="font-size:18px;color:var(--gray)">/100</span></div><div class="pk-label">Brand Health Score</div></div>
     </div>
     <div class="portada-footer"></div>
   </div>
@@ -1877,7 +1950,65 @@ function populateAllSections() {
     for (let i=1;i<=5;i++) {
       const a = D.story['act'+i]; if (!a) continue;
       h += '<div class="act"><div class="act-number">'+(a.number||'Acto '+i)+'</div><div class="act-title">'+(a.title||'')+'</div>';
-      if (a.paragraphs) a.paragraphs.forEach(p => h += '<div class="story-text">'+p+'</div>');
+      if (a.paragraphs && a.paragraphs.length > 0) {
+        // First paragraph always visible
+        h += '<div class="story-text">'+a.paragraphs[0]+'</div>';
+        if (a.inline_media) a.inline_media.filter(m => m.after_paragraph === 0).forEach(m => {
+          h += '<a href="'+(m.url||'#')+'" target="_blank" style="display:flex;gap:14px;align-items:center;margin:16px 0 20px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:680px;text-decoration:none;transition:border-color .2s"';
+          h += ' onmouseover="this.style.borderColor=\'var(--fucsia)\'" onmouseout="this.style.borderColor=\'var(--border)\'">';
+          h += '<img src="'+m.image+'" style="width:80px;height:80px;object-fit:cover;border-radius:8px;flex-shrink:0" onerror="this.style.display=\'none\'" />';
+          h += '<div><div style="font-size:12px;font-weight:700;color:var(--white)">'+m.label+'</div>';
+          h += '<div style="font-size:10px;color:var(--fucsia);margin-top:4px">Ver en Instagram ↗</div></div></a>';
+        });
+        // Remaining paragraphs in collapsible
+        if (a.paragraphs.length > 1) {
+          const detailId = 'act-detail-'+i;
+          h += '<button class="act-toggle" onclick="const d=document.getElementById(\''+detailId+'\');d.classList.toggle(\'open\');this.querySelector(\'.toggle-arrow\').classList.toggle(\'open\');this.querySelector(\'.toggle-label\').textContent=d.classList.contains(\'open\')?\'Ocultar análisis\':\'Ver análisis completo\'">'+
+               '<span class="toggle-label">Ver análisis completo</span> <span class="toggle-arrow">▾</span></button>';
+          h += '<div class="act-detail" id="'+detailId+'">';
+          for (let pIdx=1; pIdx<a.paragraphs.length; pIdx++) {
+            h += '<div class="story-text">'+a.paragraphs[pIdx]+'</div>';
+            if (a.inline_media) a.inline_media.filter(m => m.after_paragraph === pIdx).forEach(m => {
+              h += '<a href="'+(m.url||'#')+'" target="_blank" style="display:flex;gap:14px;align-items:center;margin:16px 0 20px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:680px;text-decoration:none;transition:border-color .2s"';
+              h += ' onmouseover="this.style.borderColor=\'var(--fucsia)\'" onmouseout="this.style.borderColor=\'var(--border)\'">';
+              h += '<img src="'+m.image+'" style="width:80px;height:80px;object-fit:cover;border-radius:8px;flex-shrink:0" onerror="this.style.display=\'none\'" />';
+              h += '<div><div style="font-size:12px;font-weight:700;color:var(--white)">'+m.label+'</div>';
+              h += '<div style="font-size:10px;color:var(--fucsia);margin-top:4px">Ver en Instagram ↗</div></div></a>';
+            });
+          }
+          h += '</div>'; // close act-detail
+        }
+      }
+      // Act 3: Retention mini-chart in story
+      if (i===3 && D.tiktok_retention && D.tiktok_retention.videos) {
+        h += '<div style="margin:24px 0;max-width:680px"><div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Retención a los 3 segundos por video</div>';
+        D.tiktok_retention.videos.slice(0,6).forEach(v => {
+          const rc = v.retention_3s>=30?'var(--success)':v.retention_3s>=20?'var(--warning)':'var(--danger)';
+          h += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><div style="width:120px;font-size:11px;color:var(--gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+v.title+'</div>';
+          h += '<div style="flex:1;height:6px;background:rgba(255,255,255,0.05);border-radius:3px;position:relative"><div style="width:'+v.retention_3s+'%;height:100%;background:'+rc+';border-radius:3px"></div></div>';
+          h += '<div style="font-size:12px;font-weight:800;color:'+rc+';width:40px;text-align:right">'+v.retention_3s+'%</div></div>';
+        });
+        h += '</div>';
+      }
+      // Act 4: Influencer MVP card + ER #1
+      if (i===4 && D.influencers_ig && D.influencers_ig.length) {
+        const mvp = D.influencers_ig[0];
+        h += '<div style="display:flex;gap:16px;align-items:center;margin:20px 0;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:680px">';
+        h += '<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--fucsia),var(--purple));display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0">🏆</div>';
+        h += '<div><div style="font-size:16px;font-weight:800;color:var(--white)">'+mvp.name+' — MVP del Mes</div>';
+        h += '<div style="font-size:12px;color:var(--gray);margin-top:4px">'+mvp.username+' · '+(mvp.content_type||'')+'</div>';
+        h += '<div style="display:flex;gap:16px;margin-top:8px">';
+        h += '<div style="font-size:11px"><span style="font-weight:800;color:var(--teal)">'+fmtK(mvp.views)+'</span> views</div>';
+        h += '<div style="font-size:11px"><span style="font-weight:800;color:var(--fucsia)">'+fmtK(mvp.likes)+'</span> likes</div>';
+        h += '<div style="font-size:11px"><span style="font-weight:800;color:var(--white)">'+fmtK(mvp.shares||0)+'</span> shares</div>';
+        h += '</div></div></div>';
+      }
+      if (i===4 && D.competitors_ig && D.competitors_ig.length) {
+        const sorted = [...D.competitors_ig].sort((a,b)=>(parseFloat(b.er)||0)-(parseFloat(a.er)||0));
+        if (sorted[0] && sorted[0].name.toLowerCase().includes(D.brand.toLowerCase().split(' ')[0])) {
+          h += '<div class="story-highlight"><div class="story-highlight-text">'+D.brand+' lidera en Engagement Rate de Instagram en su categoría con '+sorted[0].er+'%, superando a todos los competidores</div></div>';
+        }
+      }
       if (a.highlight) { h += '<div class="story-highlight"><div class="story-highlight-text">'+a.highlight+'</div>'; if (a.highlight_sub) h += '<div class="story-highlight-sub">'+a.highlight_sub+'</div>'; h += '</div>'; }
       if (a.evidence) { h += '<div class="evidence-row">'; a.evidence.forEach(e => { const s = e.color==='teal'?' style="color:var(--teal)"':e.color==='danger'?' style="color:var(--danger)"':''; h += '<div class="evidence-card"><div class="ev-value"'+s+'>'+e.value+'</div><div class="ev-label">'+e.label+'</div><div class="ev-delta"'+s+'>'+(e.delta||'')+'</div></div>'; }); h += '</div>'; }
       if (a.risks) a.risks.forEach(r => h += '<div class="story-risk"><div class="story-risk-title">'+r.title+'</div><div class="story-risk-text">'+r.text+'</div></div>');
@@ -2029,8 +2160,74 @@ function populateAllSections() {
       });
       h += '</div>';
     }
-    if (T.riesgo_fb) h += '<div class="risk-alert"><div class="risk-alert-title">🚨 Alerta</div><div class="risk-alert-text">'+T.riesgo_fb+'</div></div>';
-    if (T.contenido_fail) h += '<div class="analysis-block warning"><div class="analysis-label">⚠ ¿Por qué fallaron?</div><div class="analysis-text">'+T.contenido_fail+'</div></div>';
+    // Organic highlights
+    if (D.content.organic_highlights && D.content.organic_highlights.length) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">✨ Mejores Contenidos Orgánicos</div><div class="layer-line"></div></div>';
+      h += '<div class="post-gallery">';
+      D.content.organic_highlights.forEach((p, idx) => {
+        const orgFallback = 'background:linear-gradient(135deg,#003322,#006644,#20ECC8)';
+        const orgBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center;'+orgFallback : orgFallback;
+        const orgTag = p.url ? 'a' : 'div';
+        h += '<'+orgTag+(p.url?' href="'+p.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+orgBg+'"><div class="post-thumb-inner">🌱</div><span class="post-badge badge-top">#'+(idx+1)+' Orgánico</span><span class="post-plat-badge">'+(p.platform||'')+'</span></div>';
+        h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
+        h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(p.views||0)+'</div><div class="post-metric-label">Views</div></div>';
+        h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.interactions||p.likes||0)+'</div><div class="post-metric-label">Interacciones</div></div>';
+        if (p.er) h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--fucsia)">'+p.er+'</div><div class="post-metric-label">ER</div></div>';
+        h += '</div>';
+        if (p.note) h += '<div class="post-date" style="color:var(--teal);margin-top:6px">💡 '+p.note+'</div>';
+        h += '</div></'+orgTag+'>';
+      });
+      h += '</div>';
+    }
+    // Amplified top
+    if (D.content.amplified_top && D.content.amplified_top.length) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">🚀 Mejores Resultados (con probable amplificación)</div><div class="layer-line"></div></div>';
+      h += '<div class="post-gallery">';
+      D.content.amplified_top.forEach((p, idx) => {
+        const ampFallback = 'background:linear-gradient(135deg,#1A0040,#6B00CC,#F84CDE)';
+        const ampBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center;'+ampFallback : ampFallback;
+        const ampTag = p.url ? 'a' : 'div';
+        h += '<'+ampTag+(p.url?' href="'+p.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+ampBg+'"><div class="post-thumb-inner">⚡</div><span class="post-badge badge-top">#'+(idx+1)+' Amplificado</span><span class="post-plat-badge">'+(p.platform||'')+'</span></div>';
+        h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
+        h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--fucsia)">'+fmtK(p.views||0)+'</div><div class="post-metric-label">Views</div></div>';
+        h += '</div>';
+        if (p.note) h += '<div class="post-date" style="color:var(--gray);margin-top:6px">📌 '+p.note+'</div>';
+        h += '</div></'+ampTag+'>';
+      });
+      h += '</div>';
+    }
+    // Influencer gallery
+    if (D.influencers_ig && D.influencers_ig.length) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">🤝 Influencers del Mes</div><div class="layer-line"></div></div>';
+      h += '<div class="post-gallery">';
+      D.influencers_ig.forEach((inf) => {
+        const infTag = inf.url ? 'a' : 'div';
+        h += '<'+infTag+(inf.url?' href="'+inf.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)"><div class="post-thumb-inner">👤</div><span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
+        h += '<div class="post-body"><div class="post-title">'+inf.name+'</div><div class="post-date">'+(inf.content_type||'')+' · '+(inf.date||'')+'</div><div class="post-metrics">';
+        h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(inf.views)+'</div><div class="post-metric-label">Views</div></div>';
+        h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.likes)+'</div><div class="post-metric-label">Likes</div></div>';
+        h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.shares||0)+'</div><div class="post-metric-label">Shares</div></div>';
+        h += '<div class="post-metric"><div class="post-metric-val">'+fmt(inf.comments||0)+'</div><div class="post-metric-label">Comments</div></div>';
+        h += '</div></div></'+infTag+'>';
+      });
+      h += '</div>';
+    }
+    // TikTok Retention
+    if (D.tiktok_retention && D.tiktok_retention.videos) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">📊 Retención TikTok — Análisis de Hooks</div><div class="layer-line"></div></div>';
+      h += '<div class="analysis-block"><div class="analysis-label">◈ Resumen de Retención</div><div class="analysis-text">'+D.tiktok_retention.summary+'</div></div>';
+      h += '<div class="retention-grid">';
+      D.tiktok_retention.videos.forEach(v => {
+        const retColor = v.retention_3s >= 30 ? 'var(--success)' : v.retention_3s >= 20 ? 'var(--warning)' : 'var(--danger)';
+        h += '<div class="retention-card"><div class="ret-title">'+v.title+'</div><div class="ret-duration">Duración: '+v.duration+'</div>';
+        h += '<div class="ret-bar-track"><div class="ret-bar-fill" style="width:'+v.retention_3s+'%;background:'+retColor+'"></div></div>';
+        h += '<div class="ret-metrics"><div class="ret-metric"><span class="ret-metric-val" style="color:'+retColor+'">'+v.retention_3s+'%</span><span class="ret-metric-label">Retención 3s</span></div>';
+        h += '<div class="ret-metric"><span class="ret-metric-val">'+v.drop_point+'</span><span class="ret-metric-label">Drop point</span></div></div></div>';
+      });
+      h += '</div>';
+    }
+    if (T.riesgo_fb) h += '<div class="analysis-block warning"><div class="analysis-label">⚠ Nota sobre Facebook</div><div class="analysis-text">'+T.riesgo_fb+'</div></div>';
+    if (T.contenido_fail) h += '<div class="analysis-block warning"><div class="analysis-label">⚠ Contenidos con menor rendimiento</div><div class="analysis-text">'+T.contenido_fail+'</div></div>';
     if (T.contenido_horario) h += '<div class="analysis-block action"><div class="analysis-label">✓ Ventana Óptima</div><div class="analysis-text">'+T.contenido_horario+'</div></div>';
     b5.innerHTML = h;
   }
@@ -2048,6 +2245,25 @@ function populateAllSections() {
     });
     h += '</div></div>';
     if (T.temas_recurrentes) h += '<div class="analysis-block"><div class="analysis-label">◈ Temas ('+(s.total||0)+' comentarios)</div><div class="analysis-text">'+T.temas_recurrentes.replace(/\n/g,'<br>')+'</div></div>';
+    // Word Cloud
+    const wcWords = D.word_cloud || [
+      {word:D.brand||'Marca',s:3.5},{word:'calidad',s:3.2},{word:'favorito',s:2.8},{word:'buenazo',s:2.5},
+      {word:'siempre',s:2.0},{word:'recomendado',s:1.8},{word:'familia',s:2.2},{word:'confianza',s:1.6},
+      {word:'producto',s:2.0},{word:'comprar',s:1.5},{word:'sabor',s:1.5},{word:'excelente',s:1.4},
+      {word:'rico',s:1.3},{word:'práctico',s:1.4},{word:'delicioso',s:1.6},{word:'infaltable',s:1.5}
+    ];
+    const wcCol = ['var(--fucsia)','var(--teal)','var(--purple)','var(--white)','var(--success)','#FF6B6B','#9B6BFF'];
+    h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">☁️ Nube de Palabras</div><div class="layer-line"></div></div>';
+    h += '<div class="word-cloud">';
+    wcWords.forEach((w,i) => { h += '<span class="wc-word" style="font-size:'+(w.s*14)+'px;color:'+wcCol[i%wcCol.length]+';opacity:'+(0.5+w.s/7)+'">'+w.word+'</span> '; });
+    h += '</div>';
+    // Insight quotes (only if data exists in JSON)
+    if (D.community_quotes && D.community_quotes.length > 0) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">💬 Voces de la Comunidad</div><div class="layer-line"></div></div>';
+      h += '<div class="quotes-grid">';
+      D.community_quotes.forEach(q => { h += '<div class="quote-card"><div class="quote-text">"'+q.t+'"</div><div class="quote-user"><span style="color:var(--success)">●</span> '+q.u+' · '+q.p+'</div></div>'; });
+      h += '</div>';
+    }
     b6.innerHTML = h;
   }
 
@@ -2056,7 +2272,6 @@ function populateAllSections() {
   if (b7) {
     let h = '';
     if (T.audiencia) h += '<div class="analysis-block"><div class="analysis-label">◈ Insight de Audiencia</div><div class="analysis-text">'+T.audiencia+'</div></div>';
-    else h += '<div class="analysis-block"><div class="analysis-text" style="color:var(--gray)">Datos demográficos no disponibles para esta marca.</div></div>';
     b7.innerHTML = h;
   }
 
@@ -2131,13 +2346,59 @@ function populateAllSections() {
   }
 }
 
-// Initialize: fetch data → populate → charts → images
+// ══════════════════════════════════════════════
+//  CONDITIONAL SECTION VISIBILITY
+//  Hides sections + nav links when data is missing
+// ══════════════════════════════════════════════
+function hideEmptySections() {
+  const D = REPORT_DATA;
+  const C = D.charts || {};
+  const T = D.technical_texts || {};
+
+  const checks = {
+    'sec-comunidad': () => D.community && (D.community.facebook?.end > 0 || D.community.instagram?.end > 0 || D.community.tiktok?.end > 0),
+    'sec-alcance': () => D.reach && D.reach.total_impressions > 0,
+    'sec-engagement': () => D.engagement && D.engagement.total_meaningful_interactions > 0,
+    'sec-contenido': () => D.content && (D.content.top_tiktok?.length > 0 || D.content.organic_highlights?.length > 0),
+    'sec-sentimiento': () => D.sentiment && D.sentiment.total > 0,
+    'sec-audiencia': () => T.audiencia && C.fb_age && C.fb_age.some(v => v > 0),
+    'sec-inversion': () => D.investment && D.investment.total_usd > 0,
+    'sec-competencia': () => D.competitors_ig && D.competitors_ig.length > 0,
+    'sec-score': () => D.bhs && D.bhs.total > 0,
+    'sec-plan': () => D.recommendations && D.recommendations.length > 0,
+  };
+
+  Object.entries(checks).forEach(([secId, check]) => {
+    let visible = true;
+    try { visible = check(); } catch(e) { visible = false; }
+
+    if (!visible) {
+      // Hide section
+      const sec = document.getElementById(secId);
+      if (sec) {
+        sec.style.display = 'none';
+        // Hide preceding divider
+        const prev = sec.previousElementSibling;
+        if (prev && prev.classList.contains('sec-divider')) prev.style.display = 'none';
+      }
+      // Hide nav link
+      const navLink = document.querySelector('.side-link[href="#'+secId+'"]');
+      if (navLink) navLink.style.display = 'none';
+    }
+  });
+
+  // Story mode: hide acts that reference hidden sections
+  // (already handled by JSON - if act doesn't exist, it won't render)
+}
+
+// Initialize: fetch data → populate → charts → images → hide empty
 document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('sideNav').style.display = 'none';
   await fetchReportData();
   populateReport();
   populateAllSections();
   initCharts();
+  hideEmptySections();
   loadImages();
 });
 
@@ -2257,13 +2518,13 @@ new Chart('chartSentCateg', doughnutOpts(
   [success,'rgba(34,197,94,.7)',teal,'rgba(32,236,200,.6)',warning,'rgba(245,158,11,.5)',danger,'rgba(248,76,222,.5)']));
 new Chart('chartSentEvol', lineOpts(months6, [{label:'Net Score',data:C.sent_net_score_history,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:false,tension:.4,pointBackgroundColor:teal,pointRadius:6},{label:'Benchmark (+50)',data:[50,50,50,50,50,50],borderColor:'rgba(255,255,255,.2)',borderDash:[4,4]}]));
 
-// AUDIENCIA
-const ageLabels=['13-17','18-24','25-34','35-44','45-54','55+'];
-new Chart('chartFBAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.fb_age,backgroundColor:purple2,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
-new Chart('chartIGAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.ig_age,backgroundColor:fucsia,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
-new Chart('chartTKAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.tk_age,backgroundColor:teal,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
-new Chart('chartGenero',{type:'bar',data:{labels:['Facebook','Instagram','TikTok'],datasets:[{label:'Mujer',data:C.gender_female,backgroundColor:fucsia,borderRadius:[6,6,6,6]},{label:'Hombre',data:C.gender_male,backgroundColor:purple2,borderRadius:[6,6,6,6]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{padding:14,usePointStyle:true}}},scales:{x:{stacked:true,grid:{color:gridColor}},y:{stacked:true,grid:{color:gridColor}}}}});
-new Chart('chartAgeComp', lineOpts(ageLabels, [{label:'Facebook',data:C.fb_age,borderColor:purple,tension:.3,pointBackgroundColor:purple},{label:'Instagram',data:C.ig_age,borderColor:fucsia,tension:.3,pointBackgroundColor:fucsia},{label:'TikTok',data:C.tk_age,borderColor:teal,tension:.3,pointBackgroundColor:teal}]));
+// AUDIENCIA charts
+const ageLabels = ['13-17','18-24','25-34','35-44','45-54','55-64','65+'];
+if (C.fb_age && C.fb_age.some(v=>v>0)) new Chart('chartFBAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.fb_age,backgroundColor:purple2,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
+if (C.ig_age && C.ig_age.some(v=>v>0)) new Chart('chartIGAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.ig_age,backgroundColor:fucsia,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
+if (C.tk_age && C.tk_age.some(v=>v>0)) new Chart('chartTKAge',{type:'bar',data:{labels:ageLabels,datasets:[{data:C.tk_age,backgroundColor:teal,borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor}}}}});
+if (C.gender_female && C.gender_female.some(v=>v>0)) new Chart('chartGenero',{type:'bar',data:{labels:['Facebook','Instagram','TikTok'],datasets:[{label:'Mujer',data:C.gender_female,backgroundColor:fucsia,borderRadius:[6,6,6,6]},{label:'Hombre',data:C.gender_male,backgroundColor:purple2,borderRadius:[6,6,6,6]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{padding:14,usePointStyle:true}}},scales:{x:{stacked:true,grid:{color:gridColor}},y:{stacked:true,grid:{color:gridColor}}}}});
+// Charts skipped: chartFBAge, chartIGAge, chartTKAge, chartGenero, chartAgeComp
 
 // INVERSIÓN
 new Chart('chartCPM', lineOpts(months6, [{label:'Meta CPM (USD)',data:C.cpm_meta,borderColor:purple,backgroundColor:'rgba(75,0,255,.1)',fill:true,tension:.4,pointBackgroundColor:purple},{label:'TikTok CPM (USD)',data:C.cpm_tk,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:true,tension:.4,pointBackgroundColor:teal}]));
@@ -2326,7 +2587,7 @@ function downloadPPTX() {
   s2.background = { fill: BG };
   addText(s2, 'Resumen Ejecutivo', { x:0.5, y:0.3, fontSize:24, bold:true });
   addText(s2, (RD.technical_texts&&RD.technical_texts.resumen)||'Reporte mensual '+RD.brand+' — '+RD.period, { x:0.5, y:0.9, fontSize:11, color:'CCCCDD', w:12 });
-  const funnel = [['7.93M','Impresiones','Freq. 2.22x'],['3.57M','Alcance Único','45% del total'],['1.4M','Interacciones','Meta Ads + Org. + TK'],['~1,800','Intención Compra','Clicks+Saves+Consultas'],['+1,789','Nuevos Seg.','FB+IG+TK']];
+  const funnel = [[fmtK(RD.reach.total_impressions||0),'Impresiones','Freq. '+(RD.reach.frequency||'–')+'x'],[fmtK(RD.reach.estimated_unique_reach||0),'Alcance Único','Cross-channel'],[fmt(RD.engagement.total_meaningful_interactions||0),'Interacciones','Meta + Org. + TK'],[RD.summary_kpis.new_followers||'–','Nuevos Seg.','FB+IG+TK'],['S/ '+fmt(Math.round(RD.investment.total_soles||0)),'Inversión','USD '+fmt(Math.round(RD.investment.total_usd||0))]];
   funnel.forEach((f,i) => {
     const x = 0.5 + i*2.5;
     s2.addShape(pptx.ShapeType.roundRect, { x, y:2.0, w:2.3, h:1.6, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2367,8 +2628,8 @@ function downloadPPTX() {
   let s4 = pptx.addSlide();
   s4.background = { fill: BG };
   addText(s4, 'Distribución de Alcance', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s4, 'S/ 9,736 impactaron 3.57M cuentas únicas. 7.93M impresiones. Frecuencia: 2.22x', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const alcKpis = [['2.53M','TK Vistas Totales'],['1.58M','Meta Ads Reach'],['3.57M','Alcance Total'],['2.22x','Frecuencia Prom.']];
+  addText(s4, 'S/ '+fmt(Math.round(RD.investment.total_soles||0))+' inversión. '+fmtK(RD.reach.estimated_unique_reach||0)+' alcance único. '+fmtK(RD.reach.total_impressions||0)+' impresiones.', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const alcKpis = [[fmtK(RD.reach.tiktok_organic_views||0),'TK Vistas Orgánicas'],[fmtK(RD.reach.meta_ads_reach||0),'Meta Ads Reach'],[fmtK(RD.reach.total_impressions||0),'Impresiones Totales'],[(RD.reach.frequency||'–')+'x','Frecuencia Prom.']];
   alcKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s4.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2380,8 +2641,9 @@ function downloadPPTX() {
   let s5 = pptx.addSlide();
   s5.background = { fill: BG };
   addText(s5, 'Engagement e Índice de Valor', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s5, 'El ER de Meta (10.3%) está inflado por el sorteo, pero sin él sigue siendo 2x el benchmark', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const engKpis = [['10.3%','ER Meta','Benchmark: 2%'],['0.45%','ER TikTok','Normal TK masivo'],['14.7','Índice Valor Meta','Benchmark: 5.0'],['3.88','Índice Valor TK','Benchmark: 2.5']];
+  const erFb = RD.charts.er_fb?.[5] || '–'; const erIg = RD.charts.er_ig?.[5] || '–'; const erTk = RD.charts.er_tk?.[5] || '–';
+  addText(s5, 'ER FB '+(erFb)+'% · ER IG '+(erIg)+'% · ER TK '+(erTk)+'%', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const engKpis = [[(erFb)+'%','ER Facebook','Benchmark: 0.5%'],[(erTk)+'%','ER TikTok','Canal video'],[(erIg)+'%','ER Instagram','Posts + Reels'],[(RD.bhs.total||'–'),'BHS Score','/100']];
   engKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s5.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.4, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2389,18 +2651,18 @@ function downloadPPTX() {
     addText(s5, k[1], { x:x+0.2, y:2.1, fontSize:9, color:GRAY });
     addText(s5, k[2], { x:x+0.2, y:2.4, fontSize:9, color:SUCCESS });
   });
-  addText(s5, 'Fórmula Índice de Valor: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) ÷ Alcance × 1000\nTK #1 "Zapatillas": 4.86 | TK #2 "Talco expertos": 2.79', { x:0.5, y:3.3, fontSize:10, color:'CCCCDD', w:12 });
+  addText(s5, 'Fórmula Índice de Valor: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) ÷ Alcance × 1000', { x:0.5, y:3.3, fontSize:10, color:'CCCCDD', w:12 });
 
   // ─── SLIDE 6: TOP/WORST CONTENIDO ───
   let s6 = pptx.addSlide();
   s6.background = { fill: BG };
   addText(s6, 'Análisis de Contenido', { x:0.5, y:0.3, fontSize:24, bold:true });
   addText(s6, '🏆 Top Performers', { x:0.5, y:0.85, fontSize:11, color:TEAL, bold:true });
-  const tops = [
-    ['#1 TikTok','Zapatillas y Limpieza','441,411 vistas','1,673 likes · 235 shares','TK Ads ~S/ 166'],
-    ['#2 TikTok+Meta','Talco expertos','407K TK + 264K Meta','949 likes TK · 1,588 reacciones Meta','Inv. total S/ 557'],
-    ['#1 FB Org.','Sorteo PONLE NOMBRE','23,515 alcance org.','589 interacciones · 303 comentarios','Sorteo']
-  ];
+  const tops = [];
+  if (RD.content.organic_highlights) RD.content.organic_highlights.slice(0,3).forEach((p,i) => {
+    tops.push(['#'+(i+1)+' '+p.platform, p.title, fmt(p.views||0)+' vistas', fmt(p.interactions||0)+' int. · '+(p.er||'–')+' ER', p.note||'']);
+  });
+  if (tops.length===0) tops.push(['—','Sin datos de contenido','','','']);
   tops.forEach((t,i) => {
     const x = 0.5 + i*4.2;
     s6.addShape(pptx.ShapeType.roundRect, { x, y:1.2, w:3.8, h:2.0, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
@@ -2411,14 +2673,15 @@ function downloadPPTX() {
     addText(s6, t[4], { x:x+0.15, y:2.7, fontSize:8, color:GRAY });
   });
   addText(s6, '⚠ Menor Rendimiento', { x:0.5, y:3.5, fontSize:11, color:DANGER, bold:true });
-  addText(s6, '• Facebook orgánico sin sorteo: <400 alcance/post (99% menos que sorteo 23,515)\n• TikTok peores: "Pies descalzos verano" 539 vistas, "Feriado largo" 995 vistas (-99.9% vs top)\n• Regla: En TK el producto es el plot twist, no el protagonista. En FB sin incentivo no hay alcance.', { x:0.5, y:3.85, fontSize:9, color:'CCCCDD', w:12 });
+  addText(s6, (RD.technical_texts.contenido_fail||'Análisis de contenido de menor rendimiento.'), { x:0.5, y:3.85, fontSize:9, color:'CCCCDD', w:12 });
 
   // ─── SLIDE 7: INVERSIÓN ───
   let s7 = pptx.addSlide();
   s7.background = { fill: BG };
   addText(s7, 'Eficiencia de Inversión', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s7, 'Cada dólar en TikTok genera 2.4x más impresiones que en Meta', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const invKpis = [['S/ 9,736','Inversión Total','USD 2,575.64'],['S/ 1.02','CPM TikTok','USD 0.27'],['S/ 2.49','CPM Meta','USD 0.66'],['S/ 5.44','Costo/Seguidor','USD 1.44']];
+  const inv = RD.investment, eff = RD.efficiency;
+  addText(s7, 'S/ '+fmt(Math.round(inv.total_soles||0))+' inversión total. CPM Meta: S/ '+(eff.meta_cpm_soles||'–')+'. CPM TK: S/ '+(eff.tiktok_cpm_soles||'–'), { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
+  const invKpis = [['S/ '+fmt(Math.round(inv.total_soles||0)),'Inversión Total','USD '+fmt(Math.round(inv.total_usd||0))],['S/ '+(eff.meta_cpm_soles||'–'),'CPM Meta','USD '+(eff.meta_cpm_usd||'–')],['S/ '+(eff.tiktok_cpm_soles||'–'),'CPM TikTok','USD '+(eff.tiktok_cpm_usd||'–')],['S/ '+(eff.blended_cpm_soles||'–'),'CPM Blended','USD '+(eff.blended_cpm_usd||'–')]];
   invKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
     s7.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
