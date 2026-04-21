@@ -399,6 +399,40 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
           </div>
         </div>
       </div>
+
+      <div class="card">
+        <div class="card-title">ER% Historico (6 meses) <span class="card-badge badge-manual">Metricool / Manual</span></div>
+        <div class="form-hint" style="margin-bottom:8px">Engagement Rate por canal. Formula: (Interacciones/Posts)/Seguidores × 100</div>
+        <table style="width:100%;font-size:11px;border-collapse:collapse">
+          <thead><tr style="color:var(--gray);text-align:center"><th style="padding:4px;text-align:left">Canal</th><th style="padding:4px">Mes -5</th><th style="padding:4px">Mes -4</th><th style="padding:4px">Mes -3</th><th style="padding:4px">Mes -2</th><th style="padding:4px">Mes -1</th><th style="padding:4px;color:var(--fucsia)">Actual</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:4px;color:var(--white);font-weight:600">Facebook</td>
+              <td style="padding:2px"><input class="form-input" id="er_fb_0" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_fb_1" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_fb_2" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_fb_3" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_fb_4" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_fb_5" style="padding:3px;font-size:10px;text-align:center;border-color:var(--fucsia)" placeholder="0"></td>
+            </tr>
+            <tr><td style="padding:4px;color:var(--white);font-weight:600">Instagram</td>
+              <td style="padding:2px"><input class="form-input" id="er_ig_0" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_ig_1" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_ig_2" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_ig_3" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_ig_4" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_ig_5" style="padding:3px;font-size:10px;text-align:center;border-color:var(--fucsia)" placeholder="0"></td>
+            </tr>
+            <tr><td style="padding:4px;color:var(--white);font-weight:600">TikTok</td>
+              <td style="padding:2px"><input class="form-input" id="er_tk_0" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_tk_1" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_tk_2" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_tk_3" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_tk_4" style="padding:3px;font-size:10px;text-align:center" placeholder="0"></td>
+              <td style="padding:2px"><input class="form-input" id="er_tk_5" style="padding:3px;font-size:10px;text-align:center;border-color:var(--fucsia)" placeholder="0"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- TAB: CONTENT -->
@@ -624,6 +658,17 @@ Calculo: 87×0.10 + 90×0.10 + 88×0.20 + 85×0.15 + 92×0.10 + 100×0.10 + 85×
           <div class="form-group"><label class="form-label">% Negativo</label><input class="form-input" id="sent_neg" value="4"></div>
         </div>
         <div class="form-group"><label class="form-label">Net Score</label><input class="form-input" id="sent_net" value="+65"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Nube de Palabras <span class="card-badge badge-manual">JSON</span></div>
+        <div class="form-hint" style="margin-bottom:8px">Palabras clave de la comunidad. Formato: palabra1:peso, palabra2:peso (peso de 1.0 a 3.5)</div>
+        <textarea class="form-textarea" id="word_cloud_raw" rows="3" placeholder="marca:3.5, calidad:3.2, favorito:2.8, buenazo:2.5, familia:2.0, siempre:2.0"></textarea>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Voces de la Comunidad (Quotes) <span class="card-badge badge-manual">Manual</span> <button class="btn btn-secondary" style="padding:4px 10px;font-size:10px;margin-left:auto" onclick="addQuote()">+ Agregar</button></div>
+        <div id="quotes-container"></div>
       </div>
     </div>
 
@@ -953,6 +998,20 @@ function showTab(id, btn) {
 }
 
 // ============================================================
+// ADD QUOTE
+// ============================================================
+function addQuote(text='', user='', platform='IG') {
+  const container = document.getElementById('quotes-container');
+  const div = document.createElement('div');
+  div.style.cssText = 'display:grid;grid-template-columns:1fr 120px 60px 30px;gap:6px;margin-bottom:6px;align-items:center';
+  div.innerHTML = '<input class="form-input quote-text" value="'+text+'" placeholder="Texto del comentario" style="font-size:11px;padding:6px 8px">' +
+    '<input class="form-input quote-user" value="'+user+'" placeholder="@usuario" style="font-size:11px;padding:6px 8px">' +
+    '<select class="form-select quote-platform" style="font-size:10px;padding:4px 6px"><option'+(platform==='IG'?' selected':'')+'>IG</option><option'+(platform==='TK'?' selected':'')+'>TK</option><option'+(platform==='FB'?' selected':'')+'>FB</option></select>' +
+    '<button class="btn btn-secondary" style="padding:2px 6px;font-size:10px;color:var(--danger)" onclick="this.parentElement.remove()">✕</button>';
+  container.appendChild(div);
+}
+
+// ============================================================
 // CHARACTER COUNTER
 // ============================================================
 function countChars(el, countId) {
@@ -1098,9 +1157,33 @@ function collectData() {
       ig_age: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('ig_age_'+i)?.value) || 0),
       tk_age: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('tk_age_'+i)?.value) || 0),
       gender_female: [parseFloat(document.getElementById('fb_female')?.value)||0, parseFloat(document.getElementById('ig_female')?.value)||0, parseFloat(document.getElementById('tk_female')?.value)||0],
-      gender_male: [parseFloat(document.getElementById('fb_male')?.value)||0, parseFloat(document.getElementById('ig_male')?.value)||0, parseFloat(document.getElementById('tk_male')?.value)||0]
+      gender_male: [parseFloat(document.getElementById('fb_male')?.value)||0, parseFloat(document.getElementById('ig_male')?.value)||0, parseFloat(document.getElementById('tk_male')?.value)||0],
+      er_fb: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('er_fb_'+i)?.value) || 0),
+      er_ig: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('er_ig_'+i)?.value) || 0),
+      er_tk: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('er_tk_'+i)?.value) || 0)
     }
   };
+
+  // Word cloud
+  const wcRaw = document.getElementById('word_cloud_raw')?.value || '';
+  if (wcRaw.trim()) {
+    data.word_cloud = wcRaw.split(',').map(s => s.trim()).filter(Boolean).map(s => {
+      const [word, score] = s.split(':').map(x => x.trim());
+      return { word: word, s: parseFloat(score) || 2.0 };
+    });
+  }
+
+  // Community quotes
+  const quotesEls = document.querySelectorAll('#quotes-container > div');
+  if (quotesEls.length > 0) {
+    data.community_quotes = [];
+    quotesEls.forEach(div => {
+      const t = div.querySelector('.quote-text')?.value;
+      const u = div.querySelector('.quote-user')?.value;
+      const p = div.querySelector('.quote-platform')?.value;
+      if (t) data.community_quotes.push({ t, u: u || '', p: p || 'IG' });
+    });
+  }
 
   // Objectives
   document.querySelectorAll('#objectives-table tbody tr').forEach(tr => {
@@ -1441,6 +1524,22 @@ function loadFromData(data) {
       const platforms = ['fb','ig','tk'];
       data.charts.gender_male.forEach((v, i) => { const el = document.getElementById(platforms[i]+'_male'); if (el) el.value = v; });
     }
+    // ER historical
+    if (data.charts.er_fb) data.charts.er_fb.forEach((v, i) => { const el = document.getElementById('er_fb_'+i); if (el) el.value = v || 0; });
+    if (data.charts.er_ig) data.charts.er_ig.forEach((v, i) => { const el = document.getElementById('er_ig_'+i); if (el) el.value = v || 0; });
+    if (data.charts.er_tk) data.charts.er_tk.forEach((v, i) => { const el = document.getElementById('er_tk_'+i); if (el) el.value = v || 0; });
+  }
+
+  // Word cloud
+  if (data.word_cloud && data.word_cloud.length > 0) {
+    const wcEl = document.getElementById('word_cloud_raw');
+    if (wcEl) wcEl.value = data.word_cloud.map(w => w.word + ':' + w.s).join(', ');
+  }
+
+  // Community quotes
+  if (data.community_quotes && data.community_quotes.length > 0) {
+    const container = document.getElementById('quotes-container');
+    if (container) { container.innerHTML = ''; data.community_quotes.forEach(q => addQuote(q.t, q.u, q.p)); }
   }
 }
 
