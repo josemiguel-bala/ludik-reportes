@@ -12,15 +12,36 @@ import sys
 import subprocess
 import threading
 
+import re
+
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(APP_DIR, 'data')
+
+def rebuild_manifest():
+    """Scan data/ for BRAND_YYYY-MM.json files and rebuild manifest.json."""
+    manifest = {}
+    pattern = re.compile(r'^([A-Z0-9]+)_(\d{4}-\d{2})\.json$')
+    for fname in os.listdir(DATA_DIR):
+        m = pattern.match(fname)
+        if m:
+            brand, period = m.groups()
+            manifest.setdefault(brand, []).append(period)
+    for brand in manifest:
+        manifest[brand].sort(reverse=True)
+    manifest_path = os.path.join(DATA_DIR, 'manifest.json')
+    with open(manifest_path, 'w', encoding='utf-8') as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
+    print(f"  📋 Manifest actualizado: {len(manifest)} marcas")
+
+# Build manifest on startup
+rebuild_manifest()
 
 def deploy_to_vercel(filename):
     """Deploy to Vercel in background after saving."""
     try:
         # Git add + commit + push
-        subprocess.run(['git', 'add', f'data/{filename}'], cwd=APP_DIR, capture_output=True)
+        subprocess.run(['git', 'add', f'data/{filename}', 'data/manifest.json'], cwd=APP_DIR, capture_output=True)
         subprocess.run(['git', 'commit', '-m', f'Update {filename} from admin'], cwd=APP_DIR, capture_output=True)
         # Deploy to Vercel
         result = subprocess.run(['vercel', '--prod', '--yes'], cwd=APP_DIR, capture_output=True, text=True, timeout=60)
@@ -52,6 +73,7 @@ class ReportHandler(http.server.SimpleHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write(json.dumps({"ok": True, "file": filename, "deploying": True}).encode())
                 print(f"  ✓ Guardado: data/{filename}")
+                rebuild_manifest()
                 # Deploy en background (no bloquea la respuesta al admin)
                 threading.Thread(target=deploy_to_vercel, args=(filename,), daemon=True).start()
             except Exception as e:

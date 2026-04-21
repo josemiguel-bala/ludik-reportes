@@ -77,6 +77,9 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 .header-brand{display:flex;align-items:center;gap:16px}
 .header-client{font-size:20px;font-weight:800;color:var(--white);letter-spacing:-0.02em}
 .header-period{font-size:11px;font-weight:600;color:var(--gray);background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px}
+.month-select{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--gray);font-family:'Work Sans',sans-serif;cursor:pointer;appearance:none;-webkit-appearance:none;padding-right:22px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238888AA'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.month-select:focus{outline:none;border-color:var(--fucsia)}
+[data-theme="light"] .month-select{background-color:#FFF;color:#555;border-color:rgba(0,0,0,.1)}
 .header-bhs{display:flex;align-items:center;gap:8px}
 .bhs-mini{font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--white),var(--fucsia));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .bhs-mini-label{font-size:9px;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;line-height:1.2}
@@ -803,7 +806,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
     <div class="nav-logo">LUD<span>i</span>K</div>
     <div class="header-brand">
       <div class="header-client"></div>
-      <div class="header-period">Marzo 2026</div>
+      <select class="month-select" id="monthSelector" onchange="switchMonth(this.value)"><option>Marzo 2026</option></select>
     </div>
     <div class="mode-toggle">
       <button class="mode-btn active" onclick="switchMode('story',this)">📖 Historia</button>
@@ -1224,38 +1227,69 @@ function loadReportData() {
   } catch (e) { console.error('Error loading report data:', e); }
 }
 
+// Deep merge helper
+function mergeData(target, source) {
+  for (const key of Object.keys(source)) {
+    if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key]) && target[key] && typeof target[key] === 'object' && !Array.isArray(target[key])) {
+      mergeData(target[key], source[key]);
+    } else if (source[key] !== undefined && source[key] !== null) {
+      target[key] = source[key];
+    }
+  }
+}
+
+const MONTH_NAMES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+function periodLabel(p) { const [y,m]=p.split('-'); return MONTH_NAMES[parseInt(m)-1]+' '+y; }
+
+// Global state
+window.MANIFEST = null;
+window.CURRENT_BRAND = null;
+window.CURRENT_PERIOD = null;
+
 // Fetch JSON from ?data= or ?brand=&period= URL params (async)
 async function fetchReportData() {
   const params = new URLSearchParams(window.location.search);
   let dataUrl = params.get('data');
-  // Auto-construct data URL from brand + period params
+  const brand = params.get('brand');
+  let period = params.get('period');
+
+  // If brand param exists, use manifest to resolve period
+  if (!dataUrl && brand) {
+    window.CURRENT_BRAND = brand;
+    try {
+      const manifestRes = await fetch('data/manifest.json');
+      if (manifestRes.ok) {
+        window.MANIFEST = await manifestRes.json();
+        const periods = window.MANIFEST[brand];
+        if (periods && periods.length > 0) {
+          if (!period) period = periods[0]; // latest month (sorted desc)
+          window.CURRENT_PERIOD = period;
+        }
+      }
+    } catch(e) { console.warn('Could not fetch manifest.json', e); }
+    if (period) dataUrl = 'data/' + brand + '_' + period + '.json';
+  }
+
+  // Legacy: ?data= param
   if (!dataUrl && params.get('brand') && params.get('period')) {
     dataUrl = 'data/' + params.get('brand') + '_' + params.get('period') + '.json';
   }
+
   if (dataUrl) {
     try {
       const res = await fetch(dataUrl);
       if (res.ok) {
         const json = await res.json();
         console.log('Fetched report data from', dataUrl);
-        // Deep merge into REPORT_DATA
-        function merge(target, source) {
-          for (const key of Object.keys(source)) {
-            if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key]) && target[key] && typeof target[key] === 'object' && !Array.isArray(target[key])) {
-              merge(target[key], source[key]);
-            } else if (source[key] !== undefined && source[key] !== null) {
-              target[key] = source[key];
-            }
-          }
-        }
-        merge(REPORT_DATA, json);
-        // Map period label
+        mergeData(REPORT_DATA, json);
         if (json.period && !json.period_label) {
-          const monthNames = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-          const [y, m] = json.period.split('-');
-          if (y && m) REPORT_DATA.period = monthNames[parseInt(m)-1] + ' ' + y;
+          REPORT_DATA.period = periodLabel(json.period);
         }
         if (json.period_label) REPORT_DATA.period = json.period_label;
+        // Store brand_id for manifest lookups
+        if (brand) REPORT_DATA.brand_id = brand;
+        if (json.brand_id) window.CURRENT_BRAND = json.brand_id;
+        if (json.period) window.CURRENT_PERIOD = json.period;
         return true;
       }
     } catch (e) { console.warn('Could not fetch', dataUrl, e); }
@@ -1263,6 +1297,14 @@ async function fetchReportData() {
   // Fallback: try localStorage
   loadReportData();
   return false;
+}
+
+// Switch month from dropdown
+function switchMonth(period) {
+  const brand = window.CURRENT_BRAND || new URLSearchParams(window.location.search).get('brand');
+  if (brand && period) {
+    window.location.href = 'reporte.html?brand=' + brand + '&period=' + period;
+  }
 }
 
 // Theme toggle
@@ -1299,8 +1341,24 @@ function populateReport() {
   // — HEADER —
   const headerClient = document.querySelector('.header-client');
   if (headerClient) headerClient.textContent = D.brand;
-  const headerPeriod = document.querySelector('.header-period');
-  if (headerPeriod) headerPeriod.textContent = D.period;
+  // Month selector dropdown
+  const monthSel = document.getElementById('monthSelector');
+  if (monthSel) {
+    const brand = window.CURRENT_BRAND || D.brand_id;
+    const manifest = window.MANIFEST;
+    if (manifest && brand && manifest[brand]) {
+      monthSel.innerHTML = '';
+      manifest[brand].forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p;
+        opt.textContent = periodLabel(p);
+        if (p === window.CURRENT_PERIOD) opt.selected = true;
+        monthSel.appendChild(opt);
+      });
+    } else {
+      monthSel.innerHTML = '<option>' + D.period + '</option>';
+    }
+  }
   const bhsMini = document.querySelector('.bhs-mini');
   if (bhsMini) bhsMini.textContent = D.bhs.total + '/100';
 

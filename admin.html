@@ -1582,7 +1582,7 @@ async function generateReport() {
   }
 
   // Abrir reporte
-  window.open('reporte.html?data=data/' + brandId + '_' + period + '.json', '_blank');
+  window.open('reporte.html?brand=' + brandId + '&period=' + period, '_blank');
 }
 
 // ============================================================
@@ -1592,7 +1592,7 @@ function previewReport() {
   const data = collectData();
   localStorage.setItem('ludik_report_data', JSON.stringify(data));
   const brandId = document.getElementById('brand_selector').value || 'PREVIEW';
-  window.open('reporte.html?data=data/' + brandId + '_' + data.period + '.json', '_blank');
+  window.open('reporte.html?brand=' + brandId + '&period=' + data.period, '_blank');
 }
 
 // ============================================================
