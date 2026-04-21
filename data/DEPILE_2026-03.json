@@ -42,7 +42,7 @@
     {
       "objective": "Impresiones Totales",
       "channel": "TT+Meta",
-      "target": "7,909,000\t",
+      "target": "7,909,000",
       "result": "6,367,124",
       "status": "met"
     },
@@ -50,7 +50,7 @@
       "objective": "Interacciones totales",
       "channel": "TT+Meta",
       "target": "13,324",
-      "result": "22,962\t",
+      "result": "22,962",
       "status": "met"
     },
     {
@@ -107,7 +107,8 @@
     "ig_organic_views": 5503,
     "fb_organic_impressions": 799,
     "fb_posts_impressions": 799,
-    "breakdown": {}
+    "breakdown": {},
+    "influencer_views": 0
   },
   "engagement": {
     "tiktok_organic": {
@@ -123,7 +124,28 @@
     "ig_organic_interactions": 138,
     "fb_organic_interactions": 12,
     "total_meaningful_interactions": 4693,
-    "total_with_video_views": 680099
+    "total_with_video_views": 680099,
+    "ig_posts": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "ig_reels": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "fb_total": {
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "total": 0
+    }
   },
   "investment": {
     "meta_ads_usd": 2353.52,
@@ -405,7 +427,8 @@
           "delta": "Protocolo activo"
         }
       ],
-      "text": "Corrección: URGENTE: Crear protocolo de respuesta para quejas de producto (irritacion/manchas). Responder en <2h con mensaje empatico + canal de atencion directo. Escalar a equipo de producto para evaluar lote/formulacion.\n\nApuesta: Duplicar contenido ASMR en TikTok. 'Soft vs Sticky' tuvo el mejor ER (2.39%) con 50K vistas. Producir 3-4 videos ASMR en abril mostrando texturas, aplicacion y resultado.\n\nApuesta: Responder consultas de compra en TikTok. 7 de 25 comentarios TK preguntan donde comprar. Cada comentario sin respuesta es una venta perdida. Responder en <4h con link o indicaciones.\n\nApuesta: Escalar formato educativo: 'Esperar a que crezca' (104K) y 'Mitos depilacion' (62K) demuestran que resolver dudas reales sobre depilacion genera alcance masivo. Producir 2-3 videos de mitos/verdades en abril.\n\nCorrección: Evaluar rol de Facebook: 526 personas de alcance organico mensual no justifica tiempo de creacion. Opciones: (a) solo crosspost automatico, (b) pausar contenido organico y usar solo como canal pagado.\n\nSistema: Configurar alertas de sentimiento negativo. Cualquier comentario que mencione irritacion, alergia o reaccion debe llegar al equipo en <1h."
+      "text": "Corrección: URGENTE: Crear protocolo de respuesta para quejas de producto (irritacion/manchas). Responder en <2h con mensaje empatico + canal de atencion directo. Escalar a equipo de producto para evaluar lote/formulacion.\n\nApuesta: Duplicar contenido ASMR en TikTok. 'Soft vs Sticky' tuvo el mejor ER (2.39%) con 50K vistas. Producir 3-4 videos ASMR en abril mostrando texturas, aplicacion y resultado.\n\nApuesta: Responder consultas de compra en TikTok. 7 de 25 comentarios TK preguntan donde comprar. Cada comentario sin respuesta es una venta perdida. Responder en <4h con link o indicaciones.\n\nApuesta: Escalar formato educativo: 'Esperar a que crezca' (104K) y 'Mitos depilacion' (62K) demuestran que resolver dudas reales sobre depilacion genera alcance masivo. Producir 2-3 videos de mitos/verdades en abril.\n\nCorrección: Evaluar rol de Facebook: 526 personas de alcance organico mensual no justifica tiempo de creacion. Opciones: (a) solo crosspost automatico, (b) pausar contenido organico y usar solo como canal pagado.\n\nSistema: Configurar alertas de sentimiento negativo. Cualquier comentario que mencione irritacion, alergia o reaccion debe llegar al equipo en <1h.",
+      "paragraphs": []
     }
   },
   "content": {
@@ -529,7 +552,8 @@
       "ig_posts": 6,
       "fb_posts": 3,
       "total": 27
-    }
+    },
+    "organic_highlights": []
   },
   "technical_texts": {
     "resumen": "Marzo fue el mes de mayor crecimiento en TikTok para DEPILE: 675K vistas totales con 9 videos, +2,339 seguidores (+180%). Inversión total: S/ 12,938 (USD 3,423). 7M impresiones totales. CPM Meta en mínimo histórico ($0.51). Alerta: 3 quejas de producto por irritación.",
@@ -598,43 +622,35 @@
       25737
     ],
     "fb_followers_labels": [
-      "1 mar",
-      "5 mar",
-      "8 mar",
-      "12 mar",
-      "15 mar",
-      "20 mar",
-      "25 mar",
-      "31 mar"
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
     ],
     "fb_followers": [
+      14282,
+      14293,
+      14288,
+      14263,
       14219,
-      14220,
-      14221,
-      14223,
-      14225,
-      14227,
-      14229,
       14231
     ],
     "ig_followers": [
-      7852,
-      7854,
-      7856,
-      7858,
-      7860,
-      7863,
-      7865,
+      null,
+      null,
+      null,
+      null,
+      null,
       7868
     ],
     "tk_followers": [
-      1299,
-      1350,
-      1450,
-      1650,
-      1900,
-      2300,
-      2900,
+      null,
+      null,
+      null,
+      null,
+      null,
       3638
     ],
     "reach_organic": [
@@ -977,5 +993,6 @@
     "new_followers": "+2,367",
     "objectives": "4",
     "tk_views": "675 K"
-  }
+  },
+  "influencers_ig": []
 }

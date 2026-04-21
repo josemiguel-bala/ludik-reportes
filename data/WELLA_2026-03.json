@@ -115,7 +115,8 @@
     "ig_organic_views": 3590,
     "ig_organic_reach": 2800,
     "fb_organic_impressions": 0,
-    "fb_organic_reach": 0
+    "fb_organic_reach": 0,
+    "influencer_views": 0
   },
   "engagement": {
     "ig_interactions": 178,
@@ -136,7 +137,28 @@
     "meta_ads_link_clicks": 0,
     "meta_ads_post_engagements": 0,
     "total_interactions": 262,
-    "total_meaningful_interactions": 262
+    "total_meaningful_interactions": 262,
+    "ig_posts": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "ig_reels": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "fb_total": {
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "total": 0
+    }
   },
   "investment": {
     "meta_ads_usd": 0,
@@ -275,7 +297,8 @@
           "text": "Protocolo de respuesta a comentarios en <2h. 60% de comentarios son intención de compra que necesita respuesta inmediata."
         }
       ],
-      "highlight": "Abril: 3 apuestas, 1 corrección, 2 sistemas"
+      "highlight": "Abril: 3 apuestas, 1 corrección, 2 sistemas",
+      "paragraphs": []
     }
   },
   "technical_texts": {
@@ -522,7 +545,8 @@
       "ig_posts": 11,
       "fb_posts": 0,
       "total": 31
-    }
+    },
+    "organic_highlights": []
   },
   "charts": {
     "months6": [
@@ -542,43 +566,35 @@
       1906
     ],
     "fb_followers_labels": [
-      "1 mar",
-      "5 mar",
-      "8 mar",
-      "12 mar",
-      "15 mar",
-      "20 mar",
-      "25 mar",
-      "31 mar"
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
     ],
     "fb_followers": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
     ],
     "ig_followers": [
+      null,
+      null,
+      null,
+      null,
       1840,
-      1843,
-      1846,
-      1857,
-      1862,
-      1874,
-      1884,
       1893
     ],
     "tk_followers": [
-      0,
-      1,
-      2,
-      3,
-      5,
-      8,
-      10,
+      null,
+      null,
+      null,
+      null,
+      null,
       13
     ],
     "er_fb": [
@@ -791,5 +807,6 @@
     "objectives": "",
     "tk_views": ""
   },
-  "competitors": []
+  "competitors": [],
+  "influencers_ig": []
 }

@@ -170,7 +170,8 @@
           "text": "Configurar monitoreo de competidores IG en Metricool para tener BHS completo en abril."
         }
       ],
-      "highlight": "Abril: 3 apuestas y 2 alertas"
+      "highlight": "Abril: 3 apuestas y 2 alertas",
+      "paragraphs": []
     }
   },
   "technical_texts": {
@@ -302,7 +303,8 @@
         "reach": 61,
         "reactions": 1
       }
-    ]
+    ],
+    "organic_highlights": []
   },
   "brand_id": "BUK",
   "charts": {
@@ -373,43 +375,35 @@
       7603
     ],
     "fb_followers_labels": [
-      "1 mar",
-      "5 mar",
-      "8 mar",
-      "12 mar",
-      "15 mar",
-      "20 mar",
-      "25 mar",
-      "31 mar"
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
     ],
     "fb_followers": [
-      5062,
-      5063,
-      5060,
-      5060,
-      5060,
-      5061,
+      5083,
+      5075,
+      5071,
+      5064,
       5061,
       5058
     ],
     "ig_followers": [
-      753,
-      782,
-      780,
-      805,
-      842,
-      890,
-      913,
+      null,
+      null,
+      null,
+      null,
+      null,
       925
     ],
     "tk_followers": [
-      1565,
-      1565,
-      1565,
-      1565,
-      1565,
-      1565,
-      1565,
+      null,
+      null,
+      null,
+      null,
+      null,
       1620
     ],
     "er_fb": [
@@ -557,7 +551,8 @@
     "tiktok_ads_impressions": 642924,
     "tiktok_organic_views": 560651,
     "ig_organic_views": 2712,
-    "fb_organic_impressions": 218
+    "fb_organic_impressions": 218,
+    "influencer_views": 0
   },
   "engagement": {
     "tiktok_organic": {
@@ -569,7 +564,28 @@
     "meta_ads_clicks": 7608,
     "meta_ads_link_clicks": 825,
     "meta_ads_post_engagements": 886805,
-    "total_meaningful_interactions": 12746
+    "total_meaningful_interactions": 12746,
+    "ig_posts": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "ig_reels": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "fb_total": {
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "total": 0
+    }
   },
   "efficiency": {
     "meta_cpm_usd": 0.74,
@@ -604,5 +620,6 @@
       "posts": "7",
       "er": "0.26%"
     }
-  ]
+  ],
+  "influencers_ig": []
 }

@@ -179,7 +179,8 @@
           "text": "Respuesta en <2h a consultas en comentarios. 18% son preguntas de compra esperando respuesta."
         }
       ],
-      "highlight": "Abril: 3 apuestas, 1 corrección, 2 sistemas"
+      "highlight": "Abril: 3 apuestas, 1 corrección, 2 sistemas",
+      "paragraphs": []
     }
   },
   "technical_texts": {
@@ -329,7 +330,8 @@
         "engagement": 0,
         "url": ""
       }
-    ]
+    ],
+    "organic_highlights": []
   },
   "brand_id": "ISANA",
   "charts": {
@@ -400,43 +402,35 @@
       30739
     ],
     "fb_followers_labels": [
-      "1 mar",
-      "5 mar",
-      "8 mar",
-      "12 mar",
-      "15 mar",
-      "20 mar",
-      "25 mar",
-      "31 mar"
+      "Oct 25",
+      "Nov 25",
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26"
     ],
     "fb_followers": [
-      22804,
-      22810,
-      22838,
-      22850,
-      22860,
-      22950,
-      23080,
+      null,
+      null,
+      null,
+      null,
+      null,
       23200
     ],
     "ig_followers": [
-      4982,
-      5000,
-      5020,
-      5060,
-      5120,
-      5320,
-      5510,
+      null,
+      null,
+      null,
+      null,
+      null,
       5690
     ],
     "tk_followers": [
-      1164,
-      1200,
-      1260,
-      1350,
-      1450,
-      1580,
-      1720,
+      null,
+      null,
+      null,
+      null,
+      null,
       1849
     ],
     "er_fb": [
@@ -587,7 +581,8 @@
     "tiktok_ads_impressions": 1560000,
     "tiktok_organic_views": 2529850,
     "ig_organic_views": 19454,
-    "fb_organic_impressions": 24392
+    "fb_organic_impressions": 24392,
+    "influencer_views": 0
   },
   "engagement": {
     "tiktok_organic": {
@@ -600,7 +595,28 @@
     "meta_ads_link_clicks": 1754,
     "meta_ads_post_engagements": 1388640,
     "total_meaningful_interactions": 11427,
-    "total_interactions": 1399311
+    "total_interactions": 1399311,
+    "ig_posts": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "ig_reels": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "fb_total": {
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "total": 0
+    }
   },
   "efficiency": {
     "meta_cpm_usd": 0.66,
@@ -643,5 +659,6 @@
       "posts": "25",
       "er": "%"
     }
-  ]
+  ],
+  "influencers_ig": []
 }
