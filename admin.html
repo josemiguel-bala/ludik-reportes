@@ -141,6 +141,11 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <span class="sidebar-dot" style="background:var(--danger)"></span> Competencia
     </button>
 
+    <div class="sidebar-section">Procesamiento</div>
+    <button class="sidebar-item" onclick="showTab('datamensual',this)">
+      <span class="sidebar-dot" style="background:var(--warning)"></span> Data Mensual
+    </button>
+
     <div class="sidebar-section">Datos Manuales</div>
     <button class="sidebar-item" onclick="showTab('sentiment',this)">
       <span class="sidebar-dot" style="background:var(--teal)"></span> Sentimiento
@@ -784,6 +789,62 @@ Negativos (4%): Negativo/esceptico. Ningun negativo sobre calidad.</textarea></d
       <button class="btn btn-secondary" style="margin-top:12px" onclick="addRecCard()">+ Agregar recomendacion</button>
     </div>
 
+    <!-- TAB: DATA MENSUAL -->
+    <div class="tab-content" id="tab-datamensual">
+      <div class="main-title">Data Mensual</div>
+      <div class="main-subtitle">Sube los archivos del mes para procesar automáticamente</div>
+
+      <div class="card">
+        <div class="card-title">1. Meta Ads CSV <span class="card-badge badge-manual">Facebook Ads Manager</span></div>
+        <div class="upload-zone" onclick="this.querySelector('input').click()">
+          <input type="file" accept=".csv" id="dm-meta-csv" onchange="dmFileLoaded(this,'dm-meta-status')">
+          <div class="upload-zone-text">Arrastra el CSV de Meta Ads Manager (nivel anuncio, mes completo)</div>
+        </div>
+        <div id="dm-meta-status" style="font-size:11px;color:var(--gray);margin-top:6px"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">2. TikTok Ads CSV <span class="card-badge badge-manual">Opcional</span></div>
+        <div class="upload-zone" onclick="this.querySelector('input').click()">
+          <input type="file" accept=".csv" id="dm-tk-csv" onchange="dmFileLoaded(this,'dm-tk-status')">
+          <div class="upload-zone-text">Arrastra el CSV de TikTok Ads Manager (si hubo inversión TK)</div>
+        </div>
+        <div id="dm-tk-status" style="font-size:11px;color:var(--gray);margin-top:6px"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">3. Metas del Mes CSV <span class="card-badge badge-manual">Proyecciones</span></div>
+        <div class="upload-zone" onclick="this.querySelector('input').click()">
+          <input type="file" accept=".csv" id="dm-metas-csv" onchange="dmFileLoaded(this,'dm-metas-status')">
+          <div class="upload-zone-text">Arrastra el CSV de metas por plataforma × geografía (Alcance, Interacciones, Views)</div>
+        </div>
+        <div id="dm-metas-status" style="font-size:11px;color:var(--gray);margin-top:6px"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">4. Influencers <span class="card-badge badge-manual">Opcional</span></div>
+        <div class="upload-zone" onclick="this.querySelector('input').click()">
+          <input type="file" accept=".csv" id="dm-influencers-csv" onchange="dmFileLoaded(this,'dm-inf-status')">
+          <div class="upload-zone-text">CSV con columnas: nombre, username, plataforma, views, likes, comments, shares, fecha, url</div>
+        </div>
+        <div id="dm-inf-status" style="font-size:11px;color:var(--gray);margin-top:6px"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">5. Contexto del Mes</div>
+        <textarea class="form-textarea" id="dm-context" rows="3" placeholder="¿Hubo campaña especial? ¿Sorteo? ¿Lanzamiento? ¿Cambio de estrategia? Escribe lo relevante del mes..."></textarea>
+      </div>
+
+      <div class="card" style="background:rgba(75,0,255,.05);border-color:rgba(75,0,255,.2)">
+        <div class="card-title" style="color:var(--purple)">Procesar</div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <button class="btn btn-success" onclick="procesarTodo()" style="padding:12px 32px;font-size:14px;font-weight:700">🚀 Procesar Todo</button>
+          <span style="font-size:11px;color:var(--gray)">Parsea CSVs → Calcula métricas → Llena campos del admin automáticamente</span>
+        </div>
+        <div id="dm-results" style="margin-top:16px;font-size:12px;color:var(--text);white-space:pre-wrap"></div>
+      </div>
+    </div>
+
     <!-- TAB: EXPORT -->
     <div class="tab-content" id="tab-export">
       <div class="main-title">Generar Reporte</div>
@@ -1009,6 +1070,217 @@ function addQuote(text='', user='', platform='IG') {
     '<select class="form-select quote-platform" style="font-size:10px;padding:4px 6px"><option'+(platform==='IG'?' selected':'')+'>IG</option><option'+(platform==='TK'?' selected':'')+'>TK</option><option'+(platform==='FB'?' selected':'')+'>FB</option></select>' +
     '<button class="btn btn-secondary" style="padding:2px 6px;font-size:10px;color:var(--danger)" onclick="this.parentElement.remove()">✕</button>';
   container.appendChild(div);
+}
+
+// ============================================================
+// ============================================================
+// DATA MENSUAL — FILE LOADING + CSV PARSERS
+// ============================================================
+const dmFiles = {};
+
+function dmFileLoaded(input, statusId) {
+  const file = input.files[0];
+  const status = document.getElementById(statusId);
+  if (!file) { status.textContent = ''; return; }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const text = e.target.result.replace(/^\uFEFF/, ''); // strip BOM
+    const key = input.id; // dm-meta-csv, dm-tk-csv, etc.
+    dmFiles[key] = text;
+    status.innerHTML = '<span style="color:var(--success)">✓</span> ' + file.name + ' (' + (text.split('\n').length - 1) + ' filas)';
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+function parseCSVRows(text) {
+  const rows = []; let row = []; let cell = ''; let inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i]; const next = text[i+1];
+    if (inQuotes) {
+      if (c === '"' && next === '"') { cell += '"'; i++; }
+      else if (c === '"') { inQuotes = false; }
+      else { cell += c; }
+    } else {
+      if (c === '"') { inQuotes = true; }
+      else if (c === ',') { row.push(cell.trim()); cell = ''; }
+      else if (c === '\n' || (c === '\r' && next === '\n')) { row.push(cell.trim()); rows.push(row); row = []; cell = ''; if (c === '\r') i++; }
+      else if (c === '\r') { row.push(cell.trim()); rows.push(row); row = []; cell = ''; }
+      else { cell += c; }
+    }
+  }
+  if (cell || row.length) { row.push(cell.trim()); rows.push(row); }
+  return rows;
+}
+
+function csvToObjects(text) {
+  const rows = parseCSVRows(text);
+  if (rows.length < 2) return [];
+  const headers = rows[0];
+  return rows.slice(1).filter(r => r.length > 1).map(r => {
+    const obj = {};
+    headers.forEach((h, i) => { obj[h] = r[i] || ''; });
+    return obj;
+  });
+}
+
+function parseMetaAdsCSV(text) {
+  const rows = csvToObjects(text);
+  const result = { total: { spend: 0, impressions: 0, reach: 0, likes: 0, comments: 0, shares: 0, saves: 0, video_views: 0, clicks: 0 },
+    fb_lima: { spend:0, reach:0, likes:0, comments:0, shares:0, saves:0, video_views:0 },
+    fb_prov: { spend:0, reach:0, likes:0, comments:0, shares:0, saves:0, video_views:0 },
+    ig_lima: { spend:0, reach:0, likes:0, comments:0, shares:0, saves:0, video_views:0 },
+    ig_prov: { spend:0, reach:0, likes:0, comments:0, shares:0, saves:0, video_views:0 }
+  };
+  const num = (v) => parseFloat((v||'0').replace(/,/g,'')) || 0;
+  rows.forEach(r => {
+    const adset = (r['Nombre del conjunto de anuncios'] || '').toLowerCase();
+    const region = (r['Región'] || r['Region'] || '').toLowerCase();
+    const spend = num(r['Importe gastado (USD)']);
+    const reach = num(r['Alcance']);
+    const imp = num(r['Impresiones']);
+    const likes = num(r['Reacciones a publicaciones']);
+    const comments = num(r['Comentarios de publicaciones']);
+    const shares = num(r['Veces que se compartieron las publicaciones']);
+    const saves = num(r['Veces que se guardaron las publicaciones']);
+    const vv = num(r['Reproducciones de video de 3 segundos']);
+    const clicks = num(r['Clics (todos)']);
+    result.total.spend += spend; result.total.impressions += imp; result.total.reach += reach;
+    result.total.likes += likes; result.total.comments += comments; result.total.shares += shares;
+    result.total.saves += saves; result.total.video_views += vv; result.total.clicks += clicks;
+    const isLima = region.includes('lima') || region.includes('callao');
+    const geo = isLima ? 'lima' : 'prov';
+    const isBoth = adset.includes('fb e ig') || adset.includes('fb  e ig');
+    const isIgOnly = !isBoth && (adset.includes(' ig ') || adset.includes('- ig -') || adset.includes('ig -'));
+    const isFbOnly = !isBoth && (adset.includes(' fb') || adset.includes('- fb') || adset.includes('fb -'));
+    const addTo = (key, div) => { result[key].spend+=spend/div; result[key].reach+=reach/div; result[key].likes+=Math.floor(likes/div); result[key].comments+=Math.floor(comments/div); result[key].shares+=Math.floor(shares/div); result[key].saves+=Math.floor(saves/div); result[key].video_views+=Math.floor(vv/div); };
+    if (isBoth) { addTo('fb_'+geo, 2); addTo('ig_'+geo, 2); }
+    else if (isIgOnly) { addTo('ig_'+geo, 1); }
+    else if (isFbOnly) { addTo('fb_'+geo, 1); }
+  });
+  const t = result.total;
+  result.cpm_usd = t.impressions > 0 ? (t.spend / t.impressions * 1000).toFixed(2) : 0;
+  result.frequency = t.reach > 0 ? (t.impressions / t.reach).toFixed(2) : 0;
+  return result;
+}
+
+function parseMetasCSV(text) {
+  const metas = { fb_lima:{}, fb_prov:{}, fb_total:{}, ig_lima:{}, ig_prov:{}, ig_total:{}, tk_lima:{}, tk_prov:{}, tk_total:{} };
+  const lines = text.split('\n');
+  let currentPlatform = '';
+  let currentGeo = '';
+  for (const line of lines) {
+    const clean = line.trim().replace(/\r/g, '');
+    if (!clean) continue;
+    const upper = clean.toUpperCase();
+    if (upper.includes('FACEBOOK')) { currentPlatform = 'fb'; currentGeo = ''; }
+    else if (upper.includes('INSTAGRAM')) { currentPlatform = 'ig'; currentGeo = ''; }
+    else if (upper.includes('TIKTOK')) { currentPlatform = 'tk'; currentGeo = ''; }
+    if (upper.includes('PROVINCIA')) currentGeo = 'prov';
+    else if (upper.includes('LIMA') && !upper.includes('TOTAL')) currentGeo = 'lima';
+    else if (upper.includes('TOTAL')) currentGeo = 'total';
+    const parts = clean.split(',');
+    if (parts.length >= 2) {
+      const label = parts[0].trim().toLowerCase();
+      const val = parseInt((parts[1] || '0').replace(/\./g, '').replace(/,/g, '').trim()) || 0;
+      const key = currentPlatform + '_' + currentGeo;
+      if (metas[key]) {
+        if (label.includes('alcance')) metas[key].alcance = val;
+        else if (label.includes('interacc')) metas[key].interacciones = val;
+        else if (label.includes('visual')) metas[key].visualizaciones = val;
+      }
+    }
+  }
+  return metas;
+}
+
+function procesarTodo() {
+  const results = document.getElementById('dm-results');
+  let log = '';
+  const fxRate = parseFloat(document.getElementById('brand_fx_rate').value) || 3.78;
+
+  // Parse Meta Ads
+  let metaAds = null;
+  if (dmFiles['dm-meta-csv']) {
+    metaAds = parseMetaAdsCSV(dmFiles['dm-meta-csv']);
+    const t = metaAds.total;
+    log += '✅ META ADS PROCESADO\n';
+    log += '   Inversión: USD ' + t.spend.toFixed(2) + ' (S/ ' + (t.spend*fxRate).toFixed(2) + ')\n';
+    log += '   Impresiones: ' + t.impressions.toLocaleString() + ' | Alcance: ' + t.reach.toLocaleString() + '\n';
+    log += '   CPM: USD ' + metaAds.cpm_usd + ' | Freq: ' + metaAds.frequency + 'x\n';
+    log += '   Interacciones (L+C+S+S): ' + (t.likes+t.comments+t.shares+t.saves).toLocaleString() + '\n\n';
+    // Fill investment fields
+    const metaUsd = document.getElementById('meta_total_usd');
+    if (metaUsd) metaUsd.value = t.spend.toFixed(2);
+    const metaSoles = document.getElementById('meta_total_soles');
+    if (metaSoles) metaSoles.value = (t.spend * fxRate).toFixed(2);
+    // Fill overrides
+    const ov = { override_impressions: t.impressions.toLocaleString(), override_reach: t.reach.toLocaleString(),
+      override_interactions: (t.likes+t.comments+t.shares+t.saves).toLocaleString(), override_clicks: t.clicks.toLocaleString() };
+    Object.entries(ov).forEach(([id,val]) => { const el = document.getElementById(id); if (el && !el.value) el.value = val; });
+  }
+
+  // Parse Metas
+  let metas = null;
+  if (dmFiles['dm-metas-csv']) {
+    metas = parseMetasCSV(dmFiles['dm-metas-csv']);
+    log += '✅ METAS PROCESADAS\n';
+    ['fb','ig','tk'].forEach(p => {
+      ['lima','prov','total'].forEach(g => {
+        const k = p+'_'+g; const m = metas[k];
+        if (m && m.alcance) log += '   '+p.toUpperCase()+' '+g+': Alc='+m.alcance+' Int='+m.interacciones+' Views='+m.visualizaciones+'\n';
+      });
+    });
+    log += '\n';
+  }
+
+  // Cross-reference: generate objectives
+  if (metaAds && metas) {
+    log += '✅ OBJETIVOS GENERADOS (Actual vs Meta)\n';
+    const objTbody = document.querySelector('#objectives-table tbody');
+    if (objTbody) objTbody.innerHTML = '';
+    const addObj = (name, channel, target, actual) => {
+      const met = actual >= target;
+      const delta = met ? '+' + Math.round((actual/target-1)*100) + '%' : Math.round(actual/target*100) + '%';
+      const status = met ? 'met' : 'missed';
+      log += '   ' + (met?'✅':'❌') + ' ' + name + ': ' + actual.toLocaleString() + ' vs ' + target.toLocaleString() + ' (' + delta + ')\n';
+      if (objTbody) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td><input class="form-input" value="'+name+'"></td><td><input class="form-input" value="'+channel+'"></td><td><input class="form-input" value="'+target.toLocaleString()+'"></td><td><input class="form-input" value="'+actual.toLocaleString()+'"></td><td><select class="form-select"><option value="met"'+(status==='met'?' selected':'')+'>Met</option><option value="missed"'+(status==='missed'?' selected':'')+'>Missed</option></select></td>';
+        objTbody.appendChild(tr);
+      }
+    };
+    const metrics = ['alcance','interacciones','visualizaciones'];
+    const metricLabels = ['Alcance','Interacciones','Views'];
+    const actualKeys = {alcance:'reach', interacciones:'int', visualizaciones:'video_views'};
+    ['fb','ig'].forEach(p => {
+      const pLabel = p==='fb'?'Facebook':'Instagram';
+      ['lima','prov'].forEach(g => {
+        const gLabel = g==='lima'?'Lima':'Provincia';
+        const mk = p+'_'+g;
+        const ad = metaAds[mk];
+        const mt = metas[mk];
+        if (mt && ad) {
+          if (mt.alcance) addObj(metricLabels[0]+' '+pLabel+' '+gLabel, pLabel, mt.alcance, Math.round(ad.reach));
+          if (mt.interacciones) addObj(metricLabels[1]+' '+pLabel+' '+gLabel, pLabel, mt.interacciones, ad.likes+ad.comments+ad.shares+ad.saves);
+          if (mt.visualizaciones) addObj(metricLabels[2]+' '+pLabel+' '+gLabel, pLabel, mt.visualizaciones, Math.round(ad.video_views));
+        }
+      });
+    });
+    // TK objectives (if metas exist but no TK ads data)
+    ['lima','prov'].forEach(g => {
+      const gLabel = g==='lima'?'Lima':'Provincia';
+      const mt = metas['tk_'+g];
+      if (mt) {
+        if (mt.alcance) addObj('Alcance TikTok '+gLabel, 'TikTok', mt.alcance, 0);
+        if (mt.interacciones) addObj('Interacciones TikTok '+gLabel, 'TikTok', mt.interacciones, 0);
+        if (mt.visualizaciones) addObj('Views TikTok '+gLabel, 'TikTok', mt.visualizaciones, 0);
+      }
+    });
+    log += '\n';
+  }
+
+  if (!log) log = '⚠ No se subió ningún archivo. Sube al menos el Meta Ads CSV.';
+  results.textContent = log;
 }
 
 // ============================================================
