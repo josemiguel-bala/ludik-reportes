@@ -39,52 +39,52 @@
   },
   "objectives": [
     {
-      "objective": "Alcance Facebook",
+      "objective": "Alcance FB Lima",
       "channel": "Facebook",
-      "target": "200,204",
-      "result": "261,405",
+      "target": "110,374",
+      "result": "148,848",
       "status": "met",
-      "delta": "+31%"
+      "delta": "+35%"
     },
     {
-      "objective": "Interacciones Facebook",
+      "objective": "Alcance FB Provincia",
       "channel": "Facebook",
-      "target": "864",
-      "result": "1,538",
+      "target": "89,830",
+      "result": "112,529",
       "status": "met",
-      "delta": "+78%"
+      "delta": "+25%"
     },
     {
-      "objective": "Alcance Instagram",
+      "objective": "Alcance IG Lima",
       "channel": "Instagram",
-      "target": "133,468",
-      "result": "177,378",
-      "status": "met",
-      "delta": "+33%"
+      "target": "73,582",
+      "result": "64,821",
+      "status": "missed",
+      "delta": "88%"
     },
     {
-      "objective": "Interacciones Instagram",
+      "objective": "Alcance IG Provincia",
       "channel": "Instagram",
-      "target": "576",
-      "result": "667",
+      "target": "59,886",
+      "result": "112,529",
       "status": "met",
-      "delta": "+16%"
+      "delta": "+88%"
     },
     {
-      "objective": "Alcance TikTok",
+      "objective": "Alcance TK Lima",
       "channel": "TikTok",
-      "target": "197,541",
-      "result": "3,095",
+      "target": "112,722",
+      "result": "—",
       "status": "missed",
-      "delta": "1.6%"
+      "delta": "0%"
     },
     {
-      "objective": "Interacciones TikTok",
+      "objective": "Alcance TK Provincia",
       "channel": "TikTok",
-      "target": "1,683",
-      "result": "89",
+      "target": "84,819",
+      "result": "—",
       "status": "missed",
-      "delta": "5.3%"
+      "delta": "0%"
     }
   ],
   "community": {
@@ -134,12 +134,12 @@
   },
   "story": {
     "act1": {
-      "number": "Acto 1 · Meta Ads Superó las Metas en FB e IG",
-      "title": "4 de 6 metas cumplidas. FB +31% y IG +33% sobre el target de alcance",
+      "number": "Acto 1 · 4/6 Metas de Alcance por Geografía",
+      "title": "FB cumplió en Lima y Provincia. IG Provincia reventó (+88%), pero IG Lima se quedó corto (88%)",
       "paragraphs": [
-        "La inversión de S/ 868 (USD 229.70) en Meta Ads generó 438,784 personas alcanzadas con un CPM de S/ 1.83. Facebook superó su meta de alcance (261K vs 200K, +31%) e interacciones (1,538 vs 864, +78%). Instagram también superó ambas metas: alcance 177K vs 133K (+33%) e interacciones 667 vs 576 (+16%).",
-        "El sorteo 'Tu ticket vale un viaje a Punta Sal' fue el driver principal. Top reel: 'Sándwich Punta Sal' con 1,197 views y 14.87% ER. Formato ganador: mamá real + receta rápida + llamado al sorteo.",
-        "Provincia recibió 57% del presupuesto (USD 131.77) vs Lima 43% (USD 97.93). Junín (USD 42.54), Arequipa (USD 35.82) y Ucayali (USD 35.32) fueron las regiones con mayor inversión fuera de Lima."
+        "Con S/ 868 (USD 229.70) en Meta Ads y un CPM de S/ 1.83, se alcanzaron 438,784 personas únicas. El desglose geográfico revela matices importantes: FB Lima superó su meta por 35% (148K vs 110K) y FB Provincia por 25% (112K vs 89K). Ambas geografías cumplieron en Facebook.",
+        "Instagram muestra un contraste fuerte: IG Provincia superó su meta por 88% (112K vs 59K), lo que indica que las campañas combinadas FB+IG en provincias tuvieron alto impacto en IG. Sin embargo, IG Lima se quedó en 88% de su meta (64K vs 73K). Es el único objetivo de Meta que no se cumplió.",
+        "La distribución geográfica fue 57% provincia (USD 131.77) vs 43% Lima (USD 97.93). Las regiones top fuera de Lima: Junín (USD 42.54), Arequipa (USD 35.82) y Ucayali (USD 35.32). La estrategia de diferenciación geográfica de la estrategia A1 ya tiene base de ejecución."
       ]
     },
     "act2": {
@@ -206,7 +206,7 @@
     }
   },
   "technical_texts": {
-    "resumen": "4/6 metas cumplidas. FB superó alcance (+31%) e interacciones (+78%). IG superó alcance (+33%) e interacciones (+16%). TikTok no cumplió: 1.6% del target de alcance por falta de inversión en TK Ads. Inversión total S/ 868 (USD 229.70) 100% Meta Ads. CPM S/ 1.83. 438K personas alcanzadas. +174 seguidores netos.",
+    "resumen": "4/6 metas de alcance por geografía cumplidas. FB Lima +35%, FB Provincia +25%, IG Provincia +88%. IG Lima no cumplió (88%). TikTok sin inversión: 0% en ambas geografías. Inversión S/ 868 (USD 229.70) 100% Meta Ads. CPM S/ 1.83. 438K personas alcanzadas. Provincia 57% del presupuesto.",
     "audiencia": "Según 318 entrevistas a profundidad: 62% mujeres, 47% entre 36-55 años, 57% Lima. Segmento principal: Cuidadoras del hogar (70% de las entrevistas). Perfil: mamá práctica, busca rapidez (73.6%) y salud/nutrición (83.6%). Compra A1 como 'seguro de alacena' contra imprevistos.",
     "contenido_insight": "Formato ganador: mamá real + receta rápida + llamado a sorteo. El sándwich de atún A1 fue el reel con mejor ER (14.87%). Para abril se diversifica con 4 pilares: Tips A1 (30%), Momentos A1 (25%), Soy Mamá A1 (25%), Recetas A1 (20%).",
     "contenido_fail": "TK videos con bajo alcance (<350 views), reflejo de fase inicial. FB sin pauta: alcance <250 personas. Marzo fue 90% sorteo; faltó contenido de valor tipo 'Anita' (persona de marca). El 53.8% exige ver proceso real, no fotos de plato terminado.",
