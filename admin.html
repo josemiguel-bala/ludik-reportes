@@ -660,22 +660,26 @@ Calculo: 87×0.10 + 90×0.10 + 88×0.20 + 85×0.15 + 92×0.10 + 100×0.10 + 85×
       <div class="main-subtitle">Analisis cualitativo de comentarios <span class="card-badge badge-manual">Manual / Extension Chrome</span></div>
 
       <div class="card">
-        <div class="card-title">Upload de Comentarios</div>
+        <div class="card-title">Upload de Comentarios <span class="card-badge badge-manual">CSVs múltiples</span></div>
+        <div class="form-hint" style="margin-bottom:8px">Sube todos los CSVs de comentarios del mes (TikTok Comment Exporter + IG export). Se procesan todos juntos.</div>
         <div class="upload-zone" onclick="this.querySelector('input').click()">
-          <input type="file" accept=".csv" multiple id="comments-csv">
-          <div class="upload-zone-text">Arrastra los CSV de comentarios exportados (IG + TikTok)<br>Se analizaran automaticamente</div>
+          <input type="file" accept=".csv" multiple id="comments-csv" onchange="commentsFilesLoaded(this)">
+          <div class="upload-zone-text">Arrastra los CSV de comentarios (IG + TikTok)<br>Acepta múltiples archivos</div>
         </div>
+        <div id="comments-upload-status" style="font-size:11px;color:var(--gray);margin-top:6px"></div>
+        <button class="btn btn-success" style="margin-top:12px;padding:8px 20px" onclick="processComments()">Analizar Comentarios</button>
+        <div id="comments-results" style="margin-top:12px;font-size:12px;white-space:pre-wrap"></div>
       </div>
 
       <div class="card">
-        <div class="card-title">Resultados del Analisis</div>
+        <div class="card-title">Resultados del Analisis <span class="card-badge badge-auto">Editable</span></div>
         <div class="form-row-4">
-          <div class="form-group"><label class="form-label">Total comentarios</label><input class="form-input" id="sent_total" value="113"></div>
-          <div class="form-group"><label class="form-label">% Positivo</label><input class="form-input" id="sent_pos" value="69"></div>
-          <div class="form-group"><label class="form-label">% Neutral</label><input class="form-input" id="sent_neu" value="8"></div>
-          <div class="form-group"><label class="form-label">% Negativo</label><input class="form-input" id="sent_neg" value="4"></div>
+          <div class="form-group"><label class="form-label">Total comentarios</label><input class="form-input" id="sent_total" value="0"></div>
+          <div class="form-group"><label class="form-label">% Positivo</label><input class="form-input" id="sent_pos" value="0"></div>
+          <div class="form-group"><label class="form-label">% Neutral</label><input class="form-input" id="sent_neu" value="0"></div>
+          <div class="form-group"><label class="form-label">% Negativo</label><input class="form-input" id="sent_neg" value="0"></div>
         </div>
-        <div class="form-group"><label class="form-label">Net Score</label><input class="form-input" id="sent_net" value="+65"></div>
+        <div class="form-group"><label class="form-label">Net Score</label><input class="form-input" id="sent_net" value="0"></div>
       </div>
 
       <div class="card">
@@ -1180,6 +1184,126 @@ function collectOrgHighlights() {
     items.push(post);
   });
   return items;
+}
+
+// ============================================================
+// COMMENTS PROCESSOR
+// ============================================================
+let commentFiles = [];
+
+function commentsFilesLoaded(input) {
+  commentFiles = [];
+  const status = document.getElementById('comments-upload-status');
+  const files = Array.from(input.files);
+  let loaded = 0;
+  files.forEach(file => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      commentFiles.push({ name: file.name, text: e.target.result.replace(/^\uFEFF/, '') });
+      loaded++;
+      if (loaded === files.length) {
+        status.innerHTML = '<span style="color:var(--success)">✓</span> ' + files.length + ' archivo(s): ' + files.map(f=>f.name).join(', ');
+      }
+    };
+    reader.readAsText(file, 'utf-8');
+  });
+}
+
+function processComments() {
+  if (commentFiles.length === 0) { document.getElementById('comments-results').textContent = '⚠ Sube al menos un CSV de comentarios.'; return; }
+
+  const allComments = [];
+  commentFiles.forEach(f => {
+    const rows = csvToObjects(f.text);
+    rows.forEach(r => {
+      // TikTok Comment Exporter format
+      const tkText = r['Comentario'] || r['Comment'] || '';
+      // IG export format
+      const igText = r['text'] || r['Text'] || '';
+      const text = tkText || igText;
+      if (!text || text.length < 2) return;
+
+      const username = r['Nombre de usuario'] || r['userName'] || r['Username'] || '';
+      const nickname = r['Apodo'] || r['Nickname'] || username;
+      const likes = parseInt(r['Digg Count'] || r['likes'] || '0') || 0;
+      const platform = tkText ? 'TK' : 'IG';
+      const isAuthor = (r['Author Digged'] || '').toLowerCase() === 'sí' || (r['Author Digged'] || '').toLowerCase() === 'yes';
+
+      // Skip brand's own replies
+      const brandName = (document.getElementById('brand_name')?.value || '').toLowerCase();
+      if (username.toLowerCase().includes(brandName) && brandName.length > 2) return;
+
+      allComments.push({ text, username: '@' + username, nickname, likes, platform, isAuthor });
+    });
+  });
+
+  if (allComments.length === 0) { document.getElementById('comments-results').textContent = '⚠ No se encontraron comentarios en los CSVs.'; return; }
+
+  // Sentiment classification (heuristic)
+  const posWords = ['bueno','buena','buenísimo','buenazo','excelente','increíble','genial','hermoso','hermosa','lindo','linda','delicioso','rico','rica','riquísimo','maravilloso','perfecto','perfecta','encanta','amo','favorito','favorita','recomiendo','felicidades','bravo','crack','top','éxito','calidad','confianza','siempre','mejor','gracias','bendiciones','dios','bendiga'];
+  const negWords = ['malo','mala','pésimo','horrible','terrible','asco','asqueroso','feo','peor','nunca','basura','estafa','engaño','mentira','caro','irritación','irrita','mancha','queja','reclamo','denuncia','peligro','daño','alergia'];
+  let pos = 0, neg = 0, neu = 0;
+  allComments.forEach(c => {
+    const lower = c.text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const hasPos = posWords.some(w => lower.includes(w));
+    const hasNeg = negWords.some(w => lower.includes(w));
+    if (hasNeg && !hasPos) { c.sentiment = 'neg'; neg++; }
+    else if (hasPos) { c.sentiment = 'pos'; pos++; }
+    else { c.sentiment = 'neu'; neu++; }
+  });
+  const total = allComments.length;
+  const posPct = Math.round(pos/total*100);
+  const neuPct = Math.round(neu/total*100);
+  const negPct = Math.round(neg/total*100);
+  const netScore = posPct - negPct;
+
+  // Fill sentiment fields
+  document.getElementById('sent_total').value = total;
+  document.getElementById('sent_pos').value = posPct;
+  document.getElementById('sent_neu').value = neuPct;
+  document.getElementById('sent_neg').value = negPct;
+  document.getElementById('sent_net').value = (netScore >= 0 ? '+' : '') + netScore;
+
+  // Word cloud: frequency of meaningful words
+  const stopwords = new Set(['el','la','los','las','un','una','de','del','en','con','que','por','para','se','es','no','lo','al','le','ya','su','me','si','mi','te','tu','más','pero','como','o','a','y','e','muy','esta','este','ese','esa','esto','eso','hay','ser','tiene','tiene','son','fue','era','han','hemos','porque','cuando','donde','cual','quien','todo','toda','todos','todas','otro','otra','otros','otras','cada','sin','sobre','entre','hasta','desde','hacia','según','durante','mediante','creo','puede','hacer','hoy','bien','mal','así','aquí','ahí','después','antes','también','solo','mucho','poco','jaja','jajaja','jajajaja','xd','xdd','jsjs','jsjsjs']);
+  const wordCount = {};
+  allComments.forEach(c => {
+    const words = c.text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-záéíóúüñ\s]/gi,'').split(/\s+/);
+    words.forEach(w => {
+      if (w.length < 3 || stopwords.has(w)) return;
+      wordCount[w] = (wordCount[w] || 0) + 1;
+    });
+  });
+  const sorted = Object.entries(wordCount).sort((a,b) => b[1]-a[1]).slice(0, 20);
+  const maxFreq = sorted[0]?.[1] || 1;
+  const wcText = sorted.map(([word, count]) => word + ':' + (count/maxFreq * 3.5).toFixed(1)).join(', ');
+  document.getElementById('word_cloud_raw').value = wcText;
+
+  // Top quotes: highest likes + longest meaningful comments
+  const topByLikes = [...allComments].filter(c => c.text.length > 15).sort((a,b) => b.likes - a.likes).slice(0, 4);
+  const topByLength = [...allComments].filter(c => c.text.length > 30 && c.sentiment === 'pos').sort((a,b) => b.text.length - a.text.length).slice(0, 4);
+  const seen = new Set();
+  const bestQuotes = [];
+  [...topByLikes, ...topByLength].forEach(c => {
+    if (seen.has(c.text) || bestQuotes.length >= 8) return;
+    seen.add(c.text);
+    bestQuotes.push(c);
+  });
+
+  // Fill quotes
+  const quotesContainer = document.getElementById('quotes-container');
+  quotesContainer.innerHTML = '';
+  bestQuotes.forEach(c => addQuote(c.text, c.username, c.platform));
+
+  // Results log
+  let log = '✅ ' + total + ' comentarios procesados (' + commentFiles.length + ' archivos)\n';
+  log += '   Positivos: ' + pos + ' (' + posPct + '%) | Neutral: ' + neu + ' (' + neuPct + '%) | Negativos: ' + neg + ' (' + negPct + '%)\n';
+  log += '   Net Score: ' + (netScore >= 0 ? '+' : '') + netScore + '\n';
+  log += '   Word Cloud: ' + sorted.length + ' palabras generadas\n';
+  log += '   Quotes: ' + bestQuotes.length + ' seleccionados (top likes + más representativos)\n\n';
+  log += '⚠ Revisa la clasificación de sentimiento y ajusta manualmente si es necesario.\n';
+  log += '   La heurística es básica (keywords). Sarcasmo y contexto pueden fallar.';
+  document.getElementById('comments-results').textContent = log;
 }
 
 // ============================================================
