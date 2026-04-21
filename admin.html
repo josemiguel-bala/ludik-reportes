@@ -515,6 +515,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       </div>
 
       <div class="card">
+        <div class="card-title">Influencers <span class="card-badge badge-manual">Manual</span> <button class="btn btn-secondary" style="padding:4px 10px;font-size:10px;margin-left:auto" onclick="addInfluencer()">+ Agregar</button></div>
+        <div class="form-hint" style="margin-bottom:8px">Collabs del mes. Thumbnail + nombre + métricas. Si no hay influencers, dejar vacío.</div>
+        <div id="influencers-list"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Organic Highlights <span class="card-badge badge-manual">Posts IG destacados</span> <button class="btn btn-secondary" style="padding:4px 10px;font-size:10px;margin-left:auto" onclick="addOrgHighlight()">+ Agregar</button></div>
+        <div class="form-hint" style="margin-bottom:8px">Posts orgánicos destacados de IG (reels, carruseles). Thumbnail + métricas.</div>
+        <div id="org-highlights-list"></div>
+      </div>
+
+      <div class="card">
         <div class="card-title">Textos Tecnicos — Contenido <span class="card-badge badge-manual">Texto Tecnico</span></div>
         <div class="form-group"><label class="form-label">Insight principal del contenido</label>
         <textarea class="form-textarea" id="tech_contenido_insight" rows="2">Un solo video domino TODO el mes en TODAS las plataformas. "Zapatillas y Limpieza" fue #1 en TikTok (441K) y "Talco expertos" fue el hit cross-platform (407K TK + 264K Meta Ads).</textarea></div>
@@ -1074,6 +1086,102 @@ function addQuote(text='', user='', platform='IG') {
 
 // ============================================================
 // ============================================================
+// INFLUENCERS EDITOR
+// ============================================================
+function addInfluencer(inf={}) {
+  const container = document.getElementById('influencers-list');
+  const idx = container.children.length;
+  const div = document.createElement('div');
+  div.className = 'post-editor';
+  div.dataset.type = 'influencer';
+  const thumbStyle = inf.coverImageUrl ? ' style="background-image:url('+inf.coverImageUrl+');background-size:cover;background-position:center;color:transparent"' : '';
+  div.innerHTML =
+    '<div class="post-thumb-upload" data-thumb="inf-'+idx+'"'+thumbStyle+'>'+(inf.coverImageUrl?'':'Click para subir foto')+'</div>' +
+    '<div class="post-fields">' +
+      '<div class="form-row"><input class="form-input inf-name" value="'+(inf.name||'')+'" placeholder="Nombre"><input class="form-input inf-username" value="'+(inf.username||'')+'" placeholder="@username"></div>' +
+      '<div class="form-row"><select class="form-select inf-platform"><option'+(inf.platform==='Maternidad'?' selected':'')+'>Maternidad</option><option'+(inf.platform==='Cocina/Mom'?' selected':'')+'>Cocina/Mom</option><option'+(inf.platform==='Lifestyle'?' selected':'')+'>Lifestyle</option><option'+(inf.platform==='Fitness'?' selected':'')+'>Fitness</option><option'+(inf.platform==='Beauty'?' selected':'')+'>Beauty</option><option'+(inf.platform==='Food'?' selected':'')+'>Food</option><option'+((!inf.platform||inf.platform==='General')?' selected':'')+'>General</option></select><input class="form-input inf-date" type="date" value="'+(inf.date||'')+'"></div>' +
+      '<div class="form-row"><input class="form-input inf-views" value="'+(inf.views||'')+'" placeholder="Views"><input class="form-input inf-likes" value="'+(inf.likes||'')+'" placeholder="Likes"></div>' +
+      '<div class="form-row"><input class="form-input inf-comments" value="'+(inf.comments||'')+'" placeholder="Comments"><input class="form-input inf-shares" value="'+(inf.shares||'')+'" placeholder="Shares"></div>' +
+      '<div class="form-row"><input class="form-input inf-content" value="'+(inf.content_type||'')+'" placeholder="Tipo contenido (ej: Receta atún)"><input class="form-input inf-url" value="'+(inf.url||'')+'" placeholder="URL del post"></div>' +
+      '<button class="btn btn-secondary" style="padding:2px 8px;font-size:10px;color:var(--danger);margin-top:4px" onclick="this.closest(\'.post-editor\').remove()">Eliminar</button>' +
+    '</div>';
+  container.appendChild(div);
+  bindThumbUploads(container);
+}
+
+function collectInfluencers() {
+  const items = [];
+  document.querySelectorAll('#influencers-list .post-editor').forEach(editor => {
+    const name = editor.querySelector('.inf-name')?.value;
+    if (!name) return;
+    const thumb = editor.querySelector('.post-thumb-upload');
+    const bgImg = thumb?.style.backgroundImage || '';
+    const coverUrl = bgImg.match(/url\("?([^"]+)"?\)/)?.[1] || '';
+    const inf = {
+      name, username: editor.querySelector('.inf-username')?.value || '',
+      platform: editor.querySelector('.inf-platform')?.value || 'General',
+      views: parseInt((editor.querySelector('.inf-views')?.value||'0').replace(/,/g,'')) || 0,
+      likes: parseInt((editor.querySelector('.inf-likes')?.value||'0').replace(/,/g,'')) || 0,
+      comments: parseInt((editor.querySelector('.inf-comments')?.value||'0').replace(/,/g,'')) || 0,
+      shares: parseInt((editor.querySelector('.inf-shares')?.value||'0').replace(/,/g,'')) || 0,
+      content_type: editor.querySelector('.inf-content')?.value || '',
+      date: editor.querySelector('.inf-date')?.value || '',
+      url: editor.querySelector('.inf-url')?.value || ''
+    };
+    if (coverUrl) inf.coverImageUrl = coverUrl;
+    items.push(inf);
+  });
+  return items;
+}
+
+// ============================================================
+// ORGANIC HIGHLIGHTS EDITOR
+// ============================================================
+function addOrgHighlight(post={}) {
+  const container = document.getElementById('org-highlights-list');
+  const idx = container.children.length;
+  const div = document.createElement('div');
+  div.className = 'post-editor';
+  div.dataset.type = 'org-highlight';
+  const thumbStyle = post.coverImageUrl ? ' style="background-image:url('+post.coverImageUrl+');background-size:cover;background-position:center;color:transparent"' : '';
+  const platOpts = ['Instagram','Instagram Reel','Facebook'].map(p => '<option'+(post.platform===p?' selected':'')+'>'+p+'</option>').join('');
+  div.innerHTML =
+    '<div class="post-thumb-upload" data-thumb="org-'+idx+'"'+thumbStyle+'>'+(post.coverImageUrl?'':'Click para subir thumbnail')+'</div>' +
+    '<div class="post-fields">' +
+      '<div class="form-row"><input class="form-input oh-title" value="'+(post.title||'')+'" placeholder="Título del post"><select class="form-select oh-platform">'+platOpts+'</select></div>' +
+      '<div class="form-row"><input class="form-input oh-date" type="date" value="'+(post.date||'')+'"><input class="form-input oh-views" value="'+(post.views||'')+'" placeholder="Views/Alcance"></div>' +
+      '<div class="form-row"><input class="form-input oh-interactions" value="'+(post.interactions||'')+'" placeholder="Interacciones"><input class="form-input oh-er" value="'+(post.er||'')+'" placeholder="ER% (ej: 14.87%)"></div>' +
+      '<div class="form-row"><input class="form-input oh-note" value="'+(post.note||'')+'" placeholder="Nota (ej: Mejor reel orgánico)"><input class="form-input oh-url" value="'+(post.url||'')+'" placeholder="URL"></div>' +
+      '<button class="btn btn-secondary" style="padding:2px 8px;font-size:10px;color:var(--danger);margin-top:4px" onclick="this.closest(\'.post-editor\').remove()">Eliminar</button>' +
+    '</div>';
+  container.appendChild(div);
+  bindThumbUploads(container);
+}
+
+function collectOrgHighlights() {
+  const items = [];
+  document.querySelectorAll('#org-highlights-list .post-editor').forEach(editor => {
+    const title = editor.querySelector('.oh-title')?.value;
+    if (!title) return;
+    const thumb = editor.querySelector('.post-thumb-upload');
+    const bgImg = thumb?.style.backgroundImage || '';
+    const coverUrl = bgImg.match(/url\("?([^"]+)"?\)/)?.[1] || '';
+    const post = {
+      title, platform: editor.querySelector('.oh-platform')?.value || 'Instagram',
+      date: editor.querySelector('.oh-date')?.value || '',
+      views: parseInt((editor.querySelector('.oh-views')?.value||'0').replace(/,/g,'')) || 0,
+      interactions: parseInt((editor.querySelector('.oh-interactions')?.value||'0').replace(/,/g,'')) || 0,
+      er: editor.querySelector('.oh-er')?.value || '',
+      note: editor.querySelector('.oh-note')?.value || '',
+      url: editor.querySelector('.oh-url')?.value || ''
+    };
+    if (coverUrl) post.coverImageUrl = coverUrl;
+    items.push(post);
+  });
+  return items;
+}
+
+// ============================================================
 // DATA MENSUAL — FILE LOADING + CSV PARSERS
 // ============================================================
 const dmFiles = {};
@@ -1422,8 +1530,10 @@ function collectData() {
     recommendations: [],
     content: {
       top_tiktok: collectPosts('top-posts-list'),
-      worst_overall: collectPosts('worst-posts-list')
+      worst_overall: collectPosts('worst-posts-list'),
+      organic_highlights: collectOrgHighlights()
     },
+    influencers_ig: collectInfluencers(),
     charts: {
       fb_age: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('fb_age_'+i)?.value) || 0),
       ig_age: [0,1,2,3,4,5].map(i => parseFloat(document.getElementById('ig_age_'+i)?.value) || 0),
@@ -1812,6 +1922,18 @@ function loadFromData(data) {
   if (data.community_quotes && data.community_quotes.length > 0) {
     const container = document.getElementById('quotes-container');
     if (container) { container.innerHTML = ''; data.community_quotes.forEach(q => addQuote(q.t, q.u, q.p)); }
+  }
+
+  // Influencers
+  if (data.influencers_ig && data.influencers_ig.length > 0) {
+    const container = document.getElementById('influencers-list');
+    if (container) { container.innerHTML = ''; data.influencers_ig.forEach(inf => addInfluencer(inf)); }
+  }
+
+  // Organic highlights
+  if (data.content && data.content.organic_highlights && data.content.organic_highlights.length > 0) {
+    const container = document.getElementById('org-highlights-list');
+    if (container) { container.innerHTML = ''; data.content.organic_highlights.forEach(p => addOrgHighlight(p)); }
   }
 }
 
