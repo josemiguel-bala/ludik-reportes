@@ -636,27 +636,27 @@
       743
     ],
     "er_fb": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      0.73
+      1.28,
+      7.51,
+      4.66,
+      2.64,
+      3.16,
+      0.44
     ],
     "er_ig": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      0.6
+      2.46,
+      24.94,
+      6.50,
+      3.99,
+      7.21,
+      0.30
     ],
     "er_tk": [
-      null,
-      null,
-      null,
-      null,
-      null,
+      0,
+      0,
+      0,
+      0,
+      0,
       2.8
     ],
     "tk_top_videos_labels": [
