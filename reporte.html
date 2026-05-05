@@ -16,18 +16,18 @@
   --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.10);
 }
 [data-theme="light"]{
-  --bg:#F5F5FA;--bg2:#EBEBF4;--card:#FFFFFF;--card2:#F8F8FF;
-  --border:rgba(0,0,0,0.06);--border2:rgba(0,0,0,0.10);
+  --bg:#F0EDF8;--bg2:#E4E0F0;--card:#FFFFFF;--card2:#F8F6FF;
+  --border:rgba(75,0,255,0.08);--border2:rgba(75,0,255,0.14);
   --purple:#4B00FF;--purple2:#673CEF;--fucsia:#D6009A;--teal:#0EB5A0;
-  --white:#111128;--gray:#555578;--gray2:#888899;
+  --white:#1A1A2E;--gray:#444466;--gray2:#666688;
   --success:#1A9D4A;--warning:#D48800;--danger:#D03030;
 }
-[data-theme="light"] .fixed-header{background:rgba(245,245,250,0.97)}
+[data-theme="light"] .fixed-header{background:rgba(240,237,248,0.97)}
 [data-theme="light"] .portada{background:linear-gradient(135deg,#F5F5FA 0%,#E8E0FF 40%,#F5F5FA 100%)}
 [data-theme="light"] .cierre{background:linear-gradient(135deg,#F5F5FA 0%,#EDE0FF 50%,#F5F5FA 100%)}
 [data-theme="light"] .story-text,[data-theme="light"] .risk-alert-text,[data-theme="light"] .action-box-text,[data-theme="light"] .story-risk-text{color:#444466}
 [data-theme="light"] .insight-text{color:#333355}
-[data-theme="light"] .post-card{background:#FFF;border-color:rgba(0,0,0,.08)}
+[data-theme="light"] .post-card{background:#FFFFFF;border-color:rgba(75,0,255,.10);box-shadow:0 2px 8px rgba(75,0,255,0.06)}
 [data-theme="light"] .post-card:hover{border-color:rgba(75,0,255,.3)}
 [data-theme="light"] .post-title{color:#111128}
 [data-theme="light"] .post-date{color:#666}
@@ -52,6 +52,74 @@
 [data-theme="light"] .comp-table th{color:#666}
 [data-theme="light"] .act-title{color:#111128}
 [data-theme="light"] .act-number{color:#673CEF}
+[data-theme="light"] .sec-header{border-bottom-color:rgba(0,0,0,.08)}
+[data-theme="light"] .sec-title{color:#111128}
+[data-theme="light"] .sec-subtitle{color:#666}
+[data-theme="light"] .sec-number{color:#4B00FF}
+[data-theme="light"] .sec-body{color:#333}
+[data-theme="light"] .report-section{background:#FFFFFF;border-radius:16px;margin:16px 0;padding:24px 32px;box-shadow:0 1px 4px rgba(75,0,255,0.06)}
+[data-theme="light"] .insight-block{background:rgba(75,0,255,0.08);border-left-color:#4B00FF}
+[data-theme="light"] .insight-block .insight-title{color:#333355}
+[data-theme="light"] .kpi-card{background:#FFFFFF;border-color:rgba(75,0,255,.10);box-shadow:0 2px 8px rgba(75,0,255,0.06)}
+[data-theme="light"] .kpi-label{color:#666}
+[data-theme="light"] .kpi-delta{color:#555}
+[data-theme="light"] .inv-split{gap:16px}
+[data-theme="light"] .inv-card{background:#FFFFFF;border-color:rgba(75,0,255,.10);box-shadow:0 2px 8px rgba(75,0,255,0.06)}
+[data-theme="light"] .inv-plat{color:#4B00FF}
+[data-theme="light"] .inv-total{color:#111128}
+[data-theme="light"] .inv-sub{color:#666}
+[data-theme="light"] .inv-metric-val{color:#111128}
+[data-theme="light"] .inv-metric-label{color:#888}
+[data-theme="light"] .layer-divider{border-color:rgba(0,0,0,.08)}
+[data-theme="light"] .layer-label{color:#4B00FF;background:#F5F5FA}
+[data-theme="light"] .layer-line{background:rgba(0,0,0,.08)}
+[data-theme="light"] .post-gallery-label{color:#333}
+[data-theme="light"] .pgl-top{color:#0EB5A0}
+[data-theme="light"] .pgl-low{color:#D03030}
+[data-theme="light"] .post-metric-val{color:#111128}
+[data-theme="light"] .post-body{color:#333}
+[data-theme="light"] .funnel-step{background:#FFFFFF;border-color:rgba(75,0,255,.10);box-shadow:0 2px 8px rgba(75,0,255,0.06)}
+[data-theme="light"] .funnel-value{color:#111128}
+[data-theme="light"] .funnel-label{color:#666}
+[data-theme="light"] .funnel-conv{color:#888}
+[data-theme="light"] .analysis-block{background:rgba(75,0,255,0.04);border-color:rgba(0,0,0,.06)}
+[data-theme="light"] .analysis-label{color:#4B00FF}
+[data-theme="light"] .story-section{background:#FFF}
+[data-theme="light"] .story-highlight{background:rgba(75,0,255,0.06);border-left-color:#4B00FF}
+[data-theme="light"] .story-highlight-text{color:#333}
+[data-theme="light"] .evidence-card{background:#FFFFFF;border-color:rgba(75,0,255,.10);box-shadow:0 2px 8px rgba(75,0,255,0.06)}
+[data-theme="light"] .ev-value{color:#111128}
+[data-theme="light"] .ev-label{color:#666}
+[data-theme="light"] .rec-card{background:#FFFFFF;border-color:rgba(75,0,255,.10);box-shadow:0 2px 8px rgba(75,0,255,0.06)}
+[data-theme="light"] .rec-title{color:#111128}
+[data-theme="light"] .rec-desc{color:#555}
+[data-theme="light"] .rec-priority{color:#FFF}
+[data-theme="light"] .obj-row{border-bottom-color:rgba(0,0,0,.06)}
+[data-theme="light"] .obj-name{color:#333}
+[data-theme="light"] .obj-target{color:#666}
+[data-theme="light"] .obj-delta{color:#333}
+[data-theme="light"] .our-brand td{background:rgba(75,0,255,0.06)}
+[data-theme="light"] .comp-badge-us{background:#4B00FF;color:#FFF}
+[data-theme="light"] .fixed-header{border-bottom-color:rgba(0,0,0,.08)}
+[data-theme="light"] .mode-btn{color:#333;border-color:rgba(0,0,0,.15)}
+[data-theme="light"] .mode-btn.active{background:#4B00FF;color:#FFF}
+[data-theme="light"] .side-link{color:#555}
+[data-theme="light"] .side-link.active{color:#4B00FF}
+[data-theme="light"] .chart-container{background:#FFFFFF;border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(75,0,255,0.06)}
+[data-theme="light"] .chart-title{color:#1A1A2E}
+[data-theme="light"] .sec-divider{border-color:rgba(0,0,0,.06)}
+[data-theme="light"] .annex-switch-btn{background:#4B00FF;color:#FFF}
+[data-theme="light"] .sent-bar{background:rgba(0,0,0,.04)}
+[data-theme="light"] .sent-value{color:#111128}
+[data-theme="light"] .influencer-card{background:#FFF;border-color:rgba(0,0,0,.08)}
+[data-theme="light"] .inf-name{color:#111128}
+[data-theme="light"] .inf-handle{color:#4B00FF}
+[data-theme="light"] .inf-metric-val{color:#111128}
+[data-theme="light"] .inf-metric-label{color:#888}
+[data-theme="light"] .badge-top{background:#0EB5A0;color:#FFF}
+[data-theme="light"] .badge-low{background:#D03030;color:#FFF}
+[data-theme="light"] .post-plat-badge{background:rgba(0,0,0,.6);color:#FFF}
+[data-theme="light"] .post-thumb{border-radius:10px 10px 0 0}
 :root{
   --purple:#4B00FF;--purple2:#673CEF;--fucsia:#F84CDE;--teal:#20ECC8;
   --white:#FFFFFF;--gray:#8888AA;--gray2:#55557A;
@@ -839,13 +907,8 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
     </div>
   </div>
   <!-- Compact summary + expand toggle -->
-  <div class="summary-bar" onclick="toggleObj()">
-    <div class="summary-pill"><div><div class="sp-val" style="color:var(--warning)">9/18</div><div class="sp-label">Objetivos</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">439K</div><div class="sp-label">Alcance</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">3K</div><div class="sp-label">TK Views</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">+174</div><div class="sp-label">Nuevos Seg.</div></div></div>
-    <div class="summary-pill"><div><div class="sp-val">S/ 868</div><div class="sp-label">Inversión</div></div></div>
-    <div class="sp-toggle">Ver metas <span class="arrow" id="objArrow">▾</span></div>
+  <div class="summary-bar" onclick="toggleObj()" style="justify-content:center;padding:8px 32px">
+    <div class="sp-toggle" style="margin:0">Ver metas <span class="arrow" id="objArrow">▾</span></div>
   </div>
   <!-- Expandable objectives table -->
   <div class="obj-expand" id="objPanel">
@@ -1361,7 +1424,7 @@ function populateReport() {
     }
   }
   const bhsMini = document.querySelector('.bhs-mini');
-  if (bhsMini) bhsMini.textContent = D.bhs.total + '/100';
+  if (bhsMini) { if (D.bhs.total > 0) bhsMini.textContent = D.bhs.total + '/100'; else bhsMini.style.display = 'none'; }
 
   // Summary pills
   const pills = document.querySelectorAll('.summary-pill .sp-val');
@@ -1380,16 +1443,20 @@ function populateReport() {
   if (objTbody && D.objectives.length > 0) {
     objTbody.innerHTML = '';
     D.objectives.forEach(obj => {
-      const isMet = obj.status === 'met';
+      const s = obj.status;
       const tr = document.createElement('tr');
+      let statusColor, statusIcon, statusClass;
+      if (s === 'met') { statusColor = ''; statusIcon = '✓ Superado '; statusClass = 'status-met'; }
+      else if (s === 'close') { statusColor = ' style="color:#3B82F6"'; statusIcon = '⬆ Cerca '; statusClass = 'status-close'; }
+      else if (s === 'partial') { statusColor = ' style="color:#F59E0B"'; statusIcon = '⚠ '; statusClass = 'status-partial'; }
+      else { statusColor = ' style="color:var(--danger)"'; statusIcon = '✗ '; statusClass = 'status-missed'; }
       tr.innerHTML =
         '<td>' + obj.objective + '</td>' +
         '<td class="obj-canal">' + obj.channel + '</td>' +
         '<td class="obj-meta-col">' + obj.target + '</td>' +
         '<td class="obj-result-col">' + obj.result + '</td>' +
-        '<td class="obj-status ' + (isMet ? 'status-met' : 'status-missed') + '"' +
-        (isMet ? '' : ' style="color:var(--danger)"') + '>' +
-        (isMet ? '✓ Superado ' : '✗ ') + (obj.delta || '') + '</td>';
+        '<td class="obj-status ' + statusClass + '"' + statusColor + '>' +
+        statusIcon + (obj.delta || '') + '</td>';
       objTbody.appendChild(tr);
     });
   }
@@ -1410,8 +1477,9 @@ function populateReport() {
   D.portada.kpis.forEach((kpi, i) => {
     if (pkValues[i]) {
       if (i === 4) {
-        // BHS special format
-        pkValues[i].innerHTML = D.bhs.total + '<span style="font-size:18px;color:var(--gray)">/100</span>';
+        // BHS special format - hide if 0
+        if (D.bhs.total > 0) pkValues[i].innerHTML = D.bhs.total + '<span style="font-size:18px;color:var(--gray)">/100</span>';
+        else { const pkCard = pkValues[i].closest('.portada-kpi'); if (pkCard) pkCard.style.display = 'none'; }
       } else if (i === 3) {
         // Objectives with color
         const met = D.objectives.filter(o => o.status === 'met').length;
@@ -1961,8 +2029,8 @@ function populateAllSections_OLD_UNUSED() {
         });
         html += '</div>';
       }
-      // BHS inline (act4)
-      if (i === 4 && D.bhs) {
+      // BHS inline (act4) - only show if BHS > 0
+      if (i === 4 && D.bhs && D.bhs.total > 0) {
         const b = D.bhs;
         const dims = b.dimensions;
         html += '<div class="bhs-inline"><div class="bhs-big">' + b.total + '</div><div class="bhs-detail">';
@@ -2071,7 +2139,15 @@ function populateAllSections() {
       if (a.highlight) { h += '<div class="story-highlight"><div class="story-highlight-text">'+a.highlight+'</div>'; if (a.highlight_sub) h += '<div class="story-highlight-sub">'+a.highlight_sub+'</div>'; h += '</div>'; }
       if (a.evidence) { h += '<div class="evidence-row">'; a.evidence.forEach(e => { const s = e.color==='teal'?' style="color:var(--teal)"':e.color==='danger'?' style="color:var(--danger)"':''; h += '<div class="evidence-card"><div class="ev-value"'+s+'>'+e.value+'</div><div class="ev-label">'+e.label+'</div><div class="ev-delta"'+s+'>'+(e.delta||'')+'</div></div>'; }); h += '</div>'; }
       if (a.risks) a.risks.forEach(r => h += '<div class="story-risk"><div class="story-risk-title">'+r.title+'</div><div class="story-risk-text">'+r.text+'</div></div>');
-      if (i===1 && D.content && D.content.top_tiktok && D.content.top_tiktok.length) {
+      // Act image (if defined in JSON)
+      if (a.image) {
+        h += '<div style="margin:20px 0;border-radius:12px;overflow:hidden;max-width:500px">';
+        h += '<img src="'+a.image+'" style="width:100%;display:block;border-radius:12px" alt="'+(a.image_caption||'')+'">';
+        if (a.image_caption) h += '<div style="padding:10px 0;font-size:12px;color:var(--gray);font-style:italic">'+a.image_caption+'</div>';
+        h += '</div>';
+      }
+      // Legacy: TK thumbnails in act 2 (only if no by_channel and top_tiktok exists)
+      if (i===1 && !D.content.by_channel && D.content && D.content.top_tiktok && D.content.top_tiktok.length) {
         const colors = ['#1A0040,#6B00CC,#F84CDE','#2D0080,#673CEF,#9B6BFF','#003344,#006680,#20ECC8'];
         h += '<div class="mini-posts">';
         D.content.top_tiktok.forEach((p,idx) => {
@@ -2089,7 +2165,7 @@ function populateAllSections() {
       }
       if (a.items) a.items.forEach(it => { const c=it.type==='bet'?'var(--fucsia)':it.type==='fix'?'var(--danger)':'var(--teal)'; const l=it.type==='bet'?'Apuesta':it.type==='fix'?'Corrección':'Sistema'; h += '<div class="story-text"><strong style="color:'+c+'">'+l+':</strong> '+it.text+'</div>'; });
       if (a.action) h += '<div class="action-box"><div class="action-box-title">Regla validada</div><div class="action-box-text">'+a.action+'</div></div>';
-      if (i===4 && D.bhs) { const b=D.bhs, d=b.dimensions; h += '<div class="bhs-inline"><div class="bhs-big">'+b.total+'</div><div class="bhs-detail"><div class="bhs-detail-label">Brand Health Score · 7 dimensiones</div><div class="bhs-dims">'; h += '<div class="bhs-dim-pill">Crecimiento '+d.crecimiento+' <span class="w">10%</span></div><div class="bhs-dim-pill">Alcance '+d.alcance+' <span class="w">10%</span></div><div class="bhs-dim-pill">Engagement '+d.engagement+' <span class="w">20%</span></div><div class="bhs-dim-pill est">Sentimiento '+d.sentimiento+'* <span class="w">15%</span></div><div class="bhs-dim-pill">Eficiencia '+d.eficiencia+' <span class="w">10%</span></div><div class="bhs-dim-pill">Metas '+d.metas+' <span class="w">10%</span></div><div class="bhs-dim-pill est">Pos. Comp. '+d.posicion_comp+'* <span class="w">25%</span></div>'; h += '</div></div></div>'; }
+      if (i===4 && D.bhs && D.bhs.total > 0) { const b=D.bhs, d=b.dimensions; h += '<div class="bhs-inline"><div class="bhs-big">'+b.total+'</div><div class="bhs-detail"><div class="bhs-detail-label">Brand Health Score · 7 dimensiones</div><div class="bhs-dims">'; h += '<div class="bhs-dim-pill">Crecimiento '+d.crecimiento+' <span class="w">10%</span></div><div class="bhs-dim-pill">Alcance '+d.alcance+' <span class="w">10%</span></div><div class="bhs-dim-pill">Engagement '+d.engagement+' <span class="w">20%</span></div><div class="bhs-dim-pill est">Sentimiento '+d.sentimiento+'* <span class="w">15%</span></div><div class="bhs-dim-pill">Eficiencia '+d.eficiencia+' <span class="w">10%</span></div><div class="bhs-dim-pill">Metas '+d.metas+' <span class="w">10%</span></div><div class="bhs-dim-pill est">Pos. Comp. '+d.posicion_comp+'* <span class="w">25%</span></div>'; h += '</div></div></div>'; }
       h += '</div>';
     }
     h += '<div class="annex-switch"><button class="annex-switch-btn" onclick="switchMode(\'tech\',document.querySelectorAll(\'.mode-btn\')[1])">📊 Ver datos técnicos completos con gráficos</button></div>';
@@ -2190,37 +2266,38 @@ function populateAllSections() {
     if (sub && tp.total) sub.textContent = tp.total+' piezas · '+tp.tiktok+' TK + '+tp.ig_reels+' IG Reels + '+tp.ig_posts+' IG Posts + '+tp.fb_posts+' FB Posts';
     let h = '';
     if (T.contenido_insight) h += '<div class="analysis-block insight"><div class="analysis-label">◈ Insight Principal</div><div class="analysis-text">'+T.contenido_insight+'</div></div>';
-    // Top posts
-    if (D.content.top_tiktok&&D.content.top_tiktok.length) {
-      h += '<div class="post-gallery-label pgl-top">🏆 Top Performers del Mes</div><div class="post-gallery">';
-      D.content.top_tiktok.forEach((p,i) => {
-        const ptBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#1A0040,#6B00CC,#F84CDE)';
-        h += '<div class="post-card"><div class="post-thumb" style="'+ptBg+'">'+(p.coverImageUrl?'':'<div class="post-thumb-inner">🎬</div>')+'<span class="post-badge badge-top">#'+(i+1)+' TikTok</span><span class="post-rank">'+(i+1)+'</span></div>';
-        h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
-        h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmt(p.views)+'</div><div class="post-metric-label">Vistas</div></div>';
-        h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.likes)+'</div><div class="post-metric-label">Likes</div></div>';
-        h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.shares||0)+'</div><div class="post-metric-label">Shares</div></div>';
-        if (p.fyp_pct) h += '<div class="post-metric"><div class="post-metric-val">'+p.fyp_pct+'%</div><div class="post-metric-label">FYP</div></div>';
-        h += '</div></div></div>';
-      });
-      h += '</div>';
+    // Top posts (legacy - only show if NO organic/paid structure)
+    if (!D.content.organic && !D.content.paid) {
+      if (D.content.top_tiktok&&D.content.top_tiktok.length) {
+        h += '<div class="post-gallery-label pgl-top">🏆 Top Performers del Mes</div><div class="post-gallery">';
+        D.content.top_tiktok.forEach((p,i) => {
+          const ptBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#1A0040,#6B00CC,#F84CDE)';
+          h += '<div class="post-card"><div class="post-thumb" style="'+ptBg+'">'+(p.coverImageUrl?'':'<div class="post-thumb-inner">🎬</div>')+'<span class="post-badge badge-top">#'+(i+1)+' TikTok</span><span class="post-rank">'+(i+1)+'</span></div>';
+          h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
+          h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmt(p.views)+'</div><div class="post-metric-label">Vistas</div></div>';
+          h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.likes)+'</div><div class="post-metric-label">Likes</div></div>';
+          h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.shares||0)+'</div><div class="post-metric-label">Shares</div></div>';
+          if (p.fyp_pct) h += '<div class="post-metric"><div class="post-metric-val">'+p.fyp_pct+'%</div><div class="post-metric-label">FYP</div></div>';
+          h += '</div></div></div>';
+        });
+        h += '</div>';
+      }
+      const worst = D.content.worst_overall||D.content.worst_tiktok||[];
+      if (worst.length) {
+        h += '<div class="post-gallery-label pgl-low">⚠ Menor Rendimiento</div><div class="post-gallery">';
+        worst.forEach(p => {
+          const wBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#1A1A2E,#2A2A40,#333350)';
+          h += '<div class="post-card"><div class="post-thumb" style="'+wBg+'">'+(p.coverImageUrl?'':'<div class="post-thumb-inner" style="opacity:.08">📄</div>')+'<span class="post-badge badge-low">Bajo</span><span class="post-plat-badge">'+(p.platform||'TikTok')+(p.inv_label?' · '+p.inv_label:'')+'</span></div>';
+          h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
+          h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--danger)">'+fmt(p.reach||p.views||0)+'</div><div class="post-metric-label">'+(p.reach?'Alcance':'Vistas')+'</div></div>';
+          h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.reactions||p.likes||0)+'</div><div class="post-metric-label">'+(p.reactions!==undefined?'Reacciones':'Likes')+'</div></div>';
+          h += '</div></div></div>';
+        });
+        h += '</div>';
+      }
     }
-    // Worst posts
-    const worst = D.content.worst_overall||D.content.worst_tiktok||[];
-    if (worst.length) {
-      h += '<div class="post-gallery-label pgl-low">⚠ Menor Rendimiento</div><div class="post-gallery">';
-      worst.forEach(p => {
-        const wBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#1A1A2E,#2A2A40,#333350)';
-        h += '<div class="post-card"><div class="post-thumb" style="'+wBg+'">'+(p.coverImageUrl?'':'<div class="post-thumb-inner" style="opacity:.08">📄</div>')+'<span class="post-badge badge-low">Bajo</span><span class="post-plat-badge">'+(p.platform||'TikTok')+(p.inv_label?' · '+p.inv_label:'')+'</span></div>';
-        h += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
-        h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--danger)">'+fmt(p.reach||p.views||0)+'</div><div class="post-metric-label">'+(p.reach?'Alcance':'Vistas')+'</div></div>';
-        h += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.reactions||p.likes||0)+'</div><div class="post-metric-label">'+(p.reactions!==undefined?'Reacciones':'Likes')+'</div></div>';
-        h += '</div></div></div>';
-      });
-      h += '</div>';
-    }
-    // Organic highlights
-    if (D.content.organic_highlights && D.content.organic_highlights.length) {
+    // Organic highlights (legacy)
+    if (!D.content.organic && D.content.organic_highlights && D.content.organic_highlights.length) {
       h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">✨ Mejores Contenidos Orgánicos</div><div class="layer-line"></div></div>';
       h += '<div class="post-gallery">';
       D.content.organic_highlights.forEach((p, idx) => {
@@ -2237,6 +2314,62 @@ function populateAllSections() {
         h += '</div></'+orgTag+'>';
       });
       h += '</div>';
+    }
+    // ── NEW: Organic vs Paid content sections ──
+    function renderContentGroup(items, label, badgeClass, badgePrefix, metricColor) {
+      if (!items || !items.length) return '';
+      let out = '<div class="post-gallery">';
+      items.forEach((p, idx) => {
+        const bg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#1A1A2E,#2A2A40,#333350)';
+        const tag = p.url ? 'a' : 'div';
+        out += '<'+tag+(p.url?' href="'+p.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+bg+'"><span class="post-badge '+badgeClass+'">'+badgePrefix+(idx+1)+'</span><span class="post-plat-badge">'+(p.platform||'')+'</span></div>';
+        out += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
+        // Alcance / Reproducciones
+        out += '<div class="post-metric"><div class="post-metric-val" style="color:'+metricColor+'">'+fmtK(p.reach||p.views||0)+'</div><div class="post-metric-label">'+(p.reach?'Alcance':'Reproducciones')+'</div></div>';
+        // Compartidos + Guardados
+        const sharesAndSaves = (p.shares||0) + (p.saves||0);
+        out += '<div class="post-metric"><div class="post-metric-val">'+fmt(sharesAndSaves)+'</div><div class="post-metric-label">Shares+Saves</div></div>';
+        // Comentarios
+        out += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.comments||0)+'</div><div class="post-metric-label">Comentarios</div></div>';
+        // ER%
+        if (p.er) out += '<div class="post-metric"><div class="post-metric-val" style="color:var(--fucsia)">'+p.er+'</div><div class="post-metric-label">ER%</div></div>';
+        // Inversión (solo pagado)
+        if (p.spend) out += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">$'+p.spend+'</div><div class="post-metric-label">Inversión</div></div>';
+        out += '</div>';
+        if (p.note) out += '<div class="post-date" style="color:var(--teal);margin-top:6px">💡 '+p.note+'</div>';
+        out += '</div></'+tag+'>';
+      });
+      out += '</div>';
+      return out;
+    }
+    // ── Opción C: Content by Channel (IG, FB, TK) with top 3 + worst 3 ──
+    if (D.content.by_channel) {
+      const ch = D.content.by_channel;
+      const channels = [
+        {key: 'ig', name: 'Instagram', icon: '📸'},
+        {key: 'fb', name: 'Facebook', icon: '📘'},
+        {key: 'tiktok', name: 'TikTok', icon: '🎵'}
+      ];
+      channels.forEach(c => {
+        if (!ch[c.key]) return;
+        h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">'+c.icon+' '+c.name+'</div><div class="layer-line"></div></div>';
+        if (ch[c.key].top?.length) { h += '<div class="post-gallery-label pgl-top">🏆 Top Performance</div>'; h += renderContentGroup(ch[c.key].top, '', 'badge-top', '#', 'var(--teal)'); }
+        if (ch[c.key].worst?.length) { h += '<div class="post-gallery-label pgl-low">⚠ Menor Rendimiento</div>'; h += renderContentGroup(ch[c.key].worst, '', 'badge-low', '⚠ ', 'var(--danger)'); }
+      });
+    }
+    // Legacy organic/paid (backward compat for older JSONs)
+    if (!D.content.by_channel && D.content.organic) {
+      const org = D.content.organic;
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">🌱 Contenido Orgánico</div><div class="layer-line"></div></div>';
+      if (org.ig_top?.length) { h += '<div class="post-gallery-label pgl-top">🏆 Instagram — Top</div>'; h += renderContentGroup(org.ig_top, '', 'badge-top', '#', 'var(--teal)'); }
+      if (org.fb_top?.length) { h += '<div class="post-gallery-label pgl-top">🏆 Facebook — Top</div>'; h += renderContentGroup(org.fb_top, '', 'badge-top', '#', 'var(--teal)'); }
+      if (org.tiktok_top?.length) { h += '<div class="post-gallery-label pgl-top">🏆 TikTok — Top</div>'; h += renderContentGroup(org.tiktok_top, '', 'badge-top', '#', 'var(--teal)'); }
+    }
+    if (!D.content.by_channel && D.content.paid) {
+      const paid = D.content.paid;
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">💰 Contenido Pagado</div><div class="layer-line"></div></div>';
+      if (paid.ig_top?.length) { h += '<div class="post-gallery-label pgl-top">🏆 IG Ads — Top</div>'; h += renderContentGroup(paid.ig_top, '', 'badge-top', '#', 'var(--teal)'); }
+      if (paid.fb_top?.length) { h += '<div class="post-gallery-label pgl-top">🏆 FB Ads — Top</div>'; h += renderContentGroup(paid.fb_top, '', 'badge-top', '#', 'var(--teal)'); }
     }
     // Amplified top
     if (D.content.amplified_top && D.content.amplified_top.length) {
@@ -2261,7 +2394,8 @@ function populateAllSections() {
       h += '<div class="post-gallery">';
       D.influencers_ig.forEach((inf) => {
         const infTag = inf.url ? 'a' : 'div';
-        h += '<'+infTag+(inf.url?' href="'+inf.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)"><div class="post-thumb-inner">👤</div><span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
+        const infBg = inf.coverImageUrl ? 'background-image:url('+inf.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)';
+        h += '<'+infTag+(inf.url?' href="'+inf.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+infBg+'">'+(inf.coverImageUrl?'':'<div class="post-thumb-inner">👤</div>')+'<span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
         h += '<div class="post-body"><div class="post-title">'+inf.name+'</div><div class="post-date">'+(inf.content_type||'')+' · '+(inf.date||'')+'</div><div class="post-metrics">';
         h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(inf.views)+'</div><div class="post-metric-label">Views</div></div>';
         h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.likes)+'</div><div class="post-metric-label">Likes</div></div>';
@@ -2344,11 +2478,27 @@ function populateAllSections() {
     h += kpiCard('linear-gradient(90deg,var(--fucsia),var(--teal))','CPM TikTok','S/ '+(eff.tiktok_cpm_soles||'–'),'USD '+(eff.tiktok_cpm_usd||'–'),'delta-up');
     h += kpiCard('linear-gradient(90deg,var(--purple2),var(--purple))','CPM Meta','S/ '+(eff.meta_cpm_soles||'–'),'USD '+(eff.meta_cpm_usd||'–'),'delta-up');
     h += kpiCard('linear-gradient(90deg,var(--teal),var(--success))','CPM Blended','S/ '+(eff.blended_cpm_soles||'–'),'USD '+(eff.blended_cpm_usd||'–'),'delta-flat');
+    if (eff.cpi_usd) h += kpiCard('linear-gradient(90deg,var(--fucsia),var(--purple))','CPI (Costo/Interacción)','S/ '+(eff.cpi_soles||'–'),'USD '+(eff.cpi_usd||'–'),'delta-flat');
     h += '</div>';
     h += '<div class="inv-split"><div class="inv-card"><div class="inv-plat">Meta Ads</div><div class="inv-total">S/ '+fmt(Math.round(inv.meta_ads_soles))+'</div><div class="inv-sub">'+(inv.meta_pct||0)+'% del presupuesto (USD '+fmt(Math.round(inv.meta_ads_usd))+')</div>';
     h += '<div class="inv-metrics"><div class="inv-metric"><div class="inv-metric-val">'+fmtK(D.reach.meta_ads_impressions||0)+'</div><div class="inv-metric-label">Impresiones</div></div><div class="inv-metric"><div class="inv-metric-val">$'+(eff.meta_cpm_usd||'–')+'</div><div class="inv-metric-label">CPM</div></div><div class="inv-metric"><div class="inv-metric-val">'+fmtK(D.reach.meta_ads_reach||0)+'</div><div class="inv-metric-label">Reach</div></div><div class="inv-metric"><div class="inv-metric-val">'+fmtK(D.engagement.meta_ads_post_engagements||D.engagement.meta_ads_interactions||0)+'</div><div class="inv-metric-label">Engagements</div></div></div></div>';
     h += '<div class="inv-card"><div class="inv-plat">TikTok Ads</div><div class="inv-total">S/ '+fmt(Math.round(inv.tiktok_ads_soles))+'</div><div class="inv-sub">'+(inv.tiktok_pct||0)+'% del presupuesto (USD '+fmt(Math.round(inv.tiktok_ads_usd))+')</div>';
     h += '<div class="inv-metrics"><div class="inv-metric"><div class="inv-metric-val">'+fmtK(D.reach.tiktok_ads_impressions||0)+'</div><div class="inv-metric-label">Impresiones</div></div><div class="inv-metric"><div class="inv-metric-val">$'+(eff.tiktok_cpm_usd||'–')+'</div><div class="inv-metric-label">CPM</div></div><div class="inv-metric"><div class="inv-metric-val">'+fmtK(D.reach.tiktok_organic_views||0)+'</div><div class="inv-metric-label">Views Org.</div></div><div class="inv-metric"><div class="inv-metric-val">'+fmt(D.engagement.tiktok_organic?.total||D.engagement.tiktok_interactions||0)+'</div><div class="inv-metric-label">Interactions</div></div></div></div></div>';
+    // ── Regional breakdown Lima vs Provincia ──
+    if (inv.regional) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">📍 Resultados por Región (Lima vs Provincia)</div><div class="layer-line"></div></div>';
+      h += '<div class="inv-split">';
+      Object.entries(inv.regional).forEach(([region, data]) => {
+        h += '<div class="inv-card"><div class="inv-plat">'+region+'</div><div class="inv-total">USD $'+fmt(data.usd||0)+'</div><div class="inv-sub">'+(data.pct||'')+'% del presupuesto</div>';
+        h += '<div class="inv-metrics">';
+        h += '<div class="inv-metric"><div class="inv-metric-val">'+fmtK(data.reach||0)+'</div><div class="inv-metric-label">Alcance</div></div>';
+        h += '<div class="inv-metric"><div class="inv-metric-val">'+fmtK(data.impressions||0)+'</div><div class="inv-metric-label">Impresiones</div></div>';
+        h += '<div class="inv-metric"><div class="inv-metric-val">'+fmt(data.interactions||0)+'</div><div class="inv-metric-label">Interacciones</div></div>';
+        if (data.cpm_usd) h += '<div class="inv-metric"><div class="inv-metric-val">$'+data.cpm_usd+'</div><div class="inv-metric-label">CPM</div></div>';
+        h += '</div></div>';
+      });
+      h += '</div>';
+    }
     b8.innerHTML = h;
   }
 
@@ -2418,12 +2568,12 @@ function hideEmptySections() {
     'sec-comunidad': () => D.community && (D.community.facebook?.end > 0 || D.community.instagram?.end > 0 || D.community.tiktok?.end > 0),
     'sec-alcance': () => D.reach && D.reach.total_impressions > 0,
     'sec-engagement': () => D.engagement && D.engagement.total_meaningful_interactions > 0,
-    'sec-contenido': () => D.content && (D.content.top_tiktok?.length > 0 || D.content.organic_highlights?.length > 0),
+    'sec-contenido': () => D.content && (D.content.by_channel || D.content.top_tiktok?.length > 0 || D.content.organic_highlights?.length > 0 || D.content.organic || D.content.paid),
     'sec-sentimiento': () => D.sentiment && D.sentiment.total > 0,
     'sec-audiencia': () => T.audiencia && C.fb_age && C.fb_age.some(v => v > 0),
     'sec-inversion': () => D.investment && D.investment.total_usd > 0,
     'sec-competencia': () => D.competitors_ig && D.competitors_ig.length > 0,
-    'sec-score': () => D.bhs && D.bhs.total > 0,
+    'sec-score': () => false, // BHS retirado por indicación del cliente
     'sec-plan': () => D.recommendations && D.recommendations.length > 0,
   };
 
@@ -2617,206 +2767,602 @@ function downloadPPTX() {
   pptx.layout = 'LAYOUT_WIDE';
   pptx.author = 'LUDiK Analytics';
   const RD = REPORT_DATA;
-  pptx.subject = 'Reporte Mensual ' + RD.brand + ' — ' + RD.period;
+  pptx.subject = 'Reporte Mensual ' + (RD.brand||'') + ' — ' + (RD.period||'');
 
+  // ── Ludik palette ──
   const BG = '0D0D1A', CARD = '13132A', PURPLE = '4B00FF', PURPLE2 = '673CEF';
   const FUCSIA = 'F84CDE', TEAL = '20ECC8', WHITE = 'FFFFFF', GRAY = '8888AA';
   const SUCCESS = '22C55E', WARNING = 'F59E0B', DANGER = 'EF4444';
+  const CLOSE_COLOR = '3B82F6'; // blue for "close" status
+  const CARD_BORDER = '1A1A3A';
+  const SLIDE_W = 13.33;
 
-  // helpers
+  // ── helpers ──
+  const fmt = n => typeof n === 'number' ? n.toLocaleString('es-PE') : (n||'–');
+  const fmtK = n => { if (typeof n !== 'number' || isNaN(n)) return n||'–'; return n >= 1e6 ? (n/1e6).toFixed(2)+'M' : n >= 1e3 ? Math.round(n/1e3)+'K' : fmt(n); };
+  const safe = (obj, path, fallback) => { try { return path.split('.').reduce((o,k)=>o[k], obj) ?? fallback; } catch(e) { return fallback; } };
+  const pct = v => v != null ? v + '%' : '–';
+
   function addText(slide, text, opts) {
-    slide.addText(text, Object.assign({ fontFace:'Arial', color:WHITE }, opts));
+    slide.addText(String(text ?? ''), Object.assign({ fontFace:'Inter', color:WHITE }, opts));
+  }
+  function card(slide, x, y, w, h, borderColor) {
+    slide.addShape(pptx.ShapeType.roundRect, { x, y, w, h, fill:{color:CARD}, line:{color:borderColor||CARD_BORDER}, rectRadius:0.1 });
+  }
+  function sectionTitle(slide, title) {
+    addText(slide, title, { x:0.5, y:0.3, fontSize:24, bold:true });
+  }
+  function insightBar(slide, text, yPos) {
+    addText(slide, text, { x:0.5, y:yPos||0.85, fontSize:11, color:FUCSIA, bold:true, w:12 });
+  }
+  function statusColor(status) {
+    if (status === 'met') return SUCCESS;
+    if (status === 'close') return CLOSE_COLOR;
+    if (status === 'partial') return WARNING;
+    return DANGER;
+  }
+  function statusIcon(status) {
+    if (status === 'met') return '\u2713';
+    if (status === 'close') return '\u2248';
+    if (status === 'partial') return '\u25CB';
+    return '\u2717';
   }
 
-  // ─── SLIDE 1: PORTADA ───
+  // safe data refs
+  const T = RD.technical_texts || {};
+  const inv = RD.investment || {};
+  const eff = RD.efficiency || {};
+  const cm = RD.community || {};
+  const ins = RD.insights || {};
+  const ch = RD.charts || {};
+  const cnt = RD.content || {};
+  const bhs = RD.bhs || {};
+  const objectives = RD.objectives || [];
+  const recs = RD.recommendations || [];
+  const portada = RD.portada || {};
+  const cierre = RD.cierre || {};
+
+  // ═══════════════════════════════════════════
+  //  SLIDE 1: PORTADA
+  // ═══════════════════════════════════════════
   let s1 = pptx.addSlide();
   s1.background = { fill: BG };
-  addText(s1, RD.portada.tag, { x:0.8, y:0.6, fontSize:10, color:GRAY, letterSpacing:3 });
-  addText(s1, RD.brand, { x:0.8, y:1.4, fontSize:44, bold:true });
-  addText(s1, RD.period.toUpperCase(), { x:0.8, y:2.4, fontSize:18, color:FUCSIA, bold:true, letterSpacing:2 });
-  const kpis1 = RD.portada.kpis.map(k => [k.value, k.label]);
+  // accent line
+  s1.addShape(pptx.ShapeType.rect, { x:0, y:0, w:0.12, h:5.63, fill:{color:PURPLE} });
+  addText(s1, portada.tag || 'LUDiK Analytics', { x:0.8, y:0.6, fontSize:10, color:GRAY, letterSpacing:3 });
+  addText(s1, RD.brand || '', { x:0.8, y:1.4, fontSize:44, bold:true });
+  addText(s1, (RD.period||'').toUpperCase(), { x:0.8, y:2.4, fontSize:18, color:FUCSIA, bold:true, letterSpacing:2 });
+  // KPI pills
+  const kpis1 = (portada.kpis || []).slice(0, 5);
   kpis1.forEach((k,i) => {
-    addText(s1, k[0], { x: 0.8 + i*2.3, y:3.6, fontSize:22, bold:true });
-    addText(s1, k[1], { x: 0.8 + i*2.3, y:4.1, fontSize:8, color:GRAY });
+    const x = 0.8 + i*2.3;
+    card(s1, x-0.1, 3.4, 2.1, 1.1);
+    addText(s1, k.value, { x, y:3.5, fontSize:22, bold:true });
+    addText(s1, k.label, { x, y:4.05, fontSize:8, color:GRAY });
   });
-  addText(s1, RD.portada.footer, { x:0.8, y:5.2, fontSize:8, color:'55557A' });
+  addText(s1, portada.footer || '', { x:0.8, y:5.1, fontSize:8, color:'55557A' });
 
-  // ─── SLIDE 2: RESUMEN + FUNNEL ───
+  // ═══════════════════════════════════════════
+  //  SLIDE 2: RESUMEN EJECUTIVO + FUNNEL
+  // ═══════════════════════════════════════════
   let s2 = pptx.addSlide();
   s2.background = { fill: BG };
-  addText(s2, 'Resumen Ejecutivo', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s2, (RD.technical_texts&&RD.technical_texts.resumen)||'Reporte mensual '+RD.brand+' — '+RD.period, { x:0.5, y:0.9, fontSize:11, color:'CCCCDD', w:12 });
-  const funnel = [[fmtK(RD.reach.total_impressions||0),'Impresiones','Freq. '+(RD.reach.frequency||'–')+'x'],[fmtK(RD.reach.estimated_unique_reach||0),'Alcance Único','Cross-channel'],[fmt(RD.engagement.total_meaningful_interactions||0),'Interacciones','Meta + Org. + TK'],[RD.summary_kpis.new_followers||'–','Nuevos Seg.','FB+IG+TK'],['S/ '+fmt(Math.round(RD.investment.total_soles||0)),'Inversión','USD '+fmt(Math.round(RD.investment.total_usd||0))]];
-  funnel.forEach((f,i) => {
-    const x = 0.5 + i*2.5;
-    s2.addShape(pptx.ShapeType.roundRect, { x, y:2.0, w:2.3, h:1.6, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
-    addText(s2, f[0], { x, y:2.15, w:2.3, fontSize:20, bold:true, align:'center' });
-    addText(s2, f[1], { x, y:2.65, w:2.3, fontSize:8, color:GRAY, align:'center' });
-    addText(s2, f[2], { x, y:2.95, w:2.3, fontSize:8, color:FUCSIA, align:'center' });
-  });
-  // Objectives from REPORT_DATA
-  addText(s2, 'Objetivos del Período', { x:0.5, y:4.0, fontSize:12, bold:true });
-  RD.objectives.forEach((o,i) => {
-    const y = 4.35 + i*0.22;
-    const isMet = o.status === 'met';
-    addText(s2, o.objective, { x:0.5, y, fontSize:9, color:'CCCCDD', w:5 });
-    addText(s2, o.result, { x:6.0, y, fontSize:9, bold:true, w:2 });
-    addText(s2, (isMet ? '✓ ' : '✗ ') + (o.delta || ''), { x:8.5, y, fontSize:9, color:isMet ? SUCCESS : DANGER, w:3 });
+  sectionTitle(s2, 'Resumen Ejecutivo');
+  addText(s2, T.resumen || ('Reporte mensual ' + (RD.brand||'') + ' — ' + (RD.period||'')), { x:0.5, y:0.85, fontSize:11, color:'CCCCDD', w:12 });
+
+  // Funnel cards from available data
+  const reach = RD.reach || {};
+  const eng = RD.engagement || {};
+  const skpis = RD.summary_kpis || {};
+  const funnelItems = [
+    [fmtK(reach.total_impressions||0), 'Impresiones', reach.frequency ? 'Freq. '+reach.frequency+'x' : ''],
+    [fmtK(reach.estimated_unique_reach||0), 'Alcance Unico', 'Cross-channel'],
+    [fmt(eng.total_meaningful_interactions || eng.total_interactions || 0), 'Interacciones', 'Meta + TK'],
+    [skpis.new_followers || '–', 'Nuevos Seg.', 'FB+IG+TK'],
+    [inv.total_soles ? 'S/ '+fmt(Math.round(inv.total_soles)) : (inv.total_usd ? 'USD '+fmt(Math.round(inv.total_usd)) : 'S/ 0'), 'Inversion', inv.total_usd ? 'USD '+fmt(Math.round(inv.total_usd)) : '']
+  ];
+  const fW = 2.3, fGap = (12 - funnelItems.length*fW) / (funnelItems.length - 1);
+  funnelItems.forEach((f,i) => {
+    const x = 0.5 + i*(fW + fGap);
+    card(s2, x, 1.9, fW, 1.6);
+    addText(s2, f[0], { x, y:2.05, w:fW, fontSize:20, bold:true, align:'center' });
+    addText(s2, f[1], { x, y:2.55, w:fW, fontSize:8, color:GRAY, align:'center' });
+    if (f[2]) addText(s2, f[2], { x, y:2.85, w:fW, fontSize:8, color:FUCSIA, align:'center' });
   });
 
-  // ─── SLIDE 3: COMUNIDAD ───
+  // ═══════════════════════════════════════════
+  //  SLIDE 3: OBJECTIVES (with color coding)
+  // ═══════════════════════════════════════════
+  if (objectives.length) {
+    let sObj = pptx.addSlide();
+    sObj.background = { fill: BG };
+    sectionTitle(sObj, 'Objetivos del Periodo');
+    // Count by status
+    const metCount = objectives.filter(o => o.status === 'met').length;
+    const total = objectives.length;
+    insightBar(sObj, metCount + '/' + total + ' objetivos cumplidos');
+
+    // Table header
+    const hdrY = 1.4;
+    addText(sObj, 'OBJETIVO', { x:0.5, y:hdrY, fontSize:7, color:GRAY, bold:true, letterSpacing:2, w:4.5 });
+    addText(sObj, 'CANAL', { x:5.2, y:hdrY, fontSize:7, color:GRAY, bold:true, letterSpacing:2, w:1.5 });
+    addText(sObj, 'META', { x:6.8, y:hdrY, fontSize:7, color:GRAY, bold:true, letterSpacing:2, w:2 });
+    addText(sObj, 'RESULTADO', { x:8.9, y:hdrY, fontSize:7, color:GRAY, bold:true, letterSpacing:2, w:2 });
+    addText(sObj, 'DELTA', { x:11.0, y:hdrY, fontSize:7, color:GRAY, bold:true, letterSpacing:2, w:1.5 });
+
+    const maxRows = 14;
+    objectives.slice(0, maxRows).forEach((o,i) => {
+      const y = 1.75 + i * 0.26;
+      const sc = statusColor(o.status);
+      // row background stripe
+      if (i % 2 === 0) sObj.addShape(pptx.ShapeType.rect, { x:0.4, y, w:12.2, h:0.25, fill:{color:'0F0F24'} });
+      // status dot
+      sObj.addShape(pptx.ShapeType.ellipse, { x:0.45, y:y+0.07, w:0.11, h:0.11, fill:{color:sc} });
+      addText(sObj, o.objective||'', { x:0.65, y, fontSize:9, color:'CCCCDD', w:4.4 });
+      addText(sObj, o.channel||'', { x:5.2, y, fontSize:8, color:GRAY, w:1.5 });
+      addText(sObj, o.target||'', { x:6.8, y, fontSize:8, color:GRAY, w:2 });
+      addText(sObj, o.result||'', { x:8.9, y, fontSize:9, bold:true, w:2 });
+      addText(sObj, statusIcon(o.status) + ' ' + (o.delta||''), { x:11.0, y, fontSize:9, color:sc, w:1.8 });
+    });
+    // Legend
+    const legY = 1.75 + Math.min(objectives.length, maxRows) * 0.26 + 0.15;
+    [['met',SUCCESS,'Cumplido'],['close',CLOSE_COLOR,'Cerca'],['partial',WARNING,'Parcial'],['missed',DANGER,'No cumplido']].forEach((l,i) => {
+      const lx = 0.5 + i*2.5;
+      sObj.addShape(pptx.ShapeType.ellipse, { x:lx, y:legY+0.04, w:0.1, h:0.1, fill:{color:l[1]} });
+      addText(sObj, l[2], { x:lx+0.15, y:legY, fontSize:8, color:GRAY });
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE 4: COMUNIDAD
+  // ═══════════════════════════════════════════
   let s3 = pptx.addSlide();
   s3.background = { fill: BG };
-  addText(s3, 'Crecimiento de Comunidad', { x:0.5, y:0.3, fontSize:24, bold:true });
-  const cm = RD.community;
-  const plats = [
-    ['Facebook', cm.facebook.end.toLocaleString(), '+' + cm.facebook.delta + ' (+' + cm.facebook.delta_pct + '%)', PURPLE2],
-    ['Instagram', cm.instagram.end.toLocaleString(), '+' + cm.instagram.delta + ' (+' + cm.instagram.delta_pct + '%)', FUCSIA],
-    ['TikTok', cm.tiktok.end.toLocaleString(), '+' + cm.tiktok.delta + ' (+' + cm.tiktok.delta_pct + '%)', TEAL]
-  ];
-  addText(s3, RD.insights.community || 'Crecimiento cross-channel: +' + cm.total_new + ' nuevos seguidores', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  plats.forEach((p,i) => {
-    const x = 0.5 + i*4.2;
-    s3.addShape(pptx.ShapeType.roundRect, { x, y:1.6, w:3.8, h:1.8, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
-    addText(s3, p[0], { x:x+0.2, y:1.75, fontSize:9, color:GRAY });
-    addText(s3, p[1], { x:x+0.2, y:2.1, fontSize:28, bold:true });
-    addText(s3, '▲ ' + p[2], { x:x+0.2, y:2.7, fontSize:11, color:SUCCESS });
+  sectionTitle(s3, 'Crecimiento de Comunidad');
+  insightBar(s3, ins.community || '');
+
+  const platforms = [];
+  if (cm.facebook) platforms.push(['Facebook', cm.facebook, PURPLE2]);
+  if (cm.instagram) platforms.push(['Instagram', cm.instagram, FUCSIA]);
+  if (cm.tiktok) platforms.push(['TikTok', cm.tiktok, TEAL]);
+
+  const platW = platforms.length ? Math.min(3.8, (12 / platforms.length) - 0.4) : 3.8;
+  const platGap = platforms.length > 1 ? (12 - platforms.length * platW) / (platforms.length - 1) : 0;
+  platforms.forEach((p,i) => {
+    const x = 0.5 + i * (platW + platGap);
+    const d = p[1];
+    const delta = (d.delta != null) ? d.delta : ((d.end||0) - (d.start||0));
+    const deltaPct = (d.delta_pct != null) ? d.delta_pct : (d.start ? ((delta/d.start)*100).toFixed(1) : 0);
+    const isNeg = delta < 0;
+    card(s3, x, 1.5, platW, 2.2);
+    // color accent bar top
+    s3.addShape(pptx.ShapeType.rect, { x:x, y:1.5, w:platW, h:0.06, fill:{color:p[2]} });
+    addText(s3, p[0], { x:x+0.2, y:1.7, fontSize:9, color:GRAY });
+    addText(s3, fmt(d.end||0), { x:x+0.2, y:2.05, fontSize:28, bold:true });
+    addText(s3, (isNeg ? '\u25BC ' : '\u25B2 ') + (isNeg ? '' : '+') + fmt(delta) + ' (' + (isNeg ? '' : '+') + deltaPct + '%)', { x:x+0.2, y:2.7, fontSize:11, color:isNeg ? DANGER : SUCCESS });
+    addText(s3, 'Inicio: ' + fmt(d.start||0), { x:x+0.2, y:3.1, fontSize:8, color:GRAY });
   });
 
-  // ─── SLIDE 4: ALCANCE ───
+  // Community trend chart (native pptxgenjs)
+  if (ch.months6 && ch.community_total) {
+    s3.addChart(pptx.ChartType.line, [{
+      name: 'Total Comunidad',
+      labels: ch.months6,
+      values: ch.community_total
+    }], {
+      x:0.5, y:4.0, w:12, h:1.4,
+      showLegend: false,
+      lineDataSymbol: 'circle',
+      lineDataSymbolSize: 5,
+      chartColors: [FUCSIA],
+      catAxisLabelColor: GRAY, catAxisLabelFontSize: 7,
+      valAxisLabelColor: GRAY, valAxisLabelFontSize: 7,
+      catAxisLineShow: false, valAxisLineShow: false,
+      plotArea: { fill: { color: CARD } },
+      gridLineColor: '1A1A3A'
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE 5: ALCANCE + CHART
+  // ═══════════════════════════════════════════
   let s4 = pptx.addSlide();
   s4.background = { fill: BG };
-  addText(s4, 'Distribución de Alcance', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s4, 'S/ '+fmt(Math.round(RD.investment.total_soles||0))+' inversión. '+fmtK(RD.reach.estimated_unique_reach||0)+' alcance único. '+fmtK(RD.reach.total_impressions||0)+' impresiones.', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const alcKpis = [[fmtK(RD.reach.tiktok_organic_views||0),'TK Vistas Orgánicas'],[fmtK(RD.reach.meta_ads_reach||0),'Meta Ads Reach'],[fmtK(RD.reach.total_impressions||0),'Impresiones Totales'],[(RD.reach.frequency||'–')+'x','Frecuencia Prom.']];
+  sectionTitle(s4, 'Distribucion de Alcance');
+  insightBar(s4, ins.reach || '');
+
+  const alcKpis = [
+    [fmtK(reach.tiktok_organic_views||0), 'TK Vistas Organicas'],
+    [fmtK(reach.meta_ads_reach||0), 'Meta Ads Reach'],
+    [fmtK(reach.total_impressions||0), 'Impresiones Totales'],
+    [reach.frequency ? reach.frequency+'x' : '–', 'Frecuencia Prom.']
+  ];
   alcKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
-    s4.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
+    card(s4, x, 1.5, 2.9, 1.2);
     addText(s4, k[0], { x:x+0.2, y:1.6, fontSize:22, bold:true });
     addText(s4, k[1], { x:x+0.2, y:2.1, fontSize:8, color:GRAY });
   });
 
-  // ─── SLIDE 5: ENGAGEMENT ───
+  // Reach mix pie chart (native)
+  if (ch.reach_mix_labels && ch.reach_mix_data) {
+    s4.addChart(pptx.ChartType.pie, [{
+      name: 'Alcance',
+      labels: ch.reach_mix_labels,
+      values: ch.reach_mix_data
+    }], {
+      x:0.5, y:3.0, w:5.5, h:2.5,
+      showLegend: true, legendPos: 'r', legendFontSize: 8, legendColor: GRAY,
+      chartColors: [TEAL, FUCSIA, PURPLE2, GRAY],
+      dataLabelColor: WHITE, showPercent: true, dataLabelFontSize: 9,
+      dataLabelPosition: 'outEnd'
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE 6: ENGAGEMENT + ER CHART
+  // ═══════════════════════════════════════════
   let s5 = pptx.addSlide();
   s5.background = { fill: BG };
-  addText(s5, 'Engagement e Índice de Valor', { x:0.5, y:0.3, fontSize:24, bold:true });
-  const erFb = RD.charts.er_fb?.[5] || '–'; const erIg = RD.charts.er_ig?.[5] || '–'; const erTk = RD.charts.er_tk?.[5] || '–';
-  addText(s5, 'ER FB '+(erFb)+'% · ER IG '+(erIg)+'% · ER TK '+(erTk)+'%', { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const engKpis = [[(erFb)+'%','ER Facebook','Benchmark: 0.5%'],[(erTk)+'%','ER TikTok','Canal video'],[(erIg)+'%','ER Instagram','Posts + Reels'],[(RD.bhs.total||'–'),'BHS Score','/100']];
+  sectionTitle(s5, 'Engagement e Indice de Valor');
+  insightBar(s5, ins.engagement || '');
+
+  const lastIdx = ch.er_fb ? ch.er_fb.length - 1 : 5;
+  const erFb = ch.er_fb?.[lastIdx] ?? '–';
+  const erIg = ch.er_ig?.[lastIdx] ?? '–';
+  const erTk = ch.er_tk?.[lastIdx] ?? '–';
+  const engKpis = [
+    [pct(erFb), 'ER Facebook', 'Benchmark: 0.5%'],
+    [pct(erIg), 'ER Instagram', 'Posts + Reels'],
+    [pct(erTk), 'ER TikTok', 'Canal video'],
+    [(bhs.total||'–'), 'BHS Score', '/100']
+  ];
   engKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
-    s5.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.4, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
+    card(s5, x, 1.5, 2.9, 1.4);
     addText(s5, k[0], { x:x+0.2, y:1.6, fontSize:22, bold:true });
     addText(s5, k[1], { x:x+0.2, y:2.1, fontSize:9, color:GRAY });
     addText(s5, k[2], { x:x+0.2, y:2.4, fontSize:9, color:SUCCESS });
   });
-  addText(s5, 'Fórmula Índice de Valor: (Guardados×3 + Compartidos×2 + Comentarios×1.5 + Likes×1) ÷ Alcance × 1000', { x:0.5, y:3.3, fontSize:10, color:'CCCCDD', w:12 });
 
-  // ─── SLIDE 6: TOP/WORST CONTENIDO ───
-  let s6 = pptx.addSlide();
-  s6.background = { fill: BG };
-  addText(s6, 'Análisis de Contenido', { x:0.5, y:0.3, fontSize:24, bold:true });
-  addText(s6, '🏆 Top Performers', { x:0.5, y:0.85, fontSize:11, color:TEAL, bold:true });
-  const tops = [];
-  if (RD.content.organic_highlights) RD.content.organic_highlights.slice(0,3).forEach((p,i) => {
-    tops.push(['#'+(i+1)+' '+p.platform, p.title, fmt(p.views||0)+' vistas', fmt(p.interactions||0)+' int. · '+(p.er||'–')+' ER', p.note||'']);
-  });
-  if (tops.length===0) tops.push(['—','Sin datos de contenido','','','']);
-  tops.forEach((t,i) => {
-    const x = 0.5 + i*4.2;
-    s6.addShape(pptx.ShapeType.roundRect, { x, y:1.2, w:3.8, h:2.0, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
-    addText(s6, t[0], { x:x+0.15, y:1.3, fontSize:8, color:TEAL, bold:true });
-    addText(s6, t[1], { x:x+0.15, y:1.6, fontSize:12, bold:true, w:3.5 });
-    addText(s6, t[2], { x:x+0.15, y:2.0, fontSize:10, color:TEAL, bold:true });
-    addText(s6, t[3], { x:x+0.15, y:2.35, fontSize:8, color:'CCCCDD', w:3.5 });
-    addText(s6, t[4], { x:x+0.15, y:2.7, fontSize:8, color:GRAY });
-  });
-  addText(s6, '⚠ Menor Rendimiento', { x:0.5, y:3.5, fontSize:11, color:DANGER, bold:true });
-  addText(s6, (RD.technical_texts.contenido_fail||'Análisis de contenido de menor rendimiento.'), { x:0.5, y:3.85, fontSize:9, color:'CCCCDD', w:12 });
+  // ER trend chart (native)
+  if (ch.months6) {
+    const erSeries = [];
+    if (ch.er_fb) erSeries.push({ name:'FB', labels:ch.months6, values:ch.er_fb.map(v=>v||0) });
+    if (ch.er_ig) erSeries.push({ name:'IG', labels:ch.months6, values:ch.er_ig.map(v=>v||0) });
+    if (ch.er_tk) erSeries.push({ name:'TK', labels:ch.months6, values:ch.er_tk.map(v=>v||0) });
+    if (erSeries.length) {
+      s5.addChart(pptx.ChartType.line, erSeries, {
+        x:0.5, y:3.2, w:12, h:2.2,
+        showLegend: true, legendPos: 'b', legendFontSize: 8, legendColor: GRAY,
+        lineDataSymbol: 'circle', lineDataSymbolSize: 5,
+        chartColors: [PURPLE2, FUCSIA, TEAL],
+        catAxisLabelColor: GRAY, catAxisLabelFontSize: 7,
+        valAxisLabelColor: GRAY, valAxisLabelFontSize: 7,
+        catAxisLineShow: false, valAxisLineShow: false,
+        gridLineColor: '1A1A3A'
+      });
+    }
+  }
+  addText(s5, T.indice_valor ? 'Indice de Valor: (Guardados x3 + Compartidos x2 + Comentarios x1.5 + Likes x1) / Alcance x 1000' : '', { x:0.5, y:5.2, fontSize:8, color:'CCCCDD', w:12 });
 
-  // ─── SLIDE 7: INVERSIÓN ───
+  // ═══════════════════════════════════════════
+  //  SLIDES 7+: CONTENIDO POR CANAL (with thumbnails)
+  // ═══════════════════════════════════════════
+  const byChannel = cnt.by_channel || {};
+  const channelOrder = ['ig', 'fb', 'tiktok'];
+  const channelNames = { ig:'Instagram', fb:'Facebook', tiktok:'TikTok' };
+  const channelColors = { ig:FUCSIA, fb:PURPLE2, tiktok:TEAL };
+  const hasContentByChannel = channelOrder.some(c => byChannel[c]);
+
+  if (hasContentByChannel) {
+    channelOrder.forEach(chKey => {
+      const chData = byChannel[chKey];
+      if (!chData) return;
+      const tops = (chData.top || []).slice(0,3);
+      const worsts = (chData.worst || []).slice(0,3);
+      if (!tops.length && !worsts.length) return;
+
+      let sc = pptx.addSlide();
+      sc.background = { fill: BG };
+      sectionTitle(sc, 'Contenido: ' + channelNames[chKey]);
+      const accentColor = channelColors[chKey];
+
+      // Top performers
+      if (tops.length) {
+        addText(sc, 'TOP PERFORMERS', { x:0.5, y:0.85, fontSize:9, color:accentColor, bold:true, letterSpacing:2 });
+        tops.forEach((p,i) => {
+          const x = 0.5 + i*4.15;
+          card(sc, x, 1.15, 3.9, 2.15);
+          sc.addShape(pptx.ShapeType.rect, { x, y:1.15, w:3.9, h:0.05, fill:{color:accentColor} });
+          // Thumbnail placeholder (pptxgenjs can add images by URL for http thumbnails)
+          if (p.coverImageUrl && !p.coverImageUrl.startsWith('data:')) {
+            try { sc.addImage({ path:p.coverImageUrl, x:x+0.15, y:1.35, w:1.0, h:1.0, rounding:true }); } catch(e) {}
+            addText(sc, '#'+(i+1), { x:x+0.15, y:1.35, w:1.0, fontSize:16, bold:true, align:'center', color:accentColor });
+            addText(sc, p.title||'', { x:x+1.3, y:1.35, fontSize:11, bold:true, w:2.5 });
+            addText(sc, (p.platform||chKey.toUpperCase()) + ' · ' + (p.date||''), { x:x+1.3, y:1.7, fontSize:7, color:GRAY, w:2.5 });
+            addText(sc, fmtK(p.views||p.reach||0)+' views', { x:x+1.3, y:1.95, fontSize:10, color:accentColor, bold:true });
+            const stats = [p.likes!=null?fmt(p.likes)+' likes':'', p.shares!=null?fmt(p.shares)+' shares':'', p.comments!=null?fmt(p.comments)+' comments':'', p.saves!=null?fmt(p.saves)+' saves':''].filter(Boolean).join(' · ');
+            addText(sc, stats, { x:x+1.3, y:2.2, fontSize:7, color:'CCCCDD', w:2.5 });
+            if (p.er) addText(sc, 'ER: '+p.er, { x:x+1.3, y:2.45, fontSize:8, color:SUCCESS });
+            if (p.spend || p.inv_label) addText(sc, 'Inv: '+(p.inv_label || ('$'+p.spend)), { x:x+1.3, y:2.65, fontSize:7, color:WARNING });
+          } else {
+            addText(sc, '#'+(i+1)+' '+channelNames[chKey], { x:x+0.15, y:1.3, fontSize:8, color:accentColor, bold:true });
+            addText(sc, p.title||'', { x:x+0.15, y:1.55, fontSize:12, bold:true, w:3.6 });
+            addText(sc, (p.platform||'') + ' · ' + (p.date||''), { x:x+0.15, y:1.85, fontSize:7, color:GRAY });
+            addText(sc, fmtK(p.views||p.reach||0)+' views', { x:x+0.15, y:2.1, fontSize:11, color:accentColor, bold:true });
+            const stats = [p.likes!=null?fmt(p.likes)+' likes':'', p.shares!=null?fmt(p.shares)+' shares':'', p.comments!=null?fmt(p.comments)+' comments':''].filter(Boolean).join(' · ');
+            addText(sc, stats, { x:x+0.15, y:2.4, fontSize:8, color:'CCCCDD', w:3.5 });
+            if (p.er) addText(sc, 'ER: '+p.er, { x:x+0.15, y:2.65, fontSize:8, color:SUCCESS });
+            if (p.spend || p.inv_label) addText(sc, 'Inv: '+(p.inv_label || ('$'+p.spend)), { x:x+0.15, y:2.85, fontSize:7, color:WARNING });
+          }
+        });
+      }
+
+      // Worst performers
+      if (worsts.length) {
+        addText(sc, 'MENOR RENDIMIENTO', { x:0.5, y:3.55, fontSize:9, color:DANGER, bold:true, letterSpacing:2 });
+        worsts.forEach((p,i) => {
+          const x = 0.5 + i*4.15;
+          card(sc, x, 3.85, 3.9, 1.45);
+          addText(sc, p.title||'', { x:x+0.15, y:3.95, fontSize:10, bold:true, w:3.6 });
+          addText(sc, (p.platform||'') + ' · ' + (p.date||''), { x:x+0.15, y:4.2, fontSize:7, color:GRAY });
+          addText(sc, fmtK(p.views||p.reach||0)+' views', { x:x+0.15, y:4.45, fontSize:10, color:DANGER });
+          if (p.er) addText(sc, 'ER: '+p.er, { x:x+0.15, y:4.7, fontSize:8, color:GRAY });
+          if (p.note) addText(sc, p.note, { x:x+0.15, y:4.9, fontSize:7, color:GRAY, w:3.5 });
+        });
+      }
+    });
+  } else {
+    // Fallback: single content slide from top_tiktok + organic_highlights + worst_overall
+    let s6 = pptx.addSlide();
+    s6.background = { fill: BG };
+    sectionTitle(s6, 'Analisis de Contenido');
+    insightBar(s6, ins.engagement || T.contenido_insight || '');
+
+    const topSources = (cnt.organic_highlights || cnt.top_tiktok || []).slice(0,3);
+    if (topSources.length) {
+      addText(s6, 'TOP PERFORMERS', { x:0.5, y:1.15, fontSize:9, color:TEAL, bold:true, letterSpacing:2 });
+      topSources.forEach((p,i) => {
+        const x = 0.5 + i*4.15;
+        card(s6, x, 1.45, 3.9, 2.0);
+        addText(s6, '#'+(i+1)+' '+(p.platform||''), { x:x+0.15, y:1.55, fontSize:8, color:TEAL, bold:true });
+        addText(s6, p.title||'', { x:x+0.15, y:1.8, fontSize:12, bold:true, w:3.5 });
+        addText(s6, fmtK(p.views||0)+' vistas', { x:x+0.15, y:2.15, fontSize:10, color:TEAL, bold:true });
+        const detail = [p.interactions ? fmt(p.interactions)+' int.' : '', p.er ? p.er+' ER' : '', p.note||''].filter(Boolean).join(' · ');
+        addText(s6, detail, { x:x+0.15, y:2.45, fontSize:8, color:'CCCCDD', w:3.5 });
+      });
+    }
+    const worstSrc = (cnt.worst_overall || []).slice(0,3);
+    if (worstSrc.length) {
+      addText(s6, 'MENOR RENDIMIENTO', { x:0.5, y:3.7, fontSize:9, color:DANGER, bold:true, letterSpacing:2 });
+      addText(s6, T.contenido_fail || '', { x:0.5, y:4.0, fontSize:9, color:'CCCCDD', w:12 });
+    }
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE: INFLUENCERS (if data exists)
+  // ═══════════════════════════════════════════
+  const influencers = cnt.top_influencers || [];
+  if (influencers.length) {
+    let sInf = pptx.addSlide();
+    sInf.background = { fill: BG };
+    sectionTitle(sInf, 'Influencers');
+    const totalViews = influencers.reduce((s,i) => s + (i.views||0), 0);
+    insightBar(sInf, influencers.length + ' collabs · ' + fmtK(totalViews) + ' views totales');
+
+    influencers.slice(0,6).forEach((inf,i) => {
+      const col = i % 3;
+      const row = Math.floor(i / 3);
+      const x = 0.5 + col * 4.15;
+      const y = 1.3 + row * 2.3;
+      card(sInf, x, y, 3.9, 2.0);
+      // MVP badge for first
+      if (i === 0) {
+        sInf.addShape(pptx.ShapeType.rect, { x, y, w:3.9, h:0.05, fill:{color:TEAL} });
+        addText(sInf, 'MVP', { x:x+3.1, y:y+0.1, fontSize:7, color:TEAL, bold:true });
+      }
+      addText(sInf, inf.name || inf.username || '', { x:x+0.2, y:y+0.15, fontSize:12, bold:true, w:2.8 });
+      addText(sInf, inf.username || '', { x:x+0.2, y:y+0.45, fontSize:8, color:GRAY });
+      addText(sInf, inf.content || '', { x:x+0.2, y:y+0.7, fontSize:9, color:FUCSIA, w:3.5 });
+      // Stats row
+      const statsY = y + 1.05;
+      const statItems = [
+        [fmtK(inf.views||0), 'views', TEAL],
+        [fmtK(inf.likes||0), 'likes', FUCSIA],
+        [fmtK(inf.shares||0), 'shares', WHITE],
+        [fmt(inf.comments||0), 'comments', GRAY]
+      ];
+      statItems.forEach((st,j) => {
+        const sx = x + 0.2 + j * 0.9;
+        addText(sInf, st[0], { x:sx, y:statsY, fontSize:10, bold:true, color:st[2] });
+        addText(sInf, st[1], { x:sx, y:statsY+0.22, fontSize:7, color:GRAY });
+      });
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE: INVERSION + REGIONAL
+  // ═══════════════════════════════════════════
   let s7 = pptx.addSlide();
   s7.background = { fill: BG };
-  addText(s7, 'Eficiencia de Inversión', { x:0.5, y:0.3, fontSize:24, bold:true });
-  const inv = RD.investment, eff = RD.efficiency;
-  addText(s7, 'S/ '+fmt(Math.round(inv.total_soles||0))+' inversión total. CPM Meta: S/ '+(eff.meta_cpm_soles||'–')+'. CPM TK: S/ '+(eff.tiktok_cpm_soles||'–'), { x:0.5, y:0.85, fontSize:12, color:FUCSIA, bold:true, w:12 });
-  const invKpis = [['S/ '+fmt(Math.round(inv.total_soles||0)),'Inversión Total','USD '+fmt(Math.round(inv.total_usd||0))],['S/ '+(eff.meta_cpm_soles||'–'),'CPM Meta','USD '+(eff.meta_cpm_usd||'–')],['S/ '+(eff.tiktok_cpm_soles||'–'),'CPM TikTok','USD '+(eff.tiktok_cpm_usd||'–')],['S/ '+(eff.blended_cpm_soles||'–'),'CPM Blended','USD '+(eff.blended_cpm_usd||'–')]];
+  sectionTitle(s7, 'Eficiencia de Inversion');
+  insightBar(s7, ins.investment || '');
+
+  const invKpis = [
+    [inv.total_soles ? 'S/ '+fmt(Math.round(inv.total_soles)) : 'USD '+fmt(Math.round(inv.total_usd||0)), 'Inversion Total', inv.total_usd ? 'USD '+fmt(Math.round(inv.total_usd)) : ''],
+    [eff.meta_cpm_soles ? 'S/ '+eff.meta_cpm_soles : (eff.meta_cpm_usd ? '$'+eff.meta_cpm_usd : '–'), 'CPM Meta', eff.meta_cpm_usd ? 'USD '+eff.meta_cpm_usd : ''],
+    [eff.tiktok_cpm_soles ? 'S/ '+eff.tiktok_cpm_soles : (eff.tiktok_cpm_usd ? '$'+eff.tiktok_cpm_usd : '–'), 'CPM TikTok', eff.tiktok_cpm_usd ? 'USD '+eff.tiktok_cpm_usd : ''],
+    [eff.blended_cpm_soles ? 'S/ '+eff.blended_cpm_soles : (eff.blended_cpm_usd ? '$'+eff.blended_cpm_usd : '–'), 'CPM Blended', '']
+  ];
   invKpis.forEach((k,i) => {
     const x = 0.5 + i*3.15;
-    s7.addShape(pptx.ShapeType.roundRect, { x, y:1.5, w:2.9, h:1.2, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
+    card(s7, x, 1.5, 2.9, 1.2);
     addText(s7, k[0], { x:x+0.2, y:1.6, fontSize:22, bold:true });
     addText(s7, k[1], { x:x+0.2, y:2.1, fontSize:8, color:GRAY });
-    addText(s7, k[2], { x:x+0.2, y:2.35, fontSize:8, color:SUCCESS });
-  });
-  // Split
-  s7.addShape(pptx.ShapeType.roundRect, { x:0.5, y:3.0, w:6.0, h:1.8, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
-  addText(s7, 'META ADS', { x:0.7, y:3.1, fontSize:9, color:GRAY, bold:true });
-  addText(s7, 'S/ 7,063 (72.5%)', { x:0.7, y:3.4, fontSize:16, bold:true });
-  addText(s7, '2.82M impresiones · 1.58M reach · CPM $0.66 · 1.39M interacciones', { x:0.7, y:3.9, fontSize:9, color:'CCCCDD' });
-  s7.addShape(pptx.ShapeType.roundRect, { x:6.8, y:3.0, w:6.0, h:1.8, fill:{color:CARD}, line:{color:'1A1A3A'}, rectRadius:0.1 });
-  addText(s7, 'TIKTOK ADS', { x:7.0, y:3.1, fontSize:9, color:GRAY, bold:true });
-  addText(s7, 'S/ 2,673 (27.5%)', { x:7.0, y:3.4, fontSize:16, bold:true });
-  addText(s7, '2.58M impresiones · CPM $0.27 · 534K video views · 71 followers', { x:7.0, y:3.9, fontSize:9, color:'CCCCDD' });
-  // Alert
-  addText(s7, '🚨 Campaña Followers TK: $43 para 71 seg. (CPE $0.61 / S/ 2.31). Orgánico ganó seguidores GRATIS. Pausar y redirigir a Reproducciones.', { x:0.5, y:5.0, fontSize:10, color:WARNING, w:12 });
-
-  // ─── SLIDE 8: BHS ───
-  let s8 = pptx.addSlide();
-  s8.background = { fill: BG };
-  addText(s8, 'Brand Health Score', { x:0.5, y:0.3, fontSize:24, bold:true });
-  s8.addShape(pptx.ShapeType.roundRect, { x:4.5, y:0.9, w:4, h:2.0, fill:{color:'1A0060'}, line:{color:PURPLE}, rectRadius:0.15 });
-  addText(s8, '89', { x:4.5, y:1.0, w:4, fontSize:60, bold:true, align:'center', color:FUCSIA });
-  addText(s8, 'BRAND HEALTH SCORE · MARZO 2026', { x:4.5, y:2.2, w:4, fontSize:8, color:GRAY, align:'center' });
-  const dims = [['87','10%','Crecimiento',false],['90','10%','Alcance',false],['88','20%','Engagement',false],['85','15%','Sentimiento*',true],['92','10%','Eficiencia',false],['100','10%','Metas',false],['85','25%','Pos. Comp.*',true]];
-  dims.forEach((d,i) => {
-    const x = 0.3 + i*1.8;
-    const borderColor = d[3] ? WARNING : '1A1A3A';
-    s8.addShape(pptx.ShapeType.roundRect, { x, y:3.4, w:1.6, h:1.4, fill:{color:CARD}, line:{color:borderColor, dashType:d[3]?'dash':'solid'}, rectRadius:0.08 });
-    addText(s8, d[0], { x, y:3.5, w:1.6, fontSize:18, bold:true, align:'center', color: d[3] ? WARNING : WHITE });
-    addText(s8, d[1], { x, y:3.95, w:1.6, fontSize:8, color:FUCSIA, align:'center' });
-    addText(s8, d[2], { x, y:4.2, w:1.6, fontSize:7, color:GRAY, align:'center' });
-  });
-  addText(s8, '* Dimensiones con datos proyectados (40% del peso total). BHS con solo datos reales: ~82/100', { x:0.5, y:5.0, fontSize:9, color:WARNING, w:12 });
-
-  // ─── SLIDE 9: PLAN DE ACCIÓN ───
-  let s9 = pptx.addSlide();
-  s9.background = { fill: BG };
-  addText(s9, 'Plan de Acción — Abril 2026', { x:0.5, y:0.3, fontSize:24, bold:true });
-  const recs = [
-    ['ALTA','TikTok Ads','Pausar campaña Followers (CPE S/ 2.30 insostenible)','Redirigir a Reproducciones: +165K vistas con mismo presupuesto'],
-    ['ALTA','Cross-platform','1 video de calidad → todos los canales','Todo video >100K en TK → amplificar en Meta esa semana'],
-    ['ALTA','TikTok','1 video "Resultado de Cliente" por semana','ER 5.1% vs 2.9% promedio. Escalar de 3 a 4/mes'],
-    ['MEDIA','Facebook','Sorteo mensual como gasto fijo (S/ 750)','96% de interacciones FB vino del sorteo. Sin él, FB muere'],
-    ['MEDIA','Community','Protocolo de respuesta en 2h','18% de comentarios son consultas. Convertir neutral→positivo'],
-    ['BAJA','Instagram','Aumentar Carruseles a 2/mes','ER 5.0% con 1 pieza. Subir ER promedio IG 15-20%']
-  ];
-  recs.forEach((r,i) => {
-    const y = 0.9 + i*0.75;
-    const prioColor = r[0]==='ALTA' ? FUCSIA : r[0]==='MEDIA' ? WARNING : TEAL;
-    addText(s9, r[0], { x:0.5, y, fontSize:8, color:prioColor, bold:true });
-    addText(s9, r[1], { x:0.5, y:y+0.17, fontSize:7, color:GRAY });
-    addText(s9, r[2], { x:1.8, y, fontSize:11, bold:true, w:5 });
-    addText(s9, r[3], { x:1.8, y:y+0.22, fontSize:9, color:'CCCCDD', w:9 });
-  });
-  // Proyección
-  addText(s9, 'Proyección Abril 2026', { x:0.5, y:5.0, fontSize:11, bold:true });
-  const proj = [['Meta Alcance','40,000','+23%'],['TK Views','3.2M','+16%'],['Nuevos Seg.','+2,100','+17%'],['BHS Objetivo','91','+2pts']];
-  proj.forEach((p,i) => {
-    addText(s9, p[0]+': '+p[1]+' ('+p[2]+')', { x: 0.5 + i*3.15, y:5.3, fontSize:10, color:TEAL });
+    if (k[2]) addText(s7, k[2], { x:x+0.2, y:2.35, fontSize:8, color:SUCCESS });
   });
 
-  // ─── SLIDE 10: CIERRE ───
+  // Meta vs TikTok split (from data, not hardcoded)
+  const metaSoles = inv.meta_ads_soles || 0;
+  const tkSoles = inv.tiktok_ads_soles || 0;
+  if (metaSoles || tkSoles) {
+    card(s7, 0.5, 2.95, 6.0, 1.5);
+    addText(s7, 'META ADS', { x:0.7, y:3.05, fontSize:9, color:GRAY, bold:true });
+    addText(s7, 'S/ '+fmt(Math.round(metaSoles))+' ('+(inv.meta_pct||0)+'%)', { x:0.7, y:3.3, fontSize:16, bold:true });
+    const metaDetail = [
+      reach.meta_ads_impressions ? fmtK(reach.meta_ads_impressions)+' imp.' : '',
+      reach.meta_ads_reach ? fmtK(reach.meta_ads_reach)+' reach' : '',
+      eff.meta_cpm_usd ? 'CPM $'+eff.meta_cpm_usd : ''
+    ].filter(Boolean).join(' · ');
+    addText(s7, metaDetail, { x:0.7, y:3.75, fontSize:9, color:'CCCCDD', w:5.5 });
+
+    card(s7, 6.8, 2.95, 6.0, 1.5);
+    addText(s7, 'TIKTOK ADS', { x:7.0, y:3.05, fontSize:9, color:GRAY, bold:true });
+    addText(s7, 'S/ '+fmt(Math.round(tkSoles))+' ('+(inv.tiktok_pct||0)+'%)', { x:7.0, y:3.3, fontSize:16, bold:true });
+    const tkDetail = [
+      reach.tiktok_ads_impressions ? fmtK(reach.tiktok_ads_impressions)+' imp.' : '',
+      reach.tiktok_organic_views ? fmtK(reach.tiktok_organic_views)+' views' : '',
+      eff.tiktok_cpm_usd ? 'CPM $'+eff.tiktok_cpm_usd : ''
+    ].filter(Boolean).join(' · ');
+    addText(s7, tkDetail, { x:7.0, y:3.75, fontSize:9, color:'CCCCDD', w:5.5 });
+  }
+  // Investment note
+  if (inv.note) addText(s7, inv.note, { x:0.5, y:4.7, fontSize:9, color:WARNING, w:12 });
+
+  // ═══════════════════════════════════════════
+  //  SLIDE: INVERSION REGIONAL (if data exists)
+  // ═══════════════════════════════════════════
+  const regional = inv.regional || {};
+  const regionKeys = Object.keys(regional);
+  if (regionKeys.length) {
+    let sReg = pptx.addSlide();
+    sReg.background = { fill: BG };
+    sectionTitle(sReg, 'Inversion por Region');
+    insightBar(sReg, 'Distribucion geografica: ' + regionKeys.map(r => r + ' ' + (regional[r].pct||'')+'%').join(' · '));
+
+    // Bar chart native
+    sReg.addChart(pptx.ChartType.bar, [{
+      name: 'Inversion USD',
+      labels: regionKeys,
+      values: regionKeys.map(r => regional[r].usd || 0)
+    }], {
+      x:0.5, y:1.3, w:5.5, h:2.5,
+      showLegend: false,
+      chartColors: [PURPLE],
+      catAxisLabelColor: WHITE, catAxisLabelFontSize: 9,
+      valAxisLabelColor: GRAY, valAxisLabelFontSize: 8,
+      catAxisLineShow: false, valAxisLineShow: false,
+      gridLineColor: '1A1A3A',
+      dataLabelColor: WHITE, showValue: true, dataLabelFontSize: 9, dataLabelPosition: 'outEnd'
+    });
+
+    // Region detail cards
+    const regW = regionKeys.length <= 4 ? 3.0 : 2.5;
+    const regGap = regionKeys.length > 1 ? (12 - regionKeys.length * regW) / (regionKeys.length - 1) : 0;
+    regionKeys.forEach((r,i) => {
+      const rd = regional[r];
+      const x = 0.5 + i * (regW + regGap);
+      card(sReg, x, 4.0, regW, 1.4);
+      addText(sReg, r, { x:x+0.15, y:4.1, fontSize:11, bold:true, w:regW-0.3 });
+      addText(sReg, (rd.pct||'')+'% · USD '+fmt(Math.round(rd.usd||0)), { x:x+0.15, y:4.4, fontSize:9, color:FUCSIA });
+      const regDetail = [
+        rd.reach ? fmtK(rd.reach)+' reach' : '',
+        rd.impressions ? fmtK(rd.impressions)+' imp.' : '',
+        rd.cpm_usd ? 'CPM $'+rd.cpm_usd : ''
+      ].filter(Boolean).join(' · ');
+      addText(sReg, regDetail, { x:x+0.15, y:4.7, fontSize:8, color:'CCCCDD', w:regW-0.3 });
+      if (rd.interactions) addText(sReg, fmt(rd.interactions)+' interacciones', { x:x+0.15, y:4.95, fontSize:8, color:GRAY });
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE: BHS (from data)
+  // ═══════════════════════════════════════════
+  if (bhs.total) {
+    let s8 = pptx.addSlide();
+    s8.background = { fill: BG };
+    sectionTitle(s8, 'Brand Health Score');
+
+    // Big score circle
+    s8.addShape(pptx.ShapeType.roundRect, { x:4.5, y:0.9, w:4, h:2.0, fill:{color:'1A0060'}, line:{color:PURPLE}, rectRadius:0.15 });
+    addText(s8, String(bhs.total), { x:4.5, y:1.0, w:4, fontSize:60, bold:true, align:'center', color:FUCSIA });
+    addText(s8, 'BRAND HEALTH SCORE · ' + (RD.period||'').toUpperCase(), { x:4.5, y:2.2, w:4, fontSize:8, color:GRAY, align:'center' });
+
+    // Dimension cards from data
+    const dimDefs = [
+      ['crecimiento','10%','Crecimiento'],['alcance','10%','Alcance'],['engagement','20%','Engagement'],
+      ['sentimiento','15%','Sentimiento'],['eficiencia','10%','Eficiencia'],['metas','10%','Metas'],
+      ['posicion_comp','25%','Pos. Comp.']
+    ];
+    const bhsDims = bhs.dimensions || {};
+    dimDefs.forEach((d,i) => {
+      const x = 0.3 + i*1.8;
+      const val = bhsDims[d[0]];
+      const isLow = val != null && val < 70;
+      const borderCol = isLow ? WARNING : CARD_BORDER;
+      s8.addShape(pptx.ShapeType.roundRect, { x, y:3.4, w:1.6, h:1.4, fill:{color:CARD}, line:{color:borderCol, dashType:isLow?'dash':'solid'}, rectRadius:0.08 });
+      addText(s8, val != null ? String(val) : '–', { x, y:3.5, w:1.6, fontSize:18, bold:true, align:'center', color:isLow ? WARNING : WHITE });
+      addText(s8, d[1], { x, y:3.95, w:1.6, fontSize:8, color:FUCSIA, align:'center' });
+      addText(s8, d[2], { x, y:4.2, w:1.6, fontSize:7, color:GRAY, align:'center' });
+    });
+    if (T.bhs_explicacion) addText(s8, T.bhs_explicacion.substring(0,200), { x:0.5, y:5.0, fontSize:8, color:'CCCCDD', w:12 });
+
+    // BHS Radar chart (native)
+    if (ch.bhs_radar) {
+      const radarLabels = ['Crecimiento','Alcance','Engagement','Sentimiento','Eficiencia','Metas','Pos.Comp.'];
+      s8.addChart(pptx.ChartType.radar, [
+        { name: RD.brand||'Marca', labels: radarLabels, values: ch.bhs_radar },
+        { name: 'Benchmark', labels: radarLabels, values: ch.bhs_benchmark || [70,70,70,70,70,70,70] }
+      ], {
+        x:8.5, y:0.9, w:4.3, h:2.3,
+        showLegend: true, legendPos: 'b', legendFontSize: 7, legendColor: GRAY,
+        chartColors: [FUCSIA, '55557A'],
+        catAxisLabelColor: GRAY, catAxisLabelFontSize: 7,
+        valAxisLabelColor: GRAY, valAxisHidden: true
+      });
+    }
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE: PLAN DE ACCION (from recommendations)
+  // ═══════════════════════════════════════════
+  if (recs.length) {
+    let s9 = pptx.addSlide();
+    s9.background = { fill: BG };
+    sectionTitle(s9, 'Plan de Accion');
+
+    const maxRecs = Math.min(recs.length, 7);
+    const rowH = Math.min(0.75, 4.0 / maxRecs);
+    recs.slice(0, maxRecs).forEach((r,i) => {
+      const y = 0.9 + i * rowH;
+      const prioColor = (r.priority||'').toLowerCase() === 'alta' ? FUCSIA : (r.priority||'').toLowerCase() === 'media' ? WARNING : TEAL;
+      // Priority badge
+      s9.addShape(pptx.ShapeType.roundRect, { x:0.5, y:y+0.02, w:0.6, h:0.22, fill:{color:prioColor}, rectRadius:0.05 });
+      addText(s9, (r.priority||'').toUpperCase(), { x:0.5, y:y+0.02, w:0.6, fontSize:7, bold:true, align:'center', color:BG });
+      addText(s9, r.channel||'', { x:1.2, y, fontSize:7, color:GRAY });
+      addText(s9, r.title||'', { x:1.2, y:y+0.18, fontSize:11, bold:true, w:5 });
+      addText(s9, r.description||'', { x:6.5, y:y+0.02, fontSize:9, color:'CCCCDD', w:6, lineSpacing:12 });
+    });
+  }
+
+  // ═══════════════════════════════════════════
+  //  SLIDE: CIERRE
+  // ═══════════════════════════════════════════
   let s10 = pptx.addSlide();
   s10.background = { fill: BG };
-  addText(s10, 'LUDiK', { x:0, y:1.8, w:13.33, fontSize:40, bold:true, align:'center' });
-  addText(s10, 'IA · Gamificación · Datos', { x:0, y:2.5, w:13.33, fontSize:14, color:GRAY, align:'center' });
-  s10.addShape(pptx.ShapeType.line, { x:5.5, y:3.2, w:2.3, h:0, line:{color:FUCSIA, width:2} });
-  addText(s10, 'REPORTE PREPARADO POR', { x:0, y:3.6, w:13.33, fontSize:8, color:GRAY, align:'center', letterSpacing:3 });
-  addText(s10, 'Equipo LUDiK — Digital Strategy', { x:0, y:3.9, w:13.33, fontSize:14, bold:true, align:'center' });
-  addText(s10, 'Barcelona, España\nludik.io · hola@ludik.io', { x:0, y:4.5, w:13.33, fontSize:10, color:GRAY, align:'center' });
-  addText(s10, 'DOCUMENTO CONFIDENCIAL · MARZO 2026 · V2.2', { x:0, y:5.2, w:13.33, fontSize:7, color:'55557A', align:'center', letterSpacing:2 });
+  // accent line
+  s10.addShape(pptx.ShapeType.line, { x:5.5, y:1.5, w:2.3, h:0, line:{color:FUCSIA, width:2} });
+  addText(s10, 'LUDiK', { x:0, y:1.8, w:SLIDE_W, fontSize:40, bold:true, align:'center' });
+  addText(s10, cierre.tagline || 'Data-driven decisions for modern brands', { x:0, y:2.5, w:SLIDE_W, fontSize:14, color:GRAY, align:'center' });
+  s10.addShape(pptx.ShapeType.line, { x:5.5, y:3.1, w:2.3, h:0, line:{color:FUCSIA, width:2} });
+  addText(s10, 'REPORTE PREPARADO POR', { x:0, y:3.4, w:SLIDE_W, fontSize:8, color:GRAY, align:'center', letterSpacing:3 });
+  addText(s10, (cierre.team || 'Equipo LUDiK') + ' — Digital Strategy', { x:0, y:3.7, w:SLIDE_W, fontSize:14, bold:true, align:'center' });
+  addText(s10, (cierre.location || 'Barcelona · Lima') + '\n' + (cierre.contact || 'ludik.io · hola@ludik.io'), { x:0, y:4.3, w:SLIDE_W, fontSize:10, color:GRAY, align:'center' });
+  addText(s10, (cierre.confidential || portada.footer || '').toUpperCase(), { x:0, y:5.1, w:SLIDE_W, fontSize:7, color:'55557A', align:'center', letterSpacing:2 });
 
-  const isStory = document.getElementById('mode-story').classList.contains('active');
+  // ── Generate file ──
+  const isStory = document.getElementById('mode-story')?.classList.contains('active');
   pptx.writeFile({ fileName: (RD.brand_id||RD.brand||'Report').replace(/\s+/g,'_') + '_' + (RD.period||'draft') + '_LUDiK' + (isStory ? '' : '_tecnico') + '.pptx' });
 }
 
