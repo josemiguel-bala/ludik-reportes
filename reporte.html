@@ -1406,19 +1406,34 @@ function switchMonth(period) {
 // Theme toggle
 function toggleTheme() {
   const html = document.documentElement;
-  const isLight = html.dataset.theme === 'light';
-  html.dataset.theme = isLight ? '' : 'light';
-  // Update chart grid colors
+  const wasLight = html.dataset.theme === 'light';
+  const nowLight = !wasLight;
+  html.dataset.theme = nowLight ? 'light' : '';
+  // Update chart colors for new theme
   if (typeof Chart !== 'undefined') {
-    const gc = isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.04)';
-    const bc = isLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.06)';
-    Chart.helpers.each(Chart.instances, chart => {
+    const gc = nowLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.04)';
+    const bc = nowLight ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.06)';
+    const labelColor = nowLight ? '#444466' : '#8888AA';
+    const tickColor = nowLight ? '#444466' : '#8888AA';
+    const legendColor = nowLight ? '#333355' : '#CCCCDD';
+    Object.values(Chart.instances).forEach(chart => {
       if (chart.config.options.scales) {
         Object.values(chart.config.options.scales).forEach(s => {
           if (s.grid) s.grid.color = gc;
           if (s.border) s.border.color = bc;
           if (s.angleLines) s.angleLines.color = gc;
+          if (s.ticks) s.ticks.color = tickColor;
+          if (s.pointLabels) s.pointLabels.color = labelColor;
+          if (s.title && s.title.display) s.title.color = labelColor;
         });
+      }
+      if (chart.config.options.plugins) {
+        if (chart.config.options.plugins.legend && chart.config.options.plugins.legend.labels) {
+          chart.config.options.plugins.legend.labels.color = legendColor;
+        }
+        if (chart.config.options.plugins.tooltip) {
+          chart.config.options.plugins.tooltip.backgroundColor = nowLight ? 'rgba(0,0,0,0.8)' : 'rgba(19,19,42,0.95)';
+        }
       }
       chart.update('none');
     });
