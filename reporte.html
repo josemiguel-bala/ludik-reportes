@@ -68,6 +68,9 @@
 [data-theme="light"] .comp-table th{color:#666}
 [data-theme="light"] .act-title{color:#111128}
 [data-theme="light"] .act-number{color:#673CEF}
+[data-theme="light"] .act:nth-child(odd){background:#FFFFFF;box-shadow:0 1px 4px rgba(75,0,255,0.06)}
+[data-theme="light"] .act:nth-child(even){background:linear-gradient(135deg,rgba(75,0,255,.04),rgba(214,0,154,.02))}
+[data-theme="light"] .act-caption{color:#888 !important}
 [data-theme="light"] .sec-header{border-bottom-color:rgba(0,0,0,.08)}
 [data-theme="light"] .sec-title{color:#111128}
 [data-theme="light"] .sec-subtitle{color:#666}
@@ -465,13 +468,16 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   /* STORY MODE print */
   /* Each act = one page (title + text + image together) */
   .act{
-    padding:24px 0 16px !important;
+    padding:20px 24px 16px !important;
     page-break-before:always !important;break-before:page !important;
     page-break-inside:avoid !important;break-inside:avoid !important;
+    border-radius:0 !important;margin:0 !important;
   }
-  .act-title{font-size:22px !important;margin-bottom:8px !important}
+  .act-grid{display:grid !important;grid-template-columns:1fr 1fr !important;gap:24px !important}
+  .act:nth-child(even) .act-grid{direction:ltr !important}
+  .act-title{font-size:20px !important;margin-bottom:8px !important}
   .act-number{font-size:9px !important;margin-bottom:6px !important}
-  .story-text{font-size:11px !important;line-height:1.5 !important;margin-bottom:10px !important}
+  .story-text{font-size:10px !important;line-height:1.5 !important;margin-bottom:8px !important}
 
   /* CRITICAL: Show collapsed content when printing */
   .act-detail{display:block !important;max-height:none !important;overflow:visible !important;opacity:1 !important}
@@ -768,11 +774,26 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 .mode-content.active{display:block}
 
 /* STORY MODE */
-.act{padding:48px 0 36px;border-bottom:1px solid var(--border)}
+.act{padding:48px 32px 36px;border-bottom:none;border-radius:16px;margin:12px 0}
+.act:nth-child(odd){background:var(--card)}
+.act:nth-child(even){background:linear-gradient(135deg,rgba(75,0,255,.06),rgba(248,76,222,.03))}
 .act:last-child{border:none}
 .act-number{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--fucsia);text-transform:uppercase;margin-bottom:8px}
-.act-title{font-size:26px;font-weight:900;letter-spacing:-.03em;line-height:1.2;color:var(--white);margin-bottom:14px;max-width:720px}
-.story-text{font-size:15px;color:#D8D8E8;line-height:1.75;max-width:700px;margin-bottom:22px}
+.act-title{font-size:26px;font-weight:900;letter-spacing:-.03em;line-height:1.2;color:var(--white);margin-bottom:14px}
+.story-text{font-size:15px;color:#D8D8E8;line-height:1.75;margin-bottom:22px}
+/* Act grid: text + image side by side */
+.act-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.act:nth-child(even) .act-grid{direction:rtl}
+.act:nth-child(even) .act-grid > *{direction:ltr}
+.act-media{border-radius:12px;overflow:hidden}
+.act-media img{width:100%;display:block;border-radius:12px}
+.act-media .act-caption{padding:10px 0;font-size:12px;color:var(--gray);font-style:italic}
+/* No image: full width text */
+.act-content-full{max-width:none}
+@media(max-width:768px){
+  .act-grid{grid-template-columns:1fr;gap:20px}
+  .act:nth-child(even) .act-grid{direction:ltr}
+}
 .act-detail{max-height:0;overflow:hidden;transition:max-height .4s ease}
 .act-detail.open{max-height:3000px}
 .act-toggle{
@@ -792,7 +813,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 .story-highlight{
   background:linear-gradient(135deg,rgba(75,0,255,.08),rgba(248,76,222,.05));
   border-left:4px solid var(--fucsia);border-radius:12px;
-  padding:22px 26px;margin:24px 0;max-width:720px;
+  padding:22px 26px;margin:24px 0;
 }
 .story-highlight-text{font-size:18px;font-weight:800;color:var(--white);line-height:1.45;letter-spacing:-.01em}
 .story-highlight-sub{font-size:11px;color:var(--gray);margin-top:8px}
@@ -2139,12 +2160,16 @@ function populateAllSections() {
     let h = '';
     for (let i=1;i<=5;i++) {
       const a = D.story['act'+i]; if (!a) continue;
-      h += '<div class="act"><div class="act-number">'+(a.number||'Acto '+i)+'</div><div class="act-title">'+(a.title||'')+'</div>';
+      const hasImage = !!(a.image);
+      h += '<div class="act">';
+      // If act has an image, use grid layout (text left, image right — alternates via CSS)
+      if (hasImage) h += '<div class="act-grid"><div class="act-content">';
+      h += '<div class="act-number">'+(a.number||'Acto '+i)+'</div><div class="act-title">'+(a.title||'')+'</div>';
       if (a.paragraphs && a.paragraphs.length > 0) {
         // First paragraph always visible
         h += '<div class="story-text">'+a.paragraphs[0]+'</div>';
         if (a.inline_media) a.inline_media.filter(m => m.after_paragraph === 0).forEach(m => {
-          h += '<a href="'+(m.url||'#')+'" target="_blank" style="display:flex;gap:14px;align-items:center;margin:16px 0 20px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:680px;text-decoration:none;transition:border-color .2s"';
+          h += '<a href="'+(m.url||'#')+'" target="_blank" style="display:flex;gap:14px;align-items:center;margin:16px 0 20px;padding:12px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:border-color .2s"';
           h += ' onmouseover="this.style.borderColor=\'var(--fucsia)\'" onmouseout="this.style.borderColor=\'var(--border)\'">';
           h += '<img src="'+m.image+'" style="width:80px;height:80px;object-fit:cover;border-radius:8px;flex-shrink:0" onerror="this.style.display=\'none\'" />';
           h += '<div><div style="font-size:12px;font-weight:700;color:var(--white)">'+m.label+'</div>';
@@ -2159,7 +2184,7 @@ function populateAllSections() {
           for (let pIdx=1; pIdx<a.paragraphs.length; pIdx++) {
             h += '<div class="story-text">'+a.paragraphs[pIdx]+'</div>';
             if (a.inline_media) a.inline_media.filter(m => m.after_paragraph === pIdx).forEach(m => {
-              h += '<a href="'+(m.url||'#')+'" target="_blank" style="display:flex;gap:14px;align-items:center;margin:16px 0 20px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:680px;text-decoration:none;transition:border-color .2s"';
+              h += '<a href="'+(m.url||'#')+'" target="_blank" style="display:flex;gap:14px;align-items:center;margin:16px 0 20px;padding:12px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:border-color .2s"';
               h += ' onmouseover="this.style.borderColor=\'var(--fucsia)\'" onmouseout="this.style.borderColor=\'var(--border)\'">';
               h += '<img src="'+m.image+'" style="width:80px;height:80px;object-fit:cover;border-radius:8px;flex-shrink:0" onerror="this.style.display=\'none\'" />';
               h += '<div><div style="font-size:12px;font-weight:700;color:var(--white)">'+m.label+'</div>';
@@ -2168,6 +2193,14 @@ function populateAllSections() {
           }
           h += '</div>'; // close act-detail
         }
+      }
+      // Close grid content column, add media column
+      if (hasImage) {
+        h += '</div>'; // close .act-content
+        h += '<div class="act-media">';
+        h += '<img src="'+a.image+'" alt="'+(a.image_caption||'')+'" onerror="this.parentElement.style.display=\'none\'">';
+        if (a.image_caption) h += '<div class="act-caption">'+a.image_caption+'</div>';
+        h += '</div></div>'; // close .act-media + .act-grid
       }
       // Act 3: Retention mini-chart in story
       if (i===3 && D.tiktok_retention && D.tiktok_retention.videos) {
@@ -2202,13 +2235,7 @@ function populateAllSections() {
       if (a.highlight) { h += '<div class="story-highlight"><div class="story-highlight-text">'+a.highlight+'</div>'; if (a.highlight_sub) h += '<div class="story-highlight-sub">'+a.highlight_sub+'</div>'; h += '</div>'; }
       if (a.evidence) { h += '<div class="evidence-row">'; a.evidence.forEach(e => { const s = e.color==='teal'?' style="color:var(--teal)"':e.color==='danger'?' style="color:var(--danger)"':''; h += '<div class="evidence-card"><div class="ev-value"'+s+'>'+e.value+'</div><div class="ev-label">'+e.label+'</div><div class="ev-delta"'+s+'>'+(e.delta||'')+'</div></div>'; }); h += '</div>'; }
       if (a.risks) a.risks.forEach(r => h += '<div class="story-risk"><div class="story-risk-title">'+r.title+'</div><div class="story-risk-text">'+r.text+'</div></div>');
-      // Act image (if defined in JSON)
-      if (a.image) {
-        h += '<div style="margin:20px 0;border-radius:12px;overflow:hidden;max-width:500px">';
-        h += '<img src="'+a.image+'" style="width:100%;display:block;border-radius:12px" alt="'+(a.image_caption||'')+'">';
-        if (a.image_caption) h += '<div style="padding:10px 0;font-size:12px;color:var(--gray);font-style:italic">'+a.image_caption+'</div>';
-        h += '</div>';
-      }
+      // Act image now rendered in grid layout above (if hasImage)
       // Legacy: TK thumbnails in act 2 (only if no by_channel and top_tiktok exists)
       if (i===1 && !D.content.by_channel && D.content && D.content.top_tiktok && D.content.top_tiktok.length) {
         const colors = ['#1A0040,#6B00CC,#F84CDE','#2D0080,#673CEF,#9B6BFF','#003344,#006680,#20ECC8'];
