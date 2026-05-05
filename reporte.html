@@ -447,20 +447,52 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   .obj-tbl th{font-size:7px !important;padding:5px 10px !important}
 
   /* STORY MODE print */
-  .act{padding:32px 0 24px !important;break-inside:avoid}
-  .act-title{font-size:24px !important}
-  .story-text{font-size:12px !important;margin-bottom:16px !important}
-  .story-highlight{padding:16px 20px !important;margin:16px 0 !important;break-inside:avoid}
-  .story-highlight-text{font-size:14px !important}
-  .evidence-row{margin:14px 0 !important}
-  .evidence-card{padding:10px 14px !important}
-  .ev-value{font-size:18px !important}
-  .mini-posts{margin:14px 0 !important}
+  /* Each act = one page (title + text + image together) */
+  .act{
+    padding:24px 0 16px !important;
+    page-break-before:always !important;break-before:page !important;
+    page-break-inside:avoid !important;break-inside:avoid !important;
+  }
+  .act-title{font-size:22px !important;margin-bottom:8px !important}
+  .act-number{font-size:9px !important;margin-bottom:6px !important}
+  .story-text{font-size:11px !important;line-height:1.5 !important;margin-bottom:10px !important}
+
+  /* CRITICAL: Show collapsed content when printing */
+  .act-detail{display:block !important;max-height:none !important;overflow:visible !important;opacity:1 !important}
+  .act-toggle{display:none !important}
+
+  /* Constrain act images so act fits on one page */
+  .act img{
+    max-height:38vh !important;
+    width:auto !important;max-width:100% !important;
+    object-fit:contain !important;
+    border-radius:8px !important;
+    margin:8px 0 4px !important;
+  }
+  /* Inline media cards: compact for print */
+  .act a[style*="display:flex"]{
+    margin:8px 0 12px !important;padding:8px !important;
+    break-inside:avoid !important;
+  }
+  .act a img{
+    width:60px !important;height:60px !important;
+    max-height:60px !important;
+  }
+
+  .story-highlight{padding:12px 16px !important;margin:10px 0 !important;break-inside:avoid}
+  .story-highlight-text{font-size:12px !important}
+  .evidence-row{margin:10px 0 !important}
+  .evidence-card{padding:8px 12px !important}
+  .ev-value{font-size:16px !important}
+  .mini-posts{margin:10px 0 !important}
   .mp-thumb{height:50px !important}
-  .action-box,.story-risk{padding:10px 14px !important;margin:12px 0 !important;break-inside:avoid}
-  .bhs-inline{padding:14px 18px !important;break-inside:avoid}
-  .bhs-big{font-size:40px !important}
+  .action-box,.story-risk{padding:8px 12px !important;margin:8px 0 !important;break-inside:avoid}
+  .bhs-inline{padding:12px 16px !important;break-inside:avoid}
+  .bhs-big{font-size:36px !important}
   .annex-switch{display:none !important}
+
+  /* Act 5 items list: compact */
+  .act [style*="border-left"]{margin:6px 0 !important;padding:8px 12px !important}
 }
 
 /* SIDE NAV */
