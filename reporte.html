@@ -323,7 +323,11 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;color-adjust:exact !important}
   @page{size:A4 landscape;margin:10mm 14mm}
 
-  body{background:#0D0D1A !important;font-size:9px}
+  body{font-size:9px}
+  /* Acts: remove dark backgrounds in print — use subtle borders instead */
+  .act{background:none !important;border:1px solid rgba(0,0,0,.08) !important;margin:8px 0 !important}
+  .act:nth-child(odd){background:rgba(0,0,0,.02) !important}
+  .act:nth-child(even){background:none !important}
 
   /* Hide UI elements */
   .fixed-header,.side-nav,.dl-buttons,.sec-divider,.mode-toggle,.annex-switch{display:none !important}
@@ -471,13 +475,18 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
     padding:20px 24px 16px !important;
     page-break-before:always !important;break-before:page !important;
     page-break-inside:avoid !important;break-inside:avoid !important;
-    border-radius:0 !important;margin:0 !important;
+    border-radius:0 !important;
+    background:none !important;border:none !important;
   }
+  .act:nth-child(odd),.act:nth-child(even){background:none !important}
   .act-grid{display:grid !important;grid-template-columns:1fr 1fr !important;gap:24px !important}
   .act:nth-child(even) .act-grid{direction:ltr !important}
-  .act-title{font-size:20px !important;margin-bottom:8px !important}
-  .act-number{font-size:9px !important;margin-bottom:6px !important}
-  .story-text{font-size:10px !important;line-height:1.5 !important;margin-bottom:8px !important}
+  /* Print text: always dark for readability */
+  .act-title{font-size:20px !important;margin-bottom:8px !important;color:#111 !important}
+  .act-number{font-size:9px !important;margin-bottom:6px !important;color:#673CEF !important}
+  .story-text{font-size:10px !important;line-height:1.5 !important;margin-bottom:8px !important;color:#333 !important}
+  .story-highlight{background:rgba(75,0,255,.06) !important;border-left-color:#4B00FF !important}
+  .story-highlight-text{color:#222 !important}
 
   /* CRITICAL: Show collapsed content when printing */
   .act-detail{display:block !important;max-height:none !important;overflow:visible !important;opacity:1 !important}
