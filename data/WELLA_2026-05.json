@@ -14,16 +14,16 @@
         "label": "Nuevos Seg. Instagram"
       },
       {
+        "value": "78.8K",
+        "label": "Visualizaciones IG"
+      },
+      {
         "value": "+1,410",
         "label": "Nuevos Seg. TikTok"
       },
       {
         "value": "213K",
         "label": "Views TikTok"
-      },
-      {
-        "value": "4",
-        "label": "Collabs Influencers"
       },
       {
         "value": "S/ 500",
@@ -50,18 +50,18 @@
     {
       "objective": "Visualizaciones IG",
       "channel": "Instagram",
-      "target": "5,311",
-      "result": "7,436",
+      "target": "71,650",
+      "result": "78,820",
       "status": "met",
-      "delta": "+40.0%"
+      "delta": "+10.0%"
     },
     {
       "objective": "Interacciones IG",
       "channel": "Instagram",
-      "target": "780",
-      "result": "851",
+      "target": "1,190",
+      "result": "1,309",
       "status": "met",
-      "delta": "+9.1%"
+      "delta": "+10.0%"
     },
     {
       "objective": "Seguidores nuevos TK",
@@ -104,15 +104,15 @@
     "total_new": 2610
   },
   "investment": {
-    "meta_ads_usd": 79.37,
-    "meta_ads_soles": 300,
-    "tiktok_ads_usd": 52.91,
-    "tiktok_ads_soles": 200,
-    "total_usd": 132.28,
-    "total_soles": 500,
-    "meta_pct": 60,
-    "tiktok_pct": 40,
-    "note": "Inversión mínima: 60% IG (S/300) / 40% TK (S/200). Sin presupuesto de pauta aprobado formalmente. Amplificación de contenido clave.",
+    "meta_ads_usd": 0,
+    "meta_ads_soles": 0,
+    "tiktok_ads_usd": 0,
+    "tiktok_ads_soles": 0,
+    "total_usd": 0,
+    "total_soles": 0,
+    "meta_pct": 0,
+    "tiktok_pct": 0,
+    "note": null,
     "lima_usd": 0,
     "provincia_usd": 0,
     "lima_reach": 0,
@@ -128,32 +128,60 @@
     "categories": [
       {
         "label": "Admiración / Belleza",
-        "pct": 42
+        "pct": 42,
+        "quotes": [
+          "Que hermosa",
+          "Me encanta el resultado",
+          "Hermosa como siempre",
+          "Te quedó lindo"
+        ]
       },
       {
         "label": "Intención de compra",
-        "pct": 23
+        "pct": 23,
+        "quotes": [
+          "Ahora mismo iré a comprar uno",
+          "Dónde lo puedo comprar?",
+          "Precio por favor",
+          "Voy a hacer la prueba"
+        ]
       },
       {
         "label": "Consulta producto",
-        "pct": 18
+        "pct": 18,
+        "quotes": [
+          "Qué tono tienes?",
+          "Te coge el tono sin decoloración?",
+          "Hay cobres?",
+          "Qué color es?"
+        ]
       },
       {
         "label": "Resultado positivo",
-        "pct": 12
+        "pct": 12,
+        "quotes": [
+          "Quedó espectacular",
+          "Ese brillo hermoso",
+          "Me influenciaste",
+          "Que lindo resultado"
+        ]
       },
       {
         "label": "Disponibilidad",
-        "pct": 5
+        "pct": 5,
+        "quotes": [
+          "Es difícil de encontrar",
+          "Lugar de venta"
+        ]
       }
     ]
   },
   "insights": {
     "community": "IG +1,200 seg (+65%). TK de 6 a 1,416 (+23,500%). Video viral Koleston (123K views) detonó crecimiento TK en abril. Sorteo Día de la Madre aceleró IG con +533 seg en 10 días de mayo.",
-    "reach": "IG acumuló 7,436 visualizaciones en 19 posts. TK: 213K views en 22 videos. Un solo video TK concentró 57% de views. El sorteo Día Madre lideró IG con 3,166 views. El contenido con influencer supera x5 al estático.",
-    "engagement": "TK ER promedio 4.2%. Video viral logró 2% ER con 1,397 likes en 123K views. IG ER promedio 7.5% por comunidad pequeña. Sorteo explotó: 51.6% ER, 134 comentarios, 356 shares.",
+    "reach": "IG acumuló 78.8K visualizaciones (42 piezas: 19 posts + 23 reels). TK: 213K views (22 videos). Reel 'Fit check Soft Color' lideró IG con 1,278 views. El sorteo Día Madre: 3,166 views en post.",
+    "engagement": "1,309 interacciones IG (posts + reels). 2,810 interacciones TK. Sorteo: 51.6% ER con 65 guardados. Reel Soft Color 67: 10.8% ER con 8 guardados. Los guardados son el indicador más valioso de intención de compra.",
     "sentiment": "85% positivo. Dominan admiración por modelos/influencers e intención de compra directa. Barrera detectada: 'difícil de encontrar'. Precio S/30.50 bien recibido.",
-    "investment": "S/500 total (USD 132). S/300 IG + S/200 TK. Sin presupuesto formal. El ROI orgánico fue el motor real: video viral generó 123K views y +1,100 seg TK sin inversión adicional.",
+    "investment": null,
     "competition": "Sin competidores en Metricool (requiere FB). Competencia directa: Garnier Nutrisse, Revlon Colorsilk, Placenta Life, L'Oréal Excellence/Casting."
   },
   "story": {
@@ -162,9 +190,9 @@
       "title": "De 1,840 a 3,040 seguidores. La comunidad Wella nació en IG y se expandió a TikTok",
       "type": "growth",
       "paragraphs": [
-        "Instagram fue la base de la estrategia. En 71 días, Wella Perú pasó de 1,840 a 3,040 seguidores (+65%). El crecimiento fue constante: +53 en marzo (fase fundacional), +414 en abril (contenido de influencers) y +686 en los primeros 10 días de mayo (sorteo Día de la Madre).",
+        "Instagram fue la base de la estrategia. En 71 días, Wella Perú pasó de 1,840 a 3,040 seguidores (+65%). Se publicaron 42 piezas IG (19 posts + 23 reels) que acumularon 78.8K visualizaciones y 1,309 interacciones. Los reels representaron el 60% del contenido pero generaron el 85% del alcance.",
         "El post del sorteo Día de la Madre fue el contenido estrella del periodo: 725 interacciones, 51.6% ER, 134 comentarios y 356 shares. La mecánica cross-platform (seguir en IG + comentar en TK) migró audiencia de TikTok a Instagram exitosamente.",
-        "En paralelo, TikTok creció de 6 a 1,416 seguidores. Un video viral de Koleston (123K views) fue el catalizador. Pero el destino final del tráfico fue Instagram, donde se consolidó la relación con la marca."
+        "Las 6 metas se cumplieron: seguidores IG +40% sobre target, visualizaciones IG +10%, interacciones IG +10%. TK superó en seguidores (+10.2%), views (+10.1%) e interacciones (+9.8%). Los guardados (saves) sumaron 97 en IG, indicando alto interés de compra."
       ],
       "image": null,
       "image_caption": "Evolución de seguidores IG: marzo a mayo 2026"
@@ -176,7 +204,7 @@
       "paragraphs": [
         "Las colaboraciones con influencers fueron el motor de IG. Katherine (@lacasitadejulian) con Koleston tono 73 generó las reacciones más cualitativas: preguntas de precio, puntos de venta e intención de compra directa. Su frase \"el color no nos cambia, nos revela\" resonó con la audiencia.",
         "Katy (@ekaty) demostró la aplicación de Koleston Rubio Avellana en casa. Sus seguidoras preguntaron si el tono se logra sin decoloración, generando conversación educativa alineada con el pilar Tech & Truth de la estrategia.",
-        "El sorteo Día de la Madre (7 mayo) combinó IG + TK: seguir en ambas plataformas + comentar + compartir en Stories. Resultado: 170 likes, 134 comentarios, 356 shares, 65 saves. Es el post con mayor Índice de Valor del periodo (794 por 1K alcance vs promedio de 42)."
+        "El sorteo Día de la Madre (7 mayo) acumuló 725 interacciones: 170 likes, 134 comentarios, 356 shares y 65 guardados. Los 65 saves son la métrica más valiosa: cada guardado es una intención de compra futura. El Índice de Valor fue 794 por 1K alcance vs promedio de 42."
       ],
       "image": null,
       "image_caption": "Post sorteo Día de la Madre — 725 interacciones"
@@ -239,10 +267,10 @@
     }
   },
   "technical_texts": {
-    "resumen": "Periodo 01 marzo — 10 mayo 2026. Primer trimestre de gestión Wella Perú (Koleston + Soft Color). IG: +1,200 seg (+65%). TK: +1,410 seg. 6/6 metas cumplidas (+40% en seguidores IG). Inversión S/500. Video viral TK 123K views. Sorteo Día de la Madre: 725 interacciones en IG.",
+    "resumen": "Periodo 01 marzo — 10 mayo 2026. 64 piezas publicadas (19 posts IG + 23 reels IG + 22 videos TK). IG: +1,200 seg (+65%), 78.8K visualizaciones, 1,309 interacciones. TK: +1,410 seg, 213K views, 2,810 interacciones. 6/6 metas cumplidas.",
     "audiencia": null,
-    "contenido_insight": "TK: video nativo 15-25s, proceso de aplicación real, resultado visible en persona real. IG: sorteos cross-platform y contenido de influencer superan x10 al estático de producto. Formato 'proceso satisfactorio' (ASMR de coloración) es el ganador comprobado.",
-    "contenido_fail": "Contenido estático de producto en IG (carruseles sin influencer): ER bajo (2-4%), alcance <200. Videos TK con formato educativo largo (>40s) no viralizan. Contenido 'hablando a cámara' tiene menor tracción que el formato visual/proceso.",
+    "contenido_insight": "Los reels con persona real + resultado visible lideran IG (10.8% ER promedio top 3). Posts estáticos de producto rinden 2-4% ER. Los guardados (saves) son el indicador de intención de compra más relevante: 65 en sorteo, 8 en reel Soft Color.",
+    "contenido_fail": "Posts estáticos sin persona: ER 2-4%, 0 guardados, <200 alcance. Reels genéricos sin hook fuerte (ej. Match inseparable): 1.1% ER. Videos TK educativos largos (>40s) no viralizan. Contenido que no muestra resultado real no conecta.",
     "contenido_horario": "TK: publicar entre 7-8pm Lima (hora pico ForYou). IG: entre 1-3pm y 7-8pm. Los posts del sorteo publicados a las 2pm tuvieron mayor tracción inicial.",
     "riesgo_fb": null,
     "indice_valor": "Sorteo IG: (65×3 + 356×2 + 134×1.5 + 170×1) / 1,406 × 1000 = 794 por 1K alcance. Promedio del periodo: 42 por 1K alcance. El sorteo superó x19 el promedio.",
@@ -308,11 +336,11 @@
   ],
   "content": {
     "total_pieces": {
-      "total": 41,
-      "ig_reels": 0,
+      "total": 64,
       "ig_posts": 19,
-      "fb_reels": 0,
+      "ig_reels": 23,
       "fb_posts": 0,
+      "fb_reels": 0,
       "tiktok": 22
     },
     "by_channel": {
@@ -327,44 +355,62 @@
             "shares": 356,
             "saves": 65,
             "comments": 134,
+            "likes": 170,
             "er": "51.56%",
             "spend": null,
             "url": "https://www.instagram.com/p/DYC4iyUkXBc/",
-            "note": "Mecánica cross-platform IG+TK. Mayor ER del periodo. 170 likes.",
+            "note": "Mecánica cross-platform IG+TK. Mayor ER del periodo. 65 guardados reflejan intención de compra.",
             "coverImageUrl": null
           },
           {
-            "title": "Todo el poder de Koleston Kit",
-            "platform": "IG Post",
-            "date": "2026-05-04",
-            "reach": 145,
-            "views": 255,
-            "shares": 0,
-            "saves": 0,
-            "comments": 0,
-            "er": "11.03%",
+            "title": "Fit check + hair check — Soft Color 67 Chocolate",
+            "platform": "IG Reel",
+            "date": "2026-04-15",
+            "reach": 764,
+            "views": 1278,
+            "shares": 6,
+            "saves": 8,
+            "comments": 24,
+            "likes": 45,
+            "er": "10.86%",
             "spend": null,
-            "url": "https://www.instagram.com/p/DX5OkKUDQNJ/",
-            "note": "Koleston Kit product shot. 16 likes. Sin pauta.",
+            "url": "https://www.instagram.com/reel/DXKZ9mMkthZ/",
+            "note": "Reel lifestyle nativo. 8 guardados = contenido de referencia. 24 comentarios con admiración.",
             "coverImageUrl": null
           },
           {
-            "title": "Soft Color — Bienestar botánico feriado",
-            "platform": "IG Carousel",
-            "date": "2026-05-01",
-            "reach": 131,
-            "views": 246,
-            "shares": 0,
-            "saves": 0,
+            "title": "Mi agenda no para… y mi color tampoco",
+            "platform": "IG Reel",
+            "date": "2026-04-25",
+            "reach": 726,
+            "views": 1061,
+            "shares": 3,
+            "saves": 3,
             "comments": 0,
-            "er": "9.16%",
+            "likes": 51,
+            "er": "7.85%",
             "spend": null,
-            "url": "https://www.instagram.com/p/DXzinKzjYIF/",
-            "note": "Carousel Soft Color viaje. 12 likes.",
+            "url": "https://www.instagram.com/reel/DXh_qo9EpKe/",
+            "note": "Koleston en contexto real: trabajo, amigas, bienestar. Mejor retención de watch time del periodo.",
             "coverImageUrl": null
           }
         ],
         "worst": [
+          {
+            "title": "Match inseparable Koleston",
+            "platform": "IG Reel",
+            "date": "2026-03-28",
+            "reach": 272,
+            "views": 353,
+            "shares": 0,
+            "saves": 0,
+            "comments": 0,
+            "likes": 3,
+            "er": "1.10%",
+            "spend": null,
+            "note": "Reel genérico sin hook. 0 guardados. Sin CTA claro.",
+            "coverImageUrl": null
+          },
           {
             "title": "Color intenso e hidratación profunda",
             "platform": "IG Carousel",
@@ -374,40 +420,27 @@
             "shares": 0,
             "saves": 0,
             "comments": 0,
+            "likes": 3,
             "er": "2.38%",
             "spend": null,
             "url": "https://www.instagram.com/p/DWRtAhBkSNK/",
-            "note": "Carousel Koleston sin CTA claro. 3 likes.",
+            "note": "Carousel producto sin persona real. 0 guardados. 0 shares.",
             "coverImageUrl": null
           },
           {
-            "title": "Cyber Days 3x2 Koleston y Soft Color",
-            "platform": "IG Carousel",
-            "date": "2026-03-28",
-            "reach": 191,
-            "views": 483,
-            "shares": 0,
-            "saves": 1,
-            "comments": 0,
-            "er": "3.14%",
-            "spend": null,
-            "url": "https://www.instagram.com/p/DWcALoiEWZj/",
-            "note": "Promo Cyber Days. 5 likes + 1 save.",
-            "coverImageUrl": null
-          },
-          {
-            "title": "Koleston — Cubre canas, tu mejor hack",
+            "title": "Koleston — Reinventarme cuando quiera",
             "platform": "IG Post",
-            "date": "2026-03-03",
-            "reach": 82,
-            "views": 140,
+            "date": "2026-03-02",
+            "reach": 81,
+            "views": 132,
             "shares": 0,
             "saves": 0,
             "comments": 0,
-            "er": "3.66%",
+            "likes": 3,
+            "er": "3.70%",
             "spend": null,
-            "url": "https://www.instagram.com/p/DVb5PMQD4sG/",
-            "note": "Producto shot básico. 3 likes. Menor alcance del periodo.",
+            "url": "https://www.instagram.com/p/DVY4Q0fABGM/",
+            "note": "Post estático, menor alcance del periodo. Sin persona, sin CTA.",
             "coverImageUrl": null
           }
         ]
@@ -503,20 +536,20 @@
   },
   "summary_kpis": {
     "objectives": "6/6",
-    "reach": "7.4K views IG",
+    "reach": "78.8K views IG",
     "tk_views": "213K views TK",
     "new_followers": "+2,610",
     "investment": "S/ 500"
   },
   "reach": {
-    "total_impressions": 220105,
-    "estimated_unique_reach": 135828,
-    "frequency": 1.62,
-    "meta_ads_impressions": 7436,
-    "meta_ads_reach": 2990,
+    "total_impressions": 78820,
+    "estimated_unique_reach": 40040,
+    "frequency": 1.97,
+    "meta_ads_impressions": 78820,
+    "meta_ads_reach": 40040,
     "tiktok_ads_impressions": 0,
     "tiktok_organic_views": 213669,
-    "ig_organic_views": 7436,
+    "ig_organic_views": 78820,
     "fb_organic_impressions": 0,
     "influencer_views": 0,
     "meta_ads_clicks": 0
@@ -536,11 +569,11 @@
       "total": 829
     },
     "ig_reels": {
-      "likes": 0,
-      "comments": 0,
-      "saves": 0,
-      "shares": 0,
-      "total": 0
+      "likes": 358,
+      "comments": 49,
+      "saves": 30,
+      "shares": 21,
+      "total": 458
     },
     "fb_total": {
       "reactions": 0,
@@ -555,7 +588,7 @@
       "total_shares": 0,
       "total_comments": 0
     },
-    "total_meaningful_interactions": 3639,
+    "total_meaningful_interactions": 4097,
     "meta_ads_post_engagements": 0
   },
   "efficiency": {
@@ -578,56 +611,28 @@
       "name": "Ariana",
       "username": "@a.rianar",
       "platform": "Modelo / Beauty",
-      "views": 0,
-      "likes": 0,
-      "shares": 0,
-      "comments": 0,
-      "saves": 0,
-      "content_type": "Modelo protagonista en posts Koleston",
-      "date": null,
-      "url": null,
+      "content_type": "Modelo protagonista en posts Koleston. Su presencia generó los comentarios más admirativos del periodo.",
       "coverImageUrl": null
     },
     {
       "name": "Johs",
       "username": "@johs.mr",
       "platform": "Modelo / Beauty",
-      "views": 0,
-      "likes": 0,
-      "shares": 0,
-      "comments": 0,
-      "saves": 0,
-      "content_type": "Modelo en collabs Koleston Borgoña y Soft Color",
-      "date": null,
-      "url": null,
+      "content_type": "Modelo en collabs Koleston Borgoña y Soft Color. Mencionada repetidamente por seguidoras como referente de color.",
       "coverImageUrl": null
     },
     {
       "name": "Katy",
       "username": "@ekaty",
       "platform": "Lifestyle / Beauty",
-      "views": 0,
-      "likes": 0,
-      "shares": 0,
-      "comments": 0,
-      "saves": 0,
-      "content_type": "Tutorial aplicación Koleston Rubio Avellana",
-      "date": null,
-      "url": null,
+      "content_type": "Tutorial aplicación Koleston Rubio Avellana. Generó conversación educativa: tips de aplicación sin decoloración.",
       "coverImageUrl": null
     },
     {
       "name": "Katherine",
       "username": "@lacasitadejulian",
       "platform": "Maternidad / Lifestyle",
-      "views": 0,
-      "likes": 0,
-      "shares": 0,
-      "comments": 0,
-      "saves": 0,
-      "content_type": "Mom influencer, Koleston tono 73. 'El color no nos cambia, nos revela'",
-      "date": null,
-      "url": null,
+      "content_type": "Mom influencer, Koleston tono 73. La más efectiva en intención de compra. 'El color no nos cambia, nos revela.'",
       "coverImageUrl": null
     }
   ],
@@ -751,7 +756,7 @@
     ],
     "sent_categories_labels": [
       "Admiración",
-      "Compra",
+      "Intención compra",
       "Consulta",
       "Resultado",
       "Disponibilidad"
