@@ -2403,10 +2403,33 @@ function populateAllSections() {
   // ── STORY MODE ──
   const storyEl = document.getElementById('mode-story');
   if (storyEl && D.story && D.story.act1 && D.story.act1.number) {
+    // Auto-fallback: si un acto no tiene image asignada, toma una de los top/worst
+    // del content.by_channel. Act 3 (lo que no funcionó) toma de worst, los demás de top.
+    // Solo usa paths locales (no URLs externas que puedan expirar).
+    function pickFallbackActImage(actNum) {
+      const byCh = (D.content && D.content.by_channel) || {};
+      const chOrder = ['ig','instagram','tiktok','tk','fb','facebook','linkedin','youtube'];
+      const allTop = [], allWorst = [];
+      chOrder.forEach(c => {
+        const o = byCh[c];
+        if (!o) return;
+        if (Array.isArray(o.top)) allTop.push(...o.top);
+        if (Array.isArray(o.worst)) allWorst.push(...o.worst);
+      });
+      const pool = (actNum === 3) ? allWorst : allTop;
+      // Roto por actNum para variar qué imagen toma cada acto
+      const candidates = pool.filter(p => p && p.coverImageUrl);
+      if (!candidates.length) return null;
+      const target = candidates[(actNum - 1) % candidates.length];
+      return { image: target.coverImageUrl, image_caption: target.title || '' };
+    }
     let h = '';
     for (let i=1;i<=6;i++) {
       const a = D.story['act'+i]; if (!a) continue;
-      const hasImage = !!(a.image);
+      const fb = (!a.image) ? pickFallbackActImage(i) : null;
+      const effImage = a.image || (fb && fb.image) || '';
+      const effCaption = a.image_caption || (fb && fb.image_caption) || '';
+      const hasImage = !!effImage;
       h += '<div class="act">';
       // If act has an image, use grid layout (text left, image right — alternates via CSS)
       if (hasImage) h += '<div class="act-grid"><div class="act-content">';
@@ -2444,8 +2467,8 @@ function populateAllSections() {
       if (hasImage) {
         h += '</div>'; // close .act-content
         h += '<div class="act-media">';
-        h += '<img src="'+a.image+'" alt="'+(a.image_caption||'')+'" onerror="this.parentElement.style.display=\'none\'">';
-        if (a.image_caption) h += '<div class="act-caption">'+a.image_caption+'</div>';
+        h += '<img src="'+effImage+'" alt="'+effCaption+'" onerror="this.parentElement.style.display=\'none\'">';
+        if (effCaption) h += '<div class="act-caption">'+effCaption+'</div>';
         h += '</div></div>'; // close .act-media + .act-grid
       }
       // Act 3: Retention mini-chart in story
