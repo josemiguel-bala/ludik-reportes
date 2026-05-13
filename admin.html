@@ -90,10 +90,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     <div class="sidebar-logo">LUD<span>i</span>K Admin v2</div>
     <div class="sidebar-section">Marca</div>
     <div style="padding:0 20px 8px"><select class="form-select" id="brand_selector" onchange="selectBrand(this.value)" style="font-size:12px;padding:8px"><option value="">-- Seleccionar marca --</option></select></div>
-    <div style="padding:0 20px 12px"><input class="form-input" type="month" id="period" value="2026-04" onchange="reloadBrandData()" style="font-size:12px;padding:8px"></div>
+    <div style="padding:0 20px 4px"><select class="form-select" id="period_selector" onchange="onPeriodSelect(this.value)" style="font-size:12px;padding:8px"><option value="">-- Periodo --</option></select></div>
+    <div style="padding:0 20px 12px"><input class="form-input" type="month" id="period" value="2026-05" onchange="reloadBrandData()" style="font-size:11px;padding:6px;opacity:.6" title="Periodo manual"></div>
     <div class="sidebar-section">Config</div>
     <button class="sidebar-item active" onclick="showTab('config',this)"><span class="sidebar-dot" style="background:var(--white)"></span> Marca y Periodo</button>
     <button class="sidebar-item" onclick="showTab('portada',this)"><span class="sidebar-dot" style="background:var(--purple)"></span> Portada</button>
+    <button class="sidebar-item" onclick="showTab('summarykpis',this)"><span class="sidebar-dot" style="background:var(--teal)"></span> Summary KPIs (barra)</button>
     <button class="sidebar-item" onclick="showTab('cierre',this)"><span class="sidebar-dot" style="background:var(--purple)"></span> Cierre</button>
     <div class="sidebar-section">Data</div>
     <button class="sidebar-item" onclick="showTab('objectives',this)"><span class="sidebar-dot" style="background:var(--warning)"></span> Objetivos</button>
@@ -107,6 +109,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     <div class="sidebar-section">Narrativa</div>
     <button class="sidebar-item" onclick="showTab('story',this)"><span class="sidebar-dot" style="background:var(--purple)"></span> Historia (5 Actos)</button>
     <button class="sidebar-item" onclick="showTab('insights',this)"><span class="sidebar-dot" style="background:var(--fucsia)"></span> Insights</button>
+    <button class="sidebar-item" onclick="showTab('executive',this)"><span class="sidebar-dot" style="background:#F84CDE"></span> Resumen Ejecutivo</button>
     <button class="sidebar-item" onclick="showTab('techtexts',this)"><span class="sidebar-dot" style="background:var(--gray)"></span> Textos Tecnicos</button>
     <button class="sidebar-item" onclick="showTab('recommendations',this)"><span class="sidebar-dot" style="background:var(--teal)"></span> Recomendaciones</button>
     <div class="sidebar-section">Datos Avanzados</div>
@@ -175,6 +178,17 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         </div>
         <div class="form-group"><label class="form-label">Contact</label><input class="form-input" id="cierre_contact" value="hola@ludik.io &middot; ludik.io"></div>
         <div class="form-group"><label class="form-label">Confidential</label><textarea class="form-textarea" id="cierre_confidential" rows="2">Este reporte es confidencial y fue preparado exclusivamente para uso interno.</textarea></div>
+      </div>
+    </div>
+
+    <!-- TAB: SUMMARY KPIs -->
+    <div class="tab-content" id="tab-summarykpis">
+      <div class="main-title">Summary KPIs (Barra Superior)</div>
+      <div class="main-subtitle">KPIs que aparecen en la barra de resumen del reporte (debajo de portada y cards). Configurables: agrega, elimina o reordena.</div>
+      <div class="card">
+        <div class="card-title">KPIs <button class="btn btn-secondary btn-sm" style="margin-left:auto" onclick="addSummaryKpi()">+ Agregar</button></div>
+        <div id="summary_kpis_list"></div>
+        <div class="form-hint" style="margin-top:12px">Tipos esperados por el reporte: <b>objectives</b> (objetivos cumplidos), <b>reach</b> (alcance), <b>tk_views</b> (views TikTok), <b>new_followers</b> (nuevos seguidores), <b>investment</b> (inversion). Tambien puedes usar tipos custom.</div>
       </div>
     </div>
 
@@ -330,6 +344,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         </div>
         <div class="form-group"><label class="form-label">Net Score</label><input class="form-input" id="sent_net_score" type="number" value="0"></div>
       </div>
+      <div class="card">
+        <div class="card-title">Categorias de Comentarios <button class="btn btn-secondary btn-sm" style="margin-left:auto" onclick="addSentCategory()">+ Agregar</button></div>
+        <div id="sent_categories_list"></div>
+      </div>
     </div>
 
     <!-- TAB: CONTENT BY CHANNEL -->
@@ -423,13 +441,24 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         <div class="form-group"><label class="form-label">Image Caption</label><input class="form-input" id="story_act4_caption"></div>
       </div>
       <div class="card" id="story_act5_card">
-        <div class="card-title">Acto 5 (Plan)</div>
-        <div class="form-group"><label class="form-label">Number</label><input class="form-input" id="story_act5_number" value="Acto 5 &middot; Plan Mayo 2026"></div>
+        <div class="card-title">Acto 5 (Competencia / Narrativa)</div>
+        <div class="form-group"><label class="form-label">Number</label><input class="form-input" id="story_act5_number" value="Acto 5 &middot; La Posicion Competitiva"></div>
         <div class="form-group"><label class="form-label">Title</label><input class="form-input" id="story_act5_title"></div>
-        <div class="form-group"><label class="form-label">Highlight</label><textarea class="form-textarea" id="story_act5_highlight" rows="2"></textarea></div>
+        <div class="form-group"><label class="form-label">Parrafo 1</label><textarea class="form-textarea" id="story_act5_p1" rows="3"></textarea></div>
+        <div class="form-group"><label class="form-label">Parrafo 2</label><textarea class="form-textarea" id="story_act5_p2" rows="3"></textarea></div>
+        <div class="form-group"><label class="form-label">Parrafo 3</label><textarea class="form-textarea" id="story_act5_p3" rows="3"></textarea></div>
+        <div class="form-group"><label class="form-label">Image URL</label><input class="form-input" id="story_act5_image"></div>
+        <div class="form-group"><label class="form-label">Image Caption</label><input class="form-input" id="story_act5_caption"></div>
+        <div class="form-group"><label class="form-label">Highlight (resumen visual)</label><textarea class="form-textarea" id="story_act5_highlight" rows="2"></textarea></div>
+      </div>
+      <div class="card" id="story_act6_card">
+        <div class="card-title">Acto 6 (Plan / Proximos Pasos)</div>
+        <div class="form-group"><label class="form-label">Number</label><input class="form-input" id="story_act6_number" value="Acto 6 &middot; Proximos Pasos"></div>
+        <div class="form-group"><label class="form-label">Title</label><input class="form-input" id="story_act6_title"></div>
+        <div class="form-group"><label class="form-label">Highlight</label><textarea class="form-textarea" id="story_act6_highlight" rows="2"></textarea></div>
         <div class="card" style="background:var(--bg)">
-          <div class="card-title" style="font-size:12px">Items <button class="btn btn-secondary btn-xs" style="margin-left:auto" onclick="addAct5Item()">+ Agregar</button></div>
-          <div id="act5_items_list"></div>
+          <div class="card-title" style="font-size:12px">Items (bets / fixes / system) <button class="btn btn-secondary btn-xs" style="margin-left:auto" onclick="addAct6Item()">+ Agregar</button></div>
+          <div id="act6_items_list"></div>
         </div>
       </div>
     </div>
@@ -444,6 +473,31 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <div class="card"><div class="card-title">Sentiment <span class="char-counter char-ok" id="ins_sentiment_count">0/280</span></div><textarea class="form-textarea" id="ins_sentiment" maxlength="280" oninput="charCount(this,'ins_sentiment_count')"></textarea></div>
       <div class="card"><div class="card-title">Investment <span class="char-counter char-ok" id="ins_investment_count">0/280</span></div><textarea class="form-textarea" id="ins_investment" maxlength="280" oninput="charCount(this,'ins_investment_count')"></textarea></div>
       <div class="card"><div class="card-title">Competition <span class="char-counter char-ok" id="ins_competition_count">0/280</span></div><textarea class="form-textarea" id="ins_competition" maxlength="280" oninput="charCount(this,'ins_competition_count')"></textarea></div>
+    </div>
+
+    <!-- TAB: EXECUTIVE SUMMARY -->
+    <div class="tab-content" id="tab-executive">
+      <div class="main-title">Resumen Ejecutivo</div>
+      <div class="main-subtitle">Bajadas editoriales + conclusiones por canal. Las cards aparecen segun los canales conectados de la marca seleccionada.</div>
+
+      <div class="card">
+        <div class="card-title">Bajadas generales</div>
+        <div class="form-group"><label class="form-label">Sobre influencers - Que SI funciono <span class="char-counter char-ok" id="exec_inf_intro_count">0/400</span></label><textarea class="form-textarea" id="exec_inf_intro" maxlength="400" rows="3" oninput="charCount(this,'exec_inf_intro_count')" placeholder="Las colaboraciones del periodo. El perfil ganador: mujer real de 25 a 40 anos..."></textarea></div>
+        <div class="form-group"><label class="form-label">Sobre influencers - Que NO replicariamos <span class="char-counter char-ok" id="exec_inf_avoid_count">0/400</span></label><textarea class="form-textarea" id="exec_inf_avoid" maxlength="400" rows="3" oninput="charCount(this,'exec_inf_avoid_count')" placeholder="Perfiles que no replicariamos: cuentas con audiencia inflada..."></textarea></div>
+        <div class="form-group"><label class="form-label">Voces de la audiencia (intro) <span class="char-counter char-ok" id="exec_voices_count">0/400</span></label><textarea class="form-textarea" id="exec_voices" maxlength="400" rows="3" oninput="charCount(this,'exec_voices_count')" placeholder="Seleccion curada de comentarios analizados..."></textarea></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Bajadas por canal · TOP / WORST</div>
+        <div class="form-help" style="font-size:11px;color:var(--gray);margin-bottom:10px">Una bajada por cada canal de la marca. ~280 caracteres cada una.</div>
+        <div id="exec_intros_container"><div style="padding:14px;color:var(--gray);font-style:italic;font-size:12px">Selecciona una marca para ver los canales.</div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Conclusiones por canal</div>
+        <div class="form-help" style="font-size:11px;color:var(--gray);margin-bottom:10px">Headline + formula ganadora + mejor hora + data points + proximos pasos por canal.</div>
+        <div id="exec_concl_container"><div style="padding:14px;color:var(--gray);font-style:italic;font-size:12px">Selecciona una marca para ver los canales.</div></div>
+      </div>
     </div>
 
     <!-- TAB: TECHNICAL TEXTS -->
@@ -628,6 +682,32 @@ async function selectBrand(brandId) {
   document.getElementById('brand_id').value = brand.id;
   document.getElementById('metricool_id').value = brand.metricool_id;
   document.getElementById('fx_rate').value = brand.fx_rate;
+  // Pinta el tab Resumen Ejecutivo con los canales de la marca (aunque aún no haya JSON cargado)
+  try { renderExecutiveTab(brandId); } catch(e) { console.warn('renderExecutiveTab error', e); }
+  // Load periods from manifest into selector
+  var periodSel = document.getElementById('period_selector');
+  periodSel.innerHTML = '<option value="">-- Periodo --</option>';
+  try {
+    var mRes = await fetch('data/manifest.json');
+    if (mRes.ok) {
+      var manifest = await mRes.json();
+      if (manifest[brandId] && manifest[brandId].length) {
+        manifest[brandId].forEach(function(p) {
+          var opt = document.createElement('option');
+          opt.value = p;
+          opt.textContent = p;
+          periodSel.appendChild(opt);
+        });
+        var newOpt = document.createElement('option');
+        newOpt.value = '_new';
+        newOpt.textContent = '+ Nuevo periodo...';
+        newOpt.style.color = '#22C55E';
+        periodSel.appendChild(newOpt);
+        periodSel.value = manifest[brandId][0];
+        document.getElementById('period').value = manifest[brandId][0];
+      }
+    }
+  } catch(e) {}
   var period = document.getElementById('period').value;
   var jsonUrl = 'data/' + brandId + '_' + period + '.json';
   try {
@@ -651,9 +731,34 @@ async function selectBrand(brandId) {
   setStatus(brand.name + ' — sin reporte para ' + period, 'var(--gray)');
 }
 
+function onPeriodSelect(val) {
+  if (val === '_new') {
+    document.getElementById('period').focus();
+    return;
+  }
+  if (val) {
+    document.getElementById('period').value = val;
+    reloadBrandData();
+  }
+}
+
 function reloadBrandData() {
   var brandId = document.getElementById('brand_selector').value;
-  if (brandId) selectBrand(brandId);
+  if (brandId) {
+    clearAllFields();
+    var brand = BRANDS.find(function(b){return b.id === brandId});
+    if (brand) {
+      document.getElementById('brand').value = brand.name;
+      document.getElementById('brand_id').value = brand.id;
+      document.getElementById('metricool_id').value = brand.metricool_id;
+      document.getElementById('fx_rate').value = brand.fx_rate;
+    }
+    var period = document.getElementById('period').value;
+    fetch('data/' + brandId + '_' + period + '.json')
+      .then(function(r){if(r.ok) return r.json(); throw new Error()})
+      .then(function(data){loadFromData(data); setStatus('Cargado: ' + brandId + ' (' + period + ')', 'var(--teal)');})
+      .catch(function(){setStatus(brandId + ' — sin reporte para ' + period, 'var(--gray)');});
+  }
 }
 
 function clearAllFields() {
@@ -667,7 +772,7 @@ function clearAllFields() {
     var tb = document.querySelector('#' + id + ' tbody');
     if (tb) tb.innerHTML = '';
   });
-  ['ig_top_list','ig_worst_list','fb_top_list','fb_worst_list','tk_top_list','tk_worst_list','influencers_list','act5_items_list','recs_container'].forEach(function(id) {
+  ['ig_top_list','ig_worst_list','fb_top_list','fb_worst_list','tk_top_list','tk_worst_list','influencers_list','act5_items_list','act6_items_list','recs_container','sent_categories_list','summary_kpis_list'].forEach(function(id) {
     var el = document.getElementById(id);
     if (el) el.innerHTML = '';
   });
@@ -867,22 +972,24 @@ function addInfluencerCard(inf) {
   var container = document.getElementById('influencers_list');
   var div = document.createElement('div');
   div.className = 'inf-card';
+  var thumbStyle = inf.coverImageUrl ? 'background-image:url(' + inf.coverImageUrl + ');background-size:cover;background-position:center;color:transparent;' : '';
   div.innerHTML =
     '<button class="btn btn-danger btn-xs" style="position:absolute;top:8px;right:8px" onclick="this.closest(\'.inf-card\').remove()">X</button>' +
-    '<div class="form-row">' +
-      '<div class="form-group"><label class="form-label">Name</label><input class="form-input inf-name" value="' + esc(inf.name) + '"></div>' +
-      '<div class="form-group"><label class="form-label">Username</label><input class="form-input inf-username" value="' + esc(inf.username) + '"></div>' +
+    '<div style="display:grid;grid-template-columns:80px 1fr;gap:12px">' +
+      '<div class="post-thumb" style="width:80px;height:80px;border-radius:50%;' + thumbStyle + '" onclick="uploadThumb(this)">' + (inf.coverImageUrl ? '' : '👤') + '</div>' +
+      '<div>' +
+        '<div class="form-row">' +
+          '<div class="form-group"><label class="form-label">Nombre</label><input class="form-input inf-name" value="' + esc(inf.name) + '"></div>' +
+          '<div class="form-group"><label class="form-label">Username</label><input class="form-input inf-username" value="' + esc(inf.username) + '"></div>' +
+        '</div>' +
+        '<div class="form-row">' +
+          '<div class="form-group"><label class="form-label">Plataforma / Nicho</label><input class="form-input inf-platform" value="' + esc(inf.platform) + '" placeholder="Lifestyle / Beauty"></div>' +
+          '<div class="form-group"><label class="form-label">URL del Post</label><input class="form-input inf-url" value="' + esc(inf.url) + '" placeholder="https://instagram.com/p/..."></div>' +
+        '</div>' +
+      '</div>' +
     '</div>' +
-    '<div class="form-row-4">' +
-      '<div class="form-group"><label class="form-label">Views</label><input class="form-input inf-views" value="' + (inf.views || '') + '"></div>' +
-      '<div class="form-group"><label class="form-label">Likes</label><input class="form-input inf-likes" value="' + (inf.likes || '') + '"></div>' +
-      '<div class="form-group"><label class="form-label">Shares</label><input class="form-input inf-shares" value="' + (inf.shares || '') + '"></div>' +
-      '<div class="form-group"><label class="form-label">Comments</label><input class="form-input inf-comments" value="' + (inf.comments || '') + '"></div>' +
-    '</div>' +
-    '<div class="form-row">' +
-      '<div class="form-group"><label class="form-label">Content</label><input class="form-input inf-content" value="' + esc(inf.content) + '" placeholder="Descripcion del contenido"></div>' +
-      '<div class="form-group"><label class="form-label">URL</label><input class="form-input inf-url" value="' + esc(inf.url) + '"></div>' +
-    '</div>';
+    '<div class="form-group" style="margin-top:8px"><label class="form-label">Descripcion cualitativa</label><textarea class="form-textarea inf-content" rows="2" placeholder="Que hizo, que genero, por que destaco">' + esc(inf.content_type || inf.content || '') + '</textarea></div>' +
+    '<div class="form-group"><label class="form-label">Cover Image URL</label><input class="form-input inf-cover" value="' + esc(inf.coverImageUrl) + '" placeholder="images/wella/inf_nombre.png" style="font-size:10px"></div>';
   div.style.position = 'relative';
   container.appendChild(div);
 }
@@ -895,12 +1002,80 @@ function collectInfluencers() {
     items.push({
       name: name,
       username: card.querySelector('.inf-username') ? card.querySelector('.inf-username').value : '',
-      views: numVal(card.querySelector('.inf-views') ? card.querySelector('.inf-views').value : ''),
-      likes: numVal(card.querySelector('.inf-likes') ? card.querySelector('.inf-likes').value : ''),
-      shares: numVal(card.querySelector('.inf-shares') ? card.querySelector('.inf-shares').value : ''),
-      comments: numVal(card.querySelector('.inf-comments') ? card.querySelector('.inf-comments').value : ''),
-      content: card.querySelector('.inf-content') ? card.querySelector('.inf-content').value : '',
-      url: card.querySelector('.inf-url') ? card.querySelector('.inf-url').value : ''
+      platform: card.querySelector('.inf-platform') ? card.querySelector('.inf-platform').value : '',
+      content_type: card.querySelector('.inf-content') ? card.querySelector('.inf-content').value : '',
+      url: card.querySelector('.inf-url') ? card.querySelector('.inf-url').value : '',
+      coverImageUrl: card.querySelector('.inf-cover') ? card.querySelector('.inf-cover').value : ''
+    });
+  });
+  return items;
+}
+
+function addSummaryKpi(kpi) {
+  kpi = kpi || {};
+  var container = document.getElementById('summary_kpis_list');
+  var div = document.createElement('div');
+  div.className = 'inf-card';
+  div.style.position = 'relative';
+  var types = ['objectives','reach','tk_views','new_followers','investment','custom'];
+  var typeOpts = types.map(function(t){
+    var selected = (kpi.key === t) ? ' selected' : '';
+    return '<option value="' + t + '"' + selected + '>' + t + '</option>';
+  }).join('');
+  div.innerHTML =
+    '<button class="btn btn-danger btn-xs" style="position:absolute;top:8px;right:8px" onclick="this.closest(\'.inf-card\').remove()">X</button>' +
+    '<div class="form-row-3">' +
+      '<div class="form-group"><label class="form-label">Tipo / Key</label><select class="form-select skpi-key">' + typeOpts + '</select></div>' +
+      '<div class="form-group"><label class="form-label">Valor mostrado</label><input class="form-input skpi-value" value="' + esc(kpi.value) + '" placeholder="+1,200 / 78.8K / 6/6"></div>' +
+      '<div class="form-group"><label class="form-label">Label custom (opcional)</label><input class="form-input skpi-label" value="' + esc(kpi.label) + '" placeholder="Solo si key=custom"></div>' +
+    '</div>';
+  container.appendChild(div);
+}
+
+function collectSummaryKpis() {
+  var obj = {};
+  document.querySelectorAll('#summary_kpis_list .inf-card').forEach(function(card) {
+    var key = card.querySelector('.skpi-key') ? card.querySelector('.skpi-key').value : '';
+    var value = card.querySelector('.skpi-value') ? card.querySelector('.skpi-value').value : '';
+    var label = card.querySelector('.skpi-label') ? card.querySelector('.skpi-label').value : '';
+    if (!key || !value) return;
+    if (key === 'custom' && label) {
+      obj[label.toLowerCase().replace(/\s+/g,'_')] = value;
+    } else {
+      obj[key] = value;
+    }
+  });
+  return obj;
+}
+
+function addSentCategory(cat) {
+  cat = cat || {};
+  var container = document.getElementById('sent_categories_list');
+  var div = document.createElement('div');
+  div.className = 'inf-card';
+  div.style.position = 'relative';
+  div.innerHTML =
+    '<button class="btn btn-danger btn-xs" style="position:absolute;top:8px;right:8px" onclick="this.closest(\'.inf-card\').remove()">X</button>' +
+    '<div class="form-row-3">' +
+      '<div class="form-group"><label class="form-label">Categoria</label><input class="form-input cat-label" value="' + esc(cat.label) + '" placeholder="Admiracion / Belleza"></div>' +
+      '<div class="form-group"><label class="form-label">Porcentaje %</label><input class="form-input cat-pct" type="number" value="' + (cat.pct || '') + '"></div>' +
+      '<div class="form-group"><label class="form-label">Quotes (separar con |)</label><input class="form-input cat-quotes" value="' + esc((cat.quotes || []).join(' | ')) + '" placeholder="Frase 1 | Frase 2"></div>' +
+    '</div>' +
+    '<div class="form-group"><label class="form-label">Descripcion</label><textarea class="form-textarea cat-desc" rows="2" placeholder="Que tipo de comentarios incluye y por que importa">' + esc(cat.description) + '</textarea></div>';
+  container.appendChild(div);
+}
+
+function collectSentCategories() {
+  var items = [];
+  document.querySelectorAll('#sent_categories_list .inf-card').forEach(function(card) {
+    var label = card.querySelector('.cat-label') ? card.querySelector('.cat-label').value : '';
+    if (!label) return;
+    var quotesStr = card.querySelector('.cat-quotes') ? card.querySelector('.cat-quotes').value : '';
+    items.push({
+      label: label,
+      pct: numVal(card.querySelector('.cat-pct') ? card.querySelector('.cat-pct').value : ''),
+      description: card.querySelector('.cat-desc') ? card.querySelector('.cat-desc').value : '',
+      quotes: quotesStr ? quotesStr.split('|').map(function(q){return q.trim()}).filter(Boolean) : []
     });
   });
   return items;
@@ -929,6 +1104,199 @@ function collectAct5Items() {
     if (text) items.push({ type: type, text: text });
   });
   return items;
+}
+
+function addAct6Item(item) {
+  item = item || {};
+  var container = document.getElementById('act6_items_list');
+  var div = document.createElement('div');
+  div.style.cssText = 'display:grid;grid-template-columns:100px 1fr 30px;gap:8px;margin-bottom:6px;align-items:center';
+  var typeOpts = ['bet','fix','system'].map(function(t){
+    return '<option value="' + t + '"' + (item.type === t ? ' selected' : '') + '>' + t + '</option>';
+  }).join('');
+  div.innerHTML =
+    '<select class="form-select act6-type" style="padding:6px;font-size:11px">' + typeOpts + '</select>' +
+    '<input class="form-input act6-text" value="' + esc(item.text) + '" placeholder="Texto del item" style="padding:6px;font-size:11px">' +
+    '<button class="btn btn-danger btn-xs" onclick="this.parentElement.remove()">X</button>';
+  container.appendChild(div);
+}
+
+function collectAct6Items() {
+  var items = [];
+  document.querySelectorAll('#act6_items_list > div').forEach(function(div) {
+    var type = div.querySelector('.act6-type') ? div.querySelector('.act6-type').value : 'bet';
+    var text = div.querySelector('.act6-text') ? div.querySelector('.act6-text').value : '';
+    if (text) items.push({ type: type, text: text });
+  });
+  return items;
+}
+
+// ═══════════════════════════════════════════════
+//  EXECUTIVE SUMMARY — registry, render dinámico, collect, load
+// ═══════════════════════════════════════════════
+var EXEC_CHANNEL_REGISTRY = {
+  instagram: { name: 'Instagram', icon: '📸', color: '#F84CDE', legacyKey: 'ig' },
+  facebook:  { name: 'Facebook',  icon: '👍', color: '#1877F2', legacyKey: 'fb' },
+  tiktok:    { name: 'TikTok',    icon: '🎵', color: '#20ECC8', legacyKey: 'tk' },
+  linkedin:  { name: 'LinkedIn',  icon: '💼', color: '#0A66C2', legacyKey: 'linkedin' },
+  youtube:   { name: 'YouTube',   icon: '▶️', color: '#FF0000', legacyKey: 'youtube' }
+};
+
+function getActiveChannelsForBrand(brandId) {
+  if (!brandId || !BRANDS) return [];
+  var b = BRANDS.find(function(x){return x.id === brandId});
+  if (b && Array.isArray(b.channels) && b.channels.length) {
+    return b.channels.map(function(c){return c.toLowerCase()}).filter(function(c){return EXEC_CHANNEL_REGISTRY[c]});
+  }
+  return [];
+}
+
+function renderExecutiveTab(brandId) {
+  var channels = getActiveChannelsForBrand(brandId);
+  var introsEl = document.getElementById('exec_intros_container');
+  var conclEl = document.getElementById('exec_concl_container');
+  if (!introsEl || !conclEl) return;
+
+  if (!channels.length) {
+    var emptyMsg = '<div style="padding:14px;color:var(--gray);font-style:italic;font-size:12px">Selecciona una marca para ver los canales.</div>';
+    introsEl.innerHTML = emptyMsg;
+    conclEl.innerHTML = emptyMsg;
+    return;
+  }
+
+  // Render intros (top + worst por canal)
+  var introsHtml = '';
+  channels.forEach(function(ch) {
+    var cfg = EXEC_CHANNEL_REGISTRY[ch];
+    introsHtml += '<div style="margin-bottom:14px;padding:14px;background:rgba(255,255,255,.02);border-left:3px solid ' + cfg.color + ';border-radius:8px">';
+    introsHtml += '<div style="font-size:13px;font-weight:800;color:' + cfg.color + ';margin-bottom:10px;text-transform:uppercase;letter-spacing:.1em">' + cfg.icon + ' ' + cfg.name + '</div>';
+    introsHtml += '<div class="form-group"><label class="form-label" style="font-size:10px">Bajada TOP <span class="char-counter char-ok" id="exec_intro_' + ch + '_top_count">0/400</span></label>';
+    introsHtml += '<textarea class="form-textarea" id="exec_intro_' + ch + '_top" data-exec-channel="' + ch + '" data-exec-field="top" maxlength="400" rows="2" oninput="charCount(this,\'exec_intro_' + ch + '_top_count\')" placeholder="Los contenidos top de ' + cfg.name + ' del periodo..."></textarea></div>';
+    introsHtml += '<div class="form-group"><label class="form-label" style="font-size:10px">Bajada WORST <span class="char-counter char-ok" id="exec_intro_' + ch + '_worst_count">0/400</span></label>';
+    introsHtml += '<textarea class="form-textarea" id="exec_intro_' + ch + '_worst" data-exec-channel="' + ch + '" data-exec-field="worst" maxlength="400" rows="2" oninput="charCount(this,\'exec_intro_' + ch + '_worst_count\')" placeholder="Los contenidos con menor rendimiento en ' + cfg.name + '..."></textarea></div>';
+    introsHtml += '</div>';
+  });
+  introsEl.innerHTML = introsHtml;
+
+  // Render conclusiones (card grande por canal)
+  var conclHtml = '';
+  channels.forEach(function(ch) {
+    var cfg = EXEC_CHANNEL_REGISTRY[ch];
+    conclHtml += '<div style="margin-bottom:18px;padding:16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-left:4px solid ' + cfg.color + ';border-radius:10px" data-exec-concl-channel="' + ch + '">';
+    conclHtml += '<div style="font-size:15px;font-weight:800;color:' + cfg.color + ';margin-bottom:14px;text-transform:uppercase;letter-spacing:.1em">' + cfg.icon + ' ' + cfg.name + '</div>';
+
+    conclHtml += '<div class="form-group"><label class="form-label" style="font-size:10px">Headline</label><input class="form-input" id="exec_concl_' + ch + '_headline" placeholder="+1,200 seguidores · 78.8K views · 51.6% ER pieza estrella"></div>';
+    conclHtml += '<div class="form-group"><label class="form-label" style="font-size:10px">Formula ganadora</label><textarea class="form-textarea" id="exec_concl_' + ch + '_formula" rows="3" placeholder="Que combinacion de elementos genera mejor performance"></textarea></div>';
+    conclHtml += '<div class="form-group"><label class="form-label" style="font-size:10px">Mejor hora</label><input class="form-input" id="exec_concl_' + ch + '_best_time" placeholder="1pm-3pm y 7pm-8pm hora Lima"></div>';
+
+    conclHtml += '<div class="card-title" style="margin-top:14px;font-size:11px">Data points (3)</div>';
+    for (var i = 1; i <= 3; i++) {
+      conclHtml += '<div class="form-row"><div class="form-group"><label class="form-label" style="font-size:9px">Label ' + i + '</label><input class="form-input" id="exec_concl_' + ch + '_dp' + i + '_label" placeholder="ER promedio top 3"></div>';
+      conclHtml += '<div class="form-group"><label class="form-label" style="font-size:9px">Value ' + i + '</label><input class="form-input" id="exec_concl_' + ch + '_dp' + i + '_value" placeholder="10.8%"></div></div>';
+    }
+
+    conclHtml += '<div class="card-title" style="margin-top:14px;font-size:11px">Proximos pasos (3)</div>';
+    for (var j = 1; j <= 3; j++) {
+      conclHtml += '<div class="form-group"><label class="form-label" style="font-size:9px">Paso ' + j + '</label><input class="form-input" id="exec_concl_' + ch + '_step' + j + '"></div>';
+    }
+    conclHtml += '</div>';
+  });
+  conclEl.innerHTML = conclHtml;
+}
+
+function collectExecutive(brandId) {
+  var channels = getActiveChannelsForBrand(brandId);
+  var exec = {
+    influencers_intro: document.getElementById('exec_inf_intro') ? document.getElementById('exec_inf_intro').value.trim() : '',
+    influencers_avoid: document.getElementById('exec_inf_avoid') ? document.getElementById('exec_inf_avoid').value.trim() : '',
+    voices_intro: document.getElementById('exec_voices') ? document.getElementById('exec_voices').value.trim() : '',
+    intros: {},
+    conclusiones: {}
+  };
+  channels.forEach(function(ch) {
+    var topEl = document.getElementById('exec_intro_' + ch + '_top');
+    var worstEl = document.getElementById('exec_intro_' + ch + '_worst');
+    var topVal = topEl ? topEl.value.trim() : '';
+    var worstVal = worstEl ? worstEl.value.trim() : '';
+    if (topVal || worstVal) exec.intros[ch] = { top: topVal, worst: worstVal };
+
+    var headline = (document.getElementById('exec_concl_' + ch + '_headline') || {}).value || '';
+    var formula = (document.getElementById('exec_concl_' + ch + '_formula') || {}).value || '';
+    var bestTime = (document.getElementById('exec_concl_' + ch + '_best_time') || {}).value || '';
+    var dps = [];
+    for (var i = 1; i <= 3; i++) {
+      var l = (document.getElementById('exec_concl_' + ch + '_dp' + i + '_label') || {}).value || '';
+      var v = (document.getElementById('exec_concl_' + ch + '_dp' + i + '_value') || {}).value || '';
+      if (l.trim() || v.trim()) dps.push({ label: l.trim(), value: v.trim() });
+    }
+    var steps = [];
+    for (var j = 1; j <= 3; j++) {
+      var s = (document.getElementById('exec_concl_' + ch + '_step' + j) || {}).value || '';
+      if (s.trim()) steps.push(s.trim());
+    }
+    var hasContent = headline.trim() || formula.trim() || bestTime.trim() || dps.length || steps.length;
+    if (hasContent) {
+      exec.conclusiones[ch] = {
+        headline: headline.trim(),
+        formula: formula.trim(),
+        best_time: bestTime.trim(),
+        data_points: dps,
+        next_steps: steps
+      };
+    }
+  });
+  // Strip empties
+  if (Object.keys(exec.intros).length === 0) delete exec.intros;
+  if (Object.keys(exec.conclusiones).length === 0) delete exec.conclusiones;
+  return exec;
+}
+
+function loadExecutive(data) {
+  var exec = (data && data.executive) || {};
+  var brandId = document.getElementById('brand_id').value || document.getElementById('brand_selector').value;
+  if (!brandId) return;
+  // Asegura que el tab esté pintado para los canales actuales
+  renderExecutiveTab(brandId);
+
+  // Generales (con fallback al schema legacy)
+  var infIntroEl = document.getElementById('exec_inf_intro');
+  var infAvoidEl = document.getElementById('exec_inf_avoid');
+  var voicesEl = document.getElementById('exec_voices');
+  if (infIntroEl) infIntroEl.value = exec.influencers_intro || exec.intro_influencers || '';
+  if (infAvoidEl) infAvoidEl.value = exec.influencers_avoid || exec.intro_influencers_avoid || '';
+  if (voicesEl) voicesEl.value = exec.voices_intro || exec.intro_voices || '';
+  ['exec_inf_intro_count','exec_inf_avoid_count','exec_voices_count'].forEach(function(id){
+    var counterEl = document.getElementById(id);
+    var inputEl = document.getElementById(id.replace('_count',''));
+    if (counterEl && inputEl) charCount(inputEl, id);
+  });
+
+  var channels = getActiveChannelsForBrand(brandId);
+  channels.forEach(function(ch) {
+    var cfg = EXEC_CHANNEL_REGISTRY[ch];
+    var introsNew = (exec.intros && exec.intros[ch]) || {};
+    var topVal = introsNew.top || exec['intro_' + cfg.legacyKey + '_top'] || '';
+    var worstVal = introsNew.worst || exec['intro_' + cfg.legacyKey + '_worst'] || '';
+    var topEl = document.getElementById('exec_intro_' + ch + '_top');
+    var worstEl = document.getElementById('exec_intro_' + ch + '_worst');
+    if (topEl) { topEl.value = topVal; charCount(topEl, 'exec_intro_' + ch + '_top_count'); }
+    if (worstEl) { worstEl.value = worstVal; charCount(worstEl, 'exec_intro_' + ch + '_worst_count'); }
+
+    var concl = (exec.conclusiones && exec.conclusiones[ch]) || exec['conclusiones_' + cfg.legacyKey] || {};
+    var setIf = function(id, val) { var el = document.getElementById(id); if (el) el.value = val || ''; };
+    setIf('exec_concl_' + ch + '_headline', concl.headline);
+    setIf('exec_concl_' + ch + '_formula', concl.formula);
+    setIf('exec_concl_' + ch + '_best_time', concl.best_time);
+    var dps = concl.data_points || [];
+    for (var i = 0; i < 3; i++) {
+      setIf('exec_concl_' + ch + '_dp' + (i+1) + '_label', dps[i] && dps[i].label);
+      setIf('exec_concl_' + ch + '_dp' + (i+1) + '_value', dps[i] && dps[i].value);
+    }
+    var steps = concl.next_steps || [];
+    for (var k = 0; k < 3; k++) {
+      setIf('exec_concl_' + ch + '_step' + (k+1), steps[k]);
+    }
+  });
 }
 
 function collectData() {
@@ -996,7 +1364,8 @@ function collectData() {
   var tkEnd = parseInt(document.getElementById('community_tk_end').value) || 0;
   var totalNew = parseInt(document.getElementById('community_total_new').value) || ((fbEnd - fbStart) + (igEnd - igStart) + (tkEnd - tkStart));
   var story = {};
-  for (var i = 1; i <= 4; i++) {
+  // Acts 1-5: narrative with paragraphs (act 5 is competition)
+  for (var i = 1; i <= 5; i++) {
     story['act' + i] = {
       number: document.getElementById('story_act' + i + '_number') ? document.getElementById('story_act' + i + '_number').value : '',
       title: document.getElementById('story_act' + i + '_title') ? document.getElementById('story_act' + i + '_title').value : '',
@@ -1009,11 +1378,15 @@ function collectData() {
       image_caption: document.getElementById('story_act' + i + '_caption') ? document.getElementById('story_act' + i + '_caption').value : ''
     };
   }
-  story.act5 = {
-    number: document.getElementById('story_act5_number') ? document.getElementById('story_act5_number').value : '',
-    title: document.getElementById('story_act5_title') ? document.getElementById('story_act5_title').value : '',
-    items: collectAct5Items(),
-    highlight: document.getElementById('story_act5_highlight') ? document.getElementById('story_act5_highlight').value : ''
+  // Act 5 also supports highlight
+  var act5Highlight = document.getElementById('story_act5_highlight');
+  if (act5Highlight) story.act5.highlight = act5Highlight.value;
+  // Act 6: plan with items
+  story.act6 = {
+    number: document.getElementById('story_act6_number') ? document.getElementById('story_act6_number').value : '',
+    title: document.getElementById('story_act6_title') ? document.getElementById('story_act6_title').value : '',
+    items: collectAct6Items(),
+    highlight: document.getElementById('story_act6_highlight') ? document.getElementById('story_act6_highlight').value : ''
   };
   var charts = {
     months6: csvArr('chart_months6'),
@@ -1030,7 +1403,7 @@ function collectData() {
     bhs_benchmark: numCsvArr('chart_bhs_benchmark'),
     bhs_history: numCsvArr('chart_bhs_history')
   };
-  return {
+  var returnObj = {
     brand: brandVal,
     period: period,
     fx_rate: fxRate,
@@ -1164,13 +1537,30 @@ function collectData() {
           top: collectPostsFromContainer('tk_top_list'),
           worst: collectPostsFromContainer('tk_worst_list')
         }
-      },
-      top_influencers: collectInfluencers()
+      }
     },
     story: story,
-    charts: charts,
-    competitors_ig: competitors_ig
+    charts: charts
   };
+  // Only include arrays/objects if populated — empty arrays would wipe existing data via deepMerge
+  var infCollected = collectInfluencers();
+  if (infCollected.length > 0) returnObj.influencers_ig = infCollected;
+  if (competitors_ig.length > 0) returnObj.competitors_ig = competitors_ig;
+  var sentCats = collectSentCategories();
+  if (sentCats.length > 0) returnObj.sentiment.categories = sentCats;
+  var skpis = collectSummaryKpis();
+  if (Object.keys(skpis).length > 0) returnObj.summary_kpis = skpis;
+  // Executive summary (intros + conclusiones por canal)
+  var execObj = collectExecutive(brandIdVal);
+  var hasExec = execObj.influencers_intro || execObj.influencers_avoid || execObj.voices_intro || execObj.intros || execObj.conclusiones;
+  if (hasExec) returnObj.executive = execObj;
+  // Strip empty acts from story so they don't wipe existing acts
+  Object.keys(returnObj.story).forEach(function(k) {
+    var act = returnObj.story[k];
+    var hasContent = act.title || act.number || (act.paragraphs && act.paragraphs.length > 0) || (act.items && act.items.length > 0) || act.highlight;
+    if (!hasContent) delete returnObj.story[k];
+  });
+  return returnObj;
 }
 
 function loadFromData(data) {
@@ -1180,6 +1570,8 @@ function loadFromData(data) {
   setVal('period', data.period);
   setVal('fx_rate', data.fx_rate);
   setVal('metricool_id', data.metricool_id);
+  // Executive summary: render tab (dinámico por canal) + cargar valores
+  try { loadExecutive(data); } catch(e) { console.warn('loadExecutive error', e); }
   if (data.portada) {
     setVal('portada_tag', data.portada.tag);
     setVal('portada_footer', data.portada.footer);
@@ -1312,8 +1704,37 @@ function loadFromData(data) {
       data.content.top_influencers.forEach(function(inf){addInfluencerCard(inf)});
     }
   }
+  // Load influencers_ig (new format) — overrides content.top_influencers if present
+  if (data.influencers_ig && data.influencers_ig.length) {
+    document.getElementById('influencers_list').innerHTML = '';
+    data.influencers_ig.forEach(function(inf){addInfluencerCard(inf)});
+  }
+  // Load sentiment categories
+  if (data.sentiment && data.sentiment.categories && data.sentiment.categories.length) {
+    document.getElementById('sent_categories_list').innerHTML = '';
+    data.sentiment.categories.forEach(function(cat){addSentCategory(cat)});
+  }
+  // Load summary KPIs (object → list)
+  if (data.summary_kpis) {
+    var list = document.getElementById('summary_kpis_list');
+    if (list) {
+      list.innerHTML = '';
+      var knownKeys = ['objectives','reach','tk_views','new_followers','investment'];
+      Object.keys(data.summary_kpis).forEach(function(key) {
+        var val = data.summary_kpis[key];
+        if (val === null || val === undefined || val === '–' || val === '') return;
+        var isKnown = knownKeys.indexOf(key) !== -1;
+        addSummaryKpi({
+          key: isKnown ? key : 'custom',
+          value: val,
+          label: isKnown ? '' : key
+        });
+      });
+    }
+  }
   if (data.story) {
-    for (var i = 1; i <= 4; i++) {
+    // Acts 1-5: narrative with paragraphs
+    for (var i = 1; i <= 5; i++) {
       var act = data.story['act' + i];
       if (!act) continue;
       setVal('story_act' + i + '_number', act.number);
@@ -1325,15 +1746,21 @@ function loadFromData(data) {
       }
       setVal('story_act' + i + '_image', act.image);
       setVal('story_act' + i + '_caption', act.image_caption);
+      if (i === 5 && act.highlight) setVal('story_act5_highlight', act.highlight);
+      // Legacy: if act5 came as items (old plan format), migrate to act6
+      if (i === 5 && act.items && act.items.length && !data.story.act6) {
+        data.story.act6 = act;
+      }
     }
-    if (data.story.act5) {
-      var a5 = data.story.act5;
-      setVal('story_act5_number', a5.number);
-      setVal('story_act5_title', a5.title);
-      setVal('story_act5_highlight', a5.highlight);
-      if (a5.items && a5.items.length) {
-        document.getElementById('act5_items_list').innerHTML = '';
-        a5.items.forEach(function(item){addAct5Item(item)});
+    // Act 6: plan with items
+    if (data.story.act6) {
+      var a6 = data.story.act6;
+      setVal('story_act6_number', a6.number);
+      setVal('story_act6_title', a6.title);
+      setVal('story_act6_highlight', a6.highlight);
+      if (a6.items && a6.items.length) {
+        document.getElementById('act6_items_list').innerHTML = '';
+        a6.items.forEach(function(item){addAct6Item(item)});
       }
     }
   }

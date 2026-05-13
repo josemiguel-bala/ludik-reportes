@@ -222,30 +222,51 @@
     }
   },
   "executive": {
-    "intro_ig_top": "Los posts top del periodo comparten dos patrones: cultural hook (Color Touch + Devil Wears Prada 2) o formato educativo paso-a-paso (Rutina Ultimate Smooth). Ambos superan el 5% de ER y alcanzan reach por encima de 1,700.",
-    "intro_tk_top": null,
-    "intro_ig_worst": "Los formatos a descartar: posts sin caption, publicaciones canibalizadas (3 en 1 minuto), reels sin descripción ni hashtags. La pieza con peor reach/ER del periodo combinó las tres fallas.",
-    "intro_tk_worst": null,
-    "intro_influencers": null,
-    "intro_influencers_avoid": null,
-    "intro_voices": "No se subieron comentarios IG/FB al admin para este periodo. El análisis de sentimiento queda pendiente para el próximo reporte. Recomendado: exportar comentarios de los 11 posts feed y de los 5 reels del periodo.",
-    "conclusiones_ig": {
-      "headline": "16 piezas · 21.5K reach · 4.76% ER feed (sobre benchmark beauty)",
-      "formula": "Cultural hook + producto Wella + copy corto. Alternativa: formato educativo paso-a-paso con resultado claro. Ambos formatos superan el 5% de ER. Los posts sin caption y publicados en bloque rinden por debajo del 1% del alcance esperado.",
-      "best_time": "13:00-19:00 hora Lima (hipótesis a validar próximo mes)",
-      "data_points": [
-        { "label": "Post top", "value": "151 int · 5.10% ER" },
-        { "label": "ER más alto", "value": "6.41% (Rutina Ultimate Smooth)" },
-        { "label": "Reach total IG", "value": "21,489" }
-      ],
-      "next_steps": [
-        "Replicar la fórmula Color Touch + cultural hook 1x al mes",
-        "Subir volumen reels de 5 a 10 por mes",
-        "Espaciar publicaciones mínimo 24h",
-        "Introducir preguntas cerradas en captions"
-      ]
+    "influencers_intro": null,
+    "influencers_avoid": null,
+    "voices_intro": "No se subieron comentarios IG/FB al admin para este periodo. El análisis de sentimiento queda pendiente para el próximo reporte. Recomendado: exportar comentarios de los 11 posts feed y de los 5 reels del periodo.",
+    "intros": {
+      "instagram": {
+        "top": "Los posts top del periodo comparten dos patrones: cultural hook (Color Touch + Devil Wears Prada 2) o formato educativo paso-a-paso (Rutina Ultimate Smooth). Ambos superan el 5% de ER y alcanzan reach por encima de 1,700.",
+        "worst": "Los formatos a descartar: posts sin caption, publicaciones canibalizadas (3 en 1 minuto), reels sin descripción ni hashtags. La pieza con peor reach/ER del periodo combinó las tres fallas."
+      },
+      "facebook": {
+        "top": "Facebook actúa como mirror de Instagram. Las piezas que mejor rinden en FB son las que ya funcionaron en IG y se replicaron al canal. El pico de impresiones del 27-30 abril (15,929 imp en 4 días) coincidió con la campaña Color Touch.",
+        "worst": "Sin producción específica para Facebook, no hay piezas dedicadas que evaluar como worst. El riesgo principal es la baja interacción de la audiencia FB (1.7% reacción/impresión)."
+      }
     },
-    "conclusiones_tk": null
+    "conclusiones": {
+      "instagram": {
+        "headline": "16 piezas · 21.5K reach · 4.76% ER feed (sobre benchmark beauty)",
+        "formula": "Cultural hook + producto Wella + copy corto. Alternativa: formato educativo paso-a-paso con resultado claro. Ambos formatos superan el 5% de ER. Los posts sin caption y publicados en bloque rinden por debajo del 1% del alcance esperado.",
+        "best_time": "13:00-19:00 hora Lima (hipótesis a validar próximo mes)",
+        "data_points": [
+          { "label": "Post top", "value": "151 int · 5.10% ER" },
+          { "label": "ER más alto", "value": "6.41% Rutina Ultimate Smooth" },
+          { "label": "Reach total IG", "value": "21,489" }
+        ],
+        "next_steps": [
+          "Replicar la fórmula Color Touch + cultural hook 1x al mes",
+          "Subir volumen reels de 5 a 10 por mes",
+          "Espaciar publicaciones mínimo 24h"
+        ]
+      },
+      "facebook": {
+        "headline": "27.7K impresiones · 475 reacciones · 1.7% reacción/impresión",
+        "formula": "Replicar en FB las piezas IG que ya funcionaron. No producir contenido específico para FB. La audiencia FB es pasiva: ve, pero no actúa.",
+        "best_time": "No hay patrón claro de horario óptimo en FB. Sugerencia: replicar el horario IG y medir 30 días.",
+        "data_points": [
+          { "label": "Impresiones totales", "value": "27,683" },
+          { "label": "Pico 27-30 abr", "value": "15,929 (57% del total)" },
+          { "label": "Reacciones", "value": "475 · 1.7% rate" }
+        ],
+        "next_steps": [
+          "Mantener FB como mirror automático de IG",
+          "No invertir esfuerzo creativo específico para FB",
+          "Reasignar tiempo a más reels IG"
+        ]
+      }
+    }
   },
   "recommendations": [
     {

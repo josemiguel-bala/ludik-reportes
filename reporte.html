@@ -323,6 +323,184 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;color-adjust:exact !important}
   @page{size:A4 landscape;margin:10mm 14mm}
 
+  /* EXECUTIVE MODE: each section becomes one slide/page */
+  @page{size:A4 landscape;margin:8mm 10mm}
+  #mode-executive > section{
+    page-break-after:always !important;
+    break-after:page !important;
+    page-break-inside:avoid !important;
+    break-inside:avoid !important;
+    min-height:194mm !important;
+    max-height:194mm !important;
+    padding:18px 24px !important;
+    margin:0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    box-sizing:border-box !important;
+    overflow:hidden !important;
+    background:#0D0D1A !important;
+  }
+  #mode-executive > section:last-child{
+    page-break-after:auto !important;
+    break-after:auto !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+  }
+  /* Hero with gradient bg fills the page */
+  #mode-executive > section:first-child{
+    background:linear-gradient(135deg,#1A0040 0%,#2D0080 50%,#4B00FF 100%) !important;
+    color:#FFF !important;
+    justify-content:center !important;
+  }
+  /* Hero KPI grid: 6 columns in print to fit all KPIs */
+  #mode-executive > section:first-child > div[style*="grid-template-columns"]{
+    grid-template-columns:repeat(6,1fr) !important;
+    gap:8px !important;
+    max-width:100% !important;
+    margin-top:24px !important;
+  }
+  #mode-executive > section:first-child > div[style*="grid-template-columns"] > div{
+    padding:12px !important;
+  }
+  /* Hero KPI value size in print */
+  #mode-executive > section:first-child > div[style*="grid-template-columns"] > div > div:first-child{
+    font-size:28px !important;
+  }
+  /* Hero brand for print */
+  #mode-executive > section:first-child > div[style*="font-size:96px"]{
+    font-size:72px !important;line-height:1 !important;
+  }
+  #mode-executive > section:first-child > div[style*="font-size:26px"]{
+    font-size:20px !important;
+  }
+  /* Section titles: scale for print */
+  #mode-executive section > div[style*="font-size:36px"]{
+    font-size:26px !important;
+  }
+  /* Section intros: scale for print */
+  #mode-executive section > div[style*="font-size:18px"]{
+    font-size:13px !important;line-height:1.45 !important;margin-bottom:14px !important;
+  }
+  /* All grids: cards keep together */
+  #mode-executive section > div[style*="grid"]{
+    page-break-inside:avoid !important;
+    break-inside:avoid !important;
+  }
+  /* Force dark theme + body background */
+  body:has(#mode-executive.active){background:#0D0D1A !important;margin:0 !important}
+  #mode-executive.active{background:#0D0D1A !important;color:#FFF !important}
+  /* Hide all non-executive content when printing executive */
+  body:has(#mode-executive.active) #sec-portada,
+  body:has(#mode-executive.active) section.cierre,
+  body:has(#mode-executive.active) #mode-story,
+  body:has(#mode-executive.active) #mode-tech,
+  body:has(#mode-executive.active) .fixed-header,
+  body:has(#mode-executive.active) .side-nav,
+  body:has(#mode-executive.active) .annex-switch,
+  body:has(#mode-executive.active) .dl-buttons{display:none !important}
+
+  /* PRINT SIZE OVERRIDES: scale down content sizes to fit one slide per page */
+  /* Cards in content sections */
+  #mode-executive section [style*="font-size:22px;font-weight:700;color:var(--white);line-height:1.3"]{
+    font-size:14px !important;line-height:1.3 !important;
+  }
+  #mode-executive section [style*="font-size:15px;color:#DDDDEE;line-height:1.55"]{
+    font-size:11px !important;line-height:1.45 !important;
+  }
+  #mode-executive section [style*="font-size:15px;color:var(--gray)"]{
+    font-size:11px !important;
+  }
+  #mode-executive section [style*="font-size:17px"]{
+    font-size:13px !important;
+  }
+  /* Content card images */
+  #mode-executive section [style*="height:220px"]{
+    height:140px !important;
+  }
+  /* Influencer cards */
+  #mode-executive section [style*="height:180px"]{
+    height:110px !important;
+  }
+  #mode-executive section [style*="font-size:19px;font-weight:700;color:var(--white)"]{
+    font-size:14px !important;
+  }
+  #mode-executive section [style*="font-size:14px;color:#DDDDEE;line-height:1.55;margin-top:12px"]{
+    font-size:10px !important;line-height:1.4 !important;
+  }
+  #mode-executive section [style*="font-size:20px;font-weight:800;color:var(--success)"],
+  #mode-executive section [style*="font-size:20px;font-weight:800;color:var(--danger)"]{
+    font-size:14px !important;
+  }
+  /* Conclusiones boxes */
+  #mode-executive section [style*="font-size:22px;font-weight:800;color:var(--white);line-height:1.4"]{
+    font-size:14px !important;line-height:1.3 !important;
+  }
+  #mode-executive section [style*="font-size:22px;font-weight:800;color:var(--fucsia)"],
+  #mode-executive section [style*="font-size:22px;font-weight:800;color:var(--teal)"]{
+    font-size:15px !important;
+  }
+  #mode-executive section [style*="font-size:16px;color:#DDDDEE;line-height:1.6"]{
+    font-size:11px !important;line-height:1.45 !important;
+  }
+  #mode-executive section [style*="font-size:15px;color:#DDDDEE;line-height:1.5"]{
+    font-size:11px !important;line-height:1.45 !important;
+  }
+  /* Voces cards */
+  #mode-executive section [style*="font-size:18px;font-weight:800;color:var(--white)"]{
+    font-size:13px !important;
+  }
+  #mode-executive section [style*="font-size:32px;font-weight:900"]{
+    font-size:22px !important;
+  }
+  #mode-executive section [style*="font-size:14px;color:var(--gray);line-height:1.55"]{
+    font-size:10px !important;line-height:1.4 !important;
+  }
+  /* Plan items */
+  #mode-executive section [style*="font-size:40px;font-weight:900"]{
+    font-size:28px !important;
+  }
+  #mode-executive section [style*="font-size:20px;font-weight:700;color:var(--white)"]{
+    font-size:14px !important;
+  }
+  #mode-executive section [style*="font-size:15px;color:#DDDDEE;line-height:1.5;margin-top:8px"]{
+    font-size:11px !important;line-height:1.4 !important;
+  }
+  /* Hero KPI delta */
+  #mode-executive > section:first-child > div[style*="grid-template-columns"] > div > div[style*="font-size:16px"]{
+    font-size:11px !important;
+  }
+  /* Reduce padding in cards for print */
+  #mode-executive section [style*="padding:22px"]{padding:12px !important}
+  #mode-executive section [style*="padding:28px"]{padding:14px !important}
+  #mode-executive section [style*="padding:32px"]{padding:16px !important}
+  #mode-executive section [style*="padding:24px"]{padding:14px !important}
+  #mode-executive section [style*="padding:20px"]{padding:12px !important}
+
+  /* Voces de la Audiencia: force 3 columns × 2 rows in print to fit 5 cards */
+  #mode-executive section [style*="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))"]{
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:12px !important;
+  }
+  /* Content (top/worst) cards: force 3 columns in print */
+  #mode-executive section [style*="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"]{
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:12px !important;
+  }
+  /* Influencer cards: force 4 columns in print */
+  #mode-executive section [style*="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))"]{
+    grid-template-columns:repeat(4,1fr) !important;
+    gap:12px !important;
+  }
+  /* Voces: shrink quote font more so 3-col cards fit */
+  #mode-executive section [style*='border-left:3px solid'][style*="font-style:italic"]{
+    font-size:9px !important;line-height:1.35 !important;margin-bottom:5px !important;
+  }
+  #mode-executive section [style*="font-size:15px;color:#DDDDEE;line-height:1.5;font-style:italic"]{
+    font-size:9px !important;line-height:1.35 !important;margin-bottom:5px !important;padding-left:8px !important;
+  }
+
   body{font-size:9px}
   /* Acts: remove dark backgrounds in print — use subtle borders instead */
   .act{background:none !important;border:1px solid rgba(0,0,0,.08) !important;margin:8px 0 !important}
@@ -919,6 +1097,18 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 .annex-switch-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;border:1px solid rgba(75,0,255,.3);background:rgba(75,0,255,.08);color:var(--purple2);font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s}
 .annex-switch-btn:hover{background:rgba(75,0,255,.15);color:var(--white)}
 
+/* Post Retention Bars (inside content cards) */
+.post-retention{margin-top:10px;padding-top:8px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:4px}
+.post-ret-row{display:flex;align-items:center;gap:6px}
+.post-ret-label{font-size:9px;font-weight:700;color:var(--gray);width:28px;text-align:right;flex-shrink:0}
+.post-ret-track{flex:1;height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden}
+.post-ret-fill{height:100%;border-radius:3px;transition:width .3s}
+.post-ret-pct{font-size:10px;font-weight:800;width:38px;text-align:right;flex-shrink:0}
+.post-ret-hook{font-size:9px;color:var(--gray);margin-top:2px;text-align:center}
+.post-ret-hook strong{color:var(--teal)}
+[data-theme="light"] .post-retention{border-top-color:rgba(0,0,0,.08)}
+[data-theme="light"] .post-ret-track{background:rgba(0,0,0,.06)}
+
 /* Retention Grid */
 .retention-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:16px 0}
 .retention-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
@@ -956,6 +1146,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
       <select class="month-select" id="monthSelector" onchange="switchMonth(this.value)"><option>Marzo 2026</option></select>
     </div>
     <div class="mode-toggle">
+      <button class="mode-btn" onclick="switchMode('executive',this)">⚡ Ejecutivo</button>
       <button class="mode-btn active" onclick="switchMode('story',this)">📖 Historia</button>
       <button class="mode-btn" onclick="switchMode('tech',this)">📊 Datos Técnicos</button>
     </div>
@@ -964,7 +1155,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9,15 12,18 15,15"/></svg>
         PDF
       </button>
-      <button class="dl-btn dl-btn-accent" onclick="downloadPPTX()" title="Descargar PPT (compatible con Google Slides)">
+      <button class="dl-btn dl-btn-accent" onclick="downloadPPTSmart()" title="Descargar PPT del modo activo">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         PPT / Slides
       </button>
@@ -1066,6 +1257,13 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
 </section>
 
 <!-- ═══════════════════════════════════════════
+  MODE: EXECUTIVE (vista ejecutiva acotada)
+═══════════════════════════════════════════ -->
+<div class="mode-content" id="mode-executive">
+<!-- Generated dynamically from JSON by populateExecutive() -->
+</div><!-- end mode-executive -->
+
+<!-- ═══════════════════════════════════════════
   MODE: STORY (5 actos narrativos)
 ═══════════════════════════════════════════ -->
 <div class="mode-content active" id="mode-story">
@@ -1130,6 +1328,10 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   <div class="chart-row">
     <div class="chart-container"><div class="chart-title">Meta — Mejor Día (índice 0-100)</div><div class="chart-wrapper"><canvas id="chartMetaDays"></canvas></div></div>
     <div class="chart-container"><div class="chart-title">TikTok — Mejor Hora (índice 0-100)</div><div class="chart-wrapper"><canvas id="chartTKHours"></canvas></div></div>
+  </div>
+  <div class="chart-row" id="retentionChartRow" style="display:none">
+    <div class="chart-container"><div class="chart-title">Mejor Retención — Top Videos</div><div class="chart-wrapper" style="height:280px"><canvas id="chartRetTop"></canvas></div></div>
+    <div class="chart-container"><div class="chart-title">Menor Retención — Videos a Mejorar</div><div class="chart-wrapper" style="height:280px"><canvas id="chartRetBottom"></canvas></div></div>
   </div>
 </section>
 
@@ -1395,6 +1597,15 @@ async function fetchReportData() {
   const brand = params.get('brand');
   let period = params.get('period');
 
+  // Load brands.json (for channel detection in executive view)
+  try {
+    const brandsRes = await fetch('brands.json');
+    if (brandsRes.ok) {
+      const brandsJson = await brandsRes.json();
+      window.BRANDS_DATA = brandsJson.brands || brandsJson;
+    }
+  } catch (e) { console.warn('Could not fetch brands.json', e); }
+
   // If brand param exists, use manifest to resolve period
   if (!dataUrl && brand) {
     window.CURRENT_BRAND = brand;
@@ -1573,18 +1784,40 @@ function populateReport() {
         // BHS special format - hide if 0
         if (D.bhs.total > 0) pkValues[i].innerHTML = D.bhs.total + '<span style="font-size:18px;color:var(--gray)">/100</span>';
         else { const pkCard = pkValues[i].closest('.portada-kpi'); if (pkCard) pkCard.style.display = 'none'; }
-      } else if (i === 3) {
-        // Objectives with color
+      } else if (i === 3 && kpi.label && /objetiv/i.test(kpi.label)) {
+        // Objectives with color (only if this slot is the Objectives KPI)
         const met = D.objectives.filter(o => o.status === 'met').length;
         const total = D.objectives.length;
         pkValues[i].textContent = met + '/' + total;
         pkValues[i].style.color = met < total ? 'var(--warning)' : 'var(--success)';
       } else {
         pkValues[i].textContent = kpi.value;
+        // Color logic: follower growth KPIs go green, others white
+        const isFollowerKpi = kpi.label && (/nuevos seg|seguidores/i.test(kpi.label));
+        pkValues[i].style.color = isFollowerKpi ? 'var(--success)' : '';
       }
     }
     if (pkLabels[i]) pkLabels[i].textContent = kpi.label;
   });
+
+  // Auto-append Objectives KPI if not already present in portada
+  const hasObjKpi = D.portada.kpis.some(k => k.label && /objetiv/i.test(k.label));
+  if (!hasObjKpi && D.objectives && D.objectives.length > 0) {
+    const portadaContainer = document.querySelector('.portada-kpis');
+    if (portadaContainer) {
+      const met = D.objectives.filter(o => o.status === 'met').length;
+      const total = D.objectives.length;
+      const allMet = met === total;
+      const objColor = allMet ? 'var(--success)' : 'var(--warning)';
+      const divider = document.createElement('div');
+      divider.className = 'pk-divider';
+      const objKpi = document.createElement('div');
+      objKpi.className = 'portada-kpi';
+      objKpi.innerHTML = '<div class="pk-value" style="color:'+objColor+'">'+met+'/'+total+'</div><div class="pk-label">Objetivos Cumplidos</div>';
+      portadaContainer.appendChild(divider);
+      portadaContainer.appendChild(objKpi);
+    }
+  }
 
   // — BHS INLINE (in story mode) —
   const bhsBig = document.querySelector('.bhs-big');
@@ -1671,6 +1904,11 @@ function switchMode(mode, btn) {
   btn.classList.add('active');
   // Side nav only visible in tech mode
   document.getElementById('sideNav').style.display = mode === 'tech' ? 'flex' : 'none';
+  // Hide the main portada and main cierre in executive mode (executive has its own)
+  const mainPortada = document.getElementById('sec-portada');
+  if (mainPortada) mainPortada.style.display = mode === 'executive' ? 'none' : '';
+  const mainCierre = document.querySelector('section.cierre');
+  if (mainCierre) mainCierre.style.display = mode === 'executive' ? 'none' : '';
   window.scrollTo({ top: 0, behavior: 'smooth' });
   // Re-measure header
   setTimeout(setHeaderHeight, 100);
@@ -1992,10 +2230,9 @@ function populateAllSections_OLD_UNUSED() {
       } else {
         // Sort by ER% descending
         const sorted = [...D.competitors_ig].sort((a, b) => (parseFloat(b.er)||0) - (parseFloat(a.er)||0));
-        const brandKey = D.brand.toLowerCase().split(' ')[0];
         const maxFollowers = Math.max(...sorted.map(c => c.followers || 0));
         tbody.innerHTML = sorted.map((c, i) => {
-          const isUs = c.name.toLowerCase().includes(brandKey);
+          const isUs = c.is_self === true;
           const rank = i + 1;
           const isTopSeg = c.followers === maxFollowers;
           let posLabel = '#' + rank + ' ER';
@@ -2059,7 +2296,7 @@ function populateAllSections_OLD_UNUSED() {
   const storyContainer = document.getElementById('mode-story');
   if (storyContainer && D.story && D.story.act1 && D.story.act1.number) {
     let html = '';
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 6; i++) {
       const act = D.story['act'+i]; if (!act) continue;
       html += '<div class="act">';
       html += '<div class="act-number">' + (act.number || 'Acto '+i) + '</div>';
@@ -2167,7 +2404,7 @@ function populateAllSections() {
   const storyEl = document.getElementById('mode-story');
   if (storyEl && D.story && D.story.act1 && D.story.act1.number) {
     let h = '';
-    for (let i=1;i<=5;i++) {
+    for (let i=1;i<=6;i++) {
       const a = D.story['act'+i]; if (!a) continue;
       const hasImage = !!(a.image);
       h += '<div class="act">';
@@ -2225,21 +2462,23 @@ function populateAllSections() {
       // Act 4: Influencer MVP card + ER #1
       if (i===4 && D.influencers_ig && D.influencers_ig.length) {
         const mvp = D.influencers_ig[0];
+        const mvpBg = mvp.coverImageUrl ? 'background-image:url('+mvp.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,var(--fucsia),var(--purple));display:flex;align-items:center;justify-content:center;font-size:28px';
         h += '<div style="display:flex;gap:16px;align-items:center;margin:20px 0;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;max-width:680px">';
-        h += '<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--fucsia),var(--purple));display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0">🏆</div>';
+        h += '<div style="width:64px;height:64px;border-radius:50%;'+mvpBg+';flex-shrink:0;overflow:hidden">'+(mvp.coverImageUrl?'':'🏆')+'</div>';
         h += '<div><div style="font-size:16px;font-weight:800;color:var(--white)">'+mvp.name+' — MVP del Mes</div>';
-        h += '<div style="font-size:12px;color:var(--gray);margin-top:4px">'+mvp.username+' · '+(mvp.content_type||'')+'</div>';
-        h += '<div style="display:flex;gap:16px;margin-top:8px">';
-        h += '<div style="font-size:11px"><span style="font-weight:800;color:var(--teal)">'+fmtK(mvp.views)+'</span> views</div>';
-        h += '<div style="font-size:11px"><span style="font-weight:800;color:var(--fucsia)">'+fmtK(mvp.likes)+'</span> likes</div>';
-        h += '<div style="font-size:11px"><span style="font-weight:800;color:var(--white)">'+fmtK(mvp.shares||0)+'</span> shares</div>';
-        h += '</div></div></div>';
+        h += '<div style="font-size:12px;color:var(--gray);margin-top:4px">'+mvp.username+' · '+(mvp.platform||'')+'</div>';
+        h += '<div style="font-size:12px;color:var(--white);margin-top:6px;line-height:1.5">'+(mvp.content_type||'')+'</div>';
+        h += '</div></div>';
       }
-      if (i===4 && D.competitors_ig && D.competitors_ig.length) {
+      if (i===5 && D.competitors_ig && D.competitors_ig.length) {
         const sorted = [...D.competitors_ig].sort((a,b)=>(parseFloat(b.er)||0)-(parseFloat(a.er)||0));
-        if (sorted[0] && sorted[0].name.toLowerCase().includes(D.brand.toLowerCase().split(' ')[0])) {
-          h += '<div class="story-highlight"><div class="story-highlight-text">'+D.brand+' lidera en Engagement Rate de Instagram en su categoría con '+sorted[0].er+'%, superando a todos los competidores</div></div>';
-        }
+        h += '<div style="margin:24px 0;overflow-x:auto"><table class="comp-table" style="width:100%"><thead><tr><th>Marca</th><th></th><th>Seg. IG</th><th>ER%</th><th>Pos.</th></tr></thead><tbody>';
+        sorted.forEach((c,idx) => {
+          const us = c.is_self === true;
+          const rank = idx + 1;
+          h += '<tr'+(us?' class="our-brand"':'')+'><td>'+(us?'<strong>'+c.name+'</strong>':c.name)+'</td><td><span class="'+(us?'comp-badge-us':'comp-badge-comp')+'">'+(us?'Nosotros':'Comp.')+'</span></td><td>'+fmt(c.followers)+'</td><td'+(rank===1?' style="color:var(--teal);font-weight:800"':'')+'>'+c.er+'%</td><td>'+(rank===1?'<strong style="color:var(--teal)">#'+rank+'</strong>':'#'+rank)+'</td></tr>';
+        });
+        h += '</tbody></table></div>';
       }
       if (a.highlight) { h += '<div class="story-highlight"><div class="story-highlight-text">'+a.highlight+'</div>'; if (a.highlight_sub) h += '<div class="story-highlight-sub">'+a.highlight_sub+'</div>'; h += '</div>'; }
       if (a.evidence) { h += '<div class="evidence-row">'; a.evidence.forEach(e => { const s = e.color==='teal'?' style="color:var(--teal)"':e.color==='danger'?' style="color:var(--danger)"':''; h += '<div class="evidence-card"><div class="ev-value"'+s+'>'+e.value+'</div><div class="ev-label">'+e.label+'</div><div class="ev-delta"'+s+'>'+(e.delta||'')+'</div></div>'; }); h += '</div>'; }
@@ -2425,9 +2664,10 @@ function populateAllSections() {
         out += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
         // Alcance / Reproducciones
         out += '<div class="post-metric"><div class="post-metric-val" style="color:'+metricColor+'">'+fmtK(p.reach||p.views||0)+'</div><div class="post-metric-label">'+(p.reach?'Alcance':'Reproducciones')+'</div></div>';
-        // Compartidos + Guardados
-        const sharesAndSaves = (p.shares||0) + (p.saves||0);
-        out += '<div class="post-metric"><div class="post-metric-val">'+fmt(sharesAndSaves)+'</div><div class="post-metric-label">Shares+Saves</div></div>';
+        // Shares (separado)
+        out += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.shares||0)+'</div><div class="post-metric-label">Shares</div></div>';
+        // Saves (separado)
+        out += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.saves||0)+'</div><div class="post-metric-label">Saves</div></div>';
         // Comentarios
         out += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.comments||0)+'</div><div class="post-metric-label">Comentarios</div></div>';
         // ER%
@@ -2435,6 +2675,25 @@ function populateAllSections() {
         // Inversión (solo pagado)
         if (p.spend) out += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">$'+p.spend+'</div><div class="post-metric-label">Inversión</div></div>';
         out += '</div>';
+        // Retención de video (si tiene datos)
+        if (p.retention) {
+          const r = p.retention;
+          out += '<div class="post-retention">';
+          const retPts = [
+            {label:'25%', val:r.r25},
+            {label:'50%', val:r.r50},
+            {label:'75%', val:r.r75},
+            {label:'95%', val:r.r95},
+            {label:'100%', val:r.r100}
+          ];
+          retPts.forEach(pt => {
+            if (pt.val == null) return;
+            const c = pt.val >= 30 ? 'var(--success)' : pt.val >= 15 ? 'var(--warning)' : 'var(--danger)';
+            out += '<div class="post-ret-row"><div class="post-ret-label">'+pt.label+'</div><div class="post-ret-track"><div class="post-ret-fill" style="width:'+pt.val+'%;background:'+c+'"></div></div><div class="post-ret-pct" style="color:'+c+'">'+pt.val.toFixed(1)+'%</div></div>';
+          });
+          if (r.hook) out += '<div class="post-ret-hook">Hook rate: <strong>'+r.hook.toFixed(1)+'%</strong></div>';
+          out += '</div>';
+        }
         if (p.note) out += '<div class="post-date" style="color:var(--teal);margin-top:6px">💡 '+p.note+'</div>';
         out += '</div></'+tag+'>';
       });
@@ -2495,12 +2754,16 @@ function populateAllSections() {
         const infTag = inf.url ? 'a' : 'div';
         const infBg = inf.coverImageUrl ? 'background-image:url('+inf.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#2D0060,#8B00CC,#FF6BCC)';
         h += '<'+infTag+(inf.url?' href="'+inf.url+'" target="_blank"':'')+' class="post-card" style="text-decoration:none"><div class="post-thumb" style="'+infBg+'">'+(inf.coverImageUrl?'':'<div class="post-thumb-inner">👤</div>')+'<span class="post-badge badge-top">'+inf.username+'</span><span class="post-plat-badge">'+(inf.platform||'IG')+'</span></div>';
-        h += '<div class="post-body"><div class="post-title">'+inf.name+'</div><div class="post-date">'+(inf.content_type||'')+' · '+(inf.date||'')+'</div><div class="post-metrics">';
-        h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(inf.views)+'</div><div class="post-metric-label">Views</div></div>';
-        h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.likes)+'</div><div class="post-metric-label">Likes</div></div>';
-        h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.shares||0)+'</div><div class="post-metric-label">Shares</div></div>';
-        h += '<div class="post-metric"><div class="post-metric-val">'+fmt(inf.comments||0)+'</div><div class="post-metric-label">Comments</div></div>';
-        h += '</div></div></'+infTag+'>';
+        h += '<div class="post-body"><div class="post-title">'+inf.name+'</div><div class="post-date">'+(inf.content_type||'')+(inf.date?' · '+inf.date:'')+'</div>';
+        if (inf.views || inf.likes || inf.shares || inf.comments) {
+          h += '<div class="post-metrics">';
+          if (inf.views) h += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmtK(inf.views)+'</div><div class="post-metric-label">Views</div></div>';
+          if (inf.likes) h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.likes)+'</div><div class="post-metric-label">Likes</div></div>';
+          if (inf.shares) h += '<div class="post-metric"><div class="post-metric-val">'+fmtK(inf.shares)+'</div><div class="post-metric-label">Shares</div></div>';
+          if (inf.comments) h += '<div class="post-metric"><div class="post-metric-val">'+fmt(inf.comments)+'</div><div class="post-metric-label">Comments</div></div>';
+          h += '</div>';
+        }
+        h += '</div></'+infTag+'>';
       });
       h += '</div>';
     }
@@ -2537,6 +2800,23 @@ function populateAllSections() {
     });
     h += '</div></div>';
     if (T.temas_recurrentes) h += '<div class="analysis-block"><div class="analysis-label">◈ Temas ('+(s.total||0)+' comentarios)</div><div class="analysis-text">'+T.temas_recurrentes.replace(/\n/g,'<br>')+'</div></div>';
+    // Category cards with descriptions and quotes
+    if (s.categories && s.categories.length) {
+      h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">📋 Categorías de Comentarios</div><div class="layer-line"></div></div>';
+      const catColors = ['var(--fucsia)','var(--teal)','var(--purple)','var(--success)','var(--warning)'];
+      s.categories.forEach((cat,ci) => {
+        h += '<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:12px">';
+        h += '<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><div style="width:8px;height:8px;border-radius:50%;background:'+catColors[ci%catColors.length]+'"></div>';
+        h += '<div style="font-size:15px;font-weight:800;color:var(--white)">'+cat.label+'</div><div style="font-size:13px;font-weight:700;color:'+catColors[ci%catColors.length]+'">'+cat.pct+'%</div></div>';
+        if (cat.description) h += '<div style="font-size:12px;color:var(--gray);line-height:1.6;margin-bottom:10px">'+cat.description+'</div>';
+        if (cat.quotes && cat.quotes.length) {
+          h += '<div style="display:flex;flex-wrap:wrap;gap:8px">';
+          cat.quotes.forEach(q => { h += '<span style="font-size:11px;padding:4px 10px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:20px;color:var(--white);font-style:italic">"'+q+'"</span>'; });
+          h += '</div>';
+        }
+        h += '</div>';
+      });
+    }
     // Word Cloud
     const wcWords = D.word_cloud || [
       {word:D.brand||'Marca',s:3.5},{word:'calidad',s:3.2},{word:'favorito',s:2.8},{word:'buenazo',s:2.5},
@@ -2610,7 +2890,7 @@ function populateAllSections() {
       const brandKey = D.brand.toLowerCase().split(' ')[0];
       h += '<table class="comp-table"><thead><tr><th>Marca</th><th></th><th>Seg. IG</th><th>Likes prom.</th><th>Comments</th><th>Posts</th><th>ER IG</th><th>Pos.</th></tr></thead><tbody>';
       sorted.forEach((c,i) => {
-        const us = c.name.toLowerCase().includes(brandKey);
+        const us = c.is_self === true;
         const rank = i + 1;
         h += '<tr'+(us?' class="our-brand"':'')+'><td>'+(us?'<strong>'+c.name+'</strong>':c.name)+'</td><td><span class="'+(us?'comp-badge-us':'comp-badge-comp')+'">'+(us?'Nosotros':'Comp.')+'</span></td><td>'+fmt(c.followers)+'</td><td>'+(c.likes_avg||'–')+'</td><td>'+(c.comments_avg||'–')+'</td><td>'+(c.posts||'–')+'</td><td'+(rank===1?' style="color:var(--teal)"':'')+'>'+c.er+'%</td><td>'+(rank===1?'<strong style="color:var(--teal)">#'+rank+' ER</strong>':'#'+rank+' ER')+'</td></tr>';
       });
@@ -2699,12 +2979,680 @@ function hideEmptySections() {
   // (already handled by JSON - if act doesn't exist, it won't render)
 }
 
+// ══════════════════════════════════════════════
+//  EXECUTIVE MODE: vista ejecutiva acotada
+// ══════════════════════════════════════════════
+function populateExecutive(D) {
+  const container = document.getElementById('mode-executive');
+  if (!container || !D) return;
+
+  const fmt = n => typeof n === 'number' ? n.toLocaleString('es-PE') : (n||'');
+  const fmtK = n => { if (typeof n !== 'number' || isNaN(n)) return n||''; return n >= 1e6 ? (n/1e6).toFixed(2)+'M' : n >= 1e3 ? Math.round(n/1e3)+'K' : fmt(n); };
+
+  const T = D.technical_texts || {};
+  const ins = D.insights || {};
+  const cnt = D.content || {};
+  const byCh = (cnt.by_channel) || {};
+  const recs = (D.recommendations || []).slice().sort((a,b) => {
+    const order = { 'Alta': 0, 'Media': 1, 'Baja': 2 };
+    return (order[a.priority] || 9) - (order[b.priority] || 9);
+  });
+
+  let h = '';
+
+  // — HERO: Portada con brand + periodo + KPIs con variación —
+  h += '<section style="padding:56px 48px 56px;background:linear-gradient(135deg,#1A0040 0%,#2D0080 50%,#4B00FF 100%);border-bottom:1px solid var(--border)">';
+  h += '<div style="font-size:16px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.7);text-transform:uppercase;margin-bottom:14px">LUDiK Analytics · Resumen Ejecutivo</div>';
+  h += '<div style="font-size:96px;font-weight:900;color:#FFF;letter-spacing:-.02em;line-height:1">'+(D.brand||'')+'</div>';
+  h += '<div style="font-size:26px;font-weight:600;color:var(--fucsia);margin-top:10px">'+(D.period_label || D.period || '')+'</div>';
+  h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:36px;max-width:100%">';
+  (D.portada && D.portada.kpis ? D.portada.kpis : []).forEach(k => {
+    const isGrowth = /nuevos seg|seguidores/i.test(k.label||'');
+    h += '<div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px;backdrop-filter:blur(8px)">';
+    h += '<div style="font-size:46px;font-weight:900;color:'+(isGrowth?'var(--success)':'#FFF')+';line-height:1">'+(k.value||'–')+'</div>';
+    // Delta vs período anterior
+    if (k.delta_pct) {
+      const isPositive = !/^-/.test(k.delta_pct);
+      const deltaColor = isPositive ? 'var(--success)' : 'var(--danger)';
+      const arrow = isPositive ? '▲' : '▼';
+      h += '<div style="font-size:16px;font-weight:800;color:'+deltaColor+';margin-top:10px;display:flex;align-items:center;gap:4px">'+arrow+' '+k.delta_pct+'</div>';
+    } else if (k.delta_note) {
+      h += '<div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:10px;font-style:italic">'+k.delta_note+'</div>';
+    }
+    h += '<div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.08em;margin-top:'+(k.delta_pct||k.delta_note?'8px':'14px')+'">'+(k.label||'')+'</div>';
+    if (k.delta_pct && k.delta_note) {
+      h += '<div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:4px">'+k.delta_note+'</div>';
+    }
+    h += '</div>';
+  });
+  // Add Objectives KPI if not in portada
+  if (D.objectives && D.objectives.length > 0) {
+    const met = D.objectives.filter(o => o.status === 'met').length;
+    const total = D.objectives.length;
+    const allMet = met === total;
+    h += '<div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px;backdrop-filter:blur(8px)">';
+    h += '<div style="font-size:46px;font-weight:900;color:'+(allMet?'var(--success)':'var(--warning)')+';line-height:1">'+met+'/'+total+'</div>';
+    h += '<div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.08em;margin-top:14px">Objetivos Cumplidos</div>';
+    h += '</div>';
+  }
+  h += '</div>';
+  h += '</section>';
+
+  // — Helper para render de post card —
+  function postCardExec(p, badge, badgeColor) {
+    const thumbBg = p.coverImageUrl ? 'background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#2D0080,#673CEF,#9B6BFF)';
+    const tag = p.url ? 'a' : 'div';
+    let card = '<'+tag+(p.url?' href="'+p.url+'" target="_blank"':'')+' style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">';
+    card += '<div style="height:220px;'+thumbBg+';position:relative">';
+    card += '<span style="position:absolute;top:12px;left:12px;background:'+badgeColor+';color:#FFF;font-size:13px;font-weight:800;padding:6px 12px;border-radius:8px;text-transform:uppercase;letter-spacing:.08em">'+badge+'</span>';
+    card += '<span style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,.6);color:#FFF;font-size:13px;font-weight:700;padding:6px 12px;border-radius:8px">'+(p.platform||'')+'</span>';
+    card += '</div>';
+    card += '<div style="padding:22px;flex:1;display:flex;flex-direction:column;gap:12px">';
+    card += '<div style="font-size:22px;font-weight:700;color:var(--white);line-height:1.3">'+(p.title||'')+'</div>';
+    // Metrics row
+    card += '<div style="display:flex;gap:18px;font-size:15px;color:var(--gray);flex-wrap:wrap">';
+    if (p.reach) card += '<span><strong style="color:var(--teal);font-size:17px">'+fmtK(p.reach)+'</strong> alcance</span>';
+    if (p.views && !p.reach) card += '<span><strong style="color:var(--teal);font-size:17px">'+fmtK(p.views)+'</strong> views</span>';
+    if (p.saves) card += '<span><strong style="color:var(--white);font-size:17px">'+fmt(p.saves)+'</strong> saves</span>';
+    if (p.er) card += '<span><strong style="color:var(--fucsia);font-size:17px">'+p.er+'</strong> ER</span>';
+    card += '</div>';
+    // Why it worked / didn't
+    if (p.note) card += '<div style="font-size:15px;color:#DDDDEE;line-height:1.55;margin-top:6px;padding-top:14px;border-top:1px solid var(--border)">'+p.note+'</div>';
+    card += '</div></'+tag+'>';
+    return card;
+  }
+
+  // Executive intros (fallbacks por si no están en el JSON)
+  const exec = D.executive || {};
+
+  // Channel registry: canales soportados con su config visual
+  const CHANNEL_REGISTRY = {
+    instagram: { name: 'Instagram', icon: '📸', color: 'var(--fucsia)', byChKey: 'ig',       recChannel: 'Instagram', legacyKey: 'ig' },
+    facebook:  { name: 'Facebook',  icon: '👍', color: '#1877F2',       byChKey: 'fb',       recChannel: 'Facebook',  legacyKey: 'fb' },
+    tiktok:    { name: 'TikTok',    icon: '🎵', color: 'var(--teal)',   byChKey: 'tiktok', byChKeyAlt: 'tk', recChannel: 'TikTok', legacyKey: 'tk' },
+    linkedin:  { name: 'LinkedIn',  icon: '💼', color: '#0A66C2',       byChKey: 'linkedin', recChannel: 'LinkedIn', legacyKey: 'linkedin' },
+    youtube:   { name: 'YouTube',   icon: '▶️', color: '#FF0000',       byChKey: 'youtube', byChKeyAlt: 'yt', recChannel: 'YouTube', legacyKey: 'youtube' }
+  };
+
+  // Detecta canales activos para la marca: 1) brands.json[brand].channels  2) fallback: keys en content.by_channel con data
+  function detectActiveChannels() {
+    if (window.BRANDS_DATA && Array.isArray(window.BRANDS_DATA)) {
+      const brand = window.BRANDS_DATA.find(b => b.id === D.brand);
+      if (brand && Array.isArray(brand.channels) && brand.channels.length) {
+        return brand.channels.map(c => c.toLowerCase()).filter(c => CHANNEL_REGISTRY[c]);
+      }
+    }
+    const out = [];
+    Object.keys(CHANNEL_REGISTRY).forEach(ch => {
+      const cfg = CHANNEL_REGISTRY[ch];
+      const data = byCh[cfg.byChKey] || (cfg.byChKeyAlt && byCh[cfg.byChKeyAlt]);
+      if (data && ((data.top || []).length || (data.worst || []).length)) out.push(ch);
+    });
+    return out.length ? out : ['instagram','tiktok'];
+  }
+  const ACTIVE_CHANNELS = detectActiveChannels();
+
+  // Resuelve datos del canal con fallbacks: nuevo schema → legacy → defaults
+  function getChannelData(channelKey) {
+    const cfg = CHANNEL_REGISTRY[channelKey];
+    if (!cfg) return null;
+    const data = byCh[cfg.byChKey] || (cfg.byChKeyAlt && byCh[cfg.byChKeyAlt]) || {};
+    const introsNew = (exec.intros && exec.intros[channelKey]) || {};
+    const introTop = introsNew.top || exec['intro_'+cfg.legacyKey+'_top'] || ('Los contenidos top de '+cfg.name+' del periodo, ordenados por desempeño.');
+    const introWorst = introsNew.worst || exec['intro_'+cfg.legacyKey+'_worst'] || ('Los contenidos con menor rendimiento en '+cfg.name+'. Formatos a descartar en próximas publicaciones.');
+    const concl = (exec.conclusiones && exec.conclusiones[channelKey]) || exec['conclusiones_'+cfg.legacyKey] || null;
+    return { cfg, channelKey, top: data.top || [], worst: data.worst || [], note: data.note || '', introTop, introWorst, concl };
+  }
+
+  // Helper para encabezado de sección con enunciado
+  function sectionHeader(emoji, title, count, intro) {
+    let s = '<div style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;flex-wrap:wrap">';
+    s += '<div style="font-size:36px;font-weight:900;color:var(--white)">'+emoji+' '+title+'</div>';
+    if (count) s += '<div style="font-size:15px;color:var(--gray)">'+count+'</div>';
+    s += '</div>';
+    if (intro) s += '<div style="font-size:18px;color:#DDDDEE;max-width:1100px;margin-bottom:28px;line-height:1.55">'+intro+'</div>';
+    return s;
+  }
+
+  // — SECTION: Qué funcionó · loop por canal —
+  ACTIVE_CHANNELS.forEach(ch => {
+    const cd = getChannelData(ch);
+    if (!cd || !cd.top.length) return;
+    h += '<section style="padding:40px 32px 16px">';
+    h += sectionHeader('✅', 'Qué funcionó · '+cd.cfg.name, 'Top '+Math.min(3,cd.top.length)+' del periodo', cd.introTop);
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">';
+    cd.top.slice(0,3).forEach(p => { h += postCardExec(p, 'TOP', 'var(--success)'); });
+    h += '</div></section>';
+  });
+
+  // — SECTION: Qué NO funcionó · loop por canal —
+  ACTIVE_CHANNELS.forEach(ch => {
+    const cd = getChannelData(ch);
+    if (!cd || !cd.worst.length) return;
+    h += '<section style="padding:40px 32px 16px">';
+    h += sectionHeader('⚠', 'Qué NO funcionó · '+cd.cfg.name, 'Worst '+Math.min(3,cd.worst.length)+' del periodo', cd.introWorst);
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">';
+    cd.worst.slice(0,3).forEach(p => { h += postCardExec(p, 'EVITAR', 'var(--danger)'); });
+    h += '</div></section>';
+  });
+
+  // — SECTION: Sobre Influencers —
+  const influencers = D.influencers_ig || [];
+  const introInfluencers = exec.influencers_intro || exec.intro_influencers || 'Las colaboraciones del periodo. El perfil ganador: mujer real de 25 a 40 años, con audiencia en Lima y provincias, que muestra el resultado del color de forma auténtica.';
+  const introInfluencersAvoid = exec.influencers_avoid || exec.intro_influencers_avoid || 'Perfiles que no replicaríamos: cuentas con audiencia inflada o no orgánica, perfiles fuera del rango etario, contenido excesivamente editado o que no muestra el proceso real de coloración.';
+  if (influencers.length > 0) {
+    h += '<section style="padding:40px 32px 16px">';
+    h += sectionHeader('🤝', 'Sobre Influencers', influencers.length + ' colaboraciones del periodo', introInfluencers);
+
+    // Qué SÍ funcionó
+    h += '<div style="font-size:20px;font-weight:800;color:var(--success);text-transform:uppercase;letter-spacing:.08em;margin-top:28px;margin-bottom:20px">✅ Qué SÍ funcionó</div>';
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:40px">';
+    influencers.forEach(inf => {
+      const thumbBg = inf.coverImageUrl ? 'background-image:url('+inf.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#2D0080,#673CEF,#9B6BFF)';
+      const tag = inf.url ? 'a' : 'div';
+      h += '<'+tag+(inf.url?' href="'+inf.url+'" target="_blank"':'')+' style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column">';
+      h += '<div style="height:180px;'+thumbBg+';position:relative">';
+      h += '<span style="position:absolute;top:12px;left:12px;background:var(--success);color:#FFF;font-size:13px;font-weight:800;padding:6px 12px;border-radius:8px;text-transform:uppercase;letter-spacing:.08em">Colab</span>';
+      h += '</div>';
+      h += '<div style="padding:20px;flex:1">';
+      h += '<div style="font-size:19px;font-weight:700;color:var(--white)">'+(inf.name||'')+'</div>';
+      h += '<div style="font-size:15px;color:var(--fucsia);margin-top:4px">'+(inf.username||'')+'</div>';
+      if (inf.platform) h += '<div style="font-size:13px;color:var(--gray);margin-top:6px">'+inf.platform+'</div>';
+      if (inf.content_type) h += '<div style="font-size:14px;color:#DDDDEE;line-height:1.55;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)">'+inf.content_type+'</div>';
+      h += '</div></'+tag+'>';
+    });
+    h += '</div>';
+
+    // Qué NO replicaríamos
+    h += '<div style="font-size:20px;font-weight:800;color:var(--danger);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;margin-bottom:20px">⚠ Qué NO replicaríamos</div>';
+    h += '<div style="background:var(--card);border:1px solid var(--border);border-left:4px solid var(--danger);border-radius:14px;padding:28px;font-size:17px;color:#DDDDEE;line-height:1.7;max-width:1100px">'+introInfluencersAvoid+'</div>';
+    h += '</section>';
+  }
+
+  // — SECTION: Voces de la Audiencia —
+  const sentCats = (D.sentiment && D.sentiment.categories) || [];
+  const introVoices = exec.voices_intro || exec.intro_voices || 'Selección curada de comentarios reales de los ' + ((D.sentiment && D.sentiment.total) || '200+') + ' analizados en el periodo. ' + ((D.sentiment && D.sentiment.positive_pct) || 85) + '% del sentimiento fue positivo.';
+  if (sentCats.length > 0) {
+    const catColors = ['var(--fucsia)','var(--teal)','var(--purple)','var(--success)','var(--warning)'];
+    h += '<section style="padding:40px 32px 16px">';
+    h += sectionHeader('💬', 'Voces de la Audiencia', sentCats.length+' categorías · '+((D.sentiment && D.sentiment.total) || '200+')+' comentarios', introVoices);
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">';
+    sentCats.forEach((cat, ci) => {
+      const color = catColors[ci % catColors.length];
+      h += '<div style="background:var(--card);border:1px solid var(--border);border-left:4px solid '+color+';border-radius:14px;padding:24px">';
+      // Header: nombre + %
+      h += '<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;gap:12px">';
+      h += '<div style="font-size:18px;font-weight:800;color:var(--white)">'+(cat.label||'')+'</div>';
+      h += '<div style="font-size:32px;font-weight:900;color:'+color+';line-height:1">'+(cat.pct||0)+'%</div>';
+      h += '</div>';
+      // Description (compact)
+      if (cat.description) h += '<div style="font-size:14px;color:var(--gray);line-height:1.55;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)">'+cat.description+'</div>';
+      // Quotes
+      if (cat.quotes && cat.quotes.length) {
+        cat.quotes.slice(0,3).forEach(q => {
+          h += '<div style="font-size:15px;color:#DDDDEE;line-height:1.5;font-style:italic;margin-bottom:10px;padding-left:14px;border-left:3px solid '+color+';opacity:.92">"'+q+'"</div>';
+        });
+      }
+      h += '</div>';
+    });
+    h += '</div></section>';
+  }
+
+  // — SECTION: Conclusiones por canal (estructurado) —
+  function buildConclusionBlock(channelKey, channelName, icon, accent, data, fallbackRecs) {
+    if (!data && !fallbackRecs.length) return '';
+    let b = '<div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;border-left:5px solid '+accent+'">';
+    // Header
+    b += '<div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">';
+    b += '<span style="font-size:32px">'+icon+'</span>';
+    b += '<div style="font-size:22px;font-weight:800;color:'+accent+';text-transform:uppercase;letter-spacing:.1em">'+channelName+'</div></div>';
+    // Headline (big number)
+    if (data && data.headline) {
+      b += '<div style="font-size:22px;font-weight:800;color:var(--white);line-height:1.4;padding-bottom:18px;border-bottom:1px solid var(--border);margin-bottom:20px">'+data.headline+'</div>';
+    }
+    // Fórmula ganadora
+    if (data && data.formula) {
+      b += '<div style="margin-bottom:24px">';
+      b += '<div style="font-size:13px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px">⚡ Fórmula ganadora</div>';
+      b += '<div style="font-size:16px;color:#DDDDEE;line-height:1.6">'+data.formula+'</div></div>';
+    }
+    // Mejor hora + data points
+    if (data && (data.best_time || (data.data_points && data.data_points.length))) {
+      b += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:24px;padding:18px;background:rgba(255,255,255,.03);border-radius:12px">';
+      if (data.best_time) {
+        b += '<div><div style="font-size:12px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">🕐 Mejor hora</div>';
+        b += '<div style="font-size:15px;font-weight:700;color:'+accent+'">'+data.best_time+'</div></div>';
+      }
+      if (data.data_points) {
+        data.data_points.forEach(dp => {
+          b += '<div><div style="font-size:12px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">'+dp.label+'</div>';
+          b += '<div style="font-size:15px;font-weight:800;color:var(--white)">'+dp.value+'</div></div>';
+        });
+      }
+      b += '</div>';
+    }
+    // Próximos pasos
+    const steps = (data && data.next_steps) ? data.next_steps : fallbackRecs.slice(0,3).map(r => r.title);
+    if (steps && steps.length) {
+      b += '<div>';
+      b += '<div style="font-size:13px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px">→ Próximos pasos</div>';
+      steps.forEach((step, i) => {
+        b += '<div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:12px">';
+        b += '<div style="width:26px;height:26px;border-radius:50%;background:'+accent+';color:#FFF;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">'+(i+1)+'</div>';
+        b += '<div style="font-size:15px;color:#DDDDEE;line-height:1.5">'+step+'</div></div>';
+      });
+      b += '</div>';
+    }
+    b += '</div>';
+    return b;
+  }
+
+  // Conclusiones por canal: itera ACTIVE_CHANNELS y arma un bloque por cada uno
+  const conclBlocks = [];
+  ACTIVE_CHANNELS.forEach(ch => {
+    const cd = getChannelData(ch);
+    if (!cd) return;
+    const chRecs = recs.filter(r => (r.channel || '').toLowerCase() === ch || r.channel === cd.cfg.recChannel);
+    if (cd.concl || chRecs.length) {
+      conclBlocks.push(buildConclusionBlock(ch, cd.cfg.name, cd.cfg.icon, cd.cfg.color, cd.concl, chRecs));
+    }
+  });
+  if (conclBlocks.length) {
+    h += '<section style="padding:40px 32px 16px">';
+    h += sectionHeader('📌', 'Conclusiones por canal', '', 'Insights estratégicos por plataforma con la fórmula ganadora, mejor hora de publicación y próximos pasos accionables.');
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px">';
+    h += conclBlocks.join('');
+    h += '</div></section>';
+  }
+
+  // — SECTION: Plan de acción top 5 (Alta primero) —
+  if (recs.length > 0) {
+    h += '<section style="padding:48px 40px 60px">';
+    h += '<div style="font-size:36px;font-weight:900;color:var(--white);margin-bottom:28px">🎯 Plan de Acción · Próximos 30 días</div>';
+    h += '<div style="display:flex;flex-direction:column;gap:14px;max-width:1200px">';
+    recs.slice(0,5).forEach((r,i) => {
+      const prioColor = r.priority === 'Alta' ? 'var(--fucsia)' : r.priority === 'Media' ? 'var(--warning)' : 'var(--teal)';
+      h += '<div style="display:grid;grid-template-columns:60px 130px 1fr;gap:22px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px">';
+      h += '<div style="font-size:40px;font-weight:900;color:'+prioColor+';line-height:1">'+(i+1)+'</div>';
+      h += '<div><span style="font-size:13px;font-weight:800;padding:6px 12px;border-radius:8px;background:'+prioColor+'20;color:'+prioColor+';text-transform:uppercase;letter-spacing:.08em">'+r.priority+'</span><div style="font-size:13px;color:var(--gray);margin-top:8px">'+r.channel+'</div></div>';
+      h += '<div><div style="font-size:20px;font-weight:700;color:var(--white)">'+r.title+'</div><div style="font-size:15px;color:#DDDDEE;line-height:1.5;margin-top:8px">'+r.description+'</div></div>';
+      h += '</div>';
+    });
+    h += '</div></section>';
+  }
+
+  // — SECTION: Cierre —
+  const cierre = D.cierre || {};
+  h += '<section style="padding:80px 32px 80px;background:linear-gradient(135deg,#1A0040 0%,#2D0080 100%);text-align:center;min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center">';
+  h += '<div style="font-size:80px;font-weight:900;color:#FFF;letter-spacing:-.02em;margin-bottom:14px">LUD<span style="color:var(--fucsia)">i</span>K</div>';
+  h += '<div style="font-size:22px;color:rgba(255,255,255,.75);margin-bottom:48px">'+(cierre.tagline || 'Data-driven decisions for modern brands')+'</div>';
+  h += '<div style="width:80px;height:3px;background:linear-gradient(90deg,var(--purple),var(--fucsia));margin:0 auto 40px"></div>';
+  h += '<div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.15em;margin-bottom:14px">Reporte preparado por</div>';
+  h += '<div style="font-size:26px;font-weight:800;color:#FFF;margin-bottom:32px">'+(cierre.team || 'Equipo LUDiK')+'</div>';
+  if (cierre.location) h += '<div style="font-size:17px;color:rgba(255,255,255,.7);margin-bottom:6px">'+cierre.location+'</div>';
+  if (cierre.contact) h += '<div style="font-size:17px;color:var(--fucsia);margin-bottom:48px">'+cierre.contact+'</div>';
+  h += '<div style="width:80px;height:3px;background:linear-gradient(90deg,var(--fucsia),var(--purple));margin:0 auto 28px"></div>';
+  h += '<div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.12em;max-width:800px;margin:0 auto;line-height:1.5">'+(cierre.confidential || 'Este reporte es confidencial')+'</div>';
+  h += '</section>';
+
+  container.innerHTML = h;
+}
+
+// ══════════════════════════════════════════════
+//  PPT INTELIGENTE: detecta modo activo y descarga el adecuado
+// ══════════════════════════════════════════════
+function downloadPPTSmart() {
+  const execMode = document.getElementById('mode-executive');
+  if (execMode && execMode.classList.contains('active')) {
+    downloadExecutivePPTX();
+  } else {
+    downloadPPTX();
+  }
+}
+
+// ══════════════════════════════════════════════
+//  EXECUTIVE PPTX: 8 slides ejecutivos
+// ══════════════════════════════════════════════
+async function downloadExecutivePPTX() {
+  try {
+    const RD = REPORT_DATA;
+    const fmt = n => typeof n === 'number' ? n.toLocaleString('es-PE') : (n == null ? '' : String(n));
+    const fmtK = n => { if (typeof n !== 'number' || isNaN(n)) return n == null ? '' : String(n); return n >= 1e6 ? (n/1e6).toFixed(2)+'M' : n >= 1e3 ? Math.round(n/1e3)+'K' : fmt(n); };
+    const safeStr = v => (v == null) ? '' : String(v);
+
+    const T = RD.technical_texts || {};
+    const ins = RD.insights || {};
+    const cnt = RD.content || {};
+    const byCh = (cnt.by_channel) || {};
+    const recs = (RD.recommendations || []).slice().sort((a,b) => {
+      const order = { 'Alta': 0, 'Media': 1, 'Baja': 2 };
+      return (order[a.priority] || 9) - (order[b.priority] || 9);
+    });
+
+    const pptx = new PptxGenJS();
+    pptx.layout = 'LAYOUT_WIDE';
+    pptx.author = 'LUDiK Analytics';
+    pptx.title = safeStr(RD.brand) + ' — Resumen Ejecutivo ' + safeStr(RD.period_label || RD.period);
+
+    const BG = '0D0D1A', CARD = '13132A', PURPLE = '4B00FF';
+    const FUCSIA = 'F84CDE', TEAL = '20ECC8', WHITE = 'FFFFFF', GRAY = '8888AA';
+    const SUCCESS = '22C55E', WARNING = 'F59E0B', DANGER = 'EF4444';
+
+    function addText(s, text, opts) {
+      s.addText(safeStr(text), Object.assign({ fontFace: 'Inter', color: WHITE }, opts || {}));
+    }
+    function sectionTitle(s, label) {
+      addText(s, label, { x: 0.5, y: 0.25, w: 12.3, fontSize: 44, bold: true });
+      s.addShape(pptx.ShapeType.line, { x: 0.5, y: 1.15, w: 12.3, h: 0, line: { color: FUCSIA, width: 4 } });
+    }
+    function badgePill(s, x, y, label, color) {
+      s.addShape(pptx.ShapeType.roundRect, { x: x, y: y, w: 1.6, h: 0.5, fill: { color: color }, line: { type: 'none' }, rectRadius: 0.1 });
+      addText(s, label, { x: x, y: y+0.03, w: 1.6, h: 0.44, fontSize: 15, bold: true, color: WHITE, align: 'center', valign: 'middle', charSpacing: 2 });
+    }
+
+    // ═══ SLIDE 1: PORTADA ═══
+    let s1 = pptx.addSlide();
+    s1.background = { color: '1A0040' };
+    s1.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 13.33, h: 7.5, fill: { color: '1A0040' }, line: { type: 'none' } });
+    s1.addShape(pptx.ShapeType.rect, { x: 0, y: 7.2, w: 13.33, h: 0.08, fill: { color: FUCSIA }, line: { type: 'none' } });
+    addText(s1, 'LUDiK ANALYTICS · RESUMEN EJECUTIVO', { x: 0.6, y: 0.45, w: 12, fontSize: 18, bold: true, color: 'CCCCDD', charSpacing: 5 });
+    addText(s1, safeStr(RD.brand), { x: 0.6, y: 1.0, w: 12, fontSize: 110, bold: true, color: WHITE });
+    addText(s1, safeStr(RD.period_label || RD.period), { x: 0.6, y: 3.3, w: 12, fontSize: 36, bold: true, color: FUCSIA });
+
+    const kpis = (RD.portada && RD.portada.kpis) || [];
+    const allKpis = kpis.slice();
+    if (RD.objectives && RD.objectives.length > 0) {
+      const met = RD.objectives.filter(o => o.status === 'met').length;
+      const total = RD.objectives.length;
+      allKpis.push({ value: met+'/'+total, label: 'Objetivos Cumplidos', isObj: true, allMet: met === total });
+    }
+    const kpiCount = Math.min(6, allKpis.length);
+    const kpiW = 2.05;
+    const kpiGap = 0.13;
+    const totalKpiW = kpiCount * kpiW + (kpiCount - 1) * kpiGap;
+    const kpiStartX = (13.33 - totalKpiW) / 2;
+    allKpis.slice(0, kpiCount).forEach((k, i) => {
+      const x = kpiStartX + i * (kpiW + kpiGap);
+      const isGrowth = /nuevos seg|seguidores/i.test(safeStr(k.label));
+      const valColor = k.isObj ? (k.allMet ? SUCCESS : WARNING) : (isGrowth ? SUCCESS : WHITE);
+      s1.addShape(pptx.ShapeType.roundRect, { x: x, y: 4.35, w: kpiW, h: 2.45, fill: { color: '2D0080' }, line: { color: 'FFFFFF', width: 0.5 }, rectRadius: 0.12 });
+      addText(s1, safeStr(k.value || '–'), { x: x, y: 4.5, w: kpiW, h: 0.95, fontSize: 44, bold: true, color: valColor, align: 'center' });
+      // Delta
+      if (k.delta_pct) {
+        const isPos = !/^-/.test(safeStr(k.delta_pct));
+        const deltaColor = isPos ? SUCCESS : DANGER;
+        const arrow = isPos ? '▲' : '▼';
+        addText(s1, arrow + ' ' + safeStr(k.delta_pct), { x: x, y: 5.55, w: kpiW, h: 0.4, fontSize: 16, bold: true, color: deltaColor, align: 'center' });
+      }
+      addText(s1, safeStr(k.label), { x: x+0.05, y: 6.0, w: kpiW-0.1, h: 0.55, fontSize: 13, bold: true, color: 'CCCCDD', align: 'center', charSpacing: 2 });
+      if (k.delta_note) {
+        addText(s1, safeStr(k.delta_note), { x: x+0.05, y: 6.45, w: kpiW-0.1, h: 0.35, fontSize: 11, color: 'AAAACC', align: 'center', italic: true });
+      }
+    });
+    addText(s1, safeStr((RD.cierre && RD.cierre.confidential) || 'Documento confidencial'), { x: 0.6, y: 7.0, w: 12, fontSize: 12, color: 'AAAACC' });
+
+    // Executive intros y registry de canales (mismo schema que populateExecutive)
+    const exec = RD.executive || {};
+    const CHANNEL_REGISTRY_PPT = {
+      instagram: { name: 'Instagram', icon: '📸', pptColor: FUCSIA,   byChKey: 'ig',       legacyKey: 'ig',       recChannel: 'Instagram' },
+      facebook:  { name: 'Facebook',  icon: '👍', pptColor: '1877F2', byChKey: 'fb',       legacyKey: 'fb',       recChannel: 'Facebook' },
+      tiktok:    { name: 'TikTok',    icon: '🎵', pptColor: TEAL,     byChKey: 'tiktok', byChKeyAlt: 'tk', legacyKey: 'tk', recChannel: 'TikTok' },
+      linkedin:  { name: 'LinkedIn',  icon: '💼', pptColor: '0A66C2', byChKey: 'linkedin', legacyKey: 'linkedin', recChannel: 'LinkedIn' },
+      youtube:   { name: 'YouTube',   icon: '▶',  pptColor: 'FF0000', byChKey: 'youtube', byChKeyAlt: 'yt', legacyKey: 'youtube', recChannel: 'YouTube' }
+    };
+    function detectActiveChannelsPPT() {
+      if (window.BRANDS_DATA && Array.isArray(window.BRANDS_DATA)) {
+        const b = window.BRANDS_DATA.find(x => x.id === RD.brand);
+        if (b && Array.isArray(b.channels) && b.channels.length) {
+          return b.channels.map(c => c.toLowerCase()).filter(c => CHANNEL_REGISTRY_PPT[c]);
+        }
+      }
+      const out = [];
+      Object.keys(CHANNEL_REGISTRY_PPT).forEach(ch => {
+        const cfg = CHANNEL_REGISTRY_PPT[ch];
+        const d = byCh[cfg.byChKey] || (cfg.byChKeyAlt && byCh[cfg.byChKeyAlt]);
+        if (d && ((d.top || []).length || (d.worst || []).length)) out.push(ch);
+      });
+      return out.length ? out : ['instagram','tiktok'];
+    }
+    const ACTIVE_CHANNELS_PPT = detectActiveChannelsPPT();
+    function getChannelDataPPT(channelKey) {
+      const cfg = CHANNEL_REGISTRY_PPT[channelKey];
+      if (!cfg) return null;
+      const data = byCh[cfg.byChKey] || (cfg.byChKeyAlt && byCh[cfg.byChKeyAlt]) || {};
+      const introsNew = (exec.intros && exec.intros[channelKey]) || {};
+      const introTop = safeStr(introsNew.top) || safeStr(exec['intro_'+cfg.legacyKey+'_top']) || ('Los contenidos top de '+cfg.name+' del periodo.');
+      const introWorst = safeStr(introsNew.worst) || safeStr(exec['intro_'+cfg.legacyKey+'_worst']) || ('Los contenidos con menor rendimiento en '+cfg.name+'.');
+      const concl = (exec.conclusiones && exec.conclusiones[channelKey]) || exec['conclusiones_'+cfg.legacyKey] || null;
+      return { cfg, channelKey, top: data.top || [], worst: data.worst || [], introTop, introWorst, concl };
+    }
+
+    // Helper para slides de contenido
+    function buildContentSlide(title, intro, items, badge, badgeColor, metricsFn) {
+      let slide = pptx.addSlide();
+      slide.background = { color: BG };
+      sectionTitle(slide, title);
+      addText(slide, intro, { x: 0.5, y: 1.35, w: 12.3, h: 1.0, fontSize: 18, color: 'CCCCDD', italic: true, valign: 'top' });
+      const cardCount = Math.min(3, items.length);
+      const cardW = 4.0;
+      const cardGap = 0.165;
+      const startX = (13.33 - (cardCount * cardW + (cardCount - 1) * cardGap)) / 2;
+      items.slice(0, cardCount).forEach((p, i) => {
+        const x = startX + i * (cardW + cardGap);
+        slide.addShape(pptx.ShapeType.roundRect, { x: x, y: 2.6, w: cardW, h: 4.75, fill: { color: CARD }, line: { color: badge === 'EVITAR' ? '4A1010' : '2A2A50' }, rectRadius: 0.18 });
+        // Colored header strip
+        slide.addShape(pptx.ShapeType.rect, { x: x, y: 2.6, w: cardW, h: 0.12, fill: { color: badgeColor }, line: { type: 'none' } });
+        // Badge pill at top
+        badgePill(slide, x+0.25, 2.85, badge + ' #' + (i+1), badgeColor);
+        // Platform tag right
+        addText(slide, safeStr(p.platform), { x: x+cardW-1.8, y: 2.92, w: 1.6, fontSize: 14, color: GRAY, align: 'right', bold: true });
+        // Title
+        addText(slide, safeStr(p.title), { x: x+0.25, y: 3.55, w: cardW-0.5, h: 1.15, fontSize: 22, bold: true, color: WHITE, valign: 'top' });
+        // Metrics row
+        addText(slide, metricsFn(p), { x: x+0.25, y: 4.85, w: cardW-0.5, h: 0.4, fontSize: 16, color: TEAL, bold: true });
+        // Date
+        if (p.date) addText(slide, safeStr(p.date), { x: x+0.25, y: 5.3, w: cardW-0.5, fontSize: 13, color: GRAY });
+        // Note / "Por qué funcionó / falló"
+        addText(slide, safeStr(p.note), { x: x+0.25, y: 5.7, w: cardW-0.5, h: 1.55, fontSize: 14, color: 'DDDDEE', valign: 'top' });
+      });
+    }
+
+    // Metrics formatters: IG/FB/LinkedIn = reach+saves+ER. TK/YouTube = views+saves+shares+ER
+    const reachStyleMetrics = p => {
+      const parts = [];
+      if (p.reach) parts.push(fmtK(p.reach) + ' alcance');
+      else if (p.views) parts.push(fmtK(p.views) + ' views');
+      if (p.saves) parts.push(fmt(p.saves) + ' saves');
+      if (p.er) parts.push(safeStr(p.er) + ' ER');
+      return parts.join(' · ');
+    };
+    const viewsStyleMetrics = p => {
+      const parts = [];
+      if (p.views) parts.push(fmtK(p.views) + ' views');
+      if (p.saves) parts.push(fmt(p.saves) + ' saves');
+      if (p.shares) parts.push(fmt(p.shares) + ' shares');
+      if (p.er) parts.push(safeStr(p.er) + ' ER');
+      return parts.join(' · ');
+    };
+    function metricsFnFor(channelKey) {
+      return (channelKey === 'tiktok' || channelKey === 'youtube') ? viewsStyleMetrics : reachStyleMetrics;
+    }
+
+    // ═══ SLIDES Top + Worst por canal (loop dinámico) ═══
+    ACTIVE_CHANNELS_PPT.forEach(ch => {
+      const cd = getChannelDataPPT(ch);
+      if (cd && cd.top.length) buildContentSlide('Que funciono - ' + cd.cfg.name, cd.introTop, cd.top, 'TOP', SUCCESS, metricsFnFor(ch));
+    });
+    ACTIVE_CHANNELS_PPT.forEach(ch => {
+      const cd = getChannelDataPPT(ch);
+      if (cd && cd.worst.length) buildContentSlide('Que NO funciono - ' + cd.cfg.name, cd.introWorst, cd.worst, 'EVITAR', DANGER, metricsFnFor(ch));
+    });
+
+    // ═══ SLIDE 6: Sobre Influencers ═══
+    const influencers = RD.influencers_ig || [];
+    const introInfluencers = safeStr(exec.influencers_intro) || safeStr(exec.intro_influencers) || 'Las colaboraciones del periodo. El perfil ganador: mujer real de 25 a 40 anos con audiencia en Lima y provincias.';
+    const introInfluencersAvoid = safeStr(exec.influencers_avoid) || safeStr(exec.intro_influencers_avoid) || 'No replicariamos: cuentas con audiencia inflada, perfiles fuera del rango etario, contenido excesivamente editado.';
+    if (influencers.length) {
+      let sInf = pptx.addSlide();
+      sInf.background = { color: BG };
+      sectionTitle(sInf, 'Sobre Influencers');
+      addText(sInf, introInfluencers, { x: 0.5, y: 1.35, w: 12.3, h: 1.0, fontSize: 18, color: 'CCCCDD', italic: true, valign: 'top' });
+      // SI funcionó label
+      addText(sInf, '✓ QUE SI FUNCIONO', { x: 0.5, y: 2.5, w: 6, fontSize: 18, bold: true, color: SUCCESS, charSpacing: 3 });
+      // Influencer cards (max 4)
+      const cardW = 3.0;
+      const cardGap = 0.13;
+      const totalW = 4 * cardW + 3 * cardGap;
+      const startX = (13.33 - totalW) / 2;
+      influencers.slice(0, 4).forEach((inf, i) => {
+        const x = startX + i * (cardW + cardGap);
+        sInf.addShape(pptx.ShapeType.roundRect, { x: x, y: 3.0, w: cardW, h: 2.7, fill: { color: CARD }, line: { color: '2A2A50' }, rectRadius: 0.15 });
+        sInf.addShape(pptx.ShapeType.rect, { x: x, y: 3.0, w: cardW, h: 0.1, fill: { color: SUCCESS }, line: { type: 'none' } });
+        addText(sInf, safeStr(inf.name), { x: x+0.2, y: 3.2, w: cardW-0.4, fontSize: 19, bold: true, color: WHITE });
+        addText(sInf, safeStr(inf.username), { x: x+0.2, y: 3.75, w: cardW-0.4, fontSize: 14, color: FUCSIA });
+        addText(sInf, safeStr(inf.platform), { x: x+0.2, y: 4.15, w: cardW-0.4, fontSize: 12, color: GRAY });
+        addText(sInf, safeStr(inf.content_type), { x: x+0.2, y: 4.55, w: cardW-0.4, h: 1.1, fontSize: 13, color: 'DDDDEE', valign: 'top' });
+      });
+      // NO funcionó box
+      addText(sInf, '⚠ QUE NO REPLICARIAMOS', { x: 0.5, y: 5.95, w: 8, fontSize: 18, bold: true, color: DANGER, charSpacing: 3 });
+      sInf.addShape(pptx.ShapeType.roundRect, { x: 0.5, y: 6.45, w: 12.3, h: 0.9, fill: { color: CARD }, line: { color: '4A1010', width: 1 }, rectRadius: 0.12 });
+      sInf.addShape(pptx.ShapeType.rect, { x: 0.5, y: 6.45, w: 0.12, h: 0.9, fill: { color: DANGER }, line: { type: 'none' } });
+      addText(sInf, introInfluencersAvoid, { x: 0.85, y: 6.55, w: 11.85, h: 0.75, fontSize: 14, color: 'DDDDEE', valign: 'middle' });
+    }
+
+    // ═══ SLIDE 7: Voces de la Audiencia ═══
+    const sentCats = (RD.sentiment && RD.sentiment.categories) || [];
+    const introVoices = safeStr(exec.voices_intro) || safeStr(exec.intro_voices) || 'Seleccion curada de comentarios reales del periodo.';
+    if (sentCats.length > 0) {
+      let sV = pptx.addSlide();
+      sV.background = { color: BG };
+      sectionTitle(sV, 'Voces de la Audiencia');
+      addText(sV, introVoices, { x: 0.5, y: 1.35, w: 12.3, h: 1.0, fontSize: 18, color: 'CCCCDD', italic: true, valign: 'top' });
+      const catColorsPP = [FUCSIA, TEAL, PURPLE, SUCCESS, WARNING];
+      // Up to 5 categories in a row
+      const catCount = Math.min(5, sentCats.length);
+      const catGap = 0.18;
+      const catW = (12.3 - (catCount-1) * catGap) / catCount;
+      sentCats.slice(0, catCount).forEach((cat, ci) => {
+        const color = catColorsPP[ci % catColorsPP.length];
+        const x = 0.5 + ci * (catW + catGap);
+        sV.addShape(pptx.ShapeType.roundRect, { x: x, y: 2.55, w: catW, h: 4.8, fill: { color: CARD }, line: { color: '2A2A50' }, rectRadius: 0.15 });
+        sV.addShape(pptx.ShapeType.rect, { x: x, y: 2.55, w: 0.12, h: 4.8, fill: { color: color }, line: { type: 'none' } });
+        // Label
+        addText(sV, safeStr(cat.label), { x: x+0.22, y: 2.72, w: catW-0.4, h: 0.55, fontSize: 16, bold: true, color: WHITE });
+        // Pct
+        addText(sV, safeStr(cat.pct||0) + '%', { x: x+0.22, y: 3.3, w: catW-0.4, h: 1.0, fontSize: 54, bold: true, color: color });
+        // Description (compact)
+        if (cat.description) addText(sV, safeStr(cat.description), { x: x+0.22, y: 4.4, w: catW-0.4, h: 1.3, fontSize: 12, color: 'CCCCDD', valign: 'top' });
+        // Quotes
+        if (cat.quotes && cat.quotes.length) {
+          cat.quotes.slice(0, 3).forEach((q, qi) => {
+            addText(sV, '"' + safeStr(q) + '"', { x: x+0.25, y: 5.75 + qi * 0.5, w: catW-0.4, h: 0.45, fontSize: 13, color: 'DDDDEE', italic: true, valign: 'top' });
+          });
+        }
+      });
+    }
+
+    // ═══ SLIDES: Conclusiones por canal (loop dinámico, máx 2 por slide para que entren) ═══
+    function buildChannelBox(slide, x, w, name, accent, data, fallbackRecs) {
+      slide.addShape(pptx.ShapeType.roundRect, { x: x, y: 2.15, w: w, h: 5.2, fill: { color: CARD }, line: { color: accent, width: 2 }, rectRadius: 0.18 });
+      addText(slide, name, { x: x+0.35, y: 2.3, w: w-0.5, fontSize: 24, bold: true, color: accent, charSpacing: 4 });
+      let yPos = 2.95;
+      if (data && data.headline) {
+        addText(slide, safeStr(data.headline), { x: x+0.35, y: yPos, w: w-0.5, h: 0.85, fontSize: 18, bold: true, color: WHITE, valign: 'top' });
+        yPos += 1.0;
+      }
+      if (data && data.formula) {
+        addText(slide, 'FORMULA GANADORA', { x: x+0.35, y: yPos, w: w-0.5, fontSize: 12, bold: true, color: GRAY, charSpacing: 3 });
+        addText(slide, safeStr(data.formula), { x: x+0.35, y: yPos+0.35, w: w-0.5, h: 1.1, fontSize: 13, color: 'DDDDEE', valign: 'top' });
+        yPos += 1.55;
+      }
+      if (data && data.best_time) {
+        addText(slide, '🕐 ' + safeStr(data.best_time), { x: x+0.35, y: yPos, w: w-0.5, fontSize: 14, bold: true, color: accent, charSpacing: 1 });
+        yPos += 0.45;
+      }
+      const steps = (data && data.next_steps) ? data.next_steps : fallbackRecs.slice(0,3).map(r => r.title);
+      if (steps && steps.length) {
+        addText(slide, 'PROXIMOS PASOS', { x: x+0.35, y: yPos, w: w-0.5, fontSize: 12, bold: true, color: GRAY, charSpacing: 3 });
+        yPos += 0.35;
+        steps.slice(0,3).forEach((step, i) => {
+          addText(slide, (i+1) + '. ' + safeStr(step), { x: x+0.35, y: yPos, w: w-0.5, h: 0.5, fontSize: 13, color: WHITE, valign: 'top' });
+          yPos += 0.48;
+        });
+      }
+    }
+
+    // Construye pares de canales (máx 2 por slide para que sea legible)
+    const channelsWithConcl = ACTIVE_CHANNELS_PPT.map(ch => {
+      const cd = getChannelDataPPT(ch);
+      if (!cd) return null;
+      const chRecs = recs.filter(r => (r.channel || '').toLowerCase() === ch || r.channel === cd.cfg.recChannel);
+      if (!cd.concl && !chRecs.length) return null;
+      return { cfg: cd.cfg, concl: cd.concl, chRecs };
+    }).filter(Boolean);
+    for (let i = 0; i < channelsWithConcl.length; i += 2) {
+      const sC = pptx.addSlide();
+      sC.background = { color: BG };
+      sectionTitle(sC, 'Conclusiones por canal');
+      addText(sC, 'Formula ganadora, mejor hora de publicacion y proximos pasos por plataforma.', { x: 0.5, y: 1.35, w: 12.3, fontSize: 17, color: 'CCCCDD', italic: true });
+      const pair = channelsWithConcl.slice(i, i+2);
+      if (pair.length === 1) {
+        buildChannelBox(sC, 3.0, 7.3, pair[0].cfg.name.toUpperCase(), pair[0].cfg.pptColor, pair[0].concl, pair[0].chRecs);
+      } else {
+        buildChannelBox(sC, 0.5, 6.15, pair[0].cfg.name.toUpperCase(), pair[0].cfg.pptColor, pair[0].concl, pair[0].chRecs);
+        buildChannelBox(sC, 6.85, 6.15, pair[1].cfg.name.toUpperCase(), pair[1].cfg.pptColor, pair[1].concl, pair[1].chRecs);
+      }
+    }
+
+    // ═══ SLIDE 7: Plan de acción top 5 ═══
+    if (recs.length > 0) {
+      let s7 = pptx.addSlide();
+      s7.background = { color: BG };
+      sectionTitle(s7, 'Plan de Accion - Proximos 30 dias');
+      recs.slice(0,5).forEach((r,i) => {
+        const y = 1.5 + i * 1.18;
+        const prioColor = r.priority === 'Alta' ? FUCSIA : r.priority === 'Media' ? WARNING : TEAL;
+        s7.addShape(pptx.ShapeType.roundRect, { x: 0.5, y: y, w: 12.3, h: 1.05, fill: { color: CARD }, line: { color: '2A2A50' }, rectRadius: 0.12 });
+        s7.addShape(pptx.ShapeType.rect, { x: 0.5, y: y, w: 0.12, h: 1.05, fill: { color: prioColor }, line: { type: 'none' } });
+        addText(s7, '#' + (i+1), { x: 0.75, y: y+0.15, w: 0.85, fontSize: 40, bold: true, color: prioColor });
+        addText(s7, safeStr(r.priority), { x: 1.7, y: y+0.1, w: 1.7, fontSize: 16, bold: true, color: prioColor, charSpacing: 3 });
+        addText(s7, safeStr(r.channel), { x: 1.7, y: y+0.6, w: 1.7, fontSize: 13, color: GRAY });
+        addText(s7, safeStr(r.title), { x: 3.45, y: y+0.08, w: 9.3, fontSize: 20, bold: true, color: WHITE });
+        addText(s7, safeStr(r.description), { x: 3.45, y: y+0.55, w: 9.3, h: 0.5, fontSize: 14, color: 'CCCCDD', valign: 'top' });
+      });
+    }
+
+    // ═══ SLIDE 8: Cierre ═══
+    let s8 = pptx.addSlide();
+    s8.background = { color: '1A0040' };
+    // Logo centered
+    addText(s8, 'LUDiK', { x: 0, y: 2.0, w: 13.33, fontSize: 96, bold: true, color: WHITE, align: 'center' });
+    addText(s8, safeStr((RD.cierre && RD.cierre.tagline) || 'Data-driven decisions for modern brands'), { x: 0, y: 3.45, w: 13.33, fontSize: 22, color: 'CCCCDD', align: 'center' });
+    // Divider
+    s8.addShape(pptx.ShapeType.line, { x: 6.16, y: 4.25, w: 1.0, h: 0, line: { color: FUCSIA, width: 2 } });
+    addText(s8, 'REPORTE PREPARADO POR', { x: 0, y: 4.55, w: 13.33, fontSize: 13, bold: true, color: 'AAAACC', align: 'center', charSpacing: 6 });
+    addText(s8, safeStr((RD.cierre && RD.cierre.team) || 'Equipo LUDiK'), { x: 0, y: 5.0, w: 13.33, fontSize: 26, bold: true, color: WHITE, align: 'center' });
+    addText(s8, safeStr((RD.cierre && RD.cierre.location) || ''), { x: 0, y: 5.7, w: 13.33, fontSize: 16, color: 'CCCCDD', align: 'center' });
+    addText(s8, safeStr((RD.cierre && RD.cierre.contact) || ''), { x: 0, y: 6.1, w: 13.33, fontSize: 16, color: FUCSIA, align: 'center' });
+    // Bottom divider
+    s8.addShape(pptx.ShapeType.line, { x: 6.16, y: 6.65, w: 1.0, h: 0, line: { color: FUCSIA, width: 2 } });
+    addText(s8, safeStr((RD.cierre && RD.cierre.confidential) || 'Documento confidencial'), { x: 1, y: 6.9, w: 11.33, fontSize: 12, color: 'AAAACC', align: 'center', charSpacing: 3 });
+
+    const fileName = safeStr(RD.brand_id || RD.brand || 'Report').replace(/\s+/g, '_') + '_' + safeStr(RD.period || 'draft') + '_LUDiK_ejecutivo.pptx';
+    await pptx.writeFile({ fileName: fileName });
+  } catch (err) {
+    console.error('Error generando PPT ejecutivo:', err);
+    alert('Error al generar el PPT ejecutivo: ' + err.message + '\n\nRevisa la consola para más detalles.');
+  }
+}
+
 // Initialize: fetch data → populate → charts → images → hide empty
 document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('sideNav').style.display = 'none';
   await fetchReportData();
   populateReport();
   populateAllSections();
+  populateExecutive(REPORT_DATA);
   initCharts();
   hideEmptySections();
   loadImages();
@@ -2821,7 +3769,7 @@ new Chart('chartTKHours', {type:'bar',data:{labels:['8am','10am','12pm','2pm','4
 
 // SENTIMIENTO
 new Chart('chartSentCateg', doughnutOpts(
-  REPORT_DATA.sentiment.categories.map(c=>c.name),
+  REPORT_DATA.sentiment.categories.map(c=>c.label||c.name),
   C.sent_categories_data,
   [success,'rgba(34,197,94,.7)',teal,'rgba(32,236,200,.6)',warning,'rgba(245,158,11,.5)',danger,'rgba(248,76,222,.5)']));
 new Chart('chartSentEvol', lineOpts(months6, [{label:'Net Score',data:C.sent_net_score_history,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:false,tension:.4,pointBackgroundColor:teal,pointRadius:6},{label:'Benchmark (+50)',data:[50,50,50,50,50,50],borderColor:'rgba(255,255,255,.2)',borderDash:[4,4]}]));
@@ -2848,6 +3796,54 @@ new Chart('chartBHSEvol', lineOpts(months6, [{label:'BHS '+REPORT_DATA.brand,dat
 
 // PROYECCIÓN
 new Chart('chartProyeccion', {type:'line',data:{labels:['Ene 26','Feb 26','Mar 26','Abr 26 ▸'],datasets:[{label:'Meta Alcance (K)',data:[21.5,24.3,32.5,40],borderColor:purple2,backgroundColor:'rgba(103,60,239,.1)',fill:true,tension:.4,pointBackgroundColor:purple2,yAxisID:'y'},{label:'TK Views (K)',data:[1100,890,2746,3200],borderColor:teal,backgroundColor:'rgba(32,236,200,.05)',fill:true,tension:.4,pointBackgroundColor:teal,yAxisID:'y2'},{label:'Nuevos Seg.',data:[580,420,1789,2100],borderColor:fucsia,tension:.4,pointBackgroundColor:fucsia,yAxisID:'y'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{padding:14,usePointStyle:true}},tooltip:{mode:'index',intersect:false}},scales:{x:{grid:{color:gridColor},border:{color:borderColor}},y:{grid:{color:gridColor},border:{color:borderColor},position:'left',title:{display:true,text:'Alcance / Seg.',color:'#8888AA'}},y2:{grid:{display:false},border:{color:borderColor},position:'right',title:{display:true,text:'TK Views (K)',color:teal}}}}});
+
+// VIDEO RETENTION CHART — Split Top vs Bottom (Meta Ads)
+(function() {
+  const D = REPORT_DATA;
+  const videos = D.video_retention;
+  if (!videos || !videos.length) return;
+  const row = document.getElementById('retentionChartRow');
+  if (row) row.style.display = '';
+  const labels = ['Impresión','Hook 3s','25%','50%','75%','95%','100%'];
+  const mid = Math.ceil(videos.length / 2);
+  const topVids = videos.slice(0, mid);
+  const botVids = videos.slice(mid);
+  const topColors = [teal, fucsia, purple2, '#9B6BFF', success, '#6BAAFF'];
+  const botColors = [warning, '#FF6B6B', danger, purple, '#FFD93D', '#6BAAFF'];
+  function retChart(canvasId, vids, colors) {
+    new Chart(canvasId, {
+      type: 'line',
+      data: { labels, datasets: vids.map((v, i) => ({
+        label: v.title.length > 22 ? v.title.substring(0,21)+'…' : v.title,
+        data: [100, v.hook, v.r25, v.r50, v.r75, v.r95, v.r100],
+        borderColor: colors[i % colors.length],
+        backgroundColor: colors[i % colors.length] + '10',
+        fill: true,
+        tension: 0.35,
+        pointBackgroundColor: colors[i % colors.length],
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        borderWidth: 2.5
+      }))},
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { position: 'bottom', labels: { padding: 8, usePointStyle: true, pointStyleWidth: 8, font: { size: 10 } } },
+          tooltip: { callbacks: { label: function(ctx) { return ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(1) + '%'; } } }
+        },
+        scales: {
+          x: { grid: { color: gridColor }, border: { color: borderColor } },
+          y: { grid: { color: gridColor }, border: { color: borderColor }, min: 0, max: 100,
+            ticks: { callback: function(v) { return v + '%'; } }
+          }
+        }
+      }
+    });
+  }
+  retChart('chartRetTop', topVids, topColors);
+  if (botVids.length) retChart('chartRetBottom', botVids, botColors);
+})();
 
 } // end initCharts()
 
