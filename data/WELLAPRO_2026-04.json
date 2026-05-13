@@ -241,9 +241,18 @@
         "formula": "Cultural hook + producto Wella + copy corto. Alternativa: formato educativo paso-a-paso con resultado claro. Ambos formatos superan el 5% de ER. Los posts sin caption y publicados en bloque rinden por debajo del 1% del alcance esperado.",
         "best_time": "13:00-19:00 hora Lima (hipótesis a validar próximo mes)",
         "data_points": [
-          { "label": "Post top", "value": "151 int · 5.10% ER" },
-          { "label": "ER más alto", "value": "6.41% Rutina Ultimate Smooth" },
-          { "label": "Reach total IG", "value": "21,489" }
+          {
+            "label": "Post top",
+            "value": "151 int · 5.10% ER"
+          },
+          {
+            "label": "ER más alto",
+            "value": "6.41% Rutina Ultimate Smooth"
+          },
+          {
+            "label": "Reach total IG",
+            "value": "21,489"
+          }
         ],
         "next_steps": [
           "Replicar la fórmula Color Touch + cultural hook 1x al mes",
@@ -256,9 +265,18 @@
         "formula": "Replicar en FB las piezas IG que ya funcionaron. No producir contenido específico para FB. La audiencia FB es pasiva: ve, pero no actúa.",
         "best_time": "No hay patrón claro de horario óptimo en FB. Sugerencia: replicar el horario IG y medir 30 días.",
         "data_points": [
-          { "label": "Impresiones totales", "value": "27,683" },
-          { "label": "Pico 27-30 abr", "value": "15,929 (57% del total)" },
-          { "label": "Reacciones", "value": "475 · 1.7% rate" }
+          {
+            "label": "Impresiones totales",
+            "value": "27,683"
+          },
+          {
+            "label": "Pico 27-30 abr",
+            "value": "15,929 (57% del total)"
+          },
+          {
+            "label": "Reacciones",
+            "value": "475 · 1.7% rate"
+          }
         ],
         "next_steps": [
           "Mantener FB como mirror automático de IG",
@@ -338,7 +356,7 @@
             "spend": "",
             "url": "https://www.instagram.com/p/DXxE1vFE13g/",
             "note": "Pieza top del periodo. Cultural hook (estreno Devil Wears Prada 2) + producto + copy corto. Fórmula replicable mensual.",
-            "coverImageUrl": "https://scontent-lhr6-1.cdninstagram.com/v/t39.30808-6/684687140_1393820586119032_6189080612501899285_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74"
+            "coverImageUrl": "images/wellapro/2026-04/c09eb741976f.jpg"
           },
           {
             "title": "Rutina Ultimate Smooth — 3 pasos",
@@ -354,7 +372,7 @@
             "spend": "",
             "url": "https://www.instagram.com/p/DXXwN1BiFOA/",
             "note": "ER más alto del periodo (6.41%). Formato educativo paso a paso con resultado claro. 8 saves indican intención de aplicar.",
-            "coverImageUrl": "https://scontent-lhr6-2.cdninstagram.com/v/t39.30808-6/673750695_1386148053552952_7016387772217361475_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74"
+            "coverImageUrl": "images/wellapro/2026-04/0b3483bd615a.jpg"
           },
           {
             "title": "Pack Oil Reflections · Día de la Madre",
@@ -370,7 +388,7 @@
             "spend": "",
             "url": "https://www.instagram.com/p/DXvCPQnj5HZ/",
             "note": "Eje Día de la Madre. Pack de regalo + mensaje de cuidado profesional. Tracción sólida pero por debajo del cultural hook.",
-            "coverImageUrl": "https://scontent-lhr8-2.cdninstagram.com/v/t39.30808-6/684893403_1393813119453112_1750831394411915027_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74"
+            "coverImageUrl": "images/wellapro/2026-04/9a6468d1294e.jpg"
           }
         ],
         "worst": [
@@ -388,7 +406,7 @@
             "spend": "",
             "url": "https://www.instagram.com/p/DXIG0mAj2Ix/",
             "note": "Publicado en bloque con otros 2 posts en 1 minuto. Sin caption ni hashtags. Alcance canibalizado.",
-            "coverImageUrl": "https://scontent-lhr6-1.cdninstagram.com/v/t39.30808-6/672645638_1381179640716460_6452547722202399977_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74"
+            "coverImageUrl": "images/wellapro/2026-04/95d3b3e313c9.jpg"
           },
           {
             "title": "Miracle Oil Serum · 'dosis diaria de confianza'",
@@ -404,7 +422,7 @@
             "spend": "",
             "url": "https://www.instagram.com/p/DXfa_UAjz1o/",
             "note": "ER alto (5.64%) pero reach bajo (621). Caption denso, CTA difuso. La pieza conecta pero no se distribuye.",
-            "coverImageUrl": "https://scontent-lhr8-2.cdninstagram.com/v/t39.30808-6/679004544_1388608426640248_892814261013707347_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74"
+            "coverImageUrl": "images/wellapro/2026-04/642dcd8f4e61.jpg"
           },
           {
             "title": "Antes/Después rizos rebeldes",
@@ -420,7 +438,7 @@
             "spend": "",
             "url": "https://www.instagram.com/p/DXiAP-smDKi/",
             "note": "El más bajo en ER% del periodo (3.33%). Formato antes/después no rindió como en otras marcas — hipótesis: el contraste visual no fue claro.",
-            "coverImageUrl": "https://scontent-lhr6-1.cdninstagram.com/v/t39.30808-6/678280117_1389486066552484_3654472728288892986_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74"
+            "coverImageUrl": "images/wellapro/2026-04/85f63b556c4d.jpg"
           }
         ]
       },

@@ -14,6 +14,13 @@ import threading
 
 import re
 
+# Hook opcional: descarga de thumbnails externos antes del deploy
+try:
+    import download_thumbnails  # noqa: F401
+    HAS_DOWNLOADER = True
+except Exception:
+    HAS_DOWNLOADER = False
+
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(APP_DIR, 'data')
@@ -37,14 +44,30 @@ def rebuild_manifest():
 # Build manifest on startup
 rebuild_manifest()
 
+def download_external_thumbnails(filename):
+    """Antes del deploy, descarga thumbnails externos y reemplaza URLs por paths locales."""
+    if not HAS_DOWNLOADER:
+        return
+    try:
+        from pathlib import Path
+        json_path = Path(DATA_DIR) / filename
+        stats = download_thumbnails.process_json(json_path)
+        if stats.get('downloaded', 0) > 0:
+            print(f"  🖼  Descargados {stats['downloaded']} thumbnails (failed={stats.get('failed',0)})")
+    except Exception as e:
+        print(f"  ⚠ Hook thumbnails error: {e}")
+
+
 def deploy_to_vercel(filename):
     """Deploy to Vercel in background after saving."""
     try:
-        # Git add + commit + push
-        subprocess.run(['git', 'add', f'data/{filename}', 'data/manifest.json'], cwd=APP_DIR, capture_output=True)
+        # Hook: descarga thumbnails externos antes del deploy (idempotente)
+        download_external_thumbnails(filename)
+        # Git add: JSON + manifest + cualquier imagen nueva en images/
+        subprocess.run(['git', 'add', f'data/{filename}', 'data/manifest.json', 'images/'], cwd=APP_DIR, capture_output=True)
         subprocess.run(['git', 'commit', '-m', f'Update {filename} from admin'], cwd=APP_DIR, capture_output=True)
         # Deploy to Vercel
-        result = subprocess.run(['vercel', '--prod', '--yes'], cwd=APP_DIR, capture_output=True, text=True, timeout=60)
+        result = subprocess.run(['vercel', '--prod', '--yes'], cwd=APP_DIR, capture_output=True, text=True, timeout=120)
         if result.returncode == 0:
             print(f"  🚀 Deployado a Vercel: {filename}")
         else:
