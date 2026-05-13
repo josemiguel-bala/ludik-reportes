@@ -1,0 +1,457 @@
+{
+  "brand": "WELLAPRO",
+  "period": "2026-04",
+  "period_label": "01 Abril — 10 Mayo 2026",
+  "fx_rate": 3.78,
+  "metricool_id": "5916719",
+  "brand_id": "WELLAPRO",
+  "portada": {
+    "tag": "LUDiK Analytics · Reporte Wella Pro Perú · 01 Abril — 10 Mayo 2026",
+    "footer": "Confidencial · Preparado por el equipo LUDiK para Wella Pro Perú",
+    "kpis": [
+      {
+        "value": "+43",
+        "label": "Nuevos Seg. Facebook",
+        "delta_pct": null,
+        "delta_note": "01-abr a 10-may"
+      },
+      {
+        "value": "16",
+        "label": "Publicaciones IG",
+        "delta_pct": null,
+        "delta_note": "11 feed + 5 reels"
+      },
+      {
+        "value": "21.5K",
+        "label": "Reach total IG",
+        "delta_pct": null,
+        "delta_note": "feed + reels"
+      },
+      {
+        "value": "4.76%",
+        "label": "ER promedio feed IG",
+        "delta_pct": null,
+        "delta_note": "muy sobre benchmark beauty"
+      },
+      {
+        "value": "S/ 0",
+        "label": "Inversión Total",
+        "delta_pct": null,
+        "delta_note": "100% orgánico"
+      }
+    ]
+  },
+  "cierre": {
+    "tagline": "Data-driven decisions for modern brands",
+    "team": "Equipo LUDiK",
+    "location": "Barcelona · Lima",
+    "contact": "josemiguel@ludik.pe",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para Wella Pro Perú"
+  },
+  "objectives": [],
+  "community": {
+    "facebook": {
+      "start": 53152,
+      "end": 53195
+    },
+    "instagram": {
+      "start": null,
+      "end": 37932
+    },
+    "tiktok": {
+      "start": 0,
+      "end": 0
+    },
+    "total_new": 43
+  },
+  "investment": {
+    "meta_ads_usd": 0,
+    "meta_ads_soles": 0,
+    "tiktok_ads_usd": 0,
+    "tiktok_ads_soles": 0,
+    "total_usd": 0,
+    "total_soles": 0,
+    "meta_pct": 0,
+    "tiktok_pct": 0,
+    "note": "No hubo pauta en el periodo. Reporte 100% orgánico.",
+    "lima_usd": 0,
+    "provincia_usd": 0,
+    "lima_reach": 0,
+    "provincia_reach": 0,
+    "regional": {}
+  },
+  "sentiment": {
+    "total": 0,
+    "positive_pct": 0,
+    "neutral_pct": 0,
+    "negative_pct": 0,
+    "net_score": 0,
+    "categories": []
+  },
+  "insights": {
+    "community": "Facebook sumó +43 seguidores en 40 días (53,152 → 53,195), crecimiento estable. Instagram cerró en 37,932 (Metricool empezó a registrar el histórico desde el 27-abr; entre 05-may y 10-may se perdieron 74 seguidores tras el pico de campaña Día de la Madre).",
+    "reach": "Instagram acumuló 21,489 de alcance (13,224 feed + 8,265 reels) en 16 publicaciones. Facebook generó 27,683 impresiones de posts, concentrando el 57% del total entre el 27 y el 30 de abril (campaña Color Touch y Pack Día Madre).",
+    "engagement": "ER promedio del feed Instagram: 4.76%, muy por encima del benchmark de beauty (1-3%). Los reels rinden 3.38% ER promedio. El post #1 del periodo (Color Touch + cultural hook de El Diablo viste a la Moda 2) alcanzó 151 interacciones y 5.10% de ER.",
+    "sentiment": null,
+    "investment": "No hubo pauta en el periodo. Todo el alcance fue orgánico.",
+    "competition": null
+  },
+  "story": {
+    "act1": {
+      "number": "Acto 1 · La Comunidad",
+      "title": "Facebook crece estable (+43) y Instagram mantiene una base de 37.9K seguidores en 40 días orgánicos",
+      "type": "growth",
+      "paragraphs": [
+        "Entre el 01 de abril y el 10 de mayo, Wella Pro Perú trabajó sin inversión publicitaria. Facebook pasó de 53,152 a 53,195 seguidores: +43 en 40 días, crecimiento lento pero consistente. Instagram cerró en 37,932 seguidores, con una ventana de visibilidad histórica limitada (Metricool empezó a registrar el conteo diario desde el 27 de abril).",
+        "El pico de seguidores Instagram del periodo fue 38,006 (05-may), tras la campaña Día de la Madre. En los siguientes 5 días la cuenta retrocedió a 37,932 (−74 seguidores). Este patrón de spike + corrección es habitual tras una activación: la base se decanta y queda la audiencia más relevante.",
+        "En 40 días se publicaron 16 piezas en Instagram (11 posts de feed + 5 reels), un ritmo de ~2.8 publicaciones por semana. No hay TikTok conectado en esta cuenta. Facebook actúa como vitrina secundaria — replica las piezas IG y captura impresiones, pero la interacción es residual (475 reacciones totales en 40 días)."
+      ],
+      "image": null,
+      "image_caption": ""
+    },
+    "act2": {
+      "number": "Acto 2 · Contenido — Cultural Hook + Producto",
+      "title": "Color Touch + El Diablo viste a la Moda 2 fue la pieza ganadora del periodo: 151 interacciones y 5.10% de ER",
+      "type": "content",
+      "paragraphs": [
+        "La publicación del 30 de abril que conecta Color Touch con el estreno de El Diablo viste a la Moda 2 fue el contenido top del periodo: 2,959 de alcance, 4,813 impresiones, 119 likes, 10 comentarios, 20 shares y 5.10% de ER. La fórmula: momento cultural + producto + copy breve y conciso. Es una fórmula replicable mes a mes.",
+        "El segundo mejor post fue la rutina Ultimate Smooth en 3 pasos (21-abr): 1,779 de alcance, 114 interacciones y el ER más alto del periodo (6.41%). El formato educativo paso-a-paso supera al copy aspiracional puro. La gente guarda y comparte cuando entiende cómo aplicar.",
+        "El eje Día de la Madre se trabajó con dos piezas: Pack Oil Reflections (30-abr, 64 interacciones, 4.83% ER) y Pack SP Luxe Oil (03-may, 48 interacciones, 4.49% ER). Generaron tracción pero ninguna llegó al nivel del post Color Touch. La lección: el cultural hook venció al gift-pack como hook emocional."
+      ],
+      "image": null,
+      "image_caption": "Color Touch · 'El Diablo viste a la Moda 2' — 151 interacciones, 5.10% ER"
+    },
+    "act3": {
+      "number": "Acto 3 · Lo que NO funcionó",
+      "title": "Tres posts publicados el mismo día (14-abr) se canibalizaron entre sí: el peor caso del periodo",
+      "type": "reach",
+      "paragraphs": [
+        "El 14 de abril se publicaron 3 posts de feed en una ventana de 1 minuto (entre las 23:09 y las 23:10 UTC+2). El resultado fue alcance fragmentado: los tres acumulan solo 2,450 de reach combinado, con 23, 30 y 61 interacciones. Publicar piezas consecutivas en la misma franja mata el alcance individual: el algoritmo de Instagram distribuye un share-of-feed limitado por cuenta-hora.",
+        "El segundo aprendizaje viene del post Miracle Oil Serum del 24-abr: 5.64% de ER (alto) pero solo 621 de alcance (bajo). El contenido conecta con quien lo ve pero no se distribuye. Las hipótesis: caption denso (5 bullet points + emojis), CTA no claro y horario subóptimo (madrugada Lima).",
+        "Riesgo identificado: los comentarios por post promedian 2.5 en todo el periodo. La audiencia da like y comparte, pero no conversa. Los captions no están pidiendo conversación. Próximo mes: introducir preguntas cerradas (¿Cuál es tu tono favorito? ¿Lo usas en casa o en salón?) para activar comments."
+      ],
+      "image": null,
+      "image_caption": "",
+      "risks": [
+        "Riesgo de canibalización: 3 piezas publicadas el mismo día redujeron alcance individual a la mitad",
+        "Comentarios promedio por post = 2.5 → captions sin pregunta, audiencia no conversa",
+        "Reels publicados sin descripción ni hashtags rinden ER 30% más bajo que feed"
+      ]
+    },
+    "act4": {
+      "number": "Acto 4 · Facebook · Vitrina Secundaria",
+      "title": "Facebook genera alcance (27.7K impresiones) pero la interacción es residual (475 reacciones, 1.7% reacción/imp)",
+      "paragraphs": [
+        "Facebook concentró 27,683 impresiones de posts en 40 días, pero el 57% del total se generó entre el 27 y el 30 de abril (15,929 impresiones en 4 días). El driver fue la réplica en FB de las piezas IG que mejor rindieron: Color Touch y Pack Día Madre.",
+        "La interacción FB es residual: 475 reacciones totales (~12 por día), 1,387 page views en el periodo, casi sin shares ni comentarios. La audiencia de Facebook de Wella Pro Perú es pasiva: ve, pero no actúa.",
+        "Recomendación: NO invertir esfuerzo creativo específico para FB. Mantenerla como mirror de IG con publicación automática. Reasignar el tiempo de copy/edición FB hacia más reels IG, que es donde está la oportunidad de alcance no capturado."
+      ],
+      "image": null,
+      "image_caption": ""
+    },
+    "act5": {
+      "number": "Acto 5 · Próximos Pasos",
+      "title": "Replicar el formato cultural hook, subir el volumen de reels y configurar competidores en Metricool",
+      "type": "competition",
+      "paragraphs": [
+        "Primera apuesta: replicar mensualmente la fórmula que mejor funcionó del periodo. Producto Wella + momento cultural relevante + copy corto. Próximos hooks naturales: estrenos de cine, premios, fechas pop. Una pieza al mes con esta estructura debería ser el norte.",
+        "Segunda apuesta: subir el volumen de reels de 5 a 10 al mes. El ER reels promedio es 3.38% — más bajo que feed pero el reach absoluto es comparable (8,265 vs 13,224). Hay alcance no capturado por falta de volumen, no por falta de calidad.",
+        "Tercera apuesta: configurar competidores en Metricool (K'allma, Schwarzkopf, L'Oréal Professionnel Paris, Redken). Sin benchmark de categoría no se puede afirmar si 4.76% de ER es bueno o excelente para esta vertical. Sin sentimiento (no se subieron comentarios) tampoco se tiene voz del cliente. Próximo reporte: incluir CSVs de comentarios IG/FB del periodo."
+      ],
+      "image": null,
+      "highlight": "Periodo 100% orgánico · ER feed 4.76% (sobre benchmark) · Cultural hook + producto = fórmula ganadora"
+    },
+    "act6": {
+      "number": "Acto 6 · Acciones Recomendadas",
+      "title": "5 acciones priorizadas para mayo-junio",
+      "items": [
+        {
+          "type": "bet",
+          "text": "Replicar la fórmula 'Color Touch + cultural hook' una vez al mes. Estructura: producto Wella + referencia pop cultural + copy corto. Es la pieza top del periodo (151 interacciones, 5.10% ER)."
+        },
+        {
+          "type": "bet",
+          "text": "Subir volumen de reels de 5 a 10 por mes. Los reels alcanzaron 8.2K de reach con solo 5 piezas. Duplicando volumen, alcance esperado: 15-18K mensual sin pauta."
+        },
+        {
+          "type": "bet",
+          "text": "Introducir preguntas cerradas en los captions para activar comentarios. Promedio actual: 2.5 comments/post. Meta: 8-10 por pieza educativa."
+        },
+        {
+          "type": "fix",
+          "text": "No publicar más de 1 pieza al día en feed. El 14-abr se publicaron 3 posts en 1 minuto y se canibalizaron alcance. Espaciar mínimo 24h entre piezas."
+        },
+        {
+          "type": "fix",
+          "text": "No invertir esfuerzo creativo específico para Facebook. Mantenerlo como mirror automático de IG. La audiencia FB ve pero no interactúa (1.7% reacción/impresión)."
+        },
+        {
+          "type": "system",
+          "text": "Configurar competidores en Metricool: K'allma, Schwarzkopf, L'Oréal Professionnel Paris, Redken. Sin esto no hay benchmark de categoría."
+        },
+        {
+          "type": "system",
+          "text": "Próximo reporte: subir CSVs de comentarios IG y FB del periodo para análisis de sentimiento (currently null)."
+        }
+      ],
+      "highlight": "Replicar cultural hook · 2x volumen reels · Espaciar publicaciones · Configurar competidores"
+    }
+  },
+  "technical_texts": {
+    "resumen": "Periodo: 01 abril al 10 mayo 2026 (40 días). Se publicaron 16 piezas en Instagram (11 posts feed + 5 reels). No hay TikTok conectado. Facebook actúa como mirror. Facebook sumó +43 seguidores (53,152 → 53,195). Instagram cerró en 37,932 seguidores. ER promedio feed IG: 4.76% (sobre benchmark de beauty). Reporte 100% orgánico — sin pauta.",
+    "audiencia": null,
+    "contenido_insight": "El post top del periodo combinó producto + cultural hook + copy corto: Color Touch / El Diablo viste a la Moda 2 (30-abr) — 151 interacciones, 5.10% ER, 2,959 alcance. Le sigue el formato educativo paso-a-paso (Rutina Ultimate Smooth 3 pasos, 21-abr): 6.41% ER, el más alto del periodo.",
+    "contenido_fail": "El 14-abr se publicaron 3 posts de feed en 1 minuto y se canibalizaron alcance. Reach combinado: 2,450 (vs. ~3,000 esperados por pieza individual). Otra lección: el post Miracle Oil Serum del 24-abr tiene ER alto (5.64%) pero reach bajo (621): caption denso, CTA difuso y horario madrugada Lima.",
+    "contenido_horario": "Patrón observado: los posts con mejor rendimiento del periodo se publicaron entre 21:00 y 02:00 UTC+2 (= 14:00-19:00 Lima). El post de 23:09 UTC+2 del 14-abr (=16:09 Lima) tuvo el menor reach del periodo. Hipótesis a validar: ventana óptima Lima 13:00-19:00.",
+    "riesgo_fb": "Facebook genera alcance (27,683 impresiones en 40 días) pero la interacción es residual: 475 reacciones, ratio reacción/impresión 1.7%. Audiencia FB pasiva. Recomendación: mantenerlo como mirror de IG, no producir contenido específico para FB.",
+    "indice_valor": null,
+    "temas_recurrentes": "Productos del periodo: Ultimate Smooth (rutina antifrizz, 4-5 piezas), Pack Día de la Madre (Oil Reflections + SP Luxe Oil, 2 piezas), Color Touch (1 pieza top), Miracle Oil Serum (1 pieza). El eje Ultimate Smooth fue el más constante; el cultural hook Color Touch fue el más eficiente en interacciones.",
+    "bhs_explicacion": null
+  },
+  "bhs": {
+    "total": 0,
+    "benchmark": "0",
+    "dimensions": {
+      "crecimiento": 0,
+      "alcance": 0,
+      "engagement": 0,
+      "sentimiento": 0,
+      "eficiencia": 0,
+      "metas": 0,
+      "posicion_comp": 0
+    }
+  },
+  "executive": {
+    "intro_ig_top": "Los posts top del periodo comparten dos patrones: cultural hook (Color Touch + Devil Wears Prada 2) o formato educativo paso-a-paso (Rutina Ultimate Smooth). Ambos superan el 5% de ER y alcanzan reach por encima de 1,700.",
+    "intro_tk_top": null,
+    "intro_ig_worst": "Los formatos a descartar: posts sin caption, publicaciones canibalizadas (3 en 1 minuto), reels sin descripción ni hashtags. La pieza con peor reach/ER del periodo combinó las tres fallas.",
+    "intro_tk_worst": null,
+    "intro_influencers": null,
+    "intro_influencers_avoid": null,
+    "intro_voices": "No se subieron comentarios IG/FB al admin para este periodo. El análisis de sentimiento queda pendiente para el próximo reporte. Recomendado: exportar comentarios de los 11 posts feed y de los 5 reels del periodo.",
+    "conclusiones_ig": {
+      "headline": "16 piezas · 21.5K reach · 4.76% ER feed (sobre benchmark beauty)",
+      "formula": "Cultural hook + producto Wella + copy corto. Alternativa: formato educativo paso-a-paso con resultado claro. Ambos formatos superan el 5% de ER. Los posts sin caption y publicados en bloque rinden por debajo del 1% del alcance esperado.",
+      "best_time": "13:00-19:00 hora Lima (hipótesis a validar próximo mes)",
+      "data_points": [
+        { "label": "Post top", "value": "151 int · 5.10% ER" },
+        { "label": "ER más alto", "value": "6.41% (Rutina Ultimate Smooth)" },
+        { "label": "Reach total IG", "value": "21,489" }
+      ],
+      "next_steps": [
+        "Replicar la fórmula Color Touch + cultural hook 1x al mes",
+        "Subir volumen reels de 5 a 10 por mes",
+        "Espaciar publicaciones mínimo 24h",
+        "Introducir preguntas cerradas en captions"
+      ]
+    },
+    "conclusiones_tk": null
+  },
+  "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "Instagram",
+      "title": "Replicar la fórmula 'Cultural hook + Producto'",
+      "description": "El post top del periodo (Color Touch + El Diablo viste a la Moda 2) combinó producto Wella, referencia pop cultural y copy corto. Resultado: 151 interacciones y 5.10% de ER. Producir 1 pieza al mes con esta estructura. Próximos hooks naturales: estrenos cine, premios, fechas pop."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Instagram",
+      "title": "Subir volumen de reels de 5 a 10 al mes",
+      "description": "Los 5 reels del periodo generaron 8,265 de alcance con 3.38% de ER promedio. Hay alcance no capturado por falta de volumen, no por falta de calidad. Duplicando volumen, alcance reels esperado para próximo mes: 15-18K."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Instagram",
+      "title": "Activar conversación en captions",
+      "description": "Comentarios promedio por post = 2.5. La audiencia da like y comparte pero no conversa. Introducir preguntas cerradas en los captions (ej: ¿Cuál es tu tono favorito? ¿Lo usas en casa o salón?) para subir a 8-10 comments por pieza educativa."
+    },
+    {
+      "priority": "Media",
+      "channel": "Instagram",
+      "title": "No publicar más de 1 pieza al día",
+      "description": "El 14 de abril se publicaron 3 posts en 1 minuto y se canibalizaron alcance. Reach combinado fue la mitad de lo esperado. Espaciar publicaciones mínimo 24h."
+    },
+    {
+      "priority": "Media",
+      "channel": "Facebook",
+      "title": "Mantener Facebook como mirror de IG",
+      "description": "FB generó 27.7K impresiones en 40 días pero solo 475 reacciones (1.7% reacción/imp). Audiencia FB pasiva. No invertir esfuerzo creativo específico — mantener como replicador automático de IG."
+    },
+    {
+      "priority": "Media",
+      "channel": "Multi",
+      "title": "Configurar competidores en Metricool",
+      "description": "Wella Pro Perú no tiene competidores configurados en Metricool. Sin benchmark de categoría no se puede afirmar si 4.76% de ER es bueno o excelente. Agregar: K'allma, Schwarzkopf, L'Oréal Professionnel Paris, Redken."
+    },
+    {
+      "priority": "Baja",
+      "channel": "Multi",
+      "title": "Subir comentarios para análisis de sentimiento",
+      "description": "Próximo reporte: exportar comentarios IG y FB del periodo (11 posts feed + 5 reels) y subirlos al admin para análisis de sentimiento. Sin esto no hay voz del cliente ni word cloud."
+    }
+  ],
+  "content": {
+    "total_pieces": {
+      "total": 16,
+      "ig_posts": 11,
+      "ig_reels": 5,
+      "fb_posts": 0,
+      "fb_reels": 0,
+      "tiktok": 0
+    },
+    "by_channel": {
+      "ig": {
+        "top": [
+          {
+            "title": "Color Touch · 'El Diablo viste a la Moda 2'",
+            "platform": "IG Post",
+            "date": "2026-04-30",
+            "reach": 2959,
+            "views": 4813,
+            "likes": 119,
+            "shares": 20,
+            "saves": 2,
+            "comments": 10,
+            "er": "5.10%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DXxE1vFE13g/",
+            "note": "Pieza top del periodo. Cultural hook (estreno Devil Wears Prada 2) + producto + copy corto. Fórmula replicable mensual.",
+            "coverImageUrl": "https://scontent-lhr6-1.cdninstagram.com/v/t39.30808-6/684687140_1393820586119032_6189080612501899285_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74"
+          },
+          {
+            "title": "Rutina Ultimate Smooth — 3 pasos",
+            "platform": "IG Carousel",
+            "date": "2026-04-21",
+            "reach": 1779,
+            "views": 3878,
+            "likes": 82,
+            "shares": 22,
+            "saves": 8,
+            "comments": 2,
+            "er": "6.41%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DXXwN1BiFOA/",
+            "note": "ER más alto del periodo (6.41%). Formato educativo paso a paso con resultado claro. 8 saves indican intención de aplicar.",
+            "coverImageUrl": "https://scontent-lhr6-2.cdninstagram.com/v/t39.30808-6/673750695_1386148053552952_7016387772217361475_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74"
+          },
+          {
+            "title": "Pack Oil Reflections · Día de la Madre",
+            "platform": "IG Post",
+            "date": "2026-04-30",
+            "reach": 1326,
+            "views": 2458,
+            "likes": 51,
+            "shares": 9,
+            "saves": 4,
+            "comments": 0,
+            "er": "4.83%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DXvCPQnj5HZ/",
+            "note": "Eje Día de la Madre. Pack de regalo + mensaje de cuidado profesional. Tracción sólida pero por debajo del cultural hook.",
+            "coverImageUrl": "https://scontent-lhr8-2.cdninstagram.com/v/t39.30808-6/684893403_1393813119453112_1750831394411915027_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74"
+          }
+        ],
+        "worst": [
+          {
+            "title": "Post sin caption (14-abr · 1 de 3)",
+            "platform": "IG Post",
+            "date": "2026-04-14",
+            "reach": 547,
+            "views": 1128,
+            "likes": 20,
+            "shares": 1,
+            "saves": 0,
+            "comments": 2,
+            "er": "4.20%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DXIG0mAj2Ix/",
+            "note": "Publicado en bloque con otros 2 posts en 1 minuto. Sin caption ni hashtags. Alcance canibalizado.",
+            "coverImageUrl": "https://scontent-lhr6-1.cdninstagram.com/v/t39.30808-6/672645638_1381179640716460_6452547722202399977_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74"
+          },
+          {
+            "title": "Miracle Oil Serum · 'dosis diaria de confianza'",
+            "platform": "IG Carousel",
+            "date": "2026-04-24",
+            "reach": 621,
+            "views": 1424,
+            "likes": 23,
+            "shares": 5,
+            "saves": 1,
+            "comments": 6,
+            "er": "5.64%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DXfa_UAjz1o/",
+            "note": "ER alto (5.64%) pero reach bajo (621). Caption denso, CTA difuso. La pieza conecta pero no se distribuye.",
+            "coverImageUrl": "https://scontent-lhr8-2.cdninstagram.com/v/t39.30808-6/679004544_1388608426640248_892814261013707347_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74"
+          },
+          {
+            "title": "Antes/Después rizos rebeldes",
+            "platform": "IG Post",
+            "date": "2026-04-25",
+            "reach": 1051,
+            "views": 1837,
+            "likes": 27,
+            "shares": 4,
+            "saves": 2,
+            "comments": 2,
+            "er": "3.33%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DXiAP-smDKi/",
+            "note": "El más bajo en ER% del periodo (3.33%). Formato antes/después no rindió como en otras marcas — hipótesis: el contraste visual no fue claro.",
+            "coverImageUrl": "https://scontent-lhr6-1.cdninstagram.com/v/t39.30808-6/678280117_1389486066552484_3654472728288892986_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74"
+          }
+        ]
+      },
+      "fb": {
+        "top": [],
+        "worst": [],
+        "note": "Facebook actúa como mirror de IG en esta cuenta. 27,683 impresiones acumuladas en 40 días pero solo 475 reacciones (1.7% reacción/imp). Audiencia pasiva, no se produce contenido específico para FB."
+      },
+      "tk": {
+        "top": [],
+        "worst": [],
+        "note": "Wella Pro Perú no tiene TikTok conectado en esta cuenta. (La cuenta wella_peru sí, pero es otra marca distinta)."
+      }
+    },
+    "influencers": [],
+    "organic_highlights": []
+  },
+  "competitors": {
+    "instagram": [],
+    "facebook": [],
+    "note": "Wella Pro Perú no tiene competidores configurados en Metricool. Pendiente agregar K'allma, Schwarzkopf, L'Oréal Professionnel Paris, Redken para benchmark de categoría."
+  },
+  "metrics_raw": {
+    "ig": {
+      "feed_totals": {
+        "posts": 11,
+        "reach": 13224,
+        "impressions": 25498,
+        "interactions": 649,
+        "likes": 497,
+        "comments": 27,
+        "shares": 95,
+        "saves": 30,
+        "avg_er_pct": 4.76
+      },
+      "reels_totals": {
+        "reels": 5,
+        "reach": 8265,
+        "views": 12328,
+        "likes": 193,
+        "comments": 30,
+        "shares": 18,
+        "avg_er_pct": 3.38
+      }
+    },
+    "fb": {
+      "totals": {
+        "page_posts_impressions": 27683,
+        "page_actions_post_reactions_total": 475,
+        "page_views": 1387,
+        "follower_delta": 43
+      }
+    }
+  }
+}
