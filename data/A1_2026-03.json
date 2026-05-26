@@ -21,10 +21,6 @@
         "label": "Collabs Influencers"
       },
       {
-        "value": "65",
-        "label": "Brand Health Score"
-      },
-      {
         "value": "S/ 868",
         "label": "Inversión Meta Ads"
       }
@@ -37,152 +33,7 @@
     "contact": "hola@ludik.io · ludik.io",
     "confidential": "Este reporte es confidencial y fue preparado exclusivamente para A1 Perú"
   },
-  "objectives": [
-    {
-      "objective": "Alcance FB Lima",
-      "channel": "Facebook",
-      "target": "110,374",
-      "result": "148,848",
-      "status": "met",
-      "delta": "+35%"
-    },
-    {
-      "objective": "Interacciones FB Lima",
-      "channel": "Facebook",
-      "target": "600",
-      "result": "328",
-      "status": "missed",
-      "delta": "55%"
-    },
-    {
-      "objective": "Visualizaciones FB Lima",
-      "channel": "Facebook",
-      "target": "16,998",
-      "result": "43,637",
-      "status": "met",
-      "delta": "+157%"
-    },
-    {
-      "objective": "Alcance FB Provincia",
-      "channel": "Facebook",
-      "target": "89,830",
-      "result": "112,529",
-      "status": "met",
-      "delta": "+25%"
-    },
-    {
-      "objective": "Interacciones FB Provincia",
-      "channel": "Facebook",
-      "target": "264",
-      "result": "286",
-      "status": "met",
-      "delta": "+8%"
-    },
-    {
-      "objective": "Visualizaciones FB Provincia",
-      "channel": "Facebook",
-      "target": "11,783",
-      "result": "40,846",
-      "status": "met",
-      "delta": "+247%"
-    },
-    {
-      "objective": "Alcance IG Lima",
-      "channel": "Instagram",
-      "target": "73,582",
-      "result": "64,821",
-      "status": "missed",
-      "delta": "88%"
-    },
-    {
-      "objective": "Interacciones IG Lima",
-      "channel": "Instagram",
-      "target": "400",
-      "result": "183",
-      "status": "missed",
-      "delta": "46%"
-    },
-    {
-      "objective": "Visualizaciones IG Lima",
-      "channel": "Instagram",
-      "target": "11,332",
-      "result": "14,652",
-      "status": "met",
-      "delta": "+29%"
-    },
-    {
-      "objective": "Alcance IG Provincia",
-      "channel": "Instagram",
-      "target": "59,886",
-      "result": "112,529",
-      "status": "met",
-      "delta": "+88%"
-    },
-    {
-      "objective": "Interacciones IG Provincia",
-      "channel": "Instagram",
-      "target": "176",
-      "result": "286",
-      "status": "met",
-      "delta": "+62%"
-    },
-    {
-      "objective": "Visualizaciones IG Provincia",
-      "channel": "Instagram",
-      "target": "7,855",
-      "result": "40,846",
-      "status": "met",
-      "delta": "+420%"
-    },
-    {
-      "objective": "Alcance TK Lima",
-      "channel": "TikTok",
-      "target": "112,722",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    },
-    {
-      "objective": "Interacciones TK Lima",
-      "channel": "TikTok",
-      "target": "1,030",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    },
-    {
-      "objective": "Visualizaciones TK Lima",
-      "channel": "TikTok",
-      "target": "50,368",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    },
-    {
-      "objective": "Alcance TK Provincia",
-      "channel": "TikTok",
-      "target": "84,819",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    },
-    {
-      "objective": "Interacciones TK Provincia",
-      "channel": "TikTok",
-      "target": "653",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    },
-    {
-      "objective": "Visualizaciones TK Provincia",
-      "channel": "TikTok",
-      "target": "37,704",
-      "result": "—",
-      "status": "missed",
-      "delta": "0%"
-    }
-  ],
+  "objectives": [],
   "community": {
     "facebook": {
       "start": 15034,
@@ -313,17 +164,9 @@
     "bhs_explicacion": "BHS 65/100. Fortalezas: Engagement (72) por ER competitivo y sentimiento positivo. Alcance mejorado tras data real de Meta Ads (438K personas). Debilidades: TK falló ambas metas (alcance 1.6%, interacciones 5.3%) por falta de inversión. Metas 67/100 (4/6 cumplidas)."
   },
   "bhs": {
-    "total": 65,
-    "benchmark": "70-75",
-    "dimensions": {
-      "crecimiento": 60,
-      "alcance": 55,
-      "engagement": 72,
-      "sentimiento": 70,
-      "eficiencia": 65,
-      "metas": 67,
-      "posicion_comp": 70
-    }
+    "total": 0,
+    "benchmark": "",
+    "dimensions": {}
   },
   "recommendations": [
     {
