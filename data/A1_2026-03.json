@@ -38,24 +38,150 @@
     "confidential": "Este reporte es confidencial y fue preparado exclusivamente para A1 Perú"
   },
   "objectives": [
-    {"objective": "Alcance FB Lima", "channel": "Facebook", "target": "110,374", "result": "148,848", "status": "met", "delta": "+35%"},
-    {"objective": "Interacciones FB Lima", "channel": "Facebook", "target": "600", "result": "328", "status": "missed", "delta": "55%"},
-    {"objective": "Visualizaciones FB Lima", "channel": "Facebook", "target": "16,998", "result": "43,637", "status": "met", "delta": "+157%"},
-    {"objective": "Alcance FB Provincia", "channel": "Facebook", "target": "89,830", "result": "112,529", "status": "met", "delta": "+25%"},
-    {"objective": "Interacciones FB Provincia", "channel": "Facebook", "target": "264", "result": "286", "status": "met", "delta": "+8%"},
-    {"objective": "Visualizaciones FB Provincia", "channel": "Facebook", "target": "11,783", "result": "40,846", "status": "met", "delta": "+247%"},
-    {"objective": "Alcance IG Lima", "channel": "Instagram", "target": "73,582", "result": "64,821", "status": "missed", "delta": "88%"},
-    {"objective": "Interacciones IG Lima", "channel": "Instagram", "target": "400", "result": "183", "status": "missed", "delta": "46%"},
-    {"objective": "Visualizaciones IG Lima", "channel": "Instagram", "target": "11,332", "result": "14,652", "status": "met", "delta": "+29%"},
-    {"objective": "Alcance IG Provincia", "channel": "Instagram", "target": "59,886", "result": "112,529", "status": "met", "delta": "+88%"},
-    {"objective": "Interacciones IG Provincia", "channel": "Instagram", "target": "176", "result": "286", "status": "met", "delta": "+62%"},
-    {"objective": "Visualizaciones IG Provincia", "channel": "Instagram", "target": "7,855", "result": "40,846", "status": "met", "delta": "+420%"},
-    {"objective": "Alcance TK Lima", "channel": "TikTok", "target": "112,722", "result": "—", "status": "missed", "delta": "0%"},
-    {"objective": "Interacciones TK Lima", "channel": "TikTok", "target": "1,030", "result": "—", "status": "missed", "delta": "0%"},
-    {"objective": "Visualizaciones TK Lima", "channel": "TikTok", "target": "50,368", "result": "—", "status": "missed", "delta": "0%"},
-    {"objective": "Alcance TK Provincia", "channel": "TikTok", "target": "84,819", "result": "—", "status": "missed", "delta": "0%"},
-    {"objective": "Interacciones TK Provincia", "channel": "TikTok", "target": "653", "result": "—", "status": "missed", "delta": "0%"},
-    {"objective": "Visualizaciones TK Provincia", "channel": "TikTok", "target": "37,704", "result": "—", "status": "missed", "delta": "0%"}
+    {
+      "objective": "Alcance FB Lima",
+      "channel": "Facebook",
+      "target": "110,374",
+      "result": "148,848",
+      "status": "met",
+      "delta": "+35%"
+    },
+    {
+      "objective": "Interacciones FB Lima",
+      "channel": "Facebook",
+      "target": "600",
+      "result": "328",
+      "status": "missed",
+      "delta": "55%"
+    },
+    {
+      "objective": "Visualizaciones FB Lima",
+      "channel": "Facebook",
+      "target": "16,998",
+      "result": "43,637",
+      "status": "met",
+      "delta": "+157%"
+    },
+    {
+      "objective": "Alcance FB Provincia",
+      "channel": "Facebook",
+      "target": "89,830",
+      "result": "112,529",
+      "status": "met",
+      "delta": "+25%"
+    },
+    {
+      "objective": "Interacciones FB Provincia",
+      "channel": "Facebook",
+      "target": "264",
+      "result": "286",
+      "status": "met",
+      "delta": "+8%"
+    },
+    {
+      "objective": "Visualizaciones FB Provincia",
+      "channel": "Facebook",
+      "target": "11,783",
+      "result": "40,846",
+      "status": "met",
+      "delta": "+247%"
+    },
+    {
+      "objective": "Alcance IG Lima",
+      "channel": "Instagram",
+      "target": "73,582",
+      "result": "64,821",
+      "status": "missed",
+      "delta": "88%"
+    },
+    {
+      "objective": "Interacciones IG Lima",
+      "channel": "Instagram",
+      "target": "400",
+      "result": "183",
+      "status": "missed",
+      "delta": "46%"
+    },
+    {
+      "objective": "Visualizaciones IG Lima",
+      "channel": "Instagram",
+      "target": "11,332",
+      "result": "14,652",
+      "status": "met",
+      "delta": "+29%"
+    },
+    {
+      "objective": "Alcance IG Provincia",
+      "channel": "Instagram",
+      "target": "59,886",
+      "result": "112,529",
+      "status": "met",
+      "delta": "+88%"
+    },
+    {
+      "objective": "Interacciones IG Provincia",
+      "channel": "Instagram",
+      "target": "176",
+      "result": "286",
+      "status": "met",
+      "delta": "+62%"
+    },
+    {
+      "objective": "Visualizaciones IG Provincia",
+      "channel": "Instagram",
+      "target": "7,855",
+      "result": "40,846",
+      "status": "met",
+      "delta": "+420%"
+    },
+    {
+      "objective": "Alcance TK Lima",
+      "channel": "TikTok",
+      "target": "112,722",
+      "result": "—",
+      "status": "missed",
+      "delta": "0%"
+    },
+    {
+      "objective": "Interacciones TK Lima",
+      "channel": "TikTok",
+      "target": "1,030",
+      "result": "—",
+      "status": "missed",
+      "delta": "0%"
+    },
+    {
+      "objective": "Visualizaciones TK Lima",
+      "channel": "TikTok",
+      "target": "50,368",
+      "result": "—",
+      "status": "missed",
+      "delta": "0%"
+    },
+    {
+      "objective": "Alcance TK Provincia",
+      "channel": "TikTok",
+      "target": "84,819",
+      "result": "—",
+      "status": "missed",
+      "delta": "0%"
+    },
+    {
+      "objective": "Interacciones TK Provincia",
+      "channel": "TikTok",
+      "target": "653",
+      "result": "—",
+      "status": "missed",
+      "delta": "0%"
+    },
+    {
+      "objective": "Visualizaciones TK Provincia",
+      "channel": "TikTok",
+      "target": "37,704",
+      "result": "—",
+      "status": "missed",
+      "delta": "0%"
+    }
   ],
   "community": {
     "facebook": {
@@ -72,11 +198,11 @@
     }
   },
   "investment": {
-    "meta_ads_usd": 229.70,
+    "meta_ads_usd": 229.7,
     "meta_ads_soles": 868.27,
     "tiktok_ads_usd": 0,
     "tiktok_ads_soles": 0,
-    "total_usd": 229.70,
+    "total_usd": 229.7,
     "total_soles": 868.27,
     "meta_pct": 100,
     "tiktok_pct": 0,
@@ -384,7 +510,121 @@
         "note": "Mejor reel por ER. Formato receta + sorteo.",
         "url": "https://www.instagram.com/reel/DWZ8dSZj9IX/"
       }
-    ]
+    ],
+    "by_channel": {
+      "ig": {
+        "top": [
+          {
+            "title": "Sorteo Viaje A1 (carrusel)",
+            "platform": "Instagram",
+            "date": "2026-03-07",
+            "views": 2007,
+            "interactions": 88,
+            "er": "10.90%",
+            "note": "Mejor post orgánico + pauta. Lanzamiento del sorteo.",
+            "coverImageUrl": "https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/646879901_1376152751209034_7566887106753509156_n.jpg",
+            "url": "https://www.instagram.com/p/DVlYmOKDQNr/",
+            "reach": 2007
+          },
+          {
+            "title": "Día de la Mujer",
+            "platform": "Instagram",
+            "date": "2026-03-08",
+            "views": 384,
+            "interactions": 33,
+            "er": "16.75%",
+            "note": "100% orgánico. Mejor ER del mes.",
+            "coverImageUrl": "https://scontent-lhr6-2.xx.fbcdn.net/v/t39.30808-6/648154432_1376576134500029_5364670950570464533_n.jpg",
+            "url": "https://www.instagram.com/p/DVn9hKFgd2l/",
+            "reach": 384
+          },
+          {
+            "title": "Sándwich Punta Sal (reel)",
+            "platform": "Instagram Reel",
+            "date": "2026-03-27",
+            "views": 1197,
+            "interactions": 94,
+            "er": "14.87%",
+            "note": "Mejor reel por ER. Formato receta + sorteo.",
+            "url": "https://www.instagram.com/reel/DWZ8dSZj9IX/",
+            "reach": 1197
+          }
+        ],
+        "worst": []
+      },
+      "tiktok": {
+        "top": [
+          {
+            "title": "Cambia sudor por sol (gym→playa)",
+            "date": "2026-03-20",
+            "views": 353,
+            "likes": 11,
+            "comments": 3,
+            "shares": 2,
+            "reach": 353,
+            "engagement": 4.53,
+            "url": "https://www.tiktok.com/@a1_peru/video/7619360144501050625",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7619360144501050625.jpg",
+            "platform": "TikTok"
+          },
+          {
+            "title": "Salpicón Pamela More",
+            "date": "2026-03-28",
+            "views": 327,
+            "likes": 12,
+            "comments": 0,
+            "shares": 2,
+            "reach": 327,
+            "engagement": 4.28,
+            "url": "https://www.tiktok.com/@a1_peru/video/7622073598915710209",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7622073598915710209.jpg",
+            "platform": "TikTok"
+          },
+          {
+            "title": "Causa ganadora Punta Sal",
+            "date": "2026-03-30",
+            "views": 274,
+            "likes": 6,
+            "comments": 0,
+            "shares": 0,
+            "reach": 274,
+            "engagement": 2.19,
+            "url": "https://www.tiktok.com/@a1_peru/video/7623158708519996688",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7623158708519996688.jpg",
+            "platform": "TikTok"
+          }
+        ],
+        "worst": [
+          {
+            "title": "Receta de siempre",
+            "platform": "TikTok",
+            "date": "2026-03-26",
+            "reach": 206,
+            "views": 206,
+            "likes": 4,
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7621675758674562320.jpg"
+          },
+          {
+            "title": "Paraíso CGI",
+            "platform": "TikTok",
+            "date": "2026-03-23",
+            "reach": 217,
+            "views": 217,
+            "likes": 8,
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7620482638117195024.jpg"
+          },
+          {
+            "title": "Un clic al norte",
+            "platform": "TikTok",
+            "date": "2026-03-25",
+            "reach": 222,
+            "views": 222,
+            "likes": 4,
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5981134-7621277280186240272.jpg"
+          }
+        ]
+      }
+    }
   },
   "summary_kpis": {
     "objectives": "9/18",
@@ -646,10 +886,10 @@
     "er_ig": [
       2.46,
       24.94,
-      6.50,
+      6.5,
       3.99,
       7.21,
-      0.30
+      0.3
     ],
     "er_tk": [
       0,
