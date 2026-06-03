@@ -10,20 +10,28 @@
     "footer": "Confidencial · Preparado por el equipo LUDiK para Wella Perú (Perufarma)",
     "kpis": [
       {
-        "value": "+1,599",
-        "label": "Nuevos seguidores (IG+TK)"
+        "value": "+1,107",
+        "label": "Nuevos seg. Instagram",
+        "delta_pct": "+47%",
+        "delta_note": "de 2,354 a 3,461"
       },
       {
-        "value": "33.97%",
-        "label": "ER pico — sorteo IG"
+        "value": "+492",
+        "label": "Nuevos seg. TikTok",
+        "delta_pct": "+43%",
+        "delta_note": "de 1,144 a 1,636"
       },
       {
         "value": "~56.3K",
-        "label": "Visualizaciones pauta Meta"
+        "label": "Visualizaciones pauta Meta",
+        "delta_pct": "$75.84",
+        "delta_note": "3 posts · CPM S/5.1"
       },
       {
         "value": "97%",
-        "label": "Sentimiento positivo"
+        "label": "Sentimiento positivo",
+        "delta_pct": "0 negativos",
+        "delta_note": "72 comentarios IG"
       }
     ]
   },
@@ -71,15 +79,21 @@
   "community": {
     "facebook": {
       "start": 0,
-      "end": 0
+      "end": 0,
+      "delta": 0,
+      "delta_pct": 0
     },
     "instagram": {
       "start": 2354,
-      "end": 3461
+      "end": 3461,
+      "delta": 1107,
+      "delta_pct": 47
     },
     "tiktok": {
       "start": 1144,
-      "end": 1636
+      "end": 1636,
+      "delta": 492,
+      "delta_pct": 43
     },
     "total_new": 1599
   },
@@ -299,44 +313,45 @@
         "top": "TikTok premia el formato nativo y la mecánica de participación. El sorteo (81.86% ER) y el educativo 'primera vez' (45% de tráfico desde búsqueda) muestran dos rutas: viralidad por sorteo y captación por intención de búsqueda.",
         "worst": "En TikTok, los videos sin protagonista ni resultado visible (preguntas-miedo, ritual lento) no superan el 2.6% de ER y el algoritmo no los amplifica más allá del alcance base."
       }
-    }
+    },
+    "competencia_intro": "Wella Perú lidera el engagement por seguidor de la categoría regional, pese a ser de las cuentas más pequeñas. Y al revisar el mejor contenido de cada competidor (por comentarios), se confirma que generan poca conversación."
   },
   "recommendations": [
     {
       "priority": "Alta",
       "channel": "Multi",
-      "title": "Mantener el sorteo mensual cross-platform",
-      "description": "La mecánica seguir + comentar + compartir fue otra vez el mayor driver del mes: 33.97% ER en IG y 81.86% en TikTok. Repetir mensualmente, idealmente anclado a un momento con carga emocional o estacional."
+      "title": "Convertir el sorteo en ritual mensual",
+      "description": "El sorteo de Día de la Madre volvió a ser el mayor motor del mes: 33.97% de ER en IG y 81.86% en TikTok, con 627 comentarios — más que TODOS los posts de la competencia juntos. Institucionalizarlo: un sorteo cross-platform al mes, anclado a una fecha con carga emocional, con la mecánica seguir + comentar + compartir."
     },
     {
       "priority": "Alta",
       "channel": "TikTok",
-      "title": "Activar inversión en TikTok Ads",
-      "description": "En mayo no hubo pauta TikTok pese a ser el canal con mayor ER orgánico. Amplificar como dark posts los videos de sorteo y 'primera vez' (45% de su tráfico viene de búsqueda) para capturar demanda activa."
+      "title": "Abrir inversión en TikTok Ads",
+      "description": "TikTok es el canal de mayor ER orgánico y en mayo no recibió pauta. Amplificar como dark posts el video del sorteo y el educativo \"primera vez\" de Soft Color, que ya trae el 45% de su tráfico desde búsqueda: hay demanda activa esperando ser capturada."
     },
     {
       "priority": "Alta",
       "channel": "Meta",
-      "title": "Escalar la inversión en Meta (CPM bajísimo)",
-      "description": "El CPM de S/5.1 y 847 visitas a perfil con solo $75.84 muestran un costo muy eficiente. Subir presupuesto y concentrarlo en los reels de mejor ER (promo y Día de la Madre) para escalar alcance y seguidores."
+      "title": "Escalar la inversión en Meta sin perder el foco",
+      "description": "Con apenas $75.84 generamos ~56K visualizaciones a un CPM de S/5.1 y 847 visitas a perfil: el costo más eficiente del mix. Subir el presupuesto y concentrarlo en los reels de mayor ER (promo 20% y Día de la Madre), nunca en posts estáticos de producto."
     },
     {
       "priority": "Alta",
       "channel": "Instagram",
-      "title": "Escalar colaboraciones a 6-8 creadoras/mes",
-      "description": "Las 4 colabs de mayo impulsaron el pico de crecimiento del 10-13 de mayo. Gray Aguirre (Chocolate 6.7) fue la más efectiva en engagement. Buscar perfiles similares y atar cada colab a una pieza orgánica."
+      "title": "Escalar de 4 a 6-8 creadoras al mes",
+      "description": "Las 4 colaboraciones dispararon el crecimiento del 10 al 13 de mayo, el salto más fuerte del mes. Gray Aguirre (Chocolate 6.7) lideró en engagement. Replicar el perfil ganador —mujer real de 25 a 40 que se tiñe en casa, con audiencia en Lima y provincias— y atar cada colab a una pieza orgánica."
     },
     {
       "priority": "Media",
       "channel": "Multi",
-      "title": "Producir más formato 'proceso + resultado'",
-      "description": "El contenido que muestra mezcla, aplicación y resultado convierte; el conceptual sin persona no. Producir 4-6 piezas mensuales de transformación variando tonos (chocolate, castaño, negro) según las consultas frecuentes."
+      "title": "Estandarizar el formato \"proceso + resultado\"",
+      "description": "Lo que muestra mezcla, aplicación y resultado convierte; lo conceptual sin persona no pasa de 2-4% de ER. Producir 4-6 piezas mensuales de transformación, variando tonos (chocolate, castaño, negro) según las consultas más frecuentes de la audiencia."
     },
     {
       "priority": "Media",
       "channel": "Instagram",
-      "title": "Resolver la consulta de disponibilidad",
-      "description": "Aunque sin barreras de marca este mes, persisten preguntas de dónde comprar. Reforzar en bio y captions los puntos de venta (supermercados / web Perufarma) para no perder la intención de compra."
+      "title": "Cerrar la brecha de \"dónde comprar\"",
+      "description": "Con 97% de sentimiento positivo, la única fricción recurrente es la consulta de disponibilidad. Fijar en bio y captions los puntos de venta (supermercados y web de Perufarma) para no perder la intención de compra que ya estamos generando."
     }
   ],
   "content": {
@@ -664,7 +679,7 @@
     "objectives": "+47% seg. IG",
     "reach": "11.8K imp. IG",
     "tk_views": "7.3K views TK",
-    "new_followers": "+1,599",
+    "new_followers": "IG +1,107 · TK +492",
     "investment": "S/ 287"
   },
   "reach": {
@@ -786,7 +801,7 @@
       "platform": "Beauty",
       "content_type": "Colab Koleston tono Chocolate 6.7. 'Un cambio sutil pero poderoso'. 490 likes — la colab con mayor engagement visible del mes.",
       "url": "https://www.instagram.com/grayaguirre.1239/",
-      "coverImageUrl": ""
+      "coverImageUrl": "images/wella/inf_grayaguirre.png"
     },
     {
       "name": "Camila Melgarejo",
@@ -794,7 +809,7 @@
       "platform": "Lifestyle",
       "content_type": "Colab Koleston desde casa + amplificó el sorteo de Día de la Madre. 'Quería un look que vaya conmigo en todos esos momentos'.",
       "url": "https://www.instagram.com/camillamelgarejo/",
-      "coverImageUrl": ""
+      "coverImageUrl": "images/wella/inf_camillamelgarejo.png"
     },
     {
       "name": "Antonella Gómez",
@@ -802,7 +817,7 @@
       "platform": "Lifestyle / Beauty",
       "content_type": "Colab Koleston Negro. 'Obsesionada con mi versión de pelo oscuro': glow up casero, antes/después. Pilar Style & Trends.",
       "url": "https://www.instagram.com/antogomezs_/",
-      "coverImageUrl": ""
+      "coverImageUrl": "images/wella/inf_antogomezs.png"
     }
   ],
   "video_retention": [
@@ -1049,5 +1064,60 @@
     "organic": 25,
     "paid": 75
   },
-  "competitors_note": "Benchmark de referencia (última medición disponible). Metricool no devuelve competidores en vivo para esta cuenta; la fila de Wella Perú sí está actualizada a mayo."
+  "competitors_note": "Benchmark de referencia (última medición disponible). Metricool no devuelve competidores en vivo para esta cuenta; la fila de Wella Perú sí está actualizada a mayo.",
+  "competitor_content": {
+    "intro": "Wella Perú lidera el engagement por seguidor de la categoría regional, pese a ser de las cuentas más pequeñas. Y al revisar el mejor contenido de cada competidor (por comentarios), se confirma que generan poca conversación.",
+    "criterio": "Ordenado por comentarios — el indicador más sólido de interés real de la audiencia (no solo alcance pagado).",
+    "conclusion": "El mejor contenido de TODA la competencia (Garnier, reel en pareja) llegó a 25 comentarios; el resto no pasa de 11. El sorteo de Día de la Madre de Wella Perú generó 627 comentarios en TikTok. La conversación que activa Wella no tiene competencia directa en la categoría, pese a ser la cuenta más pequeña.",
+    "items": [
+      {
+        "marca": "Garnier Perú",
+        "handle": "garnierperu",
+        "tipo": "Reel",
+        "comments": 25,
+        "likes": 2808,
+        "interactions": 2833,
+        "engagement": "6.83",
+        "link": "https://www.instagram.com/reel/DYiccCkDJSG/",
+        "caption": "El mejor plan en pareja: un cambio de look con Nutrisse óleos. ¡10 aceites nutritivos y color intenso hasta por 10 semanas!",
+        "coverImageUrl": "images/wella/comp_garnier_pareja.jpg"
+      },
+      {
+        "marca": "Wella México",
+        "handle": "wellamexico",
+        "tipo": "Reel",
+        "comments": 11,
+        "likes": 43,
+        "interactions": 54,
+        "engagement": "0.28",
+        "link": "https://www.instagram.com/reel/DX8E7rfxQjs/",
+        "caption": "Lunes pm y aquí seguimos criticando looks, con todo y chongo. Like si estás en las mismas. #ElClubQueLoCambiaTodo",
+        "coverImageUrl": "images/wella/comp_wellamx_looks.jpg"
+      },
+      {
+        "marca": "Wella México",
+        "handle": "wellamexico",
+        "tipo": "Reel",
+        "comments": 4,
+        "likes": 30,
+        "interactions": 34,
+        "engagement": "0.17",
+        "link": "https://www.instagram.com/reel/DXzVFYYAsG8/",
+        "caption": "Mamá fue, es y siempre será la primera que nos inspiró a atrevernos a cambiar de look.",
+        "coverImageUrl": "images/wella/comp_wellamx_mama.jpg"
+      },
+      {
+        "marca": "Garnier Perú",
+        "handle": "garnierperu",
+        "tipo": "Post",
+        "comments": 3,
+        "likes": 14,
+        "interactions": 17,
+        "engagement": "0.04",
+        "link": "https://www.instagram.com/p/DY3Ik4jknqb/",
+        "caption": "No es que tu piel sea difícil de cuidar, es que necesita la rutina correcta. El sérum Anti-imperfecciones de Garnier...",
+        "coverImageUrl": "images/wella/comp_garnier_serum.jpg"
+      }
+    ]
+  }
 }

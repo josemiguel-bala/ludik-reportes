@@ -1249,8 +1249,6 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
       <div class="portada-kpi"><div class="pk-value">4</div><div class="pk-label">Collabs Influencers</div></div>
       <div class="pk-divider"></div>
       <div class="portada-kpi"><div class="pk-value" style="color:var(--warning)">9/18</div><div class="pk-label">Objetivos Cumplidos</div></div>
-      <div class="pk-divider"></div>
-      <div class="portada-kpi"><div class="pk-value">65<span style="font-size:18px;color:var(--gray)">/100</span></div><div class="pk-label">Brand Health Score</div></div>
     </div>
     <div class="portada-footer"></div>
   </div>
@@ -1780,11 +1778,7 @@ function populateReport() {
   const pkLabels = document.querySelectorAll('.portada-kpi .pk-label');
   D.portada.kpis.forEach((kpi, i) => {
     if (pkValues[i]) {
-      if (i === 4) {
-        // BHS special format - hide if 0
-        if (D.bhs.total > 0) pkValues[i].innerHTML = D.bhs.total + '<span style="font-size:18px;color:var(--gray)">/100</span>';
-        else { const pkCard = pkValues[i].closest('.portada-kpi'); if (pkCard) pkCard.style.display = 'none'; }
-      } else if (i === 3 && kpi.label && /objetiv/i.test(kpi.label)) {
+      if (i === 3 && kpi.label && /objetiv/i.test(kpi.label)) {
         // Objectives with color (only if this slot is the Objectives KPI)
         const met = D.objectives.filter(o => o.status === 'met').length;
         const total = D.objectives.length;
@@ -1802,7 +1796,7 @@ function populateReport() {
 
   // Auto-append Objectives KPI if not already present in portada
   const hasObjKpi = D.portada.kpis.some(k => k.label && /objetiv/i.test(k.label));
-  if (!hasObjKpi && D.objectives && D.objectives.length > 0) {
+  if (!hasObjKpi && !D.portada.hide_objectives_kpi && D.objectives && D.objectives.length > 0) {
     const portadaContainer = document.querySelector('.portada-kpis');
     if (portadaContainer) {
       const met = D.objectives.filter(o => o.status === 'met').length;
@@ -1987,7 +1981,7 @@ function populateAllSections_OLD_UNUSED() {
   const comunidad = document.getElementById('sec-comunidad');
   if (comunidad && D.community) {
     const subtitle = comunidad.querySelector('.sec-subtitle');
-    if (subtitle) subtitle.textContent = 'Evolución de seguidores por plataforma · +' + fmt(D.community.total_new || 0) + ' nuevos en marzo';
+    if (subtitle) subtitle.textContent = 'Evolución de seguidores por plataforma';
     // Platform cards
     const pcards = comunidad.querySelectorAll('.platform-card');
     const chData = [
@@ -2572,7 +2566,7 @@ function populateAllSections() {
   const b2 = body('sec-comunidad');
   if (b2) {
     const sub = document.querySelector('#sec-comunidad .sec-subtitle');
-    if (sub) sub.textContent = 'Evolución de seguidores · +'+fmt(D.community.total_new)+' nuevos';
+    if (sub) sub.textContent = 'Evolución de seguidores por plataforma';
     let h = '<div class="insight-block"><div class="insight-title">'+(D.insights.community||'')+'</div></div>';
     h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">Vista Integrada</div><div class="layer-line"></div></div>';
     h += '<div class="platform-cards">';
@@ -3189,6 +3183,56 @@ function populateExecutive(D) {
     // Qué NO replicaríamos
     h += '<div style="font-size:20px;font-weight:800;color:var(--danger);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;margin-bottom:20px">⚠ Qué NO replicaríamos</div>';
     h += '<div style="background:var(--card);border:1px solid var(--border);border-left:4px solid var(--danger);border-radius:14px;padding:28px;font-size:17px;color:#DDDDEE;line-height:1.7;max-width:1100px">'+introInfluencersAvoid+'</div>';
+    h += '</section>';
+  }
+
+  // — SECTION: Sobre la competencia —
+  const compList = D.competitors_ig || [];
+  const compContent = (D.competitor_content && D.competitor_content.items) || [];
+  if (compList.length > 0 || compContent.length > 0) {
+    const introComp = (D.competitor_content && D.competitor_content.intro) || exec.competencia_intro || exec.intro_competencia || 'Wella Perú lidera el engagement por seguidor de la categoría regional, pese a ser de las cuentas más pequeñas.';
+    h += '<section style="padding:40px 32px 16px">';
+    h += sectionHeader('🏆', 'Sobre la competencia', compList.length + ' marcas comparadas', introComp);
+    if (compList.length > 0) {
+      const sortedC = [...compList].sort((a, b) => (parseFloat(b.er)||0) - (parseFloat(a.er)||0));
+      const maxEr = Math.max.apply(null, sortedC.map(c => parseFloat(c.er)||0)) || 1;
+      h += '<div style="font-size:20px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-top:28px;margin-bottom:6px">📊 Lideramos en ER por seguidor</div>';
+      h += '<div style="font-size:14px;color:var(--gray);margin-bottom:20px">ER promedio por seguidor del mes (interacciones prom. / seguidores × 100). Wella Perú encabeza pese a ser la cuenta más pequeña.</div>';
+      h += '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 28px;max-width:900px;margin-bottom:40px">';
+      sortedC.forEach(c => {
+        const er = parseFloat(c.er)||0; const pct = Math.max(2, (er/maxEr)*100);
+        const isSelf = c.is_self; const barColor = isSelf ? 'var(--teal)' : 'rgba(255,255,255,.18)';
+        const nameColor = isSelf ? 'var(--teal)' : '#CCCCDD';
+        h += '<div style="margin-bottom:14px">';
+        h += '<div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px"><span style="font-weight:'+(isSelf?'800':'600')+';color:'+nameColor+'">'+(c.name||'')+(isSelf?' ⭐':'')+'</span><span style="font-weight:800;color:'+nameColor+'">'+er.toFixed(2)+'%</span></div>';
+        h += '<div style="height:12px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+barColor+';border-radius:6px"></div></div>';
+        h += '</div>';
+      });
+      h += '</div>';
+    }
+    if (compContent.length > 0) {
+      const crit = (D.competitor_content && D.competitor_content.criterio) || 'Ordenado por comentarios — el indicador más sólido de interés real de la audiencia.';
+      h += '<div style="font-size:20px;font-weight:800;color:var(--warning);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;margin-bottom:6px">🔥 Mejores contenidos de la competencia</div>';
+      h += '<div style="font-size:14px;color:var(--gray);margin-bottom:20px">'+crit+'</div>';
+      h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">';
+      compContent.forEach(p => {
+        const tag = p.link ? 'a' : 'div';
+        h += '<'+tag+(p.link?' href="'+p.link+'" target="_blank"':'')+' style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;color:inherit;display:flex;flex-direction:column">';
+        if (p.coverImageUrl) h += '<div style="height:160px;margin:-22px -22px 18px;background-image:url('+p.coverImageUrl+');background-size:cover;background-position:center;border-radius:14px 14px 0 0"></div>';
+        h += '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><span style="font-size:17px;font-weight:800;color:var(--white)">'+(p.marca||'')+'</span><span style="font-size:12px;color:var(--gray)">'+(p.tipo||'')+'</span></div>';
+        h += '<div style="font-size:13px;color:var(--fucsia);margin-top:2px">@'+(p.handle||'')+'</div>';
+        h += '<div style="display:flex;gap:18px;margin:16px 0;padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">';
+        h += '<div><div style="font-size:24px;font-weight:900;color:var(--warning);line-height:1">'+(p.comments||0)+'</div><div style="font-size:11px;color:var(--gray);text-transform:uppercase">Comentarios</div></div>';
+        h += '<div><div style="font-size:24px;font-weight:900;color:#CCCCDD;line-height:1">'+Number(p.likes||0).toLocaleString()+'</div><div style="font-size:11px;color:var(--gray);text-transform:uppercase">Likes</div></div>';
+        h += '<div><div style="font-size:24px;font-weight:900;color:#CCCCDD;line-height:1">'+(p.engagement||0)+'%</div><div style="font-size:11px;color:var(--gray);text-transform:uppercase">ER</div></div>';
+        h += '</div>';
+        if (p.caption) h += '<div style="font-size:14px;color:#DDDDEE;line-height:1.55;flex:1">&ldquo;'+p.caption+'&rdquo;</div>';
+        h += '</'+tag+'>';
+      });
+      h += '</div>';
+      const concl = (D.competitor_content && D.competitor_content.conclusion) || exec.competencia_conclusion;
+      if (concl) h += '<div style="background:var(--card);border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:14px;padding:24px;font-size:16px;color:#DDDDEE;line-height:1.7;max-width:1100px;margin-top:24px">'+concl+'</div>';
+    }
     h += '</section>';
   }
 

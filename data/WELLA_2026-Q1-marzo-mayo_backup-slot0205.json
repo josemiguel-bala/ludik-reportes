@@ -1,0 +1,1005 @@
+{
+  "brand": "WELLA",
+  "period": "2026-05",
+  "period_label": "Marzo — Mayo 2026",
+  "fx_rate": 3.78,
+  "metricool_id": "5996226",
+  "brand_id": "WELLA",
+  "portada": {
+    "tag": "LUDiK Analytics · Reporte  - 01 de Marzo al 10 de Mayo",
+    "footer": "Confidencial · Preparado por el equipo LUDiK para Wella Perú (Perufarma)",
+    "kpis": [
+      {
+        "value": "+1,200",
+        "label": "Nuevos Seg. Instagram",
+        "delta_pct": "+114%",
+        "delta_note": "vs trimestre anterior"
+      },
+      {
+        "value": "78.8K",
+        "label": "Visualizaciones IG",
+        "delta_pct": "+87%",
+        "delta_note": "vs trimestre anterior"
+      },
+      {
+        "value": "+1,410",
+        "label": "Nuevos Seg. TikTok",
+        "delta_pct": "+23,500%",
+        "delta_note": "cuenta nueva (de 6 seg.)"
+      },
+      {
+        "value": "213K",
+        "label": "Views TikTok",
+        "delta_pct": "+342%",
+        "delta_note": "vs trimestre anterior"
+      },
+      {
+        "value": "S/ 500",
+        "label": "Inversión Total",
+        "delta_pct": null,
+        "delta_note": "Sin inversión previa"
+      }
+    ]
+  },
+  "cierre": {
+    "tagline": "Data-driven decisions for modern brands",
+    "team": "Equipo LUDiK",
+    "location": "Barcelona · Lima",
+    "contact": "josemiguel@ludik.pe",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para Wella Perú (Perufarma)"
+  },
+  "objectives": [
+    {
+      "objective": "Seguidores nuevos IG",
+      "channel": "Instagram",
+      "target": "857",
+      "result": "1,200",
+      "status": "met",
+      "delta": "+40.0%"
+    },
+    {
+      "objective": "Visualizaciones IG",
+      "channel": "Instagram",
+      "target": "71,650",
+      "result": "78,820",
+      "status": "met",
+      "delta": "+10.0%"
+    },
+    {
+      "objective": "Interacciones IG",
+      "channel": "Instagram",
+      "target": "1,190",
+      "result": "1,309",
+      "status": "met",
+      "delta": "+10.0%"
+    },
+    {
+      "objective": "Seguidores nuevos TK",
+      "channel": "TikTok",
+      "target": "1,280",
+      "result": "1,410",
+      "status": "met",
+      "delta": "+10.2%"
+    },
+    {
+      "objective": "Views TK",
+      "channel": "TikTok",
+      "target": "194,000",
+      "result": "213,669",
+      "status": "met",
+      "delta": "+10.1%"
+    },
+    {
+      "objective": "Interacciones TK",
+      "channel": "TikTok",
+      "target": "2,560",
+      "result": "2,810",
+      "status": "met",
+      "delta": "+9.8%"
+    }
+  ],
+  "community": {
+    "facebook": {
+      "start": 0,
+      "end": 0
+    },
+    "instagram": {
+      "start": 1840,
+      "end": 3040
+    },
+    "tiktok": {
+      "start": 6,
+      "end": 1416
+    },
+    "total_new": 2610
+  },
+  "investment": {
+    "meta_ads_usd": 0,
+    "meta_ads_soles": 0,
+    "tiktok_ads_usd": 0,
+    "tiktok_ads_soles": 0,
+    "total_usd": 0,
+    "total_soles": 0,
+    "meta_pct": 0,
+    "tiktok_pct": 0,
+    "note": null,
+    "lima_usd": 0,
+    "provincia_usd": 0,
+    "lima_reach": 0,
+    "provincia_reach": 0,
+    "regional": {}
+  },
+  "sentiment": {
+    "total": 200,
+    "positive_pct": 85,
+    "neutral_pct": 12,
+    "negative_pct": 3,
+    "net_score": 82,
+    "categories": [
+      {
+        "label": "Admiración / Belleza",
+        "pct": 42,
+        "description": "Comentarios que expresan admiración por las modelos, influencers o el resultado visual del color. Reflejan conexión emocional con la marca a través de la imagen aspiracional.",
+        "quotes": [
+          "Que hermosa",
+          "Me encanta el resultado",
+          "Hermosa como siempre",
+          "Te quedó lindo"
+        ]
+      },
+      {
+        "label": "Intención de compra",
+        "pct": 23,
+        "description": "Comentarios donde la audiencia manifiesta deseo directo de adquirir el producto: preguntan precio, puntos de venta o expresan que van a comprarlo. La señal de conversión más valiosa.",
+        "quotes": [
+          "Ahora mismo iré a comprar uno",
+          "Dónde lo puedo comprar?",
+          "Precio por favor",
+          "Voy a hacer la prueba"
+        ]
+      },
+      {
+        "label": "Consulta producto",
+        "pct": 18,
+        "description": "Preguntas técnicas sobre tonos, aplicación, cobertura de canas o compatibilidad capilar. Indican interés informado previo a la compra y oportunidad educativa para la marca.",
+        "quotes": [
+          "Qué tono tienes?",
+          "Te coge el tono sin decoloración?",
+          "Hay cobres?",
+          "Qué color es?"
+        ]
+      },
+      {
+        "label": "Resultado positivo",
+        "pct": 12,
+        "description": "Comentarios de usuarias que ya probaron el producto y comparten su satisfacción con el resultado. Funcionan como testimonios orgánicos que refuerzan la prueba social.",
+        "quotes": [
+          "Quedó espectacular",
+          "Ese brillo hermoso",
+          "Me influenciaste",
+          "Que lindo resultado"
+        ]
+      },
+      {
+        "label": "Disponibilidad",
+        "pct": 5,
+        "description": "Comentarios que evidencian dificultad para encontrar el producto en puntos de venta. Es la principal barrera de conversión detectada y una oportunidad de mejora en distribución.",
+        "quotes": [
+          "Es difícil de encontrar",
+          "Lugar de venta"
+        ]
+      }
+    ]
+  },
+  "insights": {
+    "community": "En 71 días, Wella Perú sumó 2,610 seguidores nuevos entre IG y TK. Instagram creció 65% (de 1,840 a 3,040) impulsado por el sorteo de Día de la Madre. TikTok explotó de 6 a 1,416 seguidores gracias al video viral de Koleston con 123K views.",
+    "reach": "78.8K visualizaciones en IG con 42 piezas (19 posts + 23 reels). TikTok generó 213K views con solo 22 videos. El contenido en formato reel concentró el 85% del alcance total en Instagram pese a representar el 60% de las publicaciones.",
+    "engagement": "4,097 interacciones totales. El sorteo de Día de la Madre fue la pieza más potente del trimestre: 51.6% de ER y 65 guardados. Los saves son la métrica con mayor correlación a intención de compra en esta categoría.",
+    "sentiment": "85% de comentarios positivos. Predominan la admiración por el resultado del color y la intención de compra directa. Barrera clara: dificultad para encontrar el producto en tienda.",
+    "investment": null,
+    "competition": "Wella Perú lidera la categoría regional en engagement por seguidor con 0.79% de ER, superando a Wella Colombia (0.26%), Wella México (0.18%), Koleston RD (0.13%) y Garnier Perú (0.05%). Con 14x menos seguidores que Garnier, genera 16x más engagement relativo."
+  },
+  "story": {
+    "act1": {
+      "number": "Acto 1 · La Comunidad Nace",
+      "title": "De 1,840 a 3,040 seguidores en Instagram. Wella Perú construyó su comunidad digital desde cero.",
+      "type": "growth",
+      "paragraphs": [
+        "En tan solo 71 días, Wella Perú logró lo que muchas marcas tardan meses en conseguir: una comunidad activa y comprometida. Instagram creció 65%, pasando de 1,840 a 3,040 seguidores. Se publicaron 42 piezas entre posts y reels, que acumularon 78.8K visualizaciones y 1,309 interacciones.",
+        "El formato reel fue el gran protagonista: representó el 60% de las publicaciones pero concentró el 85% del alcance. La clave estuvo en mostrar personas reales con resultados reales, no solo producto. Cuando la audiencia se ve reflejada, se queda.",
+        "Las 6 metas del trimestre se cumplieron. Seguidores IG superó el target en 40%, visualizaciones en 10% e interacciones en 10%. En TikTok, cada métrica también superó lo proyectado. Los 97 guardados (saves) en IG son la señal más clara de una audiencia que no solo mira, sino que planea comprar."
+      ],
+      "image": "images/wella/fit_check_soft_color.png",
+      "image_caption": "Reel Fit Check Soft Color 67: el formato que mejor conectó con la audiencia"
+    },
+    "act2": {
+      "number": "Acto 2 · Influencers + Sorteo: La Fórmula Ganadora",
+      "title": "4 colaboraciones con creadoras reales y un sorteo que rompió todos los indicadores del trimestre",
+      "type": "content",
+      "paragraphs": [
+        "Las colaboraciones con influencers fueron el motor del crecimiento en Instagram. Ariana Salheli (@ariana.salheli) protagonizó los posts de Koleston que generaron los comentarios más admirativos del periodo. Su contenido despertó preguntas sobre tonos, puntos de venta e intención de compra directa.",
+        "Mamienaspurosblog y Mamabusca.blog aportaron credibilidad desde la maternidad: mujeres reales que se tiñen en casa, mostrando el proceso sin filtros. Fátima Malca completó el roster con un perfil lifestyle que conectó con la audiencia más joven. Estas colaboraciones demostraron que el contenido con rostros reales supera ampliamente al contenido de producto solo.",
+        "El sorteo de Día de la Madre (7 de mayo) fue la pieza estrella del trimestre: 725 interacciones, 51.6% de ER, 134 comentarios, 356 shares y 65 guardados. La mecánica cross-platform (seguir en IG + comentar en TK) logró migrar audiencia de TikTok a Instagram con éxito. El Índice de Valor alcanzó 794 por cada 1K de alcance, 19 veces por encima del promedio."
+      ],
+      "image": "images/wella/sorteo_dia_madre.png",
+      "image_caption": "Sorteo Día de la Madre: 725 interacciones y 65 guardados en un solo post"
+    },
+    "act3": {
+      "number": "Acto 3 · TikTok: De 6 a 1,416 Seguidores",
+      "title": "Un video viral de 123K views puso a Wella Perú en el mapa digital y validó el modelo TK→IG",
+      "type": "reach",
+      "paragraphs": [
+        "TikTok fue el canal de amplificación. La cuenta pasó de 6 a 1,416 seguidores en el trimestre, un crecimiento exponencial impulsado por un solo video viral: \"Guante. Botella. Shake. Color.\" alcanzó 123K views, 1,397 likes, 178 saves y 42 shares. El 98.4% del tráfico llegó desde el ForYou, confirmando que el algoritmo premió el formato.",
+        "Los 3 videos con mejor rendimiento comparten un patrón claro: nativos de TikTok, entre 13 y 25 segundos, con una persona real mostrando el proceso y resultado de la coloración. El contenido educativo largo (más de 40 segundos) y el formato \"hablando a cámara\" no lograron viralizar.",
+        "TikTok funciona como puerta de entrada y amplificador: genera alcance masivo que luego se canaliza a Instagram para construir una relación más profunda con la marca. El sorteo de Día de la Madre confirmó este modelo TK→IG al migrar seguidores entre plataformas con una mecánica simple."
+      ],
+      "image": "https://static.metricool.com/tkvideocovers/202604/5996226-7629856193128811794.jpg",
+      "image_caption": "Video viral 'Guante. Botella. Shake. Color.' — 123K views en TikTok"
+    },
+    "act4": {
+      "number": "Acto 4 · Lo que Dice la Comunidad",
+      "title": "85% de sentimiento positivo. La audiencia admira, pregunta y quiere comprar.",
+      "paragraphs": [
+        "Se analizaron más de 200 comentarios en Instagram. El 42% expresa admiración por las influencers y el resultado del color. El 23% va un paso más allá: intención de compra directa. Frases como \"dónde lo compro\", \"precio por favor\" o \"ahora mismo iré a comprar uno\" aparecen de forma recurrente.",
+        "El precio del Kit Koleston a S/30.50 fue bien recibido por la audiencia. La marca respondió de manera consistente cada consulta con tono, puntos de venta y recomendaciones personalizadas. Los tonos más solicitados fueron Chocolate 67, Borgoña 46, Negro Azabache 20 y Rubio Avellana.",
+        "Se detectó una barrera clara: la dificultad para encontrar el producto en tienda. El 5% de los comentarios menciona problemas de disponibilidad. Esta es la principal fricción entre el interés generado por el contenido y la conversión real. Resolverla debe ser prioridad en el próximo trimestre."
+      ],
+      "image": "images/wella/inf_ariana.png",
+      "image_caption": "Ariana Salheli: la influencer que más intención de compra generó"
+    },
+    "act5": {
+      "number": "Acto 5 · La Posición Competitiva",
+      "title": "Wella Perú lidera la categoría regional en engagement por seguidor, pese a ser la cuenta más pequeña.",
+      "type": "competition",
+      "paragraphs": [
+        "Frente a sus pares regionales, Wella Perú es la cuenta más pequeña: 3,040 seguidores contra los 41,435 de Garnier Perú, 23,551 de Koleston República Dominicana y 21,559 de Wella México. Sin embargo, en la métrica que realmente importa para la calidad de comunidad, Wella Perú lidera con un Engagement Rate de 0.79%, más de 4 veces el de Wella México (0.18%) y 16 veces el de Garnier Perú (0.05%).",
+        "Esto revela una verdad estratégica: el crecimiento de Wella Perú no fue de vanidad, fue de fondo. Cada nuevo seguidor está conversando, guardando contenido y comprando. Wella Colombia, que está al nivel de tamaño (1,146 seguidores), genera 3 veces menos engagement. La calidad de comunidad construida en Perú es la más sana de la categoría.",
+        "El benchmark más realista es Wella México: 7 veces más grande y con mejor producción audiovisual (37.4 likes promedio por post). Pero su comunidad es 4.4 veces menos activa que la peruana. Si Wella Perú escala su comunidad a 20K manteniendo este nivel de ER, se convertirá en el mercado más sano de la marca en LATAM."
+      ],
+      "image": null,
+      "highlight": "Wella Perú #1 en ER% regional · 0.79% vs 0.18% Wella México · 16x más engagement relativo que Garnier"
+    },
+    "act6": {
+      "number": "Acto 6 · Próximos Pasos: Mayo — Junio 2026",
+      "title": "Capitalizar el momentum del sorteo, escalar influencers y resolver la barrera de distribución",
+      "items": [
+        {
+          "type": "bet",
+          "text": "Cerrar el sorteo de Día de la Madre (14 mayo) y convertir el anuncio de la ganadora en contenido: story de revelación, reacción en vivo, agradecimiento a participantes. Cada cierre es un nuevo momento de engagement."
+        },
+        {
+          "type": "bet",
+          "text": "Escalar las colaboraciones con influencers a 6-8 por mes. El perfil que mejor funciona: mujer real de 25 a 40 años, que se tiñe en casa, con audiencia en Lima y provincias. Ariana Salheli es el referente a replicar."
+        },
+        {
+          "type": "bet",
+          "text": "Producir 4 a 6 videos mensuales en TikTok con el formato \"proceso satisfactorio\" que ya demostró tracción. Variar los tonos (Borgoña, Chocolate, Negro Azulado) para cubrir los más consultados por la audiencia."
+        },
+        {
+          "type": "bet",
+          "text": "Activar inversión publicitaria formal. Con apenas S/500 se consiguieron +2,610 seguidores. Una inversión de S/1,500-2,000 al mes amplificaría los videos que ya probaron tracción y aceleraría el crecimiento."
+        },
+        {
+          "type": "bet",
+          "text": "Usar el dato de liderazgo en ER% como palanca comercial frente a Perufarma. Wella Perú genera 16x más engagement por seguidor que Garnier. Eso justifica más inversión y prioridad de distribución."
+        },
+        {
+          "type": "fix",
+          "text": "Resolver la barrera de distribución. El 23% de los comentarios pregunta dónde comprar. Incluir puntos de venta en cada pieza de contenido y mantener un link permanente en bio hacia la web de Perufarma."
+        },
+        {
+          "type": "fix",
+          "text": "Reducir el contenido de producto estático sin personas. El ER promedio de estos posts es 3.5% frente al 51.6% del sorteo. El contenido con rostros reales es lo que mueve a esta audiencia."
+        },
+        {
+          "type": "system",
+          "text": "Monitorear mensualmente el contenido top de Wella México como benchmark regional cercano. Identificar formatos ganadores y adaptarlos al contexto peruano para acelerar el cierre de brecha."
+        }
+      ],
+      "highlight": "Mayo-Junio: 6-8 collabs/mes · Formato viral TK→IG · Pauta formal S/1,500-2,000 · Resolver distribución · Capitalizar ER#1"
+    }
+  },
+  "technical_texts": {
+    "resumen": "Periodo: 01 marzo al 10 mayo 2026. Se publicaron 64 piezas (19 posts IG + 23 reels IG + 22 videos TK). Instagram sumó 1,200 seguidores (+65%), 78.8K visualizaciones y 1,309 interacciones. TikTok creció de 6 a 1,416 seguidores con 213K views y 2,810 interacciones. Las 6 metas establecidas se cumplieron.",
+    "audiencia": null,
+    "contenido_insight": "Los reels protagonizados por personas reales con resultado visible lideran Instagram (10.8% ER promedio en el top 3). Los posts estáticos de producto rinden entre 2% y 4% de ER. Los guardados son el indicador más valioso de intención de compra: 65 en el sorteo y 8 en el reel de Soft Color.",
+    "contenido_fail": "Los posts estáticos sin persona generan entre 2% y 4% de ER, 0 guardados y menos de 200 de alcance. Los reels genéricos sin un hook claro (como Match inseparable) no superan el 1.1% de ER. En TikTok, los videos educativos largos de más de 40 segundos no viralizan. La conclusión es directa: el contenido que no muestra un resultado real no conecta.",
+    "contenido_horario": "En TikTok, la ventana óptima de publicación es entre las 7pm y 8pm hora Lima (pico del ForYou). En Instagram, entre la 1pm-3pm y las 7pm-8pm. El sorteo publicado a las 2pm logró la mayor tracción inicial del trimestre.",
+    "riesgo_fb": null,
+    "indice_valor": "Sorteo IG: (65×3 + 356×2 + 134×1.5 + 170×1) / 1,406 × 1,000 = 794 por cada 1K de alcance. El promedio del periodo fue 42 por cada 1K. El sorteo superó 19 veces el promedio, confirmando que las mecánicas participativas generan un valor desproporcionado.",
+    "temas_recurrentes": "1. Admiración por las influencers y el resultado del color en cabello. 2. Consultas de precio: S/30.50 por Kit Koleston. 3. Puntos de venta: supermercados, farmacias, web Perufarma. 4. Tonos favoritos: Chocolate 67, Borgoña 46, Negro Azabache 20 y Rubio Avellana.",
+    "bhs_explicacion": null
+  },
+  "bhs": {
+    "total": 0,
+    "benchmark": "0",
+    "dimensions": {
+      "crecimiento": 0,
+      "alcance": 0,
+      "engagement": 0,
+      "sentimiento": 0,
+      "eficiencia": 0,
+      "metas": 0,
+      "posicion_comp": 0
+    }
+  },
+  "executive": {
+    "intro_ig_top": "Los reels protagonizados por personas reales con resultado visible son los que mejor conectan en Instagram. El sorteo de Día de la Madre concentró el ER más alto del trimestre y los guardados son el indicador con mayor correlación a intención de compra.",
+    "intro_tk_top": "TikTok premia el formato nativo: videos de 13 a 25 segundos, con persona real mostrando el proceso completo (mezcla, aplicación, resultado). El 98% del tráfico llega desde ForYou cuando se respeta este patrón.",
+    "intro_ig_worst": "Los posts estáticos de producto sin persona, los carruseles con artes generadas con IA y los reels genéricos sin un hook claro son los formatos a descartar. Generan entre 2% y 4% de ER, 0 guardados y menos de 200 de alcance.",
+    "intro_tk_worst": "En TikTok no funcionan los videos largos de 'hablando a cámara', los formatos educativos de más de 40 segundos ni el contenido genérico de marca sin protagonista real. Cuando el video no muestra un resultado tangible, el algoritmo no lo amplifica.",
+    "intro_influencers": "Las colaboraciones del periodo. El perfil ganador: mujer real de 25 a 40 años, con audiencia en Lima y provincias, que muestra el resultado del color de forma auténtica.",
+    "intro_influencers_avoid": "Perfiles que no replicaríamos: cuentas con audiencia inflada o no orgánica, perfiles fuera del rango etario, contenido excesivamente editado o que no muestra el proceso real de coloración.",
+    "intro_voices": "Selección curada de 200+ comentarios analizados en el trimestre. 85% del sentimiento fue positivo. La conversación se concentra en admiración por el resultado y consultas de compra.",
+    "conclusiones_ig": {
+      "headline": "+1,200 seguidores · 78.8K views · 51.6% ER en pieza estrella",
+      "formula": "Reels protagonizados por personas reales mostrando el resultado del color + mecánicas participativas (sorteos, preguntas). El contenido emocional + identificación con la audiencia genera 10x más engagement que el contenido de producto solo.",
+      "best_time": "1pm-3pm y 7pm-8pm hora Lima",
+      "data_points": [
+        { "label": "ER promedio top 3", "value": "10.8%" },
+        { "label": "Guardados (saves)", "value": "97" },
+        { "label": "Mejor pieza", "value": "Sorteo (51.6% ER)" }
+      ],
+      "next_steps": [
+        "Escalar colaboraciones de influencers a 6-8 por mes",
+        "Mantener sorteos mensuales cross-platform IG+TK",
+        "Reducir posts estáticos de producto (ER<4%, 0 saves)"
+      ]
+    },
+    "conclusiones_tk": {
+      "headline": "+1,410 seguidores · 213K views · 1 video viral de 123K views",
+      "formula": "Videos nativos de 13-25 segundos, formato 'proceso satisfactorio' (guante-mezcla-aplicación-resultado) con persona real. El 98.4% del tráfico llega desde ForYou cuando se respeta esta estructura. Lo viral se predice por el formato, no por el contenido.",
+      "best_time": "7pm-8pm hora Lima (pico ForYou)",
+      "data_points": [
+        { "label": "Mejor video", "value": "123K views" },
+        { "label": "Saves video viral", "value": "178" },
+        { "label": "Tráfico desde ForYou", "value": "98.4%" }
+      ],
+      "next_steps": [
+        "Producir 4-6 videos mensuales del ritual de coloración",
+        "Activar TikTok Ads para amplificar los virales (S/500-1,000)",
+        "Eliminar videos largos 'hablando a cámara' (>40s)"
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Escalar el formato 'proceso satisfactorio'",
+      "description": "Producir entre 4 y 6 videos mensuales siguiendo el patrón que ya demostró tracción: guante, mezcla, aplicación y resultado. Variar tonos (Borgoña, Chocolate, Negro Azulado) para cubrir las consultas más frecuentes de la audiencia."
+    },
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Activar inversión en TikTok Ads",
+      "description": "Amplificar los videos con mejor rendimiento como dark posts. El video de 123K views y 178 saves es el candidato natural. Con S/500-1,000 se podría duplicar la base de seguidores a 3,000 en junio."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Multi",
+      "title": "Mantener sorteos mensuales cross-platform",
+      "description": "La mecánica de participación en IG y TK fue el mayor driver de crecimiento del trimestre: 725 interacciones en un solo post. Repetir mensualmente con la fórmula seguir + comentar + compartir."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Instagram",
+      "title": "Escalar colaboraciones a 6-8 influencers por mes",
+      "description": "Ariana Salheli fue la colaboración más efectiva en intención de compra. Buscar perfiles similares: mujer real de 25 a 40 años, que se tiñe en casa, con audiencia en Lima y provincias."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Multi",
+      "title": "Capitalizar el liderazgo en engagement por seguidor",
+      "description": "Wella Perú tiene el mayor ER de la categoría regional (0.79% vs 0.18% de Wella México y 0.05% de Garnier). Convertir este dato en argumento de venta hacia Perufarma para justificar mayor inversión publicitaria y escalar la comunidad."
+    },
+    {
+      "priority": "Media",
+      "channel": "Multi",
+      "title": "Resolver la barrera de distribución",
+      "description": "El 23% de los comentarios pregunta dónde comprar el producto. Incluir puntos de venta en cada pieza publicada y agregar un link permanente en bio hacia la web de Perufarma."
+    },
+    {
+      "priority": "Media",
+      "channel": "Instagram",
+      "title": "Monitorear contenido top de Wella México mensualmente",
+      "description": "Wella México es el benchmark regional más cercano: 21.5K seguidores y 37.4 likes por post. Identificar sus formatos ganadores cada mes y adaptarlos al contexto peruano para acelerar el cierre de brecha."
+    },
+    {
+      "priority": "Baja",
+      "channel": "Multi",
+      "title": "Expandir a YouTube Shorts",
+      "description": "Los videos virales de TikTok (15-25 segundos) pueden reutilizarse en YouTube Shorts sin producción adicional. Es una forma de ampliar el alcance aprovechando contenido que ya existe."
+    }
+  ],
+  "content": {
+    "total_pieces": {
+      "total": 64,
+      "ig_posts": 19,
+      "ig_reels": 23,
+      "fb_posts": 0,
+      "fb_reels": 0,
+      "tiktok": 22
+    },
+    "by_channel": {
+      "ig": {
+        "top": [
+          {
+            "title": "Sorteo Día de la Madre — 1 año de color",
+            "platform": "IG Post",
+            "date": "2026-05-07",
+            "reach": 1406,
+            "views": 3166,
+            "likes": 170,
+            "shares": 356,
+            "saves": 65,
+            "comments": 134,
+            "er": "51.56%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DYC4iyUkXBc/",
+            "note": "Pieza estrella del trimestre. Mecánica cross-platform IG+TK con el mayor ER del periodo. Los 65 guardados son señal directa de intención de compra.",
+            "coverImageUrl": "images/wella/sorteo_dia_madre.png"
+          },
+          {
+            "title": "Fit check + hair check — Soft Color 67 Chocolate",
+            "platform": "IG Reel",
+            "date": "2026-04-15",
+            "reach": 764,
+            "views": 1278,
+            "likes": 45,
+            "shares": 6,
+            "saves": 8,
+            "comments": 24,
+            "er": "10.86%",
+            "spend": "",
+            "url": "https://www.instagram.com/reel/DXKZ9mMkthZ/",
+            "note": "Reel lifestyle nativo con resultado visible. 8 guardados indican contenido de referencia. 24 comentarios con admiración y consultas de tono.",
+            "coverImageUrl": "images/wella/fit_check_soft_color.png"
+          },
+          {
+            "title": "Mi agenda no para… y mi color tampoco",
+            "platform": "IG Reel",
+            "date": "2026-04-25",
+            "reach": 726,
+            "views": 1061,
+            "likes": 51,
+            "shares": 3,
+            "saves": 3,
+            "comments": 0,
+            "er": "7.85%",
+            "spend": "",
+            "url": "https://www.instagram.com/reel/DXh_qo9EpKe/",
+            "note": "Koleston integrado en la rutina real: trabajo, amigas, bienestar. Mejor retención de watch time entre todos los reels del periodo.",
+            "coverImageUrl": "images/wella/mi_agenda_no_para.png"
+          }
+        ],
+        "worst": [
+          {
+            "title": "Match inseparable Koleston",
+            "platform": "IG Reel",
+            "date": "2026-03-28",
+            "reach": 272,
+            "views": 353,
+            "likes": 3,
+            "shares": 0,
+            "saves": 0,
+            "comments": 0,
+            "er": "1.10%",
+            "spend": "",
+            "url": "",
+            "note": "Reel sin un hook fuerte en los primeros 3 segundos. Sin guardados ni CTA que motive la acción. Formato a evitar.",
+            "coverImageUrl": "images/wella/match_inseparable.png"
+          },
+          {
+            "title": "Color intenso e hidratación profunda",
+            "platform": "IG Carousel",
+            "date": "2026-03-24",
+            "reach": 126,
+            "views": 229,
+            "likes": 3,
+            "shares": 0,
+            "saves": 0,
+            "comments": 0,
+            "er": "2.38%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DWRtAhBkSNK/",
+            "note": "Carrusel centrado en producto sin presencia humana. Sin guardados ni shares. El contenido de producto solo no genera conexión.",
+            "coverImageUrl": "images/wella/color_intenso_hidratacion.png"
+          },
+          {
+            "title": "Koleston — Reinventarme cuando quiera",
+            "platform": "IG Post",
+            "date": "2026-03-02",
+            "reach": 81,
+            "views": 132,
+            "likes": 3,
+            "shares": 0,
+            "saves": 0,
+            "comments": 0,
+            "er": "3.70%",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DVY4Q0fABGM/",
+            "note": "Post estático con el menor alcance del trimestre. Sin persona visible ni llamada a la acción. Confirma que el producto solo no atrae.",
+            "coverImageUrl": "images/wella/reinventarme_cuando_quiera.jpg"
+          }
+        ]
+      },
+      "tiktok": {
+        "top": [
+          {
+            "title": "Guante. Botella. Shake. Color.",
+            "platform": "TikTok",
+            "date": "2026-04-18",
+            "reach": 71260,
+            "views": 123038,
+            "likes": 0,
+            "shares": 42,
+            "saves": 178,
+            "comments": 27,
+            "er": "2.06%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@wella_peru/video/7629856193128811794",
+            "note": "Video viral del trimestre. 1,397 likes y 178 saves. El 98.4% del tráfico llegó desde el ForYou. Formato ganador: proceso de coloración satisfactorio.",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202604/5996226-7629856193128811794.jpg"
+          },
+          {
+            "title": "Clean Girl Aesthetic + Soft Color 67",
+            "platform": "TikTok",
+            "date": "2026-04-10",
+            "reach": 20987,
+            "views": 32194,
+            "likes": 0,
+            "shares": 7,
+            "saves": 39,
+            "comments": 9,
+            "er": "1.35%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@wella_peru/video/7627183697262824705",
+            "note": "267 likes y 39 saves. Soft Color Chocolate en formato lifestyle nativo. 98% del tráfico desde ForYou.",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202604/5996226-7627183697262824705.jpg"
+          },
+          {
+            "title": "Fit check + hair check — Soft Color Chocolate",
+            "platform": "TikTok",
+            "date": "2026-04-15",
+            "reach": 19801,
+            "views": 30760,
+            "likes": 0,
+            "shares": 8,
+            "saves": 48,
+            "comments": 2,
+            "er": "1.79%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@wella_peru/video/7629060504123657479",
+            "note": "344 likes y 48 saves. Street style + color en jardín. 98.7% del tráfico desde ForYou.",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202604/5996226-7629060504123657479.jpg"
+          }
+        ],
+        "worst": [
+          {
+            "title": "No tienes que salir de casa para un cambio",
+            "platform": "TikTok",
+            "date": "2026-03-13",
+            "reach": 160,
+            "views": 181,
+            "likes": 0,
+            "shares": 0,
+            "saves": 0,
+            "comments": 0,
+            "er": "1.88%",
+            "spend": "",
+            "url": "",
+            "note": "Solo 3 likes. Video de 8 segundos sin hook ni contexto. Solo 62% del tráfico desde ForYou, muy por debajo del promedio.",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7616871259103595792.jpg"
+          },
+          {
+            "title": "Si lo tuyo es la naturalidad — Soft Color",
+            "platform": "TikTok",
+            "date": "2026-03-21",
+            "reach": 193,
+            "views": 226,
+            "likes": 0,
+            "shares": 2,
+            "saves": 0,
+            "comments": 0,
+            "er": "7.25%",
+            "spend": "",
+            "url": "",
+            "note": "12 likes con ER inflado por base pequeña de seguidores. Solo 58% desde ForYou, el más bajo del periodo.",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7619478287311523073.jpg"
+          },
+          {
+            "title": "8M — Celebramos a la mujer que se atreve",
+            "platform": "TikTok",
+            "date": "2026-03-08",
+            "reach": 258,
+            "views": 288,
+            "likes": 0,
+            "shares": 2,
+            "saves": 0,
+            "comments": 0,
+            "er": "1.94%",
+            "spend": "",
+            "url": "",
+            "note": "Solo 3 likes. Formato largo de 30 segundos con mensaje genérico del 8M. No conectó con la audiencia objetivo de la marca.",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5996226-7614290043779190017.jpg"
+          }
+        ]
+      },
+      "fb": {}
+    },
+    "top_influencers": [
+      {
+        "name": "Ariana Salheli",
+        "username": "@ariana.salheli",
+        "platform": "Modelo / Beauty",
+        "content_type": "Modelo protagonista en posts Koleston. Su presencia generó los comentarios más admirativos del periodo.",
+        "url": "https://www.instagram.com/p/DXIhTQQETHI/",
+        "coverImageUrl": "images/wella/inf_ariana.png"
+      },
+      {
+        "name": "Fátima Malca",
+        "username": "@fatima.malca",
+        "platform": "Lifestyle / Beauty",
+        "content_type": "Collab Koleston Borgoña y Soft Color. Mencionada repetidamente por seguidoras como referente de color.",
+        "url": "https://www.instagram.com/p/DXpbNgSDcDY/",
+        "coverImageUrl": "images/wella/inf_fatima.png"
+      },
+      {
+        "name": "Mamienaspurosblog",
+        "username": "@mamienaspurosblog",
+        "platform": "Maternidad / Lifestyle",
+        "content_type": "Tutorial aplicación Koleston. Generó conversación educativa: tips de aplicación sin decoloración.",
+        "url": "https://www.instagram.com/p/DXvHNAgskEr/",
+        "coverImageUrl": "images/wella/inf_mamienaspurosblog.png"
+      },
+      {
+        "name": "Mamabusca.blog",
+        "username": "@mamabusca.blog",
+        "platform": "Maternidad / Lifestyle",
+        "content_type": "Mom influencer, Koleston. La más efectiva en intención de compra. 'El color no nos cambia, nos revela.'",
+        "url": "https://www.instagram.com/p/DXz26MqviOP/",
+        "coverImageUrl": "images/wella/inf_mamabusca.png"
+      }
+    ]
+  },
+  "summary_kpis": {
+    "objectives": "6/6",
+    "reach": "78.8K views IG",
+    "tk_views": "213K views TK",
+    "new_followers": "+2,610",
+    "investment": "S/ 500"
+  },
+  "reach": {
+    "total_impressions": 78820,
+    "estimated_unique_reach": 40040,
+    "frequency": 1.97,
+    "meta_ads_impressions": 78820,
+    "meta_ads_reach": 40040,
+    "tiktok_ads_impressions": 0,
+    "tiktok_organic_views": 213669,
+    "ig_organic_views": 78820,
+    "fb_organic_impressions": 0,
+    "influencer_views": 0,
+    "meta_ads_clicks": 0
+  },
+  "engagement": {
+    "tiktok_organic": {
+      "likes": 2453,
+      "comments": 201,
+      "shares": 156,
+      "total": 2810
+    },
+    "ig_posts": {
+      "likes": 268,
+      "comments": 134,
+      "saves": 67,
+      "shares": 360,
+      "total": 829
+    },
+    "ig_reels": {
+      "likes": 358,
+      "comments": 49,
+      "saves": 30,
+      "shares": 21,
+      "total": 458
+    },
+    "fb_total": {
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "total": 0
+    },
+    "influencers": null,
+    "total_meaningful_interactions": 4097,
+    "meta_ads_post_engagements": 0
+  },
+  "efficiency": {
+    "meta_cpm_usd": 0,
+    "meta_cpm_soles": 0,
+    "tiktok_cpm_usd": 0,
+    "tiktok_cpm_soles": 0,
+    "blended_cpm_usd": 0,
+    "blended_cpm_soles": 0,
+    "cost_per_click_usd": 0,
+    "cost_per_follower_usd": 0,
+    "cpi_usd": 0,
+    "cpi_soles": 0,
+    "cost_per_1k_reach_usd": 0,
+    "cost_per_1k_reach_soles": 0
+  },
+  "competitors_ig": [
+    {
+      "name": "Wella Perú",
+      "username": "@wella_peru",
+      "followers": 3040,
+      "er": "0.79",
+      "likes_avg": 14.9,
+      "comments_avg": 4.4,
+      "posts": 42,
+      "is_self": true
+    },
+    {
+      "name": "Wella Colombia",
+      "username": "@wella.colombia",
+      "followers": 1146,
+      "er": "0.26",
+      "likes_avg": 3.91,
+      "comments_avg": 0,
+      "posts": 23
+    },
+    {
+      "name": "Wella México",
+      "username": "@wellamexico",
+      "followers": 21559,
+      "er": "0.18",
+      "likes_avg": 37.44,
+      "comments_avg": 2.53,
+      "posts": 43
+    },
+    {
+      "name": "Koleston Rep. Dominicana",
+      "username": "@kolestonrd",
+      "followers": 23551,
+      "er": "0.13",
+      "likes_avg": 26.93,
+      "comments_avg": 4.42,
+      "posts": 55
+    },
+    {
+      "name": "Garnier Perú",
+      "username": "@garnierperu",
+      "followers": 41435,
+      "er": "0.05",
+      "likes_avg": 19.24,
+      "comments_avg": 0.96,
+      "posts": 25
+    }
+  ],
+  "influencers_ig": [
+    {
+      "name": "Ariana Salheli",
+      "username": "@ariana.salheli",
+      "platform": "Modelo / Beauty",
+      "content_type": "Modelo protagonista en posts Koleston. Su presencia generó los comentarios más admirativos del periodo.",
+      "url": "https://www.instagram.com/p/DXIhTQQETHI/",
+      "coverImageUrl": "images/wella/inf_ariana.png"
+    },
+    {
+      "name": "Fátima Malca",
+      "username": "@fatima.malca",
+      "platform": "Lifestyle / Beauty",
+      "content_type": "Collab Koleston Borgoña y Soft Color. Mencionada repetidamente por seguidoras como referente de color.",
+      "url": "https://www.instagram.com/p/DXpbNgSDcDY/",
+      "coverImageUrl": "images/wella/inf_fatima.png"
+    },
+    {
+      "name": "Mamienaspurosblog",
+      "username": "@mamienaspurosblog",
+      "platform": "Maternidad / Lifestyle",
+      "content_type": "Tutorial aplicación Koleston. Generó conversación educativa: tips de aplicación sin decoloración.",
+      "url": "https://www.instagram.com/p/DXvHNAgskEr/",
+      "coverImageUrl": "images/wella/inf_mamienaspurosblog.png"
+    },
+    {
+      "name": "Mamabusca.blog",
+      "username": "@mamabusca.blog",
+      "platform": "Maternidad / Lifestyle",
+      "content_type": "Mom influencer, Koleston. La más efectiva en intención de compra. 'El color no nos cambia, nos revela.'",
+      "url": "https://www.instagram.com/p/DXz26MqviOP/",
+      "coverImageUrl": "images/wella/inf_mamabusca.png"
+    }
+  ],
+  "video_retention": [],
+  "charts": {
+    "reach_mix_labels": [
+      "Orgánico",
+      "Pagado"
+    ],
+    "reach_mix_data": [
+      129000,
+      6828
+    ],
+    "months6": [
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26",
+      "Abr 26",
+      "May 26"
+    ],
+    "cpm_meta": [
+      null,
+      null,
+      null,
+      40.32,
+      40.32,
+      40.32
+    ],
+    "cpm_tk": [
+      null,
+      null,
+      null,
+      0.94,
+      0.94,
+      0.94
+    ],
+    "bhs_radar": [],
+    "bhs_benchmark": [],
+    "bhs_history": [],
+    "community_total": [
+      0,
+      0,
+      0,
+      1846,
+      2200,
+      4456
+    ],
+    "fb_followers_labels": [
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26",
+      "Abr 26",
+      "May 26"
+    ],
+    "fb_followers": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ig_followers": [
+      0,
+      0,
+      0,
+      1893,
+      2307,
+      3040
+    ],
+    "tk_followers": [
+      0,
+      0,
+      0,
+      13,
+      1144,
+      1416
+    ],
+    "er_fb": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "er_ig": [
+      0,
+      0,
+      0,
+      4.5,
+      6.8,
+      15.2
+    ],
+    "er_tk": [
+      0,
+      0,
+      0,
+      3.8,
+      4.5,
+      53.1
+    ],
+    "tk_top_videos_labels": [
+      "18 abr\nShake Color",
+      "10 abr\nClean Girl",
+      "15 abr\nFit Check"
+    ],
+    "tk_top_videos_data": [
+      123038,
+      32194,
+      30760
+    ],
+    "sent_categories_data": [
+      42,
+      23,
+      18,
+      12,
+      5
+    ],
+    "sent_categories_labels": [
+      "Admiración",
+      "Intención compra",
+      "Consulta",
+      "Resultado",
+      "Disponibilidad"
+    ],
+    "meta_days": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tk_hours": [
+      5,
+      10,
+      15,
+      25,
+      40,
+      60,
+      80,
+      50
+    ],
+    "budget_labels": [
+      "IG Ads",
+      "TK Ads"
+    ],
+    "budget_data": [
+      79.37,
+      52.91
+    ],
+    "comp_followers_labels": ["Garnier Perú","Koleston RD","Wella México","Wella Perú","Wella Colombia"],
+    "comp_followers_data": [41435, 23551, 21559, 3040, 1146],
+    "comp_er_labels": ["Wella Perú","Wella Colombia","Wella México","Koleston RD","Garnier Perú"],
+    "comp_er_data": [0.79, 0.26, 0.18, 0.13, 0.05],
+    "reach_organic": [
+      null,
+      null,
+      null,
+      3600,
+      115000,
+      17228
+    ],
+    "reach_paid": [
+      null,
+      null,
+      null,
+      800,
+      5000,
+      1028
+    ],
+    "formatos_labels": [
+      "Proceso/Tutorial",
+      "Lifestyle/Trend",
+      "Producto",
+      "Sorteo/CTA",
+      "Educativo"
+    ],
+    "formatos_data": [
+      45,
+      25,
+      15,
+      10,
+      5
+    ]
+  },
+  "reach_mix": {
+    "organic": 95,
+    "paid": 5
+  }
+}

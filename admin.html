@@ -559,6 +559,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
           <tbody></tbody>
         </table>
       </div>
+      <div class="card">
+        <div class="card-title">Contenido de competencia (top por comentarios) <button class="btn btn-secondary btn-sm" style="margin-left:auto" onclick="addCompContentCard()">+ Agregar</button></div>
+        <div class="form-group"><label class="form-label">Intro de la seccion</label><textarea class="form-textarea" id="compc_intro" rows="2" placeholder="Wella Peru lidera el engagement por seguidor de la categoria..."></textarea></div>
+        <div class="form-group"><label class="form-label">Criterio</label><input class="form-input" id="compc_criterio" placeholder="Ordenado por comentarios — indicador de interes real."></div>
+        <div class="form-group"><label class="form-label">Conclusion (cierre)</label><textarea class="form-textarea" id="compc_conclusion" rows="2"></textarea></div>
+        <div id="compcontent_list"></div>
+      </div>
     </div>
 
     <!-- TAB: CHARTS -->
@@ -772,7 +779,7 @@ function clearAllFields() {
     var tb = document.querySelector('#' + id + ' tbody');
     if (tb) tb.innerHTML = '';
   });
-  ['ig_top_list','ig_worst_list','fb_top_list','fb_worst_list','tk_top_list','tk_worst_list','influencers_list','act5_items_list','act6_items_list','recs_container','sent_categories_list','summary_kpis_list'].forEach(function(id) {
+  ['ig_top_list','ig_worst_list','fb_top_list','fb_worst_list','tk_top_list','tk_worst_list','influencers_list','compcontent_list','act5_items_list','act6_items_list','recs_container','sent_categories_list','summary_kpis_list'].forEach(function(id) {
     var el = document.getElementById(id);
     if (el) el.innerHTML = '';
   });
@@ -877,6 +884,67 @@ function addCompRow(comp) {
   tbody.appendChild(tr);
 }
 
+function addCompContentCard(item) {
+  item = item || {};
+  var container = document.getElementById('compcontent_list');
+  var div = document.createElement('div');
+  div.className = 'compc-card';
+  div.style.position = 'relative';
+  div.style.borderTop = '1px solid var(--border)';
+  div.style.paddingTop = '14px';
+  div.style.marginTop = '14px';
+  var thumbStyle = item.coverImageUrl ? 'background-image:url(' + item.coverImageUrl + ');background-size:cover;background-position:center;color:transparent;' : '';
+  div.innerHTML =
+    '<button class="btn btn-danger btn-xs" style="position:absolute;top:14px;right:0" onclick="this.closest(\'.compc-card\').remove()">X</button>' +
+    '<div style="display:grid;grid-template-columns:80px 1fr;gap:12px">' +
+      '<div class="post-thumb" style="width:80px;height:80px;border-radius:8px;' + thumbStyle + '" onclick="uploadThumb(this)">' + (item.coverImageUrl ? '' : 'Img') + '</div>' +
+      '<div>' +
+        '<div class="form-row">' +
+          '<div class="form-group"><label class="form-label">Marca</label><input class="form-input compc-marca" value="' + esc(item.marca) + '" placeholder="Garnier Peru"></div>' +
+          '<div class="form-group"><label class="form-label">Handle</label><input class="form-input compc-handle" value="' + esc(item.handle) + '" placeholder="garnierperu"></div>' +
+          '<div class="form-group"><label class="form-label">Tipo</label><input class="form-input compc-tipo" value="' + esc(item.tipo) + '" placeholder="Reel/Post"></div>' +
+        '</div>' +
+        '<div class="form-row">' +
+          '<div class="form-group"><label class="form-label">Comentarios</label><input class="form-input compc-comments" value="' + (item.comments != null ? item.comments : '') + '"></div>' +
+          '<div class="form-group"><label class="form-label">Likes</label><input class="form-input compc-likes" value="' + (item.likes != null ? item.likes : '') + '"></div>' +
+          '<div class="form-group"><label class="form-label">Interacciones</label><input class="form-input compc-interactions" value="' + (item.interactions != null ? item.interactions : '') + '"></div>' +
+          '<div class="form-group"><label class="form-label">ER %</label><input class="form-input compc-engagement" value="' + esc(item.engagement) + '"></div>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="form-group" style="margin-top:8px"><label class="form-label">Link del post</label><input class="form-input compc-link" value="' + esc(item.link) + '" placeholder="https://instagram.com/reel/..."></div>' +
+    '<div class="form-group"><label class="form-label">Caption</label><textarea class="form-textarea compc-caption" rows="2">' + esc(item.caption || '') + '</textarea></div>' +
+    '<div class="form-group"><label class="form-label">Cover Image URL (o sube imagen al recuadro)</label><input class="form-input compc-cover" value="' + esc(item.coverImageUrl) + '" style="font-size:10px" placeholder="images/wella/comp_nombre.jpg"></div>';
+  container.appendChild(div);
+}
+
+function collectCompetitorContent() {
+  var items = [];
+  document.querySelectorAll('#compcontent_list .compc-card').forEach(function(card) {
+    function v(sel){ var e = card.querySelector(sel); return e ? e.value : ''; }
+    var marca = v('.compc-marca');
+    if (!marca) return;
+    items.push({
+      marca: marca,
+      handle: v('.compc-handle'),
+      tipo: v('.compc-tipo'),
+      comments: numVal(v('.compc-comments')),
+      likes: numVal(v('.compc-likes')),
+      interactions: numVal(v('.compc-interactions')),
+      engagement: v('.compc-engagement'),
+      link: v('.compc-link'),
+      caption: v('.compc-caption'),
+      coverImageUrl: v('.compc-cover')
+    });
+  });
+  return {
+    intro: (document.getElementById('compc_intro') || {}).value || '',
+    criterio: (document.getElementById('compc_criterio') || {}).value || '',
+    conclusion: (document.getElementById('compc_conclusion') || {}).value || '',
+    items: items
+  };
+}
+
 function addRecCard(rec) {
   rec = rec || {};
   var container = document.getElementById('recs_container');
@@ -931,8 +999,8 @@ function uploadThumb(el) {
       el.style.backgroundSize = 'cover';
       el.style.backgroundPosition = 'center';
       el.textContent = '';
-      var editor = el.closest('.post-editor');
-      var coverInput = editor.querySelector('.pe-cover');
+      var editor = el.closest('.post-editor') || el.closest('.inf-card') || el.closest('.compc-card');
+      var coverInput = editor ? (editor.querySelector('.pe-cover') || editor.querySelector('.inf-cover') || editor.querySelector('.compc-cover')) : null;
       if (coverInput) coverInput.value = ev.target.result;
     };
     reader.readAsDataURL(file);
@@ -1546,6 +1614,8 @@ function collectData() {
   var infCollected = collectInfluencers();
   if (infCollected.length > 0) returnObj.influencers_ig = infCollected;
   if (competitors_ig.length > 0) returnObj.competitors_ig = competitors_ig;
+  var compContent = collectCompetitorContent();
+  if (compContent.items.length > 0 || compContent.intro || compContent.criterio || compContent.conclusion) returnObj.competitor_content = compContent;
   var sentCats = collectSentCategories();
   if (sentCats.length > 0) returnObj.sentiment.categories = sentCats;
   var skpis = collectSummaryKpis();
@@ -1783,6 +1853,13 @@ function loadFromData(data) {
     document.querySelector('#comp_table tbody').innerHTML = '';
     data.competitors_ig.forEach(function(c){addCompRow(c)});
   }
+  if (data.competitor_content) {
+    setVal('compc_intro', data.competitor_content.intro || (data.executive && data.executive.competencia_intro) || '');
+    setVal('compc_criterio', data.competitor_content.criterio || '');
+    setVal('compc_conclusion', data.competitor_content.conclusion || '');
+    var _ccl = document.getElementById('compcontent_list');
+    if (_ccl) { _ccl.innerHTML = ''; (data.competitor_content.items || []).forEach(function(it){ addCompContentCard(it); }); }
+  }
 }
 
 function setVal(id, val) {
@@ -1853,18 +1930,26 @@ async function generateReport() {
   var brandId = data.brand_id || document.getElementById('brand_selector').value || 'UNKNOWN';
   var period = data.period;
   data.brand_id = brandId;
+  // Blindaje: fusionar con el JSON existente para no borrar campos que el admin no maneja (ej. competitor_content)
+  var existing = {};
+  try {
+    var resE = await fetch('data/' + brandId + '_' + period + '.json');
+    if (resE.ok) existing = await resE.json();
+  } catch(e) {}
+  var merged = deepMerge(JSON.parse(JSON.stringify(existing)), data);
+  merged.brand_id = brandId;
   try {
     var res = await fetch('/save', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+      body: JSON.stringify(merged)
     });
     var result = await res.json();
     if (result.ok) {
       setStatus('Guardado y abriendo reporte...', 'var(--success)');
     }
   } catch(e) {
-    localStorage.setItem('ludik_report_data', JSON.stringify(data));
+    localStorage.setItem('ludik_report_data', JSON.stringify(merged));
   }
   window.open('reporte.html?brand=' + brandId + '&period=' + period, '_blank');
 }
