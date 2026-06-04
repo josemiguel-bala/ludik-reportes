@@ -1251,6 +1251,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
       <div class="pk-divider"></div>
       <div class="portada-kpi"><div class="pk-value" style="color:var(--warning)">9/18</div><div class="pk-label">Objetivos Cumplidos</div></div>
     </div>
+    <div class="portada-growth" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px"></div>
     <div class="portada-footer"></div>
   </div>
 </section>
@@ -1449,6 +1450,7 @@ const REPORT_DATA = {
   community: { facebook: {start:0,end:0,delta:0,delta_pct:0}, instagram: {start:0,end:0,delta:0,delta_pct:0}, tiktok: {start:0,end:0,delta:0,delta_pct:0}, linkedin: {start:0,end:0,delta:0,delta_pct:0}, total_new: 0 },
   gbp: { impressions_total:0, impressions_maps:0, impressions_search:0, direction_requests:0, call_clicks:0, website_clicks:0, actions_total:0 },
   funnel_conversion: null,
+  conversion_results: null,
   reach: { total_impressions:0, estimated_unique_reach:0, frequency:0, meta_ads_reach:0, meta_ads_impressions:0, tiktok_ads_impressions:0, tiktok_organic_views:0, fb_organic_reach:0, fb_organic_impressions:0, ig_organic_reach:0, ig_organic_views:0 },
   engagement: { meta_ads_interactions:0, meta_ads_clicks:0, meta_ads_link_clicks:0, meta_ads_post_engagements:0, fb_organic_interactions:0, ig_interactions:0, ig_organic_interactions:0, tiktok_interactions:0, tiktok_organic:{likes:0,comments:0,shares:0,total:0}, total_interactions:0, total_meaningful_interactions:0 },
   investment: { meta_ads_usd:0, meta_ads_soles:0, tiktok_ads_usd:0, tiktok_ads_soles:0, total_usd:0, total_soles:0, meta_pct:0, tiktok_pct:0 },
@@ -1792,6 +1794,21 @@ function populateReport() {
   if (portadaPeriod) portadaPeriod.textContent = D.period;
   const portadaFooter = document.querySelector('.portada-footer');
   if (portadaFooter) portadaFooter.textContent = D.portada.footer;
+
+  // Portada: crecimiento de seguidores por canal (separado)
+  const portadaGrowth = document.querySelector('.portada-growth');
+  if (portadaGrowth) {
+    const gc = D.community || {};
+    const chs = [
+      {k:'instagram', l:'Instagram', c:'#F84CDE'},
+      {k:'tiktok', l:'TikTok', c:'#20ECC8'},
+      {k:'facebook', l:'Facebook', c:'#673CEF'},
+      {k:'linkedin', l:'LinkedIn', c:'#0A66C2'}
+    ].filter(x => gc[x.k] && (gc[x.k].delta || gc[x.k].end));
+    if (chs.length) {
+      portadaGrowth.innerHTML = chs.map(x => { const c = gc[x.k]; return '<div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-left:3px solid '+x.c+';border-radius:10px;padding:10px 16px;text-align:left"><div style="font-size:12px;color:rgba(255,255,255,.6);font-weight:700">'+x.l+'</div><div style="font-size:22px;font-weight:900;color:#FFF;line-height:1.1;margin-top:2px">+'+(c.delta||0).toLocaleString("es-PE")+'</div><div style="font-size:12px;color:#20ECC8;font-weight:700">+'+(c.delta_pct||0)+'%</div></div>'; }).join('');
+    } else { portadaGrowth.style.display = 'none'; }
+  }
 
   // Portada KPIs
   const pkValues = document.querySelectorAll('.portada-kpi .pk-value');
@@ -3093,6 +3110,22 @@ function populateExecutive(D) {
     h += '</div>';
   }
   h += '</div>';
+  // Crecimiento de seguidores por canal (separado)
+  (function(){
+    const gc = D.community || {};
+    const chs = [
+      {k:'instagram', l:'Instagram', c:'#F84CDE'},
+      {k:'tiktok', l:'TikTok', c:'#20ECC8'},
+      {k:'facebook', l:'Facebook', c:'#673CEF'},
+      {k:'linkedin', l:'LinkedIn', c:'#0A66C2'}
+    ].filter(x => gc[x.k] && (gc[x.k].delta || gc[x.k].end));
+    if (chs.length) {
+      h += '<div style="margin-top:30px"><div style="font-size:13px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.6);text-transform:uppercase;margin-bottom:12px">Seguidores ganados por canal</div>';
+      h += '<div style="display:flex;flex-wrap:wrap;gap:12px">';
+      chs.forEach(x => { const c = gc[x.k]; h += '<div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-left:3px solid '+x.c+';border-radius:12px;padding:14px 18px;min-width:138px"><div style="font-size:13px;color:rgba(255,255,255,.7);font-weight:700">'+x.l+'</div><div style="font-size:28px;font-weight:900;color:#FFF;line-height:1.1;margin-top:4px">+'+fmt(c.delta||0)+'</div><div style="font-size:13px;color:var(--success);font-weight:700;margin-top:2px">+'+(c.delta_pct||0)+'%</div></div>'; });
+      h += '</div></div>';
+    }
+  })();
   h += '</section>';
 
   // — Helper para render de post card —
@@ -3184,14 +3217,15 @@ function populateExecutive(D) {
       {k:'impresiones', l:'Impresiones', ic:'📡', c:'var(--purple2)'},
       {k:'alcance', l:'Alcance', ic:'👁️', c:'var(--fucsia)'},
       {k:'clics', l:'Clics', ic:'🖱️', c:'#9B6BFF'},
-      {k:'mensajes', l:'Mensajes / Conversaciones', ic:'💬', c:'var(--teal)'}
-    ];
-    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;align-items:stretch">';
+      {k:'mensajes', l:'Mensajes / Conversaciones', ic:'💬', c:'#FF9F40'},
+      {k:'matriculas', l:'Matrículas Cerradas', ic:'🎓', c:'var(--teal)'}
+    ].filter(s => fc[s.k] != null);
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;align-items:stretch">';
     steps.forEach((s,i) => {
       const v = fc[s.k] || 0;
       h += '<div style="background:var(--card);border:1px solid var(--border);border-top:4px solid '+s.c+';border-radius:14px;padding:24px;text-align:center">';
       h += '<div style="font-size:30px">'+s.ic+'</div>';
-      h += '<div style="font-size:38px;font-weight:900;color:'+s.c+';line-height:1.1;margin-top:8px">'+fmtK(v)+'</div>';
+      h += '<div style="font-size:36px;font-weight:900;color:'+s.c+';line-height:1.1;margin-top:8px">'+fmtK(v)+'</div>';
       h += '<div style="font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;margin-top:8px">'+s.l+'</div>';
       if (i>0) { const prev = fc[steps[i-1].k] || 1; const rate = v/prev*100; h += '<div style="font-size:12px;color:#9b9bb5;margin-top:8px">'+rate.toFixed(rate<1?2:1)+'% del paso anterior</div>'; }
       h += '</div>';
@@ -3199,6 +3233,28 @@ function populateExecutive(D) {
     h += '</div>';
     if (fc.nota) h += '<div style="font-size:13px;color:var(--gray);margin-top:14px;font-style:italic">'+fc.nota+'</div>';
     h += '</section>';
+  }
+
+  // — SECTION: Resultado de Negocio (CPA / ROAS) —
+  const cr = D.conversion_results;
+  if (cr && cr.matriculas_total) {
+    h += '<section style="padding:8px 32px 16px">';
+    h += '<div style="background:linear-gradient(135deg,rgba(32,236,200,.08),rgba(75,0,255,.08));border:1px solid var(--border);border-radius:18px;padding:32px">';
+    h += '<div style="font-size:24px;font-weight:900;color:var(--white);margin-bottom:6px">💰 Resultado de Negocio del Período</div>';
+    h += '<div style="font-size:15px;color:var(--gray);margin-bottom:24px;max-width:1000px">De la pauta a la matrícula: con S/ '+fmt(Math.round(cr.inversion_soles))+' en pauta se cerraron '+fmt(cr.matriculas_total)+' matrículas.</div>';
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px">';
+    const cards = [
+      ['🎓', fmt(cr.matriculas_total), 'Matrículas Cerradas', fmt(cr.matriculas_adultos)+' adultos · '+fmt(cr.matriculas_ninos)+' niños', 'var(--teal)'],
+      ['🏷️', 'S/ '+cr.cpa_soles.toFixed(2), 'CPA · Costo por Matrícula', 'Inversión / matrículas', 'var(--fucsia)'],
+      ['📈', 'S/ '+fmtK(cr.ingreso_soles), 'Ingreso Estimado', 'Conservador, solo curso', '#9B6BFF'],
+      ['🚀', cr.roas+'x', 'ROAS (blended)', 'Ingreso / inversión', 'var(--success)']
+    ];
+    cards.forEach(function(c){
+      h += '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center"><div style="font-size:28px">'+c[0]+'</div><div style="font-size:40px;font-weight:900;color:'+c[4]+';line-height:1.05;margin-top:6px">'+c[1]+'</div><div style="font-size:13px;font-weight:700;color:#DDDDEE;text-transform:uppercase;letter-spacing:.05em;margin-top:8px">'+c[2]+'</div><div style="font-size:12px;color:var(--gray);margin-top:4px">'+c[3]+'</div></div>';
+    });
+    h += '</div>';
+    if (cr.nota) h += '<div style="font-size:12px;color:var(--gray);margin-top:18px;font-style:italic;max-width:1100px">'+cr.nota+'</div>';
+    h += '</div></section>';
   }
 
   // — SECTION: Presencia Local · Google Business Profile —

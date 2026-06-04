@@ -9,22 +9,10 @@
     "tag": "LUDiK Analytics · Reporte de Ecosistema",
     "footer": "Confidencial · Preparado por el equipo LUDiK para Instituto Confucio PUCP",
     "kpis": [
-      {
-        "value": "+18,982",
-        "label": "Nuevos Seguidores"
-      },
-      {
-        "value": "1.76M",
-        "label": "Views TikTok"
-      },
-      {
-        "value": "S/ 9,273",
-        "label": "Inversión en Pauta"
-      },
-      {
-        "value": "3,069",
-        "label": "Conversaciones Matrícula"
-      }
+      { "value": "776", "label": "Matrículas Cerradas", "delta_note": "676 adultos · 100 niños" },
+      { "value": "~51x", "label": "ROAS", "delta_note": "Ingreso est. S/ 473K" },
+      { "value": "S/ 12", "label": "CPA por Matrícula", "delta_note": "vs S/ 9,273 invertidos" },
+      { "value": "3,069", "label": "Conversaciones de Matrícula", "delta_note": "25% cerró matrícula" }
     ],
     "hide_objectives_kpi": true
   },
@@ -113,7 +101,20 @@
     "alcance": 256343,
     "clics": 19126,
     "mensajes": 3069,
-    "nota": "Embudo de las campañas Meta con objetivo de mensajes/matrícula (no incluye awareness ni tráfico). Alcance = suma de alcance por campaña. Tasas: 7.5% de clic, 16% inicia conversación."
+    "matriculas": 776,
+    "nota": "Embudo de las campañas Meta con objetivo de mensajes/matrícula (no incluye awareness ni tráfico). Alcance = suma de alcance por campaña. Tasas: 7.5% de clic, 16% inicia conversación, 25% de conversaciones cierra matrícula."
+  },
+  "conversion_results": {
+    "matriculas_total": 776,
+    "matriculas_adultos": 676,
+    "matriculas_ninos": 100,
+    "inversion_soles": 9273,
+    "cpa_soles": 11.95,
+    "ingreso_soles": 472900,
+    "roas": 51,
+    "ticket_adulto": 650,
+    "ticket_nino": 335,
+    "nota": "CPA y ROAS blended: matrículas totales del período (676 adultos + 100 niños) vs inversión total en pauta (S/ 9,273). Ingreso estimado conservador con precio de curso (adulto S/ 650 Inicial, niño prom. S/ 335), sin libros. No es atribución last-click: la pauta es uno de los motores, junto con marca PUCP, alcance propio y referidos."
   },
   "sentiment": {
     "total": 0,
@@ -213,7 +214,7 @@
           "text": "Mantener el reporte de ecosistema (5 canales) como estándar mensual para Confucio: es la única vista que conecta awareness (TikTok/IG), consideración (LinkedIn) e intención local (Google)."
         }
       ],
-      "highlight": "Ecosistema ene–may 2026: +18,982 seguidores · 1.76M views TK · 4.7M impresiones Meta · 3,069 conversaciones matrícula · 3,073 'cómo llegar' en Google"
+      "highlight": "Resultado: 776 matrículas (676 adultos + 100 niños) con S/ 9,273 de pauta → CPA S/ 12 y ROAS ~51x. Ecosistema: +18,982 seguidores · 1.76M views TK · 3,069 conversaciones · 3,073 'cómo llegar' en Google"
     }
   },
   "recommendations": [
