@@ -458,7 +458,29 @@
             "coverImageUrl": "images/confucio/2026-05/e456a94fa7b7.jpg"
           }
         ],
-        "worst": []
+        "worst": [
+          {
+            "title": "¿Cuál de estos 3 conceptos resuena contigo?",
+            "platform": "TikTok",
+            "date": "2026-03-18",
+            "views": 1042,
+            "note": "Concepto abstracto sin gancho. En TikTok, sin una pregunta o curiosidad fuerte en los primeros 2s, la audiencia pasa de largo."
+          },
+          {
+            "title": "Cada historia empieza con un primer paso",
+            "platform": "TikTok",
+            "date": "2026-03-19",
+            "views": 1057,
+            "note": "Mensaje motivacional genérico, sin cultura china ni hook. No retiene ni invita a compartir."
+          },
+          {
+            "title": "Taller de cortado tradicional (recap)",
+            "platform": "TikTok",
+            "date": "2026-02-24",
+            "views": 1097,
+            "note": "Recap de evento interno: bajo interés para audiencia externa. Los recaps rinden muy por debajo del contenido de curiosidad."
+          }
+        ]
       },
       "ig": {
         "top": [
@@ -508,7 +530,29 @@
             "coverImageUrl": "images/confucio/2026-05/7096ba991fce.jpg"
           }
         ],
-        "worst": []
+        "worst": [
+          {
+            "title": "Curso de chino para niños (promo)",
+            "platform": "Instagram",
+            "date": "2026-01-07",
+            "reach": 285,
+            "note": "Venta directa sin gancho cultural ni utilidad: 285 de alcance y 0 guardados. El anuncio de curso plano no resuena en IG."
+          },
+          {
+            "title": "Taller de pronunciación (promo)",
+            "platform": "Instagram",
+            "date": "2026-01-29",
+            "reach": 359,
+            "note": "Otra promo de taller sin hook. IG premia curiosidad y utilidad, no el aviso de curso."
+          },
+          {
+            "title": "Nueva misión: Maestro/a de la comunidad",
+            "platform": "Instagram",
+            "date": "2026-01-29",
+            "reach": 457,
+            "note": "Concepto gamificado interno que no se entiende sin contexto. No conectó."
+          }
+        ]
       },
       "fb": {
         "top": [
@@ -552,7 +596,29 @@
             "note": "2do Reel más visto de FB (44K views, 2,252 reacciones). El formato 'rompe-mito + utilidad' también escala."
           }
         ],
-        "worst": []
+        "worst": [
+          {
+            "title": "Nueva misión desbloqueada: Maestro/a",
+            "platform": "Facebook",
+            "date": "2026-01-29",
+            "views": 356,
+            "note": "Sin pauta y sin gancho: FB orgánico casi no alcanza. Mismo flop que su versión en IG."
+          },
+          {
+            "title": "Curso de chino para niños",
+            "platform": "Facebook",
+            "date": "2026-01-07",
+            "views": 429,
+            "note": "Promo plana sin inversión. El orgánico de FB sin pauta rara vez supera unos cientos de personas."
+          },
+          {
+            "title": "Curso para tus hijos / futuro",
+            "platform": "Facebook",
+            "date": "2026-05-12",
+            "views": 542,
+            "note": "Promo de matrícula sin pauta ni gancho. Necesita inversión o un hook para despegar."
+          }
+        ]
       },
       "linkedin": {
         "top": [
