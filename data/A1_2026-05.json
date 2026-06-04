@@ -274,7 +274,7 @@
     "engagement": "14,629 interacciones de contenido (IG 9,593, FB 4,957, TK 79). El driver: el sorteo (IG 1,297 compartidos + 194 guardados; FB 413 compartidos + 1,022 comentarios). Guardados+compartidos = la métrica que más vende.",
     "sentiment": "97% positivo sobre 93 comentarios. Domina el amor por 'Mamá A1' y el antojo por las recetas (atún y durazno).",
     "investment": "100% Meta: $552.25 (S/2,088), +63% sobre lo planificado ($337.8). Lima 54% del presupuesto; CPM de $0.50 muy eficiente.",
-    "competition": "A1 lidera el engagement por seguidor (3.79%) vs Compass 2.42% y Atún Real 0.08%. El concurso de Campomar (211 comentarios) fue el mejor de la competencia, lejos de los 1,022 del sorteo A1."
+    "competition": "A1 lidera el engagement por seguidor de su categoría directa: 1.02% vs Campomar 0.25% y Atún Real 0.08%. Campomar casi duplica a A1 en seguidores (17.7K) pero genera mucha menos interacción relativa."
   },
   "story": {
     "act1": {
@@ -324,11 +324,11 @@
     },
     "act5": {
       "number": "Acto 5 · Liderazgo en Categoría",
-      "title": "A1 lidera el engagement por seguidor: 3.79% vs 2.42% (Compass) y 0.08% (Atún Real).",
+      "title": "A1 lidera el engagement por seguidor: 1.02% vs Campomar 0.25% y Atún Real 0.08%.",
       "type": "competition",
       "paragraphs": [
-        "Frente a sus competidores de atún, A1 lidera el engagement por seguidor con 3.79%. El mejor contenido de la competencia (concurso de Campomar) llegó a 211 comentarios.",
-        "El sorteo de A1 generó 1,022 comentarios solo en Facebook: la conversación que activa A1 no tiene rival directo en la categoría."
+        "Frente a sus competidores directos de atún, A1 lidera el engagement por seguidor con 1.02%, muy por encima de Campomar (0.25%) y Atún Real (0.08%), pese a que Campomar tiene casi el doble de seguidores.",
+        "El mejor contenido de la competencia (concurso de Campomar) llegó a 211 comentarios; el sorteo de A1 generó 1,022 solo en Facebook. A1 activa más conversación que marcas más grandes."
       ],
       "image": "images/a1/comp_a1_1.jpg",
       "image_caption": "El mejor contenido de la competencia: concurso de Campomar (211 comentarios)"
@@ -343,7 +343,7 @@
     "riesgo_fb": null,
     "indice_valor": "Índice de valor por amplificación (guardados×3 + compartidos×2 + comentarios×1.5 + likes×1): el sorteo lidera ampliamente, confirmando que la mecánica de participación es la palanca más rentable.",
     "bhs_explicacion": "El Brand Health Score se mantiene oculto en este formato.",
-    "fuentes": "Comunidad/contenido(imágenes)/TikTok/competidores: Metricool (5981134). Pauta: CSVs Meta Ads (región+plataforma). Contenido por pieza: Meta Insights (FB/IG/Stories) + Metricool (imágenes, guardados, compartidos). Totales de cuenta: Business Suite. Sentimiento: 16 CSVs comentarios IG. Metas: Sheet 'Proyección Agregada - Mayo'. Marco: plan '[A1] Plan de Contenidos Mayo 2026'."
+    "fuentes": "Comunidad/contenido(imágenes)/TikTok/competidores: Metricool (5981134; competidores trackeados: Campomar y Atún Real). Pauta: CSVs Meta Ads (región+plataforma). Contenido por pieza: Meta Insights (FB/IG/Stories) + Metricool (imágenes, guardados, compartidos). Totales de cuenta: Business Suite. Sentimiento: 16 CSVs comentarios IG. Metas: Sheet 'Proyección Agregada - Mayo'. Marco: plan '[A1] Plan de Contenidos Mayo 2026'."
   },
   "bhs": {
     "total": 0,
@@ -387,7 +387,7 @@
       "priority": "Media",
       "channel": "Multi",
       "title": "Capitalizar el liderazgo en conversación",
-      "description": "A1 lidera el ER por seguidor de la categoría (3.79%) y su sorteo (1,022 comentarios) supera al mejor de la competencia (Campomar, 211). Usarlo como argumento comercial."
+      "description": "A1 lidera el ER por seguidor de su categoría directa (1.02% vs Campomar 0.25% y Atún Real 0.08%) y su sorteo (1,022 comentarios) supera al mejor de la competencia (Campomar, 211). Usar este liderazgo como argumento comercial."
     },
     {
       "priority": "Media",
@@ -892,29 +892,20 @@
       "name": "A1 Perú",
       "username": "@a1_peru",
       "followers": 9914,
-      "er": "3.79",
-      "likes_avg": 184.9,
-      "comments_avg": 191.0,
-      "posts": 21,
+      "er": "1.02",
+      "likes_avg": 96.3,
+      "comments_avg": 5.3,
+      "posts": 17,
       "is_self": true
-    },
-    {
-      "name": "Compass",
-      "username": "@compass.peru",
-      "followers": 6576,
-      "er": "2.42",
-      "likes_avg": 56.5,
-      "comments_avg": 102.9,
-      "posts": 18
     },
     {
       "name": "Campomar",
       "username": "@campomarperu",
-      "followers": null,
-      "er": null,
-      "likes_avg": null,
-      "comments_avg": null,
-      "posts": null
+      "followers": 17729,
+      "er": "0.25",
+      "likes_avg": 27.25,
+      "comments_avg": 18,
+      "posts": 12
     },
     {
       "name": "Atún Real Perú",
@@ -1120,22 +1111,22 @@
     ],
     "comp_followers_labels": [
       "A1 Perú",
-      "Compass",
+      "Campomar",
       "Atún Real"
     ],
     "comp_followers_data": [
       9914,
-      6576,
+      17729,
       6093
     ],
     "comp_er_labels": [
       "A1 Perú",
-      "Compass",
+      "Campomar",
       "Atún Real"
     ],
     "comp_er_data": [
-      3.79,
-      2.42,
+      1.02,
+      0.25,
       0.08
     ],
     "reach_organic": [
@@ -1168,9 +1159,9 @@
     ]
   },
   "competitor_content": {
-    "intro": "A1 lidera el engagement por seguidor de la categoría atún (3.79%), por delante de Compass (2.42%) y Atún Real (0.08%).",
+    "intro": "A1 lidera el engagement por seguidor frente a sus competidores directos de atún: 1.02% vs Campomar 0.25% y Atún Real 0.08% — y lo hace pese a que Campomar tiene casi el doble de seguidores (17.7K vs 9.9K).",
     "criterio": "Ordenado por comentarios — el indicador más sólido de interés real de la audiencia.",
-    "conclusion": "El mejor contenido de la competencia (concurso de Campomar) llegó a 211 comentarios; el resto no pasa de 2. El sorteo de A1 generó 1,022 comentarios solo en Facebook. La conversación que activa A1 supera a la categoría.",
+    "conclusion": "El mejor contenido de la competencia (concurso de Campomar, su marca más grande) llegó a 211 comentarios. El sorteo de A1 generó 1,022 comentarios solo en Facebook: A1 activa más conversación que competidores de mayor tamaño.",
     "items": [
       {
         "marca": "Campomar",
@@ -1225,5 +1216,9 @@
   "reach_mix": {
     "organic": 3,
     "paid": 97
+  },
+  "competitors_note": "ER calculado con metodología Metricool para todas las marcas. Competidores trackeados: Campomar y Atún Real.",
+  "executive": {
+    "competencia_intro": "A1 lidera el engagement por seguidor frente a sus competidores directos de atún: 1.02% vs Campomar 0.25% y Atún Real 0.08% — y lo hace pese a que Campomar tiene casi el doble de seguidores (17.7K vs 9.9K)."
   }
 }
