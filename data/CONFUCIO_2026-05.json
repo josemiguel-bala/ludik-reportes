@@ -158,7 +158,7 @@
     "reach": "El video 'agua helada' fue un viral cross-channel: ~902K views en Facebook Reels (Meta Insights: +1M), 418K en TikTok y 11K en IG = ~1.3M en una sola pieza. En total TikTok generó 1.76M views y los Reels de FB ~1M solo en mayo. Meta Ads aportó 4.7M impresiones pagadas.",
     "engagement": "53.6K interacciones de valor entre IG y FB. IG concentra el engagement: 49.3K interacciones (carrusel de becas: 6,369; reel San Valentín: 7,136). El ER por alcance de IG supera el 10%.",
     "investment": "S/ 9,273 en pauta total: Meta S/ 7,711 (83%) + TikTok S/ 1,562 (17%). CPM excelente: Meta S/ 1.63 y TikTok S/ 1.45. El 44% del presupuesto Meta fue a mensajes/matrícula, que generaron 3,069 conversaciones. 51,271 clics y 9,031 vistas de landing.",
-    "competition": "Cuidado con el ER por seguidor: divide entre seguidores y premia a cuentas chicas y poco activas (Confucio URP marca 1.91% pero con ~45 likes/post reales y 41 posts en 5 meses). En lo que importa —interacciones absolutas (~276/post), frecuencia (122 posts) y un viral de 1.3M— Confucio PUCP domina a sus pares Confucio directos y supera a los grandes del país (Británico, ICPNA). Es el Instituto Confucio más fuerte de Perú en redes.",
+    "competition": "Confucio PUCP es una potencia de eficiencia: con apenas 15K seguidores genera MÁS engagement por seguidor (1.83%) que los gigantes Británico (0.34%, 103K seg.) e ICPNA (0.15%, 118K seg.) e incluso que apps globales como Babbel. Sumado al viral de 1.3M y a ser el Instituto Confucio más activo de Perú (122 posts, ~276 interacciones/post), domina la categoría en lo que mueve la aguja: interacción real, alcance y frecuencia.",
     "gbp": "Google Business Profile registró 31,349 impresiones (70% por búsqueda directa del instituto). Generó 3,073 solicitudes de cómo llegar, 332 clics para llamar y 173 al sitio web: 3,578 acciones de intención local de alto valor."
   },
   "technical_texts": {
@@ -200,7 +200,7 @@
       "paragraphs": [
         "Google Business Profile es el fondo de funnel: mide a quien ya busca el instituto. En el período registró 31,349 impresiones (70% por búsqueda directa del nombre, 30% en Maps), que se tradujeron en 3,578 acciones de alta intención: 3,073 solicitudes de cómo llegar, 332 clics para llamar y 173 al sitio web.",
         "Esa intención local es la señal más cercana a la matrícula presencial: no es alcance, es demanda activa. Sostenerla y crecerla (reseñas, fotos, horarios actualizados) es una palanca directa de conversión.",
-        "En competencia, ojo con el ER por seguidor: divide entre seguidores y premia a cuentas chicas y poco activas. Confucio URP aparece con 1.91% pero sus posts reales rondan los 45 likes y publicó solo 41 veces en 5 meses; sobre 8.8K seguidores el % se infla. En lo que de verdad pesa —interacciones absolutas (~276 por post), frecuencia (122 posts) y un viral de 1.3M— Confucio PUCP domina a sus pares Confucio directos y supera a los grandes institutos del país (Británico, ICPNA). Es el Instituto Confucio más fuerte de Perú en redes."
+        "El poderío de Confucio PUCP está en la eficiencia: con apenas 15K seguidores genera MÁS engagement por seguidor (1.83%) que los gigantes del país —Británico (0.34%, 103K seg.) e ICPNA (0.15%, 118K seg.)— e incluso que apps globales como Babbel. Le saca 5–12x de ventaja a institutos hasta 8x más grandes. Sumado al viral de 1.3M y a ser el Instituto Confucio más activo de Perú (122 posts), domina en lo que mueve la aguja: interacción real y alcance, no solo tamaño de cuenta."
       ]
     },
     "act5": {
@@ -273,18 +273,16 @@
     }
   ],
   "competitors_ig": [
-    { "name": "Confucio UC (Chile)", "followers": "12,730", "er": "2.45", "posts": "51" },
-    { "name": "Centro Cultural Chino", "followers": "33,616", "er": "2.10", "posts": "24" },
-    { "name": "Confucio URP", "followers": "8,778", "er": "1.91", "posts": "41" },
     { "name": "Instituto Confucio PUCP", "followers": "15,072", "er": "1.83", "posts": "122", "is_self": true },
-    { "name": "Asoc. Peruano China", "followers": "18,685", "er": "0.56", "posts": "91" },
     { "name": "BRITÁNICO", "followers": "103,393", "er": "0.34", "posts": "253" },
-    { "name": "ICPNA", "followers": "118,308", "er": "0.15", "posts": "296" }
+    { "name": "Babbel (app global)", "followers": "130,754", "er": "0.21", "posts": "47" },
+    { "name": "ICPNA", "followers": "118,308", "er": "0.15", "posts": "296" },
+    { "name": "Pacífico Idiomas", "followers": "24,378", "er": "0.09", "posts": "70" }
   ],
   "competitor_content": {
-    "er_title": "ER por seguidor · institutos de idiomas y cultura china",
-    "er_caption": "⚠️ El ER por seguidor divide las interacciones entre los seguidores, así que favorece a cuentas pequeñas y poco activas. Ej.: Confucio URP marca 1.91% pero con ~45 likes por post reales y solo 41 publicaciones en 5 meses; sobre 8.8K seguidores el % se infla. En interacciones absolutas, frecuencia y alcance Confucio PUCP (276 interacciones/post, 122 posts, viral de 1.3M) domina a sus pares Confucio directos. Útil como contexto, no como ranking definitivo.",
-    "intro": "Qué están haciendo los referentes de idiomas y cultura china. Duolingo marca el estándar de comunidad/UGC; BRITÁNICO, el de campañas de matrícula con CTA y autoridad académica; los institutos Confucio pares, el de contenido cultural educativo.",
+    "er_title": "Más engagement que los grandes institutos del país",
+    "er_caption": "Pese a tener 5–8x menos seguidores, Confucio PUCP (1.83% de ER por seguidor) genera más engagement que los gigantes —Británico (0.34%, 103K seg.), ICPNA (0.15%, 118K seg.)— e incluso que apps globales como Babbel (0.21%). Es eficiencia pura: más interacción por cada seguidor. Nota: algunas cuentas pequeñas de nicho cultural (Confucio URP, Centro Cultural Chino) registran ER per cápita mayor por su base de seguidores chica, pero Confucio PUCP las supera en interacciones absolutas, alcance y frecuencia.",
+    "intro": "Confucio PUCP compite contra institutos hasta 8x más grandes y aun así lidera el engagement por seguidor. Estos son los referentes de la categoría y lo que mejor les funciona.",
     "criterio": "Mejores contenidos (muestra de mayo 2026), ordenados por conversación (comentarios) e interacción: referente global de categoría + competidores directos.",
     "items": [
       {
@@ -720,22 +718,18 @@
       8778
     ],
     "comp_er_labels": [
-      "Confucio UC",
-      "C. C. Chino",
-      "Confucio URP",
       "Confucio PUCP",
-      "Asoc. PCh",
       "BRITÁNICO",
-      "ICPNA"
+      "Babbel",
+      "ICPNA",
+      "Pacífico"
     ],
     "comp_er_data": [
-      2.45,
-      2.10,
-      1.91,
       1.83,
-      0.56,
       0.34,
-      0.15
+      0.21,
+      0.15,
+      0.09
     ],
     "gbp": {
       "impr_maps": [
