@@ -116,6 +116,22 @@
     "ticket_nino": 335,
     "nota": "CPA y ROAS blended: matrículas totales del período (676 adultos + 100 niños) vs inversión total en pauta (S/ 9,273). Ingreso estimado conservador con precio de curso (adulto S/ 650 Inicial, niño prom. S/ 335), sin libros. No es atribución last-click: la pauta es uno de los motores, junto con marca PUCP, alcance propio y referidos."
   },
+  "viral_highlight": {
+    "title": "¿Agua helada o agua tibia? En China dice mucho de ti",
+    "platform": "TikTok",
+    "date": "2026-05-15",
+    "views": 418641,
+    "reach": 322002,
+    "likes": 5311,
+    "comments": 186,
+    "shares": 569,
+    "avg_watch": "12.9s",
+    "pct_month": 80,
+    "url": "https://www.tiktok.com/@confuciopucp/video/7639884931782462741",
+    "coverImageUrl": "images/confucio/2026-05/229961885c7e.png",
+    "why": "Una sola pieza capturó el 80% del alcance de TikTok del mes. Fórmula ganadora: pregunta-hook + curiosidad cultural + identidad ('dice mucho de ti'). Es universal, de bajísimo costo de producción y muy compartible (569 compartidos, 322K alcance). Su watch-time (12.9s) casi duplica el de los demás videos: la gente se queda.",
+    "action": "Es la pieza más vendible del período. Convertirla en pilar de contenido (serie 'Curiosidades de China que dicen algo de ti'), reusar exactamente ese formato como creativo de TikTok/Meta Ads, y amplificarla con más pauta (en mayo ya tuvo un empujón de TikTok Ads)."
+  },
   "sentiment": {
     "total": 0,
     "positive_pct": 0,
@@ -218,6 +234,12 @@
     }
   },
   "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Convertir el viral 'Agua helada o tibia' en pilar de contenido",
+      "description": "Una sola pieza se llevó el 80% del alcance de TikTok de mayo (418K views, 322K alcance, watch-time 12.9s, 569 compartidos). Replicar el formato 'curiosidad cultural china + hook de pregunta + identidad' como serie recurrente y usarlo de creativo en TikTok/Meta Ads. Es el contenido más vendible y barato de producir del período."
+    },
     {
       "priority": "Alta",
       "channel": "TikTok",

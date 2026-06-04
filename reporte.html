@@ -1451,6 +1451,7 @@ const REPORT_DATA = {
   gbp: { impressions_total:0, impressions_maps:0, impressions_search:0, direction_requests:0, call_clicks:0, website_clicks:0, actions_total:0 },
   funnel_conversion: null,
   conversion_results: null,
+  viral_highlight: null,
   reach: { total_impressions:0, estimated_unique_reach:0, frequency:0, meta_ads_reach:0, meta_ads_impressions:0, tiktok_ads_impressions:0, tiktok_organic_views:0, fb_organic_reach:0, fb_organic_impressions:0, ig_organic_reach:0, ig_organic_views:0 },
   engagement: { meta_ads_interactions:0, meta_ads_clicks:0, meta_ads_link_clicks:0, meta_ads_post_engagements:0, fb_organic_interactions:0, ig_interactions:0, ig_organic_interactions:0, tiktok_interactions:0, tiktok_organic:{likes:0,comments:0,shares:0,total:0}, total_interactions:0, total_meaningful_interactions:0 },
   investment: { meta_ads_usd:0, meta_ads_soles:0, tiktok_ads_usd:0, tiktok_ads_soles:0, total_usd:0, total_soles:0, meta_pct:0, tiktok_pct:0 },
@@ -3255,6 +3256,28 @@ function populateExecutive(D) {
     h += '</div>';
     if (cr.nota) h += '<div style="font-size:12px;color:var(--gray);margin-top:18px;font-style:italic;max-width:1100px">'+cr.nota+'</div>';
     h += '</div></section>';
+  }
+
+  // — SECTION: Pieza Viral del Período (contenido destacado) —
+  const vh = D.viral_highlight;
+  if (vh && vh.views) {
+    h += '<section style="padding:24px 32px 16px">';
+    h += sectionHeader('🔥', 'Pieza Viral del Período', 'El contenido más vendible del mes', 'Lo que más funcionó no fue un canal entero, fue una sola pieza. Vale la pena tratarla como activo: replicarla y amplificarla.');
+    h += '<div style="background:linear-gradient(135deg,rgba(248,76,222,.10),rgba(32,236,200,.08));border:1px solid var(--border);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:minmax(220px,360px) 1fr">';
+    const tag = vh.url ? 'a' : 'div';
+    const thumb = vh.coverImageUrl ? 'background-image:url('+vh.coverImageUrl+');background-size:cover;background-position:center' : 'background:linear-gradient(135deg,#2D0080,#673CEF)';
+    h += '<'+tag+(vh.url?' href="'+vh.url+'" target="_blank"':'')+' style="'+thumb+';min-height:340px;position:relative;text-decoration:none">';
+    h += '<span style="position:absolute;top:14px;left:14px;background:var(--fucsia);color:#FFF;font-size:13px;font-weight:800;padding:6px 12px;border-radius:8px;text-transform:uppercase;letter-spacing:.06em">🔥 Viral · '+(vh.platform||'')+'</span>';
+    if (vh.pct_month) h += '<span style="position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.65);color:var(--teal);font-size:14px;font-weight:800;padding:8px 14px;border-radius:10px">'+vh.pct_month+'% del alcance TikTok del mes</span>';
+    h += '</'+tag+'>';
+    h += '<div style="padding:28px;display:flex;flex-direction:column;gap:16px">';
+    h += '<div style="font-size:24px;font-weight:800;color:var(--white);line-height:1.3">'+(vh.title||'')+'</div>';
+    h += '<div style="display:flex;flex-wrap:wrap;gap:24px">';
+    [['Views',fmtK(vh.views)],['Alcance',fmtK(vh.reach)],['Compartidos',fmt(vh.shares)],['Watch-time',vh.avg_watch||'–'],['Likes',fmt(vh.likes)]].forEach(function(m){ if(m[1]) h += '<div><div style="font-size:26px;font-weight:900;color:var(--teal);line-height:1">'+m[1]+'</div><div style="font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-top:3px">'+m[0]+'</div></div>'; });
+    h += '</div>';
+    if (vh.why) h += '<div style="font-size:15px;color:#DDDDEE;line-height:1.6;padding-top:14px;border-top:1px solid var(--border)"><strong style="color:var(--white)">Por qué funcionó:</strong> '+vh.why+'</div>';
+    if (vh.action) h += '<div style="background:rgba(32,236,200,.08);border-left:3px solid var(--teal);border-radius:10px;padding:16px;font-size:15px;color:#DDDDEE;line-height:1.6"><strong style="color:var(--teal)">Cómo capitalizarlo:</strong> '+vh.action+'</div>';
+    h += '</div></div></section>';
   }
 
   // — SECTION: Presencia Local · Google Business Profile —
