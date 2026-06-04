@@ -3242,7 +3242,7 @@ function populateExecutive(D) {
     h += '<section style="padding:8px 32px 16px">';
     h += '<div style="background:linear-gradient(135deg,rgba(32,236,200,.08),rgba(75,0,255,.08));border:1px solid var(--border);border-radius:18px;padding:32px">';
     h += '<div style="font-size:24px;font-weight:900;color:var(--white);margin-bottom:6px">💰 Resultado de Negocio del Período</div>';
-    h += '<div style="font-size:15px;color:var(--gray);margin-bottom:24px;max-width:1000px">De la pauta a la matrícula: con S/ '+fmt(Math.round(cr.inversion_soles))+' en pauta se cerraron '+fmt(cr.matriculas_total)+' matrículas.</div>';
+    h += '<div style="font-size:15px;color:var(--gray);margin-bottom:24px;max-width:1000px">Inversión total de marketing: S/ '+fmt(Math.round(cr.inversion_soles))+(cr.fee_soles?' (servicio S/ '+fmt(Math.round(cr.fee_soles))+' + pauta S/ '+fmt(Math.round(cr.pauta_soles))+')':'')+' → '+fmt(cr.matriculas_total)+' matrículas cerradas.</div>';
     h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px">';
     const cards = [
       ['🎓', fmt(cr.matriculas_total), 'Matrículas Cerradas', fmt(cr.matriculas_adultos)+' adultos · '+fmt(cr.matriculas_ninos)+' niños', 'var(--teal)'],
