@@ -1,0 +1,1229 @@
+{
+  "brand": "A1",
+  "period": "2026-05",
+  "period_label": "Mayo 2026",
+  "fx_rate": 3.78,
+  "metricool_id": "5981134",
+  "brand_id": "A1",
+  "portada": {
+    "tag": "LUDiK Analytics · Reporte — Mayo 2026",
+    "footer": "Confidencial · Preparado por el equipo LUDiK para A1 (GW Yichang & CIA)",
+    "kpis": [
+      {
+        "value": "1.1M",
+        "label": "Impresiones de pauta",
+        "delta_pct": "$552",
+        "delta_note": "CPM $0.50 · S/2,088"
+      },
+      {
+        "value": "+299",
+        "label": "Nuevos seg. Instagram",
+        "delta_pct": "+3.1%",
+        "delta_note": "de 9,615 a 9,914"
+      },
+      {
+        "value": "+143",
+        "label": "Nuevos seg. Facebook",
+        "delta_pct": "+0.9%",
+        "delta_note": "de 15,064 a 15,207"
+      },
+      {
+        "value": "97%",
+        "label": "Sentimiento positivo",
+        "delta_pct": "0 negativos",
+        "delta_note": "93 comentarios"
+      }
+    ]
+  },
+  "cierre": {
+    "tagline": "Data-driven decisions for modern brands",
+    "team": "Equipo LUDiK",
+    "location": "Barcelona · Lima",
+    "contact": "josemiguel@ludik.pe",
+    "confidential": "Este reporte es confidencial y fue preparado exclusivamente para A1 (GW Yichang & CIA)"
+  },
+  "objectives": [
+    {
+      "objective": "Alcance FB Lima",
+      "channel": "Facebook",
+      "target": "279,835",
+      "result": "358,189",
+      "status": "met",
+      "delta": "+28%"
+    },
+    {
+      "objective": "Interacciones FB Lima",
+      "channel": "Facebook",
+      "target": "2,381",
+      "result": "2,809",
+      "status": "met",
+      "delta": "+18%"
+    },
+    {
+      "objective": "Visualizaciones FB Lima",
+      "channel": "Facebook",
+      "target": "556,458",
+      "result": "623,233",
+      "status": "met",
+      "delta": "+12%"
+    },
+    {
+      "objective": "Alcance FB Provincia",
+      "channel": "Facebook",
+      "target": "214,071",
+      "result": "274,011",
+      "status": "met",
+      "delta": "+28%"
+    },
+    {
+      "objective": "Interacciones FB Provincia",
+      "channel": "Facebook",
+      "target": "1,820",
+      "result": "2,148",
+      "status": "met",
+      "delta": "+18%"
+    },
+    {
+      "objective": "Visualizaciones FB Provincia",
+      "channel": "Facebook",
+      "target": "425,685",
+      "result": "476,767",
+      "status": "met",
+      "delta": "+12%"
+    },
+    {
+      "objective": "Alcance IG Lima",
+      "channel": "Instagram",
+      "target": "73,965",
+      "result": "94,675",
+      "status": "met",
+      "delta": "+28%"
+    },
+    {
+      "objective": "Interacciones IG Lima",
+      "channel": "Instagram",
+      "target": "4,606",
+      "result": "5,435",
+      "status": "met",
+      "delta": "+18%"
+    },
+    {
+      "objective": "Visualizaciones IG Lima",
+      "channel": "Instagram",
+      "target": "204,119",
+      "result": "228,613",
+      "status": "met",
+      "delta": "+12%"
+    },
+    {
+      "objective": "Alcance IG Provincia",
+      "channel": "Instagram",
+      "target": "56,582",
+      "result": "72,425",
+      "status": "met",
+      "delta": "+28%"
+    },
+    {
+      "objective": "Interacciones IG Provincia",
+      "channel": "Instagram",
+      "target": "3,524",
+      "result": "4,158",
+      "status": "met",
+      "delta": "+18%"
+    },
+    {
+      "objective": "Visualizaciones IG Provincia",
+      "channel": "Instagram",
+      "target": "156,149",
+      "result": "174,887",
+      "status": "met",
+      "delta": "+12%"
+    }
+  ],
+  "community": {
+    "facebook": {
+      "start": 15064,
+      "end": 15207,
+      "delta": 143,
+      "delta_pct": 1.0
+    },
+    "instagram": {
+      "start": 9615,
+      "end": 9914,
+      "delta": 299,
+      "delta_pct": 3.1
+    },
+    "tiktok": {
+      "start": 750,
+      "end": 772,
+      "delta": 22,
+      "delta_pct": 2.9
+    },
+    "total_new": 464
+  },
+  "investment": {
+    "meta_ads_usd": 552.25,
+    "meta_ads_soles": 2087.51,
+    "tiktok_ads_usd": 0,
+    "tiktok_ads_soles": 0,
+    "total_usd": 552.25,
+    "total_soles": 2087.51,
+    "meta_pct": 100,
+    "tiktok_pct": 0,
+    "note": "100% Meta Ads. $552.25 USD (S/2,088) — se ejecutó +63% sobre lo planificado ($337.8). FB $402 + IG $150. Impresiones 1,102,212, CPM $0.50. Lima 54% del presupuesto.",
+    "lima_usd": 298.5,
+    "provincia_usd": 253.75,
+    "lima_reach": 512541,
+    "provincia_reach": 392089,
+    "regional": {
+      "Lima": {
+        "usd": 298.5,
+        "pct": "54",
+        "reach": 512541,
+        "impressions": 616738,
+        "interactions": 8288,
+        "cpm_usd": "0.48"
+      },
+      "Arequipa": {
+        "usd": 109.99,
+        "pct": "20",
+        "reach": 140013,
+        "impressions": 176280,
+        "interactions": 2264,
+        "cpm_usd": "0.62"
+      },
+      "Junín": {
+        "usd": 89.49,
+        "pct": "16",
+        "reach": 131483,
+        "impressions": 172451,
+        "interactions": 2126,
+        "cpm_usd": "0.52"
+      },
+      "Oriente (Ucayali/Loreto/San Martín)": {
+        "usd": 51.06,
+        "pct": "9",
+        "reach": 114981,
+        "impressions": 129587,
+        "interactions": 1859,
+        "cpm_usd": "0.39"
+      },
+      "Otras regiones": {
+        "usd": 3.21,
+        "pct": "1",
+        "reach": 5612,
+        "impressions": 7156,
+        "interactions": 91,
+        "cpm_usd": "0.45"
+      }
+    }
+  },
+  "sentiment": {
+    "total": 93,
+    "positive_pct": 97,
+    "neutral_pct": 2,
+    "negative_pct": 1,
+    "net_score": 96,
+    "categories": [
+      {
+        "label": "Amor a \"Mamá A1\"",
+        "pct": 52,
+        "description": "La campaña Día de la Madre conectó: la audiencia se apropió de \"Súper Mamá A1\" y etiqueta a sus mamás.",
+        "quotes": [
+          "La súper mamá A1 🫶🏻❤️",
+          "Súper Mamá @a1_peru 😍❤️",
+          "super mamá está en todas!!",
+          "Las Mamis A1 son lo máximo"
+        ]
+      },
+      {
+        "label": "Antojo / producto rico",
+        "pct": 26,
+        "description": "Reacción al producto y a las recetas (atún, durazno, mermelada): rico, delicioso, antojo.",
+        "quotes": [
+          "❤️🔥😍",
+          "Se ve riquísimo",
+          "Qué rico",
+          "Me encanta ❤️"
+        ]
+      },
+      {
+        "label": "Intención de probar/comprar",
+        "pct": 14,
+        "description": "Señal de conversión: declaran que van a probar/comprar o piden la receta.",
+        "quotes": [
+          "Voy a probarlo",
+          "Tienes que probar ese atún, te va a encantar",
+          "¿Qué postre prepararías con durazno A1?"
+        ]
+      },
+      {
+        "label": "Consulta",
+        "pct": 8,
+        "description": "Preguntas sobre producto o alternativas (ej. opciones más sanas).",
+        "quotes": [
+          "¿Algo más sano?",
+          "¿Dónde lo encuentro?"
+        ]
+      }
+    ]
+  },
+  "insights": {
+    "community": "+464 seguidores: IG +299 (+3.1%), FB +143 (revirtió la caída de abril) y TikTok +22. El crecimiento acompañó la campaña de Día de la Madre.",
+    "reach": "La pauta generó 1,102,212 impresiones y ~799,300 cuentas alcanzadas con $552.25 (S/2,088) a un CPM de $0.50. A nivel cuenta: FB 1.1M visualizaciones / 632K espectadores; IG 403K / 167K alcance.",
+    "engagement": "14,629 interacciones de contenido (IG 9,593, FB 4,957, TK 79). El driver: el sorteo (IG 1,297 compartidos + 194 guardados; FB 413 compartidos + 1,022 comentarios). Guardados+compartidos = la métrica que más vende.",
+    "sentiment": "97% positivo sobre 93 comentarios. Domina el amor por 'Mamá A1' y el antojo por las recetas (atún y durazno).",
+    "investment": "100% Meta: $552.25 (S/2,088), +63% sobre lo planificado ($337.8). Lima 54% del presupuesto; CPM de $0.50 muy eficiente.",
+    "competition": "A1 lidera el engagement por seguidor (3.79%) vs Compass 2.42% y Atún Real 0.08%. El concurso de Campomar (211 comentarios) fue el mejor de la competencia, lejos de los 1,022 del sorteo A1."
+  },
+  "story": {
+    "act1": {
+      "number": "Acto 1 · Día de la Madre a Escala",
+      "title": "1,102,212 impresiones y ~799,300 cuentas alcanzadas con S/2,088.",
+      "type": "reach",
+      "paragraphs": [
+        "Bajo el concepto \"Momentos A1, para Mamás A1\", A1 desplegó su mayor pauta del año: $552.25 (S/2,088), +63% sobre lo planificado, generando 1,102,212 impresiones a un CPM de $0.50.",
+        "La campaña fue nacional: Lima concentró el 54% del presupuesto, seguida de Arequipa, Junín y el oriente. A nivel cuenta, FB sumó 1.1M de visualizaciones e IG 403K.",
+        "Cuatro pilares guiaron el mes: Momentos A1 (emocional), Recetas A1 (atún/durazno), Soy Mamá A1 (insights) y Tips A1, más el relanzamiento de las Mermeladas A1."
+      ],
+      "image": "images/a1/a1_sorteo.jpg",
+      "image_caption": "El sorteo del Día de la Madre, pieza estrella del mes"
+    },
+    "act2": {
+      "number": "Acto 2 · La Comunidad Crece",
+      "title": "+464 seguidores, con Instagram (+299) y Facebook (+143) al alza.",
+      "type": "growth",
+      "paragraphs": [
+        "Instagram lideró con +299 seguidores (+3.1%); Facebook revirtió la caída de abril y sumó +143; TikTok, en construcción, +22.",
+        "El crecimiento acompañó el pico de la campaña de Día de la Madre y la mecánica del sorteo."
+      ],
+      "image": null,
+      "image_caption": ""
+    },
+    "act3": {
+      "number": "Acto 3 · Qué Vende (Guardados + Compartidos)",
+      "title": "El sorteo y las recetas: lo que más se guarda y se comparte.",
+      "type": "content",
+      "paragraphs": [
+        "Medido por la métrica que vende en una presentación —guardados + compartidos— el sorteo arrasó: 1,297 compartidos y 194 guardados en IG, 413 compartidos en FB. La mecánica de participación es el mayor amplificador.",
+        "Las recetas (Mousse de durazno: 21 guardados) son contenido de referencia que la gente guarda para replicar. En cambio, los emotivos con mucho alcance pagado pero sin gancho de acción (graduarse) no movilizan guardados ni compartidos."
+      ],
+      "image": "images/a1/a1_mousse.jpg",
+      "image_caption": "La receta de Mousse de durazno: 21 guardados"
+    },
+    "act4": {
+      "number": "Acto 4 · La Audiencia Habla",
+      "title": "97% de sentimiento positivo. 'Súper Mamá A1' se volvió de la gente.",
+      "type": "sentiment",
+      "paragraphs": [
+        "De 93 comentarios de audiencia, 97% positivos y 0 relevantes negativos. La gente se apropió de 'Súper Mamá A1' y etiquetó a sus propias mamás.",
+        "Aparecieron señales de conversión: declaraciones de querer probar el atún y pedidos de las recetas con durazno."
+      ],
+      "image": null,
+      "image_caption": ""
+    },
+    "act5": {
+      "number": "Acto 5 · Liderazgo en Categoría",
+      "title": "A1 lidera el engagement por seguidor: 3.79% vs 2.42% (Compass) y 0.08% (Atún Real).",
+      "type": "competition",
+      "paragraphs": [
+        "Frente a sus competidores de atún, A1 lidera el engagement por seguidor con 3.79%. El mejor contenido de la competencia (concurso de Campomar) llegó a 211 comentarios.",
+        "El sorteo de A1 generó 1,022 comentarios solo en Facebook: la conversación que activa A1 no tiene rival directo en la categoría."
+      ],
+      "image": "images/a1/comp_a1_1.jpg",
+      "image_caption": "El mejor contenido de la competencia: concurso de Campomar (211 comentarios)"
+    }
+  },
+  "technical_texts": {
+    "resumen": "Periodo 01-31 mayo 2026. Campaña Día de la Madre \"Momentos A1, para Mamás A1\". Pauta Meta $552.25 (S/2,088, +63% vs plan), 1,102,212 impresiones, CPM $0.50. Comunidad +464. 14,629 interacciones; el sorteo concentró guardados+compartidos. Sentimiento 97% positivo.",
+    "audiencia": "Notas: (1) las metas se escalaron a la inversión ejecutada ($552 vs $338 planificado, +63%); el resultado además superó la eficiencia proyectada (mejor CPM). (2) El cruce plataforma×región es estimación proporcional (Meta no exporta ambas dimensiones juntas). (3) Reach único a nivel cuenta (FB 632K + IG 167K).",
+    "contenido_insight": "La métrica que vende es Guardados + Compartidos. El sorteo (participación) y las recetas (referencia) son lo que más se guarda y comparte.",
+    "contenido_fail": "Los emotivos con alto alcance pagado pero sin gancho de acción no generan guardados ni compartidos.",
+    "contenido_horario": "TikTok rinde mejor de noche; IG/FB en almuerzo y noche. El sorteo y las recetas concentraron la amplificación.",
+    "riesgo_fb": null,
+    "indice_valor": "Índice de valor por amplificación (guardados×3 + compartidos×2 + comentarios×1.5 + likes×1): el sorteo lidera ampliamente, confirmando que la mecánica de participación es la palanca más rentable.",
+    "bhs_explicacion": "El Brand Health Score se mantiene oculto en este formato.",
+    "fuentes": "Comunidad/contenido(imágenes)/TikTok/competidores: Metricool (5981134). Pauta: CSVs Meta Ads (región+plataforma). Contenido por pieza: Meta Insights (FB/IG/Stories) + Metricool (imágenes, guardados, compartidos). Totales de cuenta: Business Suite. Sentimiento: 16 CSVs comentarios IG. Metas: Sheet 'Proyección Agregada - Mayo'. Marco: plan '[A1] Plan de Contenidos Mayo 2026'."
+  },
+  "bhs": {
+    "total": 0,
+    "benchmark": "",
+    "dimensions": {
+      "crecimiento": 0,
+      "alcance": 0,
+      "engagement": 0,
+      "sentimiento": 0,
+      "eficiencia": 0,
+      "metas": 0,
+      "posicion_comp": 0
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "Alta",
+      "channel": "Multi",
+      "title": "Sistematizar el sorteo con mecánica de etiquetar/compartir",
+      "description": "El sorteo fue, por lejos, lo que más guardados y compartidos generó (1,297 comp. IG, 413 comp. + 1,022 comentarios FB). Convertirlo en mecánica mensual: es el mayor amplificador y supera a toda la competencia en conversación."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Meta",
+      "title": "Escalar la inversión: CPM de $0.50",
+      "description": "Con $552.25 se lograron 1,102,212 impresiones, +63% sobre lo planificado y con un CPM excelente. Hay espacio para escalar, priorizando Lima, Arequipa y Junín, y concentrando en piezas que generan guardados+compartidos."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Multi",
+      "title": "Priorizar el formato receta (se guarda)",
+      "description": "Las recetas con durazno y atún son las que más se guardan (contenido de referencia). Producirlas de forma fija; medir el éxito por guardados+compartidos, no solo por alcance."
+    },
+    {
+      "priority": "Media",
+      "channel": "Instagram",
+      "title": "Escalar colaboraciones UGC con creadoras",
+      "description": "Las 4 colabs (Isis Coronel, Paula Espinoza, Patricia Pinedo, Fabiola Acevedo) sumaron 12K views. Repetir el perfil de mamá real con receta/momento, atando cada colab a una pieza orgánica."
+    },
+    {
+      "priority": "Media",
+      "channel": "Multi",
+      "title": "Capitalizar el liderazgo en conversación",
+      "description": "A1 lidera el ER por seguidor de la categoría (3.79%) y su sorteo (1,022 comentarios) supera al mejor de la competencia (Campomar, 211). Usarlo como argumento comercial."
+    },
+    {
+      "priority": "Media",
+      "channel": "TikTok",
+      "title": "Acelerar TikTok con receta en video",
+      "description": "TikTok crece lento (+22) pero los videos emotivos y de receta ya muestran el mejor ER. Subir frecuencia y evaluar pauta TikTok (este mes no hubo)."
+    }
+  ],
+  "content": {
+    "total_pieces": {
+      "total": 47,
+      "ig_posts": 21,
+      "ig_reels": 0,
+      "fb_posts": 16,
+      "fb_reels": 0,
+      "tiktok": 10
+    },
+    "by_channel": {
+      "ig": {
+        "top": [
+          {
+            "title": "Sorteo Día de la Madre — 5 Gift Cards S/300",
+            "platform": "IG Post",
+            "date": "2026-05-06",
+            "reach": 7105,
+            "views": 20504,
+            "likes": 1046,
+            "comments": 0,
+            "shares": 1297,
+            "saves": 194,
+            "er": "",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DYAu8o7k7lD/",
+            "note": "Pieza estrella: 1,297 compartidos + 194 guardados. El sorteo (etiqueta a tu mamá) fue el mayor driver de amplificación e intención del mes (miles de comentarios de participación).",
+            "coverImageUrl": "images/a1/a1_sorteo.jpg"
+          },
+          {
+            "title": "Mousse de durazno A1 — receta",
+            "platform": "IG Reel",
+            "date": "2026-05-08",
+            "reach": 100516,
+            "views": 111758,
+            "likes": 54,
+            "comments": 8,
+            "shares": 5,
+            "saves": 21,
+            "er": "",
+            "spend": 43.08,
+            "url": "https://www.instagram.com/reel/DYDp0rCiUkY/",
+            "note": "21 guardados: la receta de postre con durazno es contenido de referencia que la gente guarda para replicar.",
+            "coverImageUrl": "images/a1/a1_mousse.jpg"
+          },
+          {
+            "title": "Ensalada de atún A1 para mamá — receta",
+            "platform": "IG Reel",
+            "date": "2026-05-19",
+            "reach": 36141,
+            "views": 37698,
+            "likes": 27,
+            "comments": 2,
+            "shares": 5,
+            "saves": 2,
+            "er": "",
+            "spend": 21.06,
+            "url": "https://www.instagram.com/reel/DYf9aWdlPdY/",
+            "note": "Receta con atún: el formato práctico genera compartidos.",
+            "coverImageUrl": "images/a1/a1_ensalada_atun.jpg"
+          }
+        ],
+        "worst": [
+          {
+            "title": "Desde sus primeros pasos hasta graduarse",
+            "platform": "IG Post",
+            "date": "2026-05-10",
+            "reach": 45507,
+            "views": 505,
+            "likes": 31,
+            "comments": 2,
+            "shares": 0,
+            "saves": 0,
+            "er": "",
+            "spend": 51.48,
+            "url": "https://www.instagram.com/p/DYIkbtIgbAt/",
+            "note": "75K impresiones pagadas pero 0 guardados/compartidos: el emotivo no moviliza acción.",
+            "coverImageUrl": "images/a1/a1_graduarse.jpg"
+          },
+          {
+            "title": "Mermeladas A1 ya están de regreso",
+            "platform": "IG Post",
+            "date": "2026-05-19",
+            "reach": 417,
+            "views": 786,
+            "likes": 40,
+            "comments": 6,
+            "shares": 1,
+            "saves": 0,
+            "er": "",
+            "spend": "",
+            "url": "https://www.instagram.com/p/DYiDVXnE_mI/",
+            "note": "Recordación de producto sin gancho: bajo guardado/compartido.",
+            "coverImageUrl": "images/a1/a1_mermelada.jpg"
+          },
+          {
+            "title": "Salimos a regalar mensajes de amor",
+            "platform": "IG Reel",
+            "date": "2026-05-09",
+            "reach": 624,
+            "views": 832,
+            "likes": 36,
+            "comments": 4,
+            "shares": 1,
+            "saves": 0,
+            "er": "",
+            "spend": "",
+            "url": "https://www.instagram.com/reel/DYGNePGjz2P/",
+            "note": "",
+            "coverImageUrl": "images/a1/a1_mensajes.jpg"
+          }
+        ]
+      },
+      "fb": {
+        "top": [
+          {
+            "title": "Sorteo Día de la Madre — 5 Gift Cards S/300",
+            "platform": "FB Post",
+            "date": "2026-05-06",
+            "reach": 30765,
+            "views": 44123,
+            "likes": 438,
+            "comments": 1022,
+            "shares": 413,
+            "saves": 0,
+            "er": "",
+            "spend": "",
+            "url": "https://facebook.com/573556088135375/posts/1428501259307516",
+            "note": "413 compartidos y 1,022 comentarios: el sorteo arrasó en FB. La mecánica de participación es el mayor amplificador.",
+            "coverImageUrl": "images/a1/a1_sorteo.jpg"
+          },
+          {
+            "title": "¿A qué recuerdos te llevan tus duraznitos A1?",
+            "platform": "FB Post",
+            "date": "2026-05-27",
+            "reach": 13514,
+            "views": 18948,
+            "likes": 768,
+            "comments": 14,
+            "shares": 14,
+            "saves": 0,
+            "er": "",
+            "spend": 19.99,
+            "url": "https://facebook.com/573556088135375/posts/1447627420728233",
+            "note": "768 reacciones y 14 compartidos: el durazno conecta con la memoria emocional.",
+            "coverImageUrl": "images/a1/a1_durazno.jpg"
+          },
+          {
+            "title": "Desde sus primeros pasos hasta graduarse",
+            "platform": "FB Post",
+            "date": "2026-05-10",
+            "reach": 19929,
+            "views": 31200,
+            "likes": 270,
+            "comments": 18,
+            "shares": 4,
+            "saves": 0,
+            "er": "",
+            "spend": 15.59,
+            "url": "https://facebook.com/573556088135375/posts/1431189182372057",
+            "note": "Buen alcance pagado y 18 comentarios; compartidos modestos.",
+            "coverImageUrl": "images/a1/a1_graduarse.jpg"
+          }
+        ],
+        "worst": [
+          {
+            "title": "Porque los mejores momentos son a tu lado",
+            "platform": "FB Post",
+            "date": "2026-05-10",
+            "reach": 363,
+            "views": 565,
+            "likes": 29,
+            "comments": 2,
+            "shares": 0,
+            "saves": 0,
+            "er": "",
+            "spend": "",
+            "url": "https://facebook.com/573556088135375/posts/1431887392302236",
+            "note": "Orgánico puro, bajo alcance y 0 compartidos.",
+            "coverImageUrl": "images/a1/a1_momentos.jpg"
+          },
+          {
+            "title": "El sabor que extrañabas ya está de vuelta (mermelada)",
+            "platform": "FB Post",
+            "date": "2026-05-19",
+            "reach": 18923,
+            "views": 18877,
+            "likes": 32,
+            "comments": 0,
+            "shares": 1,
+            "saves": 0,
+            "er": "",
+            "spend": "",
+            "url": "https://facebook.com/573556088135375/posts/1440386924785616",
+            "note": "Alto alcance pagado pero casi sin amplificación orgánica.",
+            "coverImageUrl": "images/a1/a1_mermelada.jpg"
+          },
+          {
+            "title": "Ser mamá es la labor más exigente",
+            "platform": "FB Post",
+            "date": "2026-05-05",
+            "reach": 29660,
+            "views": 33360,
+            "likes": 67,
+            "comments": 3,
+            "shares": 2,
+            "saves": 0,
+            "er": "",
+            "spend": "",
+            "url": "https://facebook.com/573556088135375/posts/1426830132807962",
+            "note": "Mucha impresión pagada, poca acción (2 compartidos).",
+            "coverImageUrl": "images/a1/a1_sermama.jpg"
+          }
+        ]
+      },
+      "tiktok": {
+        "top": [
+          {
+            "title": "Feliz día Mamá A1 — emotivo",
+            "platform": "TikTok",
+            "date": "2026-05-10",
+            "reach": 172,
+            "views": 194,
+            "likes": 9,
+            "comments": 2,
+            "shares": 1,
+            "saves": 0,
+            "er": "6.98%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@a1_peru/video/7638325119793859858",
+            "note": "",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7638325119793859858.jpg"
+          },
+          {
+            "title": "Mousse de durazno A1",
+            "platform": "TikTok",
+            "date": "2026-05-08",
+            "reach": 267,
+            "views": 319,
+            "likes": 16,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "er": "5.99%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@a1_peru/video/7637319652380511505",
+            "note": "",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7637319652380511505.jpg"
+          },
+          {
+            "title": "Ensalada con atún A1 para mamá",
+            "platform": "TikTok",
+            "date": "2026-05-19",
+            "reach": 232,
+            "views": 270,
+            "likes": 11,
+            "comments": 2,
+            "shares": 0,
+            "saves": 0,
+            "er": "5.60%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@a1_peru/video/7641386490420858133",
+            "note": "",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7641386490420858133.jpg"
+          }
+        ],
+        "worst": [
+          {
+            "title": "Mermeladas A1 ya están de regreso",
+            "platform": "TikTok",
+            "date": "2026-05-22",
+            "reach": 180,
+            "views": 226,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "er": "1.67%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@a1_peru/video/7642774544461171986",
+            "note": "",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7642774544461171986.jpg"
+          },
+          {
+            "title": "Postre con durazno A1 para mamá",
+            "platform": "TikTok",
+            "date": "2026-05-24",
+            "reach": 190,
+            "views": 208,
+            "likes": 4,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "er": "2.11%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@a1_peru/video/7643226401067240712",
+            "note": "",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7643226401067240712.jpg"
+          },
+          {
+            "title": "Sí, tienes una mamá A1",
+            "platform": "TikTok",
+            "date": "2026-05-28",
+            "reach": 187,
+            "views": 217,
+            "likes": 4,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "er": "2.14%",
+            "spend": "",
+            "url": "https://www.tiktok.com/@a1_peru/video/7645008991306698001",
+            "note": "",
+            "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7645008991306698001.jpg"
+          }
+        ]
+      }
+    },
+    "top_tiktok": [
+      {
+        "title": "Feliz día Mamá A1 — emotivo",
+        "platform": "TikTok",
+        "date": "2026-05-10",
+        "reach": 172,
+        "views": 194,
+        "likes": 9,
+        "comments": 2,
+        "shares": 1,
+        "saves": 0,
+        "er": "6.98%",
+        "spend": "",
+        "url": "https://www.tiktok.com/@a1_peru/video/7638325119793859858",
+        "note": "",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7638325119793859858.jpg"
+      },
+      {
+        "title": "Mousse de durazno A1",
+        "platform": "TikTok",
+        "date": "2026-05-08",
+        "reach": 267,
+        "views": 319,
+        "likes": 16,
+        "comments": 0,
+        "shares": 0,
+        "saves": 0,
+        "er": "5.99%",
+        "spend": "",
+        "url": "https://www.tiktok.com/@a1_peru/video/7637319652380511505",
+        "note": "",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7637319652380511505.jpg"
+      },
+      {
+        "title": "Ensalada con atún A1 para mamá",
+        "platform": "TikTok",
+        "date": "2026-05-19",
+        "reach": 232,
+        "views": 270,
+        "likes": 11,
+        "comments": 2,
+        "shares": 0,
+        "saves": 0,
+        "er": "5.60%",
+        "spend": "",
+        "url": "https://www.tiktok.com/@a1_peru/video/7641386490420858133",
+        "note": "",
+        "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5981134-7641386490420858133.jpg"
+      }
+    ],
+    "top_ig": [
+      {
+        "title": "Sorteo Día de la Madre — 5 Gift Cards S/300",
+        "platform": "IG Post",
+        "date": "2026-05-06",
+        "reach": 7105,
+        "views": 20504,
+        "likes": 1046,
+        "comments": 0,
+        "shares": 1297,
+        "saves": 194,
+        "er": "",
+        "spend": "",
+        "url": "https://www.instagram.com/p/DYAu8o7k7lD/",
+        "note": "Pieza estrella: 1,297 compartidos + 194 guardados. El sorteo (etiqueta a tu mamá) fue el mayor driver de amplificación e intención del mes (miles de comentarios de participación).",
+        "coverImageUrl": "images/a1/a1_sorteo.jpg"
+      },
+      {
+        "title": "Mousse de durazno A1 — receta",
+        "platform": "IG Reel",
+        "date": "2026-05-08",
+        "reach": 100516,
+        "views": 111758,
+        "likes": 54,
+        "comments": 8,
+        "shares": 5,
+        "saves": 21,
+        "er": "",
+        "spend": 43.08,
+        "url": "https://www.instagram.com/reel/DYDp0rCiUkY/",
+        "note": "21 guardados: la receta de postre con durazno es contenido de referencia que la gente guarda para replicar.",
+        "coverImageUrl": "images/a1/a1_mousse.jpg"
+      },
+      {
+        "title": "Ensalada de atún A1 para mamá — receta",
+        "platform": "IG Reel",
+        "date": "2026-05-19",
+        "reach": 36141,
+        "views": 37698,
+        "likes": 27,
+        "comments": 2,
+        "shares": 5,
+        "saves": 2,
+        "er": "",
+        "spend": 21.06,
+        "url": "https://www.instagram.com/reel/DYf9aWdlPdY/",
+        "note": "Receta con atún: el formato práctico genera compartidos.",
+        "coverImageUrl": "images/a1/a1_ensalada_atun.jpg"
+      }
+    ],
+    "top_influencers": []
+  },
+  "summary_kpis": {
+    "objectives": "12/12",
+    "reach": "799K",
+    "tk_views": "2.4K",
+    "new_followers": "FB +143 · IG +299 · TK +22",
+    "investment": "S/ 2,088"
+  },
+  "reach": {
+    "total_impressions": 1102212,
+    "estimated_unique_reach": 799300,
+    "frequency": 1.38,
+    "meta_ads_impressions": 1102212,
+    "meta_ads_reach": 799300,
+    "tiktok_ads_impressions": 0,
+    "tiktok_organic_views": 2377,
+    "ig_organic_views": 183247,
+    "fb_organic_impressions": 363370,
+    "influencer_views": 12176,
+    "meta_ads_clicks": 3529
+  },
+  "engagement": {
+    "tiktok_organic": {
+      "likes": 74,
+      "comments": 4,
+      "shares": 1,
+      "total": 79
+    },
+    "ig_posts": {
+      "likes": 3883,
+      "comments": 4010,
+      "saves": 286,
+      "shares": 1414,
+      "total": 9593
+    },
+    "ig_reels": {
+      "likes": 0,
+      "comments": 0,
+      "saves": 0,
+      "shares": 0,
+      "total": 0
+    },
+    "fb_total": {
+      "reactions": 3281,
+      "comments": 1166,
+      "shares": 510,
+      "saves": 0,
+      "total": 4957
+    },
+    "influencers": {
+      "total_views": 12176,
+      "total_likes": 381,
+      "total_comments": 84,
+      "total_shares": 84
+    },
+    "total_meaningful_interactions": 14629,
+    "meta_ads_post_engagements": 670529,
+    "meta_ads_clicks": 3529
+  },
+  "efficiency": {
+    "meta_cpm_usd": 0.5,
+    "meta_cpm_soles": 1.89,
+    "tiktok_cpm_usd": 0,
+    "tiktok_cpm_soles": 0,
+    "blended_cpm_usd": 0.5,
+    "blended_cpm_soles": 1.89,
+    "cost_per_click_usd": 0.156,
+    "cost_per_follower_usd": 1.19,
+    "cpi_usd": 0.038,
+    "cpi_soles": 0.143,
+    "cost_per_1k_reach_usd": 0.69,
+    "cost_per_1k_reach_soles": 2.61
+  },
+  "competitors_ig": [
+    {
+      "name": "A1 Perú",
+      "username": "@a1_peru",
+      "followers": 9914,
+      "er": "3.79",
+      "likes_avg": 184.9,
+      "comments_avg": 191.0,
+      "posts": 21,
+      "is_self": true
+    },
+    {
+      "name": "Compass",
+      "username": "@compass.peru",
+      "followers": 6576,
+      "er": "2.42",
+      "likes_avg": 56.5,
+      "comments_avg": 102.9,
+      "posts": 18
+    },
+    {
+      "name": "Campomar",
+      "username": "@campomarperu",
+      "followers": null,
+      "er": null,
+      "likes_avg": null,
+      "comments_avg": null,
+      "posts": null
+    },
+    {
+      "name": "Atún Real Perú",
+      "username": "@atunrealperu",
+      "followers": 6093,
+      "er": "0.08",
+      "likes_avg": 5,
+      "comments_avg": 0.1,
+      "posts": 7
+    }
+  ],
+  "influencers_ig": [
+    {
+      "name": "Isis Coronel",
+      "username": "@isiscoronel18",
+      "platform": "Mamá / Lifestyle",
+      "content_type": "Colab Día de la Madre. La más completa: 4,201 views, 151 likes, 29 comentarios y 20 compartidos.",
+      "followers": null,
+      "er": null,
+      "url": "https://www.instagram.com/reel/DXzO5pNAsgV/",
+      "coverImageUrl": null
+    },
+    {
+      "name": "Paula Espinoza",
+      "username": "@pauespinozao",
+      "platform": "Mom Blog",
+      "content_type": "Colab (UGC del plan). La de mayor amplificación: 57 compartidos y 44 comentarios sobre 2,019 views.",
+      "followers": null,
+      "er": null,
+      "url": "https://www.instagram.com/reel/DYXxYJgyyjW/",
+      "coverImageUrl": null
+    },
+    {
+      "name": "Patricia Pinedo",
+      "username": "@patricia_mamide2marias",
+      "platform": "Psicóloga y Mamá",
+      "content_type": "Colab Día de la Madre: 3,498 views, 87 likes, 10 comentarios, 6 compartidos.",
+      "followers": null,
+      "er": null,
+      "url": "https://www.instagram.com/reel/DX2AH8KgXEV/",
+      "coverImageUrl": null
+    },
+    {
+      "name": "Fabiola Acevedo",
+      "username": "@fabiolaacevedomatta",
+      "platform": "Lifestyle",
+      "content_type": "Colab (UGC del plan): 2,458 views. Reconocimiento de marca, baja amplificación.",
+      "followers": null,
+      "er": null,
+      "url": "https://www.instagram.com/reel/DYp3Nphy_l2/",
+      "coverImageUrl": null
+    }
+  ],
+  "video_retention": [],
+  "charts": {
+    "reach_mix_labels": [
+      "Orgánico",
+      "Pagado"
+    ],
+    "reach_mix_data": [
+      35000,
+      1102212
+    ],
+    "months6": [
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26",
+      "Abr 26",
+      "May 26"
+    ],
+    "cpm_meta": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.89
+    ],
+    "cpm_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "bhs_radar": [],
+    "bhs_benchmark": [],
+    "bhs_history": [],
+    "community_total": [
+      null,
+      null,
+      null,
+      null,
+      25424,
+      25893
+    ],
+    "fb_followers_labels": [
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26",
+      "Abr 26",
+      "May 26"
+    ],
+    "fb_followers": [
+      null,
+      null,
+      null,
+      null,
+      15064,
+      15207
+    ],
+    "ig_followers": [
+      null,
+      null,
+      null,
+      null,
+      9613,
+      9914
+    ],
+    "tk_followers": [
+      null,
+      null,
+      null,
+      null,
+      747,
+      772
+    ],
+    "er_fb": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.73
+    ],
+    "er_ig": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.7
+    ],
+    "er_tk": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      3.88
+    ],
+    "tk_top_videos_labels": [
+      "10 may\nFeliz día Mamá",
+      "08 may\nMousse durazno",
+      "19 may\nEnsalada atún"
+    ],
+    "tk_top_videos_data": [
+      194,
+      319,
+      270
+    ],
+    "sent_categories_labels": [
+      "Amor a Mamá A1",
+      "Antojo/Producto",
+      "Intención",
+      "Consulta"
+    ],
+    "sent_categories_data": [
+      52,
+      26,
+      14,
+      8
+    ],
+    "meta_days": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tk_hours": [
+      5,
+      10,
+      20,
+      35,
+      55,
+      70,
+      60,
+      40
+    ],
+    "budget_labels": [
+      "Meta Ads",
+      "TikTok Ads"
+    ],
+    "budget_data": [
+      552.25,
+      0
+    ],
+    "comp_followers_labels": [
+      "A1 Perú",
+      "Compass",
+      "Atún Real"
+    ],
+    "comp_followers_data": [
+      9914,
+      6576,
+      6093
+    ],
+    "comp_er_labels": [
+      "A1 Perú",
+      "Compass",
+      "Atún Real"
+    ],
+    "comp_er_data": [
+      3.79,
+      2.42,
+      0.08
+    ],
+    "reach_organic": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      35000
+    ],
+    "reach_paid": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      1102212
+    ],
+    "formatos_labels": [
+      "Recetas",
+      "Emocional/Mamá",
+      "Producto",
+      "Trend/CTA"
+    ],
+    "formatos_data": [
+      35,
+      30,
+      20,
+      15
+    ]
+  },
+  "competitor_content": {
+    "intro": "A1 lidera el engagement por seguidor de la categoría atún (3.79%), por delante de Compass (2.42%) y Atún Real (0.08%).",
+    "criterio": "Ordenado por comentarios — el indicador más sólido de interés real de la audiencia.",
+    "conclusion": "El mejor contenido de la competencia (concurso de Campomar) llegó a 211 comentarios; el resto no pasa de 2. El sorteo de A1 generó 1,022 comentarios solo en Facebook. La conversación que activa A1 supera a la categoría.",
+    "items": [
+      {
+        "marca": "Campomar",
+        "handle": "campomarperu",
+        "tipo": "Reel",
+        "comments": 211,
+        "likes": 208,
+        "interactions": 419,
+        "engagement": "",
+        "link": "https://www.instagram.com/reel/DYD36yclMo1/",
+        "caption": "CONCURSO: ¿Cómo es tu mamá — Consejera, Chef, Todoterreno? Cuéntanos y participa.",
+        "coverImageUrl": "images/a1/comp_a1_1.jpg"
+      },
+      {
+        "marca": "Campomar",
+        "handle": "campomarperu",
+        "tipo": "Reel",
+        "comments": 2,
+        "likes": 9,
+        "interactions": 11,
+        "engagement": "",
+        "link": "https://www.instagram.com/reel/DYZ49taCc0X/",
+        "caption": "Arma tu Poke Bowl #AtúnRitmo con tus ingredientes favoritos.",
+        "coverImageUrl": "images/a1/comp_a1_2.jpg"
+      },
+      {
+        "marca": "Campomar",
+        "handle": "campomarperu",
+        "tipo": "Post",
+        "comments": 2,
+        "likes": 21,
+        "interactions": 23,
+        "engagement": "",
+        "link": "https://www.instagram.com/p/DYA6od8F_Ao/",
+        "caption": "Hay frases que no necesitan explicación: ¡La comida ya está lista!",
+        "coverImageUrl": "images/a1/comp_a1_3.jpg"
+      },
+      {
+        "marca": "Atún Real",
+        "handle": "atunrealperu",
+        "tipo": "Post",
+        "comments": 1,
+        "likes": 5,
+        "interactions": 6,
+        "engagement": "",
+        "link": "https://www.instagram.com/p/DYpc-dhkXBa/",
+        "caption": "No soy feliz si no hay atún.",
+        "coverImageUrl": "images/a1/comp_a1_4.jpg"
+      }
+    ]
+  },
+  "reach_mix": {
+    "organic": 3,
+    "paid": 97
+  }
+}
