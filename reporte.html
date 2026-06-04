@@ -1448,6 +1448,7 @@ const REPORT_DATA = {
   summary_kpis: { objectives: '–', reach: '–', tk_views: '–', new_followers: '–', investment: '–' },
   community: { facebook: {start:0,end:0,delta:0,delta_pct:0}, instagram: {start:0,end:0,delta:0,delta_pct:0}, tiktok: {start:0,end:0,delta:0,delta_pct:0}, linkedin: {start:0,end:0,delta:0,delta_pct:0}, total_new: 0 },
   gbp: { impressions_total:0, impressions_maps:0, impressions_search:0, direction_requests:0, call_clicks:0, website_clicks:0, actions_total:0 },
+  funnel_conversion: null,
   reach: { total_impressions:0, estimated_unique_reach:0, frequency:0, meta_ads_reach:0, meta_ads_impressions:0, tiktok_ads_impressions:0, tiktok_organic_views:0, fb_organic_reach:0, fb_organic_impressions:0, ig_organic_reach:0, ig_organic_views:0 },
   engagement: { meta_ads_interactions:0, meta_ads_clicks:0, meta_ads_link_clicks:0, meta_ads_post_engagements:0, fb_organic_interactions:0, ig_interactions:0, ig_organic_interactions:0, tiktok_interactions:0, tiktok_organic:{likes:0,comments:0,shares:0,total:0}, total_interactions:0, total_meaningful_interactions:0 },
   investment: { meta_ads_usd:0, meta_ads_soles:0, tiktok_ads_usd:0, tiktok_ads_soles:0, total_usd:0, total_soles:0, meta_pct:0, tiktok_pct:0 },
@@ -3172,6 +3173,44 @@ function populateExecutive(D) {
     s += '</div>';
     if (intro) s += '<div style="font-size:18px;color:#DDDDEE;max-width:1100px;margin-bottom:28px;line-height:1.55">'+intro+'</div>';
     return s;
+  }
+
+  // — SECTION: Embudo de Conversión (objetivo conversaciones) —
+  const fc = D.funnel_conversion;
+  if (fc && (fc.impresiones || fc.mensajes)) {
+    h += '<section style="padding:44px 32px 8px">';
+    h += sectionHeader('🔻', 'Embudo de Conversión', 'Objetivo: conversaciones de matrícula', 'Del alcance pagado hasta la conversación con un asesor. Cada etapa muestra cuánta gente avanza a la siguiente.');
+    const steps = [
+      {k:'impresiones', l:'Impresiones', ic:'📡', c:'var(--purple2)'},
+      {k:'alcance', l:'Alcance', ic:'👁️', c:'var(--fucsia)'},
+      {k:'clics', l:'Clics', ic:'🖱️', c:'#9B6BFF'},
+      {k:'mensajes', l:'Mensajes / Conversaciones', ic:'💬', c:'var(--teal)'}
+    ];
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;align-items:stretch">';
+    steps.forEach((s,i) => {
+      const v = fc[s.k] || 0;
+      h += '<div style="background:var(--card);border:1px solid var(--border);border-top:4px solid '+s.c+';border-radius:14px;padding:24px;text-align:center">';
+      h += '<div style="font-size:30px">'+s.ic+'</div>';
+      h += '<div style="font-size:38px;font-weight:900;color:'+s.c+';line-height:1.1;margin-top:8px">'+fmtK(v)+'</div>';
+      h += '<div style="font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;margin-top:8px">'+s.l+'</div>';
+      if (i>0) { const prev = fc[steps[i-1].k] || 1; const rate = v/prev*100; h += '<div style="font-size:12px;color:#9b9bb5;margin-top:8px">'+rate.toFixed(rate<1?2:1)+'% del paso anterior</div>'; }
+      h += '</div>';
+    });
+    h += '</div>';
+    if (fc.nota) h += '<div style="font-size:13px;color:var(--gray);margin-top:14px;font-style:italic">'+fc.nota+'</div>';
+    h += '</section>';
+  }
+
+  // — SECTION: Presencia Local · Google Business Profile —
+  const gExec = D.gbp;
+  if (gExec && (gExec.impressions_total || gExec.actions_total)) {
+    h += '<section style="padding:40px 32px 16px">';
+    h += sectionHeader('📍', 'Presencia Local · Google', 'Intención de matrícula presencial', D.insights.gbp || '');
+    h += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">';
+    [['Impresiones en Google',gExec.impressions_total,'#4285F4','Búsqueda + Maps'],['Cómo Llegar',gExec.direction_requests,'#34A853','Solicitudes de dirección'],['Clics para Llamar',gExec.call_clicks,'#FBBC05','Click-to-call'],['Clics a la Web',gExec.website_clicks,'#EA4335','Tráfico al sitio']].forEach(function(it){
+      h += '<div style="background:var(--card);border:1px solid var(--border);border-left:4px solid '+it[2]+';border-radius:14px;padding:22px"><div style="font-size:34px;font-weight:900;color:'+it[2]+';line-height:1">'+fmtK(it[1])+'</div><div style="font-size:13px;font-weight:700;color:#DDDDEE;margin-top:8px">'+it[0]+'</div><div style="font-size:12px;color:var(--gray);margin-top:2px">'+it[3]+'</div></div>';
+    });
+    h += '</div></section>';
   }
 
   // — SECTION: Qué funcionó · loop por canal —

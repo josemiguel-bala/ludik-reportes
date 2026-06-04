@@ -9,10 +9,22 @@
     "tag": "LUDiK Analytics · Reporte de Ecosistema",
     "footer": "Confidencial · Preparado por el equipo LUDiK para Instituto Confucio PUCP",
     "kpis": [
-      { "value": "+18,982", "label": "Nuevos Seguidores" },
-      { "value": "1.76M", "label": "Views TikTok" },
-      { "value": "S/ 9,273", "label": "Inversión en Pauta" },
-      { "value": "3,069", "label": "Conversaciones Matrícula" }
+      {
+        "value": "+18,982",
+        "label": "Nuevos Seguidores"
+      },
+      {
+        "value": "1.76M",
+        "label": "Views TikTok"
+      },
+      {
+        "value": "S/ 9,273",
+        "label": "Inversión en Pauta"
+      },
+      {
+        "value": "3,069",
+        "label": "Conversaciones Matrícula"
+      }
     ],
     "hide_objectives_kpi": true
   },
@@ -25,10 +37,30 @@
   },
   "objectives": [],
   "community": {
-    "facebook":  { "start": 74603, "end": 84608, "delta": 10005, "delta_pct": 13.4 },
-    "instagram": { "start": 10079, "end": 15072, "delta": 4993,  "delta_pct": 49.5 },
-    "tiktok":    { "start": 7867,  "end": 11519, "delta": 3652,  "delta_pct": 46.4 },
-    "linkedin":  { "start": 2880,  "end": 3212,  "delta": 332,   "delta_pct": 11.5 },
+    "facebook": {
+      "start": 74603,
+      "end": 84608,
+      "delta": 10005,
+      "delta_pct": 13.4
+    },
+    "instagram": {
+      "start": 10079,
+      "end": 15072,
+      "delta": 4993,
+      "delta_pct": 49.5
+    },
+    "tiktok": {
+      "start": 7867,
+      "end": 11519,
+      "delta": 3652,
+      "delta_pct": 46.4
+    },
+    "linkedin": {
+      "start": 2880,
+      "end": 3212,
+      "delta": 332,
+      "delta_pct": 11.5
+    },
     "total_new": 18982
   },
   "gbp": {
@@ -63,14 +95,39 @@
     "tiktok_ads_usd": 413.14,
     "tiktok_ads_soles": 1561.67,
     "total_usd": 2453.07,
-    "total_soles": 9272.60,
+    "total_soles": 9272.6,
     "meta_pct": 83,
     "tiktok_pct": 17,
     "note": "S/ 9,273 (USD 2,453) en pauta total del ecosistema: Meta Ads S/ 7,711 (83%) + TikTok Ads S/ 1,562 (17%). CPM Meta S/ 1.63 y CPM TikTok S/ 1.45 (1.08M impresiones). Funnel Meta: Matrícula 44%, Awareness 33%, Tráfico 23%."
   },
-  "efficiency": { "meta_cpm_usd": 0.43, "meta_cpm_soles": 1.63, "tiktok_cpm_usd": 0.38, "tiktok_cpm_soles": 1.45, "blended_cpm_usd": 0.42, "blended_cpm_soles": 1.60 },
-  "sentiment": { "total": 0, "positive_pct": 0, "neutral_pct": 0, "negative_pct": 0, "net_score": 0, "categories": [] },
-  "bhs": { "total": 0, "benchmark": "", "dimensions": {} },
+  "efficiency": {
+    "meta_cpm_usd": 0.43,
+    "meta_cpm_soles": 1.63,
+    "tiktok_cpm_usd": 0.38,
+    "tiktok_cpm_soles": 1.45,
+    "blended_cpm_usd": 0.42,
+    "blended_cpm_soles": 1.6
+  },
+  "funnel_conversion": {
+    "impresiones": 4718359,
+    "alcance": 3127853,
+    "clics": 51271,
+    "mensajes": 3069,
+    "nota": "Embudo de la pauta Meta (objetivo conversaciones de matrícula). Alcance = suma de alcance por campaña."
+  },
+  "sentiment": {
+    "total": 0,
+    "positive_pct": 0,
+    "neutral_pct": 0,
+    "negative_pct": 0,
+    "net_score": 0,
+    "categories": []
+  },
+  "bhs": {
+    "total": 0,
+    "benchmark": "",
+    "dimensions": {}
+  },
   "summary_kpis": {
     "objectives": "5 canales",
     "reach": "4.7M",
@@ -135,120 +192,601 @@
         "La pauta total del ecosistema fue de S/ 9,273 (USD 2,453): Meta Ads S/ 7,711 (83%) y TikTok Ads S/ 1,562 (17%), ambos con CPM muy eficiente (Meta S/ 1.63, TikTok S/ 1.45). En Meta, el presupuesto siguió el funnel: 44% a mensajes/matrícula (S/ 3,408), 33% a awareness (S/ 2,565) y 23% a tráfico (S/ 1,737), generando 3,069 conversaciones de matrícula y 9,031 vistas de landing. TikTok Ads sumó 1.08M impresiones que potencian el awareness."
       ],
       "items": [
-        { "type": "bet", "text": "Conectar TikTok Ads al funnel de matrícula: hoy concentra el 17% de la pauta en awareness/views con CPM bajísimo (S/ 1.45). Sumar un objetivo de tráfico/leads para que esas 1.08M impresiones empujen inscripción, no solo alcance." },
-        { "type": "bet", "text": "Escalar LinkedIn como canal de matrícula B2B: los posts de becas, talleres y reconocimientos generan 600–900 clics. Aumentar frecuencia y sumar un objetivo de captación de leads profesionales." },
-        { "type": "bet", "text": "Capitalizar la intención local de Google: 3,073 personas buscaron cómo llegar. Activar gestión de reseñas, fotos y publicaciones en Google Business Profile para convertir esa intención en visitas y matrículas." },
-        { "type": "fix", "text": "Cerrar el ciclo de medición: cruzar las 3,069 conversaciones de matrícula de Meta con inscripciones reales para calcular costo por matrícula real, no solo por conversación." },
-        { "type": "system", "text": "Mantener el reporte de ecosistema (5 canales) como estándar mensual para Confucio: es la única vista que conecta awareness (TikTok/IG), consideración (LinkedIn) e intención local (Google)." }
+        {
+          "type": "bet",
+          "text": "Conectar TikTok Ads al funnel de matrícula: hoy concentra el 17% de la pauta en awareness/views con CPM bajísimo (S/ 1.45). Sumar un objetivo de tráfico/leads para que esas 1.08M impresiones empujen inscripción, no solo alcance."
+        },
+        {
+          "type": "bet",
+          "text": "Escalar LinkedIn como canal de matrícula B2B: los posts de becas, talleres y reconocimientos generan 600–900 clics. Aumentar frecuencia y sumar un objetivo de captación de leads profesionales."
+        },
+        {
+          "type": "bet",
+          "text": "Capitalizar la intención local de Google: 3,073 personas buscaron cómo llegar. Activar gestión de reseñas, fotos y publicaciones en Google Business Profile para convertir esa intención en visitas y matrículas."
+        },
+        {
+          "type": "fix",
+          "text": "Cerrar el ciclo de medición: cruzar las 3,069 conversaciones de matrícula de Meta con inscripciones reales para calcular costo por matrícula real, no solo por conversación."
+        },
+        {
+          "type": "system",
+          "text": "Mantener el reporte de ecosistema (5 canales) como estándar mensual para Confucio: es la única vista que conecta awareness (TikTok/IG), consideración (LinkedIn) e intención local (Google)."
+        }
       ],
       "highlight": "Ecosistema ene–may 2026: +18,982 seguidores · 1.76M views TK · 4.7M impresiones Meta · 3,069 conversaciones matrícula · 3,073 'cómo llegar' en Google"
     }
   },
   "recommendations": [
-    { "priority": "Alta", "channel": "TikTok", "title": "Llevar TikTok Ads del awareness a la matrícula", "description": "TikTok Ads (S/ 1,562, 17% de la pauta) corre en views/seguidores con CPM de S/ 1.45, el más bajo del ecosistema. Sumar un objetivo de tráfico/leads para convertir esas 1.08M impresiones en inscripciones, no solo alcance." },
-    { "priority": "Alta", "channel": "LinkedIn", "title": "Escalar LinkedIn como canal de matrícula B2B", "description": "Los posts de becas, talleres y reconocimientos docentes generan 600–900 clics a formularios. Aumentar frecuencia, profundizar contenido para negocios y sumar campañas de captación de leads profesionales." },
-    { "priority": "Alta", "channel": "Multi", "title": "Activar la intención local de Google Business Profile", "description": "3,073 personas buscaron cómo llegar al instituto. Gestionar reseñas, fotos, horarios y publicaciones en GBP para convertir esa demanda de fondo de funnel en visitas y matrículas presenciales." },
-    { "priority": "Media", "channel": "Instagram", "title": "Replicar el patrón ganador de contenido", "description": "Cultura china + utilidad (becas/aprendizaje) + identidad emocional es lo que más alcance y ER genera (carrusel becas 49K alcance; reel hilo rojo 58K vistas). Sistematizar este mix en el calendario." },
-    { "priority": "Media", "channel": "Multi", "title": "Cerrar el ciclo de medición de matrícula", "description": "Cruzar las 3,069 conversaciones de Meta y las acciones de Google con inscripciones reales para calcular costo por matrícula real y atribuir conversión por canal." }
+    {
+      "priority": "Alta",
+      "channel": "TikTok",
+      "title": "Llevar TikTok Ads del awareness a la matrícula",
+      "description": "TikTok Ads (S/ 1,562, 17% de la pauta) corre en views/seguidores con CPM de S/ 1.45, el más bajo del ecosistema. Sumar un objetivo de tráfico/leads para convertir esas 1.08M impresiones en inscripciones, no solo alcance."
+    },
+    {
+      "priority": "Alta",
+      "channel": "LinkedIn",
+      "title": "Escalar LinkedIn como canal de matrícula B2B",
+      "description": "Los posts de becas, talleres y reconocimientos docentes generan 600–900 clics a formularios. Aumentar frecuencia, profundizar contenido para negocios y sumar campañas de captación de leads profesionales."
+    },
+    {
+      "priority": "Alta",
+      "channel": "Multi",
+      "title": "Activar la intención local de Google Business Profile",
+      "description": "3,073 personas buscaron cómo llegar al instituto. Gestionar reseñas, fotos, horarios y publicaciones en GBP para convertir esa demanda de fondo de funnel en visitas y matrículas presenciales."
+    },
+    {
+      "priority": "Media",
+      "channel": "Instagram",
+      "title": "Replicar el patrón ganador de contenido",
+      "description": "Cultura china + utilidad (becas/aprendizaje) + identidad emocional es lo que más alcance y ER genera (carrusel becas 49K alcance; reel hilo rojo 58K vistas). Sistematizar este mix en el calendario."
+    },
+    {
+      "priority": "Media",
+      "channel": "Multi",
+      "title": "Cerrar el ciclo de medición de matrícula",
+      "description": "Cruzar las 3,069 conversaciones de Meta y las acciones de Google con inscripciones reales para calcular costo por matrícula real y atribuir conversión por canal."
+    }
   ],
   "competitors_ig": [
-    { "name": "Confucio UC (Chile)", "followers": "12,730", "er": "3.69", "posts": "6" },
-    { "name": "Instituto Confucio PUCP", "followers": "15,072", "er": "2.68", "posts": "122", "is_self": true },
-    { "name": "Confucio URP", "followers": "8,778", "er": "1.36", "posts": "8" },
-    { "name": "Centro Cultural Chino", "followers": "33,616", "er": "0.51", "posts": "10" },
-    { "name": "Asoc. Peruano China", "followers": "18,685", "er": "0.45", "posts": "16" },
-    { "name": "BRITÁNICO", "followers": "103,393", "er": "0.37", "posts": "54" },
-    { "name": "ICPNA", "followers": "118,308", "er": "0.14", "posts": "57" }
+    {
+      "name": "Confucio UC (Chile)",
+      "followers": "12,730",
+      "er": "3.69",
+      "posts": "6"
+    },
+    {
+      "name": "Instituto Confucio PUCP",
+      "followers": "15,072",
+      "er": "2.68",
+      "posts": "122",
+      "is_self": true
+    },
+    {
+      "name": "Confucio URP",
+      "followers": "8,778",
+      "er": "1.36",
+      "posts": "8"
+    },
+    {
+      "name": "Centro Cultural Chino",
+      "followers": "33,616",
+      "er": "0.51",
+      "posts": "10"
+    },
+    {
+      "name": "Asoc. Peruano China",
+      "followers": "18,685",
+      "er": "0.45",
+      "posts": "16"
+    },
+    {
+      "name": "BRITÁNICO",
+      "followers": "103,393",
+      "er": "0.37",
+      "posts": "54"
+    },
+    {
+      "name": "ICPNA",
+      "followers": "118,308",
+      "er": "0.14",
+      "posts": "57"
+    }
   ],
   "competitor_content": {
     "intro": "Qué están haciendo los referentes de idiomas y cultura china en mayo 2026. Duolingo marca el estándar de comunidad/UGC; BRITÁNICO, el de campañas de matrícula con CTA y autoridad académica; los institutos Confucio pares, el de contenido cultural educativo.",
     "criterio": "Selección curada por conversación (comentarios) e interacción del período: referente global de categoría + competidores directos.",
     "items": [
-      { "marca": "Duolingo", "handle": "duolingoespanol", "tipo": "Comunidad / UGC", "comments": 928, "likes": 34885, "engagement": 2.73, "caption": "Concurso #MiRacha: invita a la audiencia a enviar sus historias. UGC puro que dispara comentarios.", "coverImageUrl": "https://scontent-lhr8-1.cdninstagram.com/v/t51.82787-15/711847609_18117236284801219_7691290552051040125_n.jpg", "link": "https://www.instagram.com/p/DY7eiFrH-b_/" },
-      { "marca": "BRITÁNICO", "handle": "elbritanico", "tipo": "Matrícula / CTA directo", "comments": 155, "likes": 427, "engagement": 0.56, "caption": "Inscripciones a BRITÁNICO Academy 2026-2 con CTA 'Comenta LINK y te enviamos info'. La conversación se vuelve lead.", "coverImageUrl": "https://scontent-lhr8-1.cdninstagram.com/v/t51.82787-15/709166452_18585026575033766_4859425620252453913_n.jpg", "link": "https://www.instagram.com/p/DY7esxCDXRK/" },
-      { "marca": "BRITÁNICO", "handle": "elbritanico", "tipo": "Autoridad / Prestigio", "comments": 12, "likes": 1511, "engagement": 1.48, "caption": "Recibió la Placa Cambridge. La autoridad académica genera muchos likes (1.5K) pero poca conversación.", "coverImageUrl": "https://scontent-lhr6-2.cdninstagram.com/v/t51.82787-15/707230482_18584516113033766_6050422800154702015_n.jpg", "link": "https://www.instagram.com/p/DY2611XDcqR/" },
-      { "marca": "Confucio UC (Chile)", "handle": "institutoconfuciouc", "tipo": "Cultura china · peer directo", "comments": 5, "likes": 192, "engagement": 1.55, "caption": "Reel educativo '¿Conocías los chalecos chinos?'. El mejor ER de un instituto Confucio par: cultura como contenido.", "link": "https://www.instagram.com/reel/DY4lM9RgFlD/" }
+      {
+        "marca": "Duolingo",
+        "handle": "duolingoespanol",
+        "tipo": "Comunidad / UGC",
+        "comments": 928,
+        "likes": 34885,
+        "engagement": 2.73,
+        "caption": "Concurso #MiRacha: invita a la audiencia a enviar sus historias. UGC puro que dispara comentarios.",
+        "coverImageUrl": "images/confucio/2026-05/c0a4c601751e.jpg",
+        "link": "https://www.instagram.com/p/DY7eiFrH-b_/"
+      },
+      {
+        "marca": "BRITÁNICO",
+        "handle": "elbritanico",
+        "tipo": "Matrícula / CTA directo",
+        "comments": 155,
+        "likes": 427,
+        "engagement": 0.56,
+        "caption": "Inscripciones a BRITÁNICO Academy 2026-2 con CTA 'Comenta LINK y te enviamos info'. La conversación se vuelve lead.",
+        "coverImageUrl": "images/confucio/2026-05/9ea9f1201f9f.jpg",
+        "link": "https://www.instagram.com/p/DY7esxCDXRK/"
+      },
+      {
+        "marca": "BRITÁNICO",
+        "handle": "elbritanico",
+        "tipo": "Autoridad / Prestigio",
+        "comments": 12,
+        "likes": 1511,
+        "engagement": 1.48,
+        "caption": "Recibió la Placa Cambridge. La autoridad académica genera muchos likes (1.5K) pero poca conversación.",
+        "coverImageUrl": "images/confucio/2026-05/a55d6152af39.jpg",
+        "link": "https://www.instagram.com/p/DY2611XDcqR/"
+      },
+      {
+        "marca": "Confucio UC (Chile)",
+        "handle": "institutoconfuciouc",
+        "tipo": "Cultura china · peer directo",
+        "comments": 5,
+        "likes": 192,
+        "engagement": 1.55,
+        "caption": "Reel educativo '¿Conocías los chalecos chinos?'. El mejor ER de un instituto Confucio par: cultura como contenido.",
+        "link": "https://www.instagram.com/reel/DY4lM9RgFlD/"
+      }
     ],
     "conclusion": "Lectura para Confucio PUCP: la conversación se gana con comunidad/UGC (Duolingo) y con campañas de matrícula de CTA explícito (BRITÁNICO 'comenta LINK'). La autoridad —premios, certificaciones— suma likes pero poca conversación. El contenido cultural educativo es el terreno propio donde Confucio ya compite y puede liderar."
   },
   "content": {
     "top_tiktok": [
-      { "title": "Agua helada o tibia: la elección dice mucho de China", "date": "2026-05-15", "views": 418641, "likes": 5311, "comments": 186, "shares": 569, "reach": 322002, "engagement": 1.88, "url": "https://www.tiktok.com/@confuciopucp/video/7639884931782462741", "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5445836-7639884931782462741.png" },
-      { "title": "El hilo rojo te conecta con tu futuro 2026", "date": "2026-01-13", "views": 368995, "likes": 799, "comments": 8, "shares": 15, "reach": 218130, "engagement": 0.38, "url": "https://www.tiktok.com/@confuciopucp/video/7594865905088089364", "coverImageUrl": "https://static.metricool.com/tkvideocovers/202601/5445836-7594865905088089364.jpeg" },
-      { "title": "Tu meta: beca, negocio, futuro global con mandarín", "date": "2026-03-13", "views": 263897, "likes": 216, "comments": 7, "shares": 11, "reach": 253092, "engagement": 0.09, "url": "https://www.tiktok.com/@confuciopucp/video/7616830042303171857", "coverImageUrl": "https://static.metricool.com/tkvideocovers/202603/5445836-7616830042303171857.jpg" }
+      {
+        "title": "Agua helada o tibia: la elección dice mucho de China",
+        "date": "2026-05-15",
+        "views": 418641,
+        "likes": 5311,
+        "comments": 186,
+        "shares": 569,
+        "reach": 322002,
+        "engagement": 1.88,
+        "url": "https://www.tiktok.com/@confuciopucp/video/7639884931782462741",
+        "coverImageUrl": "images/confucio/2026-05/229961885c7e.png"
+      },
+      {
+        "title": "El hilo rojo te conecta con tu futuro 2026",
+        "date": "2026-01-13",
+        "views": 368995,
+        "likes": 799,
+        "comments": 8,
+        "shares": 15,
+        "reach": 218130,
+        "engagement": 0.38,
+        "url": "https://www.tiktok.com/@confuciopucp/video/7594865905088089364",
+        "coverImageUrl": "images/confucio/2026-05/9584b4f19a1e.jpg"
+      },
+      {
+        "title": "Tu meta: beca, negocio, futuro global con mandarín",
+        "date": "2026-03-13",
+        "views": 263897,
+        "likes": 216,
+        "comments": 7,
+        "shares": 11,
+        "reach": 253092,
+        "engagement": 0.09,
+        "url": "https://www.tiktok.com/@confuciopucp/video/7616830042303171857",
+        "coverImageUrl": "images/confucio/2026-05/0081d252c2c6.jpg"
+      }
     ],
     "by_channel": {
       "tiktok": {
         "top": [
-          { "title": "Agua helada o tibia: la elección dice mucho de China", "platform": "TikTok", "date": "2026-05-15", "views": 418641, "likes": 5311, "comments": 186, "shares": 569, "reach": 322002, "engagement": 1.88, "er": "1.88%", "url": "https://www.tiktok.com/@confuciopucp/video/7639884931782462741", "coverImageUrl": "https://static.metricool.com/tkvideocovers/202605/5445836-7639884931782462741.png" },
-          { "title": "El hilo rojo te conecta con tu futuro 2026", "platform": "TikTok", "date": "2026-01-13", "views": 368995, "likes": 799, "comments": 8, "shares": 15, "reach": 218130, "engagement": 0.38, "er": "0.38%", "url": "https://www.tiktok.com/@confuciopucp/video/7594865905088089364", "coverImageUrl": "https://static.metricool.com/tkvideocovers/202601/5445836-7594865905088089364.jpeg" },
-          { "title": "Primer día de clases en el Instituto Confucio PUCP", "platform": "TikTok", "date": "2026-01-08", "views": 74821, "likes": 1401, "comments": 50, "shares": 91, "reach": 57938, "engagement": 2.66, "er": "2.66%", "url": "https://www.tiktok.com/@confuciopucp/video/7593095531207986452", "coverImageUrl": "https://static.metricool.com/tkvideocovers/202601/5445836-7593095531207986452.jpeg" }
+          {
+            "title": "Agua helada o tibia: la elección dice mucho de China",
+            "platform": "TikTok",
+            "date": "2026-05-15",
+            "views": 418641,
+            "likes": 5311,
+            "comments": 186,
+            "shares": 569,
+            "reach": 322002,
+            "engagement": 1.88,
+            "er": "1.88%",
+            "url": "https://www.tiktok.com/@confuciopucp/video/7639884931782462741",
+            "coverImageUrl": "images/confucio/2026-05/229961885c7e.png"
+          },
+          {
+            "title": "El hilo rojo te conecta con tu futuro 2026",
+            "platform": "TikTok",
+            "date": "2026-01-13",
+            "views": 368995,
+            "likes": 799,
+            "comments": 8,
+            "shares": 15,
+            "reach": 218130,
+            "engagement": 0.38,
+            "er": "0.38%",
+            "url": "https://www.tiktok.com/@confuciopucp/video/7594865905088089364",
+            "coverImageUrl": "images/confucio/2026-05/9584b4f19a1e.jpg"
+          },
+          {
+            "title": "Primer día de clases en el Instituto Confucio PUCP",
+            "platform": "TikTok",
+            "date": "2026-01-08",
+            "views": 74821,
+            "likes": 1401,
+            "comments": 50,
+            "shares": 91,
+            "reach": 57938,
+            "engagement": 2.66,
+            "er": "2.66%",
+            "url": "https://www.tiktok.com/@confuciopucp/video/7593095531207986452",
+            "coverImageUrl": "images/confucio/2026-05/e456a94fa7b7.jpg"
+          }
         ],
         "worst": []
       },
       "ig": {
         "top": [
-          { "title": "Becas CECL: estudia en China (carrusel)", "platform": "Instagram", "date": "2026-03-09", "views": 96070, "reach": 49796, "likes": 2903, "comments": 80, "shares": 1551, "saved": 1835, "interactions": 6369, "er": "12.79%", "url": "https://www.instagram.com/p/DVrajbIFX_f/", "coverImageUrl": "https://scontent-lhr6-2.cdninstagram.com/v/t39.30808-6/649393181_1448179060688371_1508159617185143073_n.jpg" },
-          { "title": "San Valentín: el hilo rojo del amor (reel)", "platform": "Instagram Reel", "date": "2026-02-14", "views": 58809, "reach": 47262, "likes": 4850, "comments": 219, "shares": 937, "saved": 1130, "interactions": 7136, "er": "15.10%", "url": "https://www.instagram.com/reel/DUt0q2yFQWH/", "coverImageUrl": "https://scontent-lhr8-2.cdninstagram.com/v/t51.82787-15/628639893_18426602857187813_7060064225267543816_n.jpg" },
-          { "title": "Frases de 'Debí Tirar Más Fotos' en chino", "platform": "Instagram", "date": "2026-01-16", "views": 58008, "reach": 31701, "likes": 2136, "comments": 12, "shares": 1077, "saved": 665, "interactions": 3890, "er": "12.27%", "url": "https://www.instagram.com/p/DTlR_EAiSRu/", "coverImageUrl": "https://scontent-lhr6-1.cdninstagram.com/v/t39.30808-6/615737975_1399910308848580_6491037046290128895_n.jpg" }
+          {
+            "title": "Becas CECL: estudia en China (carrusel)",
+            "platform": "Instagram",
+            "date": "2026-03-09",
+            "views": 96070,
+            "reach": 49796,
+            "likes": 2903,
+            "comments": 80,
+            "shares": 1551,
+            "saved": 1835,
+            "interactions": 6369,
+            "er": "12.79%",
+            "url": "https://www.instagram.com/p/DVrajbIFX_f/",
+            "coverImageUrl": "images/confucio/2026-05/f4630836c557.jpg"
+          },
+          {
+            "title": "San Valentín: el hilo rojo del amor (reel)",
+            "platform": "Instagram Reel",
+            "date": "2026-02-14",
+            "views": 58809,
+            "reach": 47262,
+            "likes": 4850,
+            "comments": 219,
+            "shares": 937,
+            "saved": 1130,
+            "interactions": 7136,
+            "er": "15.10%",
+            "url": "https://www.instagram.com/reel/DUt0q2yFQWH/",
+            "coverImageUrl": "images/confucio/2026-05/b840cc0be0d5.jpg"
+          },
+          {
+            "title": "Frases de 'Debí Tirar Más Fotos' en chino",
+            "platform": "Instagram",
+            "date": "2026-01-16",
+            "views": 58008,
+            "reach": 31701,
+            "likes": 2136,
+            "comments": 12,
+            "shares": 1077,
+            "saved": 665,
+            "interactions": 3890,
+            "er": "12.27%",
+            "url": "https://www.instagram.com/p/DTlR_EAiSRu/",
+            "coverImageUrl": "images/confucio/2026-05/7096ba991fce.jpg"
+          }
         ],
         "worst": []
       },
       "fb": {
         "top": [
-          { "title": "Clase Modelo gratuita (mayo)", "platform": "Facebook", "date": "2026-05-14", "reach": 169256, "likes": 454, "comments": 3, "shares": 5, "clicks": 2693, "interactions": 462, "er": "0.27%", "url": "https://facebook.com/497789742393979/posts/1506633478176262", "note": "El post con más conversión: 2,693 clics a la landing de inscripción y 454 reacciones (mayormente pauta)." },
-          { "title": "Año Nuevo Chino: Caballo de Fuego", "platform": "Facebook", "date": "2026-02-17", "reach": 198927, "likes": 279, "comments": 6, "shares": 19, "clicks": 666, "interactions": 304, "er": "0.15%", "url": "https://facebook.com/497789742393979/posts/1430244652481812", "note": "Mayor alcance del período (198K, 190K pagadas). Contenido cultural de temporada que ancló la campaña." },
-          { "title": "Mira la Muralla y sueña en grande", "platform": "Facebook", "date": "2026-01-01", "reach": 172285, "likes": 117, "comments": 1, "shares": 7, "clicks": 1000, "interactions": 125, "er": "0.07%", "url": "https://facebook.com/497789742393979/posts/1387358396770438", "note": "Arranque de año con 1,000 clics. Mensaje aspiracional de metas 2026." }
+          {
+            "title": "Clase Modelo gratuita (mayo)",
+            "platform": "Facebook",
+            "date": "2026-05-14",
+            "coverImageUrl": "images/confucio/2026-05/a2376df1a3ca.jpg",
+            "reach": 169256,
+            "likes": 454,
+            "comments": 3,
+            "shares": 5,
+            "clicks": 2693,
+            "interactions": 462,
+            "er": "0.27%",
+            "url": "https://facebook.com/497789742393979/posts/1506633478176262",
+            "note": "El post con más conversión: 2,693 clics a la landing de inscripción y 454 reacciones (mayormente pauta)."
+          },
+          {
+            "title": "Año Nuevo Chino: Caballo de Fuego",
+            "platform": "Facebook",
+            "date": "2026-02-17",
+            "reach": 198927,
+            "likes": 279,
+            "comments": 6,
+            "shares": 19,
+            "clicks": 666,
+            "interactions": 304,
+            "er": "0.15%",
+            "url": "https://facebook.com/497789742393979/posts/1430244652481812",
+            "note": "Mayor alcance del período (198K, 190K pagadas). Contenido cultural de temporada que ancló la campaña."
+          },
+          {
+            "title": "Mira la Muralla y sueña en grande",
+            "platform": "Facebook",
+            "date": "2026-01-01",
+            "reach": 172285,
+            "likes": 117,
+            "comments": 1,
+            "shares": 7,
+            "clicks": 1000,
+            "interactions": 125,
+            "er": "0.07%",
+            "url": "https://facebook.com/497789742393979/posts/1387358396770438",
+            "note": "Arranque de año con 1,000 clics. Mensaje aspiracional de metas 2026."
+          }
         ],
         "worst": []
       },
       "linkedin": {
         "top": [
-          { "title": "Talleres Especializados 2026-2", "platform": "LinkedIn", "date": "2026-04-13", "reach": 998, "likes": 14, "comments": 0, "shares": 0, "clicks": 894, "interactions": 14, "er": "1.4%", "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7449499814242787328", "note": "El de mayor intención: 894 clics a formularios de matrícula con solo 998 impresiones. Pronunciación, conversación y caracteres." },
-          { "title": "Premio internacional al profesor Jozar Gonzales", "platform": "LinkedIn", "date": "2026-01-12", "reach": 1262, "likes": 39, "comments": 4, "shares": 1, "clicks": 806, "interactions": 44, "er": "3.5%", "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7416559108398665728", "note": "806 clics. La autoridad académica (premio Best Teacher) convierte en interés profesional." },
-          { "title": "Beca Puente Chino — Campamento SISU 2026 (Shanghái)", "platform": "LinkedIn", "date": "2026-03-09", "reach": 2329, "likes": 46, "comments": 0, "shares": 8, "clicks": 654, "interactions": 54, "er": "2.3%", "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7436882832318398465", "note": "654 clics a postulación. Las becas a China son el gancho de mayor tracción profesional." }
+          {
+            "title": "Talleres Especializados 2026-2",
+            "platform": "LinkedIn",
+            "date": "2026-04-13",
+            "reach": 998,
+            "likes": 14,
+            "comments": 0,
+            "shares": 0,
+            "clicks": 894,
+            "interactions": 14,
+            "er": "1.4%",
+            "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7449499814242787328",
+            "note": "El de mayor intención: 894 clics a formularios de matrícula con solo 998 impresiones. Pronunciación, conversación y caracteres."
+          },
+          {
+            "title": "Premio internacional al profesor Jozar Gonzales",
+            "platform": "LinkedIn",
+            "date": "2026-01-12",
+            "reach": 1262,
+            "likes": 39,
+            "comments": 4,
+            "shares": 1,
+            "clicks": 806,
+            "interactions": 44,
+            "er": "3.5%",
+            "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7416559108398665728",
+            "note": "806 clics. La autoridad académica (premio Best Teacher) convierte en interés profesional."
+          },
+          {
+            "title": "Beca Puente Chino — Campamento SISU 2026 (Shanghái)",
+            "platform": "LinkedIn",
+            "date": "2026-03-09",
+            "reach": 2329,
+            "likes": 46,
+            "comments": 0,
+            "shares": 8,
+            "clicks": 654,
+            "interactions": 54,
+            "er": "2.3%",
+            "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7436882832318398465",
+            "note": "654 clics a postulación. Las becas a China son el gancho de mayor tracción profesional."
+          }
         ],
         "worst": []
       }
     }
   },
   "charts": {
-    "months6": ["Dic 25","Ene 26","Feb 26","Mar 26","Abr 26","May 26"],
-    "community_total": [95429,96444,100845,101855,103620,114411],
-    "fb_followers_labels": ["Dic 25","Ene 26","Feb 26","Mar 26","Abr 26","May 26"],
-    "fb_followers": [74603,74690,75346,75564,75597,84608],
-    "ig_followers": [10079,10627,12683,12967,14409,15072],
-    "tk_followers": [7867,8205,9867,10282,10473,11519],
-    "li_followers": [2880,2922,2949,3042,3141,3212],
-    "reach_organic": [null,494467,136517,302045,306917,520980],
-    "reach_paid": [null,866930,276229,530181,183395,548425],
-    "reach_mix_labels": ["TikTok (vistas)","Instagram (alcance)","Facebook (sin pauta)"],
-    "reach_mix_data": [1760926,449323,260221],
+    "months6": [
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26",
+      "Abr 26",
+      "May 26"
+    ],
+    "community_total": [
+      95429,
+      96444,
+      100845,
+      101855,
+      103620,
+      114411
+    ],
+    "fb_followers_labels": [
+      "Dic 25",
+      "Ene 26",
+      "Feb 26",
+      "Mar 26",
+      "Abr 26",
+      "May 26"
+    ],
+    "fb_followers": [
+      74603,
+      74690,
+      75346,
+      75564,
+      75597,
+      84608
+    ],
+    "ig_followers": [
+      10079,
+      10627,
+      12683,
+      12967,
+      14409,
+      15072
+    ],
+    "tk_followers": [
+      7867,
+      8205,
+      9867,
+      10282,
+      10473,
+      11519
+    ],
+    "li_followers": [
+      2880,
+      2922,
+      2949,
+      3042,
+      3141,
+      3212
+    ],
+    "reach_organic": [
+      null,
+      494467,
+      136517,
+      302045,
+      306917,
+      520980
+    ],
+    "reach_paid": [
+      null,
+      866930,
+      276229,
+      530181,
+      183395,
+      548425
+    ],
+    "reach_mix_labels": [
+      "TikTok (vistas)",
+      "Instagram (alcance)",
+      "Facebook (sin pauta)"
+    ],
+    "reach_mix_data": [
+      1760926,
+      449323,
+      260221
+    ],
     "er_fb": [],
     "er_ig": [],
     "er_tk": [],
-    "tk_top_videos_labels": ["15 may · Agua helada","13 ene · Hilo rojo","13 mar · Beca global","22 abr · Lengua China","8 ene · Primer día"],
-    "tk_top_videos_data": [418641,368995,263897,223617,74821],
-    "formatos_labels": ["IG Carrusel/Post","IG Reel","TikTok","LinkedIn","Facebook"],
-    "formatos_data": [10.7,11.5,1.5,3.2,0.3],
+    "tk_top_videos_labels": [
+      "15 may · Agua helada",
+      "13 ene · Hilo rojo",
+      "13 mar · Beca global",
+      "22 abr · Lengua China",
+      "8 ene · Primer día"
+    ],
+    "tk_top_videos_data": [
+      418641,
+      368995,
+      263897,
+      223617,
+      74821
+    ],
+    "formatos_labels": [
+      "IG Carrusel/Post",
+      "IG Reel",
+      "TikTok",
+      "LinkedIn",
+      "Facebook"
+    ],
+    "formatos_data": [
+      10.7,
+      11.5,
+      1.5,
+      3.2,
+      0.3
+    ],
     "meta_days": [],
     "tk_hours": [],
     "sent_categories_data": [],
     "sent_net_score_history": [],
     "cpm_meta": [],
-    "cpm_tk": [null,0.14,2.61,0.38,0.33,0.24],
-    "budget_labels": ["Meta · Matrícula","Meta · Awareness","Meta · Tráfico","TikTok Ads"],
-    "budget_data": [3408,2565,1737,1562],
-    "comp_followers_labels": ["ICPNA","BRITÁNICO","Centro C. Chino","Asoc. P. China","Confucio PUCP","Confucio UC","Confucio URP"],
-    "comp_followers_data": [118308,103393,33616,18685,15072,12730,8778],
-    "comp_er_labels": ["Confucio UC","Confucio PUCP","Confucio URP","C. C. Chino","Asoc. PCh","BRITÁNICO","ICPNA"],
-    "comp_er_data": [3.69,2.68,1.36,0.51,0.45,0.37,0.14],
+    "cpm_tk": [
+      null,
+      0.14,
+      2.61,
+      0.38,
+      0.33,
+      0.24
+    ],
+    "budget_labels": [
+      "Meta · Matrícula",
+      "Meta · Awareness",
+      "Meta · Tráfico",
+      "TikTok Ads"
+    ],
+    "budget_data": [
+      3408,
+      2565,
+      1737,
+      1562
+    ],
+    "comp_followers_labels": [
+      "ICPNA",
+      "BRITÁNICO",
+      "Centro C. Chino",
+      "Asoc. P. China",
+      "Confucio PUCP",
+      "Confucio UC",
+      "Confucio URP"
+    ],
+    "comp_followers_data": [
+      118308,
+      103393,
+      33616,
+      18685,
+      15072,
+      12730,
+      8778
+    ],
+    "comp_er_labels": [
+      "Confucio UC",
+      "Confucio PUCP",
+      "Confucio URP",
+      "C. C. Chino",
+      "Asoc. PCh",
+      "BRITÁNICO",
+      "ICPNA"
+    ],
+    "comp_er_data": [
+      3.69,
+      2.68,
+      1.36,
+      0.51,
+      0.45,
+      0.37,
+      0.14
+    ],
     "gbp": {
-      "impr_maps": [1518,2342,1592,1687,1924,1705],
-      "impr_search": [4972,6740,3665,4474,3587,3633],
-      "actions_total": [533,1020,638,694,678,548],
-      "actions_breakdown": [3073,332,173],
-      "mix_data": [3073,332,173]
+      "impr_maps": [
+        1518,
+        2342,
+        1592,
+        1687,
+        1924,
+        1705
+      ],
+      "impr_search": [
+        4972,
+        6740,
+        3665,
+        4474,
+        3587,
+        3633
+      ],
+      "actions_total": [
+        533,
+        1020,
+        638,
+        694,
+        678,
+        548
+      ],
+      "actions_breakdown": [
+        3073,
+        332,
+        173
+      ],
+      "mix_data": [
+        3073,
+        332,
+        173
+      ]
     }
   }
 }
