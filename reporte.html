@@ -1219,6 +1219,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   <a class="side-link" href="#sec-alcance"><span class="side-dot" style="background:var(--purple2)"></span> Alcance</a>
   <a class="side-link" href="#sec-engagement"><span class="side-dot" style="background:var(--fucsia)"></span> Engagement</a>
   <a class="side-link" href="#sec-contenido"><span class="side-dot" style="background:var(--purple)"></span> Contenido</a>
+  <a class="side-link" href="#sec-gbp"><span class="side-dot" style="background:#34A853"></span> Presencia Local</a>
   <a class="side-link" href="#sec-sentimiento"><span class="side-dot" style="background:var(--teal)"></span> Sentimiento</a>
   <a class="side-link" href="#sec-audiencia"><span class="side-dot" style="background:var(--warning)"></span> Audiencia</a>
   <a class="side-link" href="#sec-inversion"><span class="side-dot" style="background:var(--success)"></span> Inversión</a>
@@ -1287,10 +1288,13 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   <div class="sec-body"></div>
   <div class="chart-container"><div class="chart-title">Total Seguidores Cross-channel</div><div class="chart-wrapper"><canvas id="chartComunidadTotal"></canvas></div></div>
   <div class="layer-divider"><div class="layer-line"></div><div class="layer-label">Drill-down por Canal</div><div class="layer-line"></div></div>
-  <div class="chart-row-3">
+  <div class="chart-row">
     <div class="chart-container"><div class="chart-title">Facebook — Seguidores</div><div class="chart-wrapper"><canvas id="chartFBFollowers"></canvas></div></div>
     <div class="chart-container"><div class="chart-title">Instagram — Seguidores</div><div class="chart-wrapper"><canvas id="chartIGFollowers"></canvas></div></div>
+  </div>
+  <div class="chart-row">
     <div class="chart-container"><div class="chart-title">TikTok — Seguidores</div><div class="chart-wrapper"><canvas id="chartTKFollowers"></canvas></div></div>
+    <div class="chart-container"><div class="chart-title">LinkedIn — Seguidores</div><div class="chart-wrapper"><canvas id="chartLIFollowers"></canvas></div></div>
   </div>
 </section>
 
@@ -1330,6 +1334,20 @@ body{font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--white);
   <div class="chart-row" id="retentionChartRow" style="display:none">
     <div class="chart-container"><div class="chart-title">Mejor Retención — Top Videos</div><div class="chart-wrapper" style="height:280px"><canvas id="chartRetTop"></canvas></div></div>
     <div class="chart-container"><div class="chart-title">Menor Retención — Videos a Mejorar</div><div class="chart-wrapper" style="height:280px"><canvas id="chartRetBottom"></canvas></div></div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+<section class="report-section" id="sec-gbp">
+  <div class="sec-header"><div class="sec-number" style="background:linear-gradient(135deg,#34A853,#4285F4)">📍</div><div class="sec-header-text"><div class="sec-title">Presencia Local — Google Business Profile</div><div class="sec-subtitle"></div></div></div>
+  <div class="sec-body"></div>
+  <div class="chart-row">
+    <div class="chart-container"><div class="chart-title">Impresiones: Búsqueda vs Maps — 6 meses</div><div class="chart-wrapper"><canvas id="chartGBPImpr"></canvas></div></div>
+    <div class="chart-container"><div class="chart-title">Acciones del Cliente (intención local)</div><div class="chart-wrapper"><canvas id="chartGBPActions"></canvas></div></div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-container"><div class="chart-title">Evolución de Acciones — 6 meses</div><div class="chart-wrapper"><canvas id="chartGBPActionsEvol"></canvas></div></div>
+    <div class="chart-container"><div class="chart-title">Mix de Acciones (embudo de conversión local)</div><div class="chart-wrapper"><canvas id="chartGBPMix"></canvas></div></div>
   </div>
 </section>
 
@@ -1428,7 +1446,8 @@ const REPORT_DATA = {
   cierre: { tagline: '', team: 'Equipo LUDiK', location: '', contact: '', confidential: '' },
   objectives: [],
   summary_kpis: { objectives: '–', reach: '–', tk_views: '–', new_followers: '–', investment: '–' },
-  community: { facebook: {start:0,end:0,delta:0,delta_pct:0}, instagram: {start:0,end:0,delta:0,delta_pct:0}, tiktok: {start:0,end:0,delta:0,delta_pct:0}, total_new: 0 },
+  community: { facebook: {start:0,end:0,delta:0,delta_pct:0}, instagram: {start:0,end:0,delta:0,delta_pct:0}, tiktok: {start:0,end:0,delta:0,delta_pct:0}, linkedin: {start:0,end:0,delta:0,delta_pct:0}, total_new: 0 },
+  gbp: { impressions_total:0, impressions_maps:0, impressions_search:0, direction_requests:0, call_clicks:0, website_clicks:0, actions_total:0 },
   reach: { total_impressions:0, estimated_unique_reach:0, frequency:0, meta_ads_reach:0, meta_ads_impressions:0, tiktok_ads_impressions:0, tiktok_organic_views:0, fb_organic_reach:0, fb_organic_impressions:0, ig_organic_reach:0, ig_organic_views:0 },
   engagement: { meta_ads_interactions:0, meta_ads_clicks:0, meta_ads_link_clicks:0, meta_ads_post_engagements:0, fb_organic_interactions:0, ig_interactions:0, ig_organic_interactions:0, tiktok_interactions:0, tiktok_organic:{likes:0,comments:0,shares:0,total:0}, total_interactions:0, total_meaningful_interactions:0 },
   investment: { meta_ads_usd:0, meta_ads_soles:0, tiktok_ads_usd:0, tiktok_ads_soles:0, total_usd:0, total_soles:0, meta_pct:0, tiktok_pct:0 },
@@ -1436,12 +1455,12 @@ const REPORT_DATA = {
   sentiment: { total:0, positive_pct:0, neutral_pct:0, negative_pct:0, net_score:0, categories:[] },
   bhs: { total:0, benchmark:'70-75', dimensions: {crecimiento:0,alcance:0,engagement:0,sentimiento:0,eficiencia:0,metas:0,posicion_comp:0} },
   competitors_ig: [],
-  insights: { community:'', reach:'', engagement:'', sentiment:'', investment:'', competition:'' },
+  insights: { community:'', reach:'', engagement:'', sentiment:'', investment:'', competition:'', gbp:'' },
   story: { act1:{title:'',text:''}, act2:{title:'',text:''}, act3:{title:'',text:''}, act4:{title:'',text:''}, act5:{title:'',text:''} },
   content: { top_tiktok:[], worst_tiktok:[], worst_overall:[], ig_reels:[], total_pieces:{tiktok:0,ig_reels:0,ig_posts:0,fb_posts:0,total:0} },
   technical_texts: { resumen:'', audiencia:'', contenido_insight:'', contenido_fail:'', contenido_horario:'', riesgo_fb:'', indice_valor:'', temas_recurrentes:'', bhs_explicacion:'' },
   recommendations: [],
-  charts: { months6:[], community_total:[], fb_followers_labels:[], fb_followers:[], ig_followers:[], tk_followers:[], reach_organic:[], reach_paid:[], reach_mix_labels:[], reach_mix_data:[], fb_reach_weekly:{total:[],ads:[]}, ig_reach_weekly:{total:[],ads:[]}, tk_reach_weekly:{total:[],ads:[]}, er_fb:[], er_ig:[], er_tk:[], tk_top_videos_labels:[], tk_top_videos_data:[], formatos_labels:[], formatos_data:[], meta_days:[], tk_hours:[], sent_categories_data:[], sent_net_score_history:[], fb_age:[], ig_age:[], tk_age:[], gender_female:[], gender_male:[], cpm_meta:[], cpm_tk:[], budget_labels:[], budget_data:[], comp_followers_labels:[], comp_followers_data:[], comp_er_labels:[], comp_er_data:[], bhs_radar:[], bhs_benchmark:[70,70,70,70,70,70,70], bhs_history:[] }
+  charts: { months6:[], community_total:[], fb_followers_labels:[], fb_followers:[], ig_followers:[], tk_followers:[], reach_organic:[], reach_paid:[], reach_mix_labels:[], reach_mix_data:[], li_followers:[], gbp:{impr_maps:[],impr_search:[],actions_total:[],actions_breakdown:[],mix_data:[]}, fb_reach_weekly:{total:[],ads:[]}, ig_reach_weekly:{total:[],ads:[]}, tk_reach_weekly:{total:[],ads:[]}, er_fb:[], er_ig:[], er_tk:[], tk_top_videos_labels:[], tk_top_videos_data:[], formatos_labels:[], formatos_data:[], meta_days:[], tk_hours:[], sent_categories_data:[], sent_net_score_history:[], fb_age:[], ig_age:[], tk_age:[], gender_female:[], gender_male:[], cpm_meta:[], cpm_tk:[], budget_labels:[], budget_data:[], comp_followers_labels:[], comp_followers_data:[], comp_er_labels:[], comp_er_data:[], bhs_radar:[], bhs_benchmark:[70,70,70,70,70,70,70], bhs_history:[] }
 };
 
 // Deep merge: source overrides target (shallow for arrays, deep for objects)
@@ -2551,7 +2570,7 @@ function populateAllSections() {
     h += '<div class="funnel-step"><div class="funnel-icon">❤️</div><div class="funnel-value">'+_followers+'</div><div class="funnel-label">Nuevos Seg.</div><div class="funnel-conv">Tracked</div></div>';
     h += '</div>';
     h += '<div class="kpi-row">';
-    [{k:'facebook',l:'Facebook',g:'var(--purple),var(--purple2)'},{k:'instagram',l:'Instagram',g:'var(--fucsia),#FF6B6B'},{k:'tiktok',l:'TikTok',g:'var(--fucsia),var(--teal)'}].forEach(ch => {
+    [{k:'facebook',l:'Facebook',g:'var(--purple),var(--purple2)'},{k:'instagram',l:'Instagram',g:'var(--fucsia),#FF6B6B'},{k:'tiktok',l:'TikTok',g:'var(--fucsia),var(--teal)'},{k:'linkedin',l:'LinkedIn',g:'#0A66C2,#4285F4'}].filter(ch => D.community[ch.k] && (D.community[ch.k].end||D.community[ch.k].start)).forEach(ch => {
       const c = D.community[ch.k];
       const val = c.end ? fmt(c.end) : (c.note ? 'N/D' : '0');
       const delta = c.note ? c.note : (c.delta ? '▲ +'+fmt(c.delta)+' (+'+c.delta_pct+'%)' : '–');
@@ -2570,7 +2589,7 @@ function populateAllSections() {
     let h = '<div class="insight-block"><div class="insight-title">'+(D.insights.community||'')+'</div></div>';
     h += '<div class="layer-divider"><div class="layer-line"></div><div class="layer-label">Vista Integrada</div><div class="layer-line"></div></div>';
     h += '<div class="platform-cards">';
-    const chans = [{k:'facebook',cls:'pc-fb',l:'Facebook',g:'var(--purple),var(--purple2)'},{k:'instagram',cls:'pc-ig',l:'Instagram',g:'var(--fucsia),#FF6B6B'},{k:'tiktok',cls:'pc-tk',l:'TikTok',g:'var(--fucsia),var(--teal)'}];
+    const chans = [{k:'facebook',cls:'pc-fb',l:'Facebook',g:'var(--purple),var(--purple2)'},{k:'instagram',cls:'pc-ig',l:'Instagram',g:'var(--fucsia),#FF6B6B'},{k:'tiktok',cls:'pc-tk',l:'TikTok',g:'var(--fucsia),var(--teal)'},{k:'linkedin',cls:'pc-li',l:'LinkedIn',g:'#0A66C2,#4285F4'}].filter(ch => D.community[ch.k] && (D.community[ch.k].end||D.community[ch.k].start));
     const maxEnd = Math.max(...chans.map(ch => D.community[ch.k].end||0), 1);
     chans.forEach(ch => {
       const c = D.community[ch.k];
@@ -2804,6 +2823,23 @@ function populateAllSections() {
     b5.innerHTML = h;
   }
 
+  // ── SEC-GBP (Google Business Profile / Presencia Local) ──
+  const bGBP = body('sec-gbp');
+  if (bGBP && D.gbp) {
+    const g = D.gbp;
+    const subG = document.querySelector('#sec-gbp .sec-subtitle');
+    if (subG) subG.textContent = 'Intención local · fondo de funnel de matrícula';
+    let h = '<div class="insight-block"><div class="insight-title">'+(D.insights.gbp||'')+'</div></div>';
+    h += '<div class="kpi-row">';
+    h += kpiCard('linear-gradient(90deg,#34A853,#4285F4)','Impresiones en Google',fmtK(g.impressions_total),'Búsqueda '+fmtK(g.impressions_search)+' · Maps '+fmtK(g.impressions_maps),'delta-up');
+    h += kpiCard('linear-gradient(90deg,#4285F4,#34A853)','Cómo Llegar',fmt(g.direction_requests),'Solicitudes de dirección','delta-up');
+    h += kpiCard('linear-gradient(90deg,#FBBC05,#EA4335)','Clics para Llamar',fmt(g.call_clicks),'Click-to-call','delta-flat');
+    h += kpiCard('linear-gradient(90deg,#EA4335,#FBBC05)','Clics al Sitio Web',fmt(g.website_clicks),'Tráfico derivado','delta-flat');
+    h += '</div>';
+    if (T.gbp) h += '<div class="analysis-block"><div class="analysis-label">◈ Presencia Local</div><div class="analysis-text">'+T.gbp.replace(/\n/g,'<br>')+'</div></div>';
+    bGBP.innerHTML = h;
+  }
+
   // ── SEC-SENTIMIENTO ──
   const b6 = body('sec-sentimiento');
   if (b6) {
@@ -2965,6 +3001,7 @@ function hideEmptySections() {
     'sec-alcance': () => D.reach && D.reach.total_impressions > 0,
     'sec-engagement': () => D.engagement && D.engagement.total_meaningful_interactions > 0,
     'sec-contenido': () => D.content && (D.content.by_channel || D.content.top_tiktok?.length > 0 || D.content.organic_highlights?.length > 0 || D.content.organic || D.content.paid),
+    'sec-gbp': () => D.gbp && (D.gbp.impressions_total > 0 || D.gbp.actions_total > 0),
     'sec-sentimiento': () => D.sentiment && D.sentiment.total > 0,
     'sec-audiencia': () => T.audiencia && C.fb_age && C.fb_age.some(v => v > 0),
     'sec-inversion': () => D.investment && D.investment.total_usd > 0,
@@ -3814,6 +3851,9 @@ new Chart('chartIGFollowers', lineOpts(C.fb_followers_labels, [
 new Chart('chartTKFollowers', lineOpts(C.fb_followers_labels, [
   {label:'TikTok',data:C.tk_followers,borderColor:teal,backgroundColor:'rgba(32,236,200,.1)',fill:true,tension:.4,pointBackgroundColor:teal}
 ]));
+if (C.li_followers && C.li_followers.some(v=>v>0)) new Chart('chartLIFollowers', lineOpts(C.fb_followers_labels, [
+  {label:'LinkedIn',data:C.li_followers,borderColor:'#0A66C2',backgroundColor:'rgba(10,102,194,.12)',fill:true,tension:.3,pointBackgroundColor:'#0A66C2'}
+]));
 
 // ALCANCE
 new Chart('chartAlcanceEvol', barOpts(months6,
@@ -3833,6 +3873,20 @@ new Chart('chartTKTopVideos', {type:'bar',data:{labels:C.tk_top_videos_labels,da
 new Chart('chartFormatos', {type:'bar',data:{labels:C.formatos_labels,datasets:[{label:'ER%',data:C.formatos_data,backgroundColor:[purple2,purple2,fucsia,teal,fucsia,teal,purple2],borderRadius:6,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:gridColor}},y:{grid:{color:gridColor},min:0,max:8}}}});
 new Chart('chartMetaDays', {type:'bar',data:{labels:['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'],datasets:[{data:C.meta_days,backgroundColor:['rgba(103,60,239,.5)','rgba(248,76,222,.8)',purple2,fucsia,'rgba(75,0,255,.4)','rgba(75,0,255,.3)','rgba(103,60,239,.6)'],borderRadius:6,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:gridColor},min:0,max:100}}}});
 new Chart('chartTKHours', {type:'bar',data:{labels:['8am','10am','12pm','2pm','4pm','6pm','8pm','10pm'],datasets:[{data:C.tk_hours,backgroundColor:['rgba(75,0,255,.4)',teal,purple2,'rgba(75,0,255,.5)','rgba(103,60,239,.5)',fucsia,'rgba(103,60,239,.4)','rgba(75,0,255,.2)'],borderRadius:6,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:gridColor},min:0,max:100}}}});
+
+// GBP — PRESENCIA LOCAL (Google Business Profile)
+(function(){
+  const g = C.gbp || {};
+  if (document.getElementById('chartGBPImpr')) new Chart('chartGBPImpr', lineOpts(months6, [
+    {label:'Búsqueda',data:g.impr_search,borderColor:'#4285F4',backgroundColor:'rgba(66,133,244,.12)',fill:true,tension:.4,pointBackgroundColor:'#4285F4'},
+    {label:'Maps',data:g.impr_maps,borderColor:'#34A853',backgroundColor:'rgba(52,168,83,.12)',fill:true,tension:.4,pointBackgroundColor:'#34A853'}
+  ]));
+  if (document.getElementById('chartGBPActions')) new Chart('chartGBPActions', {type:'bar',data:{labels:['Cómo llegar','Llamar','Sitio web'],datasets:[{data:g.actions_breakdown,backgroundColor:['#34A853','#FBBC05','#4285F4'],borderRadius:6,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:gridColor},type:'logarithmic'}}}});
+  if (document.getElementById('chartGBPActionsEvol')) new Chart('chartGBPActionsEvol', lineOpts(months6, [
+    {label:'Acciones totales',data:g.actions_total,borderColor:'#34A853',backgroundColor:'rgba(52,168,83,.12)',fill:true,tension:.4,pointBackgroundColor:'#34A853'}
+  ]));
+  if (document.getElementById('chartGBPMix')) new Chart('chartGBPMix', doughnutOpts(['Cómo llegar','Llamar','Sitio web'], g.mix_data, ['#34A853','#FBBC05','#4285F4']));
+})();
 
 // SENTIMIENTO
 new Chart('chartSentCateg', doughnutOpts(

@@ -5,7 +5,7 @@
     { "id": "DEPILE",   "name": "DEPILE",           "metricool_id": "5445849", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
     { "id": "NINET",    "name": "NINET",            "metricool_id": "5445768", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
     { "id": "CLUNY",    "name": "CLUNY",            "metricool_id": "5445775", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
-    { "id": "CONFUCIO", "name": "Instituto Confucio","metricool_id": "5445836", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
+    { "id": "CONFUCIO", "name": "Instituto Confucio PUCP","metricool_id": "5445836", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok","linkedin"] },
     { "id": "FLORIDA",  "name": "Florida",          "metricool_id": "6078371", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
     { "id": "A1",       "name": "A1",               "metricool_id": "5981134", "currency": "PEN", "fx_rate": 3.78, "channels": ["facebook","instagram","tiktok"] },
     { "id": "WELLA",    "name": "Wella Perú",         "metricool_id": "5996226", "currency": "PEN", "fx_rate": 3.78, "channels": ["instagram","tiktok"] },
