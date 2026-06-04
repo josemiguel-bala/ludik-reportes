@@ -109,11 +109,11 @@
     "blended_cpm_soles": 1.6
   },
   "funnel_conversion": {
-    "impresiones": 4718359,
-    "alcance": 3127853,
-    "clics": 51271,
+    "impresiones": 609783,
+    "alcance": 256343,
+    "clics": 19126,
     "mensajes": 3069,
-    "nota": "Embudo de la pauta Meta (objetivo conversaciones de matrícula). Alcance = suma de alcance por campaña."
+    "nota": "Embudo de las campañas Meta con objetivo de mensajes/matrícula (no incluye awareness ni tráfico). Alcance = suma de alcance por campaña. Tasas: 7.5% de clic, 16% inicia conversación."
   },
   "sentiment": {
     "total": 0,
