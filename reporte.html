@@ -2700,6 +2700,8 @@ function populateAllSections() {
         out += '<div class="post-body"><div class="post-title">"'+p.title+'"</div><div class="post-date">'+(p.date||'')+'</div><div class="post-metrics">';
         // Alcance / Reproducciones
         out += '<div class="post-metric"><div class="post-metric-val" style="color:'+metricColor+'">'+fmtK(p.reach||p.views||0)+'</div><div class="post-metric-label">'+(p.reach?'Alcance':'Reproducciones')+'</div></div>';
+        // SELLING METRIC: Guardados + Compartidos (lo que vende en una presentación)
+        out += '<div class="post-metric"><div class="post-metric-val" style="color:var(--teal)">'+fmt((p.saves||0)+(p.shares||0))+'</div><div class="post-metric-label">★ Guard.+Comp.</div></div>';
         // Shares (separado)
         out += '<div class="post-metric"><div class="post-metric-val">'+fmt(p.shares||0)+'</div><div class="post-metric-label">Shares</div></div>';
         // Saves (separado)
@@ -3107,8 +3109,12 @@ function populateExecutive(D) {
     card += '<div style="display:flex;gap:18px;font-size:15px;color:var(--gray);flex-wrap:wrap">';
     if (p.reach) card += '<span><strong style="color:var(--teal);font-size:17px">'+fmtK(p.reach)+'</strong> alcance</span>';
     if (p.views && !p.reach) card += '<span><strong style="color:var(--teal);font-size:17px">'+fmtK(p.views)+'</strong> views</span>';
-    if (p.saves) card += '<span><strong style="color:var(--white);font-size:17px">'+fmt(p.saves)+'</strong> saves</span>';
     if (p.er) card += '<span><strong style="color:var(--fucsia);font-size:17px">'+p.er+'</strong> ER</span>';
+    const _saves = p.saves != null ? p.saves : p.saved;
+    if (_saves) card += '<span><strong style="color:var(--white);font-size:17px">'+fmt(_saves)+'</strong> guardados</span>';
+    if (p.shares) card += '<span><strong style="color:var(--white);font-size:17px">'+fmt(p.shares)+'</strong> compartidos</span>';
+    if (p.comments) card += '<span><strong style="color:var(--white);font-size:17px">'+fmt(p.comments)+'</strong> coment.</span>';
+    if (p.clicks) card += '<span><strong style="color:var(--teal);font-size:17px">'+fmt(p.clicks)+'</strong> clics</span>';
     card += '</div>';
     // Why it worked / didn't
     if (p.note) card += '<div style="font-size:15px;color:#DDDDEE;line-height:1.55;margin-top:6px;padding-top:14px;border-top:1px solid var(--border)">'+p.note+'</div>';
