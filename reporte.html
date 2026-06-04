@@ -3354,14 +3354,14 @@ function populateExecutive(D) {
   const compList = D.competitors_ig || [];
   const compContent = (D.competitor_content && D.competitor_content.items) || [];
   if (compList.length > 0 || compContent.length > 0) {
-    const introComp = (D.competitor_content && D.competitor_content.intro) || exec.competencia_intro || exec.intro_competencia || 'Wella Perú lidera el engagement por seguidor de la categoría regional, pese a ser de las cuentas más pequeñas.';
+    const introComp = (D.competitor_content && D.competitor_content.intro) || exec.competencia_intro || exec.intro_competencia || 'Comparativa de engagement por seguidor frente a las cuentas de la categoría.';
     h += '<section style="padding:40px 32px 16px">';
     h += sectionHeader('🏆', 'Sobre la competencia', compList.length + ' marcas comparadas', introComp);
     if (compList.length > 0) {
       const sortedC = [...compList].sort((a, b) => (parseFloat(b.er)||0) - (parseFloat(a.er)||0));
       const maxEr = Math.max.apply(null, sortedC.map(c => parseFloat(c.er)||0)) || 1;
-      h += '<div style="font-size:20px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-top:28px;margin-bottom:6px">📊 Lideramos en ER por seguidor</div>';
-      h += '<div style="font-size:14px;color:var(--gray);margin-bottom:20px">ER promedio por seguidor del mes (interacciones prom. / seguidores × 100). Wella Perú encabeza pese a ser la cuenta más pequeña.</div>';
+      h += '<div style="font-size:20px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.08em;margin-top:28px;margin-bottom:6px">📊 '+((D.competitor_content && D.competitor_content.er_title) || 'ER por seguidor de la categoría')+'</div>';
+      h += '<div style="font-size:14px;color:var(--gray);margin-bottom:20px">'+((D.competitor_content && D.competitor_content.er_caption) || 'ER por seguidor (likes + comentarios prom. / seguidores × 100).')+'</div>';
       h += '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 28px;max-width:900px;margin-bottom:40px">';
       sortedC.forEach(c => {
         const er = parseFloat(c.er)||0; const pct = Math.max(2, (er/maxEr)*100);

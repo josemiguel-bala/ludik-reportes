@@ -158,7 +158,7 @@
     "reach": "El video 'agua helada' fue un viral cross-channel: ~902K views en Facebook Reels (Meta Insights: +1M), 418K en TikTok y 11K en IG = ~1.3M en una sola pieza. En total TikTok generó 1.76M views y los Reels de FB ~1M solo en mayo. Meta Ads aportó 4.7M impresiones pagadas.",
     "engagement": "53.6K interacciones de valor entre IG y FB. IG concentra el engagement: 49.3K interacciones (carrusel de becas: 6,369; reel San Valentín: 7,136). El ER por alcance de IG supera el 10%.",
     "investment": "S/ 9,273 en pauta total: Meta S/ 7,711 (83%) + TikTok S/ 1,562 (17%). CPM excelente: Meta S/ 1.63 y TikTok S/ 1.45. El 44% del presupuesto Meta fue a mensajes/matrícula, que generaron 3,069 conversaciones. 51,271 clics y 9,031 vistas de landing.",
-    "competition": "Confucio PUCP es #2 en ER entre institutos de chino en la región (2.68%), solo detrás de Confucio UC Chile (3.69%) y por encima de Confucio URP (1.36%). En seguidores IG (15K) supera a sus pares Confucio directos.",
+    "competition": "ER por seguidor ene–may (likes+comentarios, misma fórmula para todos): Confucio PUCP (1.83%) supera ampliamente a los grandes institutos de idiomas del país —Británico (0.34%) e ICPNA (0.15%)— y a referentes globales como Babbel. Por encima quedan cuentas más nicho de cultura china: Confucio UC Chile (2.45%), Centro Cultural Chino (2.10%) y Confucio URP (1.91%). En seguidores IG (15K) lidera frente a sus pares Confucio directos.",
     "gbp": "Google Business Profile registró 31,349 impresiones (70% por búsqueda directa del instituto). Generó 3,073 solicitudes de cómo llegar, 332 clics para llamar y 173 al sitio web: 3,578 acciones de intención local de alto valor."
   },
   "technical_texts": {
@@ -200,7 +200,7 @@
       "paragraphs": [
         "Google Business Profile es el fondo de funnel: mide a quien ya busca el instituto. En el período registró 31,349 impresiones (70% por búsqueda directa del nombre, 30% en Maps), que se tradujeron en 3,578 acciones de alta intención: 3,073 solicitudes de cómo llegar, 332 clics para llamar y 173 al sitio web.",
         "Esa intención local es la señal más cercana a la matrícula presencial: no es alcance, es demanda activa. Sostenerla y crecerla (reseñas, fotos, horarios actualizados) es una palanca directa de conversión.",
-        "En el frente competitivo, Confucio PUCP es #2 en engagement entre institutos de chino de la región (ER 2.68%), solo detrás de Confucio UC Chile (3.69%) y por encima de Confucio URP (1.36%). En seguidores IG (15K) lidera frente a sus pares Confucio directos."
+        "En el frente competitivo (ER por seguidor ene–may, misma fórmula para todos), Confucio PUCP (1.83%) supera ampliamente a los grandes institutos del país —Británico 0.34%, ICPNA 0.15%— y a referentes globales. Lo superan cuentas más nicho de cultura china (Confucio UC Chile 2.45%, Centro Cultural Chino 2.10%, Confucio URP 1.91%): ahí está la oportunidad de subir el engagement. En seguidores IG (15K) lidera frente a sus pares Confucio directos."
       ]
     },
     "act5": {
@@ -273,53 +273,19 @@
     }
   ],
   "competitors_ig": [
-    {
-      "name": "Confucio UC (Chile)",
-      "followers": "12,730",
-      "er": "3.69",
-      "posts": "6"
-    },
-    {
-      "name": "Instituto Confucio PUCP",
-      "followers": "15,072",
-      "er": "2.68",
-      "posts": "122",
-      "is_self": true
-    },
-    {
-      "name": "Confucio URP",
-      "followers": "8,778",
-      "er": "1.36",
-      "posts": "8"
-    },
-    {
-      "name": "Centro Cultural Chino",
-      "followers": "33,616",
-      "er": "0.51",
-      "posts": "10"
-    },
-    {
-      "name": "Asoc. Peruano China",
-      "followers": "18,685",
-      "er": "0.45",
-      "posts": "16"
-    },
-    {
-      "name": "BRITÁNICO",
-      "followers": "103,393",
-      "er": "0.37",
-      "posts": "54"
-    },
-    {
-      "name": "ICPNA",
-      "followers": "118,308",
-      "er": "0.14",
-      "posts": "57"
-    }
+    { "name": "Confucio UC (Chile)", "followers": "12,730", "er": "2.45", "posts": "51" },
+    { "name": "Centro Cultural Chino", "followers": "33,616", "er": "2.10", "posts": "24" },
+    { "name": "Confucio URP", "followers": "8,778", "er": "1.91", "posts": "41" },
+    { "name": "Instituto Confucio PUCP", "followers": "15,072", "er": "1.83", "posts": "122", "is_self": true },
+    { "name": "Asoc. Peruano China", "followers": "18,685", "er": "0.56", "posts": "91" },
+    { "name": "BRITÁNICO", "followers": "103,393", "er": "0.34", "posts": "253" },
+    { "name": "ICPNA", "followers": "118,308", "er": "0.15", "posts": "296" }
   ],
   "competitor_content": {
-    "intro": "Qué están haciendo los referentes de idiomas y cultura china en mayo 2026. Duolingo marca el estándar de comunidad/UGC; BRITÁNICO, el de campañas de matrícula con CTA y autoridad académica; los institutos Confucio pares, el de contenido cultural educativo.",
-    "criterio": "Selección curada por conversación (comentarios) e interacción del período: referente global de categoría + competidores directos.",
+    "er_title": "ER por seguidor · institutos de idiomas y cultura china",
+    "er_caption": "ER por seguidor ene–may 2026 (likes + comentarios prom. / seguidores × 100, misma fórmula para todos). Confucio PUCP (1.83%) supera ampliamente a los grandes institutos del país —Británico (0.34%) e ICPNA (0.15%)—. Por encima quedan cuentas más especializadas en cultura china (Confucio UC Chile, Centro Cultural Chino, Confucio URP).",
+    "intro": "Qué están haciendo los referentes de idiomas y cultura china. Duolingo marca el estándar de comunidad/UGC; BRITÁNICO, el de campañas de matrícula con CTA y autoridad académica; los institutos Confucio pares, el de contenido cultural educativo.",
+    "criterio": "Mejores contenidos (muestra de mayo 2026), ordenados por conversación (comentarios) e interacción: referente global de categoría + competidores directos.",
     "items": [
       {
         "marca": "Duolingo",
@@ -755,21 +721,21 @@
     ],
     "comp_er_labels": [
       "Confucio UC",
-      "Confucio PUCP",
-      "Confucio URP",
       "C. C. Chino",
+      "Confucio URP",
+      "Confucio PUCP",
       "Asoc. PCh",
       "BRITÁNICO",
       "ICPNA"
     ],
     "comp_er_data": [
-      3.69,
-      2.68,
-      1.36,
-      0.51,
-      0.45,
-      0.37,
-      0.14
+      2.45,
+      2.10,
+      1.91,
+      1.83,
+      0.56,
+      0.34,
+      0.15
     ],
     "gbp": {
       "impr_maps": [
