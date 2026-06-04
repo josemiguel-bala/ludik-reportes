@@ -9,10 +9,26 @@
     "tag": "LUDiK Analytics · Reporte de Ecosistema",
     "footer": "Confidencial · Preparado por el equipo LUDiK para Instituto Confucio PUCP",
     "kpis": [
-      { "value": "776", "label": "Matrículas Cerradas", "delta_note": "676 adultos · 100 niños" },
-      { "value": "~51x", "label": "ROAS", "delta_note": "Ingreso est. S/ 473K" },
-      { "value": "S/ 12", "label": "CPA por Matrícula", "delta_note": "vs S/ 9,273 invertidos" },
-      { "value": "3,069", "label": "Conversaciones de Matrícula", "delta_note": "25% cerró matrícula" }
+      {
+        "value": "776",
+        "label": "Matrículas Cerradas",
+        "delta_note": "676 adultos · 100 niños"
+      },
+      {
+        "value": "~51x",
+        "label": "ROAS",
+        "delta_note": "Ingreso est. S/ 473K"
+      },
+      {
+        "value": "S/ 12",
+        "label": "CPA por Matrícula",
+        "delta_note": "vs S/ 9,273 invertidos"
+      },
+      {
+        "value": "3,069",
+        "label": "Conversaciones de Matrícula",
+        "delta_note": "25% cerró matrícula"
+      }
     ],
     "hide_objectives_kpi": true
   },
@@ -273,11 +289,37 @@
     }
   ],
   "competitors_ig": [
-    { "name": "Instituto Confucio PUCP", "followers": "15,072", "er": "1.83", "posts": "122", "is_self": true },
-    { "name": "BRITÁNICO", "followers": "103,393", "er": "0.34", "posts": "253" },
-    { "name": "Babbel (app global)", "followers": "130,754", "er": "0.21", "posts": "47" },
-    { "name": "ICPNA", "followers": "118,308", "er": "0.15", "posts": "296" },
-    { "name": "Pacífico Idiomas", "followers": "24,378", "er": "0.09", "posts": "70" }
+    {
+      "name": "Instituto Confucio PUCP",
+      "followers": "15,072",
+      "er": "1.83",
+      "posts": "122",
+      "is_self": true
+    },
+    {
+      "name": "BRITÁNICO",
+      "followers": "103,393",
+      "er": "0.34",
+      "posts": "253"
+    },
+    {
+      "name": "Babbel (app global)",
+      "followers": "130,754",
+      "er": "0.21",
+      "posts": "47"
+    },
+    {
+      "name": "ICPNA",
+      "followers": "118,308",
+      "er": "0.15",
+      "posts": "296"
+    },
+    {
+      "name": "Pacífico Idiomas",
+      "followers": "24,378",
+      "er": "0.09",
+      "posts": "70"
+    }
   ],
   "competitor_content": {
     "er_title": "Más engagement que los grandes institutos del país",
@@ -501,6 +543,7 @@
             "title": "Rompamos el mito: el Pinyin — Reel",
             "platform": "Facebook Reel",
             "date": "2026-05-17",
+            "coverImageUrl": "images/confucio/2026-05/6f784d984034.jpg",
             "views": 44635,
             "likes": 2252,
             "shares": 192,
